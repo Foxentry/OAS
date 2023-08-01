@@ -1051,7 +1051,7 @@ components:
                         example: location/localize
                       client:
                         allOf:
-                          - $ref: "#/components/schemas/Client"
+                          - $ref: "#/components/schemas/ClientRequest"
                           - type: object
                             properties:
                               location:
@@ -1272,7 +1272,7 @@ components:
                         type: string
                         example: location/validate
                       client:
-                        $ref: "#/components/schemas/Client"
+                        $ref: "#/components/schemas/ClientRequest"
                       query:
                         type: object
                         properties:
@@ -1599,6 +1599,10 @@ components:
       type: object
       description: TODO
       properties:
+        ip:
+          type: string
+          example: 127.0.1.1
+          format: ipv4
         country:
           type: string
           description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
@@ -1620,7 +1624,7 @@ components:
       properties:
         client:
           allOf:
-            - $ref: "#/components/schemas/Client"
+            - $ref: "#/components/schemas/ClientRequest"
             - type: object
               description: TODO
               properties:
@@ -1649,25 +1653,6 @@ components:
                   example: 100
       required:
         - client
-    Client:
-      type: object
-      description: TODO
-      properties:
-        ip:
-          type: string
-          example: 127.0.1.1
-        location:
-          type: object
-          description: TODO
-          properties:
-            lat:
-              type: number
-              description: Latitude coordinate.
-              example: 50.088816
-            lon:
-              type: number
-              description: Longitude coordinate.
-              example: 14.460778
     LocationRequestOptions:
       type: object
       properties:
@@ -1827,7 +1812,7 @@ components:
       type: object
       properties:
         client:
-          $ref: "#/components/schemas/Client"
+          $ref: "#/components/schemas/ClientRequest"
         query:
           type: object
           properties:
@@ -2381,7 +2366,7 @@ components:
                   type: boolean
                   nullable: true
                   description: TODO
-                  example: true
+                  example: null
             employees:
               type: object
               description: TODO
@@ -3401,7 +3386,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Disallowed characters were used in the value.
@@ -3445,7 +3430,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Value is missing the name part.
@@ -3485,7 +3470,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
@@ -3528,7 +3513,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Value is empty.
@@ -3571,7 +3556,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Degree value is invalid.
@@ -3917,7 +3902,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Value contains duplicated '+' sign.
@@ -3956,7 +3941,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Prefix is invalid.
@@ -4192,7 +4177,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Value is missing the city.
@@ -4418,7 +4403,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Value contains duplicated legal form.
@@ -4639,7 +4624,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - The domain contains invalid syntax.
@@ -4683,7 +4668,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to. 
+            description: Error related to.
         description:
           enum:
             - Domain name is invalid.
@@ -4784,7 +4769,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.          
+            description: Error related to.
         description:
           enum:
             - Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
@@ -4817,7 +4802,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.          
+            description: Error related to.
         description:
           enum:
             - Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
@@ -4850,7 +4835,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.       
+            description: Error related to.
         description:
           enum:
             - Your API call body does not contain any requests.
@@ -4883,7 +4868,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.         
+            description: Error related to.
         description:
           enum:
             - Your request length is bigger than allowed. Please contact us if you think this is a mistake.
@@ -4916,7 +4901,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.          
+            description: Error related to.
         description:
           enum:
             - Options parameter is not supported for this endpoint.
@@ -4949,7 +4934,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.     
+            description: Error related to.
         description:
           enum:
             - Value in paramater is not valid. Please check Foxentry.dev for more information.
@@ -4982,7 +4967,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
@@ -5015,7 +5000,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.          
+            description: Error related to.
         description:
           enum:
             - It is not possible to use these parameters at the same time in one request.
@@ -5048,7 +5033,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.          
+            description: Error related to.
         description:
           enum:
             - Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
@@ -5081,7 +5066,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.          
+            description: Error related to.
         description:
           enum:
             - Query parameter is not supported for this endpoint.
@@ -5114,7 +5099,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.     
+            description: Error related to.
         description:
           enum:
             - At least one of listed parameters is required.
@@ -5153,7 +5138,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
@@ -5193,7 +5178,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
@@ -5233,7 +5218,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Provided API key is not valid. Please check the project settings at app.foxentry.com.
@@ -5266,7 +5251,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Provided access token is not valid. Please check the project settings at app.foxentry.com.
@@ -5299,7 +5284,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Website domain is not allowed in the project settings.
@@ -5332,7 +5317,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
@@ -5371,7 +5356,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Requested API version is not available. Please check Foxentry.dev for the supported versions.
@@ -5404,7 +5389,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Endpoint not found. Please check Foxentry.dev for the supported endpoints.
@@ -5437,7 +5422,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
@@ -5512,7 +5497,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Requested API version is not available. Please check Foxentry.dev for the supported versions.
@@ -5545,7 +5530,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
@@ -5578,7 +5563,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
@@ -5611,7 +5596,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
@@ -5649,7 +5634,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Failed to process your request due to a billing internal error. Please contact us if the error persists.
@@ -5681,7 +5666,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Failed to establish connection with the database server. Please contact us if the error persists.
@@ -5713,7 +5698,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - An error has occured during the communication with our database. Please contact us if the error persists.
@@ -5745,7 +5730,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Internal datastore is not available at the moment. No operation on this datastore is possible.
@@ -5777,7 +5762,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Failed to process your request. Please try again later or contact us.
@@ -5809,7 +5794,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - API timeout in effect. Your request took too much time to process.
@@ -5842,7 +5827,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - Failed to fetch project data needed for processing your request. Please contact us if the error persists.
@@ -5882,7 +5867,7 @@ components:
           type: array
           items:
             type: string
-            description: Error related to.           
+            description: Error related to.
         description:
           enum:
             - API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.

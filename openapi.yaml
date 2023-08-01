@@ -1,0 +1,5722 @@
+openapi: 3.0.0
+info:
+  version: "2.0"
+  title: Foxentry API v2
+  description: |-
+    # Welcome to the Foxentry API version 2.0
+    Welcome to the new version of Foxentry API 2.0 Our API is designed to enhance your data management experience and provide you with even more powerful tools to harness the potential of getting and working with data.
+    ## API usage
+    The Foxentry API is used to <b>retrieve</b>, <b>validate</b>, and <b>modify</b> user data. Using our API, you can obtain detailed information, validate customer input, and automatically edit it into the appropriate formats. <br><br>
+    The new version of our API also supports automatic corrections, offering you suggestions and corrections for your inputs so that you always get the right data.
+    ## Features in version 2.0
+    Foxentry now provides you with a wide variety of information by providing a comprehensive set of endpoints for numerous data categories. Whether you need information on a <b>Company</b>, an <b>Email</b> address, a <b>Location</b>, a <b>Name</b>, or a <b>Phone number</b>, Foxentry can help. We are pleased to offer our valued clients a total of 11 endpoints in this new version. <br><br>
+    With the latest version of the Foxentry API, we have implemented advanced <b>Corrections</b> and <b>Suggestions</b>. This means that the data you receive will be more refined and precise, enabling you to make data-driven decisions with the utmost confidence. <br><br>
+    The latest Foxentry API version includes <b>HTTP global errors</b> but also <b>local error messages</b>, recognizing the need for clear and useful error feedback. If a problem happens while using the API, you will be notified in descriptive error messages, providing a smoother integration process and quicker issue resolution. <br><br>
+    To further enhance data quality, Foxentry has introduced <b>Fixes</b> in the new version of the API. This means that even if there are minor errors in the data you provide, the API will intelligently identify and correct them, reducing the risk of inaccuracies in your results.
+    ## API call
+    Each API call should be directed to a specific endpoint URL. Each API call to an endpoint can only contain one API request.
+    ## Environment
+    Production: https://api.foxentry.com/
+    ## Supported countries
+    <table class="center">
+      <tr>
+        <th>Endpoint</th>
+        <th>Supported countries</th>
+      </tr>
+      <tr>
+        <td>company/validate</td>
+        <td>Czech Republic, Slovakia, and Poland</td>
+      </tr>
+      <tr>
+        <td>company/search</td>
+        <td>Czech Republic, Slovakia, and Poland</td>
+      </tr>
+      <tr>
+        <td>company/get</td>
+        <td>Czech Republic, Slovakia, and Poland</td>
+      </tr> 
+      <tr>
+        <td>email/validate</td>
+        <td>Worldwide</td>
+      </tr> 
+      <tr>
+        <td>email/search</td>
+        <td>Worldwide</td>
+      </tr> 
+      <tr>
+        <td>location/validate</td>
+        <td>Czech Republic, Slovakia, and Poland</td>
+      </tr> 
+      <tr>
+        <td>location/search</td>
+        <td>Czech Republic, Slovakia, and Poland</td>
+      </tr> 
+      <tr>
+        <td>location/get</td>
+        <td>Czech Republic, Slovakia, and Poland</td>
+      </tr> 
+      <tr>
+        <td>location/localize</td>
+        <td>Czech Republic, Slovakia, and Poland</td>
+      </tr> 
+      <tr>
+        <td>name/validate</td>
+        <td>Czech Republic, Slovakia, and Poland</td>
+      </tr> 
+      <tr>
+        <td>phone/validate</td>
+        <td>Worldwide</td>
+      </tr>                                                                
+    </table>
+
+    ## Security
+    As part of our commitment to data security, you are required to obtain a <b>Bearer token</b> from Foxentry. If you are a new user and do not have an API key, please fill out our registration form at https://foxentry.com/help-center/rest-api. 
+
+    ## Need help? 
+    Should you encounter any issues, have questions, or need assistance, please feel free to reach out to our dedicated support team at info@foxentry.cz. We are here to help you make the most of our API and resolve any questions you may have.
+  contact:
+    name: Foxentry
+    email: info@foxentry.cz
+    url: "http://www.foxentry.cz"
+servers:
+  - url: "https://api.foxentry.com"
+  - url: "https://api.foxentry.com/v2.0"
+paths:
+  /company/validate:
+    post:
+      tags:
+        - Company
+      summary: Validate company data
+      description: |-
+        This endpoint requires at least 1 query parameter and will check if this combination of parameters values is valid.
+        Returns informations about company matched inputed parameters values.
+      operationId: ValidateCompanyData
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/ValidateCompanyData"
+      responses:
+        "200":
+          $ref: "#/components/responses/ValidateCompanyData"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /company/search:
+    post:
+      tags:
+        - Company
+      summary: Company search
+      description: "You can search for individual companies using this API endpoint. "
+      operationId: CompanySearch
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/CompanySearch"
+      responses:
+        "200":
+          $ref: "#/components/responses/CompanySearch"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /company/get:
+    post:
+      tags:
+        - Company
+      summary: Get company data
+      description: "This endpoint returns all available data about the company. "
+      operationId: GetCompanyData
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/GetCompanyData"
+      responses:
+        "200":
+          $ref: "#/components/responses/GetCompanyData"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /email/validate:
+    post:
+      tags:
+        - Email
+      summary: Validate email
+      description: |-
+        Foxentry allows you to check if email address really exists. Foxentry also can give you information 
+        if this mailbox is provided by some temporary emails service.
+      operationId: ValidateEmail
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/ValidateEmail"
+      responses:
+        "200":
+          $ref: "#/components/responses/ValidateEmail"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /email/search:
+    post:
+      tags:
+        - Email
+      summary: Email search
+      description: Foxentry will automatically offer you options to complete the address based on the data you enter.
+      operationId: EmailSearch
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/EmailSearch"
+      responses:
+        "200":
+          $ref: "#/components/responses/EmailSearch"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /location/validate:
+    post:
+      tags:
+        - Locations
+      summary: Location validation
+      description: Foxentry allows you to check validity and real existence of addresses.
+      operationId: LocationValidation
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/LocationValidation"
+      responses:
+        "200":
+          $ref: "#/components/responses/LocationValidation"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /location/search:
+    post:
+      tags:
+        - Locations
+      summary: Location Search
+      description: Use this API endpoint to search for locations.
+      operationId: LocationSearch
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/LocationSearch"
+      responses:
+        "200":
+          $ref: "#/components/responses/LocationSearch"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /location/get:
+    post:
+      tags:
+        - Locations
+      summary: Location get
+      description: Foxentry allows you to check validity and real existence of addresses.
+      operationId: LocationGet
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/LocationGet"
+      responses:
+        "200":
+          $ref: "#/components/responses/LocationGet"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /location/localize:
+    post:
+      tags:
+        - Locations
+      summary: Location localization
+      description: |-
+        This endpoint returns max. 10 addresses nearby inputed GPS coordinates. Usable in case you want to localize
+        end user by his GPS coordinates (obtained through browser geolocalization service).
+      operationId: LocationLocalization
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/LocationLocalization"
+      responses:
+        "200":
+          $ref: "#/components/responses/LocationLocalization"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /name/validate:
+    post:
+      tags:
+        - Name
+      summary: Name validation
+      description: "Foxentry allows you to check validity and real existence of names. "
+      operationId: NameValidation
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/NameValidation"
+      responses:
+        "200":
+          $ref: "#/components/responses/NameValidation"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+  /phone/validate:
+    post:
+      tags:
+        - Phone
+      summary: Validate phone number
+      description: |-
+        Foxentry allows you to check validity and real existence of phone number. Foxentry also can give you
+        additional informations about validated phone number, for example name of mobile carrier.
+      operationId: ValidatePhoneNumber
+      parameters:
+        - name: Foxentry-Include-Request-Details
+          in: header
+          description: Parameter to add details of your request.
+          required: false
+          schema:
+            type: boolean
+        - name: Api-Version
+          in: header
+          description: API version.
+          required: false
+          schema:
+            type: string
+            default: "2.0"
+            example: "2.0"
+          examples:
+            default:
+              value: "2.0"
+      requestBody:
+        $ref: "#/components/requestBodies/ValidatePhoneNumber"
+      responses:
+        "200":
+          $ref: "#/components/responses/ValidatePhoneNumber"
+        "400":
+          $ref: "#/components/responses/Error400"
+        "401":
+          $ref: "#/components/responses/Error401"
+        "402":
+          $ref: "#/components/responses/Error402"
+        "403":
+          $ref: "#/components/responses/Error403"
+        "404":
+          $ref: "#/components/responses/Error404"
+        "405":
+          $ref: "#/components/responses/Error405"
+        "429":
+          $ref: "#/components/responses/Error429"
+        "500":
+          $ref: "#/components/responses/Error500"
+        "503":
+          $ref: "#/components/responses/Error503"
+      security:
+        - BearerAuth: []
+      servers:
+        - url: "https://api.foxentry.com"
+        - url: "https://api.foxentry.com/v2.0"
+tags:
+  - name: Company
+    description: Company operations
+  - name: Email
+    description: Email operations
+  - name: Locations
+    description: Location operations
+  - name: Name
+    description: Names operations
+  - name: Phone
+    description: Phone operations
+components:
+  requestBodies:
+    LocationSearch:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/LocationSearchRequests"
+            required:
+              - requests
+    LocationLocalization:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/LocationLocalizationRequests"
+            required:
+              - requests
+    LocationGet:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/LocationGetRequests"
+            required:
+              - requests
+    LocationValidation:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/LocationValidationRequests"
+            required:
+              - requests
+    ValidateEmail:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/ValidateEmailRequests"
+            required:
+              - requests
+    ValidatePhoneNumber:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/ValidatePhoneNumberRequests"
+            required:
+              - requests
+    NameValidation:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/NameValidationRequests"
+            required:
+              - requests
+    ValidateCompanyData:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/ValidateCompanyDataRequests"
+            required:
+              - requests
+    CompanySearch:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/CompanySearchRequests"
+            required:
+              - requests
+    EmailSearch:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/EmailSearchRequests"
+            required:
+              - requests
+    GetCompanyData:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/GetCompanyDataRequests"
+            required:
+              - requests
+  securitySchemes:
+    BearerAuth:
+      type: http
+      description: "Bearer token formatted API key. If you do not have an API key, please contact us right away."
+      scheme: bearer
+  responses:
+    GetCompanyData:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                description: Response status
+                example: 200
+              request:
+                $ref: "#/components/schemas/GetCompanyDataResponseRequest"
+              response:
+                $ref: "#/components/schemas/GetCompanyDataResults"
+              errors:
+                type: array
+            required:
+              - status
+              - request
+              - response
+    EmailSearch:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                description: Response status
+                example: 200
+              request:
+                allOf:
+                  - $ref: "#/components/schemas/GlobalRequest"
+                  - type: object
+                    properties:
+                      endpoint:
+                        type: string
+                        example: email/search
+                      query:
+                        type: object
+                        properties:
+                          email:
+                            type: string
+                            description: Suggested email
+                            example: info@foxentry.com
+                        required:
+                          - email
+                      options:
+                        type: object
+                        properties:
+                          resultsLimit:
+                            type: number
+                            description: Number of results
+                            minimum: 1
+                            maximum: 5
+                            example: 5
+                      client:
+                        $ref: "#/components/schemas/ClientRequest"
+              response:
+                $ref: "#/components/schemas/EmailSearchResponse"
+              errors:
+                type: array
+            required:
+              - status
+    CompanySearch:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                description: Response status
+                example: 200
+              request:
+                $ref: "#/components/schemas/CompanySearchResultsRequest"
+              response:
+                $ref: "#/components/schemas/CompanySearchResults"
+              errors:
+                type: array
+            required:
+              - status
+              - request
+              - response
+    NameValidation:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: number
+                description: API call status.
+                example: 200
+              request:
+                $ref: "#/components/schemas/NameValidationResponseRequest"
+              response:
+                $ref: "#/components/schemas/NameValidationResults"
+              errors:
+                type: array
+            required:
+              - status
+              - request
+              - response
+              - errors
+    ValidatePhoneNumber:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: number
+                description: Status of response.
+                example: 200
+              request:
+                $ref: "#/components/schemas/ValidatePhoneNumberResponseRequest"
+              response:
+                $ref: "#/components/schemas/ValidatePhoneNumberResults"
+              errors:
+                type: array
+            required:
+              - status
+              - request
+              - response
+    LocationSearch:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                format: int32
+              request:
+                allOf:
+                  - $ref: "#/components/schemas/GlobalRequest"
+                  - type: object
+                    properties:
+                      endpoint:
+                        type: string
+                        example: location/search
+                      query:
+                        type: object
+                        properties:
+                          type:
+                            enum:
+                              - street
+                              - streetWithNumber
+                              - number.full
+                              - number.part1
+                              - number.part1.number
+                              - number.part2
+                              - number.part2.number
+                              - city
+                              - zip
+                              - full
+                          value:
+                            oneOf:
+                              - type: string
+                              - type: integer
+                          filter:
+                            type: array
+                            items:
+                              enum:
+                                - street
+                                - streetWithNumber
+                                - number.full
+                                - number.part1
+                                - number.part1.number
+                                - number.part2
+                                - number.part2.number
+                                - city
+                                - zip
+                                - full
+                            example:
+                              - street
+                        example:
+                          type: street
+                          value: Jeseniova
+                      options:
+                        $ref: "#/components/schemas/LocationRequestOptions"
+                      client:
+                        $ref: "#/components/schemas/ClientRequest"
+              response:
+                $ref: "#/components/schemas/LocationSearchResponse"
+              errors:
+                type: array
+            required:
+              - status
+    LocationLocalization:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                format: int32
+              request:
+                allOf:
+                  - $ref: "#/components/schemas/GlobalRequest"
+                  - type: object
+                    properties:
+                      endpoint:
+                        type: string
+                        example: location/localize
+                      client:
+                        allOf:
+                          - $ref: "#/components/schemas/Client"
+                          - type: object
+                            properties:
+                              location:
+                                type: object
+                                properties:
+                                  lat:
+                                    type: number
+                                    example: 50.083
+                                  lon:
+                                    type: number
+                                    example: 14.417
+                                required:
+                                  - lat
+                                  - lon
+                      options:
+                        allOf:
+                          - $ref: "#/components/schemas/LocationRequestOptionsSearch"
+                          - type: object
+                            properties:
+                              singleLocationResultDistance:
+                                type: number
+                                description: "Distance in meters used for single location result. It is measured in meters and represents a value for determining whether only one address or multiple addresses should be returned. It is the distance in meters from the user's GPS coordinates. If there is only one address within a radius of X (singleLocationResultDistance) meters, it will be returned as the only result. If there are multiple addresses within a radius of X, all matching addresses will be returned up to the limit of options.resultsLimit. If there are no addresses within a radius of X, the closest addresses outside the radius of X up to a maximum of options.resultsLimit will be returned."
+                                minimum: 1
+                                maximum: 100
+                                example: 15
+              response:
+                $ref: "#/components/schemas/LocationLocalizationResults"
+            required:
+              - status
+              - request
+              - response
+    LocationGet:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                format: int32
+              request:
+                allOf:
+                  - $ref: "#/components/schemas/GlobalRequest"
+                  - type: object
+                    properties:
+                      endpoint:
+                        type: string
+                        example: location/get
+                      query:
+                        type: object
+                        properties:
+                          administrativeArea.country:
+                            type: string
+                            description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                            example: CZ
+                          id:
+                            type: string
+                            description: Location ID
+                            example: "2070391"
+                        required:
+                          - administrativeArea.country
+                          - id
+                      options:
+                        type: object
+                        properties:
+                          idType:
+                            enum:
+                              - internal
+                              - external
+                            example: internal
+                          dataScope:
+                            enum:
+                              - basic
+                              - full
+                            example: full
+                        required:
+                          - idType
+                          - dataScope
+                      client:
+                        $ref: "#/components/schemas/ClientRequest"
+              errors:
+                type: array
+              response:
+                $ref: "#/components/schemas/LocationGetResults"
+            required:
+              - status
+              - request
+              - errors
+              - response
+    LocationValidation:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                format: int32
+              errors:
+                type: array
+              request:
+                allOf:
+                  - $ref: "#/components/schemas/GlobalRequest"
+                  - type: object
+                    properties:
+                      endpoint:
+                        type: string
+                        example: location/validate
+                      query:
+                        type: object
+                        properties:
+                          street:
+                            type: string
+                            nullable: true
+                            example: Jeseniova
+                          streetWithNumber:
+                            type: string
+                            nullable: true
+                            example: Jeseniova 55
+                          number.full:
+                            type: string
+                            nullable: true
+                            example: 1151/55d
+                          number.part1:
+                            type: string
+                            nullable: true
+                            example: "1151"
+                          number.part1.number:
+                            type: string
+                            nullable: true
+                            example: "1151"
+                          number.part1.latter:
+                            type: string
+                            nullable: true
+                            example: null
+                          number.part2:
+                            type: string
+                            nullable: true
+                            example: 55d
+                          number.part2.number:
+                            type: string
+                            nullable: true
+                            example: "55"
+                          number.part2.latter:
+                            type: string
+                            nullable: true
+                            example: d
+                          city:
+                            type: string
+                            nullable: true
+                            example: Praha
+                          zip:
+                            type: string
+                            nullable: true
+                            example: 130 00
+                          full:
+                            type: string
+                            nullable: true
+                            example: "Jeseniova 2770/56d, 130 00 Praha"
+                          administrativeArea.country:
+                            type: string
+                            nullable: true
+                            description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                            example: CZ
+                      options:
+                        $ref: "#/components/schemas/LocationRequestOptions"
+                      client:
+                        $ref: "#/components/schemas/ClientRequest"
+              response:
+                $ref: "#/components/schemas/LocationValidationResponse"
+            required:
+              - status
+              - errors
+              - request
+              - response
+    ValidateCompanyData:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: integer
+                description: Response status
+                example: 200
+              request:
+                $ref: "#/components/schemas/ValidateCompanyDataResultsRequest"
+              response:
+                $ref: "#/components/schemas/ValidateCompanyDataResults"
+              errors:
+                type: array
+            required:
+              - status
+              - request
+              - response
+    ValidateEmail:
+      description: Successfull response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+              status:
+                type: integer
+                description: Response status
+                example: 200
+              request:
+                allOf:
+                  - $ref: "#/components/schemas/GlobalRequest"
+                  - type: object
+                    properties:
+                      endpoint:
+                        type: string
+                        example: location/validate
+                      client:
+                        $ref: "#/components/schemas/Client"
+                      query:
+                        type: object
+                        properties:
+                          email:
+                            type: string
+                            example: info@foxentry.cz
+                        required:
+                          - email
+                      options:
+                        type: object
+                        properties:
+                          validationType:
+                            enum:
+                              - basic
+                              - extended
+                            example: extended
+                          acceptDisposableEmails:
+                            type: boolean
+                            example: true
+                          acceptFreemails:
+                            type: boolean
+                            example: true
+              response:
+                $ref: "#/components/schemas/ValidateEmailResponse"
+            required:
+              - errors
+              - status
+              - request
+              - response
+    Error400:
+      description: Bad Request.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ResponseStatus400"
+              - type: object
+                properties:
+                  request:
+                    $ref: "#/components/schemas/GlobalRequest"
+              - type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      oneOf:
+                        - $ref: "#/components/schemas/Error400RequestBodyEmpty"
+                        - $ref: "#/components/schemas/Error400RequestBodyNotJson"
+                        - $ref: "#/components/schemas/Error400RequestBodyNoRequest"
+                        - $ref: "#/components/schemas/Error400RequestBodyTooBig"
+                        - $ref: "#/components/schemas/Error400RequestOptionsParameterNotSupported"
+                        - $ref: "#/components/schemas/Error400RequestOptionParameterValueNotSupported"
+                        - $ref: "#/components/schemas/Error400RequestQueryNotSent"
+                        - $ref: "#/components/schemas/Error400RequestQueryParameterCombination"
+                        - $ref: "#/components/schemas/Error400RequestQueryParameterMissing"
+                        - $ref: "#/components/schemas/Error400RequestQueryParameterNotSupported"
+                        - $ref: "#/components/schemas/Error400RequestQueryParameterRequired"
+    Error401:
+      description: Unauthorized.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ResponseStatus401"
+              - type: object
+                properties:
+                  request:
+                    $ref: "#/components/schemas/GlobalRequest"
+              - type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Error401RequestAuth"
+    Error402:
+      description: Payment Required.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ResponseStatus402"
+              - type: object
+                properties:
+                  request:
+                    $ref: "#/components/schemas/GlobalRequest"
+              - type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Error402RequestBillingNoCredit"
+    Error403:
+      description: Forbidden.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ResponseStatus403"
+              - type: object
+                properties:
+                  request:
+                    $ref: "#/components/schemas/GlobalRequest"
+              - type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      oneOf:
+                        - $ref: "#/components/schemas/Error403RequestAuthKey"
+                        - $ref: "#/components/schemas/Error403RequestAuthToken"
+                        - $ref: "#/components/schemas/Error403RequestNotAllowedDomain"
+                        - $ref: "#/components/schemas/Error403RequestNotAllowedIp"
+    Error404:
+      description: Not Found.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ResponseStatus404"
+              - type: object
+                properties:
+                  request:
+                    $ref: "#/components/schemas/GlobalRequest"
+              - type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      oneOf:
+                        - $ref: "#/components/schemas/Error404RequestApiVersion"
+                        - $ref: "#/components/schemas/Error404RequestEndpointNotFound"
+                        - $ref: "#/components/schemas/Error404RequestProjetNotFound"
+    Error405:
+      description: Method Not Allowed.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ResponseStatus405"
+              - type: object
+                properties:
+                  request:
+                    $ref: "#/components/schemas/GlobalRequest"
+              - type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Error405RequestNotAllowedMethod"
+    Error429:
+      description: Too Many Requests.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ResponseStatus429"
+              - type: object
+                properties:
+                  request:
+                    $ref: "#/components/schemas/GlobalRequest"
+              - type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      oneOf:
+                        - $ref: "#/components/schemas/Error429RequestBillingServiceLimit"
+                        - $ref: "#/components/schemas/Error429RequestRateLimitCreditPerDay"
+                        - $ref: "#/components/schemas/Error429RequestRateLimitCreditPerIp"
+                        - $ref: "#/components/schemas/Error429RequestRateLimitTooManyRequests"
+    Error500:
+      description: Internal Server Error.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ResponseStatus500"
+              - type: object
+                properties:
+                  request:
+                    $ref: "#/components/schemas/GlobalRequest"
+              - type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      oneOf:
+                        - $ref: "#/components/schemas/Error500InternalBilling"
+                        - $ref: "#/components/schemas/Error500InternalDatabaseConnection"
+                        - $ref: "#/components/schemas/Error500InternalDatabaseError"
+                        - $ref: "#/components/schemas/Error500InternalDatabaseNotAvailable"
+                        - $ref: "#/components/schemas/Error500InternalError"
+                        - $ref: "#/components/schemas/Error500Timeout"
+                        - $ref: "#/components/schemas/Error500RequestProjectNoData"
+    Error503:
+      description: Service Unavailable.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/ResponseStatus503"
+              - type: object
+                properties:
+                  request:
+                    $ref: "#/components/schemas/GlobalRequest"
+              - type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Error503RequestEndpointNotAvailable"
+  schemas:
+    LocationSearchRequests:
+      type: object
+      properties:
+        query:
+          type: object
+          properties:
+            type:
+              enum:
+                - street
+                - streetWithNumber
+                - number.full
+                - number.part1
+                - number.part2
+                - city
+                - zip
+                - administrativeArea.country
+            value:
+              oneOf:
+                - type: string
+                - type: integer
+            filter:
+              type: object
+              description: TODO
+              properties:
+                street:
+                  type: string
+                  nullable: true
+                  description: TODO
+                  example: Jeseniova
+                streetWithNumber:
+                  type: string
+                  nullable: true
+                  description: TODO
+                  example: Jeseniova 55
+                number.full:
+                  type: string
+                  nullable: true
+                  description: TODO
+                  example: 1151/55d
+                number.part1:
+                  type: string
+                  nullable: true
+                  description: TODO
+                  example: "1151"
+                number.part2:
+                  type: string
+                  nullable: true
+                  description: TODO
+                  example: 55d
+                city:
+                  type: string
+                  nullable: true
+                  description: TODO
+                  example: Praha
+                zip:
+                  type: string
+                  nullable: true
+                  description: TODO
+                  example: 130 00
+                administrativeArea.country:
+                  type: string
+                  nullable: true
+                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  example: CZ
+          required:
+            - type
+            - value
+          example:
+            type: street
+            value: Jeseniova
+        options:
+          $ref: "#/components/schemas/LocationRequestOptionsSearch"
+        client:
+          $ref: "#/components/schemas/ClientRequest"
+      required:
+        - query
+    LocationRequestOptionsSearch:
+      type: object
+      properties:
+        dataScope:
+          enum:
+            - basic
+            - full
+          default: basic
+          example: full
+        countryMode:
+          enum:
+            - prefer
+            - limit
+          default: prefer
+          example: prefer
+        resultsLimit:
+          type: integer
+          minimum: 1
+          maximum: 20
+          default: 10
+          example: 10
+        cityFormat:
+          enum:
+            - minimal
+            - basic
+            - extended
+          default: basic
+          example: extended
+        zipFormat:
+          enum:
+            - numeric
+            - standard
+          default: standard
+          example: numeric
+    ClientRequest:
+      type: object
+      description: TODO
+      properties:
+        country:
+          type: string
+          description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+          example: CZ
+        location:
+          type: object
+          description: TODO
+          properties:
+            lat:
+              type: number
+              description: Client's latitude
+              example: 50.0628
+            lon:
+              type: number
+              description: Client's longitude
+              example: 13.9271
+    LocationLocalizationRequests:
+      type: object
+      properties:
+        client:
+          allOf:
+            - $ref: "#/components/schemas/Client"
+            - type: object
+              description: TODO
+              properties:
+                location:
+                  type: object
+                  properties:
+                    lat:
+                      type: number
+                      description: TODO
+                      example: 50.083
+                    lon:
+                      type: number
+                      description: TODO
+                      example: 14.417
+                  required:
+                    - lat
+                    - lon
+        options:
+          allOf:
+            - $ref: "#/components/schemas/LocationRequestOptions"
+            - type: object
+              properties:
+                singleLocationResultDistance:
+                  type: number
+                  description: "Distance in meters used for single location result. It is measured in meters and represents a value for determining whether only one address or multiple addresses should be returned. It is the distance in meters from the user's GPS coordinates. If there is only one address within a radius of X (singleLocationResultDistance) meters, it will be returned as the only result. If there are multiple addresses within a radius of X, all matching addresses will be returned up to the limit of options.resultsLimit. If there are no addresses within a radius of X, the closest addresses outside the radius of X up to a maximum of options.resultsLimit will be returned."
+                  example: 100
+      required:
+        - client
+    Client:
+      type: object
+      description: TODO
+      properties:
+        ip:
+          type: string
+          example: 127.0.1.1
+        location:
+          type: object
+          description: TODO
+          properties:
+            lat:
+              type: number
+              description: Latitude coordinate.
+              example: 50.088816
+            lon:
+              type: number
+              description: Longitude coordinate.
+              example: 14.460778
+    LocationRequestOptions:
+      type: object
+      properties:
+        dataScope:
+          enum:
+            - basic
+            - full
+          default: basic
+          example: full
+        countryMode:
+          enum:
+            - prefer
+            - limit
+          default: prefer
+          example: prefer
+        resultsLimit:
+          type: integer
+          minimum: 1
+          maximum: 20
+          default: 10
+          example: 10
+        cityFormat:
+          enum:
+            - minimal
+            - basic
+            - extended
+          default: basic
+          example: extended
+        zipFormat:
+          enum:
+            - numeric
+            - standard
+          default: standard
+          example: numeric
+        acceptPostOfficeAsCity:
+          type: boolean
+          default: false
+          example: true
+    LocationGetRequests:
+      type: object
+      properties:
+        query:
+          type: object
+          properties:
+            administrativeArea.country:
+              type: string
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              example: CZ
+            id:
+              type: string
+              description: Location ID
+              example: "2070391"
+          required:
+            - administrativeArea.country
+            - id
+        options:
+          type: object
+          description: Query options.
+          properties:
+            idType:
+              enum:
+                - internal
+                - external
+              default: internal
+              example: internal
+            dataScope:
+              enum:
+                - basic
+                - full
+              default: basic
+              example: full
+          required:
+            - idType
+            - dataScope
+        client:
+          $ref: "#/components/schemas/ClientRequest"
+      required:
+        - query
+    LocationValidationRequests:
+      type: object
+      properties:
+        query:
+          type: object
+          properties:
+            street:
+              type: string
+              nullable: true
+              description: TODO
+              example: Jeseniova
+            streetWithNumber:
+              type: string
+              nullable: true
+              description: TODO
+              example: Jeseniova 55
+            number.full:
+              type: string
+              nullable: true
+              description: TODO
+              example: 1151/55d
+            number.part1:
+              type: string
+              nullable: true
+              description: TODO
+              example: "1151"
+            number.part1.number:
+              type: string
+              nullable: true
+              description: TODO
+              example: "1151"
+            number.part1.latter:
+              type: string
+              nullable: true
+              description: TODO
+              example: null
+            number.part2:
+              type: string
+              nullable: true
+              description: TODO
+              example: 55d
+            number.part2.number:
+              type: string
+              nullable: true
+              description: TODO
+              example: "55"
+            number.part2.latter:
+              type: string
+              nullable: true
+              description: TODO
+              example: d
+            city:
+              type: string
+              nullable: true
+              description: TODO
+              example: Praha
+            zip:
+              type: string
+              nullable: true
+              description: TODO
+              example: 130 00
+            full:
+              type: string
+              nullable: true
+              description: TODO
+              example: "Jeseniova 2770/56d, 130 00 Praha"
+            administrativeArea.country:
+              type: string
+              nullable: true
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              example: CZ
+        options:
+          $ref: "#/components/schemas/LocationRequestOptions"
+        client:
+          $ref: "#/components/schemas/ClientRequest"
+      required:
+        - query
+    ValidateEmailRequests:
+      type: object
+      properties:
+        client:
+          $ref: "#/components/schemas/Client"
+        query:
+          type: object
+          properties:
+            email:
+              type: string
+              description: TODO
+              example: info@foxentry.cz
+          required:
+            - email
+        options:
+          type: object
+          description: Query options.
+          properties:
+            validationType:
+              enum:
+                - basic
+                - extended
+              description: TODO
+              default: basic
+              example: extended
+            acceptDisposableEmails:
+              type: boolean
+              description: TODO
+              default: true
+              example: true
+            acceptFreemails:
+              type: boolean
+              description: TODO
+              default: true
+              example: true
+      required:
+        - query
+    ValidatePhoneNumberRequests:
+      type: object
+      properties:
+        query:
+          type: object
+          properties:
+            prefix:
+              type: string
+              description: Phone number prefix.
+              example: "+420"
+            number:
+              type: integer
+              description: Phone number.
+              example: 607123456
+            numberWithPrefix:
+              type: string
+              description: Phone number with prefix.
+              example: "+420775111222"
+        options:
+          type: object
+          description: Query options.
+          properties:
+            validationType:
+              enum:
+                - basic
+                - extended
+              description: Type of validation.
+              default: basic
+              example: extended
+            allowedPrefixes:
+              type: array
+              description: List of allowed prefixies.
+              items:
+                type: string
+                example: "+420"
+            defaultPrefix:
+              type: string
+              description: Default international prefix if not part of the query.
+              example: "+420"
+      required:
+        - query
+    NameValidationRequests:
+      type: object
+      properties:
+        query:
+          type: object
+          properties:
+            name:
+              type: string
+              nullable: true
+              description: TODO
+              example: Petr
+            surname:
+              type: string
+              nullable: true
+              description: TODO
+              example: Novák
+            nameSurname:
+              type: string
+              nullable: true
+              description: TODO
+              default: null
+              example: Petr Novák
+        options:
+          type: object
+          description: Query options.
+          properties:
+            dataScope:
+              enum:
+                - basic
+                - full
+              default: basic
+              example: full
+            acceptDegrees:
+              type: boolean
+              description: "Allow to enter a title directly into the name, surname or nameSurname input."
+              default: false
+              example: false
+            acceptContext:
+              type: boolean
+              description: "Allow to insert context directly into name, surname or nameSurname."
+              default: false
+              example: false
+            validationDepth:
+              enum:
+                - minimal
+                - moderate
+                - strict
+              description: Specifies the scope and depth of name validation.
+              default: minimal
+              example: minimal
+            smartMode:
+              type: boolean
+              description: "Allows to correct the name (resultCorrected). If this is disabled, the corrections are given as a suggestion."
+              default: true
+              example: false
+          required:
+            - dataScope
+      required:
+        - query
+    ValidateCompanyDataRequests:
+      type: object
+      properties:
+        query:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Company name
+              example: Avantro s.r.o.
+            administrativeArea.country:
+              type: string
+              description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
+              example: CZ
+            registrationNumber:
+              type: string
+              description: Company registration number (ID)
+              example: Jeseniova 55
+            taxNumber:
+              type: string
+              description: Company national TAX number
+              example: Jeseniova
+            vatNumber:
+              type: string
+              description: Company VAT number
+              example: CZ123456789
+        options:
+          type: object
+          description: Query options.
+          properties:
+            dataScope:
+              enum:
+                - basic
+                - extended
+                - full
+              description: Data scope of returned data.
+              default: basic
+              example: full
+            countryMode:
+              enum:
+                - limit
+                - prefer
+                - null
+              description: "prefer = Prefer results matching filter, limit = Limit to results matching filter."
+              default: prefer
+              example: limit
+            resultsLimit:
+              type: integer
+              description: Results limit of response.
+              minimum: 1
+              maximum: 20
+              default: 10
+            includeTerminatedSubjects:
+              type: boolean
+              description: Whether or not to return in the API response also entities that have already been terminated.
+              default: false
+              example: true
+            addressType:
+              enum:
+                - official
+                - validated
+              description: "official = Returns the address of the entity in the form in which it appears in the official register of companies, validated = Returns the address of the entity in the validated form, i.e. in the form that is correct in terms of address entry standards."
+              example: official
+      required:
+        - query
+    CompanySearchRequests:
+      type: object
+      properties:
+        query:
+          type: object
+          properties:
+            type:
+              enum:
+                - name
+                - registrationNumber
+                - taxNumber
+                - vatNumber
+              example: name
+            value:
+              type: string
+              description: The input value you"re looking for.
+              example: Avantro
+            filter:
+              type: object
+              description: TODO
+              properties:
+                name:
+                  type: string
+                  description: Company name.
+                  example: Avantro s.r.o.
+                administrativeArea.country:
+                  type: string
+                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  example: CZ
+                registrationNumber:
+                  type: string
+                  description: Company registration number (ID).
+                  example: Jeseniova 55
+                taxNumber:
+                  type: string
+                  description: Company national TAX number.
+                  example: Jeseniova
+                vatNumber:
+                  type: string
+                  description: Company VAT number.
+                  example: CZ123456789
+          required:
+            - type
+            - value
+        options:
+          type: object
+          description: Query options.
+          properties:
+            dataScope:
+              enum:
+                - basic
+                - extended
+                - full
+              description: Data scope of returned data.
+              default: basic
+              example: full
+            countryMode:
+              enum:
+                - limit
+                - prefer
+              description: "prefer = Prefer results matching filter, limit = Limit to results matching filter."
+              default: prefer
+              example: limit
+            resultsLimit:
+              type: integer
+              description: Result limit.
+              minimum: 1
+              maximum: 20
+              default: 10
+              example: 10
+            includeTerminatedSubjects:
+              type: boolean
+              description: Whether or not to return in the output also entities that have already been terminated.
+              default: false
+              example: true
+            addressType:
+              enum:
+                - official
+                - validated
+                - null
+              description: "official = Returns the address of the entity in the form in which it appears in the official register of companies, validated = Returns the address of the entity in the validated form, i.e. in the form that is correct in terms of address entry standards."
+              example: official
+      required:
+        - query
+    EmailSearchRequests:
+      type: object
+      properties:
+        query:
+          type: object
+          properties:
+            email:
+              type: string
+              description: Suggested email
+              example: info@foxentry.com
+          required:
+            - email
+        options:
+          type: object
+          description: Query options.
+          properties:
+            resultsLimit:
+              type: number
+              description: Number of results
+              minimum: 1
+              maximum: 5
+              example: 5
+        client:
+          $ref: "#/components/schemas/ClientRequest"
+    GetCompanyDataRequests:
+      type: object
+      properties:
+        query:
+          type: object
+          properties:
+            administrativeArea.country:
+              type: string
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              example: CZ
+            registrationNumber:
+              type: string
+              description: Company registration number.
+              example: "04997476"
+          required:
+            - administrativeArea.country
+            - registrationNumber
+        options:
+          $ref: "#/components/schemas/CompanyDataRequestOption"
+      required:
+        - query
+    CompanyDataRequestOption:
+      type: object
+      properties:
+        dataScope:
+          enum:
+            - basic
+            - extended
+            - full
+          description: Scope of required data.
+          default: basic
+          example: full
+        includeTerminatedSubjects:
+          type: boolean
+          description: Whether or not to include entities that have already ended their existence in the output.
+          default: false
+          example: false
+        addressType:
+          enum:
+            - official
+            - validated
+          description: "Retrieves the address of a subject in different formats official. `official` returns the address of the subject as it is listed in the official company registry. `validated` returns the address of the subject in a validated format, conforming to address input standards."
+          example: validated
+    GetCompanyDataResponseRequest:
+      type: object
+      properties:
+        endpoint:
+          type: string
+          description: Endpoint used in API call.
+          example: company/get
+        code:
+          type: string
+          description: Internal API call code.
+          example: gc0nCfcELaPSHH4Qo4UBaC7DbAj6G4
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
+        query:
+          type: object
+          properties:
+            administrativeArea.country:
+              type: string
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              example: CZ
+            registrationNumber:
+              type: number
+              description: Company registration number.
+              example: 4997476
+        options:
+          type: object
+          description: Query options.
+          properties:
+            dataScope:
+              enum:
+                - basic
+                - extended
+                - full
+              description: Scope of required data.
+              default: basic
+              example: full
+        client:
+          $ref: "#/components/schemas/ClientRequest"
+    GetCompanyDataResults:
+      type: object
+      properties:
+        resultCount:
+          type: integer
+          description: Number of results.
+          example: 1
+        results:
+          type: array
+          description: TODO
+          items:
+            $ref: "#/components/schemas/CompanyResultsResponseResults"
+      required:
+        - resultCount
+        - results
+    CompanyResultsResponseResults:
+      type: object
+      properties:
+        data:
+          type: object
+          description: TODO
+          properties:
+            administrativeArea:
+              type: object
+              description: TODO
+              properties:
+                country:
+                  type: string
+                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  example: CZ
+            name:
+              type: string
+              description: Name of company.
+              example: Avantro s.r.o.
+            registrationNumber:
+              type: string
+              description: Company registration number.
+              example: "04997476"
+            taxNumber:
+              type: string
+              nullable: true
+              description: Company tax number.
+              example: CZ04997476
+            vatNumber:
+              type: string
+              description: Company vat number.
+              example: CZ04997476
+            vatNumberSpecial:
+              type: string
+              nullable: true
+              description: Special vat number in case that subject is part of VAT group.
+              example: CZ0581019
+            address:
+              type: object
+              description: TODO
+              properties:
+                data:
+                  $ref: "#/components/schemas/LocationData"
+            addressOfficial:
+              $ref: "#/components/schemas/LocationOficial"
+              description: TODO
+            nace:
+              type: array
+              description: Types of business
+              items:
+                type: object
+                properties:
+                  code:
+                    type: number
+                    description: Code of business.
+                    example: 74
+                  name:
+                    type: string
+                    description: Name of business
+                    example: "Ostatní profesní, vědecké a technické činnosti"
+                  isPrimary:
+                    type: boolean
+                    nullable: true
+                    description: Determines if it is the main object of the business.
+                    example: false
+            databoxes:
+              type: array
+              description: TODO
+              items:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: Code of databox.
+                    example: txutpba
+                  name:
+                    type: string
+                    description: Name of databox.
+                    example: AVANTRO s.r.o.
+                  receivingMessages:
+                    type: number
+                    description: Number of receiving messages.
+                    example: 1
+            registrations:
+              type: array
+              description: TODO
+              items:
+                type: object
+                properties:
+                  type:
+                    enum:
+                      - businessRegister
+                      - vatRegister
+                    description: Type of registration.
+                    example: businessRegister
+                  data:
+                    type: object
+                    description: TODO
+                    properties:
+                      registrator:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                            description: TODO
+                            example: Městský soud v Praze
+                          detail:
+                            type: string
+                            nullable: true
+                            description: Detail of registration.
+                            example: "Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8, tel. 266 013 111"
+                      reference:
+                        type: string
+                        nullable: true
+                        description: Registration reference.
+                        example: C 256795
+            legalForm:
+              type: object
+              description: TODO
+              properties:
+                code:
+                  type: number
+                  description: Code of legal form.
+                  example: 112
+                name:
+                  type: string
+                  description: Name of legal form.
+                  example: Společnost s ručením omezeným.
+            legalFormSpecific:
+              type: object
+              description: TODO
+              properties:
+                code:
+                  type: string
+                  nullable: true
+                  description: Code of legal form for Polish companies.
+                name:
+                  type: string
+                  nullable: true
+                  description: Name of legal form for Polish companies.
+            esa2010:
+              type: object
+              description: The European System of National and Regional Accounts.
+              properties:
+                code:
+                  type: number
+                  nullable: true
+                  description: Code of ESA2010.
+                  example: 11002
+                name:
+                  type: string
+                  nullable: true
+                  description: Name of ESA2010.
+                  example: Nefinanční podniky soukromé národní
+            dates:
+              type: object
+              description: TODO
+              properties:
+                created:
+                  type: string
+                  description: Company create date.
+                  example: "2016-04-15"
+                terminated:
+                  type: boolean
+                  nullable: true
+                  description: TODO
+                  example: true
+            employees:
+              type: object
+              description: TODO
+              properties:
+                count:
+                  type: number
+                  nullable: true
+                  description: Number of employees.
+                  example: null
+                category:
+                  type: string
+                  nullable: true
+                  description: Category of employees.
+                  example: TODO
+            insolvency:
+              type: object
+              nullable: true
+              description: TODO
+              properties:
+                history:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      reference:
+                        type: string
+                        description: Official reference of insolovency.
+                        example: TODO
+                      dateFrom:
+                        type: string
+                        description: Since when is the insolovence valid.
+                        format: date
+                        example: "2021-08-01"
+                      dateTo:
+                        type: string
+                        description: Until when is the insolvency valid.
+                        format: date
+                        example: "2025-08-01"
+                      court:
+                        type: object
+                        properties:
+                          name:
+                            type: string
+                            description: Name of court
+                            example: Krajský soud v Hradci Králové.
+                      status:
+                        type: string
+                        description: Status of insolovency.
+                        example: NEVYRIZENA
+                      detailUrl:
+                        type: string
+                        description: Detail URL of insolovency.
+                        format: url
+                        example: "https://isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=F"
+            businessPremises:
+              type: array
+              nullable: true
+              description: TODO
+              items:
+                type: object
+                properties:
+                  label:
+                    type: string
+                    nullable: true
+                    description: Label of business premises
+                    example: Obchodní centrum Havlíčkův Brod.
+                  address:
+                    type: object
+                    properties:
+                      full:
+                        type: string
+                        description: Full address.
+                        example: "Nad Rybníkem 3169, 580 01,  Havlíčkův Brod"
+                  activitySubjects:
+                    type: string
+                    description: Subjects activity.
+                    example: Zprostředkovatelská činnost
+            authority:
+              type: object
+              description: TODO
+              properties:
+                name:
+                  type: string
+                  description: Name of authority.
+                  example: Statutární orgán
+                members:
+                  type: array
+                  description: TODO
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        description: name of member.
+                        example: Pavel Hrdlička
+                      address:
+                        type: object
+                        description: TODO
+                        properties:
+                          data:
+                            $ref: "#/components/schemas/LocationData"
+                      addressOficial:
+                        $ref: "#/components/schemas/LocationOficial"
+                      function:
+                        type: string
+                        nullable: true
+                        description: Member function.
+                        example: jednatel
+                      birthDate:
+                        type: string
+                        nullable: true
+                        description: Member date of birth.
+                        example: TODO
+                      registrationNumber:
+                        type: number
+                        nullable: true
+                        description: Member registration number.
+                        example: null
+                decisions:
+                  type: array
+                  description: TODO
+                  items:
+                    type: string
+                    nullable: true
+                    description: Member decisions.
+                    example: Společnost zastupuje jednatel samostatně.
+            capital:
+              type: object
+              description: TODO
+              properties:
+                value:
+                  type: object
+                  description: TODO
+                  properties:
+                    amount:
+                      type: integer
+                      description: Amount of capital.
+                      example: 200000
+                    currency:
+                      type: string
+                      description: Currency of capital.
+                      example: CZK
+                shareholders:
+                  type: array
+                  description: TODO
+                  items:
+                    type: object
+                    properties:
+                      shareholder:
+                        type: object
+                        properties:
+                          text:
+                            type: string
+                            description: Information about shareholder.
+                            example: "PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277, 751 11 Radslavice"
+                      share:
+                        type: object
+                        description: TODO
+                        properties:
+                          amount:
+                            type: integer
+                            description: Amount of share.
+                            example: 200000
+                          currency:
+                            type: string
+                            description: Currency of share.
+                            example: CZK
+                          percent:
+                            type: integer
+                            description: Share percentage.
+                            maximum: 100
+                            example: 100
+                          percentPaid:
+                            type: integer
+                            description: Share percentage paid.
+                            maximum: 100
+                            example: 100
+                      info:
+                        type: array
+                        description: TODO
+                        items:
+                          type: string
+                          description: Information about share
+                          example: "Druh podílu: základní, se kterým nejsou spojené žádné zvláštní práva a povinnosti"
+                stocks:
+                  type: array
+                  description: TODO
+                  items:
+                    type: string
+                    description: List of stocks.
+                    example: "100 ks akcie na jméno v listinné podobě ve jmenovité hodnotě 20 000 ,- Kč."
+            tradeLicences:
+              type: array
+              description: TODO
+              items:
+                type: object
+                description: TODO
+                properties:
+                  type:
+                    type: string
+                    description: Type of trade licence.
+                    example: Ohlašovací volná
+                  name:
+                    type: string
+                    description: Name of trade licenses.
+                    example: "Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona"
+                  valid:
+                    type: object
+                    properties:
+                      from:
+                        type: string
+                        description: Valid from.
+                        example: "2016-04-15"
+                      fromText:
+                        type: string
+                        nullable: true
+                        description: Description of validation (from).
+                        example: Dnem zápisu do spolkového rejstříku.
+                      to:
+                        type: string
+                        description: Valid to.
+                        example: "2030-04-15"
+                      toText:
+                        type: string
+                        nullable: true
+                        description: Description of validation (to).
+                        example: Na dobu neurčitou.
+                  interrupted:
+                    type: object
+                    description: TODO
+                    properties:
+                      from:
+                        type: string
+                        nullable: true
+                        description: Validity of the authorisation (from).
+                        format: date
+                        example: "2021-08-15"
+                      to:
+                        type: string
+                        nullable: true
+                        description: Validity of the authorisation (to).
+                        format: date
+                        example: "2025-08-15"
+                  responsiblePerson:
+                    type: string
+                    description: Responsible person.
+                    example: Jan Novák
+                  activitySubject:
+                    type: array
+                    items:
+                      type: string
+                      description: TODO
+                      example: Broušení technického a šperkového kamene
+            vat:
+              type: object
+              description: TODO
+              properties:
+                status:
+                  type: string
+                  description: Vat current status.
+                  example: payer
+                reliability:
+                  type: object
+                  description: TODO
+                  properties:
+                    reliable:
+                      type: boolean
+                      description: Determines whether or not the subject is reliable.
+                      example: true
+                    unrealiableFrom:
+                      type: boolean
+                      nullable: true
+                      description: Determines from when a subject is unreliable.
+                      example: true
+                bankAccounts:
+                  type: array
+                  description: TODO
+                  items:
+                    type: object
+                    properties:
+                      number:
+                        type: string
+                        description: TODO
+                        example: 55567899/2010
+                history:
+                  type: object
+                  description: TODO
+                  properties:
+                    vatNumber:
+                      type: string
+                      description: Company vat number.
+                      example: CZ04997476
+                    registrationType:
+                      type: string
+                      description: Company registration type.
+                      example: payer
+                    validFrom:
+                      type: string
+                      description: Valid from.
+                      example: "2017-09-01"
+                    validTo:
+                      type: string
+                      nullable: true
+                      description: Valid to.
+                      example: null
+                    isGroupRegistration:
+                      type: boolean
+                      description: Is part of group registration.
+                      example: false
+      required:
+        - data
+    LocationData:
+      type: object
+      properties:
+        administrativeArea:
+          $ref: "#/components/schemas/DataAdministrativeArea"
+        ids:
+          type: object
+          description: TODO
+          properties:
+            internal:
+              type: string
+              nullable: true
+              description: Internal address ID.
+              example: "2070391"
+            external:
+              type: string
+              nullable: true
+              description: External address ID.
+              example: "22349995"
+            region:
+              type: string
+              nullable: true
+              description: Region ID.
+              example: "19"
+            discrict:
+              type: string
+              nullable: true
+              description: District ID.
+              example: "9999"
+            cityDistrictSpecial:
+              type: string
+              nullable: true
+              description: City district special ID.
+              example: "86"
+            cityDistrict:
+              type: string
+              nullable: true
+              description: City district ID.
+              example: "500208"
+            cityPart:
+              type: string
+              nullable: true
+              description: City part ID.
+              example: "400637"
+            cadastralArea:
+              type: string
+              nullable: true
+              description: Cadastral area ID.
+              example: "730955"
+            city:
+              type: string
+              nullable: true
+              description: City ID.
+              example: "554782"
+            street:
+              type: string
+              nullable: true
+              description: Street ID.
+              example: "554782"
+        street:
+          type: string
+          description: Street.
+          example: Jeseniova
+        number:
+          $ref: "#/components/schemas/LocationNumber"
+        streetWithNumber:
+          type: string
+          description: Street with number.
+          example: Jeseniova 1151/55
+        city:
+          type: string
+          description: Location city.
+          example: Praha
+        zip:
+          type: string
+          description: ZIP code.
+          example: "13000"
+        postOffice:
+          type: object
+          description: TODO
+          properties:
+            name:
+              type: string
+              example: Praha 086
+          required:
+            - name
+        geometry:
+          $ref: "#/components/schemas/DataGeometry"
+        full:
+          type: string
+          example: "Jeseniova 1151/55, 130 00 Praha 3"
+      required:
+        - administrativeArea
+        - ids
+        - street
+        - number
+        - streetWithNumber
+        - city
+        - zip
+        - geometry
+        - full
+    DataAdministrativeArea:
+      type: object
+      properties:
+        country:
+          type: string
+          nullable: true
+          description: "Company registration country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+          example: CZ
+        region:
+          type: string
+          nullable: true
+          description: Company registration region.
+          example: Hlavní město Praha
+        district:
+          type: string
+          nullable: true
+          description: Company registration discrict.
+          example: Hlavní město Praha
+        cityDistrict:
+          type: string
+          nullable: true
+          description: City Disctrict.
+          example: Praha 6
+        cityDistrictSpecial:
+          type: string
+          nullable: true
+          description: Company registration discrict special.
+          example: Praha 6
+        cityPart:
+          type: string
+          nullable: true
+          description: Part of the City.
+          example: Dejvice
+        cityAdministrative:
+          type: string
+          nullable: true
+          description: City Administrative area.
+          example: Dejvice
+        cadastralArea:
+          type: string
+          nullable: true
+          description: City cadastral area.
+          example: Dejvice
+    LocationNumber:
+      type: object
+      properties:
+        part1:
+          type: string
+          description: First part of house number.
+          example: "137"
+        part1Number:
+          type: string
+          description: First part of house number.
+          example: "137"
+        part1Letter:
+          type: string
+          nullable: true
+          description: The first part of the house number that is text.
+          example: null
+        part2:
+          type: string
+          nullable: true
+          description: Second part of house number.
+          example: "16"
+        part2Number:
+          type: integer
+          nullable: true
+          description: The second part of the house number that is numerical.
+          example: "16"
+        part2Letter:
+          type: string
+          nullable: true
+          description: The second part of the house number that is text.
+          example: null
+        full:
+          type: string
+          nullable: true
+          description: Full address number.
+          example: "137/16"
+      required:
+        - part1
+        - part2
+        - full
+    DataGeometry:
+      type: object
+      properties:
+        gps:
+          type: object
+          description: TODO
+          properties:
+            lat:
+              type: number
+              description: Latitude coordinate.
+              example: 50.087440865479
+            lon:
+              type: number
+              description: Longitude coordinate.
+              example: 14.463284033285
+          required:
+            - lat
+            - lon
+        custom:
+          type: array
+          description: TODO
+          items:
+            type: object
+            description: TODO
+            properties:
+              type:
+                type: string
+                description: Type of coordinate system.
+                example: Cartesian coordinate system.
+              coordinates:
+                type: object
+                description: TODO
+                properties:
+                  x:
+                    type: number
+                    description: First coordinate.
+                    example: 739831.1
+                  "y":
+                    type: number
+                    description: Second coordinate.
+                    example: 1043425.38
+    LocationOficial:
+      type: object
+      properties:
+        data:
+          type: object
+          description: TODO
+          properties:
+            administrativeArea:
+              type: object
+              description: TODO
+              properties:
+                country:
+                  type: string
+                  description: "Country of administrative area in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  example: CZ
+            street:
+              type: string
+              description: Street.
+              example: Jeseniova
+            number:
+              $ref: "#/components/schemas/LocationNumber"
+            streetWithNumber:
+              type: string
+              description: Street with number.
+              example: Jeseniova 1151/55
+            city:
+              type: string
+              description: City.
+              example: Praha
+            zip:
+              type: string
+              description: ZIP code.
+              example: "13000"
+    GlobalRequest:
+      type: object
+      properties:
+        endpoint:
+          type: string
+          description: Endpoint name.
+        code:
+          type: string
+          description: Code of request.
+          example: internalrequestcode
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
+      required:
+        - endpoint
+        - code
+        - customId
+    EmailSearchResponse:
+      type: object
+      properties:
+        resultsCount:
+          type: number
+          description: Number of results
+          minimum: 1
+          maximum: 5
+          example: 3
+        results:
+          type: array
+          description: TODO
+          items:
+            type: object
+            description: TODO
+            properties:
+              data:
+                type: object
+                description: TODO
+                properties:
+                  email:
+                    type: string
+                    description: Suggested email
+                    example: info@gmail.com
+                  user:
+                    type: string
+                    description: Suggested info
+                    example: info
+                  domain:
+                    type: string
+                    description: Suggested domain
+                    example: gmail.com
+                required:
+                  - email
+                  - user
+                  - domain
+            required:
+              - data
+      required:
+        - resultsCount
+        - results
+    CompanySearchResultsRequest:
+      type: object
+      properties:
+        endpoint:
+          type: string
+          description: Endpoint used in API call.
+          example: company/validate
+        code:
+          type: string
+          description: Internal API call code.
+          example: gc0nCfcELaPSHH4Qo4UBaC7DbAj6G4
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
+        query:
+          type: object
+          properties:
+            type:
+              type: string
+              description: Type of search.
+              example: name
+            value:
+              type: string
+              description: Value of search.
+              example: Avantro s.r.o.
+            filter:
+              type: object
+              description: TODO
+              properties:
+                registrationNumber:
+                  type: number
+                  nullable: true
+                  description: Company registration number.
+                  example: 1234567
+                taxNumber:
+                  type: number
+                  nullable: true
+                  description: Company tax number.
+                  example: 11223344
+                vatNumber:
+                  type: number
+                  nullable: true
+                  description: Company vat number.
+                  example: 11223344
+                name:
+                  type: string
+                  nullable: true
+                  description: Name of the company.
+                  example: Avantro s.r.o.
+                country:
+                  type: string
+                  nullable: true
+                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  example: CZ
+        options:
+          type: object
+          description: Query options.
+          properties:
+            dataScope:
+              type: string
+              description: Required Data Scope.
+              default: basic
+              example: full
+        client:
+          $ref: "#/components/schemas/ClientRequest"
+      required:
+        - endpoint
+        - code
+        - customId
+    CompanySearchResults:
+      type: object
+      properties:
+        resultsCount:
+          type: number
+          description: Number of results.
+          example: 1
+        results:
+          type: array
+          description: TODO
+          items:
+            $ref: "#/components/schemas/CompanyResultsResponseResults"
+      required:
+        - resultsCount
+        - results
+    NameValidationResponseRequest:
+      type: object
+      properties:
+        endpoint:
+          type: string
+          description: Endpoint used in API call.
+          example: phone/validate
+        code:
+          type: string
+          description: Internal API call code.
+          example: gc0nCfcELaPSHH4Qo4UBaC7DbAj6G4
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
+        query:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Search name.
+              example: Jan
+            surname:
+              type: string
+              description: Search surname.
+              example: Novák
+            nameSurname:
+              type: string
+              description: Name and surname to validate.
+              example: Jan Novák
+        options:
+          type: object
+          description: Query options.
+          properties:
+            dataScope:
+              enum:
+                - basic
+                - extended
+              default: basic
+              example: extended
+            validationDepth:
+              enum:
+                - minimal
+                - moderate
+                - strict
+                - null
+              description: Specifies the scope and depth of name validation.
+              example: minimal
+            smartMode:
+              type: boolean
+              nullable: true
+              description: "Allows to correct the name (resultCorrected). If this is disabled, the corrections are given as a suggestion."
+              example: false
+        client:
+          type: object
+          description: The information about your client to help specify the search or validation.
+          properties:
+            country:
+              type: string
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              example: CZ
+            location:
+              type: object
+              description: Client's location.
+              properties:
+                lat:
+                  type: number
+                  description: Client's latitude
+                  example: 50.0628
+                lon:
+                  type: number
+                  description: Client's longitude
+                  example: 13.9271
+    NameValidationResults:
+      type: object
+      properties:
+        result:
+          type: object
+          description: TODO
+          properties:
+            isValid:
+              type: boolean
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            proposal:
+              enum:
+                - valid
+                - validWithSuggestion
+                - invalid
+                - invalidWithCorrection
+                - invalidWithPartialCorrection
+                - invalidWithSuggestion
+                - invalidWithCorrectionWithSuggestion
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
+              example: validWithSuggestion
+            data:
+              $ref: "#/components/schemas/NameValidationResultsData"
+            details:
+              $ref: "#/components/schemas/NameValidationResultsDetails"
+            errors:
+              type: array
+              description: TODO
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                  - $ref: "#/components/schemas/ErrorSyntaxName"
+                  - $ref: "#/components/schemas/ErrorFormatGlobal"
+                  - $ref: "#/components/schemas/ErrorValueGlobal"
+                  - $ref: "#/components/schemas/ErrorValueName"
+          required:
+            - isValid
+            - proposal
+            - data
+        resultCorrected:
+          type: object
+          description: TODO
+          properties:
+            isValid:
+              type: boolean
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            data:
+              $ref: "#/components/schemas/NameValidationResultsData"
+            details:
+              $ref: "#/components/schemas/NameValidationResultsDetails"
+            fixes:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/FixFormatGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxGlobal"
+                  - $ref: "#/components/schemas/FixValueGlobal"
+          required:
+            - isValid
+            - data
+            - details
+            - fixes
+        suggestions:
+          type: object
+          description: TODO
+          properties:
+            isValid:
+              type: boolean
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            data:
+              $ref: "#/components/schemas/NameValidationResultsData"
+            details:
+              $ref: "#/components/schemas/NameValidationResultsDetails"
+            fixes:
+              type: array
+              description: TODO
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/FixFormatGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxGlobal"
+                  - $ref: "#/components/schemas/FixValueGlobal"
+          required:
+            - isValid
+            - data
+            - details
+            - fixes
+      required:
+        - result
+        - resultCorrected
+        - suggestions
+    NameValidationResultsData:
+      type: object
+      properties:
+        nameSurname:
+          type: string
+          description: Name and surname
+          example: Petr Novák
+        name:
+          type: string
+          description: Name
+          example: Petr
+        surname:
+          type: string
+          description: Surname
+          example: Novák
+        context:
+          type: array
+          items:
+            type: string
+            description: Context for name and Surname
+            example: ml.
+        degreesBefore:
+          type: array
+          items:
+            type: string
+            description: Degrees before name
+            example: Ing.
+        degreesAfter:
+          type: array
+          items:
+            type: string
+            description: Degrees after name
+            example: Ph.D.
+      required:
+        - nameSurname
+        - name
+        - surname
+        - context
+        - degreesBefore
+        - degreesAfter
+    NameValidationResultsDetails:
+      type: array
+      items:
+        type: object
+        properties:
+          type:
+            type: string
+            description: Type of detail.
+            example: name
+          value:
+            type: string
+            description: Value of detail.
+            example: Petr
+          gender:
+            enum:
+              - 0
+              - 1
+              - 2
+            description: "Gender of name. 0 for unspecified, 1 for men, 2 for women"
+            example: 1
+          vocative:
+            type: string
+            description: Vocative form of value.
+          nameDays:
+            type: array
+            nullable: true
+            description: TODO
+            items:
+              type: object
+              properties:
+                country:
+                  type: string
+                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  example: CZ
+                month:
+                  type: integer
+                  description: Number of month for name day.
+                  minimum: 1
+                  maximum: 12
+                  example: 6
+                day:
+                  type: integer
+                  description: Number of month for name day.
+                  minimum: 1
+                  maximum: 31
+                  example: 29
+              required:
+                - country
+                - month
+                - day
+        required:
+          - type
+          - value
+          - gender
+          - vocative
+          - nameDays
+    ErrorSyntaxGlobal:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of error.
+          example: SYNTAX
+        type:
+          enum:
+            - CHARACTERS
+            - INVALID
+            - UNABLE_TO_PROCESS
+            - VALUE_LENGTH
+            - VALUE_PART_EXTRA
+            - VALUE_PART_MISSING
+          description: Type of error.
+          example: CHARACTERS
+        subtype:
+          enum:
+            - NOT_ALLOWED
+            - WHITESPACES
+            - TOO_LONG
+            - TOO_SHORT
+            - CONTEXT
+            - CITY
+            - STREET
+            - ZIP
+          description: Subtype of error.
+          example: NOT_ALLOWED
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Disallowed characters were used in the value.
+            - Value contains invalid use of spaces.
+            - Value has invalid syntax.
+            - Cannot be processed due to the invalid syntax.
+            - Value is too long.
+            - Value is too short.
+            - Value contains unneccessary context.
+          description: Description of error.
+          example: Disallowed characters were used in the value.
+    ErrorSyntaxName:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of error.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_PART_MISSING
+            - VALUE_PART_POSITION
+          description: Type of error.
+          example: VALUE_PART_MISSING
+        subtype:
+          enum:
+            - NAME
+            - SURNAME
+            - DEGREE
+          description: Subtype of error.
+          example: NAME
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Value is missing the name part.
+            - Value is missing the surname part.
+            - The DEGREE part of the value is placed in the wrong position.
+          description: Description of error.
+          example: Value is missing the name part.
+    ErrorFormatGlobal:
+      type: object
+      properties:
+        group:
+          enum:
+            - FORMAT
+          description: Group of error.
+          example: FORMAT
+        type:
+          enum:
+            - CHARACTERS
+          description: Type of error.
+          example: CHARACTERS
+        subtype:
+          enum:
+            - CASE_SENSITIVITY
+            - DIACRITICS
+            - SPECIAL
+            - WHITESPACES
+          description: Subtype of error.
+          example: CASE_SENSITIVITY
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
+            - Invalid diacritics. Specific rules are applied to the use of diacritics.
+            - Invalid use of spaces. Specific rules are applied to the use of spaces.
+            - null
+          description: Description of error.
+          example: Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
+    ErrorValueGlobal:
+      type: object
+      properties:
+        group:
+          enum:
+            - VALUE
+          description: Group of error.
+          example: VALUE
+        type:
+          enum:
+            - EMPTY
+            - INCORRECT_ORDER
+            - INVALID
+            - INVALID_COMBINATION
+            - NOT_ALLOWED
+          description: Type of error.
+          example: EMPTY
+        subtype:
+          enum:
+            - CONTEXT
+            - null
+          description: Subtype of error.
+          example: CONTEXT
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Value is empty.
+            - Value contains parts in incorrect order.
+            - Value is not valid.
+            - The Combination of values listed in relatedTo section is not valid.
+            - Context words are not allowed.
+          description: Description of error.
+          example: Value is empty.
+    ErrorValueName:
+      type: object
+      properties:
+        group:
+          enum:
+            - VALUE
+          description: Group of error.
+          example: VALUE
+        type:
+          enum:
+            - INVALID
+            - NOT_ALLOWED
+          description: Type of error.
+          example: INVALID
+        subtype:
+          enum:
+            - DEGREE
+            - NAME
+            - NAMESURNAME
+            - SURNAME
+          description: Subtype of error.
+          example: DEGREE
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Degree value is invalid.
+            - Name has not been found in our database.
+            - NameSurname has not been found in our database.
+            - Surname has not been found in our database.
+            - Degrees are not allowed.
+          description: Description of error.
+          example: Degree value is invalid.
+    FixFormatGlobal:
+      type: object
+      properties:
+        group:
+          enum:
+            - FORMAT
+          description: Group of fix.
+          example: FORMAT
+        type:
+          enum:
+            - CHANGED
+          description: Type of fix.
+          example: CHANGED
+        subtype:
+          enum:
+            - CASE_SENSITIVITY
+            - DIACRITICS
+            - WHITESPACES
+            - null
+          description: Subtype of fix.
+          example: CASE_SENSITIVITY
+        data:
+          $ref: "#/components/schemas/FixData"
+    FixData:
+      type: object
+      description: Data that has been changed
+      properties:
+        typeFrom:
+          type: string
+          description: Original type of changed value
+          example: email
+        type:
+          type: string
+          description: New type of value
+          example: email
+        valueFrom:
+          type: string
+          description: Original value
+          example: me@gmail.cz
+        value:
+          type: string
+          description: Changed value
+          example: me@gmail.com
+    FixSyntaxGlobal:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of fix.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_CHANGED
+            - VALUE_PART_CHANGED
+            - VALUE_PART_REMOVED
+          description: Type of fix.
+          example: VALUE_CHANGED
+        subtype:
+          enum:
+            - CHARACTERS
+            - WHITESPACES
+            - CONTEXT
+            - DUPLICITY
+            - null
+          description: Subtype of fix.
+          example: CHARACTERS
+        data:
+          $ref: "#/components/schemas/FixData"
+    FixValueGlobal:
+      type: object
+      properties:
+        group:
+          enum:
+            - VALUE
+          description: Group of fix.
+          example: VALUE
+        type:
+          enum:
+            - ADDED
+            - CHANGED
+            - PART_CHANGED
+            - REMOVED
+          description: Type of fix.
+          example: ADDED
+        subtype:
+          enum:
+            - INTERNAL_RULE
+            - TYPO
+            - null
+          description: Subtype of error.
+          example: INTERNAL_RULE
+        data:
+          $ref: "#/components/schemas/FixData"
+    ValidatePhoneNumberResponseRequest:
+      type: object
+      properties:
+        endpoint:
+          type: string
+          description: Endpoint used in API call.
+          example: phone/validate
+        code:
+          type: string
+          description: Internal API call code.
+          example: gc0nCfcELaPSHH4Qo4UBaC7DbAj6G4
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
+        query:
+          type: object
+          properties:
+            prefix:
+              type: string
+              description: Phone prefix.
+              example: "+420"
+            number:
+              type: string
+              description: Phone number to validate.
+              example: "+420777555666"
+        options:
+          type: object
+          description: Query options.
+          properties:
+            validationType:
+              type: string
+              description: Type of validation used.
+              example: extended
+            allowedPrefixes:
+              type: array
+              description: Array of allowed prefixes.
+              items:
+                type: string
+            formatNumber:
+              type: boolean
+              description: Formatting the phone number required or not.
+              example: false
+        client:
+          $ref: "#/components/schemas/ClientRequest"
+    ValidatePhoneNumberResults:
+      type: object
+      properties:
+        result:
+          type: object
+          description: TODO
+          properties:
+            isValid:
+              type: boolean
+              nullable: true
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            proposal:
+              enum:
+                - valid
+                - validWithSuggestion
+                - invalid
+                - invalidWithCorrection
+                - invalidWithPartialCorrection
+                - invalidWithSuggestion
+                - invalidWithCorrectionWithSuggestion
+                - null
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
+              example: invalidWithCorrection
+            data:
+              $ref: "#/components/schemas/ValidatePhoneNumberData"
+            errors:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                  - $ref: "#/components/schemas/ErrorSyntaxPhone"
+                  - $ref: "#/components/schemas/ErrorFormatGlobal"
+                  - $ref: "#/components/schemas/ErrorValueGlobal"
+                  - $ref: "#/components/schemas/ErrorValuePhone"
+          required:
+            - isValid
+            - proposal
+            - data
+            - errors
+        resultsCorrected:
+          type: object
+          nullable: true
+          description: TODO
+          properties:
+            isValid:
+              type: boolean
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            data:
+              $ref: "#/components/schemas/ValidatePhoneNumberData"
+            errors:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                  - $ref: "#/components/schemas/ErrorSyntaxPhone"
+                  - $ref: "#/components/schemas/ErrorFormatGlobal"
+                  - $ref: "#/components/schemas/ErrorValueGlobal"
+                  - $ref: "#/components/schemas/ErrorValuePhone"
+            fixes:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/FixFormatGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxPhone"
+                  - $ref: "#/components/schemas/FixValueGlobal"
+        suggestions:
+          type: array
+          description: TODO
+          items:
+            type: object
+            properties:
+              isValid:
+                type: boolean
+                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+                example: true
+              data:
+                $ref: "#/components/schemas/ValidatePhoneNumberData"
+              errors:
+                type: array
+                items:
+                  oneOf:
+                    - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                    - $ref: "#/components/schemas/ErrorSyntaxPhone"
+                    - $ref: "#/components/schemas/ErrorFormatGlobal"
+                    - $ref: "#/components/schemas/ErrorValueGlobal"
+                    - $ref: "#/components/schemas/ErrorValuePhone"
+              fixes:
+                type: array
+                items:
+                  oneOf:
+                    - $ref: "#/components/schemas/FixFormatGlobal"
+                    - $ref: "#/components/schemas/FixSyntaxGlobal"
+                    - $ref: "#/components/schemas/FixSyntaxPhone"
+                    - $ref: "#/components/schemas/FixValueGlobal"
+      required:
+        - result
+        - suggestions
+    ValidatePhoneNumberData:
+      type: object
+      properties:
+        country:
+          type: object
+          properties:
+            code:
+              type: string
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              example: CZ
+            prefix:
+              type: string
+              description: Country phone prefix.
+              example: "+420"
+        number:
+          type: integer
+          description: Validated phone number.
+          example: 775111222
+        numberWithPrefix:
+          type: string
+          description: Validated phone number with prefix.
+          example: "+420775111222"
+        carrier:
+          type: object
+          description: TODO
+          properties:
+            name:
+              type: string
+              description: Name of carrier.
+              example: Vodafone
+            type:
+              type: string
+              description: Type of carrier.
+        format:
+          type: object
+          description: TODO
+          properties:
+            national:
+              type: integer
+              nullable: true
+              description: National phone number format.
+              example: 775111222
+            nationalFormatted:
+              type: string
+              nullable: true
+              description: Formated national phone number.
+              example: 775 111 222
+            international:
+              type: string
+              nullable: true
+              description: International phone number format.
+              example: "+420775111222"
+            internationalFormatted:
+              type: string
+              nullable: true
+              description: Formated international phone number.
+              example: +420 775 111 222
+      required:
+        - country
+        - number
+        - numberWithPrefix
+        - carrier
+        - format
+    ErrorSyntaxPhone:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of error.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_PART_EXTRA
+            - VALUE_PART_MISSING
+          description: Type of error.
+          example: VALUE_PART_EXTRA
+        subtype:
+          enum:
+            - PLUS_SIGN
+            - NUMBER
+            - PREFIX
+          description: Subtype of error.
+          example: PLUS_SIGN
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Value contains duplicated '+' sign.
+            - Value is missing the number.
+            - Value is missing the '+' sign.
+            - Value is missing the prefix.
+          description: Description of error.
+          example: Value contains duplicated '+' sign.
+    ErrorValuePhone:
+      type: object
+      properties:
+        group:
+          enum:
+            - VALUE
+          description: Group of error.
+          example: VALUE
+        type:
+          enum:
+            - INVALID
+            - NOT_ALLOWED
+          description: Type of error.
+          example: INVALID
+        subtype:
+          enum:
+            - PREFIX
+          description: Subtype of error.
+          example: PREFIX
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Prefix is invalid.
+            - This prefix is not allowed. Check the 'allowedPrefixes' option in the request.
+          description: Description of error.
+          example: Prefix is invalid.
+    FixSyntaxPhone:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of fix.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_PART_ADDED
+            - VALUE_PART_CHANGED
+            - VALUE_PART_REMOVED
+          description: Type of fix.
+          example: VALUE_PART_ADDED
+        subtype:
+          enum:
+            - PLUS_SIGN
+            - PREFIX
+          description: Subtype of error.
+          example: PLUS_SIGN
+        data:
+          $ref: "#/components/schemas/FixData"
+    LocationSearchResponse:
+      type: object
+      title: LocationSearchResponse
+      properties:
+        resultsCount:
+          type: integer
+          description: TODO
+          format: int32
+        results:
+          type: array
+          description: TODO
+          items:
+            $ref: "#/components/schemas/LocationSearchResults"
+      required:
+        - resultsCount
+        - results
+    LocationSearchResults:
+      type: object
+      properties:
+        data:
+          $ref: "#/components/schemas/LocationData"
+      required:
+        - data
+    LocationLocalizationResults:
+      type: object
+      properties:
+        resultsCount:
+          type: number
+          description: TODO
+          example: 1
+        results:
+          type: array
+          description: TODO
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                description: TODO
+                example: address
+              data:
+                $ref: "#/components/schemas/LocationData"
+      required:
+        - resultsCount
+        - results
+    LocationGetResults:
+      type: object
+      properties:
+        resultsCount:
+          type: integer
+          description: TODO
+          format: int32
+        results:
+          type: array
+          description: TODO
+          items:
+            type: object
+            properties:
+              data:
+                $ref: "#/components/schemas/LocationData"
+            required:
+              - data
+      required:
+        - resultsCount
+        - results
+    LocationValidationResponse:
+      type: object
+      properties:
+        result:
+          type: object
+          description: TODO
+          properties:
+            isValid:
+              type: boolean
+              nullable: true
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            proposal:
+              enum:
+                - valid
+                - validWithSuggestion
+                - invalid
+                - invalidWithCorrection
+                - invalidWithPartialCorrection
+                - invalidWithSuggestion
+                - invalidWithCorrectionWithSuggestion
+                - null
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
+              example: invalidWithCorrection
+            data:
+              $ref: "#/components/schemas/LocationData"
+            errors:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                  - $ref: "#/components/schemas/ErrorSyntaxLocation"
+                  - $ref: "#/components/schemas/ErrorFormatGlobal"
+                  - $ref: "#/components/schemas/ErrorValueGlobal"
+          required:
+            - isValid
+            - proposal
+            - data
+        resultCorrected:
+          type: object
+          nullable: true
+          description: TODO
+          properties:
+            isValid:
+              type: boolean
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            data:
+              $ref: "#/components/schemas/LocationData"
+            errors:
+              type: array
+              description: TODO
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                  - $ref: "#/components/schemas/ErrorSyntaxLocation"
+                  - $ref: "#/components/schemas/ErrorFormatGlobal"
+                  - $ref: "#/components/schemas/ErrorValueGlobal"
+            fixes:
+              type: array
+              description: TODO
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/FixFormatGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxLocation"
+                  - $ref: "#/components/schemas/FixValueGlobal"
+                  - $ref: "#/components/schemas/FixValueLocation"
+          required:
+            - isValid
+            - data
+        suggestions:
+          type: array
+          description: TODO
+          items:
+            type: object
+            nullable: true
+            description: TODO
+            properties:
+              isValid:
+                type: boolean
+                nullable: true
+                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+                example: true
+              data:
+                $ref: "#/components/schemas/LocationData"
+              fixes:
+                type: array
+                description: TODO
+                items:
+                  oneOf:
+                    - $ref: "#/components/schemas/FixFormatGlobal"
+                    - $ref: "#/components/schemas/FixSyntaxGlobal"
+                    - $ref: "#/components/schemas/FixSyntaxLocation"
+                    - $ref: "#/components/schemas/FixValueGlobal"
+                    - $ref: "#/components/schemas/FixValueLocation"
+              errors:
+                type: array
+                description: TODO
+                items:
+                  oneOf:
+                    - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                    - $ref: "#/components/schemas/ErrorSyntaxLocation"
+                    - $ref: "#/components/schemas/ErrorFormatGlobal"
+                    - $ref: "#/components/schemas/ErrorValueGlobal"
+            required:
+              - data
+      required:
+        - result
+    ErrorSyntaxLocation:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of error.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_PART_MISSING
+          description: Type of error.
+          example: VALUE_PART_MISSING
+        subtype:
+          enum:
+            - CITY
+            - NUMBER_PART
+            - STREET
+            - ZIP
+          description: Subtype of error.
+          example: CITY
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Value is missing the city.
+            - Value is missing the number part.
+            - Value is missing the street.
+            - Value is missing the zip.
+          description: Description of error.
+          example: Value is missing the city.
+    FixSyntaxLocation:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of fix.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_PART_ADDED
+          description: Type of fix.
+          example: VALUE_PART_ADDED
+        subtype:
+          enum:
+            - NUMBER
+            - NUMBER_PART
+          description: Subtype of fix.
+          example: NUMBER
+        data:
+          $ref: "#/components/schemas/FixData"
+    FixValueLocation:
+      type: object
+      properties:
+        group:
+          enum:
+            - VALUE
+          description: Group of fix.
+          example: VALUE
+        type:
+          enum:
+            - PART_CHANGED
+          description: Type of fix.
+          example: PART_CHANGED
+        subtype:
+          enum:
+            - CITY
+            - NUMBER
+            - STREET
+            - ZIP
+          description: Subtype of error.
+          example: CITY
+        data:
+          $ref: "#/components/schemas/FixData"
+    ValidateCompanyDataResultsRequest:
+      type: object
+      properties:
+        endpoint:
+          type: string
+          description: Endpoint used in API call.
+          example: company/validate
+        code:
+          type: string
+          description: Internal API call code.
+          example: gc0nCfcELaPSHH4Qo4UBaC7DbAj6G4
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
+        query:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Company name
+              example: Avantro s.r.o.
+            administrativeArea.country:
+              type: string
+              description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
+              example: CZ
+            registrationNumber:
+              type: string
+              description: Company registration number (ID)
+              example: Jeseniova 55
+            taxNumber:
+              type: string
+              description: Company national TAX number
+              example: Jeseniova
+            vatNumber:
+              type: string
+              description: Company VAT number
+              example: CZ123456789
+        options:
+          type: object
+          description: Query options.
+          properties:
+            addressType:
+              enum:
+                - official
+                - validated
+                - null
+              description: "official = Returns the address of the entity in the form in which it appears in the official register of companies, validated = Returns the address of the entity in the validated form, i.e. in the form that is correct in terms of address entry standards."
+              example: official
+            countryMode:
+              enum:
+                - limit
+                - prefer
+                - null
+              description: "prefer = Prefer results matching filter, limit = Limit to results matching filter."
+              default: prefer
+              example: limit
+            dataScope:
+              enum:
+                - basic
+                - extended
+                - full
+              description: Data scope of returned data.
+              default: basic
+              example: full
+            includeTerminatedSubjects:
+              type: boolean
+              nullable: true
+              description: Whether or not to API return in the response also entities that have already been terminated.
+              default: false
+              example: true
+            resultsLimit:
+              type: integer
+              nullable: true
+              description: Results limit of response.
+              minimum: 1
+              maximum: 20
+              default: 10
+        client:
+          $ref: "#/components/schemas/ClientRequest"
+      required:
+        - endpoint
+        - code
+        - customId
+    ValidateCompanyDataResults:
+      type: object
+      properties:
+        result:
+          type: object
+          properties:
+            isValid:
+              type: boolean
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            proposal:
+              enum:
+                - valid
+                - validWithSuggestion
+                - invalid
+                - invalidWithCorrection
+                - invalidWithPartialCorrection
+                - invalidWithSuggestion
+                - invalidWithCorrectionWithSuggestion
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
+              example: valid
+            errors:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                  - $ref: "#/components/schemas/ErrorSyntaxCompany"
+                  - $ref: "#/components/schemas/ErrorFormatGlobal"
+                  - $ref: "#/components/schemas/ErrorValueGlobal"
+          allOf:
+            - $ref: "#/components/schemas/CompanyResultsResponseResults"
+        resultCorrected:
+          type: object
+          properties:
+            isValid:
+              type: boolean
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            errors:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                  - $ref: "#/components/schemas/ErrorSyntaxCompany"
+                  - $ref: "#/components/schemas/ErrorFormatGlobal"
+                  - $ref: "#/components/schemas/ErrorValueGlobal"
+            fixes:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/FixFormatGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxCompany"
+                  - $ref: "#/components/schemas/FixValueGlobal"
+          allOf:
+            - $ref: "#/components/schemas/CompanyResultsResponseResults"
+        suggestions:
+          type: array
+          description: TODO
+          items:
+            $ref: "#/components/schemas/ValidateCompanyDataResultCorrected"
+      required:
+        - result
+        - resultCorrected
+        - suggestions
+    ErrorSyntaxCompany:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of error.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_PART_EXTRA
+            - VALUE_PART_MISSING
+          description: Type of error.
+          example: VALUE_PART_EXTRA
+        subtype:
+          enum:
+            - LEGAL_FORM
+          description: Subtype of error.
+          example: LEGAL_FORM
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Value contains duplicated legal form.
+            - Company name is missing the legal form.
+          description: Description of error.
+          example: Value contains duplicated legal form.
+    FixSyntaxCompany:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of fix.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_PART_ADDED
+            - VALUE_PART_CHANGED
+            - VALUE_PART_REMOVED
+          description: Type of fix.
+          example: VALUE_PART_ADDED
+        subtype:
+          enum:
+            - LEGAL_FORM
+          description: Subtype of fix.
+          example: LEGAL_FORM
+        data:
+          $ref: "#/components/schemas/FixData"
+    ValidateCompanyDataResultCorrected:
+      type: object
+      properties:
+        isValid:
+          type: boolean
+          description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+          example: true
+        errors:
+          type: array
+          items:
+            oneOf:
+              - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+              - $ref: "#/components/schemas/ErrorSyntaxCompany"
+              - $ref: "#/components/schemas/ErrorFormatGlobal"
+              - $ref: "#/components/schemas/ErrorValueGlobal"
+        fixes:
+          type: array
+          items:
+            oneOf:
+              - $ref: "#/components/schemas/FixFormatGlobal"
+              - $ref: "#/components/schemas/FixSyntaxGlobal"
+              - $ref: "#/components/schemas/FixSyntaxCompany"
+              - $ref: "#/components/schemas/FixValueGlobal"
+      required:
+        - isValid
+        - errors
+        - fixes
+      allOf:
+        - $ref: "#/components/schemas/CompanyResultsResponseResults"
+    ValidateEmailResponse:
+      type: object
+      properties:
+        result:
+          type: object
+          description: TODO
+          properties:
+            isValid:
+              type: boolean
+              nullable: true
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            proposal:
+              enum:
+                - valid
+                - validWithSuggestion
+                - invalid
+                - invalidWithCorrection
+                - invalidWithPartialCorrection
+                - invalidWithSuggestion
+                - invalidWithCorrectionWithSuggestion
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
+            data:
+              $ref: "#/components/schemas/EmailData"
+            flags:
+              $ref: "#/components/schemas/EmailFlags"
+            errors:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                  - $ref: "#/components/schemas/ErrorSyntaxEmail"
+                  - $ref: "#/components/schemas/ErrorFormatGlobal"
+                  - $ref: "#/components/schemas/ErrorValueGlobal"
+                  - $ref: "#/components/schemas/ErrorValueEmail"
+          required:
+            - isValid
+            - proposal
+            - data
+        resultCorrected:
+          type: object
+          nullable: true
+          description: TODO
+          properties:
+            isValid:
+              type: boolean
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              example: true
+            data:
+              $ref: "#/components/schemas/EmailData"
+            flags:
+              $ref: "#/components/schemas/EmailFlags"
+            fixes:
+              type: array
+              items:
+                oneOf:
+                  - $ref: "#/components/schemas/FixFormatGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxGlobal"
+                  - $ref: "#/components/schemas/FixSyntaxEmail"
+                  - $ref: "#/components/schemas/FixValueGlobal"
+          required:
+            - isValid
+        suggestions:
+          type: array
+          nullable: true
+          description: TODO
+          items:
+            type: object
+            nullable: true
+            description: TODO
+            properties:
+              isValid:
+                type: boolean
+                nullable: true
+                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+                example: true
+              data:
+                $ref: "#/components/schemas/EmailData"
+              flags:
+                $ref: "#/components/schemas/EmailFlags"
+              fixes:
+                $ref: "#/components/schemas/EmailFixes"
+              errors:
+                type: array
+                items:
+                  oneOf:
+                    - $ref: "#/components/schemas/ErrorSyntaxGlobal"
+                    - $ref: "#/components/schemas/ErrorSyntaxEmail"
+                    - $ref: "#/components/schemas/ErrorFormatGlobal"
+                    - $ref: "#/components/schemas/ErrorValueGlobal"
+                    - $ref: "#/components/schemas/ErrorValueEmail"
+      required:
+        - result
+    EmailData:
+      type: object
+      properties:
+        email:
+          type: string
+          description: Email address.
+          example: me@gmali.com
+        user:
+          type: string
+          description: Customer user name.
+          example: me
+        domain:
+          type: string
+          description: Customer domain.
+          example: gmali.com
+    EmailFlags:
+      type: object
+      properties:
+        isCatchAllServer:
+          type: boolean
+          nullable: true
+          description: Determine if API catch-all server is present.
+          example: false
+        isDisposableEmailLocation:
+          type: boolean
+          nullable: true
+          description: Determine if the email address is disposable.
+          example: false
+        isFreeMail:
+          type: boolean
+          nullable: true
+          description: Determine if the email address is free.
+          example: false
+      required:
+        - isCatchAllServer
+        - isDisposableEmailLocation
+    ErrorSyntaxEmail:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of error.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_PART
+            - VALUE_PART_EXTRA
+            - VALUE_PART_MISSING
+            - VALUE_PART_POSITION
+          description: Type of error.
+          example: VALUE_PART_EXTRA
+        subtype:
+          enum:
+            - DOMAIN
+            - AT_SIGN
+            - TLD
+          description: Subtype of error.
+          example: DOMAIN
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - The domain contains invalid syntax.
+            - Value contains duplicated '@' sign.
+            - Value does not contain '@' sign.
+            - Value is missing the top level domain.
+            - The TLD part of the value is placed in the wrong position.
+          description: Description of error.
+          example: The domain contains invalid syntax.
+    ErrorValueEmail:
+      type: object
+      properties:
+        group:
+          enum:
+            - VALUE
+          description: Group of error.
+          example: VALUE
+        type:
+          enum:
+            - INVALID
+            - NOT_ALLOWED
+          description: Type of error.
+          example: INVALID
+        subtype:
+          enum:
+            - DOMAIN
+            - DOMAIN_DNS
+            - DISPOSABLE
+            - FREEMAIL
+            - null
+          description: Subtype of error.
+          example: DOMAIN
+        severity:
+          enum:
+            - info
+            - warning
+            - critical
+          description: Severity of error.
+          example: critical
+        relatedTo:
+          type: object
+        description:
+          enum:
+            - Domain name is invalid.
+            - Domain does not have DNS records set properly for receiving emails.
+            - Disposable emails are not allowed.
+            - Freemails are not allowed.
+          description: Description of error.
+          example: Domain name is invalid.
+    FixSyntaxEmail:
+      type: object
+      properties:
+        group:
+          enum:
+            - SYNTAX
+          description: Group of fix.
+          example: SYNTAX
+        type:
+          enum:
+            - VALUE_PART_ADDED
+            - VALUE_PART_CHANGED
+            - VALUE_PART_REMOVED
+          description: Type of fix.
+          example: VALUE_PART_ADDED
+        subtype:
+          enum:
+            - AT_SIGN
+            - DOMAIN_TLD
+            - DOMAIN
+          description: Subtype of fix.
+          example: AT_SIGN
+        data:
+          $ref: "#/components/schemas/FixData"
+    EmailFixes:
+      type: object
+      nullable: true
+      description: TODO
+      properties:
+        type:
+          type: string
+          description: Description of the fix.
+          example: SYNTAX
+        subtype:
+          type: string
+          nullable: true
+          description: Subtype of the fix.
+          example: AT_SIGN_DUPLICITY
+        data:
+          type: object
+          description: TODO
+          properties:
+            typeFrom:
+              type: string
+              description: Customer email.
+              example: email
+            type:
+              type: string
+              description: Type of the email.
+              example: email
+            valueFrom:
+              type: string
+              description: Value from.
+              example: me@email.COM
+            value:
+              type: string
+              description: Value.
+              example: me@gmail.com
+    ResponseStatus400:
+      type: object
+      properties:
+        status:
+          type: number
+          description: Status of API response.
+          example: 400
+    Error400RequestBodyEmpty:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - BODY
+          description: Type of error.
+          example: BODY
+        subtype:
+          enum:
+            - EMPTY
+          description: Subtype of error.
+          example: EMPTY
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
+          description: Description of error.
+          example: Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
+    Error400RequestBodyNotJson:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - BODY
+          description: Type of error.
+          example: BODY
+        subtype:
+          enum:
+            - NOT_JSON
+          description: Subtype of error.
+          example: NOT_JSON
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
+          description: Description of error.
+          example: Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
+    Error400RequestBodyNoRequest:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - BODY
+          description: Type of error.
+          example: BODY
+        subtype:
+          enum:
+            - NOT_JSON
+          description: Subtype of error.
+          example: NOT_JSON
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Your API call body does not contain any requests.
+          description: Description of error.
+          example: Your API call body does not contain any requests.
+    Error400RequestBodyTooBig:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - BODY
+          description: Type of error.
+          example: BODY
+        subtype:
+          enum:
+            - TOO_BIG
+          description: Subtype of error.
+          example: TOO_BIG
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Your request length is bigger than allowed. Please contact us if you think this is a mistake.
+          description: Description of error.
+          example: Your request length is bigger than allowed. Please contact us if you think this is a mistake.
+    Error400RequestOptionsParameterNotSupported:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - OPTIONS
+          description: Type of error.
+          example: OPTIONS
+        subtype:
+          enum:
+            - PARAMETER_NOT_SUPPORTED
+          description: Subtype of error.
+          example: PARAMETER_NOT_SUPPORTED
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Options parameter is not supported for this endpoint.
+          description: Description of error.
+          example: Options parameter is not supported for this endpoint.
+    Error400RequestOptionParameterValueNotSupported:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - OPTIONS
+          description: Type of error.
+          example: OPTIONS
+        subtype:
+          enum:
+            - PARAMETER_VALUE_NOT_SUPPORTED
+          description: Subtype of error.
+          example: PARAMETER_VALUE_NOT_SUPPORTED
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Value in paramater is not valid. Please check Foxentry.dev for more information.
+          description: Description of error.
+          example: Value in paramater is not valid. Please check Foxentry.dev for more information.
+    Error400RequestQueryNotSent:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - QUERY
+          description: Type of error.
+          example: QUERY
+        subtype:
+          enum:
+            - NOT_SENT
+          description: Subtype of error.
+          example: NOT_SENT
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
+          description: Description of error.
+          example: Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
+    Error400RequestQueryParameterCombination:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - QUERY
+          description: Type of error.
+          example: QUERY
+        subtype:
+          enum:
+            - PARAMETERS_COMBINATION
+          description: Subtype of error.
+          example: PARAMETERS_COMBINATION
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - It is not possible to use these parameters at the same time in one request.
+          description: Description of error.
+          example: It is not possible to use these parameters at the same time in one request.
+    Error400RequestQueryParameterMissing:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - QUERY
+          description: Type of error.
+          example: QUERY
+        subtype:
+          enum:
+            - PARAMETERS_MISSING
+          description: Subtype of error.
+          example: PARAMETERS_MISSING
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
+          description: Description of error.
+          example: Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
+    Error400RequestQueryParameterNotSupported:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - QUERY
+          description: Type of error.
+          example: QUERY
+        subtype:
+          enum:
+            - PARAMETERS_NOT_SUPPORTED
+          description: Subtype of error.
+          example: PARAMETERS_NOT_SUPPORTED
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Query parameter is not supported for this endpoint.
+          description: Description of error.
+          example: Query parameter is not supported for this endpoint.
+    Error400RequestQueryParameterRequired:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - QUERY
+          description: Type of error.
+          example: QUERY
+        subtype:
+          enum:
+            - PARAMETERS_REQUIRED
+          description: Subtype of error.
+          example: PARAMETERS_REQUIRED
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - At least one of listed parameters is required.
+          description: Description of error.
+          example: At least one of listed parameters is required.
+    ResponseStatus401:
+      type: object
+      properties:
+        status:
+          type: number
+          description: Status of API response.
+          example: 401
+    Error401RequestAuth:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - AUTH
+          description: Type of error.
+          example: AUTH
+        subtype:
+          type: string
+          nullable: true
+          description: Subtype of error.
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
+          description: Description of error.
+          example: Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
+    ResponseStatus402:
+      type: object
+      properties:
+        status:
+          type: number
+          description: Status of API response.
+          example: 402
+    Error402RequestBillingNoCredit:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - BILLING
+          description: Type of error.
+          example: BILLING
+        subtype:
+          enum:
+            - NO_CREDIT
+          description: Subtype of error.
+          example: NO_CREDIT
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
+          description: Description of error.
+          example: No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
+    ResponseStatus403:
+      type: object
+      properties:
+        status:
+          type: number
+          description: Status of API response.
+          example: 403
+    Error403RequestAuthKey:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - AUTH
+          description: Type of error.
+          example: AUTH
+        subtype:
+          enum:
+            - KEY
+          description: Subtype of error.
+          example: KEY
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Provided API key is not valid. Please check the project settings at app.foxentry.com.
+          description: Description of error.
+          example: Provided API key is not valid. Please check the project settings at app.foxentry.com.
+    Error403RequestAuthToken:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - AUTH
+          description: Type of error.
+          example: AUTH
+        subtype:
+          enum:
+            - TOKEN
+          description: Subtype of error.
+          example: TOKEN
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Provided access token is not valid. Please check the project settings at app.foxentry.com.
+          description: Description of error.
+          example: Provided access token is not valid. Please check the project settings at app.foxentry.com.
+    Error403RequestNotAllowedDomain:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - NOT_ALLOWED
+          description: Type of error.
+          example: NOT_ALLOWED
+        subtype:
+          enum:
+            - DOMAIN
+          description: Subtype of error.
+          example: DOMAIN
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Website domain is not allowed in the project settings.
+          description: Description of error.
+          example: Website domain is not allowed in the project settings.
+    Error403RequestNotAllowedIp:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - NOT_ALLOWED
+          description: Type of error.
+          example: NOT_ALLOWED
+        subtype:
+          enum:
+            - IP
+          description: Subtype of error.
+          example: IP
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
+          description: Description of error.
+          example: The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
+    ResponseStatus404:
+      type: object
+      properties:
+        status:
+          type: number
+          description: Status of API response.
+          example: 404
+    Error404RequestApiVersion:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - API_VERSION
+          description: Type of error.
+          example: API_VERSION
+        subtype:
+          type: string
+          nullable: true
+          description: Subtype of error.
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Requested API version is not available. Please check Foxentry.dev for the supported versions.
+          description: Description of error.
+          example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
+    Error404RequestEndpointNotFound:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - ENDPOINT
+          description: Type of error.
+          example: ENDPOINT
+        subtype:
+          enum:
+            - NOT_FOUND
+          description: Subtype of error.
+          example: NOT_FOUND
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Endpoint not found. Please check Foxentry.dev for the supported endpoints.
+          description: Description of error.
+          example: Endpoint not found. Please check Foxentry.dev for the supported endpoints.
+    Error404RequestProjetNotFound:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - PROJECT
+          description: Type of error.
+          example: PROJECT
+        subtype:
+          enum:
+            - NOT_FOUND
+          description: Subtype of error.
+          example: NOT_FOUND
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
+          description: Description of error.
+          example: The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
+    ResponseStatus405:
+      type: object
+      properties:
+        status:
+          type: number
+          description: Status of API response.
+          example: 405
+    Error405RequestNotAllowedMethod:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - ENDPOINT
+          description: Type of error.
+          example: ENDPOINT
+        subtype:
+          enum:
+            - NOT_FOUND
+          description: Subtype of error.
+          example: NOT_FOUND
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
+          description: Description of error.
+          example: HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
+    ResponseStatus429:
+      type: object
+      properties:
+        status:
+          type: number
+          description: Status of API response.
+          example: 429
+    Error429RequestBillingServiceLimit:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - BILLING
+          description: Type of error.
+          example: BILLING
+        subtype:
+          enum:
+            - SERVICE_LIMIT_REACHED
+          description: Subtype of error.
+          example: SERVICE_LIMIT_REACHED
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Requested API version is not available. Please check Foxentry.dev for the supported versions.
+          description: Description of error.
+          example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
+    Error429RequestRateLimitCreditPerDay:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - RATE_LIMIT
+          description: Type of error.
+          example: RATE_LIMIT
+        subtype:
+          enum:
+            - CREDIT_PER_DAY
+          description: Subtype of error.
+          example: CREDIT_PER_DAY
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
+          description: Description of error.
+          example: The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
+    Error429RequestRateLimitCreditPerIp:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - RATE_LIMIT
+          description: Type of error.
+          example: RATE_LIMIT
+        subtype:
+          enum:
+            - CREDIT_PER_IP
+          description: Subtype of error.
+          example: CREDIT_PER_IP
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
+          description: Description of error.
+          example: The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
+    Error429RequestRateLimitTooManyRequests:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - RATE_LIMIT
+          description: Type of error.
+          example: RATE_LIMIT
+        subtype:
+          enum:
+            - TOO_MANY_REQUESTS
+          description: Subtype of error.
+          example: TOO_MANY_REQUESTS
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
+          description: Description of error.
+          example: The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
+    ResponseStatus500:
+      type: object
+      properties:
+        status:
+          type: number
+          description: Status of API response.
+          example: 500
+    Error500InternalBilling:
+      type: object
+      properties:
+        group:
+          enum:
+            - INTERNAL
+          description: Group of error.
+          example: INTERNAL
+        type:
+          enum:
+            - BILLING
+          description: Type of error.
+          example: BILLING
+        subtype:
+          type: string
+          nullable: true
+          description: Subtype of error.
+        severity:
+          type: string
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Failed to process your request due to a billing internal error. Please contact us if the error persists.
+          description: Description of error.
+          example: Failed to process your request due to a billing internal error. Please contact us if the error persists.
+    Error500InternalDatabaseConnection:
+      type: object
+      properties:
+        group:
+          enum:
+            - INTERNAL
+          description: Group of error.
+          example: INTERNAL
+        type:
+          enum:
+            - DATABASE
+          description: Type of error.
+          example: DATABASE
+        subtype:
+          enum:
+            - CONNECTION
+          description: Subtype of error.
+          example: CONNECTION
+        severity:
+          type: string
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Failed to establish connection with the database server. Please contact us if the error persists.
+          description: Description of error.
+          example: Failed to establish connection with the database server. Please contact us if the error persists.
+    Error500InternalDatabaseError:
+      type: object
+      properties:
+        group:
+          enum:
+            - INTERNAL
+          description: Group of error.
+          example: INTERNAL
+        type:
+          enum:
+            - DATABASE
+          description: Type of error.
+          example: DATABASE
+        subtype:
+          enum:
+            - ERROR
+          description: Subtype of error.
+          example: ERROR
+        severity:
+          type: string
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - An error has occured during the communication with our database. Please contact us if the error persists.
+          description: Description of error.
+          example: An error has occured during the communication with our database. Please contact us if the error persists.
+    Error500InternalDatabaseNotAvailable:
+      type: object
+      properties:
+        group:
+          enum:
+            - INTERNAL
+          description: Group of error.
+          example: INTERNAL
+        type:
+          enum:
+            - DATABASE
+          description: Type of error.
+          example: DATABASE
+        subtype:
+          enum:
+            - NOT_AVAILABLE
+          description: Subtype of error.
+          example: NOT_AVAILABLE
+        severity:
+          type: string
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - Internal datastore is not available at the moment. No operation on this datastore is possible.
+          description: Description of error.
+          example: Internal datastore is not available at the moment. No operation on this datastore is possible.
+    Error500InternalError:
+      type: object
+      properties:
+        group:
+          enum:
+            - INTERNAL
+          description: Group of error.
+          example: INTERNAL
+        type:
+          enum:
+            - ERROR
+          description: Type of error.
+          example: ERROR
+        subtype:
+          type: string
+          nullable: true
+          description: Subtype of error.
+        severity:
+          enum:
+            - CRITICAL
+          description: Severity of error.
+          example: CRITICAL
+        description:
+          enum:
+            - Failed to process your request. Please try again later or contact us.
+          description: Description of error.
+          example: Failed to process your request. Please try again later or contact us.
+    Error500Timeout:
+      type: object
+      properties:
+        group:
+          enum:
+            - INTERNAL
+          description: Group of error.
+          example: INTERNAL
+        type:
+          enum:
+            - TIMEOUT
+          description: Type of error.
+          example: TIMEOUT
+        subtype:
+          type: string
+          nullable: true
+          description: Subtype of error.
+        severity:
+          enum:
+            - CRITICAL
+          description: Severity of error.
+          example: CRITICAL
+        description:
+          enum:
+            - API timeout in effect. Your request took too much time to process.
+          description: Description of error.
+          example: API timeout in effect. Your request took too much time to process.
+    Error500RequestProjectNoData:
+      type: object
+      properties:
+        group:
+          enum:
+            - INTERNAL
+          description: Group of error.
+          example: INTERNAL
+        type:
+          enum:
+            - PROJECT
+          description: Type of error.
+          example: PROJECT
+        subtype:
+          enum:
+            - NO_DATA
+          description: Subtype of error.
+          example: NO_DATA
+        severity:
+          enum:
+            - CRITICAL
+          description: Severity of error.
+          example: CRITICAL
+        description:
+          enum:
+            - Failed to fetch project data needed for processing your request. Please contact us if the error persists.
+          description: Description of error.
+          example: Failed to fetch project data needed for processing your request. Please contact us if the error persists.
+    ResponseStatus503:
+      type: object
+      properties:
+        status:
+          type: number
+          description: Status of API response.
+          example: 503
+    Error503RequestEndpointNotAvailable:
+      type: object
+      properties:
+        group:
+          enum:
+            - INTERNAL
+          description: Group of error.
+          example: INTERNAL
+        type:
+          enum:
+            - ENDPOINT
+          description: Type of error.
+          example: ENDPOINT
+        subtype:
+          enum:
+            - NOT_AVAILABLE
+          description: Subtype of error.
+          example: NOT_AVAILABLE
+        severity:
+          enum:
+            - critical
+          description: Severity of error.
+          example: critical
+        description:
+          enum:
+            - API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
+          description: Description of error.
+          example: API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
+security:
+  - BearerAuth: []

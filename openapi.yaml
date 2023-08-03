@@ -2926,6 +2926,296 @@ components:
       description: Successfull response
       content:
         application/json:
+          examples:
+            valid:
+              value:
+                status: 200
+                request:
+                  endpoint: name/validate
+                  code: 9e3MOBQ1jnWtqBBpWmIwWb7JwJqTmM
+                  customId: null
+                  query:
+                    name: Pavel
+                  options:
+                    dataScope: basic
+                    acceptDegrees: false
+                    acceptContext: false
+                    smartMode: true
+                    validationDepth: minimal
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: true
+                    proposal: valid
+                    data:
+                      name: Pavel
+                      surname: null
+                      nameSurname: null
+                      context: []
+                      degreesBefore: []
+                      degreesAfter: []
+                    errors: []
+                  resultCorrected: null
+                  suggestions: []
+                errors: []
+            invalid:
+              value:
+                status: 200
+                request:
+                  endpoint: name/validate
+                  code: TFPeQduYbUIy4azulJLmLQlNP2ItDh
+                  customId: null
+                  query:
+                    name: Paeeewas
+                  options:
+                    dataScope: basic
+                    acceptDegrees: false
+                    acceptContext: false
+                    smartMode: true
+                    validationDepth: strict
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalid
+                    data:
+                      name: Paeeewas
+                      surname: null
+                      nameSurname: null
+                      context: []
+                      degreesBefore: []
+                      degreesAfter: []
+                    errors:
+                      - group: VALUE
+                        type: INVALID
+                        subtype: NAME
+                        description: Name has not been found in our database.
+                        severity: warning
+                        relatedTo:
+                          - name
+                  resultCorrected: null
+                  suggestions: []
+                errors: []
+            invalidWithCorrection:
+              value:
+                status: 200
+                request:
+                  endpoint: name/validate
+                  code: Obnik8s8mD0J5943i5uKmiGlbTBRyY
+                  customId: null
+                  query:
+                    name: Palve
+                  options:
+                    dataScope: basic
+                    acceptDegrees: false
+                    acceptContext: false
+                    smartMode: true
+                    validationDepth: strict
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalidWithCorrection
+                    data:
+                      name: Palve
+                      surname: null
+                      nameSurname: null
+                      context: []
+                      degreesBefore: []
+                      degreesAfter: []
+                    errors:
+                      - group: VALUE
+                        type: INVALID
+                        subtype: NAME
+                        description: Name has not been found in our database.
+                        severity: warning
+                        relatedTo:
+                          - name
+                  resultCorrected:
+                    isValid: true
+                    data:
+                      name: Pavel
+                      surname: null
+                      nameSurname: null
+                      context: []
+                      degreesBefore: []
+                      degreesAfter: []
+                    fixes:
+                      - group: VALUE
+                        type: CHANGED
+                        subtype: TYPO
+                        data:
+                          typeFrom: name
+                          type: name
+                          valueFrom: Palve
+                          value: Pavel
+                  suggestions: []
+                errors: []
+            validWithSuggestion:
+              value:
+                status: 200
+                request:
+                  endpoint: name/validate
+                  code: gohnVsAyh9ETJmYzA9lZklP87fGmu2
+                  customId: null
+                  query:
+                    name: Pawel
+                  options:
+                    dataScope: basic
+                    acceptDegrees: false
+                    acceptContext: false
+                    smartMode: true
+                    validationDepth: strict
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: true
+                    proposal: validWithSuggestion
+                    data:
+                      name: Pawel
+                      surname: null
+                      nameSurname: null
+                      context: []
+                      degreesBefore: []
+                      degreesAfter: []
+                    errors: []
+                  resultCorrected: null
+                  suggestions:
+                    - isValid: true
+                      data:
+                        name: Pavel
+                        surname: null
+                        nameSurname: null
+                        context: []
+                        degreesBefore: []
+                        degreesAfter: []
+                      fixes:
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: name
+                            type: name
+                            valueFrom: Pawel
+                            value: Pavel
+                errors: []
+            validNameSurnameExtendedDataScope:
+              value:
+                status: 200
+                request:
+                  endpoint: name/validate
+                  code: ze7zmQsWZJp9fWWsJk06A41SnsHayH
+                  customId: null
+                  query:
+                    nameSurname: Pavel Novák
+                  options:
+                    dataScope: extended
+                    acceptDegrees: false
+                    acceptContext: false
+                    smartMode: true
+                    validationDepth: minimal
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: true
+                    proposal: valid
+                    data:
+                      nameSurname: Pavel Novák
+                      name: Pavel
+                      surname: Novák
+                      context: []
+                      degreesBefore: []
+                      degreesAfter: []
+                    details:
+                      - type: name
+                        value: Pavel
+                        gender: 1
+                        vocative: Pavle
+                        nameDays:
+                          - country: CZ
+                            month: "6"
+                            day: "29"
+                      - type: surname
+                        value: Novák
+                        gender: 1
+                        vocative: Nováku
+                        nameDays: null
+                      - type: nameSurname
+                        value: Pavel Novák
+                        gender: 1
+                        vocative: Pavle Nováku
+                        nameDays:
+                          - country: CZ
+                            month: "6"
+                            day: "29"
+                    errors: []
+                  resultCorrected: null
+                  suggestions: []
+                errors: []
+            extendedDataScope:
+              value:
+                status: 200
+                request:
+                  endpoint: name/validate
+                  code: J5fBrFgRQ5PhaX4N8GVccCZWSzYfDm
+                  customId: null
+                  query:
+                    name: Pavel
+                  options:
+                    dataScope: extended
+                    acceptDegrees: false
+                    acceptContext: false
+                    smartMode: true
+                    validationDepth: minimal
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: true
+                    proposal: valid
+                    data:
+                      name: Pavel
+                      surname: null
+                      nameSurname: null
+                      context: []
+                      degreesBefore: []
+                      degreesAfter: []
+                    details:
+                      - type: name
+                        value: Pavel
+                        gender: 1
+                        vocative: Pavle
+                        nameDays:
+                          - country: CZ
+                            month: "6"
+                            day: "29"
+                    errors: []
+                  resultCorrected: null
+                  suggestions: []
+                errors: []
           schema:
             type: object
             properties:
@@ -8877,33 +9167,33 @@ components:
           required:
             - isValid
             - data
-            - details
             - fixes
         suggestions:
-          type: object
-          description: TODO
-          properties:
-            isValid:
-              type: boolean
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
-              example: true
-            data:
-              $ref: "#/components/schemas/NameValidationResultsData"
-            details:
-              $ref: "#/components/schemas/NameValidationResultsDetails"
-            fixes:
-              type: array
-              description: TODO
-              items:
-                oneOf:
-                  - $ref: "#/components/schemas/FixFormatGlobal"
-                  - $ref: "#/components/schemas/FixSyntaxGlobal"
-                  - $ref: "#/components/schemas/FixValueGlobal"
-          required:
-            - isValid
-            - data
-            - details
-            - fixes
+          type: array
+          items:
+            type: object
+            description: TODO
+            properties:
+              isValid:
+                type: boolean
+                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+                example: true
+              data:
+                $ref: "#/components/schemas/NameValidationResultsData"
+              details:
+                $ref: "#/components/schemas/NameValidationResultsDetails"
+              fixes:
+                type: array
+                description: TODO
+                items:
+                  oneOf:
+                    - $ref: "#/components/schemas/FixFormatGlobal"
+                    - $ref: "#/components/schemas/FixSyntaxGlobal"
+                    - $ref: "#/components/schemas/FixValueGlobal"
+            required:
+              - isValid
+              - data
+              - fixes
       required:
         - result
         - suggestions
@@ -8914,6 +9204,7 @@ components:
           type: string
           description: Name and surname
           example: Petr Novák
+          nullable: true
         name:
           type: string
           description: Name
@@ -8921,6 +9212,7 @@ components:
         surname:
           type: string
           description: Surname
+          nullable: true
           example: Novák
         context:
           type: array
@@ -8982,17 +9274,13 @@ components:
                   description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                   example: CZ
                 month:
-                  type: integer
+                  type: string
                   description: Number of month for name day.
-                  minimum: 1
-                  maximum: 12
-                  example: 6
+                  example: "6"
                 day:
-                  type: integer
+                  type: string
                   description: Number of month for name day.
-                  minimum: 1
-                  maximum: 31
-                  example: 29
+                  example: "29"
               required:
                 - country
                 - month

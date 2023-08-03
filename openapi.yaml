@@ -1558,6 +1558,1264 @@ components:
       description: Successfull response
       content:
         application/json:
+          examples:
+            searchStreet:
+              value:
+                status: 200
+                request:
+                  endpoint: location/search
+                  code: B9loyKgYifx7AfmEZTz9jRGc55zOvZ
+                  customId:
+                  query:
+                    type: street
+                    value: tha
+                  options:
+                    dataScope: basic
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 5
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 5
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 8
+                          cityDistrict: Praha 8
+                          cityPart: Karlín
+                          cityAdministrative:
+                          cadastralArea: Karlín
+                        ids:
+                          internal:
+                          external:
+                        street: Thámova
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: Thámova
+                        city: Praha
+                        zip: 186 00
+                        geometry:
+                          gps:
+                            lat: 50.09252562141046
+                            lon: 14.452251023612916
+                          custom: []
+                        postOffice:
+                          name: Praha 86
+                        full: Thámova, 186 00 Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 6
+                          cityDistrict: Praha 6
+                          cityPart: Dejvice
+                          cityAdministrative:
+                          cadastralArea: Dejvice
+                        ids:
+                          internal:
+                          external:
+                        street: Thákurova
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: Thákurova
+                        city: Praha
+                        zip: 160 00
+                        geometry:
+                          gps:
+                            lat: 50.10225071688183
+                            lon: 14.388225676375441
+                          custom: []
+                        postOffice:
+                          name: Praha 6
+                        full: Thákurova, 160 00 Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Středočeský kraj
+                          district: Praha-východ
+                          cityDistrictSpecial:
+                          cityDistrict:
+                          cityPart: Brandýs nad Labem
+                          cityAdministrative:
+                          cadastralArea: Brandýs nad Labem
+                        ids:
+                          internal: null
+                          external: null
+                        street: Thámova
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: Thámova
+                        city: Brandýs nad Labem-Stará Boleslav
+                        zip: 250 01
+                        geometry:
+                          gps:
+                            lat: 50.18265743914526
+                            lon: 14.65001865348313
+                          custom: []
+                        postOffice:
+                          name: Brandýs nad Labem-Stará Boleslav 1
+                        full: Thámova, 250 01 Brandýs nad Labem-Stará Boleslav
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Ústecký kraj
+                          district: Teplice
+                          cityDistrictSpecial: null
+                          cityDistrict: null
+                          cityPart: Trnovany
+                          cityAdministrative:
+                          cadastralArea: Teplice-Trnovany
+                        ids:
+                          internal:
+                          external:
+                        street: Thámova
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: Thámova
+                        city: Teplice
+                        zip: 415 01
+                        geometry:
+                          gps:
+                            lat: 50.650474860146645
+                            lon: 13.842120192199946
+                          custom: []
+                        postOffice:
+                          name: Teplice 1
+                        full: Thámova, 415 01 Teplice
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Plzeňský kraj
+                          district: Plzeň-město
+                          cityDistrictSpecial:
+                          cityDistrict: Plzeň 3
+                          cityPart: Jižní Předměstí
+                          cityAdministrative:
+                          cadastralArea: Plzeň
+                        ids:
+                          internal:
+                          external:
+                        street: Thámova
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: Thámova
+                        city: Plzeň
+                        zip: 301 00
+                        geometry:
+                          gps:
+                            lat: 49.73824081826024
+                            lon: 13.368859521578997
+                          custom: []
+                        postOffice:
+                          name: Plzeň 1
+                        full: Thámova, 301 00 Plzeň
+                errors: []
+            searchCity:
+              value:
+                status: 200
+                request:
+                  endpoint: location/search
+                  code: bDgVSHImL8eGiZwlEQ8mrbMLqW3SnS
+                  customId:
+                  query:
+                    type: city
+                    value: pra
+                  options:
+                    dataScope: basic
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 5
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 5
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: null
+                          cityDistrict: null
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber:
+                        city: Praha
+                        zip: null
+                        geometry:
+                          gps:
+                            lat: 50.06946198430161
+                            lon: 14.457585838940725
+                          custom: []
+                        postOffice:
+                          name:
+                        full: Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 4
+                          cityDistrict: null
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: null
+                        city: Praha
+                        zip:
+                        geometry:
+                          gps:
+                            lat: 50.02605723631767
+                            lon: 14.457723257302748
+                          custom: []
+                        postOffice:
+                          name: null
+                        full: Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 9
+                          cityDistrict: null
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: null
+                        city: Praha
+                        zip: null
+                        geometry:
+                          gps:
+                            lat: 50.109126601570125
+                            lon: 14.576504260909413
+                          custom: []
+                        postOffice:
+                          name: null
+                        full: Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 5
+                          cityDistrict: null
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber:
+                        city: Praha
+                        zip: null
+                        geometry:
+                          gps:
+                            lat: 50.029138139523624
+                            lon: 14.360599570178605
+                          custom: []
+                        postOffice:
+                          name: null
+                        full: Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 10
+                          cityDistrict: null
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full:
+                        streetWithNumber: null
+                        city: Praha
+                        zip:
+                        geometry:
+                          gps:
+                            lat: 50.054860064347096
+                            lon: 14.53331945933577
+                          custom: []
+                        postOffice:
+                          name: null
+                        full: Praha
+                errors: []
+            searchStreetWithNumber:
+              value:
+                status: 200
+                request:
+                  endpoint: location/search
+                  code: iSt1bD2F6ulbPm2q2UzLal81avJOME
+                  customId: null
+                  query:
+                    type: streetWithNumber
+                    value: Jeseniova 56
+                  options:
+                    dataScope: basic
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 5
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 5
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2474923"
+                          external: "26766540"
+                        street: Jeseniova
+                        number:
+                          part1: "2770"
+                          part1Number: "2770"
+                          part1Letter: null
+                          part2: "56"
+                          part2Number: "56"
+                          part2Letter: null
+                          full: 2770/56
+                        streetWithNumber: Jeseniova 2770/56
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087047565105
+                            lon: 14.462478928626
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043459.65
+                                "y": 739893.35
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 2770/56, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2839682"
+                          external: "75195364"
+                        street: Jeseniova
+                        number:
+                          part1: "2770"
+                          part1Number: "2770"
+                          part1Letter: null
+                          part2: 56a
+                          part2Number: "56"
+                          part2Letter: a
+                          full: 2770/56a
+                        streetWithNumber: Jeseniova 2770/56a
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087006882822
+                            lon: 14.462165853122
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043461.42
+                                "y": 739916.62
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 2770/56a, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2839684"
+                          external: "75195429"
+                        street: Jeseniova
+                        number:
+                          part1: "2770"
+                          part1Number: "2770"
+                          part1Letter: null
+                          part2: 56b
+                          part2Number: "56"
+                          part2Letter: b
+                          full: 2770/56b
+                        streetWithNumber: Jeseniova 2770/56b
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087065208676
+                            lon: 14.462383559829
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043458.22
+                                "y": 739900.09
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 2770/56b, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2839687"
+                          external: "75195500"
+                        street: Jeseniova
+                        number:
+                          part1: "2770"
+                          part1Number: "2770"
+                          part1Letter: null
+                          part2: 56c
+                          part2Number: "56"
+                          part2Letter: c
+                          full: 2770/56c
+                        streetWithNumber: Jeseniova 2770/56c
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087079644325
+                            lon: 14.462496572196
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043457.58
+                                "y": 739891.75
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 2770/56c, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2839688"
+                          external: "75195542"
+                        street: Jeseniova
+                        number:
+                          part1: "2770"
+                          part1Number: "2770"
+                          part1Letter: null
+                          part2: 56d
+                          part2Number: "56"
+                          part2Letter: d
+                          full: 2770/56d
+                        streetWithNumber: Jeseniova 2770/56d
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087108084204
+                            lon: 14.462668763723
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043455.4
+                                "y": 739879.19
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 2770/56d, 130 00 Praha 3
+                errors: []
+            searchZip:
+              value:
+                status: 200
+                request:
+                  endpoint: location/search
+                  code: CB6QBV3dXIYT77vuMle7DtC3terQDo
+                  customId: null
+                  query:
+                    type: zip
+                    value: "1"
+                  options:
+                    dataScope: basic
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 5
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 5
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 10
+                          cityDistrict: Praha 10
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: null
+                        city: Praha
+                        zip: 100 00
+                        geometry:
+                          gps:
+                            lat: 50.072599628209275
+                            lon: 14.494863321298032
+                          custom: []
+                        postOffice:
+                          name: Praha 10
+                        full: 100 00 Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: null
+                          cityDistrict: null
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: null
+                        city: Praha
+                        zip: 101 00
+                        geometry:
+                          gps:
+                            lat: 50.068008172773794
+                            lon: 14.458662142752011
+                          custom: []
+                        postOffice:
+                          name: null
+                        full: 101 00 Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 10
+                          cityDistrict: null
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: null
+                        city: Praha
+                        zip: 102 00
+                        geometry:
+                          gps:
+                            lat: 50.0565407771756
+                            lon: 14.535608318775813
+                          custom: []
+                        postOffice:
+                          name: Praha 102
+                        full: 102 00 Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 10
+                          cityDistrict: null
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: null
+                        city: Praha
+                        zip: 103 00
+                        geometry:
+                          gps:
+                            lat: 50.0130319520774
+                            lon: 14.62384033759633
+                          custom: []
+                        postOffice:
+                          name: Praha 113
+                        full: 103 00 Praha
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 10
+                          cityDistrict: null
+                          cityPart: null
+                          cityAdministrative: null
+                          cadastralArea: null
+                        ids:
+                          internal: null
+                          external: null
+                        street: null
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: null
+                        city: Praha
+                        zip: 104 00
+                        geometry:
+                          gps:
+                            lat: 50.03048204822205
+                            lon: 14.594408584358158
+                          custom: []
+                        postOffice:
+                          name: Praha 114
+                        full: 104 00 Praha
+                errors: []
+            searchFull:
+              value:
+                status: 200
+                request:
+                  endpoint: location/search
+                  code: JlY9aWiYOHTFouopIdA7s7GMFegK8s
+                  customId: null
+                  query:
+                    type: full
+                    value: Jeseniova Praha
+                  options:
+                    dataScope: basic
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 5
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 10
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: null
+                          external: null
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "35"
+                          cityDistrict: "500097"
+                          cityPart: "490261"
+                          cadastralArea: "727415"
+                          city: null
+                          street: null
+                        street: Jeseniova
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: null
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.08849994672346
+                            lon: 14.470074273005594
+                          custom: []
+                        postOffice:
+                          name: Praha 3
+                        full: ""
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 10
+                          cityDistrict: Praha 10
+                          cityPart: Záběhlice
+                          cityAdministrative: null
+                          cadastralArea: Záběhlice
+                        ids:
+                          internal: null
+                          external: null
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "108"
+                          cityDistrict: "500224"
+                          cityPart: "490253"
+                          cadastralArea: "732117"
+                          city: null
+                          street: null
+                        street: Jesenická
+                        number:
+                          part1: null
+                          part1Number: null
+                          part1Letter: null
+                          part2: null
+                          part2Number: null
+                          part2Letter: null
+                          full: null
+                        streetWithNumber: null
+                        city: Praha
+                        zip: 106 00
+                        geometry:
+                          gps:
+                            lat: 50.05778769241466
+                            lon: 14.489955915017955
+                          custom: []
+                        postOffice:
+                          name: Praha 106
+                        full: ""
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2015522"
+                          external: "21767939"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "35"
+                          cityDistrict: "500097"
+                          cityPart: "490261"
+                          cadastralArea: "727415"
+                          city: "554782"
+                          street: "449768"
+                        street: Jeseniova
+                        number:
+                          part1: "92"
+                          part1Number: "92"
+                          part1Letter: null
+                          part2: "45"
+                          part2Number: "45"
+                          part2Letter: null
+                          full: 92/45
+                        streetWithNumber: Jeseniova 92/45
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087166410058
+                            lon: 14.46185917471
+                          custom:
+                            - coordinates:
+                                x: 1043440.98
+                                "y": 739935.12
+                              type: JTSK
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 92/45, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2016620"
+                          external: "21779015"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "35"
+                          cityDistrict: "500097"
+                          cityPart: "490261"
+                          cadastralArea: "727415"
+                          city: "554782"
+                          street: "449768"
+                        street: Jeseniova
+                        number:
+                          part1: "1164"
+                          part1Number: "1164"
+                          part1Letter: null
+                          part2: "47"
+                          part2Number: "47"
+                          part2Letter: null
+                          full: 1164/47
+                        streetWithNumber: Jeseniova 1164/47
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.08721597352
+                            lon: 14.462105334024
+                          custom:
+                            - coordinates:
+                                x: 1043438.09
+                                "y": 739916.92
+                              type: JTSK
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 1164/47, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2016638"
+                          external: "21779198"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "35"
+                          cityDistrict: "500097"
+                          cityPart: "490261"
+                          cadastralArea: "727415"
+                          city: "554782"
+                          street: "449768"
+                        street: Jeseniova
+                        number:
+                          part1: "1184"
+                          part1Number: "1184"
+                          part1Letter: null
+                          part2: "49"
+                          part2Number: "49"
+                          part2Letter: null
+                          full: 1184/49
+                        streetWithNumber: Jeseniova 1184/49
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087248052739
+                            lon: 14.462286115886
+                          custom:
+                            - coordinates:
+                                x: 1043436.36
+                                "y": 739903.91
+                              type: JTSK
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 1184/49, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2016626"
+                          external: "21779074"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "35"
+                          cityDistrict: "500097"
+                          cityPart: "490261"
+                          cadastralArea: "727415"
+                          city: "554782"
+                          street: "449768"
+                        street: Jeseniova
+                        number:
+                          part1: "1169"
+                          part1Number: "1169"
+                          part1Letter: null
+                          part2: "51"
+                          part2Number: "51"
+                          part2Letter: null
+                          full: 1169/51
+                        streetWithNumber: Jeseniova 1169/51
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087291942944
+                            lon: 14.462470325562
+                          custom:
+                            - coordinates:
+                                x: 1043434.05
+                                "y": 739890.33
+                              type: JTSK
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 1169/51, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2016478"
+                          external: "21777586"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "35"
+                          cityDistrict: "500097"
+                          cityPart: "490261"
+                          cadastralArea: "727415"
+                          city: "554782"
+                          street: "449768"
+                        street: Jeseniova
+                        number:
+                          part1: "1046"
+                          part1Number: "1046"
+                          part1Letter: null
+                          part2: "35"
+                          part2Number: "35"
+                          part2Letter: null
+                          full: 1046/35
+                        streetWithNumber: Jeseniova 1046/35
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087079644325
+                            lon: 14.459503443061
+                          custom:
+                            - coordinates:
+                                x: 1043428.35
+                                "y": 740103.54
+                              type: JTSK
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 1046/35, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2015844"
+                          external: "21771235"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "35"
+                          cityDistrict: "500097"
+                          cityPart: "490261"
+                          cadastralArea: "727415"
+                          city: "554782"
+                          street: "449768"
+                        street: Jeseniova
+                        number:
+                          part1: "449"
+                          part1Number: "449"
+                          part1Letter: null
+                          part2: "41"
+                          part2Number: "41"
+                          part2Letter: null
+                          full: 449/41
+                        streetWithNumber: Jeseniova 449/41
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.086879581189
+                            lon: 14.460591749977
+                          custom:
+                            - coordinates:
+                                x: 1043459.94
+                                "y": 740029.39
+                              type: JTSK
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 449/41, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2017033"
+                          external: "21783209"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "35"
+                          cityDistrict: "500097"
+                          cityPart: "490261"
+                          cadastralArea: "727415"
+                          city: "554782"
+                          street: "449768"
+                        street: Jeseniova
+                        number:
+                          part1: "1522"
+                          part1Number: "1522"
+                          part1Letter: null
+                          part2: "53"
+                          part2Number: "53"
+                          part2Letter: null
+                          full: 1522/53
+                        streetWithNumber: Jeseniova 1522/53
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.087334818472
+                            lon: 14.462734128447
+                          custom:
+                            - coordinates:
+                                x: 1043431.45
+                                "y": 739871.26
+                              type: JTSK
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 1522/53, 130 00 Praha 3
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2322244"
+                          external: "25120417"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "35"
+                          cityDistrict: "500097"
+                          cityPart: "490261"
+                          cadastralArea: "727415"
+                          city: "554782"
+                          street: "449768"
+                        street: Jeseniova
+                        number:
+                          part1: "1196"
+                          part1Number: "1196"
+                          part1Letter: null
+                          part2: "52"
+                          part2Number: "52"
+                          part2Letter: null
+                          full: 1196/52
+                        streetWithNumber: Jeseniova 1196/52
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.08686514554
+                            lon: 14.461311421041
+                          custom:
+                            - coordinates:
+                                x: 1043470.05
+                                "y": 739979.04
+                              type: JTSK
+                        postOffice:
+                          name: Praha 3
+                        full: Jeseniova 1196/52, 130 00 Praha 3
+                errors: []
           schema:
             type: object
             properties:
@@ -1624,6 +2882,65 @@ components:
       description: Successfull response
       content:
         application/json:
+          examples:
+            localizationResults:
+              value:
+                status: 200
+                request:
+                  endpoint: location/localize
+                  code: pH6Sx97GNdPNsByNBLbVOjlnEEvo8i
+                  customId: null
+                  query: {}
+                  options:
+                    dataScope: basic
+                    resultsLimit: 10
+                    singleLocationResultDistance: 15
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0920004
+                      lon: 14.4527362
+                response:
+                  resultsCount: 1
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 8
+                          cityDistrict: Praha 8
+                          cityPart: Karlín
+                          cityAdministrative: null
+                          cadastralArea: Karlín
+                        ids:
+                          internal: "2070391"
+                          external: "22349995"
+                        street: Thámova
+                        number:
+                          part1: "137"
+                          part1Number: "137"
+                          part1Letter: null
+                          part2: "16"
+                          part2Number: "16"
+                          part2Letter: null
+                          full: 137/16
+                        streetWithNumber: Thámova 137/16
+                        city: Praha
+                        zip: 186 00
+                        geometry:
+                          gps:
+                            lat: 50.092000490337
+                            lon: 14.452736264264
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1042819.66
+                                "y": 740509.43
+                        postOffice:
+                          name: Praha 86
+                        full: Thámova 137/16, 186 00 Praha 8
+                errors: []
           schema:
             type: object
             properties:
@@ -1676,6 +2993,141 @@ components:
       description: Successfull response
       content:
         application/json:
+          examples:
+            getFullDataScopeByInternalID:
+              value:
+                status: 200
+                request:
+                  endpoint: location/get
+                  code: 2iEm6qswI89DAZFSV2MPKrqSzextB5
+                  customId:
+                  query:
+                    id: "2070391"
+                    administrativeArea.country: CZ
+                  options:
+                    dataScope: full
+                    idType: internal
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 1
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 8
+                          cityDistrict: Praha 8
+                          cityPart: Karlín
+                          cityAdministrative:
+                          cadastralArea: Karlín
+                        ids:
+                          internal: "2070391"
+                          external: "22349995"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "86"
+                          cityDistrict: "500208"
+                          cityPart: "400637"
+                          cadastralArea: "730955"
+                          city: "554782"
+                          street: "472093"
+                        street: Thámova
+                        number:
+                          part1: "137"
+                          part1Number: "137"
+                          part1Letter:
+                          part2: "16"
+                          part2Number: "16"
+                          part2Letter:
+                          full: 137/16
+                        streetWithNumber: Thámova 137/16
+                        city: Praha
+                        zip: 186 00
+                        geometry:
+                          gps:
+                            lat: 50.092000490337
+                            lon: 14.452736264264
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1042819.66
+                                y: 740509.43
+                        postOffice:
+                          name: Praha 86
+                        full: Thámova 137/16, 186 00 Praha 8
+                errors: []
+            getFullDataScopeByExternalID:
+              value:
+                status: 200
+                request:
+                  endpoint: location/get
+                  code: CTJ2URBUvxMNIKrkruxEtJdmxxiNBz
+                  customId:
+                  query:
+                    id: "22349995"
+                    administrativeArea.country: CZ
+                  options:
+                    dataScope: full
+                    idType: external
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 1
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 8
+                          cityDistrict: Praha 8
+                          cityPart: Karlín
+                          cityAdministrative:
+                          cadastralArea: Karlín
+                        ids:
+                          internal: "2070391"
+                          external: "22349995"
+                          region: "19"
+                          district: "9999"
+                          cityDistrictSpecial: "86"
+                          cityDistrict: "500208"
+                          cityPart: "400637"
+                          cadastralArea: "730955"
+                          city: "554782"
+                          street: "472093"
+                        street: Thámova
+                        number:
+                          part1: "137"
+                          part1Number: "137"
+                          part1Letter:
+                          part2: "16"
+                          part2Number: "16"
+                          part2Letter:
+                          full: 137/16
+                        streetWithNumber: Thámova 137/16
+                        city: Praha
+                        zip: 186 00
+                        geometry:
+                          gps:
+                            lat: 50.092000490337
+                            lon: 14.452736264264
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1042819.66
+                                y: 740509.43
+                        postOffice:
+                          name: Praha 86
+                        full: Thámova 137/16, 186 00 Praha 8
+                errors: []
           schema:
             type: object
             properties:
@@ -1735,6 +3187,793 @@ components:
       description: Successfull response
       content:
         application/json:
+          examples:
+            valid:
+              value:
+                status: 200
+                request:
+                  endpoint: location/validate
+                  code: 6oLslfiaYFsFjqqDL7Bq3MPVNPdUk6
+                  customId: null
+                  query:
+                    streetWithNumber: Thámova 137/16
+                    city: Praha
+                    zip: 186 00
+                  options:
+                    dataScope: basic
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 10
+                    cityFormat: minimal
+                    zipFormat: standard
+                    acceptPostOfficeAsCity: false
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: true
+                    proposal: valid
+                    data:
+                      administrativeArea:
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 8
+                        cityDistrict: Praha 8
+                        cityPart: Karlín
+                        cityAdministrative: null
+                        cadastralArea: Karlín
+                      ids:
+                        internal: "2070391"
+                        external: "22349995"
+                      street: Thámova
+                      number:
+                        part1: "137"
+                        part1Number: "137"
+                        part1Letter: null
+                        part2: "16"
+                        part2Number: "16"
+                        part2Letter: null
+                        full: 137/16
+                      streetWithNumber: Thámova 137/16
+                      city: Praha
+                      zip: 186 00
+                      geometry:
+                        gps:
+                          lat: 50.092000490337
+                          lon: 14.452736264264
+                        custom:
+                          - type: JTSK
+                            coordinates:
+                              x: 1042819.66
+                              "y": 740509.43
+                      postOffice:
+                        name: Praha 86
+                      full: Thámova 137/16, 186 00 Praha 8
+                    errors: []
+                  resultCorrected: null
+                  suggestions: []
+                errors: []
+            invalid:
+              value:
+                status: 200
+                request:
+                  endpoint: location/validate
+                  code: oOmRgZDARZmYuXoH450ftskn3iF45Q
+                  customId: null
+                  query:
+                    streetWithNumber: Thámova 123456789
+                    city: Parharlin
+                    zip: "457545754"
+                  options:
+                    dataScope: basic
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 10
+                    cityFormat: minimal
+                    zipFormat: standard
+                    acceptPostOfficeAsCity: false
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalid
+                    data:
+                      administrativeArea:
+                        country: ""
+                        region: null
+                        district: null
+                        cityDistrictSpecial: null
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
+                      ids:
+                        internal: null
+                        external: null
+                      street: null
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: null
+                      streetWithNumber: Thámova 123456789
+                      city: Parharlin
+                      zip: "457545754"
+                      geometry:
+                        gps:
+                          lat: null
+                          lon: null
+                        custom: []
+                      postOffice:
+                        name: null
+                      full: 457545754 Parharlin
+                    errors:
+                      - group: VALUE
+                        type: INVALID
+                        subtype: null
+                        severity: critical
+                        relatedTo:
+                          - streetWithNumber
+                          - city
+                          - zip
+                        description: Value is not valid.
+                  resultCorrected: null
+                  suggestions: []
+                errors: []
+            invalidWithCorrection:
+              value:
+                status: 200
+                request:
+                  endpoint: location/validate
+                  code: eHr8BHQTPdheQVN5UMe9EA1RqrtKMk
+                  customId: null
+                  query:
+                    streetWithNumber: Thámova 137
+                    city: Praha
+                    zip: "18600"
+                  options:
+                    dataScope: basic
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 10
+                    cityFormat: minimal
+                    zipFormat: standard
+                    acceptPostOfficeAsCity: false
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalidWithCorrection
+                    data:
+                      administrativeArea:
+                        country: ""
+                        region: null
+                        district: null
+                        cityDistrictSpecial: null
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
+                      ids:
+                        internal: null
+                        external: null
+                      street: null
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: null
+                      streetWithNumber: Thámova 137
+                      city: Praha
+                      zip: "18600"
+                      geometry:
+                        gps:
+                          lat: null
+                          lon: null
+                        custom: []
+                      postOffice:
+                        name: null
+                      full: 18600 Praha
+                    errors:
+                      - group: SYNTAX
+                        type: VALUE_PART_MISSING
+                        subtype: NUMBER_PART
+                        severity: critical
+                        relatedTo:
+                          - streetWithNumber
+                        description: Value is missing part of the number.
+                      - group: FORMAT
+                        type: CHARACTERS
+                        subtype: null
+                        severity: warning
+                        relatedTo:
+                          - zip
+                        description: null
+                  resultCorrected:
+                    isValid: true
+                    data:
+                      administrativeArea:
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 8
+                        cityDistrict: Praha 8
+                        cityPart: Karlín
+                        cityAdministrative: null
+                        cadastralArea: Karlín
+                      ids:
+                        internal: "2070391"
+                        external: "22349995"
+                      street: Thámova
+                      number:
+                        part1: "137"
+                        part1Number: "137"
+                        part1Letter: null
+                        part2: "16"
+                        part2Number: "16"
+                        part2Letter: null
+                        full: 137/16
+                      streetWithNumber: Thámova 137/16
+                      city: Praha
+                      zip: 186 00
+                      geometry:
+                        gps:
+                          lat: 50.092000490337
+                          lon: 14.452736264264
+                        custom:
+                          - type: JTSK
+                            coordinates:
+                              x: 1042819.66
+                              "y": 740509.43
+                      postOffice:
+                        name: Praha 86
+                      full: Thámova 137/16, 186 00 Praha 8
+                    errors: []
+                    fixes:
+                      - group: SYNTAX
+                        type: VALUE_PART_ADDED
+                        subtype: NUMBER_PART
+                        data:
+                          typeFrom: streetWithNumber
+                          type: streetWithNumber
+                          valueFrom: Thámova 137
+                          value: Thámova 137/16
+                      - group: FORMAT
+                        type: CHANGED
+                        subtype: null
+                        data:
+                          typeFrom: zip
+                          type: zip
+                          valueFrom: "18600"
+                          value: 186 00
+                  suggestions: []
+                errors: []
+            invalidWithSuggestion:
+              value:
+                status: 200
+                request:
+                  endpoint: location/validate
+                  code: nOp4nnG3L3f8agZVgZ3VwgeAzgLjoL
+                  customId: null
+                  query:
+                    streetWithNumber: Olšanská 2898/4
+                    city: Praha
+                    zip: 130 00
+                  options:
+                    dataScope: basic
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 10
+                    cityFormat: minimal
+                    zipFormat: standard
+                    acceptPostOfficeAsCity: false
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalidWithSuggestion
+                    data:
+                      administrativeArea:
+                        country: ""
+                        region: null
+                        district: null
+                        cityDistrictSpecial: null
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
+                      ids:
+                        internal: null
+                        external: null
+                      street: null
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: null
+                      streetWithNumber: Olšanská 2898/4
+                      city: Praha
+                      zip: 130 00
+                      geometry:
+                        gps:
+                          lat: null
+                          lon: null
+                        custom: []
+                      postOffice:
+                        name: null
+                      full: 130 00 Praha
+                    errors:
+                      - group: VALUE
+                        type: INVALID
+                        subtype: null
+                        severity: critical
+                        relatedTo:
+                          - streetWithNumber
+                        description: Value is not valid.
+                  resultCorrected: null
+                  suggestions:
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2845267"
+                          external: "75429195"
+                        street: Olšanská
+                        number:
+                          part1: "2898"
+                          part1Number: "2898"
+                          part1Letter: null
+                          part2: 4d
+                          part2Number: "4"
+                          part2Letter: d
+                          full: 2898/4d
+                        streetWithNumber: Olšanská 2898/4d
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.083110428772
+                            lon: 14.46634018672
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043931.3
+                                "y": 739678.87
+                        postOffice:
+                          name: Praha 3
+                        full: Olšanská 2898/4d, 130 00 Praha 3
+                      errors: []
+                      fixes:
+                        - group: SYNTAX
+                          type: VALUE_PART_ADDED
+                          subtype: NUMBER_PART
+                          data:
+                            typeFrom: streetWithNumber
+                            type: streetWithNumber
+                            valueFrom: Olšanská 2898/4
+                            value: Olšanská 2898/4d
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2845272"
+                          external: "75429527"
+                        street: Olšanská
+                        number:
+                          part1: "2898"
+                          part1Number: "2898"
+                          part1Letter: null
+                          part2: 4h
+                          part2Number: "4"
+                          part2Letter: h
+                          full: 2898/4h
+                        streetWithNumber: Olšanská 2898/4h
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.083434750755
+                            lon: 14.466593730085
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043897.96
+                                "y": 739655.59
+                        postOffice:
+                          name: Praha 3
+                        full: Olšanská 2898/4h, 130 00 Praha 3
+                      errors: []
+                      fixes:
+                        - group: SYNTAX
+                          type: VALUE_PART_ADDED
+                          subtype: NUMBER_PART
+                          data:
+                            typeFrom: streetWithNumber
+                            type: streetWithNumber
+                            valueFrom: Olšanská 2898/4
+                            value: Olšanská 2898/4h
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2845258"
+                          external: "75428920"
+                        street: Olšanská
+                        number:
+                          part1: "2898"
+                          part1Number: "2898"
+                          part1Letter: null
+                          part2: 4a
+                          part2Number: "4"
+                          part2Letter: a
+                          full: 2898/4a
+                        streetWithNumber: Olšanská 2898/4a
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.083335320731
+                            lon: 14.466021697322
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043903.21
+                                "y": 739698
+                        postOffice:
+                          name: Praha 3
+                        full: Olšanská 2898/4a, 130 00 Praha 3
+                      errors: []
+                      fixes:
+                        - group: SYNTAX
+                          type: VALUE_PART_ADDED
+                          subtype: NUMBER_PART
+                          data:
+                            typeFrom: streetWithNumber
+                            type: streetWithNumber
+                            valueFrom: Olšanská 2898/4
+                            value: Olšanská 2898/4a
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2845269"
+                          external: "75429411"
+                        street: Olšanská
+                        number:
+                          part1: "2898"
+                          part1Number: "2898"
+                          part1Letter: null
+                          part2: 4e
+                          part2Number: "4"
+                          part2Letter: e
+                          full: 2898/4e
+                        streetWithNumber: Olšanská 2898/4e
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.082797353268
+                            lon: 14.46634018672
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043966.23
+                                "y": 739683.63
+                        postOffice:
+                          name: Praha 3
+                        full: Olšanská 2898/4e, 130 00 Praha 3
+                      errors: []
+                      fixes:
+                        - group: SYNTAX
+                          type: VALUE_PART_ADDED
+                          subtype: NUMBER_PART
+                          data:
+                            typeFrom: streetWithNumber
+                            type: streetWithNumber
+                            valueFrom: Olšanská 2898/4
+                            value: Olšanská 2898/4e
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2845270"
+                          external: "75429446"
+                        street: Olšanská
+                        number:
+                          part1: "2898"
+                          part1Number: "2898"
+                          part1Letter: null
+                          part2: 4f
+                          part2Number: "4"
+                          part2Letter: f
+                          full: 2898/4f
+                        streetWithNumber: Olšanská 2898/4f
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.082789534602
+                            lon: 14.46682545375
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043972.05
+                                "y": 739649.77
+                        postOffice:
+                          name: Praha 3
+                        full: Olšanská 2898/4f, 130 00 Praha 3
+                      errors: []
+                      fixes:
+                        - group: SYNTAX
+                          type: VALUE_PART_ADDED
+                          subtype: NUMBER_PART
+                          data:
+                            typeFrom: streetWithNumber
+                            type: streetWithNumber
+                            valueFrom: Olšanská 2898/4
+                            value: Olšanská 2898/4f
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2845271"
+                          external: "75429462"
+                        street: Olšanská
+                        number:
+                          part1: "2898"
+                          part1Number: "2898"
+                          part1Letter: null
+                          part2: 4g
+                          part2Number: "4"
+                          part2Letter: g
+                          full: 2898/4g
+                        streetWithNumber: Olšanská 2898/4g
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.083160151562
+                            lon: 14.466929863054
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043932.89
+                                "y": 739636.54
+                        postOffice:
+                          name: Praha 3
+                        full: Olšanská 2898/4g, 130 00 Praha 3
+                      errors: []
+                      fixes:
+                        - group: SYNTAX
+                          type: VALUE_PART_ADDED
+                          subtype: NUMBER_PART
+                          data:
+                            typeFrom: streetWithNumber
+                            type: streetWithNumber
+                            valueFrom: Olšanská 2898/4
+                            value: Olšanská 2898/4g
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2845273"
+                          external: "75429551"
+                        street: Olšanská
+                        number:
+                          part1: "2898"
+                          part1Number: "2898"
+                          part1Letter: null
+                          part2: 4i
+                          part2Number: "4"
+                          part2Letter: i
+                          full: 2898/4i
+                        streetWithNumber: Olšanská 2898/4i
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.08351072018
+                            lon: 14.466843097321
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043892.67
+                                "y": 739637.07
+                        postOffice:
+                          name: Praha 3
+                        full: Olšanská 2898/4i, 130 00 Praha 3
+                      errors: []
+                      fixes:
+                        - group: SYNTAX
+                          type: VALUE_PART_ADDED
+                          subtype: NUMBER_PART
+                          data:
+                            typeFrom: streetWithNumber
+                            type: streetWithNumber
+                            valueFrom: Olšanská 2898/4
+                            value: Olšanská 2898/4i
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2845262"
+                          external: "75429098"
+                        street: Olšanská
+                        number:
+                          part1: "2898"
+                          part1Number: "2898"
+                          part1Letter: null
+                          part2: 4b
+                          part2Number: "4"
+                          part2Letter: b
+                          full: 2898/4b
+                        streetWithNumber: Olšanská 2898/4b
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.083368606235
+                            lon: 14.466205699834
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043902.02
+                                "y": 739684.73
+                        postOffice:
+                          name: Praha 3
+                        full: Olšanská 2898/4b, 130 00 Praha 3
+                      errors: []
+                      fixes:
+                        - group: SYNTAX
+                          type: VALUE_PART_ADDED
+                          subtype: NUMBER_PART
+                          data:
+                            typeFrom: streetWithNumber
+                            type: streetWithNumber
+                            valueFrom: Olšanská 2898/4
+                            value: Olšanská 2898/4b
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 3
+                          cityDistrict: Praha 3
+                          cityPart: Žižkov
+                          cityAdministrative: null
+                          cadastralArea: Žižkov
+                        ids:
+                          internal: "2845265"
+                          external: "75429152"
+                        street: Olšanská
+                        number:
+                          part1: "2898"
+                          part1Number: "2898"
+                          part1Letter: null
+                          part2: 4c
+                          part2Number: "4"
+                          part2Letter: c
+                          full: 2898/4c
+                        streetWithNumber: Olšanská 2898/4c
+                        city: Praha
+                        zip: 130 00
+                        geometry:
+                          gps:
+                            lat: 50.083426932089
+                            lon: 14.466448638498001
+                          custom:
+                            - type: JTSK
+                              coordinates:
+                                x: 1043898.49
+                                "y": 739666.17
+                        postOffice:
+                          name: Praha 3
+                        full: Olšanská 2898/4c, 130 00 Praha 3
+                      errors: []
+                      fixes:
+                        - group: SYNTAX
+                          type: VALUE_PART_ADDED
+                          subtype: NUMBER_PART
+                          data:
+                            typeFrom: streetWithNumber
+                            type: streetWithNumber
+                            valueFrom: Olšanská 2898/4
+                            value: Olšanská 2898/4c
+                errors: []
           schema:
             type: object
             properties:
@@ -3330,11 +5569,13 @@ components:
           type: string
           description: Street.
           example: Jeseniova
+          nullable: true
         number:
           $ref: "#/components/schemas/LocationNumber"
         streetWithNumber:
           type: string
           description: Street with number.
+          nullable: true
           example: Jeseniova 1151/55
         city:
           type: string
@@ -3343,6 +5584,7 @@ components:
         zip:
           type: string
           description: ZIP code.
+          nullable: true
           example: "13000"
         postOffice:
           type: object
@@ -3350,6 +5592,7 @@ components:
           properties:
             name:
               type: string
+              nullable: true
               example: Praha 086
           required:
             - name
@@ -3416,10 +5659,12 @@ components:
       properties:
         part1:
           type: string
+          nullable: true
           description: First part of house number.
           example: "137"
         part1Number:
           type: string
+          nullable: true
           description: First part of house number.
           example: "137"
         part1Letter:
@@ -3460,10 +5705,12 @@ components:
           properties:
             lat:
               type: number
+              nullable: true
               description: Latitude coordinate.
               example: 50.087440865479
             lon:
               type: number
+              nullable: true
               description: Longitude coordinate.
               example: 14.463284033285
           required:
@@ -4045,6 +6292,7 @@ components:
             - DIACRITICS
             - SPECIAL
             - WHITESPACES
+            - null
           description: Subtype of error.
           example: CASE_SENSITIVITY
         severity:
@@ -4776,6 +7024,7 @@ components:
             - Value is missing the number part.
             - Value is missing the street.
             - Value is missing the zip.
+            - Value is missing part of the number.
           description: Description of error.
           example: Value is missing the city.
     FixSyntaxLocation:

@@ -926,11 +926,1265 @@ components:
                         email: info@post.cz
                         domain: post.cz
                 errors: []
-
     CompanySearch:
       description: Successfull response
       content:
         application/json:
+          examples:
+            searchName:
+              value:
+                status: 200
+                request:
+                  endpoint: company/search
+                  code: XEguGrvYyFiFhqnbHs7h35nwoA6piT
+                  customId: null
+                  query:
+                    type: name
+                    value: Web
+                  options:
+                    dataScope: basic
+                    includeTerminatedSubjects: false
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 5
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 5
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: Webasto Roof & Components Czech Republic s.r.o.
+                        registrationNumber: "03865436"
+                        taxNumber: null
+                        vatNumber: CZ03865436
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Liberecký kraj
+                              district: Liberec
+                              cityDistrictSpecial: null
+                              cityDistrict: Liberec (nečleněné město)
+                              cityPart: Liberec VIII-Dolní Hanychov
+                              cityAdministrative: null
+                              cadastralArea: Dolní Hanychov
+                            ids:
+                              internal: "2194391"
+                              external: "23686626"
+                            street: České mládeže
+                            number:
+                              part1: "452"
+                              part1Number: "452"
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "452"
+                            streetWithNumber: České mládeže 452
+                            city: Liberec
+                            zip: 460 08
+                            geometry:
+                              gps:
+                                lat: 50.742813755364
+                                lon: 15.03289321197
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 976507.67
+                                    "y": 690079.8
+                            postOffice:
+                              name: Liberec 8
+                            full: České mládeže 452, 460 08 Liberec (nečleněné město)
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: České mládeže
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "452"
+                            streetWithNumber: České mládeže 452
+                            city: Liberec
+                            zip: "46008"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: Webhelp Enterprise Sales Solutions Czech Republic, s.r.o.
+                        registrationNumber: "29043654"
+                        taxNumber: null
+                        vatNumber: CZ29043654
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 1
+                              cityDistrict: Praha 1
+                              cityPart: Nové Město
+                              cityAdministrative: null
+                              cadastralArea: Nové Město
+                            ids:
+                              internal: "2009439"
+                              external: "21706166"
+                            street: Václavské náměstí
+                            number:
+                              part1: "808"
+                              part1Number: "808"
+                              part1Letter: null
+                              part2: "66"
+                              part2Number: "66"
+                              part2Letter: null
+                              full: 808/66
+                            streetWithNumber: Václavské náměstí 808/66
+                            city: Praha
+                            zip: 110 00
+                            geometry:
+                              gps:
+                                lat: 50.079291255814
+                                lon: 14.42972793906
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1043996.11
+                                    "y": 742332.51
+                            postOffice:
+                              name: Praha 1
+                            full: Václavské náměstí 808/66, 110 00 Praha 1
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Václavské náměstí
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 808/66
+                            streetWithNumber: Václavské náměstí 808/66
+                            city: Praha
+                            zip: "11000"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: WEBA Olomouc, s.r.o.
+                        registrationNumber: "47672153"
+                        taxNumber: null
+                        vatNumber: CZ47672153
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Olomoucký kraj
+                              district: Olomouc
+                              cityDistrictSpecial: null
+                              cityDistrict: null
+                              cityPart: Bystrovany
+                              cityAdministrative: null
+                              cadastralArea: Bystrovany
+                            ids:
+                              internal: "2335153"
+                              external: "25259296"
+                            street: K Mrazírnám
+                            number:
+                              part1: "209"
+                              part1Number: "209"
+                              part1Letter: null
+                              part2: "16"
+                              part2Number: "16"
+                              part2Letter: null
+                              full: 209/16
+                            streetWithNumber: K Mrazírnám 209/16
+                            city: Bystrovany
+                            zip: 779 00
+                            geometry:
+                              gps:
+                                lat: 49.594808334522
+                                lon: 17.298069478229
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1121697.55
+                                    "y": 543763.5
+                            postOffice:
+                              name: Olomouc 9
+                            full: K Mrazírnám 209/16, 779 00 Bystrovany
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: K Mrazírnám
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 209/16
+                            streetWithNumber: K Mrazírnám 209/16
+                            city: Bystrovany
+                            zip: "77900"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: Web Retail s.r.o.
+                        registrationNumber: "28876431"
+                        taxNumber: null
+                        vatNumber: CZ28876431
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 3
+                              cityDistrict: Praha 3
+                              cityPart: Žižkov
+                              cityAdministrative: null
+                              cadastralArea: Žižkov
+                            ids:
+                              internal: "2016330"
+                              external: "21776091"
+                            street: Husinecká
+                            number:
+                              part1: "903"
+                              part1Number: "903"
+                              part1Letter: null
+                              part2: "10"
+                              part2Number: "10"
+                              part2Letter: null
+                              full: 903/10
+                            streetWithNumber: Husinecká 903/10
+                            city: Praha
+                            zip: 130 00
+                            geometry:
+                              gps:
+                                lat: 50.085575585081
+                                lon: 14.44521454125
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1043453.94
+                                    "y": 741139.04
+                            postOffice:
+                              name: Praha 3
+                            full: Husinecká 903/10, 130 00 Praha 3
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Husinecká
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 903/10
+                            streetWithNumber: Husinecká 903/10
+                            city: Praha
+                            zip: "13000"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: Weber-Stephen CZ & SK spol. s r.o.
+                        registrationNumber: "28421124"
+                        taxNumber: null
+                        vatNumber: CZ28421124
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Středočeský kraj
+                              district: Praha-západ
+                              cityDistrictSpecial: null
+                              cityDistrict: null
+                              cityPart: Jesenice
+                              cityAdministrative: null
+                              cadastralArea: Jesenice u Prahy
+                            ids:
+                              internal: "1196163"
+                              external: "12775347"
+                            street: V Uličce
+                            number:
+                              part1: "49"
+                              part1Number: "49"
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "49"
+                            streetWithNumber: V Uličce 49
+                            city: Jesenice
+                            zip: 252 42
+                            geometry:
+                              gps:
+                                lat: 49.966616654002
+                                lon: 14.513948022266
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1057230.5
+                                    "y": 738054
+                            postOffice:
+                              name: Jesenice u Prahy
+                            full: V Uličce 49, 252 42 Jesenice
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: V Uličce
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "49"
+                            streetWithNumber: V Uličce 49
+                            city: Jesenice
+                            zip: "25242"
+                            full: null
+                errors: []
+
+            searchRegistrationNumber:
+              value:
+                status: 200
+                request:
+                  endpoint: company/search
+                  code: r0AOmPxiCF71vS1ma67HJQqZwGx32J
+                  customId: null
+                  query:
+                    type: vatNumber
+                    value: CZ10
+                  options:
+                    dataScope: basic
+                    includeTerminatedSubjects: false
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 5
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 5
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: KUWKAW s.r.o.
+                        registrationNumber: "10830626"
+                        taxNumber: null
+                        vatNumber: CZ10830626
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 5
+                              cityDistrict: Praha 5
+                              cityPart: Jinonice
+                              cityAdministrative: null
+                              cadastralArea: Jinonice
+                            ids:
+                              internal: "2758345"
+                              external: "41769384"
+                            street: V zářezu
+                            number:
+                              part1: "902"
+                              part1Number: "902"
+                              part1Letter: null
+                              part2: "4"
+                              part2Number: "4"
+                              part2Letter: null
+                              full: 902/4
+                            streetWithNumber: V zářezu 902/4
+                            city: Praha
+                            zip: 158 00
+                            geometry:
+                              gps:
+                                lat: 50.053906005173
+                                lon: 14.369985524673
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1046209.4
+                                    "y": 746955.94
+                            postOffice:
+                              name: Praha 58
+                            full: V zářezu 902/4, 158 00 Praha 5
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: V zářezu
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 902/4
+                            streetWithNumber: V zářezu 902/4
+                            city: Praha
+                            zip: "15800"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: Grand job s.r.o.
+                        registrationNumber: "10874844"
+                        taxNumber: null
+                        vatNumber: CZ10874844
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 1
+                              cityDistrict: Praha 1
+                              cityPart: Staré Město
+                              cityAdministrative: null
+                              cadastralArea: Staré Město
+                            ids:
+                              internal: "2011222"
+                              external: "21724326"
+                            street: Revoluční
+                            number:
+                              part1: "762"
+                              part1Number: "762"
+                              part1Letter: null
+                              part2: "13"
+                              part2Number: "13"
+                              part2Letter: null
+                              full: 762/13
+                            streetWithNumber: Revoluční 762/13
+                            city: Praha
+                            zip: 110 00
+                            geometry:
+                              gps:
+                                lat: 50.091123032271
+                                lon: 14.427496877477
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1042671.79
+                                    "y": 742311.72
+                            postOffice:
+                              name: Praha 1
+                            full: Revoluční 762/13, 110 00 Praha 1
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Revoluční
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 762/13
+                            streetWithNumber: Revoluční 762/13
+                            city: Praha
+                            zip: "11000"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: Energetický Holding Malina a.s.
+                        registrationNumber: "10931201"
+                        taxNumber: null
+                        vatNumber: CZ10931201
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 1
+                              cityDistrict: Praha 1
+                              cityPart: Nové Město
+                              cityAdministrative: null
+                              cadastralArea: Nové Město
+                            ids:
+                              internal: "2009186"
+                              external: "21703574"
+                            street: Krakovská
+                            number:
+                              part1: "583"
+                              part1Number: "583"
+                              part1Letter: null
+                              part2: "9"
+                              part2Number: "9"
+                              part2Letter: null
+                              full: 583/9
+                            streetWithNumber: Krakovská 583/9
+                            city: Praha
+                            zip: 110 00
+                            geometry:
+                              gps:
+                                lat: 50.078088772652
+                                lon: 14.427846192984
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1044110.5
+                                    "y": 742484.89
+                            postOffice:
+                              name: Praha 1
+                            full: Krakovská 583/9, 110 00 Praha 1
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Krakovská
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 583/9
+                            streetWithNumber: Krakovská 583/9
+                            city: Praha
+                            zip: "11000"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: CZECH Employer agency s.r.o.
+                        registrationNumber: "10813616"
+                        taxNumber: null
+                        vatNumber: CZ10813616
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Moravskoslezský kraj
+                              district: Ostrava-město
+                              cityDistrictSpecial: null
+                              cityDistrict: Mariánské Hory a Hulváky
+                              cityPart: Mariánské Hory
+                              cityAdministrative: null
+                              cadastralArea: Mariánské Hory
+                            ids:
+                              internal: "313521"
+                              external: "3316246"
+                            street: 28. října
+                            number:
+                              part1: "864"
+                              part1Number: "864"
+                              part1Letter: null
+                              part2: "273"
+                              part2Number: "273"
+                              part2Letter: null
+                              full: 864/273
+                            streetWithNumber: 28. října 864/273
+                            city: Ostrava
+                            zip: 709 00
+                            geometry:
+                              gps:
+                                lat: 49.826322894574
+                                lon: 18.247780476577
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1102371.1
+                                    "y": 473185.65
+                            postOffice:
+                              name: Ostrava 9
+                            full: 28. října 864/273, 709 00 Mariánské Hory a Hulváky
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: 28. října
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 864/273
+                            streetWithNumber: 28. října 864/273
+                            city: Ostrava
+                            zip: "70900"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: New Future s.r.o.
+                        registrationNumber: "10800816"
+                        taxNumber: null
+                        vatNumber: CZ10800816
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Ústecký kraj
+                              district: Most
+                              cityDistrictSpecial: null
+                              cityDistrict: null
+                              cityPart: Most
+                              cityAdministrative: null
+                              cadastralArea: Most II
+                            ids:
+                              internal: "2779799"
+                              external: "70525358"
+                            street: Velebudická
+                            number:
+                              part1: "3271"
+                              part1Number: "3271"
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "3271"
+                            streetWithNumber: Velebudická 3271
+                            city: Most
+                            zip: 434 01
+                            geometry:
+                              gps:
+                                lat: 50.490187359678
+                                lon: 13.653719014954
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 990937.67
+                                    "y": 790620.15
+                            postOffice:
+                              name: Most 1
+                            full: Velebudická 3271, 434 01 Most
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Velebudická
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "3271"
+                            streetWithNumber: Velebudická 3271
+                            city: Most
+                            zip: "43401"
+                            full: null
+                errors: []
+            searchTaxNumber:
+              value:
+                status: 200
+                request:
+                  endpoint: company/search
+                  code: yzCMqP3OmkNVHVIyXDfRcS8yaB6AO9
+                  customId: null
+                  query:
+                    type: taxNumber
+                    value: "10"
+                  options:
+                    dataScope: basic
+                    includeTerminatedSubjects: false
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 5
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 5
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: SK
+                        name: Pavol Maráček - EMPIRIA
+                        registrationNumber: "17672520"
+                        taxNumber: "1020329596"
+                        vatNumber: SK1020329596
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: SK
+                              region: Trnavský
+                              district: Piešťany
+                              cityDistrictSpecial: null
+                              cityDistrict: null
+                              cityPart: Piešťany
+                              cityAdministrative: null
+                              cadastralArea: null
+                            ids:
+                              internal: "6869348"
+                              external: null
+                            street: Priemyselná
+                            number:
+                              part1: "12"
+                              part1Number: "12"
+                              part1Letter: null
+                              part2: "12"
+                              part2Number: "12"
+                              part2Letter: null
+                              full: 12/12
+                            streetWithNumber: Priemyselná 12/12
+                            city: Piešťany
+                            zip: 921 01
+                            geometry:
+                              gps:
+                                lat: null
+                                lon: null
+                              custom: []
+                            postOffice:
+                              name: null
+                            full: Priemyselná 12/12, 921 01 Piešťany
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Priemyselná
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 12/
+                            streetWithNumber: Priemyselná 12/
+                            city: Piešťany
+                            zip: "92101"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: SK
+                        name: Ľubomír Žolčák - ŽOLÍK
+                        registrationNumber: "37643703"
+                        taxNumber: "1031416738"
+                        vatNumber: SK1031416738
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: SK
+                              region: Prešovský
+                              district: Prešov
+                              cityDistrictSpecial: null
+                              cityDistrict: null
+                              cityPart: Prešov
+                              cityAdministrative: null
+                              cadastralArea: null
+                            ids:
+                              internal: "5908780"
+                              external: null
+                            street: Kpt. Nálepku
+                            number:
+                              part1: "2854"
+                              part1Number: "2854"
+                              part1Letter: null
+                              part2: "5"
+                              part2Number: "5"
+                              part2Letter: null
+                              full: 2854/5
+                            streetWithNumber: Kpt. Nálepku 2854/5
+                            city: Prešov
+                            zip: 080 01
+                            geometry:
+                              gps:
+                                lat: 48.9929425515
+                                lon: 21.2470819825
+                              custom: []
+                            postOffice:
+                              name: null
+                            full: Kpt. Nálepku 2854/5, 080 01 Prešov
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Ul.kpt.Nálepku
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 5/
+                            streetWithNumber: Ul.kpt.Nálepku 5/
+                            city: Prešov
+                            zip: "08001"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: PL
+                        name: ŁSS SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIELNOŚCIĄ
+                        registrationNumber: "001010093"
+                        taxNumber: "1050003231"
+                        vatNumber: null
+                        vatNumberSpecial: null
+                        address: null
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: ul. Krakowska
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "88"
+                            streetWithNumber: ul. Krakowska 88
+                            city: Łódź
+                            zip: 94-214
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: PL
+                        name: '"WARSZAWSKIE CENTRUM TARGOWE" SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ'
+                        registrationNumber: "015576910"
+                        taxNumber: "1080006895"
+                        vatNumber: null
+                        vatNumberSpecial: null
+                        address: null
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: ul. Solec
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 81 B
+                            streetWithNumber: ul. Solec 81 B
+                            city: Warszawa
+                            zip: 00-382
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: PL
+                        name: PLANTS BROKER POLSKA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ
+                        registrationNumber: "015582890"
+                        taxNumber: "1080007239"
+                        vatNumber: PL1080007239
+                        vatNumberSpecial: null
+                        address: null
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: ul. Biała
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "4"
+                            streetWithNumber: ul. Biała 4
+                            city: Warszawa
+                            zip: 00-895
+                            full: null
+                errors: []
+            searchVatNumber:
+              value:
+                status: 200
+                request:
+                  endpoint: company/search
+                  code: PXJX9jsNirB57zGVpXceUfolKLiqGf
+                  customId: null
+                  query:
+                    type: vatNumber
+                    value: CZ10
+                  options:
+                    dataScope: basic
+                    includeTerminatedSubjects: false
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 5
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  resultsCount: 5
+                  results:
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: KUWKAW s.r.o.
+                        registrationNumber: "10830626"
+                        taxNumber: null
+                        vatNumber: CZ10830626
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 5
+                              cityDistrict: Praha 5
+                              cityPart: Jinonice
+                              cityAdministrative: null
+                              cadastralArea: Jinonice
+                            ids:
+                              internal: "2758345"
+                              external: "41769384"
+                            street: V zářezu
+                            number:
+                              part1: "902"
+                              part1Number: "902"
+                              part1Letter: null
+                              part2: "4"
+                              part2Number: "4"
+                              part2Letter: null
+                              full: 902/4
+                            streetWithNumber: V zářezu 902/4
+                            city: Praha
+                            zip: 158 00
+                            geometry:
+                              gps:
+                                lat: 50.053906005173
+                                lon: 14.369985524673
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1046209.4
+                                    "y": 746955.94
+                            postOffice:
+                              name: Praha 58
+                            full: V zářezu 902/4, 158 00 Praha 5
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: V zářezu
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 902/4
+                            streetWithNumber: V zářezu 902/4
+                            city: Praha
+                            zip: "15800"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: Grand job s.r.o.
+                        registrationNumber: "10874844"
+                        taxNumber: null
+                        vatNumber: CZ10874844
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 1
+                              cityDistrict: Praha 1
+                              cityPart: Staré Město
+                              cityAdministrative: null
+                              cadastralArea: Staré Město
+                            ids:
+                              internal: "2011222"
+                              external: "21724326"
+                            street: Revoluční
+                            number:
+                              part1: "762"
+                              part1Number: "762"
+                              part1Letter: null
+                              part2: "13"
+                              part2Number: "13"
+                              part2Letter: null
+                              full: 762/13
+                            streetWithNumber: Revoluční 762/13
+                            city: Praha
+                            zip: 110 00
+                            geometry:
+                              gps:
+                                lat: 50.091123032271
+                                lon: 14.427496877477
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1042671.79
+                                    "y": 742311.72
+                            postOffice:
+                              name: Praha 1
+                            full: Revoluční 762/13, 110 00 Praha 1
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Revoluční
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 762/13
+                            streetWithNumber: Revoluční 762/13
+                            city: Praha
+                            zip: "11000"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: Energetický Holding Malina a.s.
+                        registrationNumber: "10931201"
+                        taxNumber: null
+                        vatNumber: CZ10931201
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 1
+                              cityDistrict: Praha 1
+                              cityPart: Nové Město
+                              cityAdministrative: null
+                              cadastralArea: Nové Město
+                            ids:
+                              internal: "2009186"
+                              external: "21703574"
+                            street: Krakovská
+                            number:
+                              part1: "583"
+                              part1Number: "583"
+                              part1Letter: null
+                              part2: "9"
+                              part2Number: "9"
+                              part2Letter: null
+                              full: 583/9
+                            streetWithNumber: Krakovská 583/9
+                            city: Praha
+                            zip: 110 00
+                            geometry:
+                              gps:
+                                lat: 50.078088772652
+                                lon: 14.427846192984
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1044110.5
+                                    "y": 742484.89
+                            postOffice:
+                              name: Praha 1
+                            full: Krakovská 583/9, 110 00 Praha 1
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Krakovská
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 583/9
+                            streetWithNumber: Krakovská 583/9
+                            city: Praha
+                            zip: "11000"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: CZECH Employer agency s.r.o.
+                        registrationNumber: "10813616"
+                        taxNumber: null
+                        vatNumber: CZ10813616
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Moravskoslezský kraj
+                              district: Ostrava-město
+                              cityDistrictSpecial: null
+                              cityDistrict: Mariánské Hory a Hulváky
+                              cityPart: Mariánské Hory
+                              cityAdministrative: null
+                              cadastralArea: Mariánské Hory
+                            ids:
+                              internal: "313521"
+                              external: "3316246"
+                            street: 28. října
+                            number:
+                              part1: "864"
+                              part1Number: "864"
+                              part1Letter: null
+                              part2: "273"
+                              part2Number: "273"
+                              part2Letter: null
+                              full: 864/273
+                            streetWithNumber: 28. října 864/273
+                            city: Ostrava
+                            zip: 709 00
+                            geometry:
+                              gps:
+                                lat: 49.826322894574
+                                lon: 18.247780476577
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1102371.1
+                                    "y": 473185.65
+                            postOffice:
+                              name: Ostrava 9
+                            full: 28. října 864/273, 709 00 Mariánské Hory a Hulváky
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: 28. října
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 864/273
+                            streetWithNumber: 28. října 864/273
+                            city: Ostrava
+                            zip: "70900"
+                            full: null
+                    - data:
+                        administrativeArea:
+                          country: CZ
+                        name: New Future s.r.o.
+                        registrationNumber: "10800816"
+                        taxNumber: null
+                        vatNumber: CZ10800816
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Ústecký kraj
+                              district: Most
+                              cityDistrictSpecial: null
+                              cityDistrict: null
+                              cityPart: Most
+                              cityAdministrative: null
+                              cadastralArea: Most II
+                            ids:
+                              internal: "2779799"
+                              external: "70525358"
+                            street: Velebudická
+                            number:
+                              part1: "3271"
+                              part1Number: "3271"
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "3271"
+                            streetWithNumber: Velebudická 3271
+                            city: Most
+                            zip: 434 01
+                            geometry:
+                              gps:
+                                lat: 50.490187359678
+                                lon: 13.653719014954
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 990937.67
+                                    "y": 790620.15
+                            postOffice:
+                              name: Most 1
+                            full: Velebudická 3271, 434 01 Most
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Velebudická
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "3271"
+                            streetWithNumber: Velebudická 3271
+                            city: Most
+                            zip: "43401"
+                            full: null
+                errors: []
           schema:
             type: object
             properties:
@@ -1012,7 +2266,7 @@ components:
                         international: "+420607123456"
                         internationalFormatted: "+420 607 123 456"
                     errors: []
-                  resultCorrected:
+                  resultCorrected: null
                   suggestions: []
                 errors: []
             invalid:
@@ -3721,6 +4975,839 @@ components:
       description: Successfull response
       content:
         application/json:
+          examples:
+            valid:
+              value:
+                status: 200
+                request:
+                  endpoint: company/validate
+                  code: lBeyLx9LTefrxcenGEEzmB2aYiF1Vz
+                  customId: null
+                  query:
+                    name: AVANTRO s.r.o.
+                    registrationNumber: "04997476"
+                  options:
+                    dataScope: basic
+                    includeTerminatedSubjects: false
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 10
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: true
+                    proposal: valid
+                    data:
+                      administrativeArea:
+                        country: CZ
+                      name: AVANTRO s.r.o.
+                      registrationNumber: "04997476"
+                      taxNumber: null
+                      vatNumber: CZ04997476
+                      vatNumberSpecial: null
+                      address:
+                        data:
+                          administrativeArea:
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 8
+                            cityDistrict: Praha 8
+                            cityPart: Karlín
+                            cityAdministrative: null
+                            cadastralArea: Karlín
+                          ids:
+                            internal: "2070391"
+                            external: "22349995"
+                          street: Thámova
+                          number:
+                            part1: "137"
+                            part1Number: "137"
+                            part1Letter: null
+                            part2: "16"
+                            part2Number: "16"
+                            part2Letter: null
+                            full: 137/16
+                          streetWithNumber: Thámova 137/16
+                          city: Praha
+                          zip: 186 00
+                          geometry:
+                            gps:
+                              lat: 50.092000490337
+                              lon: 14.452736264264
+                            custom:
+                              - type: JTSK
+                                coordinates:
+                                  x: 1042819.66
+                                  "y": 740509.43
+                          postOffice:
+                            name: Praha 86
+                          full: Thámova 137/16, 186 00 Praha 8
+                      addressOfficial:
+                        data:
+                          administrativeArea:
+                            country: null
+                          street: Thámova
+                          number:
+                            part1: null
+                            part1Number: null
+                            part1Letter: null
+                            part2: null
+                            part2Number: null
+                            part2Letter: null
+                            full: 137/16
+                          streetWithNumber: Thámova 137/16
+                          city: Praha
+                          zip: "18600"
+                          full: null
+                    errors: []
+                    resultCorrected: null
+                  suggestions: []
+                errors: []
+            invalid:
+              value:
+                status: 200
+                request:
+                  endpoint: company/validate
+                  code: 1W2oAfGQGFhyQCtpTMLvc0ghZUefO2
+                  customId: null
+                  query:
+                    name: AVANTRO
+                    registrationNumber: "25547"
+                  options:
+                    dataScope: basic
+                    includeTerminatedSubjects: false
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 10
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalid
+                    data:
+                      administrativeArea:
+                        country: null
+                      name: AVANTRO
+                      registrationNumber: "25547"
+                      taxNumber: null
+                      vatNumber: null
+                      vatNumberSpecial: null
+                      address: null
+                      addressofficial: null
+                    errors:
+                      - group: VALUE
+                        type: INVALID
+                        subtype: null
+                        severity: critical
+                        relatedTo:
+                          - name
+                          - registrationNumber
+                        description: Value is not valid.
+                  resultCorreted: null
+                  suggestions: []
+                errors: []
+            invalidWithSuggestion:
+              value:
+                status: 200
+                request:
+                  endpoint: company/validate
+                  code: B5TgQ5Wtc8mvJ9tVgZhueux9U6tvEP
+                  customId: null
+                  query:
+                    registrationNumber: "0499747"
+                  options:
+                    dataScope: basic
+                    includeTerminatedSubjects: false
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 10
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalidWithSuggestion
+                    data:
+                      administrativeArea:
+                        country: null
+                      name: null
+                      registrationNumber: "0499747"
+                      taxNumber: null
+                      vatNumber: null
+                      vatNumberSpecial: null
+                      address: null
+                    errors:
+                      - group: VALUE
+                        type: INVALID
+                        subtype: null
+                        severity: critical
+                        relatedTo:
+                          - registrationNumber
+                        description: Value is not valid.
+                  suggestions:
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                        name: Martina Brázdilová
+                        registrationNumber: "04909747"
+                        taxNumber: null
+                        vatNumber: null
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Olomoucký kraj
+                              district: Olomouc
+                              cityDistrictSpecial: null
+                              cityDistrict: null
+                              cityPart: Šternberk
+                              cityAdministrative: null
+                              cadastralArea: Šternberk
+                            ids:
+                              internal: "1530660"
+                              external: "16349491"
+                            street: Strmá
+                            number:
+                              part1: "1129"
+                              part1Number: "1129"
+                              part1Letter: null
+                              part2: "6"
+                              part2Number: "6"
+                              part2Letter: null
+                              full: 1129/6
+                            streetWithNumber: Strmá 1129/6
+                            city: Šternberk
+                            zip: 785 01
+                            geometry:
+                              gps:
+                                lat: 49.732371122523
+                                lon: 17.304868529081
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1106519.41
+                                    "y": 541769.82
+                            postOffice:
+                              name: Šternberk 1
+                            full: Strmá 1129/6, 785 01 Šternberk
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Strmá
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 1129/6
+                            streetWithNumber: Strmá 1129/6
+                            city: Šternberk
+                            zip: "78501"
+                            full: null
+                      errors: []
+                      fixes:
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: registrationNumber
+                            type: registrationNumber
+                            valueFrom: "0499747"
+                            value: "04909747"
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                        name: Quang Anh Kieu
+                        registrationNumber: "04997417"
+                        taxNumber: null
+                        vatNumber: null
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Plzeňský kraj
+                              district: Plzeň-město
+                              cityDistrictSpecial: null
+                              cityDistrict: Plzeň 3
+                              cityPart: Jižní Předměstí
+                              cityAdministrative: null
+                              cadastralArea: Plzeň
+                            ids:
+                              internal: "2270634"
+                              external: "24537110"
+                            street: Husova
+                            number:
+                              part1: "786"
+                              part1Number: "786"
+                              part1Letter: null
+                              part2: "19"
+                              part2Number: "19"
+                              part2Letter: null
+                              full: 786/19
+                            streetWithNumber: Husova 786/19
+                            city: Plzeň
+                            zip: 301 00
+                            geometry:
+                              gps:
+                                lat: 49.745409585062
+                                lon: 13.368733054567
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1069831.13
+                                    "y": 823065.17
+                            postOffice:
+                              name: Plzeň 1
+                            full: Husova 786/19, 301 00 Plzeň 3
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Husova
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 786/19
+                            streetWithNumber: Husova 786/19
+                            city: Plzeň
+                            zip: "30100"
+                            full: null
+                      errors: []
+                      fixes:
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: registrationNumber
+                            type: registrationNumber
+                            valueFrom: "0499747"
+                            value: "04997417"
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                        name: Tomáš Minarovič
+                        registrationNumber: "04997247"
+                        taxNumber: null
+                        vatNumber: null
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Středočeský kraj
+                              district: Praha-východ
+                              cityDistrictSpecial: null
+                              cityDistrict: null
+                              cityPart: Zápy
+                              cityAdministrative: null
+                              cadastralArea: Zápy
+                            ids:
+                              internal: "2359109"
+                              external: "25528807"
+                            street: null
+                            number:
+                              part1: "253"
+                              part1Number: "253"
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "253"
+                            streetWithNumber: Zápy 253
+                            city: Zápy
+                            zip: 250 61
+                            geometry:
+                              gps:
+                                lat: 50.167993372288
+                                lon: 14.677618837605
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1036606.1
+                                    "y": 723441.42
+                            postOffice:
+                              name: Zápy
+                            full: Zápy 253, 250 61 Zápy
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: null
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: "253"
+                            streetWithNumber: " 253"
+                            city: Zápy
+                            zip: "25001"
+                            full: null
+                      errors: []
+                      fixes:
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: registrationNumber
+                            type: registrationNumber
+                            valueFrom: "0499747"
+                            value: "04997247"
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                        name: BE SOCKS s.r.o.
+                        registrationNumber: "05499747"
+                        taxNumber: null
+                        vatNumber: null
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 10
+                              cityDistrict: Praha 10
+                              cityPart: Vršovice
+                              cityAdministrative: null
+                              cadastralArea: Vršovice
+                            ids:
+                              internal: "2098912"
+                              external: "22659251"
+                            street: Krymská
+                            number:
+                              part1: "439"
+                              part1Number: "439"
+                              part1Letter: null
+                              part2: "24"
+                              part2Number: "24"
+                              part2Letter: null
+                              full: 439/24
+                            streetWithNumber: Krymská 439/24
+                            city: Praha
+                            zip: 101 00
+                            geometry:
+                              gps:
+                                lat: 50.071299849145
+                                lon: 14.449967012072
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1045073.92
+                                    "y": 741018.8
+                            postOffice:
+                              name: Praha 101
+                            full: Krymská 439/24, 101 00 Praha 10
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Krymská
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 439/24
+                            streetWithNumber: Krymská 439/24
+                            city: Praha
+                            zip: "10100"
+                            full: null
+                      errors: []
+                      fixes:
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: registrationNumber
+                            type: registrationNumber
+                            valueFrom: "0499747"
+                            value: "05499747"
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                        name: Jaroslav Ondrúšek
+                        registrationNumber: "04799747"
+                        taxNumber: null
+                        vatNumber: null
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Moravskoslezský kraj
+                              district: Bruntál
+                              cityDistrictSpecial: null
+                              cityDistrict: null
+                              cityPart: Bruntál
+                              cityAdministrative: null
+                              cadastralArea: Bruntál-město
+                            ids:
+                              internal: "268366"
+                              external: "2833816"
+                            street: Rýmařovská
+                            number:
+                              part1: "1491"
+                              part1Number: "1491"
+                              part1Letter: null
+                              part2: "31"
+                              part2Number: "31"
+                              part2Letter: null
+                              full: 1491/31
+                            streetWithNumber: Rýmařovská 1491/31
+                            city: Bruntál
+                            zip: 792 01
+                            geometry:
+                              gps:
+                                lat: 49.990004283578
+                                lon: 17.447118893932
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1078996.2
+                                    "y": 528800.27
+                            postOffice:
+                              name: Bruntál 1
+                            full: Rýmařovská 1491/31, 792 01 Bruntál
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Rýmařovská
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 1491/31
+                            streetWithNumber: Rýmařovská 1491/31
+                            city: Bruntál
+                            zip: "79201"
+                            full: null
+                      errors: []
+                      fixes:
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: registrationNumber
+                            type: registrationNumber
+                            valueFrom: "0499747"
+                            value: "04799747"
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                        name: AVANTRO s.r.o.
+                        registrationNumber: "04997476"
+                        taxNumber: null
+                        vatNumber: CZ04997476
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 8
+                              cityDistrict: Praha 8
+                              cityPart: Karlín
+                              cityAdministrative: null
+                              cadastralArea: Karlín
+                            ids:
+                              internal: "2070391"
+                              external: "22349995"
+                            street: Thámova
+                            number:
+                              part1: "137"
+                              part1Number: "137"
+                              part1Letter: null
+                              part2: "16"
+                              part2Number: "16"
+                              part2Letter: null
+                              full: 137/16
+                            streetWithNumber: Thámova 137/16
+                            city: Praha
+                            zip: 186 00
+                            geometry:
+                              gps:
+                                lat: 50.092000490337
+                                lon: 14.452736264264
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1042819.66
+                                    "y": 740509.43
+                            postOffice:
+                              name: Praha 86
+                            full: Thámova 137/16, 186 00 Praha 8
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Thámova
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 137/16
+                            streetWithNumber: Thámova 137/16
+                            city: Praha
+                            zip: "18600"
+                            full: null
+                      errors: []
+                      fixes:
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: registrationNumber
+                            type: registrationNumber
+                            valueFrom: "0499747"
+                            value: "04997476"
+                    - isValid: true
+                      data:
+                        administrativeArea:
+                          country: CZ
+                        name: Media 8 s.r.o.
+                        registrationNumber: "04996747"
+                        taxNumber: null
+                        vatNumber: CZ04996747
+                        vatNumberSpecial: null
+                        address:
+                          data:
+                            administrativeArea:
+                              country: CZ
+                              region: Hlavní město Praha
+                              district: území Hlavního města Prahy
+                              cityDistrictSpecial: Praha 10
+                              cityDistrict: Praha 10
+                              cityPart: Strašnice
+                              cityAdministrative: null
+                              cadastralArea: Strašnice
+                            ids:
+                              internal: "2095647"
+                              external: "22623400"
+                            street: Michelangelova
+                            number:
+                              part1: "1995"
+                              part1Number: "1995"
+                              part1Letter: null
+                              part2: "16"
+                              part2Number: "16"
+                              part2Letter: null
+                              full: 1995/16
+                            streetWithNumber: Michelangelova 1995/16
+                            city: Praha
+                            zip: 100 00
+                            geometry:
+                              gps:
+                                lat: 50.07233130565
+                                lon: 14.510346674114
+                              custom:
+                                - type: JTSK
+                                  coordinates:
+                                    x: 1045545.57
+                                    "y": 736720.46
+                            postOffice:
+                              name: Praha 10
+                            full: Michelangelova 1995/16, 100 00 Praha 10
+                        addressOfficial:
+                          data:
+                            administrativeArea:
+                              country: null
+                            street: Michelangelova
+                            number:
+                              part1: null
+                              part1Number: null
+                              part1Letter: null
+                              part2: null
+                              part2Number: null
+                              part2Letter: null
+                              full: 1995/16
+                            streetWithNumber: Michelangelova 1995/16
+                            city: Praha
+                            zip: "10000"
+                            full: null
+                      errors: []
+                      fixes:
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: registrationNumber
+                            type: registrationNumber
+                            valueFrom: "0499747"
+                            value: "04996747"
+                errors: []
+            invalidWithCorrection:
+              value:
+                status: 200
+                request:
+                  endpoint: company/validate
+                  code: mAbJzYrPF46yj4Y3uXGpmrM6nSxefe
+                  customId: null
+                  query:
+                    name: AVANTRO
+                    registrationNumber: "04997476"
+                  options:
+                    dataScope: basic
+                    includeTerminatedSubjects: false
+                    addressType: official
+                    countryMode: limit
+                    filterMode: limit
+                    resultsLimit: 10
+                    cityFormat: basic
+                    zipFormat: standard
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalidWithCorrection
+                    data:
+                      administrativeArea:
+                        country: null
+                      name: AVANTRO
+                      registrationNumber: "04997476"
+                      taxNumber: null
+                      vatNumber: null
+                      vatNumberSpecial: null
+                      address: null
+                    errors:
+                      - group: SYNTAX
+                        type: VALUE_PART_MISSING
+                        subtype: LEGAL_FORM
+                        severity: critical
+                        relatedTo:
+                          - name
+                        description: Company name is missing the legal form.
+                  resultCorrected:
+                    isValid: true
+                    data:
+                      administrativeArea:
+                        country: CZ
+                      name: AVANTRO s.r.o.
+                      registrationNumber: "04997476"
+                      taxNumber: null
+                      vatNumber: CZ04997476
+                      vatNumberSpecial: null
+                      address:
+                        data:
+                          administrativeArea:
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 8
+                            cityDistrict: Praha 8
+                            cityPart: Karlín
+                            cityAdministrative: null
+                            cadastralArea: Karlín
+                          ids:
+                            internal: "2070391"
+                            external: "22349995"
+                          street: Thámova
+                          number:
+                            part1: "137"
+                            part1Number: "137"
+                            part1Letter: null
+                            part2: "16"
+                            part2Number: "16"
+                            part2Letter: null
+                            full: 137/16
+                          streetWithNumber: Thámova 137/16
+                          city: Praha
+                          zip: 186 00
+                          geometry:
+                            gps:
+                              lat: 50.092000490337
+                              lon: 14.452736264264
+                            custom:
+                              - type: JTSK
+                                coordinates:
+                                  x: 1042819.66
+                                  "y": 740509.43
+                          postOffice:
+                            name: Praha 86
+                          full: Thámova 137/16, 186 00 Praha 8
+                      addressOfficial:
+                        data:
+                          administrativeArea:
+                            country: null
+                          street: Thámova
+                          number:
+                            part1: null
+                            part1Number: null
+                            part1Letter: null
+                            part2: null
+                            part2Number: null
+                            part2Letter: null
+                            full: 137/16
+                          streetWithNumber: Thámova 137/16
+                          city: Praha
+                          zip: "18600"
+                          full: null
+                    errors: []
+                    fixes:
+                      - group: SYNTAX
+                        type: VALUE_PART_ADDED
+                        subtype: LEGAL_FORM
+                        data:
+                          typeFrom: name
+                          type: name
+                          valueFrom: AVANTRO
+                          value: AVANTRO s.r.o.
+                  suggestions: []
+                errors: []
+
           schema:
             type: object
             properties:
@@ -3774,7 +5861,7 @@ components:
                       isDisposableEmailAddress: false
                       isFreemail: false
                     errors: []
-                  resultCorrected:
+                  resultCorrected: null
                   suggestions: []
                 errors: []
             invalidWithSuggestion:
@@ -3815,7 +5902,7 @@ components:
                         relatedTo:
                           - email
                         description: Domain does not have DNS records set properly for receiving emails.
-                  resultCorrected:
+                  resultCorrected: null
                   suggestions:
                     - isValid: false
                       data:
@@ -3883,7 +5970,7 @@ components:
                         relatedTo:
                           - email
                         description: Value is not valid.
-                  resultCorrected:
+                  resultCorrected: null
                   suggestions: []
                 errors: []
             invalidWithCorrection:
@@ -4038,7 +6125,7 @@ components:
                         relatedTo:
                           - email
                         description: Disposable emails are not allowed.
-                  resultCorrected:
+                  resultCorrected: null
                   suggestions: []
                 errors: []
             disallowedFreemails:
@@ -4079,7 +6166,7 @@ components:
                         relatedTo:
                           - email
                         description: Freemails are not allowed.
-                  resultCorrected:
+                  resultCorrected: null
                   suggestions: []
                 errors: []
           schema:
@@ -5039,10 +7126,12 @@ components:
               properties:
                 country:
                   type: string
+                  nullable: true
                   description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                   example: CZ
             name:
               type: string
+              nullable: true
               description: Name of company.
               example: Avantro s.r.o.
             registrationNumber:
@@ -5056,6 +7145,7 @@ components:
               example: CZ04997476
             vatNumber:
               type: string
+              nullable: true
               description: Company vat number.
               example: CZ04997476
             vatNumberSpecial:
@@ -5065,12 +7155,14 @@ components:
               example: CZ0581019
             address:
               type: object
+              nullable: true
               description: TODO
               properties:
                 data:
                   $ref: "#/components/schemas/LocationData"
             addressOfficial:
               $ref: "#/components/schemas/LocationOficial"
+              nullable: true
               description: TODO
             nace:
               type: array
@@ -5695,7 +7787,6 @@ components:
       required:
         - part1
         - part2
-        - full
     DataGeometry:
       type: object
       properties:
@@ -5745,6 +7836,7 @@ components:
         data:
           type: object
           description: TODO
+          nullable: true
           properties:
             administrativeArea:
               type: object
@@ -5752,11 +7844,13 @@ components:
               properties:
                 country:
                   type: string
+                  nullable: true
                   description: "Country of administrative area in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                   example: CZ
             street:
               type: string
               description: Street.
+              nullable: true
               example: Jeseniova
             number:
               $ref: "#/components/schemas/LocationNumber"
@@ -6032,6 +8126,7 @@ components:
             - proposal
             - data
         resultCorrected:
+          nullable: true
           type: object
           description: TODO
           properties:
@@ -6082,7 +8177,6 @@ components:
             - fixes
       required:
         - result
-        - resultCorrected
         - suggestions
     NameValidationResultsData:
       type: object
@@ -6583,7 +8677,7 @@ components:
             - proposal
             - data
             - errors
-        resultsCorrected:
+        resultCorrected:
           type: object
           nullable: true
           description: TODO
@@ -7182,6 +9276,7 @@ components:
             - $ref: "#/components/schemas/CompanyResultsResponseResults"
         resultCorrected:
           type: object
+          nullable: true
           properties:
             isValid:
               type: boolean
@@ -7212,7 +9307,6 @@ components:
             $ref: "#/components/schemas/ValidateCompanyDataResultCorrected"
       required:
         - result
-        - resultCorrected
         - suggestions
     ErrorSyntaxCompany:
       type: object

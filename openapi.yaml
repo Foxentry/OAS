@@ -741,354 +741,16 @@ components:
     ValidateEmail:
       content:
         application/json:
-          examples:
-            valid:
-              value:
-                status: 200
-                request:
-                  endpoint: email/validate
-                  code: 4hUFvuub644fkbKe23bkLoKESxVVhp
-                  customId:
-                  query:
-                    email: info@foxentry.com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: true
-                    acceptFreemails: true
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: true
-                    proposal: valid
-                    data:
-                      user: info
-                      domain: foxentry.com
-                      email: info@foxentry.com
-                    flags:
-                      isCatchAllServer: false
-                      isDisposableEmailAddress: false
-                      isFreemail: false
-                    errors: []
-                  resultCorrected:
-                  suggestions: []
-                errors: []
-            invalidWithSuggestion:
-              value:
-                status: 200
-                request:
-                  endpoint: email/validate
-                  code: RXGgaRcYqUzFIjbu2vUXhxTZpeklQt
-                  customId:
-                  query:
-                    email: info@gmali.com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: true
-                    acceptFreemails: true
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: false
-                    proposal: invalidWithSuggestion
-                    data:
-                      user: info
-                      domain: gmali.com
-                      email: info@gmali.com
-                    flags:
-                      isCatchAllServer: false
-                      isDisposableEmailAddress: true
-                      isFreemail: false
-                    errors:
-                      - group: VALUE
-                        type: INVALID
-                        subtype: DOMAIN_DNS
-                        severity: critical
-                        relatedTo:
-                          - email
-                        description: Domain does not have DNS records set properly for receiving emails.
-                  resultCorrected:
-                  suggestions:
-                    - isValid: false
-                      data:
-                        user: info
-                        domain: gmail.com
-                        email: info@gmail.com
-                      flags:
-                        isCatchAllServer: false
-                        isDisposableEmailAddress: false
-                        isFreemail: true
-                      fixes:
-                        - group: VALUE
-                          type: CHANGED
-                          subtype: TYPO
-                          data:
-                            typeFrom: email
-                            type: email
-                            valueFrom: info@gmali.com
-                            value: info@gmail.com
-                        - group: VALUE
-                          type: CHANGED
-                          subtype: TYPO
-                          data:
-                            typeFrom: email
-                            type: email
-                            valueFrom: info@gmali.com
-                            value: info@gmail.com
-                      errors: []
-                errors: []
-            invalid:
-              value:
-                status: 200
-                request:
-                  endpoint: email/validate
-                  code: 22bXbUaod5vmpmWGFhkY0vIChHcmHA
-                  customId:
-                  query:
-                    email: invalidUser@foxentry.com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: true
-                    acceptFreemails: true
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: false
-                    proposal: invalid
-                    data:
-                      user: invalidUser
-                      domain: foxentry.com
-                      email: invalidUser@foxentry.com
-                    flags:
-                      isCatchAllServer: false
-                      isDisposableEmailAddress: false
-                      isFreemail: false
-                    errors:
-                      - group: VALUE
-                        type: INVALID
-                        subtype:
-                        severity: critical
-                        relatedTo:
-                          - email
-                        description: Value is not valid.
-                  resultCorrected:
-                  suggestions: []
-                errors: []
-            invalidWithCorrection:
-              value:
-                status: 200
-                request:
-                  endpoint: email/validate
-                  code: cL2rb2TBMSGnEjew9s88bZkHSBdrXF
-                  customId:
-                  query:
-                    email: info@foxentry,com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: true
-                    acceptFreemails: true
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: false
-                    proposal: invalidWithCorrection
-                    data:
-                      user: info
-                      domain: foxentry,com
-                      email: info@foxentry,com
-                    flags: {}
-                    errors:
-                      - group: SYNTAX
-                        type: VALUE_PART
-                        subtype: DOMAIN
-                        severity: critical
-                        relatedTo:
-                          - email
-                        description: The domain contains invalid syntax.
-                  resultCorrected:
-                    isValid: true
-                    data:
-                      user: info
-                      domain: foxentry.com
-                      email: info@foxentry.com
-                    flags:
-                      isCatchAllServer: false
-                      isDisposableEmailAddress: false
-                      isFreemail: false
-                    errors: []
-                    fixes:
-                      - group: SYNTAX
-                        type: VALUE_PART_CHANGED
-                        subtype: CHARACTERS
-                        data:
-                          typeFrom: email
-                          type: email
-                          valueFrom: info@foxentry,com
-                          value: info@foxentry.com
-                  suggestions: []
-                errors: []
-            invalidWithPartialCorrection:
-              value:
-                status: 200
-                request:
-                  endpoint: email/validate
-                  code: uhnFcafZsyYMSLeaSVJQfEOPyErNtM
-                  customId:
-                  query:
-                    email: infogmail.com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: true
-                    acceptFreemails: true
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: false
-                    proposal: invalidWithPartialCorrection
-                    data:
-                      user: infogmail.com
-                      domain:
-                      email: infogmail.com
-                    flags: {}
-                    errors:
-                      - group: SYNTAX
-                        type: VALUE_PART_MISSING
-                        subtype: AT_SIGN
-                        severity: critical
-                        relatedTo:
-                          - email
-                        description: Value does not contain '@' sign.
-                  resultCorrected:
-                    isValid: false
-                    data:
-                      user: info
-                      domain: gmail.com
-                      email: info@gmail.com
-                    flags:
-                      isCatchAllServer: false
-                      isDisposableEmailAddress: false
-                      isFreemail: true
-                    errors: []
-                    fixes:
-                      - group: SYNTAX
-                        type: VALUE_PART_ADDED
-                        subtype: AT_SIGN
-                        data:
-                          typeFrom: email
-                          type: email
-                          valueFrom: infogmail.com
-                          value: info@gmail.com
-                  suggestions: []
-                errors: []
-            disallowedDisposable:
-              value:
-                status: 200
-                request:
-                  endpoint: email/validate
-                  code: GSPCuSwmAO2kduAxr5Qcd2Na3mIOOl
-                  customId:
-                  query:
-                    email: rasini3451@naymedia.com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: false
-                    acceptFreemails: true
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: false
-                    proposal: invalid
-                    data:
-                      user: rasini3451
-                      domain: naymedia.com
-                      email: rasini3451@naymedia.com
-                    flags:
-                      isCatchAllServer: false
-                      isDisposableEmailAddress: true
-                      isFreemail: false
-                    errors:
-                      - group: VALUE
-                        type: NOT_ALLOWED
-                        subtype: DISPOSABLE
-                        severity: critical
-                        relatedTo:
-                          - email
-                        description: Disposable emails are not allowed.
-                  resultCorrected:
-                  suggestions: []
-                errors: []
-            disallowedFreemails:
-              value:
-                status: 200
-                request:
-                  endpoint: email/validate
-                  code: lE7l2QQ2sQpgNk6Iu2CxWeIL1fCP8S
-                  customId:
-                  query:
-                    email: info@gmail.com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: true
-                    acceptFreemails: false
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: false
-                    proposal: invalid
-                    data:
-                      user: info
-                      domain: gmail.com
-                      email: info@gmail.com
-                    flags:
-                      isCatchAllServer: false
-                      isDisposableEmailAddress: false
-                      isFreemail: true
-                    errors:
-                      - group: VALUE
-                        type: NOT_ALLOWED
-                        subtype: FREEMAIL
-                        severity: critical
-                        relatedTo:
-                          - email
-                        description: Freemails are not allowed.
-                  resultCorrected:
-                  suggestions: []
-                errors: []
           schema:
             type: object
             properties:
-              request:
-                $ref: "#/components/schemas/ValidateEmailRequests"
+              requests:
+                type: array
+                maxItems: 1
+                items:
+                  $ref: "#/components/schemas/ValidateEmailRequests"
             required:
-              - request
-
+              - requests
     ValidatePhoneNumber:
       content:
         application/json:
@@ -1239,34 +901,6 @@ components:
                 type: array
             required:
               - status
-          examples:
-            searchResults:
-              value:
-                status: 200
-                request:
-                  endpoint: email/search
-                  code: BbX8JtZxKu2gVpMKtjcUhX7UqEFQt4
-                  customId:
-                response:
-                  resultsCount: 5
-                  results:
-                    - data:
-                        email: info@seznam.cz
-                        domain: seznam.cz
-                    - data:
-                        email: info@gmail.com
-                        domain: gmail.com
-                    - data:
-                        email: info@email.cz
-                        domain: email.cz
-                    - data:
-                        email: info@centrum.cz
-                        domain: centrum.cz
-                    - data:
-                        email: info@post.cz
-                        domain: post.cz
-                errors: []
-
     CompanySearch:
       description: Successfull response
       content:
@@ -1314,229 +948,6 @@ components:
       description: Successfull response
       content:
         application/json:
-          examples:
-            valid:
-              value:
-                status: 200
-                request:
-                  endpoint: phone/validate
-                  code: yUpjcMnDzLqdKAQbUX09oE4ADHnKhv
-                  customId:
-                  query:
-                    numberWithPrefix: "+420607123456"
-                  options:
-                    validationType: extended
-                    allowedPrefixes: []
-                    defaultPrefix: null
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: true
-                    proposal: valid
-                    data:
-                      country:
-                        code: CZ
-                        prefix: "+420"
-                      number: "607123456"
-                      numberWithPrefix: "+420607123456"
-                      carrier:
-                        name: T-Mobile Czech Republic a.s.
-                        type: mobile
-                      format:
-                        national: "607123456"
-                        nationalFormatted: 607 123 456
-                        international: "+420607123456"
-                        internationalFormatted: "+420 607 123 456"
-                    errors: []
-                  resultCorrected:
-                  suggestions: []
-                errors: []
-            invalid:
-              value:
-                status: 200
-                request:
-                  endpoint: phone/validate
-                  code: NcwvAHGF34djYlL9F1j7DIoCO5io16
-                  customId:
-                  query:
-                    numberWithPrefix: "+42060712345"
-                  options:
-                    validationType: extended
-                    allowedPrefixes: []
-                    defaultPrefix:
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: false
-                    proposal: invalid
-                    data:
-                      country:
-                        code: CZ
-                        prefix: "+420"
-                      number: null
-                      numberWithPrefix: "+42060712345"
-                      carrier:
-                        name: null
-                        type: null
-                      format:
-                        national: null
-                        nationalFormatted: null
-                        international: null
-                        internationalFormatted: null
-                    errors:
-                      - group: VALUE
-                        type: INVALID
-                        subtype:
-                        severity: critical
-                        relatedTo:
-                          - numberWithPrefix
-                        description: Value is not valid.
-                  resultCorrected:
-                  suggestions: []
-                errors: []
-            invalidWithCorrection:
-              value:
-                status: 200
-                request:
-                  endpoint: phone/validate
-                  code: O3L1bSU0PAggv9d0i5ogtpspSxUoqt
-                  customId:
-                  query:
-                    prefix: "+421"
-                    number: "607123456"
-                  options:
-                    validationType: extended
-                    allowedPrefixes: []
-                    defaultPrefix:
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: false
-                    proposal: invalidWithCorrection
-                    data:
-                      country:
-                        code: SK
-                        prefix: "+421"
-                      number: "607123456"
-                      numberWithPrefix: null
-                      carrier:
-                        name: null
-                        type: null
-                      format:
-                        national: null
-                        nationalFormatted: null
-                        international: null
-                        internationalFormatted: null
-                    errors:
-                      - group: VALUE
-                        type: INVALID
-                        subtype:
-                        severity: critical
-                        relatedTo:
-                          - number
-                        description: Value is not valid.
-                  resultCorrected:
-                    isValid: true
-                    data:
-                      country:
-                        code: CZ
-                        prefix: "+420"
-                      number: "607123456"
-                      numberWithPrefix: "+420607123456"
-                      carrier:
-                        name: T-Mobile Czech Republic a.s.
-                        type: mobile
-                      format:
-                        national: "607123456"
-                        nationalFormatted: 607 123 456
-                        international: "+420607123456"
-                        internationalFormatted: "+420 607 123 456"
-                    errors: []
-                    fixes:
-                      - group: VALUE
-                        type: CHANGED
-                        subtype:
-                        data:
-                          typeFrom: prefix
-                          type: prefix
-                          valueFrom: "+421"
-                          value: "+420"
-                  suggestions: []
-                errors: []
-            validWithSuggestion:
-              value:
-                status: 200
-                request:
-                  endpoint: phone/validate
-                  code: 0sOViYZJX7lN1z7brRuqMyzxbj3y9L
-                  customId:
-                  query:
-                    prefix: "+48"
-                    number: "728984101"
-                  options:
-                    validationType: basic
-                    allowedPrefixes: []
-                    defaultPrefix: null
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
-                response:
-                  result:
-                    isValid: true
-                    proposal: validWithSuggestion
-                    data:
-                      country:
-                        code: PL
-                        prefix: "+48"
-                      number: "728984101"
-                      numberWithPrefix: "+48728984101"
-                      carrier: {}
-                      format:
-                        national: "728984101"
-                        nationalFormatted: 728 984 101
-                        international: "+48728984101"
-                        internationalFormatted: "+48 728 984 101"
-                    errors: []
-                  resultCorrected: null
-                  suggestions:
-                    - isValid: true
-                      data:
-                        country:
-                          code: CZ
-                          prefix: "+420"
-                        number: "728984101"
-                        numberWithPrefix: "+420728984101"
-                        carrier: {}
-                        format:
-                          national: "728984101"
-                          nationalFormatted: 728 984 101
-                          international: "+420728984101"
-                          internationalFormatted: "+420 728 984 101"
-                      errors: []
-                      fixes:
-                        - group: VALUE
-                          type: CHANGED
-                          subtype:
-                          data:
-                            typeFrom: prefix
-                            type: prefix
-                            valueFrom: "+48"
-                            value: "+420"
-                errors: []
           schema:
             type: object
             properties:
@@ -1693,7 +1104,7 @@ components:
                       query:
                         type: object
                         properties:
-                          administrativeArea.country:
+                          country:
                             type: string
                             description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                             example: CZ
@@ -1702,7 +1113,7 @@ components:
                             description: Location ID
                             example: "2070391"
                         required:
-                          - administrativeArea.country
+                          - country
                           - id
                       options:
                         type: object
@@ -1802,7 +1213,7 @@ components:
                             type: string
                             nullable: true
                             example: "Jeseniova 2770/56d, 130 00 Praha"
-                          administrativeArea.country:
+                          country:
                             type: string
                             nullable: true
                             description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
@@ -2089,7 +1500,7 @@ components:
                 - number.part2
                 - city
                 - zip
-                - administrativeArea.country
+                - country
             value:
               oneOf:
                 - type: string
@@ -2133,7 +1544,7 @@ components:
                   nullable: true
                   description: TODO
                   example: 130 00
-                administrativeArea.country:
+                country:
                   type: string
                   nullable: true
                   description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
@@ -2286,7 +1697,7 @@ components:
         query:
           type: object
           properties:
-            administrativeArea.country:
+            country:
               type: string
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
@@ -2295,7 +1706,7 @@ components:
               description: Location ID
               example: "2070391"
           required:
-            - administrativeArea.country
+            - country
             - id
         options:
           type: object
@@ -2386,7 +1797,7 @@ components:
               nullable: true
               description: TODO
               example: "Jeseniova 2770/56d, 130 00 Praha"
-            administrativeArea.country:
+            country:
               type: string
               nullable: true
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
@@ -2544,7 +1955,7 @@ components:
               type: string
               description: Company name
               example: Avantro s.r.o.
-            administrativeArea.country:
+            country:
               type: string
               description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
               example: CZ
@@ -2618,7 +2029,7 @@ components:
                   type: string
                   description: Company name.
                   example: Avantro s.r.o.
-                administrativeArea.country:
+                country:
                   type: string
                   description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                   example: CZ
@@ -2700,7 +2111,7 @@ components:
         query:
           type: object
           properties:
-            administrativeArea.country:
+            country:
               type: string
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
@@ -2709,7 +2120,7 @@ components:
               description: Company registration number.
               example: "04997476"
           required:
-            - administrativeArea.country
+            - country
             - registrationNumber
         options:
           $ref: "#/components/schemas/CompanyDataRequestOption"
@@ -2750,7 +2161,7 @@ components:
         query:
           type: object
           properties:
-            administrativeArea.country:
+            country:
               type: string
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
@@ -2794,14 +2205,10 @@ components:
           type: object
           description: TODO
           properties:
-            administrativeArea:
-              type: object
-              description: TODO
-              properties:
-                country:
-                  type: string
-                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
-                  example: CZ
+            country:
+              type: string
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              example: CZ
             name:
               type: string
               description: Name of company.
@@ -2955,7 +2362,7 @@ components:
                   type: boolean
                   nullable: true
                   description: TODO
-                  example: true
+                  example: null
             employees:
               type: object
               description: TODO
@@ -3270,8 +2677,46 @@ components:
     LocationData:
       type: object
       properties:
-        administrativeArea:
-          $ref: "#/components/schemas/DataAdministrativeArea"
+        country:
+          type: string
+          nullable: true
+          description: "Company registration country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+          example: CZ
+        region:
+          type: string
+          nullable: true
+          description: Company registration region.
+          example: Hlavní město Praha
+        district:
+          type: string
+          nullable: true
+          description: Company registration discrict.
+          example: Hlavní město Praha
+        cityDistrict:
+          type: string
+          nullable: true
+          description: City Disctrict.
+          example: Praha 6
+        cityDistrictSpecial:
+          type: string
+          nullable: true
+          description: Company registration discrict special.
+          example: Praha 6
+        cityPart:
+          type: string
+          nullable: true
+          description: Part of the City.
+          example: Dejvice
+        cityAdministrative:
+          type: string
+          nullable: true
+          description: City Administrative area.
+          example: Dejvice
+        cadastralArea:
+          type: string
+          nullable: true
+          description: City cadastral area.
+          example: Dejvice
         ids:
           type: object
           description: TODO
@@ -3359,7 +2804,6 @@ components:
           type: string
           example: "Jeseniova 1151/55, 130 00 Praha 3"
       required:
-        - administrativeArea
         - ids
         - street
         - number
@@ -3368,49 +2812,6 @@ components:
         - zip
         - geometry
         - full
-    DataAdministrativeArea:
-      type: object
-      properties:
-        country:
-          type: string
-          nullable: true
-          description: "Company registration country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
-          example: CZ
-        region:
-          type: string
-          nullable: true
-          description: Company registration region.
-          example: Hlavní město Praha
-        district:
-          type: string
-          nullable: true
-          description: Company registration discrict.
-          example: Hlavní město Praha
-        cityDistrict:
-          type: string
-          nullable: true
-          description: City Disctrict.
-          example: Praha 6
-        cityDistrictSpecial:
-          type: string
-          nullable: true
-          description: Company registration discrict special.
-          example: Praha 6
-        cityPart:
-          type: string
-          nullable: true
-          description: Part of the City.
-          example: Dejvice
-        cityAdministrative:
-          type: string
-          nullable: true
-          description: City Administrative area.
-          example: Dejvice
-        cadastralArea:
-          type: string
-          nullable: true
-          description: City cadastral area.
-          example: Dejvice
     LocationNumber:
       type: object
       properties:
@@ -3499,14 +2900,10 @@ components:
           type: object
           description: TODO
           properties:
-            administrativeArea:
-              type: object
-              description: TODO
-              properties:
-                country:
-                  type: string
-                  description: "Country of administrative area in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
-                  example: CZ
+            country:
+              type: string
+              description: "Country of administrative area in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              example: CZ
             street:
               type: string
               description: Street.
@@ -3578,6 +2975,7 @@ components:
                     example: gmail.com
                 required:
                   - email
+                  - user
                   - domain
             required:
               - data
@@ -4410,14 +3808,12 @@ components:
               description: Country phone prefix.
               example: "+420"
         number:
-          type: string
-          nullable: true
+          type: integer
           description: Validated phone number.
-          example: "775111222"
+          example: 775111222
         numberWithPrefix:
           type: string
           description: Validated phone number with prefix.
-          nullable: true
           example: "+420775111222"
         carrier:
           type: object
@@ -4426,21 +3822,19 @@ components:
             name:
               type: string
               description: Name of carrier.
-              nullable: true
               example: Vodafone
             type:
               type: string
-              nullable: true
               description: Type of carrier.
         format:
           type: object
           description: TODO
           properties:
             national:
-              type: string
+              type: integer
               nullable: true
               description: National phone number format.
-              example: "775111222"
+              example: 775111222
             nationalFormatted:
               type: string
               nullable: true
@@ -4845,7 +4239,7 @@ components:
               type: string
               description: Company name
               example: Avantro s.r.o.
-            administrativeArea.country:
+            country:
               type: string
               description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
               example: CZ

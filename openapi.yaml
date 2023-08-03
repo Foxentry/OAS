@@ -741,16 +741,354 @@ components:
     ValidateEmail:
       content:
         application/json:
+          examples:
+            valid:
+              value:
+                status: 200
+                request:
+                  endpoint: email/validate
+                  code: 4hUFvuub644fkbKe23bkLoKESxVVhp
+                  customId:
+                  query:
+                    email: info@foxentry.com
+                  options:
+                    validationType: extended
+                    acceptDisposableEmails: true
+                    acceptFreemails: true
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: true
+                    proposal: valid
+                    data:
+                      user: info
+                      domain: foxentry.com
+                      email: info@foxentry.com
+                    flags:
+                      isCatchAllServer: false
+                      isDisposableEmailAddress: false
+                      isFreemail: false
+                    errors: []
+                  resultCorrected:
+                  suggestions: []
+                errors: []
+            invalidWithSuggestion:
+              value:
+                status: 200
+                request:
+                  endpoint: email/validate
+                  code: RXGgaRcYqUzFIjbu2vUXhxTZpeklQt
+                  customId:
+                  query:
+                    email: info@gmali.com
+                  options:
+                    validationType: extended
+                    acceptDisposableEmails: true
+                    acceptFreemails: true
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalidWithSuggestion
+                    data:
+                      user: info
+                      domain: gmali.com
+                      email: info@gmali.com
+                    flags:
+                      isCatchAllServer: false
+                      isDisposableEmailAddress: true
+                      isFreemail: false
+                    errors:
+                      - group: VALUE
+                        type: INVALID
+                        subtype: DOMAIN_DNS
+                        severity: critical
+                        relatedTo:
+                          - email
+                        description: Domain does not have DNS records set properly for receiving emails.
+                  resultCorrected:
+                  suggestions:
+                    - isValid: false
+                      data:
+                        user: info
+                        domain: gmail.com
+                        email: info@gmail.com
+                      flags:
+                        isCatchAllServer: false
+                        isDisposableEmailAddress: false
+                        isFreemail: true
+                      fixes:
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: email
+                            type: email
+                            valueFrom: info@gmali.com
+                            value: info@gmail.com
+                        - group: VALUE
+                          type: CHANGED
+                          subtype: TYPO
+                          data:
+                            typeFrom: email
+                            type: email
+                            valueFrom: info@gmali.com
+                            value: info@gmail.com
+                      errors: []
+                errors: []
+            invalid:
+              value:
+                status: 200
+                request:
+                  endpoint: email/validate
+                  code: 22bXbUaod5vmpmWGFhkY0vIChHcmHA
+                  customId:
+                  query:
+                    email: invalidUser@foxentry.com
+                  options:
+                    validationType: extended
+                    acceptDisposableEmails: true
+                    acceptFreemails: true
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalid
+                    data:
+                      user: invalidUser
+                      domain: foxentry.com
+                      email: invalidUser@foxentry.com
+                    flags:
+                      isCatchAllServer: false
+                      isDisposableEmailAddress: false
+                      isFreemail: false
+                    errors:
+                      - group: VALUE
+                        type: INVALID
+                        subtype:
+                        severity: critical
+                        relatedTo:
+                          - email
+                        description: Value is not valid.
+                  resultCorrected:
+                  suggestions: []
+                errors: []
+            invalidWithCorrection:
+              value:
+                status: 200
+                request:
+                  endpoint: email/validate
+                  code: cL2rb2TBMSGnEjew9s88bZkHSBdrXF
+                  customId:
+                  query:
+                    email: info@foxentry,com
+                  options:
+                    validationType: extended
+                    acceptDisposableEmails: true
+                    acceptFreemails: true
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalidWithCorrection
+                    data:
+                      user: info
+                      domain: foxentry,com
+                      email: info@foxentry,com
+                    flags: {}
+                    errors:
+                      - group: SYNTAX
+                        type: VALUE_PART
+                        subtype: DOMAIN
+                        severity: critical
+                        relatedTo:
+                          - email
+                        description: The domain contains invalid syntax.
+                  resultCorrected:
+                    isValid: true
+                    data:
+                      user: info
+                      domain: foxentry.com
+                      email: info@foxentry.com
+                    flags:
+                      isCatchAllServer: false
+                      isDisposableEmailAddress: false
+                      isFreemail: false
+                    errors: []
+                    fixes:
+                      - group: SYNTAX
+                        type: VALUE_PART_CHANGED
+                        subtype: CHARACTERS
+                        data:
+                          typeFrom: email
+                          type: email
+                          valueFrom: info@foxentry,com
+                          value: info@foxentry.com
+                  suggestions: []
+                errors: []
+            invalidWithPartialCorrection:
+              value:
+                status: 200
+                request:
+                  endpoint: email/validate
+                  code: uhnFcafZsyYMSLeaSVJQfEOPyErNtM
+                  customId:
+                  query:
+                    email: infogmail.com
+                  options:
+                    validationType: extended
+                    acceptDisposableEmails: true
+                    acceptFreemails: true
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalidWithPartialCorrection
+                    data:
+                      user: infogmail.com
+                      domain:
+                      email: infogmail.com
+                    flags: {}
+                    errors:
+                      - group: SYNTAX
+                        type: VALUE_PART_MISSING
+                        subtype: AT_SIGN
+                        severity: critical
+                        relatedTo:
+                          - email
+                        description: Value does not contain '@' sign.
+                  resultCorrected:
+                    isValid: false
+                    data:
+                      user: info
+                      domain: gmail.com
+                      email: info@gmail.com
+                    flags:
+                      isCatchAllServer: false
+                      isDisposableEmailAddress: false
+                      isFreemail: true
+                    errors: []
+                    fixes:
+                      - group: SYNTAX
+                        type: VALUE_PART_ADDED
+                        subtype: AT_SIGN
+                        data:
+                          typeFrom: email
+                          type: email
+                          valueFrom: infogmail.com
+                          value: info@gmail.com
+                  suggestions: []
+                errors: []
+            disallowedDisposable:
+              value:
+                status: 200
+                request:
+                  endpoint: email/validate
+                  code: GSPCuSwmAO2kduAxr5Qcd2Na3mIOOl
+                  customId:
+                  query:
+                    email: rasini3451@naymedia.com
+                  options:
+                    validationType: extended
+                    acceptDisposableEmails: false
+                    acceptFreemails: true
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalid
+                    data:
+                      user: rasini3451
+                      domain: naymedia.com
+                      email: rasini3451@naymedia.com
+                    flags:
+                      isCatchAllServer: false
+                      isDisposableEmailAddress: true
+                      isFreemail: false
+                    errors:
+                      - group: VALUE
+                        type: NOT_ALLOWED
+                        subtype: DISPOSABLE
+                        severity: critical
+                        relatedTo:
+                          - email
+                        description: Disposable emails are not allowed.
+                  resultCorrected:
+                  suggestions: []
+                errors: []
+            disallowedFreemails:
+              value:
+                status: 200
+                request:
+                  endpoint: email/validate
+                  code: lE7l2QQ2sQpgNk6Iu2CxWeIL1fCP8S
+                  customId:
+                  query:
+                    email: info@gmail.com
+                  options:
+                    validationType: extended
+                    acceptDisposableEmails: true
+                    acceptFreemails: false
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0643
+                      lon: 14.4684
+                response:
+                  result:
+                    isValid: false
+                    proposal: invalid
+                    data:
+                      user: info
+                      domain: gmail.com
+                      email: info@gmail.com
+                    flags:
+                      isCatchAllServer: false
+                      isDisposableEmailAddress: false
+                      isFreemail: true
+                    errors:
+                      - group: VALUE
+                        type: NOT_ALLOWED
+                        subtype: FREEMAIL
+                        severity: critical
+                        relatedTo:
+                          - email
+                        description: Freemails are not allowed.
+                  resultCorrected:
+                  suggestions: []
+                errors: []
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/ValidateEmailRequests"
+              request:
+                $ref: "#/components/schemas/ValidateEmailRequests"
             required:
-              - requests
+              - request
+
     ValidatePhoneNumber:
       content:
         application/json:
@@ -901,6 +1239,34 @@ components:
                 type: array
             required:
               - status
+          examples:
+            searchResults:
+              value:
+                status: 200
+                request:
+                  endpoint: email/search
+                  code: BbX8JtZxKu2gVpMKtjcUhX7UqEFQt4
+                  customId:
+                response:
+                  resultsCount: 5
+                  results:
+                    - data:
+                        email: info@seznam.cz
+                        domain: seznam.cz
+                    - data:
+                        email: info@gmail.com
+                        domain: gmail.com
+                    - data:
+                        email: info@email.cz
+                        domain: email.cz
+                    - data:
+                        email: info@centrum.cz
+                        domain: centrum.cz
+                    - data:
+                        email: info@post.cz
+                        domain: post.cz
+                errors: []
+
     CompanySearch:
       description: Successfull response
       content:
@@ -2366,7 +2732,7 @@ components:
                   type: boolean
                   nullable: true
                   description: TODO
-                  example: null
+                  example: true
             employees:
               type: object
               description: TODO
@@ -2989,7 +3355,6 @@ components:
                     example: gmail.com
                 required:
                   - email
-                  - user
                   - domain
             required:
               - data

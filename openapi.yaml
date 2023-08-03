@@ -692,52 +692,40 @@ components:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/LocationSearchRequests"
+              request:
+                $ref: "#/components/schemas/LocationSearchRequest"
             required:
-              - requests
+              - request
     LocationLocalization:
       content:
         application/json:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/LocationLocalizationRequests"
+              request:
+                $ref: "#/components/schemas/LocationLocalizationRequest"
             required:
-              - requests
+              - request
     LocationGet:
       content:
         application/json:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/LocationGetRequests"
+              request:
+                $ref: "#/components/schemas/LocationGetRequest"
             required:
-              - requests
+              - request
     LocationValidation:
       content:
         application/json:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/LocationValidationRequests"
+              request:
+                $ref: "#/components/schemas/LocationValidationRequest"
             required:
-              - requests
+              - request
     ValidateEmail:
       content:
         application/json:
@@ -745,88 +733,69 @@ components:
             type: object
             properties:
               request:
-                $ref: "#/components/schemas/ValidateEmailRequests"
+                $ref: "#/components/schemas/ValidateEmailRequest"
             required:
               - request
-
     ValidatePhoneNumber:
       content:
         application/json:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/ValidatePhoneNumberRequests"
+              request:
+                $ref: "#/components/schemas/ValidatePhoneNumberRequest"
             required:
-              - requests
+              - request
     NameValidation:
       content:
         application/json:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/NameValidationRequests"
+              request:
+                $ref: "#/components/schemas/NameValidationRequest"
             required:
-              - requests
+              - request
     ValidateCompanyData:
       content:
         application/json:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/ValidateCompanyDataRequests"
+              request:
+                $ref: "#/components/schemas/ValidateCompanyDataRequest"
             required:
-              - requests
+              - request
     CompanySearch:
       content:
         application/json:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/CompanySearchRequests"
+              request:
+                $ref: "#/components/schemas/CompanySearchRequest"
             required:
-              - requests
+              - request
     EmailSearch:
       content:
         application/json:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/EmailSearchRequests"
+              request:
+                $ref: "#/components/schemas/EmailSearchRequest"
             required:
-              - requests
+              - request
     GetCompanyData:
       content:
         application/json:
           schema:
             type: object
             properties:
-              requests:
-                type: array
-                maxItems: 1
-                items:
-                  $ref: "#/components/schemas/GetCompanyDataRequests"
+              request:
+                $ref: "#/components/schemas/GetCompanyDataRequest"
             required:
-              - requests
+              - request
   securitySchemes:
     BearerAuth:
       type: http
@@ -7410,7 +7379,7 @@ components:
                     items:
                       $ref: "#/components/schemas/Error503RequestEndpointNotAvailable"
   schemas:
-    LocationSearchRequests:
+    LocationSearchRequest:
       type: object
       properties:
         query:
@@ -7544,7 +7513,7 @@ components:
               type: number
               description: Client's longitude
               example: 13.9271
-    LocationLocalizationRequests:
+    LocationLocalizationRequest:
       type: object
       properties:
         client:
@@ -7616,7 +7585,7 @@ components:
           type: boolean
           default: false
           example: true
-    LocationGetRequests:
+    LocationGetRequest:
       type: object
       properties:
         query:
@@ -7656,7 +7625,7 @@ components:
           $ref: "#/components/schemas/ClientRequest"
       required:
         - query
-    LocationValidationRequests:
+    LocationValidationRequest:
       type: object
       properties:
         query:
@@ -7733,7 +7702,7 @@ components:
           $ref: "#/components/schemas/ClientRequest"
       required:
         - query
-    ValidateEmailRequests:
+    ValidateEmailRequest:
       type: object
       properties:
         client:
@@ -7770,7 +7739,7 @@ components:
               example: true
       required:
         - query
-    ValidatePhoneNumberRequests:
+    ValidatePhoneNumberRequest:
       type: object
       properties:
         query:
@@ -7811,7 +7780,7 @@ components:
               example: "+420"
       required:
         - query
-    NameValidationRequests:
+    NameValidationRequest:
       type: object
       properties:
         query:
@@ -7870,7 +7839,7 @@ components:
             - dataScope
       required:
         - query
-    ValidateCompanyDataRequests:
+    ValidateCompanyDataRequest:
       type: object
       properties:
         query:
@@ -7929,7 +7898,7 @@ components:
               example: true
       required:
         - query
-    CompanySearchRequests:
+    CompanySearchRequest:
       type: object
       properties:
         query:
@@ -8006,7 +7975,7 @@ components:
               example: true
       required:
         - query
-    EmailSearchRequests:
+    EmailSearchRequest:
       type: object
       properties:
         query:
@@ -8030,7 +7999,7 @@ components:
               example: 5
         client:
           $ref: "#/components/schemas/ClientRequest"
-    GetCompanyDataRequests:
+    GetCompanyDataRequest:
       type: object
       properties:
         query:

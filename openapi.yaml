@@ -79,7 +79,7 @@ info:
   contact:
     name: Foxentry
     email: info@foxentry.cz
-    url: 'http://www.foxentry.cz'
+    url: 'http://www.foxentry.com'
 servers:
   - url: 'https://api.foxentry.com'
   - url: 'https://api.foxentry.com/v2.0'
@@ -853,7 +853,7 @@ components:
   securitySchemes:
     BearerAuth:
       type: http
-      description: 'Bearer token formatted API key. If you do not have an API key, please contact us right away.'
+      description: 'Bearer token formatted API key. You can obtain the API key after the sign up at app.foxentry.com/registration.'
       scheme: bearer
   responses:
     GetCompanyData:
@@ -8079,11 +8079,11 @@ components:
                     properties:
                       reference:
                         type: string
-                        description: Official reference of insolovency.
+                        description: Official reference of insolvency.
                         example: TODO
                       dateFrom:
                         type: string
-                        description: Since when is the insolovence valid.
+                        description: Since when is the insolvence valid.
                         format: date
                         example: '2021-08-01'
                       dateTo:
@@ -8100,11 +8100,11 @@ components:
                             example: Krajský soud v Hradci Králové.
                       status:
                         type: string
-                        description: Status of insolovency.
+                        description: Status of insolvency.
                         example: NEVYRIZENA
                       detailUrl:
                         type: string
-                        description: Detail URL of insolovency.
+                        description: Detail URL of insolvency.
                         format: url
                         example: 'https://isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=F'
             businessPremises:
@@ -8181,11 +8181,10 @@ components:
                       example: Společnost zastupuje jednatel samostatně.
             capital:
               type: object
-              description: TODO
+              description: Company's funding
               properties:
                 value:
                   type: object
-                  description: TODO
                   properties:
                     amount:
                       type: string
@@ -8197,7 +8196,6 @@ components:
                       example: CZK
                 shareholders:
                   type: array
-                  description: TODO
                   items:
                     type: object
                     properties:
@@ -8210,7 +8208,6 @@ components:
                             example: 'PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277, 751 11 Radslavice'
                       share:
                         type: object
-                        description: TODO
                         properties:
                           amount:
                             type: string
@@ -8244,7 +8241,7 @@ components:
                     example: '100 ks akcie na jméno v listinné podobě ve jmenovité hodnotě 20 000 ,- Kč.'
             tradeLicences:
               type: array
-              description: TODO
+              description: Trade licence information.
               items:
                 type: object
                 description: TODO
@@ -8281,7 +8278,7 @@ components:
                         example: Na dobu neurčitou.
                   interrupted:
                     type: object
-                    description: TODO
+                    description: Dates of interuption.
                     properties:
                       from:
                         type: string
@@ -8308,15 +8305,15 @@ components:
                       example: Broušení technického a šperkového kamene
             vat:
               type: object
-              description: TODO
+              description: Vat payer information.
               properties:
                 status:
                   type: string
-                  description: Vat current status.
+                  description: Vat current status. Payer, non payer and subject. Subject means the company is a VAT payer only for non domestic transactions (identifikovaná osoba).
                   example: payer
                 reliability:
                   type: object
-                  description: TODO
+                  description: Reliability of the VAT payer.
                   properties:
                     reliable:
                       type: boolean
@@ -8325,20 +8322,20 @@ components:
                     unrealiableFrom:
                       type: boolean
                       nullable: true
-                      description: Determines from when a subject is unreliable.
+                      description: Determines from when the subject is unreliable.
                       example: true
                 bankAccounts:
                   type: array
-                  description: TODO
+                  description: Bank accounts associated with the VAT payer.
                   items:
                     type: object
                     properties:
                       number:
                         type: string
-                        description: TODO
                         example: 55567899/2010
                 history:
                   type: array
+                  description: History of the VAT payer.
                   items:
                     type: object
                     description: TODO
@@ -8376,6 +8373,7 @@ components:
           $ref: '#/components/schemas/DataAdministrativeArea'
         ids:
           type: object
+          description: Address internal & external ids.
           properties:
             internal:
               type: string
@@ -8385,7 +8383,7 @@ components:
             external:
               type: string
               nullable: true
-              description: External address ID.
+              description: External address ID. May vary for every supported country. CZ = RUIAN, PL = Government data, SK = no external ID.
               example: '22349995'
             region:
               type: string
@@ -8450,7 +8448,7 @@ components:
           example: '13000'
         postOffice:
           type: object
-          description: TODO
+          description: In what post office jurisdiction the address fall under.
           properties:
             name:
               type: string
@@ -8481,32 +8479,28 @@ components:
         country:
           type: string
           nullable: true
-          description: 'Company registration country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).'
+          description: 'Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).'
           example: CZ
         region:
           type: string
           nullable: true
-          description: Company registration region.
           example: Hlavní město Praha
         district:
           type: string
           nullable: true
-          description: Company registration discrict.
           example: Hlavní město Praha
         cityDistrict:
           type: string
           nullable: true
-          description: City Disctrict.
           example: Praha 6
         cityDistrictSpecial:
           type: string
           nullable: true
-          description: Company registration discrict special.
+          description: Special cases of city district. Currently used only in Prague.
           example: Praha 6
         cityPart:
           type: string
           nullable: true
-          description: Part of the City.
           example: Dejvice
         cityAdministrative:
           type: string
@@ -8568,7 +8562,6 @@ components:
       properties:
         gps:
           type: object
-          description: TODO
           properties:
             lat:
               type: number
@@ -8585,7 +8578,7 @@ components:
             - lon
         custom:
           type: array
-          description: TODO
+          description: Custom coordinate system. May vary for every country.
           items:
             type: object
             description: TODO
@@ -8596,7 +8589,6 @@ components:
                 example: Cartesian coordinate system.
               coordinates:
                 type: object
-                description: TODO
                 properties:
                   x:
                     type: number
@@ -8880,7 +8872,7 @@ components:
       properties:
         result:
           type: object
-          description: TODO
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
@@ -8918,7 +8910,7 @@ components:
         resultCorrected:
           nullable: true
           type: object
-          description: TODO
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
@@ -8930,6 +8922,7 @@ components:
               $ref: '#/components/schemas/NameValidationResultsDetails'
             fixes:
               type: array
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -8942,7 +8935,7 @@ components:
             - fixes
         suggestions:
           type: object
-          description: TODO
+          description: Alternatives suggested for the sent query.
           properties:
             isValid:
               type: boolean
@@ -8954,7 +8947,7 @@ components:
               $ref: '#/components/schemas/NameValidationResultsDetails'
             fixes:
               type: array
-              description: TODO
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -9458,7 +9451,7 @@ components:
       properties:
         result:
           type: object
-          description: TODO
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
@@ -9496,7 +9489,7 @@ components:
         resultCorrected:
           type: object
           nullable: true
-          description: TODO
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
@@ -9515,6 +9508,7 @@ components:
                   - $ref: '#/components/schemas/ErrorValuePhone'
             fixes:
               type: array
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -9523,7 +9517,7 @@ components:
                   - $ref: '#/components/schemas/FixValueGlobal'
         suggestions:
           type: array
-          description: TODO
+          description: Alternatives suggested for the sent query.
           items:
             type: object
             properties:
@@ -9544,6 +9538,7 @@ components:
                     - $ref: '#/components/schemas/ErrorValuePhone'
               fixes:
                 type: array
+                description: All changes listed in comparison to the sent query.
                 items:
                   oneOf:
                     - $ref: '#/components/schemas/FixFormatGlobal'
@@ -9809,7 +9804,7 @@ components:
       properties:
         result:
           type: object
-          description: TODO
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
@@ -9845,7 +9840,7 @@ components:
         resultCorrected:
           type: object
           nullable: true
-          description: TODO
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
@@ -9864,7 +9859,7 @@ components:
                   - $ref: '#/components/schemas/ErrorValueGlobal'
             fixes:
               type: array
-              description: TODO
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -9877,7 +9872,7 @@ components:
             - data
         suggestions:
           type: array
-          description: TODO
+          description: Alternatives suggested for the sent query.
           items:
             type: object
             nullable: true
@@ -9892,7 +9887,7 @@ components:
                 $ref: '#/components/schemas/LocationData'
               fixes:
                 type: array
-                description: TODO
+                description: All changes listed in comparison to the sent query.
                 items:
                   oneOf:
                     - $ref: '#/components/schemas/FixFormatGlobal'
@@ -10092,6 +10087,7 @@ components:
       properties:
         result:
           type: object
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
@@ -10121,6 +10117,7 @@ components:
         resultCorrected:
           type: object
           nullable: true
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
@@ -10136,6 +10133,7 @@ components:
                   - $ref: '#/components/schemas/ErrorValueGlobal'
             fixes:
               type: array
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -10146,7 +10144,7 @@ components:
             - $ref: '#/components/schemas/CompanyResultsResponseResults'
         suggestions:
           type: array
-          description: TODO
+          description: Alternatives suggested for the sent query.
           items:
             $ref: '#/components/schemas/ValidateCompanyDataResultCorrected'
       required:
@@ -10234,6 +10232,7 @@ components:
               - $ref: '#/components/schemas/ErrorValueGlobal'
         fixes:
           type: array
+          description: All changes listed in comparison to the sent query.
           items:
             oneOf:
               - $ref: '#/components/schemas/FixFormatGlobal'
@@ -10253,7 +10252,7 @@ components:
       properties:
         result:
           type: object
-          description: TODO
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
@@ -10290,7 +10289,7 @@ components:
         resultCorrected:
           type: object
           nullable: true
-          description: TODO
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
@@ -10302,6 +10301,7 @@ components:
               $ref: '#/components/schemas/EmailFlags'
             fixes:
               type: array
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -10313,7 +10313,7 @@ components:
         suggestions:
           type: array
           nullable: true
-          description: TODO
+          description: Alternatives suggested for the sent query.
           items:
             type: object
             nullable: true
@@ -10330,6 +10330,7 @@ components:
                 $ref: '#/components/schemas/EmailFlags'
               fixes:
                 type: array
+                description: All changes listed in comparison to the sent query.
                 items:
                   $ref: '#/components/schemas/EmailFixes'
               errors:
@@ -10503,7 +10504,7 @@ components:
     EmailFixes:
       type: object
       nullable: true
-      description: TODO
+      description: All changes listed in comparison to the sent query.
       properties:
         type:
           type: string

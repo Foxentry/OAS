@@ -839,15 +839,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 8
-                              cityDistrict: Praha 8
-                              cityPart: Karlín
-                              cityAdministrative: null
-                              cadastralArea: Karlín
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 8
+                            cityDistrict: Praha 8
+                            cityPart: Karlín
+                            cityAdministrative: null
+                            cadastralArea: Karlín
                             ids:
                               internal: "2070391"
                               external: "22349995"
@@ -925,15 +924,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 8
-                              cityDistrict: Praha 8
-                              cityPart: Karlín
-                              cityAdministrative: null
-                              cadastralArea: Karlín
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 8
+                            cityDistrict: Praha 8
+                            cityPart: Karlín
+                            cityAdministrative: null
+                            cadastralArea: Karlín
                             ids:
                               internal: "2070391"
                               external: "22349995"
@@ -1163,15 +1161,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 8
-                              cityDistrict: Praha 8
-                              cityPart: Karlín
-                              cityAdministrative: null
-                              cadastralArea: Karlín
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 8
+                            cityDistrict: Praha 8
+                            cityPart: Karlín
+                            cityAdministrative: null
+                            cadastralArea: Karlín
                             ids:
                               internal: "2070391"
                               external: "22349995"
@@ -1280,15 +1277,14 @@ components:
                               - name: Pavel Hrdlička
                                 address:
                                   data:
-                                    administrativeArea:
-                                      country: CZ
-                                      region: Olomoucký kraj
-                                      district: Přerov
-                                      cityDistrictSpecial: null
-                                      cityDistrict: null
-                                      cityPart: Radslavice
-                                      cityAdministrative: null
-                                      cadastralArea: Radslavice u Přerova
+                                    country: CZ
+                                    region: Olomoucký kraj
+                                    district: Přerov
+                                    cityDistrictSpecial: null
+                                    cityDistrict: null
+                                    cityPart: Radslavice
+                                    cityAdministrative: null
+                                    cadastralArea: Radslavice u Přerova
                                     ids:
                                       internal: "1048373"
                                       external: "11148616"
@@ -1343,15 +1339,14 @@ components:
                               - name: Pavel Hrdlička
                                 address:
                                   data:
-                                    administrativeArea:
-                                      country: CZ
-                                      region: Olomoucký kraj
-                                      district: Přerov
-                                      cityDistrictSpecial: null
-                                      cityDistrict: null
-                                      cityPart: Radslavice
-                                      cityAdministrative: null
-                                      cadastralArea: Radslavice u Přerova
+                                    country: CZ
+                                    region: Olomoucký kraj
+                                    district: Přerov
+                                    cityDistrictSpecial: null
+                                    cityDistrict: null
+                                    cityPart: Radslavice
+                                    cityAdministrative: null
+                                    cadastralArea: Radslavice u Přerova
                                     ids:
                                       internal: "1048373"
                                       external: "11148616"
@@ -1657,15 +1652,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Liberecký kraj
-                              district: Liberec
-                              cityDistrictSpecial: null
-                              cityDistrict: Liberec (nečleněné město)
-                              cityPart: Liberec VIII-Dolní Hanychov
-                              cityAdministrative: null
-                              cadastralArea: Dolní Hanychov
+                            country: CZ
+                            region: Liberecký kraj
+                            district: Liberec
+                            cityDistrictSpecial: null
+                            cityDistrict: Liberec (nečleněné město)
+                            cityPart: Liberec VIII-Dolní Hanychov
+                            cityAdministrative: null
+                            cadastralArea: Dolní Hanychov
                             ids:
                               internal: "2194391"
                               external: "23686626"
@@ -1720,15 +1714,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 1
-                              cityDistrict: Praha 1
-                              cityPart: Nové Město
-                              cityAdministrative: null
-                              cadastralArea: Nové Město
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 1
+                            cityDistrict: Praha 1
+                            cityPart: Nové Město
+                            cityAdministrative: null
+                            cadastralArea: Nové Město
                             ids:
                               internal: "2009439"
                               external: "21706166"
@@ -1783,15 +1776,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Olomoucký kraj
-                              district: Olomouc
-                              cityDistrictSpecial: null
-                              cityDistrict: null
-                              cityPart: Bystrovany
-                              cityAdministrative: null
-                              cadastralArea: Bystrovany
+                            country: CZ
+                            region: Olomoucký kraj
+                            district: Olomouc
+                            cityDistrictSpecial: null
+                            cityDistrict: null
+                            cityPart: Bystrovany
+                            cityAdministrative: null
+                            cadastralArea: Bystrovany
                             ids:
                               internal: "2335153"
                               external: "25259296"
@@ -1846,15 +1838,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 3
-                              cityDistrict: Praha 3
-                              cityPart: Žižkov
-                              cityAdministrative: null
-                              cadastralArea: Žižkov
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 3
+                            cityDistrict: Praha 3
+                            cityPart: Žižkov
+                            cityAdministrative: null
+                            cadastralArea: Žižkov
                             ids:
                               internal: "2016330"
                               external: "21776091"
@@ -1909,15 +1900,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Středočeský kraj
-                              district: Praha-západ
-                              cityDistrictSpecial: null
-                              cityDistrict: null
-                              cityPart: Jesenice
-                              cityAdministrative: null
-                              cadastralArea: Jesenice u Prahy
+                            country: CZ
+                            region: Středočeský kraj
+                            district: Praha-západ
+                            cityDistrictSpecial: null
+                            cityDistrict: null
+                            cityPart: Jesenice
+                            cityAdministrative: null
+                            cadastralArea: Jesenice u Prahy
                             ids:
                               internal: "1196163"
                               external: "12775347"
@@ -2001,15 +1991,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 5
-                              cityDistrict: Praha 5
-                              cityPart: Jinonice
-                              cityAdministrative: null
-                              cadastralArea: Jinonice
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 5
+                            cityDistrict: Praha 5
+                            cityPart: Jinonice
+                            cityAdministrative: null
+                            cadastralArea: Jinonice
                             ids:
                               internal: "2758345"
                               external: "41769384"
@@ -2064,15 +2053,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 1
-                              cityDistrict: Praha 1
-                              cityPart: Staré Město
-                              cityAdministrative: null
-                              cadastralArea: Staré Město
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 1
+                            cityDistrict: Praha 1
+                            cityPart: Staré Město
+                            cityAdministrative: null
+                            cadastralArea: Staré Město
                             ids:
                               internal: "2011222"
                               external: "21724326"
@@ -2127,15 +2115,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 1
-                              cityDistrict: Praha 1
-                              cityPart: Nové Město
-                              cityAdministrative: null
-                              cadastralArea: Nové Město
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 1
+                            cityDistrict: Praha 1
+                            cityPart: Nové Město
+                            cityAdministrative: null
+                            cadastralArea: Nové Město
                             ids:
                               internal: "2009186"
                               external: "21703574"
@@ -2190,15 +2177,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Moravskoslezský kraj
-                              district: Ostrava-město
-                              cityDistrictSpecial: null
-                              cityDistrict: Mariánské Hory a Hulváky
-                              cityPart: Mariánské Hory
-                              cityAdministrative: null
-                              cadastralArea: Mariánské Hory
+                            country: CZ
+                            region: Moravskoslezský kraj
+                            district: Ostrava-město
+                            cityDistrictSpecial: null
+                            cityDistrict: Mariánské Hory a Hulváky
+                            cityPart: Mariánské Hory
+                            cityAdministrative: null
+                            cadastralArea: Mariánské Hory
                             ids:
                               internal: "313521"
                               external: "3316246"
@@ -2253,15 +2239,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Ústecký kraj
-                              district: Most
-                              cityDistrictSpecial: null
-                              cityDistrict: null
-                              cityPart: Most
-                              cityAdministrative: null
-                              cadastralArea: Most II
+                            country: CZ
+                            region: Ústecký kraj
+                            district: Most
+                            cityDistrictSpecial: null
+                            cityDistrict: null
+                            cityPart: Most
+                            cityAdministrative: null
+                            cadastralArea: Most II
                             ids:
                               internal: "2779799"
                               external: "70525358"
@@ -2344,15 +2329,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: SK
-                              region: Trnavský
-                              district: Piešťany
-                              cityDistrictSpecial: null
-                              cityDistrict: null
-                              cityPart: Piešťany
-                              cityAdministrative: null
-                              cadastralArea: null
+                            country: SK
+                            region: Trnavský
+                            district: Piešťany
+                            cityDistrictSpecial: null
+                            cityDistrict: null
+                            cityPart: Piešťany
+                            cityAdministrative: null
+                            cadastralArea: null
                             ids:
                               internal: "6869348"
                               external: null
@@ -2403,15 +2387,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: SK
-                              region: Prešovský
-                              district: Prešov
-                              cityDistrictSpecial: null
-                              cityDistrict: null
-                              cityPart: Prešov
-                              cityAdministrative: null
-                              cadastralArea: null
+                            country: SK
+                            region: Prešovský
+                            district: Prešov
+                            cityDistrictSpecial: null
+                            cityDistrict: null
+                            cityPart: Prešov
+                            cityAdministrative: null
+                            cadastralArea: null
                             ids:
                               internal: "5908780"
                               external: null
@@ -2568,15 +2551,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 5
-                              cityDistrict: Praha 5
-                              cityPart: Jinonice
-                              cityAdministrative: null
-                              cadastralArea: Jinonice
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 5
+                            cityDistrict: Praha 5
+                            cityPart: Jinonice
+                            cityAdministrative: null
+                            cadastralArea: Jinonice
                             ids:
                               internal: "2758345"
                               external: "41769384"
@@ -2631,15 +2613,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 1
-                              cityDistrict: Praha 1
-                              cityPart: Staré Město
-                              cityAdministrative: null
-                              cadastralArea: Staré Město
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 1
+                            cityDistrict: Praha 1
+                            cityPart: Staré Město
+                            cityAdministrative: null
+                            cadastralArea: Staré Město
                             ids:
                               internal: "2011222"
                               external: "21724326"
@@ -2694,15 +2675,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 1
-                              cityDistrict: Praha 1
-                              cityPart: Nové Město
-                              cityAdministrative: null
-                              cadastralArea: Nové Město
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 1
+                            cityDistrict: Praha 1
+                            cityPart: Nové Město
+                            cityAdministrative: null
+                            cadastralArea: Nové Město
                             ids:
                               internal: "2009186"
                               external: "21703574"
@@ -2757,15 +2737,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Moravskoslezský kraj
-                              district: Ostrava-město
-                              cityDistrictSpecial: null
-                              cityDistrict: Mariánské Hory a Hulváky
-                              cityPart: Mariánské Hory
-                              cityAdministrative: null
-                              cadastralArea: Mariánské Hory
+                            country: CZ
+                            region: Moravskoslezský kraj
+                            district: Ostrava-město
+                            cityDistrictSpecial: null
+                            cityDistrict: Mariánské Hory a Hulváky
+                            cityPart: Mariánské Hory
+                            cityAdministrative: null
+                            cadastralArea: Mariánské Hory
                             ids:
                               internal: "313521"
                               external: "3316246"
@@ -2820,15 +2799,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Ústecký kraj
-                              district: Most
-                              cityDistrictSpecial: null
-                              cityDistrict: null
-                              cityPart: Most
-                              cityAdministrative: null
-                              cadastralArea: Most II
+                            country: CZ
+                            region: Ústecký kraj
+                            district: Most
+                            cityDistrictSpecial: null
+                            cityDistrict: null
+                            cityPart: Most
+                            cityAdministrative: null
+                            cadastralArea: Most II
                             ids:
                               internal: "2779799"
                               external: "70525358"
@@ -3479,15 +3457,14 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 8
-                          cityDistrict: Praha 8
-                          cityPart: Karlín
-                          cityAdministrative:
-                          cadastralArea: Karlín
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 8
+                        cityDistrict: Praha 8
+                        cityPart: Karlín
+                        cityAdministrative:
+                        cadastralArea: Karlín
                         ids:
                           internal:
                           external:
@@ -3512,15 +3489,14 @@ components:
                           name: Praha 86
                         full: Thámova, 186 00 Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 6
-                          cityDistrict: Praha 6
-                          cityPart: Dejvice
-                          cityAdministrative:
-                          cadastralArea: Dejvice
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 6
+                        cityDistrict: Praha 6
+                        cityPart: Dejvice
+                        cityAdministrative:
+                        cadastralArea: Dejvice
                         ids:
                           internal:
                           external:
@@ -3545,15 +3521,14 @@ components:
                           name: Praha 6
                         full: Thákurova, 160 00 Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Středočeský kraj
-                          district: Praha-východ
-                          cityDistrictSpecial:
-                          cityDistrict:
-                          cityPart: Brandýs nad Labem
-                          cityAdministrative:
-                          cadastralArea: Brandýs nad Labem
+                        country: CZ
+                        region: Středočeský kraj
+                        district: Praha-východ
+                        cityDistrictSpecial:
+                        cityDistrict:
+                        cityPart: Brandýs nad Labem
+                        cityAdministrative:
+                        cadastralArea: Brandýs nad Labem
                         ids:
                           internal: null
                           external: null
@@ -3578,15 +3553,14 @@ components:
                           name: Brandýs nad Labem-Stará Boleslav 1
                         full: Thámova, 250 01 Brandýs nad Labem-Stará Boleslav
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Ústecký kraj
-                          district: Teplice
-                          cityDistrictSpecial: null
-                          cityDistrict: null
-                          cityPart: Trnovany
-                          cityAdministrative:
-                          cadastralArea: Teplice-Trnovany
+                        country: CZ
+                        region: Ústecký kraj
+                        district: Teplice
+                        cityDistrictSpecial: null
+                        cityDistrict: null
+                        cityPart: Trnovany
+                        cityAdministrative:
+                        cadastralArea: Teplice-Trnovany
                         ids:
                           internal:
                           external:
@@ -3611,15 +3585,14 @@ components:
                           name: Teplice 1
                         full: Thámova, 415 01 Teplice
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Plzeňský kraj
-                          district: Plzeň-město
-                          cityDistrictSpecial:
-                          cityDistrict: Plzeň 3
-                          cityPart: Jižní Předměstí
-                          cityAdministrative:
-                          cadastralArea: Plzeň
+                        country: CZ
+                        region: Plzeňský kraj
+                        district: Plzeň-město
+                        cityDistrictSpecial:
+                        cityDistrict: Plzeň 3
+                        cityPart: Jižní Předměstí
+                        cityAdministrative:
+                        cadastralArea: Plzeň
                         ids:
                           internal:
                           external:
@@ -3671,15 +3644,14 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: null
-                          cityDistrict: null
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: null
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -3704,15 +3676,14 @@ components:
                           name:
                         full: Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 4
-                          cityDistrict: null
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 4
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -3737,15 +3708,14 @@ components:
                           name: null
                         full: Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 9
-                          cityDistrict: null
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 9
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -3770,15 +3740,14 @@ components:
                           name: null
                         full: Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 5
-                          cityDistrict: null
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 5
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -3803,15 +3772,14 @@ components:
                           name: null
                         full: Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 10
-                          cityDistrict: null
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 10
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -3863,15 +3831,14 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2474923"
                           external: "26766540"
@@ -3900,15 +3867,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 2770/56, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2839682"
                           external: "75195364"
@@ -3937,15 +3903,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 2770/56a, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2839684"
                           external: "75195429"
@@ -3974,15 +3939,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 2770/56b, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2839687"
                           external: "75195500"
@@ -4011,15 +3975,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 2770/56c, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2839688"
                           external: "75195542"
@@ -4075,15 +4038,14 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 10
-                          cityDistrict: Praha 10
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 10
+                        cityDistrict: Praha 10
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -4108,15 +4070,14 @@ components:
                           name: Praha 10
                         full: 100 00 Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: null
-                          cityDistrict: null
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: null
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -4141,15 +4102,14 @@ components:
                           name: null
                         full: 101 00 Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 10
-                          cityDistrict: null
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 10
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -4174,15 +4134,14 @@ components:
                           name: Praha 102
                         full: 102 00 Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 10
-                          cityDistrict: null
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 10
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -4207,15 +4166,14 @@ components:
                           name: Praha 113
                         full: 103 00 Praha
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 10
-                          cityDistrict: null
-                          cityPart: null
-                          cityAdministrative: null
-                          cadastralArea: null
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 10
+                        cityDistrict: null
+                        cityPart: null
+                        cityAdministrative: null
+                        cadastralArea: null
                         ids:
                           internal: null
                           external: null
@@ -4267,15 +4225,14 @@ components:
                   resultsCount: 10
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: null
                           external: null
@@ -4308,15 +4265,14 @@ components:
                           name: Praha 3
                         full: ""
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 10
-                          cityDistrict: Praha 10
-                          cityPart: Záběhlice
-                          cityAdministrative: null
-                          cadastralArea: Záběhlice
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 10
+                        cityDistrict: Praha 10
+                        cityPart: Záběhlice
+                        cityAdministrative: null
+                        cadastralArea: Záběhlice
                         ids:
                           internal: null
                           external: null
@@ -4349,15 +4305,14 @@ components:
                           name: Praha 106
                         full: ""
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2015522"
                           external: "21767939"
@@ -4394,15 +4349,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 92/45, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2016620"
                           external: "21779015"
@@ -4439,15 +4393,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 1164/47, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2016638"
                           external: "21779198"
@@ -4484,15 +4437,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 1184/49, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2016626"
                           external: "21779074"
@@ -4529,15 +4481,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 1169/51, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2016478"
                           external: "21777586"
@@ -4574,15 +4525,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 1046/35, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2015844"
                           external: "21771235"
@@ -4619,15 +4569,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 449/41, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2017033"
                           external: "21783209"
@@ -4664,15 +4613,14 @@ components:
                           name: Praha 3
                         full: Jeseniova 1522/53, 130 00 Praha 3
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2322244"
                           external: "25120417"
@@ -4797,15 +4745,14 @@ components:
                   resultsCount: 1
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 8
-                          cityDistrict: Praha 8
-                          cityPart: Karlín
-                          cityAdministrative: null
-                          cadastralArea: Karlín
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 8
+                        cityDistrict: Praha 8
+                        cityPart: Karlín
+                        cityAdministrative: null
+                        cadastralArea: Karlín
                         ids:
                           internal: "2070391"
                           external: "22349995"
@@ -4896,7 +4843,7 @@ components:
                   customId:
                   query:
                     id: "2070391"
-                    administrativeArea.country: CZ
+                    country: CZ
                   options:
                     dataScope: full
                     idType: internal
@@ -4909,15 +4856,14 @@ components:
                   resultsCount: 1
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 8
-                          cityDistrict: Praha 8
-                          cityPart: Karlín
-                          cityAdministrative:
-                          cadastralArea: Karlín
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 8
+                        cityDistrict: Praha 8
+                        cityPart: Karlín
+                        cityAdministrative:
+                        cadastralArea: Karlín
                         ids:
                           internal: "2070391"
                           external: "22349995"
@@ -4963,7 +4909,7 @@ components:
                   customId:
                   query:
                     id: "22349995"
-                    administrativeArea.country: CZ
+                    country: CZ
                   options:
                     dataScope: full
                     idType: external
@@ -4976,15 +4922,14 @@ components:
                   resultsCount: 1
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 8
-                          cityDistrict: Praha 8
-                          cityPart: Karlín
-                          cityAdministrative:
-                          cadastralArea: Karlín
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 8
+                        cityDistrict: Praha 8
+                        cityPart: Karlín
+                        cityAdministrative:
+                        cadastralArea: Karlín
                         ids:
                           internal: "2070391"
                           external: "22349995"
@@ -5038,7 +4983,7 @@ components:
                       query:
                         type: object
                         properties:
-                          administrativeArea.country:
+                          country:
                             type: string
                             description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                             example: CZ
@@ -5047,7 +4992,7 @@ components:
                             description: Location ID
                             example: "2070391"
                         required:
-                          - administrativeArea.country
+                          - country
                           - id
                       options:
                         type: object
@@ -5111,15 +5056,14 @@ components:
                     isValid: true
                     proposal: valid
                     data:
-                      administrativeArea:
-                        country: CZ
-                        region: Hlavní město Praha
-                        district: území Hlavního města Prahy
-                        cityDistrictSpecial: Praha 8
-                        cityDistrict: Praha 8
-                        cityPart: Karlín
-                        cityAdministrative: null
-                        cadastralArea: Karlín
+                      country: CZ
+                      region: Hlavní město Praha
+                      district: území Hlavního města Prahy
+                      cityDistrictSpecial: Praha 8
+                      cityDistrict: Praha 8
+                      cityPart: Karlín
+                      cityAdministrative: null
+                      cadastralArea: Karlín
                       ids:
                         internal: "2070391"
                         external: "22349995"
@@ -5181,15 +5125,14 @@ components:
                     isValid: false
                     proposal: invalid
                     data:
-                      administrativeArea:
-                        country: ""
-                        region: null
-                        district: null
-                        cityDistrictSpecial: null
-                        cityDistrict: null
-                        cityPart: null
-                        cityAdministrative: null
-                        cadastralArea: null
+                      country: ""
+                      region: null
+                      district: null
+                      cityDistrictSpecial: null
+                      cityDistrict: null
+                      cityPart: null
+                      cityAdministrative: null
+                      cadastralArea: null
                       ids:
                         internal: null
                         external: null
@@ -5256,15 +5199,14 @@ components:
                     isValid: false
                     proposal: invalidWithCorrection
                     data:
-                      administrativeArea:
-                        country: ""
-                        region: null
-                        district: null
-                        cityDistrictSpecial: null
-                        cityDistrict: null
-                        cityPart: null
-                        cityAdministrative: null
-                        cadastralArea: null
+                      country: ""
+                      region: null
+                      district: null
+                      cityDistrictSpecial: null
+                      cityDistrict: null
+                      cityPart: null
+                      cityAdministrative: null
+                      cadastralArea: null
                       ids:
                         internal: null
                         external: null
@@ -5306,15 +5248,14 @@ components:
                   resultCorrected:
                     isValid: true
                     data:
-                      administrativeArea:
-                        country: CZ
-                        region: Hlavní město Praha
-                        district: území Hlavního města Prahy
-                        cityDistrictSpecial: Praha 8
-                        cityDistrict: Praha 8
-                        cityPart: Karlín
-                        cityAdministrative: null
-                        cadastralArea: Karlín
+                      country: CZ
+                      region: Hlavní město Praha
+                      district: území Hlavního města Prahy
+                      cityDistrictSpecial: Praha 8
+                      cityDistrict: Praha 8
+                      cityPart: Karlín
+                      cityAdministrative: null
+                      cadastralArea: Karlín
                       ids:
                         internal: "2070391"
                         external: "22349995"
@@ -5392,15 +5333,14 @@ components:
                     isValid: false
                     proposal: invalidWithSuggestion
                     data:
-                      administrativeArea:
-                        country: ""
-                        region: null
-                        district: null
-                        cityDistrictSpecial: null
-                        cityDistrict: null
-                        cityPart: null
-                        cityAdministrative: null
-                        cadastralArea: null
+                      country: ""
+                      region: null
+                      district: null
+                      cityDistrictSpecial: null
+                      cityDistrict: null
+                      cityPart: null
+                      cityAdministrative: null
+                      cadastralArea: null
                       ids:
                         internal: null
                         external: null
@@ -5436,15 +5376,14 @@ components:
                   suggestions:
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2845267"
                           external: "75429195"
@@ -5484,15 +5423,14 @@ components:
                             value: Olšanská 2898/4d
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2845272"
                           external: "75429527"
@@ -5532,15 +5470,14 @@ components:
                             value: Olšanská 2898/4h
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2845258"
                           external: "75428920"
@@ -5580,15 +5517,14 @@ components:
                             value: Olšanská 2898/4a
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2845269"
                           external: "75429411"
@@ -5628,15 +5564,14 @@ components:
                             value: Olšanská 2898/4e
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2845270"
                           external: "75429446"
@@ -5676,15 +5611,14 @@ components:
                             value: Olšanská 2898/4f
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2845271"
                           external: "75429462"
@@ -5724,15 +5658,14 @@ components:
                             value: Olšanská 2898/4g
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2845273"
                           external: "75429551"
@@ -5772,15 +5705,14 @@ components:
                             value: Olšanská 2898/4i
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2845262"
                           external: "75429098"
@@ -5820,15 +5752,14 @@ components:
                             value: Olšanská 2898/4b
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
-                          region: Hlavní město Praha
-                          district: území Hlavního města Prahy
-                          cityDistrictSpecial: Praha 3
-                          cityDistrict: Praha 3
-                          cityPart: Žižkov
-                          cityAdministrative: null
-                          cadastralArea: Žižkov
+                        country: CZ
+                        region: Hlavní město Praha
+                        district: území Hlavního města Prahy
+                        cityDistrictSpecial: Praha 3
+                        cityDistrict: Praha 3
+                        cityPart: Žižkov
+                        cityAdministrative: null
+                        cadastralArea: Žižkov
                         ids:
                           internal: "2845265"
                           external: "75429152"
@@ -5934,7 +5865,7 @@ components:
                             type: string
                             nullable: true
                             example: "Jeseniova 2770/56d, 130 00 Praha"
-                          administrativeArea.country:
+                          country:
                             type: string
                             nullable: true
                             description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
@@ -5993,15 +5924,14 @@ components:
                       vatNumberSpecial: null
                       address:
                         data:
-                          administrativeArea:
-                            country: CZ
-                            region: Hlavní město Praha
-                            district: území Hlavního města Prahy
-                            cityDistrictSpecial: Praha 8
-                            cityDistrict: Praha 8
-                            cityPart: Karlín
-                            cityAdministrative: null
-                            cadastralArea: Karlín
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 8
+                          cityDistrict: Praha 8
+                          cityPart: Karlín
+                          cityAdministrative: null
+                          cadastralArea: Karlín
                           ids:
                             internal: "2070391"
                             external: "22349995"
@@ -6156,15 +6086,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Olomoucký kraj
-                              district: Olomouc
-                              cityDistrictSpecial: null
-                              cityDistrict: null
-                              cityPart: Šternberk
-                              cityAdministrative: null
-                              cadastralArea: Šternberk
+                            country: CZ
+                            region: Olomoucký kraj
+                            district: Olomouc
+                            cityDistrictSpecial: null
+                            cityDistrict: null
+                            cityPart: Šternberk
+                            cityAdministrative: null
+                            cadastralArea: Šternberk
                             ids:
                               internal: "1530660"
                               external: "16349491"
@@ -6230,15 +6159,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Plzeňský kraj
-                              district: Plzeň-město
-                              cityDistrictSpecial: null
-                              cityDistrict: Plzeň 3
-                              cityPart: Jižní Předměstí
-                              cityAdministrative: null
-                              cadastralArea: Plzeň
+                            country: CZ
+                            region: Plzeňský kraj
+                            district: Plzeň-město
+                            cityDistrictSpecial: null
+                            cityDistrict: Plzeň 3
+                            cityPart: Jižní Předměstí
+                            cityAdministrative: null
+                            cadastralArea: Plzeň
                             ids:
                               internal: "2270634"
                               external: "24537110"
@@ -6304,15 +6232,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Středočeský kraj
-                              district: Praha-východ
-                              cityDistrictSpecial: null
-                              cityDistrict: null
-                              cityPart: Zápy
-                              cityAdministrative: null
-                              cadastralArea: Zápy
+                            country: CZ
+                            region: Středočeský kraj
+                            district: Praha-východ
+                            cityDistrictSpecial: null
+                            cityDistrict: null
+                            cityPart: Zápy
+                            cityAdministrative: null
+                            cadastralArea: Zápy
                             ids:
                               internal: "2359109"
                               external: "25528807"
@@ -6378,15 +6305,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 10
-                              cityDistrict: Praha 10
-                              cityPart: Vršovice
-                              cityAdministrative: null
-                              cadastralArea: Vršovice
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 10
+                            cityDistrict: Praha 10
+                            cityPart: Vršovice
+                            cityAdministrative: null
+                            cadastralArea: Vršovice
                             ids:
                               internal: "2098912"
                               external: "22659251"
@@ -6452,15 +6378,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Moravskoslezský kraj
-                              district: Bruntál
-                              cityDistrictSpecial: null
-                              cityDistrict: null
-                              cityPart: Bruntál
-                              cityAdministrative: null
-                              cadastralArea: Bruntál-město
+                            country: CZ
+                            region: Moravskoslezský kraj
+                            district: Bruntál
+                            cityDistrictSpecial: null
+                            cityDistrict: null
+                            cityPart: Bruntál
+                            cityAdministrative: null
+                            cadastralArea: Bruntál-město
                             ids:
                               internal: "268366"
                               external: "2833816"
@@ -6526,15 +6451,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 8
-                              cityDistrict: Praha 8
-                              cityPart: Karlín
-                              cityAdministrative: null
-                              cadastralArea: Karlín
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 8
+                            cityDistrict: Praha 8
+                            cityPart: Karlín
+                            cityAdministrative: null
+                            cadastralArea: Karlín
                             ids:
                               internal: "2070391"
                               external: "22349995"
@@ -6600,15 +6524,14 @@ components:
                         vatNumberSpecial: null
                         address:
                           data:
-                            administrativeArea:
-                              country: CZ
-                              region: Hlavní město Praha
-                              district: území Hlavního města Prahy
-                              cityDistrictSpecial: Praha 10
-                              cityDistrict: Praha 10
-                              cityPart: Strašnice
-                              cityAdministrative: null
-                              cadastralArea: Strašnice
+                            country: CZ
+                            region: Hlavní město Praha
+                            district: území Hlavního města Prahy
+                            cityDistrictSpecial: Praha 10
+                            cityDistrict: Praha 10
+                            cityPart: Strašnice
+                            cityAdministrative: null
+                            cadastralArea: Strašnice
                             ids:
                               internal: "2095647"
                               external: "22623400"
@@ -6721,15 +6644,14 @@ components:
                       vatNumberSpecial: null
                       address:
                         data:
-                          administrativeArea:
-                            country: CZ
-                            region: Hlavní město Praha
-                            district: území Hlavního města Prahy
-                            cityDistrictSpecial: Praha 8
-                            cityDistrict: Praha 8
-                            cityPart: Karlín
-                            cityAdministrative: null
-                            cadastralArea: Karlín
+                          country: CZ
+                          region: Hlavní město Praha
+                          district: území Hlavního města Prahy
+                          cityDistrictSpecial: Praha 8
+                          cityDistrict: Praha 8
+                          cityPart: Karlín
+                          cityAdministrative: null
+                          cadastralArea: Karlín
                           ids:
                             internal: "2070391"
                             external: "22349995"
@@ -7394,7 +7316,6 @@ components:
                 - number.part2
                 - city
                 - zip
-                - administrativeArea.country
             value:
               oneOf:
                 - type: string
@@ -7438,7 +7359,7 @@ components:
                   nullable: true
                   description: TODO
                   example: 130 00
-                administrativeArea.country:
+                country:
                   type: string
                   nullable: true
                   description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
@@ -7591,7 +7512,7 @@ components:
         query:
           type: object
           properties:
-            administrativeArea.country:
+            country:
               type: string
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
@@ -7600,7 +7521,7 @@ components:
               description: Location ID
               example: "2070391"
           required:
-            - administrativeArea.country
+            - country
             - id
         options:
           type: object
@@ -7691,7 +7612,7 @@ components:
               nullable: true
               description: TODO
               example: "Jeseniova 2770/56d, 130 00 Praha"
-            administrativeArea.country:
+            country:
               type: string
               nullable: true
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
@@ -7849,7 +7770,7 @@ components:
               type: string
               description: Company name
               example: Avantro s.r.o.
-            administrativeArea.country:
+            country:
               type: string
               description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
               example: CZ
@@ -7923,7 +7844,7 @@ components:
                   type: string
                   description: Company name.
                   example: Avantro s.r.o.
-                administrativeArea.country:
+                country:
                   type: string
                   description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                   example: CZ
@@ -8005,7 +7926,7 @@ components:
         query:
           type: object
           properties:
-            administrativeArea.country:
+            country:
               type: string
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
@@ -8014,7 +7935,7 @@ components:
               description: Company registration number.
               example: "04997476"
           required:
-            - administrativeArea.country
+            - country
             - registrationNumber
         options:
           $ref: "#/components/schemas/CompanyDataRequestOption"
@@ -8055,7 +7976,7 @@ components:
         query:
           type: object
           properties:
-            administrativeArea.country:
+            country:
               type: string
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
@@ -8103,15 +8024,11 @@ components:
           type: object
           description: TODO
           properties:
-            administrativeArea:
-              type: object
-              description: TODO
-              properties:
-                country:
-                  type: string
-                  nullable: true
-                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
-                  example: CZ
+            country:
+              type: string
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              nullable: true
+              example: CZ
             name:
               type: string
               nullable: true
@@ -8589,8 +8506,46 @@ components:
     LocationData:
       type: object
       properties:
-        administrativeArea:
-          $ref: "#/components/schemas/DataAdministrativeArea"
+        country:
+          type: string
+          nullable: true
+          description: "Company registration country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+          example: CZ
+        region:
+          type: string
+          nullable: true
+          description: Company registration region.
+          example: Hlavní město Praha
+        district:
+          type: string
+          nullable: true
+          description: Company registration discrict.
+          example: Hlavní město Praha
+        cityDistrict:
+          type: string
+          nullable: true
+          description: City Disctrict.
+          example: Praha 6
+        cityDistrictSpecial:
+          type: string
+          nullable: true
+          description: Company registration discrict special.
+          example: Praha 6
+        cityPart:
+          type: string
+          nullable: true
+          description: Part of the City.
+          example: Dejvice
+        cityAdministrative:
+          type: string
+          nullable: true
+          description: City Administrative area.
+          example: Dejvice
+        cadastralArea:
+          type: string
+          nullable: true
+          description: City cadastral area.
+          example: Dejvice
         ids:
           type: object
           description: TODO
@@ -8682,7 +8637,14 @@ components:
           type: string
           example: "Jeseniova 1151/55, 130 00 Praha 3"
       required:
-        - administrativeArea
+        - country
+        - region
+        - district
+        - cityDistrict
+        - cityDistrictSpecial
+        - cityPart
+        - cityAdministrative
+        - cadastralArea
         - ids
         - street
         - number
@@ -8691,49 +8653,6 @@ components:
         - zip
         - geometry
         - full
-    DataAdministrativeArea:
-      type: object
-      properties:
-        country:
-          type: string
-          nullable: true
-          description: "Company registration country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
-          example: CZ
-        region:
-          type: string
-          nullable: true
-          description: Company registration region.
-          example: Hlavní město Praha
-        district:
-          type: string
-          nullable: true
-          description: Company registration discrict.
-          example: Hlavní město Praha
-        cityDistrict:
-          type: string
-          nullable: true
-          description: City Disctrict.
-          example: Praha 6
-        cityDistrictSpecial:
-          type: string
-          nullable: true
-          description: Company registration discrict special.
-          example: Praha 6
-        cityPart:
-          type: string
-          nullable: true
-          description: Part of the City.
-          example: Dejvice
-        cityAdministrative:
-          type: string
-          nullable: true
-          description: City Administrative area.
-          example: Dejvice
-        cadastralArea:
-          type: string
-          nullable: true
-          description: City cadastral area.
-          example: Dejvice
     LocationNumber:
       type: object
       properties:
@@ -8826,15 +8745,11 @@ components:
           description: TODO
           nullable: true
           properties:
-            administrativeArea:
-              type: object
-              description: TODO
-              properties:
-                country:
-                  type: string
-                  nullable: true
-                  description: "Country of administrative area in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
-                  example: CZ
+            country:
+              type: string
+              description: "Country of administrative area in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              nullable: true
+              example: CZ
             street:
               type: string
               description: Street.
@@ -10174,7 +10089,7 @@ components:
               type: string
               description: Company name
               example: Avantro s.r.o.
-            administrativeArea.country:
+            country:
               type: string
               description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
               example: CZ

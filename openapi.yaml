@@ -1294,7 +1294,7 @@ components:
                         databoxes:
                           - code: txutpba
                             name: AVANTRO s.r.o.
-                            receivingMessages: 1
+                            receivingMessages: true
                         registrations:
                           - type: businessRegister
                             data:
@@ -8240,11 +8240,11 @@ components:
                     description: Name of databox.
                     example: AVANTRO s.r.o.
                   receivingMessages:
-                    type: number
+                    type: boolean
                     description: >-
                       Whether the databox is set to receive messages from public
                       as well.
-                    example: 1
+                    example: true
             registrations:
               type: array
               description: Information about the company's registrations.
@@ -8602,6 +8602,10 @@ components:
                     means the company is a VAT payer only for non domestic
                     transactions (identifikovaná osoba).
                   example: payer
+                  enum:
+                    - payer
+                    - nonpayer
+                    - subject
                 reliability:
                   type: object
                   description: Reliability of the VAT payer.
@@ -8877,7 +8881,11 @@ components:
               type:
                 type: string
                 description: Type of coordinate system.
-                example: Cartesian coordinate system.
+                example: JTSK
+                nullable: true 
+                enum:
+                  - JTSK
+                  - ETRS89
               coordinates:
                 type: object
                 properties:
@@ -9049,6 +9057,10 @@ components:
               description: Required Data Scope.
               default: basic
               example: full
+              enum:
+                - basic
+                - extended
+                - full
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:

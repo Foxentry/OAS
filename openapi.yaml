@@ -2,22 +2,60 @@ openapi: 3.0.0
 info:
   version: "2.0"
   title: Foxentry API v2
-  description: |-
+  description: >-
     # Welcome to the Foxentry API version 2.0
-    Welcome to the new version of Foxentry API 2.0 Our API is designed to enhance your data management experience and provide you with even more powerful tools to harness the potential of getting and working with data.
+
+    Welcome to the new version of Foxentry API 2.0 Our API is designed to
+    enhance your data management experience and provide you with even more
+    powerful tools to harness the potential of getting and working with data.
+
     ## API usage
-    The Foxentry API is used to <b>retrieve</b>, <b>validate</b>, and <b>modify</b> user data. Using our API, you can obtain detailed information, validate customer input, and automatically edit it into the appropriate formats. <br><br>
-    The new version of our API also supports automatic corrections, offering you suggestions and corrections for your inputs so that you always get the right data.
+
+    The Foxentry API is used to <b>retrieve</b>, <b>validate</b>, and
+    <b>modify</b> user data. Using our API, you can obtain detailed information,
+    validate customer input, and automatically edit it into the appropriate
+    formats. <br><br>
+
+    The new version of our API also supports automatic corrections, offering you
+    suggestions and corrections for your inputs so that you always get the right
+    data.
+
     ## Features in version 2.0
-    Foxentry now provides you with a wide variety of information by providing a comprehensive set of endpoints for numerous data categories. Whether you need information on a <b>Company</b>, an <b>Email</b> address, a <b>Location</b>, a <b>Name</b>, or a <b>Phone number</b>, Foxentry can help. We are pleased to offer our valued clients a total of 11 endpoints in this new version. <br><br>
-    With the latest version of the Foxentry API, we have implemented advanced <b>Corrections</b> and <b>Suggestions</b>. This means that the data you receive will be more refined and precise, enabling you to make data-driven decisions with the utmost confidence. <br><br>
-    The latest Foxentry API version includes <b>HTTP global errors</b> but also <b>local error messages</b>, recognizing the need for clear and useful error feedback. If a problem happens while using the API, you will be notified in descriptive error messages, providing a smoother integration process and quicker issue resolution. <br><br>
-    To further enhance data quality, Foxentry has introduced <b>Fixes</b> in the new version of the API. This means that even if there are minor errors in the data you provide, the API will intelligently identify and correct them, reducing the risk of inaccuracies in your results.
+
+    Foxentry now provides you with a wide variety of information by providing a
+    comprehensive set of endpoints for numerous data categories. Whether you
+    need information on a <b>Company</b>, an <b>Email</b> address, a
+    <b>Location</b>, a <b>Name</b>, or a <b>Phone number</b>, Foxentry can help.
+    We are pleased to offer our valued clients a total of 11 endpoints in this
+    new version. <br><br>
+
+    With the latest version of the Foxentry API, we have implemented advanced
+    <b>Corrections</b> and <b>Suggestions</b>. This means that the data you
+    receive will be more refined and precise, enabling you to make data-driven
+    decisions with the utmost confidence. <br><br>
+
+    The latest Foxentry API version includes <b>HTTP global errors</b> but also
+    <b>local error messages</b>, recognizing the need for clear and useful error
+    feedback. If a problem happens while using the API, you will be notified in
+    descriptive error messages, providing a smoother integration process and
+    quicker issue resolution. <br><br>
+
+    To further enhance data quality, Foxentry has introduced <b>Fixes</b> in the
+    new version of the API. This means that even if there are minor errors in
+    the data you provide, the API will intelligently identify and correct them,
+    reducing the risk of inaccuracies in your results.
+
     ## API call
-    Each API call should be directed to a specific endpoint URL. Each API call to an endpoint can only contain one API request.
+
+    Each API call should be directed to a specific endpoint URL. Each API call
+    to an endpoint can only contain one API request.
+
     ## Environment
+
     Production: https://api.foxentry.com/
+
     ## Supported countries
+
     <table class="center">
       <tr>
         <th>Endpoint</th>
@@ -69,15 +107,25 @@ info:
       </tr>                                                                
     </table>
 
+
     ## Security
-    As part of our commitment to data security, you are required to obtain a <b>Bearer token</b> from Foxentry. If you are a new user and do not have an API key, please fill out our registration form at https://foxentry.com/help-center/rest-api. 
+
+    As part of our commitment to data security, you are required to obtain a
+    <b>Bearer token</b> from Foxentry. If you are a new user and do not have an
+    API key, please fill out our registration form at
+    https://foxentry.com/help-center/rest-api. 
+
 
     ## Need help? 
-    Should you encounter any issues, have questions, or need assistance, please feel free to reach out to our dedicated support team at info@foxentry.cz. We are here to help you make the most of our API and resolve any questions you may have.
+
+    Should you encounter any issues, have questions, or need assistance, please
+    feel free to reach out to our dedicated support team at info@foxentry.cz. We
+    are here to help you make the most of our API and resolve any questions you
+    may have.
   contact:
     name: Foxentry
     email: info@foxentry.cz
-    url: "http://www.foxentry.cz"
+    url: "http://www.foxentry.com"
 servers:
   - url: "https://api.foxentry.com"
   - url: "https://api.foxentry.com/v2.0"
@@ -87,8 +135,10 @@ paths:
       tags:
         - Company
       summary: Validate company data
-      description: |-
-        This endpoint requires at least 1 query parameter and will check if this combination of parameters values is valid.
+      description: >-
+        This endpoint requires at least 1 query parameter and will check if this
+        combination of parameters values is valid.
+
         Returns informations about company matched inputed parameters values.
       operationId: ValidateCompanyData
       parameters:
@@ -248,8 +298,10 @@ paths:
       tags:
         - Email
       summary: Validate email
-      description: |-
-        Foxentry allows you to check if email address really exists. Foxentry also can give you information 
+      description: >-
+        Foxentry allows you to check if email address really exists. Foxentry
+        also can give you information 
+
         if this mailbox is provided by some temporary emails service.
       operationId: ValidateEmail
       parameters:
@@ -303,7 +355,9 @@ paths:
       tags:
         - Email
       summary: Email search
-      description: Foxentry will automatically offer you options to complete the address based on the data you enter.
+      description: >-
+        Foxentry will automatically offer you options to complete the address
+        based on the data you enter.
       operationId: EmailSearch
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -515,9 +569,12 @@ paths:
       tags:
         - Locations
       summary: Location localization
-      description: |-
-        This endpoint returns max. 10 addresses nearby inputed GPS coordinates. Usable in case you want to localize
-        end user by his GPS coordinates (obtained through browser geolocalization service).
+      description: >-
+        This endpoint returns max. 10 addresses nearby inputed GPS coordinates.
+        Usable in case you want to localize
+
+        end user by his GPS coordinates (obtained through browser
+        geolocalization service).
       operationId: LocationLocalization
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -623,9 +680,12 @@ paths:
       tags:
         - Phone
       summary: Validate phone number
-      description: |-
-        Foxentry allows you to check validity and real existence of phone number. Foxentry also can give you
-        additional informations about validated phone number, for example name of mobile carrier.
+      description: >-
+        Foxentry allows you to check validity and real existence of phone
+        number. Foxentry also can give you
+
+        additional informations about validated phone number, for example name
+        of mobile carrier.
       operationId: ValidatePhoneNumber
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -799,7 +859,9 @@ components:
   securitySchemes:
     BearerAuth:
       type: http
-      description: "Bearer token formatted API key. If you do not have an API key, please contact us right away."
+      description: >-
+        Bearer token formatted API key. You can obtain the API key after the
+        sign up at app.foxentry.com/registration.
       scheme: bearer
   responses:
     GetCompanyData:
@@ -873,7 +935,7 @@ components:
                                     "y": 740509.43
                             postOffice:
                               name: Praha 86
-                            full: Thámova 137/16, 186 00 Praha 8
+                            full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -958,7 +1020,7 @@ components:
                                     "y": 740509.43
                             postOffice:
                               name: Praha 86
-                            full: Thámova 137/16, 186 00 Praha 8
+                            full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -978,15 +1040,17 @@ components:
                             full: null
                         nace:
                           - code: "74"
-                            name: Ostatní profesní, vědecké a technické činnosti
+                            name: "Ostatní profesní, vědecké a technické činnosti"
                             isPrimary: null
                           - code: "6820"
-                            name: Pronájem a správa vlastních nebo pronajatých nemovitostí
+                            name: >-
+                              Pronájem a správa vlastních nebo pronajatých
+                              nemovitostí
                             isPrimary: null
                           - code: "00"
                             name: >-
-                              Výroba, obchod a služby neuvedené v přílohách 1 až 3
-                              živnostenského zákona
+                              Výroba, obchod a služby neuvedené v přílohách 1 až
+                              3 živnostenského zákona
                             isPrimary: null
                         registrations:
                           - type: businessRegister
@@ -1010,8 +1074,8 @@ components:
                                 code: null
                                 name: Finanční úřad pro hlavní město Prahu
                                 detail: >-
-                                  Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8, tel.: 266
-                                  013 111
+                                  Územní pracoviště pro Prahu 8, Trojská 13a,
+                                  PRAHA 8, tel.: 266 013 111
                               reference: null
                         legalForm:
                           code: 112
@@ -1102,7 +1166,7 @@ components:
                               - Projektování elektrických zařízení
                               - "Výzkum a\_vývoj v\_oblasti přírodních a\_technických věd nebo společenských věd"
                               - "Testování, měření, analýzy a\_kontroly"
-                              - Reklamní činnost, marketing, mediální zastoupení
+                              - "Reklamní činnost, marketing, mediální zastoupení"
                               - "Návrhářská, designérská, aranžérská činnost a\_modeling"
                               - Fotografické služby
                               - "Překladatelská a\_tlumočnická činnost"
@@ -1195,7 +1259,7 @@ components:
                                     "y": 740509.43
                             postOffice:
                               name: Praha 86
-                            full: Thámova 137/16, 186 00 Praha 8
+                            full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -1215,15 +1279,17 @@ components:
                             full: null
                         nace:
                           - code: "74"
-                            name: Ostatní profesní, vědecké a technické činnosti
+                            name: "Ostatní profesní, vědecké a technické činnosti"
                             isPrimary: null
                           - code: "6820"
-                            name: Pronájem a správa vlastních nebo pronajatých nemovitostí
+                            name: >-
+                              Pronájem a správa vlastních nebo pronajatých
+                              nemovitostí
                             isPrimary: null
                           - code: "00"
                             name: >-
-                              Výroba, obchod a služby neuvedené v přílohách 1 až 3
-                              živnostenského zákona
+                              Výroba, obchod a služby neuvedené v přílohách 1 až
+                              3 živnostenského zákona
                             isPrimary: null
                         databoxes:
                           - code: txutpba
@@ -1251,8 +1317,8 @@ components:
                                 code: null
                                 name: Finanční úřad pro hlavní město Prahu
                                 detail: >-
-                                  Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8, tel.: 266
-                                  013 111
+                                  Územní pracoviště pro Prahu 8, Trojská 13a,
+                                  PRAHA 8, tel.: 266 013 111
                               reference: null
                         legalForm:
                           code: 112
@@ -1311,7 +1377,7 @@ components:
                                             "y": 529721.06
                                     postOffice:
                                       name: Radslavice
-                                    full: V Zahradách 277, 751 11 Radslavice
+                                    full: "V Zahradách 277, 751 11 Radslavice"
                                 addressOfficial:
                                   data:
                                     administrativeArea:
@@ -1373,7 +1439,7 @@ components:
                                             "y": 529721.06
                                     postOffice:
                                       name: Radslavice
-                                    full: V Zahradách 277, 751 11 Radslavice
+                                    full: "V Zahradách 277, 751 11 Radslavice"
                                 addressOfficial:
                                   data:
                                     administrativeArea:
@@ -1402,8 +1468,8 @@ components:
                           shareholders:
                             - shareholder:
                                 text: >-
-                                  PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277,
-                                  751 11 Radslavice
+                                  PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990
+                                  V Zahradách 277, 751 11 Radslavice
                               share:
                                 amount: "200000"
                                 currency: czk
@@ -1488,7 +1554,7 @@ components:
                               - Projektování elektrických zařízení
                               - "Výzkum a\_vývoj v\_oblasti přírodních a\_technických věd nebo společenských věd"
                               - "Testování, měření, analýzy a\_kontroly"
-                              - Reklamní činnost, marketing, mediální zastoupení
+                              - "Reklamní činnost, marketing, mediální zastoupení"
                               - "Návrhářská, designérská, aranžérská činnost a\_modeling"
                               - Fotografické služby
                               - "Překladatelská a\_tlumočnická činnost"
@@ -1520,7 +1586,6 @@ components:
                               validTo: null
                               isGroupRegistration: false
                 errors: []
-
           schema:
             type: object
             properties:
@@ -1590,7 +1655,7 @@ components:
                 request:
                   endpoint: email/search
                   code: BbX8JtZxKu2gVpMKtjcUhX7UqEFQt4
-                  customId:
+                  customId: null
                 response:
                   resultsCount: 5
                   results:
@@ -1686,7 +1751,9 @@ components:
                                     "y": 690079.8
                             postOffice:
                               name: Liberec 8
-                            full: České mládeže 452, 460 08 Liberec (nečleněné město)
+                            full: >-
+                              České mládeže 452, 460 08 Liberec (nečleněné
+                              město)
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -1707,7 +1774,9 @@ components:
                     - data:
                         administrativeArea:
                           country: CZ
-                        name: Webhelp Enterprise Sales Solutions Czech Republic, s.r.o.
+                        name: >-
+                          Webhelp Enterprise Sales Solutions Czech Republic,
+                          s.r.o.
                         registrationNumber: "29043654"
                         taxNumber: null
                         vatNumber: CZ29043654
@@ -1748,7 +1817,7 @@ components:
                                     "y": 742332.51
                             postOffice:
                               name: Praha 1
-                            full: Václavské náměstí 808/66, 110 00 Praha 1
+                            full: "Václavské náměstí 808/66, 110 00 Praha 1"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -1769,7 +1838,7 @@ components:
                     - data:
                         administrativeArea:
                           country: CZ
-                        name: WEBA Olomouc, s.r.o.
+                        name: "WEBA Olomouc, s.r.o."
                         registrationNumber: "47672153"
                         taxNumber: null
                         vatNumber: CZ47672153
@@ -1810,7 +1879,7 @@ components:
                                     "y": 543763.5
                             postOffice:
                               name: Olomouc 9
-                            full: K Mrazírnám 209/16, 779 00 Bystrovany
+                            full: "K Mrazírnám 209/16, 779 00 Bystrovany"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -1872,7 +1941,7 @@ components:
                                     "y": 741139.04
                             postOffice:
                               name: Praha 3
-                            full: Husinecká 903/10, 130 00 Praha 3
+                            full: "Husinecká 903/10, 130 00 Praha 3"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -1934,7 +2003,7 @@ components:
                                     "y": 738054
                             postOffice:
                               name: Jesenice u Prahy
-                            full: V Uličce 49, 252 42 Jesenice
+                            full: "V Uličce 49, 252 42 Jesenice"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -1953,7 +2022,6 @@ components:
                             zip: "25242"
                             full: null
                 errors: []
-
             searchRegistrationNumber:
               value:
                 status: 200
@@ -2025,7 +2093,7 @@ components:
                                     "y": 746955.94
                             postOffice:
                               name: Praha 58
-                            full: V zářezu 902/4, 158 00 Praha 5
+                            full: "V zářezu 902/4, 158 00 Praha 5"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2087,7 +2155,7 @@ components:
                                     "y": 742311.72
                             postOffice:
                               name: Praha 1
-                            full: Revoluční 762/13, 110 00 Praha 1
+                            full: "Revoluční 762/13, 110 00 Praha 1"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2149,7 +2217,7 @@ components:
                                     "y": 742484.89
                             postOffice:
                               name: Praha 1
-                            full: Krakovská 583/9, 110 00 Praha 1
+                            full: "Krakovská 583/9, 110 00 Praha 1"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2211,7 +2279,7 @@ components:
                                     "y": 473185.65
                             postOffice:
                               name: Ostrava 9
-                            full: 28. října 864/273, 709 00 Mariánské Hory a Hulváky
+                            full: "28. října 864/273, 709 00 Mariánské Hory a Hulváky"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2273,7 +2341,7 @@ components:
                                     "y": 790620.15
                             postOffice:
                               name: Most 1
-                            full: Velebudická 3271, 434 01 Most
+                            full: "Velebudická 3271, 434 01 Most"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2359,7 +2427,7 @@ components:
                               custom: []
                             postOffice:
                               name: null
-                            full: Priemyselná 12/12, 921 01 Piešťany
+                            full: "Priemyselná 12/12, 921 01 Piešťany"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2417,7 +2485,7 @@ components:
                               custom: []
                             postOffice:
                               name: null
-                            full: Kpt. Nálepku 2854/5, 080 01 Prešov
+                            full: "Kpt. Nálepku 2854/5, 080 01 Prešov"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2464,7 +2532,9 @@ components:
                     - data:
                         administrativeArea:
                           country: PL
-                        name: '"WARSZAWSKIE CENTRUM TARGOWE" SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ'
+                        name: >-
+                          "WARSZAWSKIE CENTRUM TARGOWE" SPÓŁKA Z OGRANICZONĄ
+                          ODPOWIEDZIALNOŚCIĄ
                         registrationNumber: "015576910"
                         taxNumber: "1080006895"
                         vatNumber: null
@@ -2490,7 +2560,9 @@ components:
                     - data:
                         administrativeArea:
                           country: PL
-                        name: PLANTS BROKER POLSKA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ
+                        name: >-
+                          PLANTS BROKER POLSKA SPÓŁKA Z OGRANICZONĄ
+                          ODPOWIEDZIALNOŚCIĄ
                         registrationNumber: "015582890"
                         taxNumber: "1080007239"
                         vatNumber: PL1080007239
@@ -2585,7 +2657,7 @@ components:
                                     "y": 746955.94
                             postOffice:
                               name: Praha 58
-                            full: V zářezu 902/4, 158 00 Praha 5
+                            full: "V zářezu 902/4, 158 00 Praha 5"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2647,7 +2719,7 @@ components:
                                     "y": 742311.72
                             postOffice:
                               name: Praha 1
-                            full: Revoluční 762/13, 110 00 Praha 1
+                            full: "Revoluční 762/13, 110 00 Praha 1"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2709,7 +2781,7 @@ components:
                                     "y": 742484.89
                             postOffice:
                               name: Praha 1
-                            full: Krakovská 583/9, 110 00 Praha 1
+                            full: "Krakovská 583/9, 110 00 Praha 1"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2771,7 +2843,7 @@ components:
                                     "y": 473185.65
                             postOffice:
                               name: Ostrava 9
-                            full: 28. října 864/273, 709 00 Mariánské Hory a Hulváky
+                            full: "28. října 864/273, 709 00 Mariánské Hory a Hulváky"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -2833,7 +2905,7 @@ components:
                                     "y": 790620.15
                             postOffice:
                               name: Most 1
-                            full: Velebudická 3271, 434 01 Most
+                            full: "Velebudická 3271, 434 01 Most"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -3192,7 +3264,7 @@ components:
                 request:
                   endpoint: phone/validate
                   code: yUpjcMnDzLqdKAQbUX09oE4ADHnKhv
-                  customId:
+                  customId: null
                   query:
                     numberWithPrefix: "+420607123456"
                   options:
@@ -3221,7 +3293,7 @@ components:
                         national: "607123456"
                         nationalFormatted: 607 123 456
                         international: "+420607123456"
-                        internationalFormatted: "+420 607 123 456"
+                        internationalFormatted: +420 607 123 456
                     errors: []
                   resultCorrected: null
                   suggestions: []
@@ -3232,13 +3304,13 @@ components:
                 request:
                   endpoint: phone/validate
                   code: NcwvAHGF34djYlL9F1j7DIoCO5io16
-                  customId:
+                  customId: null
                   query:
                     numberWithPrefix: "+42060712345"
                   options:
                     validationType: extended
                     allowedPrefixes: []
-                    defaultPrefix:
+                    defaultPrefix: null
                   client:
                     country: CZ
                     location:
@@ -3265,12 +3337,12 @@ components:
                     errors:
                       - group: VALUE
                         type: INVALID
-                        subtype:
+                        subtype: null
                         severity: critical
                         relatedTo:
                           - numberWithPrefix
                         description: Value is not valid.
-                  resultCorrected:
+                  resultCorrected: null
                   suggestions: []
                 errors: []
             invalidWithCorrection:
@@ -3279,14 +3351,14 @@ components:
                 request:
                   endpoint: phone/validate
                   code: O3L1bSU0PAggv9d0i5ogtpspSxUoqt
-                  customId:
+                  customId: null
                   query:
                     prefix: "+421"
                     number: "607123456"
                   options:
                     validationType: extended
                     allowedPrefixes: []
-                    defaultPrefix:
+                    defaultPrefix: null
                   client:
                     country: CZ
                     location:
@@ -3313,7 +3385,7 @@ components:
                     errors:
                       - group: VALUE
                         type: INVALID
-                        subtype:
+                        subtype: null
                         severity: critical
                         relatedTo:
                           - number
@@ -3333,12 +3405,12 @@ components:
                         national: "607123456"
                         nationalFormatted: 607 123 456
                         international: "+420607123456"
-                        internationalFormatted: "+420 607 123 456"
+                        internationalFormatted: +420 607 123 456
                     errors: []
                     fixes:
                       - group: VALUE
                         type: CHANGED
-                        subtype:
+                        subtype: null
                         data:
                           typeFrom: prefix
                           type: prefix
@@ -3352,7 +3424,7 @@ components:
                 request:
                   endpoint: phone/validate
                   code: 0sOViYZJX7lN1z7brRuqMyzxbj3y9L
-                  customId:
+                  customId: null
                   query:
                     prefix: "+48"
                     number: "728984101"
@@ -3380,7 +3452,7 @@ components:
                         national: "728984101"
                         nationalFormatted: 728 984 101
                         international: "+48728984101"
-                        internationalFormatted: "+48 728 984 101"
+                        internationalFormatted: +48 728 984 101
                     errors: []
                   resultCorrected: null
                   suggestions:
@@ -3396,12 +3468,12 @@ components:
                           national: "728984101"
                           nationalFormatted: 728 984 101
                           international: "+420728984101"
-                          internationalFormatted: "+420 728 984 101"
+                          internationalFormatted: +420 728 984 101
                       errors: []
                       fixes:
                         - group: VALUE
                           type: CHANGED
-                          subtype:
+                          subtype: null
                           data:
                             typeFrom: prefix
                             type: prefix
@@ -3436,7 +3508,7 @@ components:
                 request:
                   endpoint: location/search
                   code: B9loyKgYifx7AfmEZTz9jRGc55zOvZ
-                  customId:
+                  customId: null
                   query:
                     type: street
                     value: tha
@@ -3463,11 +3535,11 @@ components:
                         cityDistrictSpecial: Praha 8
                         cityDistrict: Praha 8
                         cityPart: Karlín
-                        cityAdministrative:
+                        cityAdministrative: null
                         cadastralArea: Karlín
                         ids:
-                          internal:
-                          external:
+                          internal: null
+                          external: null
                         street: Thámova
                         number:
                           part1: null
@@ -3487,7 +3559,7 @@ components:
                           custom: []
                         postOffice:
                           name: Praha 86
-                        full: Thámova, 186 00 Praha
+                        full: "Thámova, 186 00 Praha"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -3495,11 +3567,11 @@ components:
                         cityDistrictSpecial: Praha 6
                         cityDistrict: Praha 6
                         cityPart: Dejvice
-                        cityAdministrative:
+                        cityAdministrative: null
                         cadastralArea: Dejvice
                         ids:
-                          internal:
-                          external:
+                          internal: null
+                          external: null
                         street: Thákurova
                         number:
                           part1: null
@@ -3519,7 +3591,7 @@ components:
                           custom: []
                         postOffice:
                           name: Praha 6
-                        full: Thákurova, 160 00 Praha
+                        full: "Thákurova, 160 00 Praha"
                     - data:
                         country: CZ
                         region: Středočeský kraj
@@ -3527,7 +3599,7 @@ components:
                         cityDistrictSpecial:
                         cityDistrict:
                         cityPart: Brandýs nad Labem
-                        cityAdministrative:
+                        cityAdministrative: null
                         cadastralArea: Brandýs nad Labem
                         ids:
                           internal: null
@@ -3551,7 +3623,7 @@ components:
                           custom: []
                         postOffice:
                           name: Brandýs nad Labem-Stará Boleslav 1
-                        full: Thámova, 250 01 Brandýs nad Labem-Stará Boleslav
+                        full: "Thámova, 250 01 Brandýs nad Labem-Stará Boleslav"
                     - data:
                         country: CZ
                         region: Ústecký kraj
@@ -3559,11 +3631,11 @@ components:
                         cityDistrictSpecial: null
                         cityDistrict: null
                         cityPart: Trnovany
-                        cityAdministrative:
+                        cityAdministrative: null
                         cadastralArea: Teplice-Trnovany
                         ids:
-                          internal:
-                          external:
+                          internal: null
+                          external: null
                         street: Thámova
                         number:
                           part1: null
@@ -3583,19 +3655,19 @@ components:
                           custom: []
                         postOffice:
                           name: Teplice 1
-                        full: Thámova, 415 01 Teplice
+                        full: "Thámova, 415 01 Teplice"
                     - data:
                         country: CZ
                         region: Plzeňský kraj
                         district: Plzeň-město
-                        cityDistrictSpecial:
+                        cityDistrictSpecial: null
                         cityDistrict: Plzeň 3
                         cityPart: Jižní Předměstí
-                        cityAdministrative:
+                        cityAdministrative: null
                         cadastralArea: Plzeň
                         ids:
-                          internal:
-                          external:
+                          internal: null
+                          external: null
                         street: Thámova
                         number:
                           part1: null
@@ -3615,7 +3687,7 @@ components:
                           custom: []
                         postOffice:
                           name: Plzeň 1
-                        full: Thámova, 301 00 Plzeň
+                        full: "Thámova, 301 00 Plzeň"
                 errors: []
             searchCity:
               value:
@@ -3623,7 +3695,7 @@ components:
                 request:
                   endpoint: location/search
                   code: bDgVSHImL8eGiZwlEQ8mrbMLqW3SnS
-                  customId:
+                  customId: null
                   query:
                     type: city
                     value: pra
@@ -3664,7 +3736,7 @@ components:
                           part2Number: null
                           part2Letter: null
                           full: null
-                        streetWithNumber:
+                        streetWithNumber: null
                         city: Praha
                         zip: null
                         geometry:
@@ -3673,7 +3745,7 @@ components:
                             lon: 14.457585838940725
                           custom: []
                         postOffice:
-                          name:
+                          name: null
                         full: Praha
                     - data:
                         country: CZ
@@ -3698,7 +3770,7 @@ components:
                           full: null
                         streetWithNumber: null
                         city: Praha
-                        zip:
+                        zip: null
                         geometry:
                           gps:
                             lat: 50.02605723631767
@@ -3760,7 +3832,7 @@ components:
                           part2Number: null
                           part2Letter: null
                           full: null
-                        streetWithNumber:
+                        streetWithNumber: null
                         city: Praha
                         zip: null
                         geometry:
@@ -3791,10 +3863,10 @@ components:
                           part2: null
                           part2Number: null
                           part2Letter: null
-                          full:
+                          full: null
                         streetWithNumber: null
                         city: Praha
-                        zip:
+                        zip: null
                         geometry:
                           gps:
                             lat: 50.054860064347096
@@ -3865,7 +3937,7 @@ components:
                                 "y": 739893.35
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 2770/56, 130 00 Praha 3
+                        full: "Jeseniova 2770/56, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -3901,7 +3973,7 @@ components:
                                 "y": 739916.62
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 2770/56a, 130 00 Praha 3
+                        full: "Jeseniova 2770/56a, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -3937,7 +4009,7 @@ components:
                                 "y": 739900.09
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 2770/56b, 130 00 Praha 3
+                        full: "Jeseniova 2770/56b, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -3973,7 +4045,7 @@ components:
                                 "y": 739891.75
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 2770/56c, 130 00 Praha 3
+                        full: "Jeseniova 2770/56c, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -4009,7 +4081,7 @@ components:
                                 "y": 739879.19
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 2770/56d, 130 00 Praha 3
+                        full: "Jeseniova 2770/56d, 130 00 Praha 3"
                 errors: []
             searchZip:
               value:
@@ -4347,7 +4419,7 @@ components:
                               type: JTSK
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 92/45, 130 00 Praha 3
+                        full: "Jeseniova 92/45, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -4391,7 +4463,7 @@ components:
                               type: JTSK
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 1164/47, 130 00 Praha 3
+                        full: "Jeseniova 1164/47, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -4435,7 +4507,7 @@ components:
                               type: JTSK
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 1184/49, 130 00 Praha 3
+                        full: "Jeseniova 1184/49, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -4479,7 +4551,7 @@ components:
                               type: JTSK
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 1169/51, 130 00 Praha 3
+                        full: "Jeseniova 1169/51, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -4523,7 +4595,7 @@ components:
                               type: JTSK
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 1046/35, 130 00 Praha 3
+                        full: "Jeseniova 1046/35, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -4567,7 +4639,7 @@ components:
                               type: JTSK
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 449/41, 130 00 Praha 3
+                        full: "Jeseniova 449/41, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -4611,7 +4683,7 @@ components:
                               type: JTSK
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 1522/53, 130 00 Praha 3
+                        full: "Jeseniova 1522/53, 130 00 Praha 3"
                     - data:
                         country: CZ
                         region: Hlavní město Praha
@@ -4655,7 +4727,7 @@ components:
                               type: JTSK
                         postOffice:
                           name: Praha 3
-                        full: Jeseniova 1196/52, 130 00 Praha 3
+                        full: "Jeseniova 1196/52, 130 00 Praha 3"
                 errors: []
           schema:
             type: object
@@ -4779,7 +4851,7 @@ components:
                                 "y": 740509.43
                         postOffice:
                           name: Praha 86
-                        full: Thámova 137/16, 186 00 Praha 8
+                        full: "Thámova 137/16, 186 00 Praha 8"
                 errors: []
           schema:
             type: object
@@ -4819,7 +4891,23 @@ components:
                             properties:
                               singleLocationResultDistance:
                                 type: number
-                                description: "Distance in meters used for single location result. It is measured in meters and represents a value for determining whether only one address or multiple addresses should be returned. It is the distance in meters from the user's GPS coordinates. If there is only one address within a radius of X (singleLocationResultDistance) meters, it will be returned as the only result. If there are multiple addresses within a radius of X, all matching addresses will be returned up to the limit of options.resultsLimit. If there are no addresses within a radius of X, the closest addresses outside the radius of X up to a maximum of options.resultsLimit will be returned."
+                                description: >-
+                                  Distance in meters used for single location
+                                  result. It is measured in meters and
+                                  represents a value for determining whether
+                                  only one address or multiple addresses should
+                                  be returned. It is the distance in meters from
+                                  the user's GPS coordinates. If there is only
+                                  one address within a radius of X
+                                  (singleLocationResultDistance) meters, it will
+                                  be returned as the only result. If there are
+                                  multiple addresses within a radius of X, all
+                                  matching addresses will be returned up to the
+                                  limit of options.resultsLimit. If there are no
+                                  addresses within a radius of X, the closest
+                                  addresses outside the radius of X up to a
+                                  maximum of options.resultsLimit will be
+                                  returned.
                                 minimum: 1
                                 maximum: 100
                                 example: 15
@@ -4840,7 +4928,7 @@ components:
                 request:
                   endpoint: location/get
                   code: 2iEm6qswI89DAZFSV2MPKrqSzextB5
-                  customId:
+                  customId: null
                   query:
                     id: "2070391"
                     country: CZ
@@ -4862,7 +4950,7 @@ components:
                         cityDistrictSpecial: Praha 8
                         cityDistrict: Praha 8
                         cityPart: Karlín
-                        cityAdministrative:
+                        cityAdministrative: null
                         cadastralArea: Karlín
                         ids:
                           internal: "2070391"
@@ -4879,10 +4967,10 @@ components:
                         number:
                           part1: "137"
                           part1Number: "137"
-                          part1Letter:
+                          part1Letter: null
                           part2: "16"
                           part2Number: "16"
-                          part2Letter:
+                          part2Letter: null
                           full: 137/16
                         streetWithNumber: Thámova 137/16
                         city: Praha
@@ -4895,10 +4983,10 @@ components:
                             - type: JTSK
                               coordinates:
                                 x: 1042819.66
-                                y: 740509.43
+                                "y": 740509.43
                         postOffice:
                           name: Praha 86
-                        full: Thámova 137/16, 186 00 Praha 8
+                        full: "Thámova 137/16, 186 00 Praha 8"
                 errors: []
             getFullDataScopeByExternalID:
               value:
@@ -4906,7 +4994,7 @@ components:
                 request:
                   endpoint: location/get
                   code: CTJ2URBUvxMNIKrkruxEtJdmxxiNBz
-                  customId:
+                  customId: null
                   query:
                     id: "22349995"
                     country: CZ
@@ -4928,7 +5016,7 @@ components:
                         cityDistrictSpecial: Praha 8
                         cityDistrict: Praha 8
                         cityPart: Karlín
-                        cityAdministrative:
+                        cityAdministrative: null
                         cadastralArea: Karlín
                         ids:
                           internal: "2070391"
@@ -4945,10 +5033,10 @@ components:
                         number:
                           part1: "137"
                           part1Number: "137"
-                          part1Letter:
+                          part1Letter: null
                           part2: "16"
                           part2Number: "16"
-                          part2Letter:
+                          part2Letter: null
                           full: 137/16
                         streetWithNumber: Thámova 137/16
                         city: Praha
@@ -4961,10 +5049,10 @@ components:
                             - type: JTSK
                               coordinates:
                                 x: 1042819.66
-                                y: 740509.43
+                                "y": 740509.43
                         postOffice:
                           name: Praha 86
-                        full: Thámova 137/16, 186 00 Praha 8
+                        full: "Thámova 137/16, 186 00 Praha 8"
                 errors: []
           schema:
             type: object
@@ -4985,7 +5073,9 @@ components:
                         properties:
                           country:
                             type: string
-                            description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                            description: >-
+                              Country code in format [ISO-3166-1
+                              alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
                             example: CZ
                           id:
                             type: string
@@ -5090,7 +5180,7 @@ components:
                               "y": 740509.43
                       postOffice:
                         name: Praha 86
-                      full: Thámova 137/16, 186 00 Praha 8
+                      full: "Thámova 137/16, 186 00 Praha 8"
                     errors: []
                   resultCorrected: null
                   suggestions: []
@@ -5282,7 +5372,7 @@ components:
                               "y": 740509.43
                       postOffice:
                         name: Praha 86
-                      full: Thámova 137/16, 186 00 Praha 8
+                      full: "Thámova 137/16, 186 00 Praha 8"
                     errors: []
                     fixes:
                       - group: SYNTAX
@@ -5410,7 +5500,7 @@ components:
                                 "y": 739678.87
                         postOffice:
                           name: Praha 3
-                        full: Olšanská 2898/4d, 130 00 Praha 3
+                        full: "Olšanská 2898/4d, 130 00 Praha 3"
                       errors: []
                       fixes:
                         - group: SYNTAX
@@ -5457,7 +5547,7 @@ components:
                                 "y": 739655.59
                         postOffice:
                           name: Praha 3
-                        full: Olšanská 2898/4h, 130 00 Praha 3
+                        full: "Olšanská 2898/4h, 130 00 Praha 3"
                       errors: []
                       fixes:
                         - group: SYNTAX
@@ -5504,7 +5594,7 @@ components:
                                 "y": 739698
                         postOffice:
                           name: Praha 3
-                        full: Olšanská 2898/4a, 130 00 Praha 3
+                        full: "Olšanská 2898/4a, 130 00 Praha 3"
                       errors: []
                       fixes:
                         - group: SYNTAX
@@ -5551,7 +5641,7 @@ components:
                                 "y": 739683.63
                         postOffice:
                           name: Praha 3
-                        full: Olšanská 2898/4e, 130 00 Praha 3
+                        full: "Olšanská 2898/4e, 130 00 Praha 3"
                       errors: []
                       fixes:
                         - group: SYNTAX
@@ -5598,7 +5688,7 @@ components:
                                 "y": 739649.77
                         postOffice:
                           name: Praha 3
-                        full: Olšanská 2898/4f, 130 00 Praha 3
+                        full: "Olšanská 2898/4f, 130 00 Praha 3"
                       errors: []
                       fixes:
                         - group: SYNTAX
@@ -5645,7 +5735,7 @@ components:
                                 "y": 739636.54
                         postOffice:
                           name: Praha 3
-                        full: Olšanská 2898/4g, 130 00 Praha 3
+                        full: "Olšanská 2898/4g, 130 00 Praha 3"
                       errors: []
                       fixes:
                         - group: SYNTAX
@@ -5692,7 +5782,7 @@ components:
                                 "y": 739637.07
                         postOffice:
                           name: Praha 3
-                        full: Olšanská 2898/4i, 130 00 Praha 3
+                        full: "Olšanská 2898/4i, 130 00 Praha 3"
                       errors: []
                       fixes:
                         - group: SYNTAX
@@ -5739,7 +5829,7 @@ components:
                                 "y": 739684.73
                         postOffice:
                           name: Praha 3
-                        full: Olšanská 2898/4b, 130 00 Praha 3
+                        full: "Olšanská 2898/4b, 130 00 Praha 3"
                       errors: []
                       fixes:
                         - group: SYNTAX
@@ -5786,7 +5876,7 @@ components:
                                 "y": 739666.17
                         postOffice:
                           name: Praha 3
-                        full: Olšanská 2898/4c, 130 00 Praha 3
+                        full: "Olšanská 2898/4c, 130 00 Praha 3"
                       errors: []
                       fixes:
                         - group: SYNTAX
@@ -5868,7 +5958,9 @@ components:
                           country:
                             type: string
                             nullable: true
-                            description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                            description: >-
+                              Country code in format [ISO-3166-1
+                              alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
                             example: CZ
                       options:
                         $ref: "#/components/schemas/LocationRequestOptions"
@@ -5958,7 +6050,7 @@ components:
                                   "y": 740509.43
                           postOffice:
                             name: Praha 86
-                          full: Thámova 137/16, 186 00 Praha 8
+                          full: "Thámova 137/16, 186 00 Praha 8"
                       addressOfficial:
                         data:
                           administrativeArea:
@@ -6120,7 +6212,7 @@ components:
                                     "y": 541769.82
                             postOffice:
                               name: Šternberk 1
-                            full: Strmá 1129/6, 785 01 Šternberk
+                            full: "Strmá 1129/6, 785 01 Šternberk"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -6193,7 +6285,7 @@ components:
                                     "y": 823065.17
                             postOffice:
                               name: Plzeň 1
-                            full: Husova 786/19, 301 00 Plzeň 3
+                            full: "Husova 786/19, 301 00 Plzeň 3"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -6266,7 +6358,7 @@ components:
                                     "y": 723441.42
                             postOffice:
                               name: Zápy
-                            full: Zápy 253, 250 61 Zápy
+                            full: "Zápy 253, 250 61 Zápy"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -6339,7 +6431,7 @@ components:
                                     "y": 741018.8
                             postOffice:
                               name: Praha 101
-                            full: Krymská 439/24, 101 00 Praha 10
+                            full: "Krymská 439/24, 101 00 Praha 10"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -6412,7 +6504,7 @@ components:
                                     "y": 528800.27
                             postOffice:
                               name: Bruntál 1
-                            full: Rýmařovská 1491/31, 792 01 Bruntál
+                            full: "Rýmařovská 1491/31, 792 01 Bruntál"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -6485,7 +6577,7 @@ components:
                                     "y": 740509.43
                             postOffice:
                               name: Praha 86
-                            full: Thámova 137/16, 186 00 Praha 8
+                            full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -6558,7 +6650,7 @@ components:
                                     "y": 736720.46
                             postOffice:
                               name: Praha 10
-                            full: Michelangelova 1995/16, 100 00 Praha 10
+                            full: "Michelangelova 1995/16, 100 00 Praha 10"
                         addressOfficial:
                           data:
                             administrativeArea:
@@ -6678,7 +6770,7 @@ components:
                                   "y": 740509.43
                           postOffice:
                             name: Praha 86
-                          full: Thámova 137/16, 186 00 Praha 8
+                          full: "Thámova 137/16, 186 00 Praha 8"
                       addressOfficial:
                         data:
                           administrativeArea:
@@ -6708,7 +6800,6 @@ components:
                           value: AVANTRO s.r.o.
                   suggestions: []
                 errors: []
-
           schema:
             type: object
             properties:
@@ -6737,7 +6828,7 @@ components:
                 request:
                   endpoint: email/validate
                   code: 4hUFvuub644fkbKe23bkLoKESxVVhp
-                  customId:
+                  customId: null
                   query:
                     email: info@foxentry.com
                   options:
@@ -6771,7 +6862,7 @@ components:
                 request:
                   endpoint: email/validate
                   code: RXGgaRcYqUzFIjbu2vUXhxTZpeklQt
-                  customId:
+                  customId: null
                   query:
                     email: info@gmali.com
                   options:
@@ -6802,7 +6893,9 @@ components:
                         severity: critical
                         relatedTo:
                           - email
-                        description: Domain does not have DNS records set properly for receiving emails.
+                        description: >-
+                          Domain does not have DNS records set properly for
+                          receiving emails.
                   resultCorrected: null
                   suggestions:
                     - isValid: false
@@ -6839,7 +6932,7 @@ components:
                 request:
                   endpoint: email/validate
                   code: 22bXbUaod5vmpmWGFhkY0vIChHcmHA
-                  customId:
+                  customId: null
                   query:
                     email: invalidUser@foxentry.com
                   options:
@@ -6866,7 +6959,7 @@ components:
                     errors:
                       - group: VALUE
                         type: INVALID
-                        subtype:
+                        subtype: null
                         severity: critical
                         relatedTo:
                           - email
@@ -6880,9 +6973,9 @@ components:
                 request:
                   endpoint: email/validate
                   code: cL2rb2TBMSGnEjew9s88bZkHSBdrXF
-                  customId:
+                  customId: null
                   query:
-                    email: info@foxentry,com
+                    email: "info@foxentry,com"
                   options:
                     validationType: extended
                     acceptDisposableEmails: true
@@ -6898,8 +6991,8 @@ components:
                     proposal: invalidWithCorrection
                     data:
                       user: info
-                      domain: foxentry,com
-                      email: info@foxentry,com
+                      domain: "foxentry,com"
+                      email: "info@foxentry,com"
                     flags: {}
                     errors:
                       - group: SYNTAX
@@ -6927,7 +7020,7 @@ components:
                         data:
                           typeFrom: email
                           type: email
-                          valueFrom: info@foxentry,com
+                          valueFrom: "info@foxentry,com"
                           value: info@foxentry.com
                   suggestions: []
                 errors: []
@@ -6937,7 +7030,7 @@ components:
                 request:
                   endpoint: email/validate
                   code: uhnFcafZsyYMSLeaSVJQfEOPyErNtM
-                  customId:
+                  customId: null
                   query:
                     email: infogmail.com
                   options:
@@ -6994,7 +7087,7 @@ components:
                 request:
                   endpoint: email/validate
                   code: GSPCuSwmAO2kduAxr5Qcd2Na3mIOOl
-                  customId:
+                  customId: null
                   query:
                     email: rasini3451@naymedia.com
                   options:
@@ -7035,7 +7128,7 @@ components:
                 request:
                   endpoint: email/validate
                   code: lE7l2QQ2sQpgNk6Iu2CxWeIL1fCP8S
-                  customId:
+                  customId: null
                   query:
                     email: info@gmail.com
                   options:
@@ -7139,13 +7232,19 @@ components:
                         - $ref: "#/components/schemas/Error400RequestBodyNotJson"
                         - $ref: "#/components/schemas/Error400RequestBodyNoRequest"
                         - $ref: "#/components/schemas/Error400RequestBodyTooBig"
-                        - $ref: "#/components/schemas/Error400RequestOptionsParameterNotSupported"
-                        - $ref: "#/components/schemas/Error400RequestOptionParameterValueNotSupported"
+                        - $ref: >-
+                            #/components/schemas/Error400RequestOptionsParameterNotSupported
+                        - $ref: >-
+                            #/components/schemas/Error400RequestOptionParameterValueNotSupported
                         - $ref: "#/components/schemas/Error400RequestQueryNotSent"
-                        - $ref: "#/components/schemas/Error400RequestQueryParameterCombination"
-                        - $ref: "#/components/schemas/Error400RequestQueryParameterMissing"
-                        - $ref: "#/components/schemas/Error400RequestQueryParameterNotSupported"
-                        - $ref: "#/components/schemas/Error400RequestQueryParameterRequired"
+                        - $ref: >-
+                            #/components/schemas/Error400RequestQueryParameterCombination
+                        - $ref: >-
+                            #/components/schemas/Error400RequestQueryParameterMissing
+                        - $ref: >-
+                            #/components/schemas/Error400RequestQueryParameterNotSupported
+                        - $ref: >-
+                            #/components/schemas/Error400RequestQueryParameterRequired
     Error401:
       description: Unauthorized.
       content:
@@ -7255,10 +7354,14 @@ components:
                     type: array
                     items:
                       oneOf:
-                        - $ref: "#/components/schemas/Error429RequestBillingServiceLimit"
-                        - $ref: "#/components/schemas/Error429RequestRateLimitCreditPerDay"
-                        - $ref: "#/components/schemas/Error429RequestRateLimitCreditPerIp"
-                        - $ref: "#/components/schemas/Error429RequestRateLimitTooManyRequests"
+                        - $ref: >-
+                            #/components/schemas/Error429RequestBillingServiceLimit
+                        - $ref: >-
+                            #/components/schemas/Error429RequestRateLimitCreditPerDay
+                        - $ref: >-
+                            #/components/schemas/Error429RequestRateLimitCreditPerIp
+                        - $ref: >-
+                            #/components/schemas/Error429RequestRateLimitTooManyRequests
     Error500:
       description: Internal Server Error.
       content:
@@ -7277,9 +7380,11 @@ components:
                     items:
                       oneOf:
                         - $ref: "#/components/schemas/Error500InternalBilling"
-                        - $ref: "#/components/schemas/Error500InternalDatabaseConnection"
+                        - $ref: >-
+                            #/components/schemas/Error500InternalDatabaseConnection
                         - $ref: "#/components/schemas/Error500InternalDatabaseError"
-                        - $ref: "#/components/schemas/Error500InternalDatabaseNotAvailable"
+                        - $ref: >-
+                            #/components/schemas/Error500InternalDatabaseNotAvailable
                         - $ref: "#/components/schemas/Error500InternalError"
                         - $ref: "#/components/schemas/Error500Timeout"
                         - $ref: "#/components/schemas/Error500RequestProjectNoData"
@@ -7362,7 +7467,9 @@ components:
                 country:
                   type: string
                   nullable: true
-                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  description: >-
+                    Country code in format [ISO-3166-1
+                    alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
                   example: CZ
           required:
             - type
@@ -7412,7 +7519,9 @@ components:
           example: numeric
     ClientRequest:
       type: object
-      description: TODO
+      description: >-
+        Additional information about the user in order to specify the results in
+        response. Used mainly for web forms.
       properties:
         ip:
           type: string
@@ -7420,11 +7529,13 @@ components:
           format: ipv4
         country:
           type: string
-          description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+          description: >-
+            Country code in format [ISO-3166-1
+            alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
           example: CZ
         location:
           type: object
-          description: TODO
+          description: Latitude & longitude of the client's aprox location.
           properties:
             lat:
               type: number
@@ -7441,7 +7552,9 @@ components:
           allOf:
             - $ref: "#/components/schemas/ClientRequest"
             - type: object
-              description: TODO
+              description: >-
+                Additional information about the user in order to specify the
+                results in response. Used mainly for web forms.
               properties:
                 location:
                   type: object
@@ -7464,7 +7577,19 @@ components:
               properties:
                 singleLocationResultDistance:
                   type: number
-                  description: "Distance in meters used for single location result. It is measured in meters and represents a value for determining whether only one address or multiple addresses should be returned. It is the distance in meters from the user's GPS coordinates. If there is only one address within a radius of X (singleLocationResultDistance) meters, it will be returned as the only result. If there are multiple addresses within a radius of X, all matching addresses will be returned up to the limit of options.resultsLimit. If there are no addresses within a radius of X, the closest addresses outside the radius of X up to a maximum of options.resultsLimit will be returned."
+                  description: >-
+                    Distance in meters used for single location result. It is
+                    measured in meters and represents a value for determining
+                    whether only one address or multiple addresses should be
+                    returned. It is the distance in meters from the user's GPS
+                    coordinates. If there is only one address within a radius of
+                    X (singleLocationResultDistance) meters, it will be returned
+                    as the only result. If there are multiple addresses within a
+                    radius of X, all matching addresses will be returned up to
+                    the limit of options.resultsLimit. If there are no addresses
+                    within a radius of X, the closest addresses outside the
+                    radius of X up to a maximum of options.resultsLimit will be
+                    returned.
                   example: 100
       required:
         - client
@@ -7514,7 +7639,9 @@ components:
           properties:
             country:
               type: string
-              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              description: >-
+                Country code in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
               example: CZ
             id:
               type: string
@@ -7615,7 +7742,9 @@ components:
             country:
               type: string
               nullable: true
-              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              description: >-
+                Country code in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
               example: CZ
         options:
           $ref: "#/components/schemas/LocationRequestOptions"
@@ -7735,12 +7864,16 @@ components:
               example: full
             acceptDegrees:
               type: boolean
-              description: "Allow to enter a title directly into the name, surname or nameSurname input."
+              description: >-
+                Allow to enter a title directly into the name, surname or
+                nameSurname input.
               default: false
               example: false
             acceptContext:
               type: boolean
-              description: "Allow to insert context directly into name, surname or nameSurname."
+              description: >-
+                Allow to insert context directly into name, surname or
+                nameSurname.
               default: false
               example: false
             validationDepth:
@@ -7753,7 +7886,9 @@ components:
               example: minimal
             smartMode:
               type: boolean
-              description: "Allows to correct the name (resultCorrected). If this is disabled, the corrections are given as a suggestion."
+              description: >-
+                Allows to correct the name (resultCorrected). If this is
+                disabled, the corrections are given as a suggestion.
               default: true
               example: false
           required:
@@ -7772,7 +7907,9 @@ components:
               example: Avantro s.r.o.
             country:
               type: string
-              description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
+              description: >-
+                Country codes in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
               example: CZ
             registrationNumber:
               type: string
@@ -7803,7 +7940,9 @@ components:
                 - limit
                 - prefer
                 - null
-              description: "prefer = Prefer results matching filter, limit = Limit to results matching filter."
+              description: >-
+                prefer = Prefer results matching the country filter, limit =
+                Limit to results matching the country filter.
               default: prefer
               example: limit
             resultsLimit:
@@ -7814,7 +7953,9 @@ components:
               default: 10
             includeTerminatedSubjects:
               type: boolean
-              description: Whether or not to return in the API response also entities that have already been terminated.
+              description: >-
+                Whether or not to return in the API response also entities that
+                have already been terminated.
               default: false
               example: true
       required:
@@ -7846,7 +7987,9 @@ components:
                   example: Avantro s.r.o.
                 country:
                   type: string
-                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  description: >-
+                    Country code in format [ISO-3166-1
+                    alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
                   example: CZ
                 registrationNumber:
                   type: string
@@ -7879,7 +8022,9 @@ components:
               enum:
                 - limit
                 - prefer
-              description: "prefer = Prefer results matching filter, limit = Limit to results matching filter."
+              description: >-
+                prefer = Prefer results matching the country filter, limit =
+                Limit to results matching the country filter.
               default: prefer
               example: limit
             resultsLimit:
@@ -7891,7 +8036,9 @@ components:
               example: 10
             includeTerminatedSubjects:
               type: boolean
-              description: Whether or not to return in the output also entities that have already been terminated.
+              description: >-
+                Whether or not to return in the output also entities that have
+                already been terminated.
               default: false
               example: true
       required:
@@ -7928,7 +8075,9 @@ components:
           properties:
             country:
               type: string
-              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              description: >-
+                Country code in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
               example: CZ
             registrationNumber:
               type: string
@@ -7954,7 +8103,9 @@ components:
           example: full
         includeTerminatedSubjects:
           type: boolean
-          description: Whether or not to include entities that have already ended their existence in the output.
+          description: >-
+            Whether or not to include entities that have already ended their
+            existence in the output.
           default: false
           example: false
     GetCompanyDataResponseRequest:
@@ -7978,7 +8129,9 @@ components:
           properties:
             country:
               type: string
-              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              description: >-
+                Country code in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
               example: CZ
             registrationNumber:
               oneOf:
@@ -8022,11 +8175,12 @@ components:
       properties:
         data:
           type: object
-          description: TODO
           properties:
             country:
               type: string
-              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              description: >-
+                Country code in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
               nullable: true
               example: CZ
             name:
@@ -8056,14 +8210,16 @@ components:
             address:
               type: object
               nullable: true
-              description: TODO
+              description: Address data
               properties:
                 data:
                   $ref: "#/components/schemas/LocationData"
             addressOfficial:
               $ref: "#/components/schemas/LocationOficial"
               nullable: true
-              description: TODO
+              description: >-
+                Address data from the official registry. Not validated by
+                Foxentry.
             nace:
               type: array
               description: Types of business
@@ -8085,7 +8241,7 @@ components:
                     example: false
             databoxes:
               type: array
-              description: TODO
+              description: Company's electronic mail boxes (databoxes).
               items:
                 type: object
                 properties:
@@ -8099,11 +8255,13 @@ components:
                     example: AVANTRO s.r.o.
                   receivingMessages:
                     type: number
-                    description: Number of receiving messages.
+                    description: >-
+                      Whether the databox is set to receive messages from public
+                      as well.
                     example: 1
             registrations:
               type: array
-              description: TODO
+              description: Information about the company's registrations.
               items:
                 type: object
                 properties:
@@ -8115,20 +8273,22 @@ components:
                     example: businessRegister
                   data:
                     type: object
-                    description: TODO
                     properties:
                       registrator:
                         type: object
+                        description: Information about registrator.
                         properties:
                           name:
                             type: string
-                            description: TODO
+                            description: Name of registrator.
                             example: Městský soud v Praze
                           detail:
                             type: string
                             nullable: true
                             description: Detail of registration.
-                            example: "Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8, tel. 266 013 111"
+                            example: >-
+                              Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA
+                              8, tel. 266 013 111
                       reference:
                         type: string
                         nullable: true
@@ -8136,7 +8296,6 @@ components:
                         example: C 256795
             legalForm:
               type: object
-              description: TODO
               properties:
                 code:
                   type: number
@@ -8148,7 +8307,7 @@ components:
                   example: Společnost s ručením omezeným.
             legalFormSpecific:
               type: object
-              description: TODO
+              description: Specific cases of legalForm.
               properties:
                 code:
                   type: string
@@ -8176,20 +8335,20 @@ components:
                   example: Nefinanční podniky soukromé národní
             dates:
               type: object
-              description: TODO
+              description: Important dates associated with company.
               properties:
                 created:
                   type: string
-                  description: Company create date.
+                  description: Company creation date.
                   example: "2016-04-15"
                 terminated:
                   type: boolean
                   nullable: true
-                  description: TODO
+                  description: Company termination date.
                   example: true
             employees:
               type: object
-              description: TODO
+              description: Employees information.
               properties:
                 count:
                   type: number
@@ -8204,7 +8363,7 @@ components:
             insolvency:
               type: object
               nullable: true
-              description: TODO
+              description: Company insolvency status with history
               properties:
                 history:
                   type: array
@@ -8213,11 +8372,11 @@ components:
                     properties:
                       reference:
                         type: string
-                        description: Official reference of insolovency.
+                        description: Official reference of insolvency.
                         example: TODO
                       dateFrom:
                         type: string
-                        description: Since when is the insolovence valid.
+                        description: Since when is the insolvence valid.
                         format: date
                         example: "2021-08-01"
                       dateTo:
@@ -8234,17 +8393,17 @@ components:
                             example: Krajský soud v Hradci Králové.
                       status:
                         type: string
-                        description: Status of insolovency.
+                        description: Status of insolvency.
                         example: NEVYRIZENA
                       detailUrl:
                         type: string
-                        description: Detail URL of insolovency.
+                        description: Detail URL of insolvency.
                         format: url
-                        example: "https://isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=F"
+                        example: >-
+                          https://isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=F
             businessPremises:
               type: array
               nullable: true
-              description: TODO
               items:
                 type: object
                 properties:
@@ -8262,7 +8421,7 @@ components:
                         example: "Nad Rybníkem 3169, 580 01,  Havlíčkův Brod"
                   activitySubjects:
                     type: string
-                    description: Subjects activity.
+                    description: Types of activity associated with the premise.
                     example: Zprostředkovatelská činnost
             authority:
               type: array
@@ -8276,7 +8435,7 @@ components:
                     example: Statutární orgán
                   members:
                     type: array
-                    description: TODO
+                    description: Members associated with company.
                     items:
                       type: object
                       properties:
@@ -8286,7 +8445,6 @@ components:
                           example: Pavel Hrdlička
                         address:
                           type: object
-                          description: TODO
                           properties:
                             data:
                               $ref: "#/components/schemas/LocationData"
@@ -8309,7 +8467,7 @@ components:
                           example: null
                   decisions:
                     type: array
-                    description: TODO
+                    description: Information about the company's manner of decision making.
                     items:
                       type: string
                       nullable: true
@@ -8317,11 +8475,10 @@ components:
                       example: Společnost zastupuje jednatel samostatně.
             capital:
               type: object
-              description: TODO
+              description: Company's funding
               properties:
                 value:
                   type: object
-                  description: TODO
                   properties:
                     amount:
                       type: string
@@ -8333,7 +8490,6 @@ components:
                       example: CZK
                 shareholders:
                   type: array
-                  description: TODO
                   items:
                     type: object
                     properties:
@@ -8343,10 +8499,11 @@ components:
                           text:
                             type: string
                             description: Information about shareholder.
-                            example: "PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277, 751 11 Radslavice"
+                            example: >-
+                              PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V
+                              Zahradách 277, 751 11 Radslavice
                       share:
                         type: object
-                        description: TODO
                         properties:
                           amount:
                             type: string
@@ -8370,17 +8527,21 @@ components:
                         items:
                           type: string
                           description: Information about share
-                          example: "Druh podílu: základní, se kterým nejsou spojené žádné zvláštní práva a povinnosti"
+                          example: >-
+                            Druh podílu: základní, se kterým nejsou spojené
+                            žádné zvláštní práva a povinnosti
                 stocks:
                   type: array
                   description: TODO
                   items:
                     type: string
                     description: List of stocks.
-                    example: "100 ks akcie na jméno v listinné podobě ve jmenovité hodnotě 20 000 ,- Kč."
+                    example: >-
+                      100 ks akcie na jméno v listinné podobě ve jmenovité
+                      hodnotě 20 000 ,- Kč.
             tradeLicences:
               type: array
-              description: TODO
+              description: Trade licence information.
               items:
                 type: object
                 description: TODO
@@ -8392,7 +8553,9 @@ components:
                   name:
                     type: string
                     description: Name of trade licenses.
-                    example: "Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona"
+                    example: >-
+                      Výroba, obchod a služby neuvedené v přílohách 1 až 3
+                      živnostenského zákona
                   valid:
                     type: object
                     properties:
@@ -8417,7 +8580,7 @@ components:
                         example: Na dobu neurčitou.
                   interrupted:
                     type: object
-                    description: TODO
+                    description: Dates of interuption.
                     properties:
                       from:
                         type: string
@@ -8444,15 +8607,18 @@ components:
                       example: Broušení technického a šperkového kamene
             vat:
               type: object
-              description: TODO
+              description: Vat payer information.
               properties:
                 status:
                   type: string
-                  description: Vat current status.
+                  description: >-
+                    Vat current status. Payer, non payer and subject. Subject
+                    means the company is a VAT payer only for non domestic
+                    transactions (identifikovaná osoba).
                   example: payer
                 reliability:
                   type: object
-                  description: TODO
+                  description: Reliability of the VAT payer.
                   properties:
                     reliable:
                       type: boolean
@@ -8461,20 +8627,20 @@ components:
                     unrealiableFrom:
                       type: boolean
                       nullable: true
-                      description: Determines from when a subject is unreliable.
+                      description: Determines from when the subject is unreliable.
                       example: true
                 bankAccounts:
                   type: array
-                  description: TODO
+                  description: Bank accounts associated with the VAT payer.
                   items:
                     type: object
                     properties:
                       number:
                         type: string
-                        description: TODO
                         example: 55567899/2010
                 history:
                   type: array
+                  description: History of the VAT payer.
                   items:
                     type: object
                     description: TODO
@@ -8548,7 +8714,7 @@ components:
           example: Dejvice
         ids:
           type: object
-          description: TODO
+          description: Address internal & external ids.
           properties:
             internal:
               type: string
@@ -8558,7 +8724,9 @@ components:
             external:
               type: string
               nullable: true
-              description: External address ID.
+              description: >-
+                External address ID. May vary for every supported country. CZ =
+                RUIAN, PL = Government data, SK = no external ID.
               example: "22349995"
             region:
               type: string
@@ -8623,7 +8791,7 @@ components:
           example: "13000"
         postOffice:
           type: object
-          description: TODO
+          description: In what post office jurisdiction the address fall under.
           properties:
             name:
               type: string
@@ -8690,7 +8858,7 @@ components:
           type: string
           nullable: true
           description: Full address number.
-          example: "137/16"
+          example: 137/16
       required:
         - part1
         - part2
@@ -8699,7 +8867,6 @@ components:
       properties:
         gps:
           type: object
-          description: TODO
           properties:
             lat:
               type: number
@@ -8716,7 +8883,7 @@ components:
             - lon
         custom:
           type: array
-          description: TODO
+          description: Custom coordinate system. May vary for every country.
           items:
             type: object
             description: TODO
@@ -8727,7 +8894,6 @@ components:
                 example: Cartesian coordinate system.
               coordinates:
                 type: object
-                description: TODO
                 properties:
                   x:
                     type: number
@@ -8739,16 +8905,17 @@ components:
                     example: 1043425.38
     LocationOficial:
       type: object
+      description: Address data from the official registry. Not validated by Foxentry.
       properties:
         data:
           type: object
-          description: TODO
           nullable: true
           properties:
             country:
               type: string
-              description: "Country of administrative area in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
-              nullable: true
+              description: >-
+                Country of administrative area in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).              nullable: true
               example: CZ
             street:
               type: string
@@ -8882,7 +9049,9 @@ components:
                 country:
                   type: string
                   nullable: true
-                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  description: >-
+                    Country code in format [ISO-3166-1
+                    alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
                   example: CZ
         options:
           type: object
@@ -8966,15 +9135,21 @@ components:
             smartMode:
               type: boolean
               nullable: true
-              description: "Allows to correct the name (resultCorrected). If this is disabled, the corrections are given as a suggestion."
+              description: >-
+                Allows to correct the name (resultCorrected). If this is
+                disabled, the corrections are given as a suggestion.
               example: false
         client:
           type: object
-          description: The information about your client to help specify the search or validation.
+          description: >-
+            The information about your client to help specify the search or
+            validation.
           properties:
             country:
               type: string
-              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              description: >-
+                Country code in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
               example: CZ
             location:
               type: object
@@ -8993,11 +9168,14 @@ components:
       properties:
         result:
           type: object
-          description: TODO
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             proposal:
               enum:
@@ -9008,7 +9186,9 @@ components:
                 - invalidWithPartialCorrection
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
-              description: Proposed solution by Foxentry how you should process the response in your form or application.
+              description: >-
+                Proposed solution by Foxentry how you should process the
+                response in your form or application.
               example: validWithSuggestion
             data:
               $ref: "#/components/schemas/NameValidationResultsData"
@@ -9031,11 +9211,14 @@ components:
         resultCorrected:
           nullable: true
           type: object
-          description: TODO
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             data:
               $ref: "#/components/schemas/NameValidationResultsData"
@@ -9043,6 +9226,7 @@ components:
               $ref: "#/components/schemas/NameValidationResultsDetails"
             fixes:
               type: array
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: "#/components/schemas/FixFormatGlobal"
@@ -9056,11 +9240,14 @@ components:
           type: array
           items:
             type: object
-            description: TODO
+            description: Alternatives suggested for the sent query.
             properties:
               isValid:
                 type: boolean
-                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+                description: >-
+                  Determines the validity of the response. <b>True</b> = valid
+                  response / <b>False</b> = invalid response. Can be also
+                  <b>null</b>, which indicates a non-specific error.
                 example: true
               data:
                 $ref: "#/components/schemas/NameValidationResultsData"
@@ -9068,7 +9255,7 @@ components:
                 $ref: "#/components/schemas/NameValidationResultsDetails"
               fixes:
                 type: array
-                description: TODO
+                description: All changes listed in comparison to the sent query.
                 items:
                   oneOf:
                     - $ref: "#/components/schemas/FixFormatGlobal"
@@ -9155,7 +9342,9 @@ components:
               properties:
                 country:
                   type: string
-                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                  description: >-
+                    Country code in format [ISO-3166-1
+                    alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
                   example: CZ
                 month:
                   type: string
@@ -9304,12 +9493,20 @@ components:
             description: Error related to.
         description:
           enum:
-            - Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
-            - Invalid diacritics. Specific rules are applied to the use of diacritics.
-            - Invalid use of spaces. Specific rules are applied to the use of spaces.
+            - >-
+              Invalid case sensitivity. Specific rules are applied to the use of
+              upper and lower case letters.
+            - >-
+              Invalid diacritics. Specific rules are applied to the use of
+              diacritics.
+            - >-
+              Invalid use of spaces. Specific rules are applied to the use of
+              spaces.
             - null
           description: Description of error.
-          example: Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
+          example: >-
+            Invalid case sensitivity. Specific rules are applied to the use of
+            upper and lower case letters.
     ErrorValueGlobal:
       type: object
       properties:
@@ -9350,7 +9547,9 @@ components:
             - Value is empty.
             - Value contains parts in incorrect order.
             - Value is not valid.
-            - The Combination of values listed in relatedTo section is not valid.
+            - >-
+              The Combination of values listed in relatedTo section is not
+              valid.
             - Context words are not allowed.
           description: Description of error.
           example: Value is empty.
@@ -9543,12 +9742,15 @@ components:
       properties:
         result:
           type: object
-          description: TODO
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
               nullable: true
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             proposal:
               enum:
@@ -9560,7 +9762,9 @@ components:
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
                 - null
-              description: Proposed solution by Foxentry how you should process the response in your form or application.
+              description: >-
+                Proposed solution by Foxentry how you should process the
+                response in your form or application.
               example: invalidWithCorrection
             data:
               $ref: "#/components/schemas/ValidatePhoneNumberData"
@@ -9581,11 +9785,14 @@ components:
         resultCorrected:
           type: object
           nullable: true
-          description: TODO
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             data:
               $ref: "#/components/schemas/ValidatePhoneNumberData"
@@ -9600,6 +9807,7 @@ components:
                   - $ref: "#/components/schemas/ErrorValuePhone"
             fixes:
               type: array
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: "#/components/schemas/FixFormatGlobal"
@@ -9608,13 +9816,16 @@ components:
                   - $ref: "#/components/schemas/FixValueGlobal"
         suggestions:
           type: array
-          description: TODO
+          description: Alternatives suggested for the sent query.
           items:
             type: object
             properties:
               isValid:
                 type: boolean
-                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+                description: >-
+                  Determines the validity of the response. <b>True</b> = valid
+                  response / <b>False</b> = invalid response. Can be also
+                  <b>null</b>, which indicates a non-specific error.
                 example: true
               data:
                 $ref: "#/components/schemas/ValidatePhoneNumberData"
@@ -9629,6 +9840,7 @@ components:
                     - $ref: "#/components/schemas/ErrorValuePhone"
               fixes:
                 type: array
+                description: All changes listed in comparison to the sent query.
                 items:
                   oneOf:
                     - $ref: "#/components/schemas/FixFormatGlobal"
@@ -9646,7 +9858,9 @@ components:
           properties:
             code:
               type: string
-              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              description: >-
+                Country code in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
               example: CZ
             prefix:
               type: string
@@ -9780,7 +9994,9 @@ components:
         description:
           enum:
             - Prefix is invalid.
-            - This prefix is not allowed. Check the 'allowedPrefixes' option in the request.
+            - >-
+              This prefix is not allowed. Check the 'allowedPrefixes' option in
+              the request.
           description: Description of error.
           example: Prefix is invalid.
     FixSyntaxPhone:
@@ -9876,12 +10092,15 @@ components:
       properties:
         result:
           type: object
-          description: TODO
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
               nullable: true
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             proposal:
               enum:
@@ -9893,7 +10112,9 @@ components:
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
                 - null
-              description: Proposed solution by Foxentry how you should process the response in your form or application.
+              description: >-
+                Proposed solution by Foxentry how you should process the
+                response in your form or application.
               example: invalidWithCorrection
             data:
               $ref: "#/components/schemas/LocationData"
@@ -9912,11 +10133,14 @@ components:
         resultCorrected:
           type: object
           nullable: true
-          description: TODO
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             data:
               $ref: "#/components/schemas/LocationData"
@@ -9931,7 +10155,7 @@ components:
                   - $ref: "#/components/schemas/ErrorValueGlobal"
             fixes:
               type: array
-              description: TODO
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: "#/components/schemas/FixFormatGlobal"
@@ -9944,7 +10168,7 @@ components:
             - data
         suggestions:
           type: array
-          description: TODO
+          description: Alternatives suggested for the sent query.
           items:
             type: object
             nullable: true
@@ -9953,13 +10177,16 @@ components:
               isValid:
                 type: boolean
                 nullable: true
-                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+                description: >-
+                  Determines the validity of the response. <b>True</b> = valid
+                  response / <b>False</b> = invalid response. Can be also
+                  <b>null</b>, which indicates a non-specific error.
                 example: true
               data:
                 $ref: "#/components/schemas/LocationData"
               fixes:
                 type: array
-                description: TODO
+                description: All changes listed in comparison to the sent query.
                 items:
                   oneOf:
                     - $ref: "#/components/schemas/FixFormatGlobal"
@@ -10091,7 +10318,9 @@ components:
               example: Avantro s.r.o.
             country:
               type: string
-              description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
+              description: >-
+                Country codes in format [ISO-3166-1
+                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
               example: CZ
             registrationNumber:
               type: string
@@ -10114,7 +10343,9 @@ components:
                 - limit
                 - prefer
                 - null
-              description: "prefer = Prefer results matching filter, limit = Limit to results matching filter."
+              description: >-
+                prefer = Prefer results matching the country filter, limit =
+                Limit to results matching the country filter.
               default: prefer
               example: limit
             dataScope:
@@ -10128,7 +10359,9 @@ components:
             includeTerminatedSubjects:
               type: boolean
               nullable: true
-              description: Whether or not to API return in the response also entities that have already been terminated.
+              description: >-
+                Whether or not to API return in the response also entities that
+                have already been terminated.
               default: false
               example: true
             resultsLimit:
@@ -10149,10 +10382,14 @@ components:
       properties:
         result:
           type: object
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             proposal:
               enum:
@@ -10163,7 +10400,9 @@ components:
                 - invalidWithPartialCorrection
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
-              description: Proposed solution by Foxentry how you should process the response in your form or application.
+              description: >-
+                Proposed solution by Foxentry how you should process the
+                response in your form or application.
               example: valid
             errors:
               type: array
@@ -10178,10 +10417,14 @@ components:
         resultCorrected:
           type: object
           nullable: true
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             errors:
               type: array
@@ -10193,6 +10436,7 @@ components:
                   - $ref: "#/components/schemas/ErrorValueGlobal"
             fixes:
               type: array
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: "#/components/schemas/FixFormatGlobal"
@@ -10203,7 +10447,7 @@ components:
             - $ref: "#/components/schemas/CompanyResultsResponseResults"
         suggestions:
           type: array
-          description: TODO
+          description: Alternatives suggested for the sent query.
           items:
             $ref: "#/components/schemas/ValidateCompanyDataResultCorrected"
       required:
@@ -10273,7 +10517,10 @@ components:
       properties:
         isValid:
           type: boolean
-          description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+          description: >-
+            Determines the validity of the response. <b>True</b> = valid
+            response / <b>False</b> = invalid response. Can be also <b>null</b>,
+            which indicates a non-specific error.
           example: true
         errors:
           type: array
@@ -10285,6 +10532,7 @@ components:
               - $ref: "#/components/schemas/ErrorValueGlobal"
         fixes:
           type: array
+          description: All changes listed in comparison to the sent query.
           items:
             oneOf:
               - $ref: "#/components/schemas/FixFormatGlobal"
@@ -10302,12 +10550,15 @@ components:
       properties:
         result:
           type: object
-          description: TODO
+          description: Evaluation of the sent query.
           properties:
             isValid:
               type: boolean
               nullable: true
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             proposal:
               enum:
@@ -10318,7 +10569,9 @@ components:
                 - invalidWithPartialCorrection
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
-              description: Proposed solution by Foxentry how you should process the response in your form or application.
+              description: >-
+                Proposed solution by Foxentry how you should process the
+                response in your form or application.
             data:
               $ref: "#/components/schemas/EmailData"
             flags:
@@ -10339,11 +10592,14 @@ components:
         resultCorrected:
           type: object
           nullable: true
-          description: TODO
+          description: Corrected version of the sent query.
           properties:
             isValid:
               type: boolean
-              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+              description: >-
+                Determines the validity of the response. <b>True</b> = valid
+                response / <b>False</b> = invalid response. Can be also
+                <b>null</b>, which indicates a non-specific error.
               example: true
             data:
               $ref: "#/components/schemas/EmailData"
@@ -10351,6 +10607,7 @@ components:
               $ref: "#/components/schemas/EmailFlags"
             fixes:
               type: array
+              description: All changes listed in comparison to the sent query.
               items:
                 oneOf:
                   - $ref: "#/components/schemas/FixFormatGlobal"
@@ -10362,7 +10619,7 @@ components:
         suggestions:
           type: array
           nullable: true
-          description: TODO
+          description: Alternatives suggested for the sent query.
           items:
             type: object
             nullable: true
@@ -10371,7 +10628,10 @@ components:
               isValid:
                 type: boolean
                 nullable: true
-                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
+                description: >-
+                  Determines the validity of the response. <b>True</b> = valid
+                  response / <b>False</b> = invalid response. Can be also
+                  <b>null</b>, which indicates a non-specific error.
                 example: true
               data:
                 $ref: "#/components/schemas/EmailData"
@@ -10379,6 +10639,7 @@ components:
                 $ref: "#/components/schemas/EmailFlags"
               fixes:
                 type: array
+                description: All changes listed in comparison to the sent query.
                 items:
                   $ref: "#/components/schemas/EmailFixes"
               errors:
@@ -10508,7 +10769,9 @@ components:
         description:
           enum:
             - Domain name is invalid.
-            - Domain does not have DNS records set properly for receiving emails.
+            - >-
+              Domain does not have DNS records set properly for receiving
+              emails.
             - Disposable emails are not allowed.
             - Freemails are not allowed.
           description: Description of error.
@@ -10540,7 +10803,7 @@ components:
     EmailFixes:
       type: object
       nullable: true
-      description: TODO
+      description: All changes listed in comparison to the sent query.
       properties:
         type:
           type: string
@@ -10608,9 +10871,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
+            - >-
+              Cannot process the request because of the empty body. Please check
+              Foxentry.dev for more information.
           description: Description of error.
-          example: Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
+          example: >-
+            Cannot process the request because of the empty body. Please check
+            Foxentry.dev for more information.
     Error400RequestBodyNotJson:
       type: object
       properties:
@@ -10641,9 +10908,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
+            - >-
+              Cannot process the request because the JSON is not valid. Please
+              check Foxentry.dev for more information.
           description: Description of error.
-          example: Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
+          example: >-
+            Cannot process the request because the JSON is not valid. Please
+            check Foxentry.dev for more information.
     Error400RequestBodyNoRequest:
       type: object
       properties:
@@ -10707,9 +10978,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Your request length is bigger than allowed. Please contact us if you think this is a mistake.
+            - >-
+              Your request length is bigger than allowed. Please contact us if
+              you think this is a mistake.
           description: Description of error.
-          example: Your request length is bigger than allowed. Please contact us if you think this is a mistake.
+          example: >-
+            Your request length is bigger than allowed. Please contact us if you
+            think this is a mistake.
     Error400RequestOptionsParameterNotSupported:
       type: object
       properties:
@@ -10773,9 +11048,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Value in paramater is not valid. Please check Foxentry.dev for more information.
+            - >-
+              Value in paramater is not valid. Please check Foxentry.dev for
+              more information.
           description: Description of error.
-          example: Value in paramater is not valid. Please check Foxentry.dev for more information.
+          example: >-
+            Value in paramater is not valid. Please check Foxentry.dev for more
+            information.
     Error400RequestQueryNotSent:
       type: object
       properties:
@@ -10806,9 +11085,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
+            - >-
+              Your request query is empty. Please check Foxentry.dev for more
+              information about how to set up the query properly.
           description: Description of error.
-          example: Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
+          example: >-
+            Your request query is empty. Please check Foxentry.dev for more
+            information about how to set up the query properly.
     Error400RequestQueryParameterCombination:
       type: object
       properties:
@@ -10839,9 +11122,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - It is not possible to use these parameters at the same time in one request.
+            - >-
+              It is not possible to use these parameters at the same time in one
+              request.
           description: Description of error.
-          example: It is not possible to use these parameters at the same time in one request.
+          example: >-
+            It is not possible to use these parameters at the same time in one
+            request.
     Error400RequestQueryParameterMissing:
       type: object
       properties:
@@ -10872,9 +11159,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
+            - >-
+              Query parameter is missing. Please check Foxentry.dev for more
+              information about how to set up the query properly.
           description: Description of error.
-          example: Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
+          example: >-
+            Query parameter is missing. Please check Foxentry.dev for more
+            information about how to set up the query properly.
     Error400RequestQueryParameterNotSupported:
       type: object
       properties:
@@ -10977,9 +11268,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
+            - >-
+              Invalid authorization credentials sent. Check Foxentry.dev for
+              more information how to set up the AUTH properly.
           description: Description of error.
-          example: Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
+          example: >-
+            Invalid authorization credentials sent. Check Foxentry.dev for more
+            information how to set up the AUTH properly.
     ResponseStatus402:
       type: object
       properties:
@@ -11017,9 +11312,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
+            - >-
+              No credit available. You need to purchase a sufficient ammount of
+              credits in the project administration at app.foxentry.com.
           description: Description of error.
-          example: No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
+          example: >-
+            No credit available. You need to purchase a sufficient ammount of
+            credits in the project administration at app.foxentry.com.
     ResponseStatus403:
       type: object
       properties:
@@ -11057,9 +11356,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Provided API key is not valid. Please check the project settings at app.foxentry.com.
+            - >-
+              Provided API key is not valid. Please check the project settings
+              at app.foxentry.com.
           description: Description of error.
-          example: Provided API key is not valid. Please check the project settings at app.foxentry.com.
+          example: >-
+            Provided API key is not valid. Please check the project settings at
+            app.foxentry.com.
     Error403RequestAuthToken:
       type: object
       properties:
@@ -11090,9 +11393,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Provided access token is not valid. Please check the project settings at app.foxentry.com.
+            - >-
+              Provided access token is not valid. Please check the project
+              settings at app.foxentry.com.
           description: Description of error.
-          example: Provided access token is not valid. Please check the project settings at app.foxentry.com.
+          example: >-
+            Provided access token is not valid. Please check the project
+            settings at app.foxentry.com.
     Error403RequestNotAllowedDomain:
       type: object
       properties:
@@ -11156,9 +11463,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
+            - >-
+              The API key has IP limits set and your IP address is not allowed.
+              Change the project settings at app.foxentry.com.
           description: Description of error.
-          example: The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
+          example: >-
+            The API key has IP limits set and your IP address is not allowed.
+            Change the project settings at app.foxentry.com.
     ResponseStatus404:
       type: object
       properties:
@@ -11195,9 +11506,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Requested API version is not available. Please check Foxentry.dev for the supported versions.
+            - >-
+              Requested API version is not available. Please check Foxentry.dev
+              for the supported versions.
           description: Description of error.
-          example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
+          example: >-
+            Requested API version is not available. Please check Foxentry.dev
+            for the supported versions.
     Error404RequestEndpointNotFound:
       type: object
       properties:
@@ -11228,9 +11543,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Endpoint not found. Please check Foxentry.dev for the supported endpoints.
+            - >-
+              Endpoint not found. Please check Foxentry.dev for the supported
+              endpoints.
           description: Description of error.
-          example: Endpoint not found. Please check Foxentry.dev for the supported endpoints.
+          example: >-
+            Endpoint not found. Please check Foxentry.dev for the supported
+            endpoints.
     Error404RequestProjetNotFound:
       type: object
       properties:
@@ -11261,9 +11580,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
+            - >-
+              The project does not exist. Please check the available projects at
+              app.foxentry.com or contact the support.
           description: Description of error.
-          example: The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
+          example: >-
+            The project does not exist. Please check the available projects at
+            app.foxentry.com or contact the support.
     ResponseStatus405:
       type: object
       properties:
@@ -11296,9 +11619,13 @@ components:
           example: critical
         description:
           enum:
-            - HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
+            - >-
+              HTTP method is not allowed for this endpoint. Please check
+              Foxentry.dev for more information.
           description: Description of error.
-          example: HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
+          example: >-
+            HTTP method is not allowed for this endpoint. Please check
+            Foxentry.dev for more information.
     ResponseStatus429:
       type: object
       properties:
@@ -11336,9 +11663,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Requested API version is not available. Please check Foxentry.dev for the supported versions.
+            - >-
+              Requested API version is not available. Please check Foxentry.dev
+              for the supported versions.
           description: Description of error.
-          example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
+          example: >-
+            Requested API version is not available. Please check Foxentry.dev
+            for the supported versions.
     Error429RequestRateLimitCreditPerDay:
       type: object
       properties:
@@ -11369,9 +11700,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
+            - >-
+              The maximum daily limit has been reached. Adjust the settings in
+              the project or wait until the limit is reset.
           description: Description of error.
-          example: The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
+          example: >-
+            The maximum daily limit has been reached. Adjust the settings in the
+            project or wait until the limit is reset.
     Error429RequestRateLimitCreditPerIp:
       type: object
       properties:
@@ -11402,9 +11737,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
+            - >-
+              The maximum daily limit per IP address has been reached. Adjust
+              the settings in the project or wait until the limit is reset.
           description: Description of error.
-          example: The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
+          example: >-
+            The maximum daily limit per IP address has been reached. Adjust the
+            settings in the project or wait until the limit is reset.
     Error429RequestRateLimitTooManyRequests:
       type: object
       properties:
@@ -11435,9 +11774,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
+            - >-
+              The maximum allowed request rate limit has been reached. Check
+              Foxentry.dev for more information or contact the support.
           description: Description of error.
-          example: The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
+          example: >-
+            The maximum allowed request rate limit has been reached. Check
+            Foxentry.dev for more information or contact the support.
     ResponseStatus500:
       type: object
       properties:
@@ -11473,9 +11816,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Failed to process your request due to a billing internal error. Please contact us if the error persists.
+            - >-
+              Failed to process your request due to a billing internal error.
+              Please contact us if the error persists.
           description: Description of error.
-          example: Failed to process your request due to a billing internal error. Please contact us if the error persists.
+          example: >-
+            Failed to process your request due to a billing internal error.
+            Please contact us if the error persists.
     Error500InternalDatabaseConnection:
       type: object
       properties:
@@ -11505,9 +11852,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Failed to establish connection with the database server. Please contact us if the error persists.
+            - >-
+              Failed to establish connection with the database server. Please
+              contact us if the error persists.
           description: Description of error.
-          example: Failed to establish connection with the database server. Please contact us if the error persists.
+          example: >-
+            Failed to establish connection with the database server. Please
+            contact us if the error persists.
     Error500InternalDatabaseError:
       type: object
       properties:
@@ -11537,9 +11888,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - An error has occured during the communication with our database. Please contact us if the error persists.
+            - >-
+              An error has occured during the communication with our database.
+              Please contact us if the error persists.
           description: Description of error.
-          example: An error has occured during the communication with our database. Please contact us if the error persists.
+          example: >-
+            An error has occured during the communication with our database.
+            Please contact us if the error persists.
     Error500InternalDatabaseNotAvailable:
       type: object
       properties:
@@ -11569,9 +11924,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Internal datastore is not available at the moment. No operation on this datastore is possible.
+            - >-
+              Internal datastore is not available at the moment. No operation on
+              this datastore is possible.
           description: Description of error.
-          example: Internal datastore is not available at the moment. No operation on this datastore is possible.
+          example: >-
+            Internal datastore is not available at the moment. No operation on
+            this datastore is possible.
     Error500InternalError:
       type: object
       properties:
@@ -11601,9 +11960,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Failed to process your request. Please try again later or contact us.
+            - >-
+              Failed to process your request. Please try again later or contact
+              us.
           description: Description of error.
-          example: Failed to process your request. Please try again later or contact us.
+          example: >-
+            Failed to process your request. Please try again later or contact
+            us.
     Error500Timeout:
       type: object
       properties:
@@ -11666,9 +12029,13 @@ components:
             description: Error related to.
         description:
           enum:
-            - Failed to fetch project data needed for processing your request. Please contact us if the error persists.
+            - >-
+              Failed to fetch project data needed for processing your request.
+              Please contact us if the error persists.
           description: Description of error.
-          example: Failed to fetch project data needed for processing your request. Please contact us if the error persists.
+          example: >-
+            Failed to fetch project data needed for processing your request.
+            Please contact us if the error persists.
     ResponseStatus503:
       type: object
       properties:
@@ -11706,8 +12073,12 @@ components:
             description: Error related to.
         description:
           enum:
-            - API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
+            - >-
+              API endpoint is temporary unavailable. Please contact us at
+              info@foxentry.com if the error persists.
           description: Description of error.
-          example: API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
+          example: >-
+            API endpoint is temporary unavailable. Please contact us at
+            info@foxentry.com if the error persists.
 security:
   - BearerAuth: []

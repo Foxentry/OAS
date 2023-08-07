@@ -1685,7 +1685,7 @@ components:
                 status: 200
                 request:
                   endpoint: company/search
-                  code: XEguGrvYyFiFhqnbHs7h35nwoA6piT
+                  code: LRrr7hB4XAkP0WJtCTVDfAKyIJCbxC
                   customId: null
                   query:
                     type: name
@@ -1708,8 +1708,7 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Webasto Roof & Components Czech Republic s.r.o.
                         registrationNumber: "03865436"
                         taxNumber: null
@@ -1751,13 +1750,10 @@ components:
                                     "y": 690079.8
                             postOffice:
                               name: Liberec 8
-                            full: >-
-                              České mládeže 452, 460 08 Liberec (nečleněné
-                              město)
+                            full: České mládeže 452, 460 08 Liberec (nečleněné město)
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: České mládeže
                             number:
                               part1: null
@@ -1772,11 +1768,8 @@ components:
                             zip: "46008"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
-                        name: >-
-                          Webhelp Enterprise Sales Solutions Czech Republic,
-                          s.r.o.
+                        country: CZ
+                        name: Webhelp Enterprise Sales Solutions Czech Republic, s.r.o.
                         registrationNumber: "29043654"
                         taxNumber: null
                         vatNumber: CZ29043654
@@ -1817,11 +1810,10 @@ components:
                                     "y": 742332.51
                             postOffice:
                               name: Praha 1
-                            full: "Václavské náměstí 808/66, 110 00 Praha 1"
+                            full: Václavské náměstí 808/66, 110 00 Praha 1
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Václavské náměstí
                             number:
                               part1: null
@@ -1836,9 +1828,8 @@ components:
                             zip: "11000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
-                        name: "WEBA Olomouc, s.r.o."
+                        country: CZ
+                        name: WEBA Olomouc, s.r.o.
                         registrationNumber: "47672153"
                         taxNumber: null
                         vatNumber: CZ47672153
@@ -1879,11 +1870,10 @@ components:
                                     "y": 543763.5
                             postOffice:
                               name: Olomouc 9
-                            full: "K Mrazírnám 209/16, 779 00 Bystrovany"
+                            full: K Mrazírnám 209/16, 779 00 Bystrovany
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: K Mrazírnám
                             number:
                               part1: null
@@ -1898,8 +1888,7 @@ components:
                             zip: "77900"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Web Retail s.r.o.
                         registrationNumber: "28876431"
                         taxNumber: null
@@ -1941,11 +1930,10 @@ components:
                                     "y": 741139.04
                             postOffice:
                               name: Praha 3
-                            full: "Husinecká 903/10, 130 00 Praha 3"
+                            full: Husinecká 903/10, 130 00 Praha 3
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Husinecká
                             number:
                               part1: null
@@ -1960,8 +1948,7 @@ components:
                             zip: "13000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Weber-Stephen CZ & SK spol. s r.o.
                         registrationNumber: "28421124"
                         taxNumber: null
@@ -2003,11 +1990,10 @@ components:
                                     "y": 738054
                             postOffice:
                               name: Jesenice u Prahy
-                            full: "V Uličce 49, 252 42 Jesenice"
+                            full: V Uličce 49, 252 42 Jesenice
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: V Uličce
                             number:
                               part1: null
@@ -8913,6 +8899,7 @@ components:
           properties:
             country:
               type: string
+              nullable: true
               description: >-
                 Country of administrative area in format [ISO-3166-1
                 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).              nullable: true

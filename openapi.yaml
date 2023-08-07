@@ -139,8 +139,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: m71syfxfmoqz7
   /company/search:
     post:
       tags:
@@ -194,8 +192,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: bzemifrbal4ho
   /company/get:
     post:
       tags:
@@ -249,8 +245,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: 4dzjm5i24oy3z
   /email/validate:
     post:
       tags:
@@ -306,8 +300,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: tei14wb46r4gi
   /email/search:
     post:
       tags:
@@ -361,8 +353,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: ev70eu7os7mvi
   /location/validate:
     post:
       tags:
@@ -416,8 +406,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: 1p0n0kpdni8dl
   /location/search:
     post:
       tags:
@@ -471,8 +459,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: 4n57f1yyz4epp
   /location/get:
     post:
       tags:
@@ -526,8 +512,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: ei3p93frhvsxb
   /location/localize:
     post:
       tags:
@@ -583,8 +567,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: knf5w4hs2l61w
   /name/validate:
     post:
       tags:
@@ -638,8 +620,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: zjvnh9axw91jf
   /phone/validate:
     post:
       tags:
@@ -695,8 +675,6 @@ paths:
       servers:
         - url: 'https://api.foxentry.com'
         - url: 'https://api.foxentry.com/v2.0'
-      x-stoplight:
-        id: z2w8b5gqqu26z
 tags:
   - name: Company
     description: Company operations
@@ -7206,8 +7184,6 @@ components:
           $ref: '#/components/schemas/ClientRequest'
       required:
         - query
-      x-stoplight:
-        id: ubslydxevimz3
     LocationRequestOptionsSearch:
       type: object
       properties:
@@ -7242,8 +7218,6 @@ components:
             - standard
           default: standard
           example: numeric
-      x-stoplight:
-        id: 4qrrrkaa82h8e
     ClientRequest:
       type: object
       description: Additional information about the user in order to specify the results in response. Used mainly for web forms.
@@ -7268,8 +7242,6 @@ components:
               type: number
               description: Client's longitude
               example: 13.9271
-      x-stoplight:
-        id: z999t8e9b8bax
     LocationLocalizationRequests:
       type: object
       properties:
@@ -7304,8 +7276,6 @@ components:
                   example: 100
       required:
         - client
-      x-stoplight:
-        id: irb4pxb1isoz2
     LocationRequestOptions:
       type: object
       properties:
@@ -7344,8 +7314,6 @@ components:
           type: boolean
           default: false
           example: true
-      x-stoplight:
-        id: x1jz275b3wk1l
     LocationGetRequests:
       type: object
       properties:
@@ -7386,8 +7354,6 @@ components:
           $ref: '#/components/schemas/ClientRequest'
       required:
         - query
-      x-stoplight:
-        id: gc8vte2b1d2pp
     LocationValidationRequests:
       type: object
       properties:
@@ -7465,8 +7431,6 @@ components:
           $ref: '#/components/schemas/ClientRequest'
       required:
         - query
-      x-stoplight:
-        id: kcm9nnmdbb5n0
     ValidateEmailRequests:
       type: object
       properties:
@@ -7504,8 +7468,6 @@ components:
               example: true
       required:
         - query
-      x-stoplight:
-        id: fdnmx9lh4vl7z
     ValidatePhoneNumberRequests:
       type: object
       properties:
@@ -7547,8 +7509,6 @@ components:
               example: '+420'
       required:
         - query
-      x-stoplight:
-        id: d9p7n1ixyvv8b
     NameValidationRequests:
       type: object
       properties:
@@ -7608,8 +7568,6 @@ components:
             - dataScope
       required:
         - query
-      x-stoplight:
-        id: 8mm5kw9c6m3lj
     ValidateCompanyDataRequests:
       type: object
       properties:
@@ -7669,8 +7627,6 @@ components:
               example: true
       required:
         - query
-      x-stoplight:
-        id: 0kdlkpy9s3wpf
     CompanySearchRequests:
       type: object
       properties:
@@ -7748,8 +7704,6 @@ components:
               example: true
       required:
         - query
-      x-stoplight:
-        id: d4zdj2jds39bf
     EmailSearchRequests:
       type: object
       properties:
@@ -7774,8 +7728,6 @@ components:
               example: 5
         client:
           $ref: '#/components/schemas/ClientRequest'
-      x-stoplight:
-        id: ey38mf5ntvl74
     GetCompanyDataRequests:
       type: object
       properties:
@@ -7797,8 +7749,6 @@ components:
           $ref: '#/components/schemas/CompanyDataRequestOption'
       required:
         - query
-      x-stoplight:
-        id: 1kv69p0cuyios
     CompanyDataRequestOption:
       type: object
       properties:
@@ -7815,8 +7765,6 @@ components:
           description: Whether or not to include entities that have already ended their existence in the output.
           default: false
           example: false
-      x-stoplight:
-        id: 4w8fvktn4g1bg
     GetCompanyDataResponseRequest:
       type: object
       properties:
@@ -7862,8 +7810,6 @@ components:
               example: full
         client:
           $ref: '#/components/schemas/ClientRequest'
-      x-stoplight:
-        id: md84qkcfjf89h
     GetCompanyDataResults:
       type: object
       properties:
@@ -7879,8 +7825,6 @@ components:
       required:
         - resultsCount
         - results
-      x-stoplight:
-        id: 4fecfvo226gqk
     CompanyResultsResponseResults:
       type: object
       properties:
@@ -8364,8 +8308,6 @@ components:
                         example: false
       required:
         - data
-      x-stoplight:
-        id: 1cpdbkfacrmy9
     LocationData:
       type: object
       properties:
@@ -8471,8 +8413,6 @@ components:
         - zip
         - geometry
         - full
-      x-stoplight:
-        id: oybjb1k72qhaq
     DataAdministrativeArea:
       type: object
       properties:
@@ -8512,8 +8452,6 @@ components:
           nullable: true
           description: City cadastral area.
           example: Dejvice
-      x-stoplight:
-        id: kfc8bbq9xatz9
     LocationNumber:
       type: object
       properties:
@@ -8555,8 +8493,6 @@ components:
       required:
         - part1
         - part2
-      x-stoplight:
-        id: nzmv2h4errw1z
     DataGeometry:
       type: object
       properties:
@@ -8598,8 +8534,6 @@ components:
                     type: number
                     description: Second coordinate.
                     example: 1043425.38
-      x-stoplight:
-        id: it6a1pl3eo315
     LocationOficial:
       type: object
       description: Address data from the official registry. Not validated by Foxentry.
@@ -8636,8 +8570,6 @@ components:
               type: string
               description: ZIP code.
               example: '13000'
-      x-stoplight:
-        id: z3pckzte0je6c
     GlobalRequest:
       type: object
       properties:
@@ -8657,8 +8589,6 @@ components:
         - endpoint
         - code
         - customId
-      x-stoplight:
-        id: 8cw45y4qqyaq8
     EmailSearchResponse:
       type: object
       properties:
@@ -8699,8 +8629,6 @@ components:
       required:
         - resultsCount
         - results
-      x-stoplight:
-        id: 283mbcnkoyfi4
     CompanySearchResultsRequest:
       type: object
       properties:
@@ -8772,8 +8700,6 @@ components:
         - endpoint
         - code
         - customId
-      x-stoplight:
-        id: g9bp5k8s8vq3l
     CompanySearchResults:
       type: object
       properties:
@@ -8789,8 +8715,6 @@ components:
       required:
         - resultsCount
         - results
-      x-stoplight:
-        id: rrdr5d45gzt44
     NameValidationResponseRequest:
       type: object
       properties:
@@ -8865,8 +8789,6 @@ components:
                   type: number
                   description: Client's longitude
                   example: 13.9271
-      x-stoplight:
-        id: eu9q0tub0ibnd
     NameValidationResults:
       type: object
       properties:
@@ -8961,8 +8883,6 @@ components:
       required:
         - result
         - suggestions
-      x-stoplight:
-        id: evjo8aczfvzmm
     NameValidationResultsData:
       type: object
       properties:
@@ -9003,8 +8923,6 @@ components:
         - context
         - degreesBefore
         - degreesAfter
-      x-stoplight:
-        id: quekzoszgud9c
     NameValidationResultsDetails:
       type: array
       items:
@@ -9061,8 +8979,6 @@ components:
           - gender
           - vocative
           - nameDays
-      x-stoplight:
-        id: 388g1u71054sy
     ErrorSyntaxGlobal:
       type: object
       properties:
@@ -9116,8 +9032,6 @@ components:
             - Value contains unneccessary context.
           description: Description of error.
           example: Disallowed characters were used in the value.
-      x-stoplight:
-        id: jqbgxuygpt6tp
     ErrorSyntaxName:
       type: object
       properties:
@@ -9158,8 +9072,6 @@ components:
             - The DEGREE part of the value is placed in the wrong position.
           description: Description of error.
           example: Value is missing the name part.
-      x-stoplight:
-        id: zz5pv0kpwx29z
     ErrorFormatGlobal:
       type: object
       properties:
@@ -9202,8 +9114,6 @@ components:
             - null
           description: Description of error.
           example: Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
-      x-stoplight:
-        id: rawkhej0fr56q
     ErrorValueGlobal:
       type: object
       properties:
@@ -9248,8 +9158,6 @@ components:
             - Context words are not allowed.
           description: Description of error.
           example: Value is empty.
-      x-stoplight:
-        id: whbwo9ecyeypi
     ErrorValueName:
       type: object
       properties:
@@ -9293,8 +9201,6 @@ components:
             - Degrees are not allowed.
           description: Description of error.
           example: Degree value is invalid.
-      x-stoplight:
-        id: wgmz6ro5fwu9p
     FixFormatGlobal:
       type: object
       properties:
@@ -9318,8 +9224,6 @@ components:
           example: CASE_SENSITIVITY
         data:
           $ref: '#/components/schemas/FixData'
-      x-stoplight:
-        id: mprnhpckowipd
     FixData:
       type: object
       description: Data that has been changed
@@ -9340,8 +9244,6 @@ components:
           type: string
           description: Changed value
           example: me@gmail.com
-      x-stoplight:
-        id: zjrwqbcykh4k2
     FixSyntaxGlobal:
       type: object
       properties:
@@ -9368,8 +9270,6 @@ components:
           example: CHARACTERS
         data:
           $ref: '#/components/schemas/FixData'
-      x-stoplight:
-        id: e8hbh8ie76goo
     FixValueGlobal:
       type: object
       properties:
@@ -9395,8 +9295,6 @@ components:
           example: INTERNAL_RULE
         data:
           $ref: '#/components/schemas/FixData'
-      x-stoplight:
-        id: iei2w8n4pfewr
     ValidatePhoneNumberResponseRequest:
       type: object
       properties:
@@ -9444,8 +9342,6 @@ components:
               example: false
         client:
           $ref: '#/components/schemas/ClientRequest'
-      x-stoplight:
-        id: z4kelglp29986
     ValidatePhoneNumberResults:
       type: object
       properties:
@@ -9548,8 +9444,6 @@ components:
       required:
         - result
         - suggestions
-      x-stoplight:
-        id: 0tpopiqtrzpz5
     ValidatePhoneNumberData:
       type: object
       properties:
@@ -9617,8 +9511,6 @@ components:
         - numberWithPrefix
         - carrier
         - format
-      x-stoplight:
-        id: fmw378xe55ab9
     ErrorSyntaxPhone:
       type: object
       properties:
@@ -9660,8 +9552,6 @@ components:
             - Value is missing the prefix.
           description: Description of error.
           example: Value contains duplicated '+' sign.
-      x-stoplight:
-        id: 83zolzss5lkyn
     ErrorValuePhone:
       type: object
       properties:
@@ -9699,8 +9589,6 @@ components:
             - This prefix is not allowed. Check the 'allowedPrefixes' option in the request.
           description: Description of error.
           example: Prefix is invalid.
-      x-stoplight:
-        id: nbjtn01bffofy
     FixSyntaxPhone:
       type: object
       properties:
@@ -9724,8 +9612,6 @@ components:
           example: PLUS_SIGN
         data:
           $ref: '#/components/schemas/FixData'
-      x-stoplight:
-        id: cq5sukjkznx1w
     LocationSearchResponse:
       type: object
       title: LocationSearchResponse
@@ -9742,8 +9628,6 @@ components:
       required:
         - resultsCount
         - results
-      x-stoplight:
-        id: 0ilninl6ar9iz
     LocationSearchResults:
       type: object
       properties:
@@ -9751,8 +9635,6 @@ components:
           $ref: '#/components/schemas/LocationData'
       required:
         - data
-      x-stoplight:
-        id: 86nd92gl7utib
     LocationLocalizationResults:
       type: object
       properties:
@@ -9775,8 +9657,6 @@ components:
       required:
         - resultsCount
         - results
-      x-stoplight:
-        id: ygxwec6kcw4md
     LocationGetResults:
       type: object
       properties:
@@ -9797,8 +9677,6 @@ components:
       required:
         - resultsCount
         - results
-      x-stoplight:
-        id: pb0i8rpe2vebe
     LocationValidationResponse:
       type: object
       properties:
@@ -9908,8 +9786,6 @@ components:
               - data
       required:
         - result
-      x-stoplight:
-        id: u6viqqqtfz84t
     ErrorSyntaxLocation:
       type: object
       properties:
@@ -9952,8 +9828,6 @@ components:
             - Value is missing part of the number.
           description: Description of error.
           example: Value is missing the city.
-      x-stoplight:
-        id: qmvapbip9kuk4
     FixSyntaxLocation:
       type: object
       properties:
@@ -9975,8 +9849,6 @@ components:
           example: NUMBER
         data:
           $ref: '#/components/schemas/FixData'
-      x-stoplight:
-        id: 48uto4jvdh0o1
     FixValueLocation:
       type: object
       properties:
@@ -10000,8 +9872,6 @@ components:
           example: CITY
         data:
           $ref: '#/components/schemas/FixData'
-      x-stoplight:
-        id: 02y0onkoifo6w
     ValidateCompanyDataResultsRequest:
       type: object
       properties:
@@ -10080,8 +9950,6 @@ components:
         - endpoint
         - code
         - customId
-      x-stoplight:
-        id: zqqir25n4iqq6
     ValidateCompanyDataResults:
       type: object
       properties:
@@ -10150,8 +10018,6 @@ components:
       required:
         - result
         - suggestions
-      x-stoplight:
-        id: zrkamgi1ozifp
     ErrorSyntaxCompany:
       type: object
       properties:
@@ -10189,8 +10055,6 @@ components:
             - Company name is missing the legal form.
           description: Description of error.
           example: Value contains duplicated legal form.
-      x-stoplight:
-        id: 5jilknziifeml
     FixSyntaxCompany:
       type: object
       properties:
@@ -10213,8 +10077,6 @@ components:
           example: LEGAL_FORM
         data:
           $ref: '#/components/schemas/FixData'
-      x-stoplight:
-        id: x3wryf00f77qn
     ValidateCompanyDataResultCorrected:
       type: object
       properties:
@@ -10245,8 +10107,6 @@ components:
         - fixes
       allOf:
         - $ref: '#/components/schemas/CompanyResultsResponseResults'
-      x-stoplight:
-        id: ykas1r6do6ggc
     ValidateEmailResponse:
       type: object
       properties:
@@ -10344,8 +10204,6 @@ components:
                     - $ref: '#/components/schemas/ErrorValueEmail'
       required:
         - result
-      x-stoplight:
-        id: v0oo46ug6mu2q
     EmailData:
       type: object
       properties:
@@ -10362,8 +10220,6 @@ components:
           description: Customer domain.
           example: gmali.com
           nullable: true
-      x-stoplight:
-        id: 28qynhab32tpi
     EmailFlags:
       type: object
       properties:
@@ -10382,8 +10238,6 @@ components:
           nullable: true
           description: Determine if the email address is free.
           example: false
-      x-stoplight:
-        id: xud75ljidx4p3
     ErrorSyntaxEmail:
       type: object
       properties:
@@ -10428,8 +10282,6 @@ components:
             - The TLD part of the value is placed in the wrong position.
           description: Description of error.
           example: The domain contains invalid syntax.
-      x-stoplight:
-        id: y89cfuvwhdfry
     ErrorValueEmail:
       type: object
       properties:
@@ -10473,8 +10325,6 @@ components:
             - Freemails are not allowed.
           description: Description of error.
           example: Domain name is invalid.
-      x-stoplight:
-        id: ewsxiv8bxxron
     FixSyntaxEmail:
       type: object
       properties:
@@ -10499,8 +10349,6 @@ components:
           example: AT_SIGN
         data:
           $ref: '#/components/schemas/FixData'
-      x-stoplight:
-        id: unjw8f8igidum
     EmailFixes:
       type: object
       nullable: true
@@ -10535,8 +10383,6 @@ components:
               type: string
               description: Value.
               example: me@gmail.com
-      x-stoplight:
-        id: fhjlpb02dltj3
     ResponseStatus400:
       type: object
       properties:
@@ -10544,8 +10390,6 @@ components:
           type: number
           description: Status of API response.
           example: 400
-      x-stoplight:
-        id: gq0ogpsum5e37
     Error400RequestBodyEmpty:
       type: object
       properties:
@@ -10579,8 +10423,6 @@ components:
             - Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
           description: Description of error.
           example: Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
-      x-stoplight:
-        id: dr6wt13xy4irb
     Error400RequestBodyNotJson:
       type: object
       properties:
@@ -10614,8 +10456,6 @@ components:
             - Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
           description: Description of error.
           example: Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
-      x-stoplight:
-        id: gjcon2ub6ecw5
     Error400RequestBodyNoRequest:
       type: object
       properties:
@@ -10649,8 +10489,6 @@ components:
             - Your API call body does not contain any requests.
           description: Description of error.
           example: Your API call body does not contain any requests.
-      x-stoplight:
-        id: q53y06k69jffq
     Error400RequestBodyTooBig:
       type: object
       properties:
@@ -10684,8 +10522,6 @@ components:
             - Your request length is bigger than allowed. Please contact us if you think this is a mistake.
           description: Description of error.
           example: Your request length is bigger than allowed. Please contact us if you think this is a mistake.
-      x-stoplight:
-        id: r74if8ab77t1n
     Error400RequestOptionsParameterNotSupported:
       type: object
       properties:
@@ -10719,8 +10555,6 @@ components:
             - Options parameter is not supported for this endpoint.
           description: Description of error.
           example: Options parameter is not supported for this endpoint.
-      x-stoplight:
-        id: 94sxajco844v1
     Error400RequestOptionParameterValueNotSupported:
       type: object
       properties:
@@ -10754,8 +10588,6 @@ components:
             - Value in paramater is not valid. Please check Foxentry.dev for more information.
           description: Description of error.
           example: Value in paramater is not valid. Please check Foxentry.dev for more information.
-      x-stoplight:
-        id: 0mjzd02iphhya
     Error400RequestQueryNotSent:
       type: object
       properties:
@@ -10789,8 +10621,6 @@ components:
             - Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
           description: Description of error.
           example: Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
-      x-stoplight:
-        id: 5sblc9goff594
     Error400RequestQueryParameterCombination:
       type: object
       properties:
@@ -10824,8 +10654,6 @@ components:
             - It is not possible to use these parameters at the same time in one request.
           description: Description of error.
           example: It is not possible to use these parameters at the same time in one request.
-      x-stoplight:
-        id: 7a8z2d2c06a8w
     Error400RequestQueryParameterMissing:
       type: object
       properties:
@@ -10859,8 +10687,6 @@ components:
             - Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
           description: Description of error.
           example: Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
-      x-stoplight:
-        id: qbno9oi5d4zex
     Error400RequestQueryParameterNotSupported:
       type: object
       properties:
@@ -10894,8 +10720,6 @@ components:
             - Query parameter is not supported for this endpoint.
           description: Description of error.
           example: Query parameter is not supported for this endpoint.
-      x-stoplight:
-        id: b1uvauwq0nofu
     Error400RequestQueryParameterRequired:
       type: object
       properties:
@@ -10929,8 +10753,6 @@ components:
             - At least one of listed parameters is required.
           description: Description of error.
           example: At least one of listed parameters is required.
-      x-stoplight:
-        id: onqy6mdtcloe6
     ResponseStatus401:
       type: object
       properties:
@@ -10938,8 +10760,6 @@ components:
           type: number
           description: Status of API response.
           example: 401
-      x-stoplight:
-        id: nl61axlc5wuxk
     Error401RequestAuth:
       type: object
       properties:
@@ -10972,8 +10792,6 @@ components:
             - Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
           description: Description of error.
           example: Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
-      x-stoplight:
-        id: ft3odvjjqz147
     ResponseStatus402:
       type: object
       properties:
@@ -10981,8 +10799,6 @@ components:
           type: number
           description: Status of API response.
           example: 402
-      x-stoplight:
-        id: gil8onbmup1ay
     Error402RequestBillingNoCredit:
       type: object
       properties:
@@ -11016,8 +10832,6 @@ components:
             - No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
           description: Description of error.
           example: No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
-      x-stoplight:
-        id: 36b56uhfhzd96
     ResponseStatus403:
       type: object
       properties:
@@ -11025,8 +10839,6 @@ components:
           type: number
           description: Status of API response.
           example: 403
-      x-stoplight:
-        id: n76xu2fcyj0bo
     Error403RequestAuthKey:
       type: object
       properties:
@@ -11060,8 +10872,6 @@ components:
             - Provided API key is not valid. Please check the project settings at app.foxentry.com.
           description: Description of error.
           example: Provided API key is not valid. Please check the project settings at app.foxentry.com.
-      x-stoplight:
-        id: s6fbor1v4cgvc
     Error403RequestAuthToken:
       type: object
       properties:
@@ -11095,8 +10905,6 @@ components:
             - Provided access token is not valid. Please check the project settings at app.foxentry.com.
           description: Description of error.
           example: Provided access token is not valid. Please check the project settings at app.foxentry.com.
-      x-stoplight:
-        id: j7vxgmn512oh1
     Error403RequestNotAllowedDomain:
       type: object
       properties:
@@ -11130,8 +10938,6 @@ components:
             - Website domain is not allowed in the project settings.
           description: Description of error.
           example: Website domain is not allowed in the project settings.
-      x-stoplight:
-        id: lsstvotnai7e2
     Error403RequestNotAllowedIp:
       type: object
       properties:
@@ -11165,8 +10971,6 @@ components:
             - The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
           description: Description of error.
           example: The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
-      x-stoplight:
-        id: 8jo6byzhgvk2n
     ResponseStatus404:
       type: object
       properties:
@@ -11174,8 +10978,6 @@ components:
           type: number
           description: Status of API response.
           example: 404
-      x-stoplight:
-        id: fn7czl9yy2xbr
     Error404RequestApiVersion:
       type: object
       properties:
@@ -11208,8 +11010,6 @@ components:
             - Requested API version is not available. Please check Foxentry.dev for the supported versions.
           description: Description of error.
           example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
-      x-stoplight:
-        id: c54cze0ie1i7n
     Error404RequestEndpointNotFound:
       type: object
       properties:
@@ -11243,8 +11043,6 @@ components:
             - Endpoint not found. Please check Foxentry.dev for the supported endpoints.
           description: Description of error.
           example: Endpoint not found. Please check Foxentry.dev for the supported endpoints.
-      x-stoplight:
-        id: q4u19a7nrrm2n
     Error404RequestProjetNotFound:
       type: object
       properties:
@@ -11278,8 +11076,6 @@ components:
             - The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
           description: Description of error.
           example: The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
-      x-stoplight:
-        id: 1ivphqg41tpdi
     ResponseStatus405:
       type: object
       properties:
@@ -11287,8 +11083,6 @@ components:
           type: number
           description: Status of API response.
           example: 405
-      x-stoplight:
-        id: y2ji0v6l3uwbe
     Error405RequestNotAllowedMethod:
       type: object
       properties:
@@ -11317,8 +11111,6 @@ components:
             - HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
           description: Description of error.
           example: HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
-      x-stoplight:
-        id: r5m7c41bybeqy
     ResponseStatus429:
       type: object
       properties:
@@ -11326,8 +11118,6 @@ components:
           type: number
           description: Status of API response.
           example: 429
-      x-stoplight:
-        id: hi4nrrc0d9ypr
     Error429RequestBillingServiceLimit:
       type: object
       properties:
@@ -11361,8 +11151,6 @@ components:
             - Requested API version is not available. Please check Foxentry.dev for the supported versions.
           description: Description of error.
           example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
-      x-stoplight:
-        id: vrmbapsy8z75u
     Error429RequestRateLimitCreditPerDay:
       type: object
       properties:
@@ -11396,8 +11184,6 @@ components:
             - The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
           description: Description of error.
           example: The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
-      x-stoplight:
-        id: hw78w1f663z5j
     Error429RequestRateLimitCreditPerIp:
       type: object
       properties:
@@ -11431,8 +11217,6 @@ components:
             - The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
           description: Description of error.
           example: The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
-      x-stoplight:
-        id: 7pn7cj8z841lm
     Error429RequestRateLimitTooManyRequests:
       type: object
       properties:
@@ -11466,8 +11250,6 @@ components:
             - The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
           description: Description of error.
           example: The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
-      x-stoplight:
-        id: 3xykvo8oo7f7g
     ResponseStatus500:
       type: object
       properties:
@@ -11475,8 +11257,6 @@ components:
           type: number
           description: Status of API response.
           example: 500
-      x-stoplight:
-        id: sigsceftarib1
     Error500InternalBilling:
       type: object
       properties:
@@ -11508,8 +11288,6 @@ components:
             - Failed to process your request due to a billing internal error. Please contact us if the error persists.
           description: Description of error.
           example: Failed to process your request due to a billing internal error. Please contact us if the error persists.
-      x-stoplight:
-        id: byd2wliboubnj
     Error500InternalDatabaseConnection:
       type: object
       properties:
@@ -11542,8 +11320,6 @@ components:
             - Failed to establish connection with the database server. Please contact us if the error persists.
           description: Description of error.
           example: Failed to establish connection with the database server. Please contact us if the error persists.
-      x-stoplight:
-        id: lo4j3bn1j3pqr
     Error500InternalDatabaseError:
       type: object
       properties:
@@ -11576,8 +11352,6 @@ components:
             - An error has occured during the communication with our database. Please contact us if the error persists.
           description: Description of error.
           example: An error has occured during the communication with our database. Please contact us if the error persists.
-      x-stoplight:
-        id: jzoty91mor7kx
     Error500InternalDatabaseNotAvailable:
       type: object
       properties:
@@ -11610,8 +11384,6 @@ components:
             - Internal datastore is not available at the moment. No operation on this datastore is possible.
           description: Description of error.
           example: Internal datastore is not available at the moment. No operation on this datastore is possible.
-      x-stoplight:
-        id: w4p6i9g0bku38
     Error500InternalError:
       type: object
       properties:
@@ -11644,8 +11416,6 @@ components:
             - Failed to process your request. Please try again later or contact us.
           description: Description of error.
           example: Failed to process your request. Please try again later or contact us.
-      x-stoplight:
-        id: qmxn6yhhtwmww
     Error500Timeout:
       type: object
       properties:
@@ -11678,8 +11448,6 @@ components:
             - API timeout in effect. Your request took too much time to process.
           description: Description of error.
           example: API timeout in effect. Your request took too much time to process.
-      x-stoplight:
-        id: 8h80jt79lkbvf
     Error500RequestProjectNoData:
       type: object
       properties:
@@ -11713,8 +11481,6 @@ components:
             - Failed to fetch project data needed for processing your request. Please contact us if the error persists.
           description: Description of error.
           example: Failed to fetch project data needed for processing your request. Please contact us if the error persists.
-      x-stoplight:
-        id: by4uk79zn2v5y
     ResponseStatus503:
       type: object
       properties:
@@ -11722,8 +11488,6 @@ components:
           type: number
           description: Status of API response.
           example: 503
-      x-stoplight:
-        id: 598u9tepu814g
     Error503RequestEndpointNotAvailable:
       type: object
       properties:
@@ -11757,7 +11521,5 @@ components:
             - API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
           description: Description of error.
           example: API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
-      x-stoplight:
-        id: s6xfthk0ss559
 security:
   - BearerAuth: []

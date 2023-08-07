@@ -1685,7 +1685,7 @@ components:
                 status: 200
                 request:
                   endpoint: company/search
-                  code: LRrr7hB4XAkP0WJtCTVDfAKyIJCbxC
+                  code: H1cr05z6aXn4krjTOLXoQa44bho9Ff
                   customId: null
                   query:
                     type: name
@@ -2013,7 +2013,7 @@ components:
                 status: 200
                 request:
                   endpoint: company/search
-                  code: r0AOmPxiCF71vS1ma67HJQqZwGx32J
+                  code: kG81xtvFaWGQPG66xEn7DMmsMIflZP
                   customId: null
                   query:
                     type: vatNumber
@@ -2036,8 +2036,7 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: KUWKAW s.r.o.
                         registrationNumber: "10830626"
                         taxNumber: null
@@ -2079,11 +2078,10 @@ components:
                                     "y": 746955.94
                             postOffice:
                               name: Praha 58
-                            full: "V zářezu 902/4, 158 00 Praha 5"
+                            full: V zářezu 902/4, 158 00 Praha 5
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: V zářezu
                             number:
                               part1: null
@@ -2098,8 +2096,7 @@ components:
                             zip: "15800"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Grand job s.r.o.
                         registrationNumber: "10874844"
                         taxNumber: null
@@ -2141,11 +2138,10 @@ components:
                                     "y": 742311.72
                             postOffice:
                               name: Praha 1
-                            full: "Revoluční 762/13, 110 00 Praha 1"
+                            full: Revoluční 762/13, 110 00 Praha 1
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Revoluční
                             number:
                               part1: null
@@ -2160,8 +2156,7 @@ components:
                             zip: "11000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Energetický Holding Malina a.s.
                         registrationNumber: "10931201"
                         taxNumber: null
@@ -2203,11 +2198,10 @@ components:
                                     "y": 742484.89
                             postOffice:
                               name: Praha 1
-                            full: "Krakovská 583/9, 110 00 Praha 1"
+                            full: Krakovská 583/9, 110 00 Praha 1
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Krakovská
                             number:
                               part1: null
@@ -2222,8 +2216,7 @@ components:
                             zip: "11000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: CZECH Employer agency s.r.o.
                         registrationNumber: "10813616"
                         taxNumber: null
@@ -2265,11 +2258,10 @@ components:
                                     "y": 473185.65
                             postOffice:
                               name: Ostrava 9
-                            full: "28. října 864/273, 709 00 Mariánské Hory a Hulváky"
+                            full: 28. října 864/273, 709 00 Mariánské Hory a Hulváky
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: 28. října
                             number:
                               part1: null
@@ -2284,8 +2276,7 @@ components:
                             zip: "70900"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: New Future s.r.o.
                         registrationNumber: "10800816"
                         taxNumber: null
@@ -2327,11 +2318,10 @@ components:
                                     "y": 790620.15
                             postOffice:
                               name: Most 1
-                            full: "Velebudická 3271, 434 01 Most"
+                            full: Velebudická 3271, 434 01 Most
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Velebudická
                             number:
                               part1: null
@@ -6113,7 +6103,7 @@ components:
                 status: 200
                 request:
                   endpoint: company/validate
-                  code: B5TgQ5Wtc8mvJ9tVgZhueux9U6tvEP
+                  code: flQnmp2K7l3VbhMKATBZkSwb7UPJ3w
                   customId: null
                   query:
                     registrationNumber: "0499747"
@@ -6136,8 +6126,7 @@ components:
                     isValid: false
                     proposal: invalidWithSuggestion
                     data:
-                      administrativeArea:
-                        country: null
+                      country: null
                       name: null
                       registrationNumber: "0499747"
                       taxNumber: null
@@ -6155,8 +6144,7 @@ components:
                   suggestions:
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Martina Brázdilová
                         registrationNumber: "04909747"
                         taxNumber: null
@@ -6198,11 +6186,10 @@ components:
                                     "y": 541769.82
                             postOffice:
                               name: Šternberk 1
-                            full: "Strmá 1129/6, 785 01 Šternberk"
+                            full: Strmá 1129/6, 785 01 Šternberk
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Strmá
                             number:
                               part1: null
@@ -6228,8 +6215,7 @@ components:
                             value: "04909747"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Quang Anh Kieu
                         registrationNumber: "04997417"
                         taxNumber: null
@@ -6271,11 +6257,10 @@ components:
                                     "y": 823065.17
                             postOffice:
                               name: Plzeň 1
-                            full: "Husova 786/19, 301 00 Plzeň 3"
+                            full: Husova 786/19, 301 00 Plzeň 3
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Husova
                             number:
                               part1: null
@@ -6301,8 +6286,7 @@ components:
                             value: "04997417"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Tomáš Minarovič
                         registrationNumber: "04997247"
                         taxNumber: null
@@ -6344,11 +6328,10 @@ components:
                                     "y": 723441.42
                             postOffice:
                               name: Zápy
-                            full: "Zápy 253, 250 61 Zápy"
+                            full: Zápy 253, 250 61 Zápy
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: null
                             number:
                               part1: null
@@ -6374,8 +6357,7 @@ components:
                             value: "04997247"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: BE SOCKS s.r.o.
                         registrationNumber: "05499747"
                         taxNumber: null
@@ -6417,11 +6399,10 @@ components:
                                     "y": 741018.8
                             postOffice:
                               name: Praha 101
-                            full: "Krymská 439/24, 101 00 Praha 10"
+                            full: Krymská 439/24, 101 00 Praha 10
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Krymská
                             number:
                               part1: null
@@ -6447,8 +6428,7 @@ components:
                             value: "05499747"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Jaroslav Ondrúšek
                         registrationNumber: "04799747"
                         taxNumber: null
@@ -6490,11 +6470,10 @@ components:
                                     "y": 528800.27
                             postOffice:
                               name: Bruntál 1
-                            full: "Rýmařovská 1491/31, 792 01 Bruntál"
+                            full: Rýmařovská 1491/31, 792 01 Bruntál
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Rýmařovská
                             number:
                               part1: null
@@ -6520,8 +6499,7 @@ components:
                             value: "04799747"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: AVANTRO s.r.o.
                         registrationNumber: "04997476"
                         taxNumber: null
@@ -6563,11 +6541,10 @@ components:
                                     "y": 740509.43
                             postOffice:
                               name: Praha 86
-                            full: "Thámova 137/16, 186 00 Praha 8"
+                            full: Thámova 137/16, 186 00 Praha 8
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Thámova
                             number:
                               part1: null
@@ -6593,8 +6570,7 @@ components:
                             value: "04997476"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Media 8 s.r.o.
                         registrationNumber: "04996747"
                         taxNumber: null
@@ -6636,11 +6612,10 @@ components:
                                     "y": 736720.46
                             postOffice:
                               name: Praha 10
-                            full: "Michelangelova 1995/16, 100 00 Praha 10"
+                            full: Michelangelova 1995/16, 100 00 Praha 10
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Michelangelova
                             number:
                               part1: null
@@ -8882,7 +8857,7 @@ components:
                 type: string
                 description: Type of coordinate system.
                 example: JTSK
-                nullable: true 
+                nullable: true
                 enum:
                   - JTSK
                   - ETRS89

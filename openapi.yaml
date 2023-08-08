@@ -7748,7 +7748,7 @@ components:
             allowedPrefixes:
               type: array
               nullable: true
-              description: List of allowed prefixies.
+              description: List of allowed prefixes. All prefixes are allowed by default.
               items:
                 type: string
                 example: "+420"

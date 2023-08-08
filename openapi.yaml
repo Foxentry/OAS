@@ -253,7 +253,7 @@ paths:
       x-stoplight:
         id: ql23022t5rhju
   /email/validate:
-    post:
+    post:!
       tags:
         - Email
       summary: Validate email
@@ -649,7 +649,7 @@ paths:
       summary: Validate phone number
       description: |-
         Foxentry allows you to check validity and the existence of phone numbers. It can also give you
-        additional information about the validated phone number based on the <b>validationType</b> option.<br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
+        additional information about the validated phone number based on the <b>validationType</b> option.<br><br>Please pay attention to the <b>formatNumber</b> option. This option defines the format of number that should be considered as valid. <br><br>Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
         Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
       operationId: ValidatePhoneNumber
       parameters:

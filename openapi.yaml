@@ -591,7 +591,8 @@ paths:
       tags:
         - Name
       summary: Name validation
-      description: 'Foxentry allows you to check validity and real existence of names. '
+      description: Foxentry allows you to check the validity and real existence of names and their combinations. At least one parameter is required in the query. You can either write down the name separately or use <b>nameSurname</b> as connected parameter. <br><br>Pay attention to the query options. Especially <b>validationDepth</b>, which determines how strict the validation should be based on your use case. For example you'd want minimal validationDepth for web forms since you usually don't want to disturb the user too much with error messages and suggestions.   <br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
+        Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
       operationId: NameValidation
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -647,8 +648,9 @@ paths:
         - Phone
       summary: Validate phone number
       description: |-
-        Foxentry allows you to check validity and real existence of phone number. Foxentry also can give you
-        additional informations about validated phone number, for example name of mobile carrier.
+        Foxentry allows you to check validity and the existence of phone numbers. It can also give you
+        additional information about the validated phone number based on the <b>validationType</b> option.<br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
+        Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
       operationId: ValidatePhoneNumber
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -7709,13 +7711,13 @@ components:
               example: extended
             allowedPrefixes:
               type: array
-              description: List of allowed prefixies.
+              description: List of allowed prefixes.
               items:
                 type: string
                 example: '+420'
             defaultPrefix:
               type: string
-              description: Default international prefix if not part of the query.
+              description: Default international prefix if not part of the query. This is used for the validator to make more accurate results.
               example: '+420'
       required:
         - query
@@ -7730,17 +7732,17 @@ components:
             name:
               type: string
               nullable: true
-              description: TODO
+              description: First name.
               example: Petr
             surname:
               type: string
               nullable: true
-              description: TODO
+              description: Last name / family name.
               example: Novák
             nameSurname:
               type: string
               nullable: true
-              description: TODO
+              description: Name and surname together.
               default: null
               example: Petr Novák
         options:
@@ -7748,6 +7750,7 @@ components:
           description: Query options.
           properties:
             dataScope:
+              description: Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned.
               enum:
                 - basic
                 - full
@@ -7755,12 +7758,12 @@ components:
               example: full
             acceptDegrees:
               type: boolean
-              description: 'Allow to enter a title directly into the name, surname or nameSurname input.'
+              description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'
               default: false
               example: false
             acceptContext:
               type: boolean
-              description: 'Allow to insert context directly into name, surname or nameSurname.'
+              description: 'Allow to insert context directly into name, surname or nameSurname. For example "Jan Novák ml." or "Jan Novák mladší" would be considered as valid/invalid nameSurname'
               default: false
               example: false
             validationDepth:
@@ -7768,7 +7771,7 @@ components:
                 - minimal
                 - moderate
                 - strict
-              description: Specifies the scope and depth of name validation.
+              description: Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked.
               default: minimal
               example: minimal
             smartMode:
@@ -7825,12 +7828,12 @@ components:
                 - limit
                 - prefer
                 - null
-              description: 'prefer = Prefer results matching the country filter, limit = Limit to results matching the country filter.'
+              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             resultsLimit:
               type: integer
-              description: Results limit of response.
+              description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the 
               minimum: 1
               maximum: 20
               default: 10
@@ -7903,7 +7906,7 @@ components:
               enum:
                 - limit
                 - prefer
-              description: 'prefer = Prefer results matching the country filter, limit = Limit to results matching the country filter.'
+              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             resultsLimit:
@@ -8988,21 +8991,22 @@ components:
           properties:
             name:
               type: string
-              description: Search name.
+              description: First name.
               example: Jan
             surname:
               type: string
-              description: Search surname.
+              description: Last name / family name.
               example: Novák
             nameSurname:
               type: string
-              description: Name and surname to validate.
+              description: Name and surname together.
               example: Jan Novák
         options:
           type: object
           description: Query options.
           properties:
             dataScope:
+              description: Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned.
               enum:
                 - basic
                 - extended
@@ -9014,7 +9018,7 @@ components:
                 - moderate
                 - strict
                 - null
-              description: Specifies the scope and depth of name validation.
+              description: Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked.
               example: minimal
             smartMode:
               type: boolean
@@ -9144,35 +9148,35 @@ components:
       properties:
         nameSurname:
           type: string
-          description: Name and surname
+          description: Name and surname together.
           example: Petr Novák
           nullable: true
         name:
           type: string
-          description: Name
+          description: First name.
           example: Petr
         surname:
           type: string
-          description: Surname
+          description: Last name / family name.
           nullable: true
           example: Novák
         context:
           type: array
           items:
             type: string
-            description: Context for name and Surname
+            description: Context for name and Surname.
             example: ml.
         degreesBefore:
           type: array
           items:
             type: string
-            description: Degrees before name
+            description: Degrees before name.
             example: Ing.
         degreesAfter:
           type: array
           items:
             type: string
-            description: Degrees after name
+            description: Degrees after name.
             example: Ph.D.
       required:
         - nameSurname
@@ -9209,7 +9213,7 @@ components:
           nameDays:
             type: array
             nullable: true
-            description: TODO
+            description: Date of the name day. Currently works only for czech and slovak names.
             items:
               type: object
               properties:
@@ -9219,11 +9223,11 @@ components:
                   example: CZ
                 month:
                   type: string
-                  description: Number of month for name day.
+                  description: Month number for name day.
                   example: '6'
                 day:
                   type: string
-                  description: Number of month for name day.
+                  description: Day number for name day.
                   example: '29'
               required:
                 - country
@@ -9609,17 +9613,17 @@ components:
           properties:
             validationType:
               type: string
-              description: Type of validation used.
+              description: Type of validation used. <b>Basic</b> = checks the format and syntax of validated phone number. <b>Extended</b> = checks whether the phone number is registered in the TELCO net as well. Returns additional information such as carrier name and type of the phone connection (mobile/landline).
               example: extended
             allowedPrefixes:
               type: array
-              description: Array of allowed prefixes.
+              description: Array of allowed prefixes. If <b>null</b> = all prefixes are allowed.
               items:
                 type: string
                 example: '+420'
             formatNumber:
               type: boolean
-              description: Formatting the phone number required or not.
+              description: Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.
               example: false
         client:
           $ref: '#/components/schemas/ClientRequest'
@@ -9755,7 +9759,7 @@ components:
           example: '+420775111222'
         carrier:
           type: object
-          description: TODO
+          description: Phone carrier information.
           properties:
             name:
               type: string
@@ -9768,7 +9772,7 @@ components:
               description: Type of carrier.
         format:
           type: object
-          description: TODO
+          description: Standardized international and local format.
           properties:
             national:
               type: string
@@ -10232,7 +10236,7 @@ components:
                 - limit
                 - prefer
                 - null
-              description: 'prefer = Prefer results matching the country filter, limit = Limit to results matching the country filter.'
+              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             dataScope:
@@ -10252,7 +10256,7 @@ components:
             resultsLimit:
               type: integer
               nullable: true
-              description: Results limit of response.
+              description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
               minimum: 1
               maximum: 20
               default: 10

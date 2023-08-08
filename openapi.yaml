@@ -8268,12 +8268,15 @@ components:
                 created:
                   type: string
                   description: Company creation date.
+                  format: date
+                  nullable: true
                   example: "2016-04-15"
                 terminated:
-                  type: boolean
-                  nullable: true
+                  type: string
                   description: Company termination date.
-                  example: true
+                  format: date
+                  nullable: true
+                  example: "2016-04-15"
             employees:
               type: object
               description: Employees information.

@@ -7843,7 +7843,7 @@ components:
                 - moderate
                 - strict
               description: Specifies the scope and depth of name validation.
-              default: minimal
+              default: strict
               example: minimal
             smartMode:
               type: boolean
@@ -8451,6 +8451,7 @@ components:
                       example: CZK
                 shareholders:
                   type: array
+                  description: TODO
                   items:
                     type: object
                     properties:
@@ -8893,19 +8894,28 @@ components:
               nullable: true
               example: Jeseniova
             number:
+              nullable: true
               $ref: "#/components/schemas/LocationNumber"
             streetWithNumber:
               type: string
               description: Street with number.
+              nullable: true
               example: Jeseniova 1151/55
             city:
               type: string
               description: City.
+              nullable: true
               example: Praha
             zip:
               type: string
               description: ZIP code.
+              nullable: true
               example: "13000"
+            full:
+              type: string
+              description: Full address. 
+              nullable: true 
+              example: Jeseniova 1151/55 Praha 130000
     GlobalRequest:
       type: object
       properties:
@@ -8988,6 +8998,11 @@ components:
               type: string
               description: Type of search.
               example: name
+              enum:
+                - name
+                - registrationNumber
+                - taxNumber
+                - vatNumber
             value:
               type: string
               description: Value of search.
@@ -9106,6 +9121,7 @@ components:
                 - null
               description: Specifies the scope and depth of name validation.
               example: minimal
+              default: strict
             smartMode:
               type: boolean
               nullable: true

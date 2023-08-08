@@ -8423,14 +8423,11 @@ components:
                     type: object
                     properties:
                       shareholder:
-                        type: object
-                        properties:
-                          text:
-                            type: string
-                            description: Information about shareholder.
-                            example: >-
-                              PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V
-                              Zahradách 277, 751 11 Radslavice
+                        type: string
+                        description: Information about shareholder.
+                        example: >-
+                          PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V
+                          Zahradách 277, 751 11 Radslavice
                       share:
                         type: object
                         properties:

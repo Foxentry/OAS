@@ -878,7 +878,7 @@ components:
                   customId: null
                   query:
                     registrationNumber: "04997476"
-                    administrativeArea.country: CZ
+                    country: CZ
                   options:
                     dataScope: basic
                     includeTerminatedSubjects: false
@@ -892,8 +892,7 @@ components:
                   resultsCount: 1
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: AVANTRO s.r.o.
                         registrationNumber: "04997476"
                         taxNumber: null
@@ -938,8 +937,7 @@ components:
                             full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Thámova
                             number:
                               part1: null
@@ -963,7 +961,7 @@ components:
                   customId: null
                   query:
                     registrationNumber: "04997476"
-                    administrativeArea.country: CZ
+                    country: CZ
                   options:
                     dataScope: extended
                     includeTerminatedSubjects: false
@@ -977,8 +975,7 @@ components:
                   resultsCount: 1
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: AVANTRO s.r.o.
                         registrationNumber: "04997476"
                         taxNumber: null
@@ -1023,8 +1020,7 @@ components:
                             full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Thámova
                             number:
                               part1: null
@@ -1202,7 +1198,7 @@ components:
                   customId: null
                   query:
                     registrationNumber: "04997476"
-                    administrativeArea.country: CZ
+                    country: CZ
                   options:
                     dataScope: full
                     includeTerminatedSubjects: false
@@ -1216,8 +1212,7 @@ components:
                   resultsCount: 1
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: AVANTRO s.r.o.
                         registrationNumber: "04997476"
                         taxNumber: null
@@ -1262,8 +1257,7 @@ components:
                             full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Thámova
                             number:
                               part1: null
@@ -1380,8 +1374,7 @@ components:
                                     full: "V Zahradách 277, 751 11 Radslavice"
                                 addressOfficial:
                                   data:
-                                    administrativeArea:
-                                      country: null
+                                    country: null
                                     street: V Zahradách
                                     number:
                                       part1: null
@@ -1442,8 +1435,7 @@ components:
                                     full: "V Zahradách 277, 751 11 Radslavice"
                                 addressOfficial:
                                   data:
-                                    administrativeArea:
-                                      country: null
+                                    country: null
                                     street: V Zahradách
                                     number:
                                       part1: null
@@ -2364,8 +2356,7 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: SK
+                        country: SK
                         name: Pavol Maráček - EMPIRIA
                         registrationNumber: "17672520"
                         taxNumber: "1020329596"
@@ -2406,8 +2397,7 @@ components:
                             full: "Priemyselná 12/12, 921 01 Piešťany"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Priemyselná
                             number:
                               part1: null
@@ -2422,8 +2412,7 @@ components:
                             zip: "92101"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: SK
+                        country: SK
                         name: Ľubomír Žolčák - ŽOLÍK
                         registrationNumber: "37643703"
                         taxNumber: "1031416738"
@@ -2464,8 +2453,7 @@ components:
                             full: "Kpt. Nálepku 2854/5, 080 01 Prešov"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Ul.kpt.Nálepku
                             number:
                               part1: null
@@ -2480,8 +2468,7 @@ components:
                             zip: "08001"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: PL
+                        country: PL
                         name: ŁSS SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIELNOŚCIĄ
                         registrationNumber: "001010093"
                         taxNumber: "1050003231"
@@ -2490,8 +2477,7 @@ components:
                         address: null
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: ul. Krakowska
                             number:
                               part1: null
@@ -2506,8 +2492,7 @@ components:
                             zip: 94-214
                             full: null
                     - data:
-                        administrativeArea:
-                          country: PL
+                        country: PL
                         name: >-
                           "WARSZAWSKIE CENTRUM TARGOWE" SPÓŁKA Z OGRANICZONĄ
                           ODPOWIEDZIALNOŚCIĄ
@@ -2518,8 +2503,7 @@ components:
                         address: null
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: ul. Solec
                             number:
                               part1: null
@@ -2534,8 +2518,7 @@ components:
                             zip: 00-382
                             full: null
                     - data:
-                        administrativeArea:
-                          country: PL
+                        country: PL
                         name: >-
                           PLANTS BROKER POLSKA SPÓŁKA Z OGRANICZONĄ
                           ODPOWIEDZIALNOŚCIĄ
@@ -2546,8 +2529,7 @@ components:
                         address: null
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: ul. Biała
                             number:
                               part1: null
@@ -2590,8 +2572,7 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: KUWKAW s.r.o.
                         registrationNumber: "10830626"
                         taxNumber: null
@@ -2636,8 +2617,7 @@ components:
                             full: "V zářezu 902/4, 158 00 Praha 5"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: V zářezu
                             number:
                               part1: null
@@ -2652,8 +2632,7 @@ components:
                             zip: "15800"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Grand job s.r.o.
                         registrationNumber: "10874844"
                         taxNumber: null
@@ -2698,8 +2677,7 @@ components:
                             full: "Revoluční 762/13, 110 00 Praha 1"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Revoluční
                             number:
                               part1: null
@@ -2714,8 +2692,7 @@ components:
                             zip: "11000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Energetický Holding Malina a.s.
                         registrationNumber: "10931201"
                         taxNumber: null
@@ -2760,8 +2737,7 @@ components:
                             full: "Krakovská 583/9, 110 00 Praha 1"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Krakovská
                             number:
                               part1: null
@@ -2776,8 +2752,7 @@ components:
                             zip: "11000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: CZECH Employer agency s.r.o.
                         registrationNumber: "10813616"
                         taxNumber: null
@@ -2822,8 +2797,7 @@ components:
                             full: "28. října 864/273, 709 00 Mariánské Hory a Hulváky"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: 28. října
                             number:
                               part1: null
@@ -2838,8 +2812,7 @@ components:
                             zip: "70900"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: New Future s.r.o.
                         registrationNumber: "10800816"
                         taxNumber: null
@@ -2884,8 +2857,7 @@ components:
                             full: "Velebudická 3271, 434 01 Most"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Velebudická
                             number:
                               part1: null
@@ -5983,8 +5955,7 @@ components:
                     isValid: true
                     proposal: valid
                     data:
-                      administrativeArea:
-                        country: CZ
+                      country: CZ
                       name: AVANTRO s.r.o.
                       registrationNumber: "04997476"
                       taxNumber: null
@@ -6029,8 +6000,7 @@ components:
                           full: "Thámova 137/16, 186 00 Praha 8"
                       addressOfficial:
                         data:
-                          administrativeArea:
-                            country: null
+                          country: null
                           street: Thámova
                           number:
                             part1: null
@@ -6077,8 +6047,7 @@ components:
                     isValid: false
                     proposal: invalid
                     data:
-                      administrativeArea:
-                        country: null
+                      country: null
                       name: AVANTRO
                       registrationNumber: "25547"
                       taxNumber: null
@@ -6669,8 +6638,7 @@ components:
                     isValid: false
                     proposal: invalidWithCorrection
                     data:
-                      administrativeArea:
-                        country: null
+                      country: null
                       name: AVANTRO
                       registrationNumber: "04997476"
                       taxNumber: null
@@ -6688,8 +6656,7 @@ components:
                   resultCorrected:
                     isValid: true
                     data:
-                      administrativeArea:
-                        country: CZ
+                      country: CZ
                       name: AVANTRO s.r.o.
                       registrationNumber: "04997476"
                       taxNumber: null
@@ -6734,8 +6701,7 @@ components:
                           full: "Thámova 137/16, 186 00 Praha 8"
                       addressOfficial:
                         data:
-                          administrativeArea:
-                            country: null
+                          country: null
                           street: Thámova
                           number:
                             part1: null
@@ -7781,6 +7747,7 @@ components:
               example: extended
             allowedPrefixes:
               type: array
+              nullable: true
               description: List of allowed prefixies.
               items:
                 type: string
@@ -7918,7 +7885,7 @@ components:
                 Whether or not to return in the API response also entities that
                 have already been terminated.
               default: false
-              example: true
+              example: false
       required:
         - query
     CompanySearchRequest:
@@ -8001,7 +7968,7 @@ components:
                 Whether or not to return in the output also entities that have
                 already been terminated.
               default: false
-              example: true
+              example: false
       required:
         - query
     EmailSearchRequest:
@@ -8672,7 +8639,7 @@ components:
           type: string
           nullable: true
           description: City Administrative area.
-          example: Dejvice
+          example: Kraków
         cadastralArea:
           type: string
           nullable: true
@@ -8913,8 +8880,8 @@ components:
               example: "13000"
             full:
               type: string
-              description: Full address. 
-              nullable: true 
+              description: Full address.
+              nullable: true
               example: Jeseniova 1151/55 Praha 130000
     GlobalRequest:
       type: object
@@ -9717,6 +9684,7 @@ components:
               example: extended
             allowedPrefixes:
               type: array
+              nullable: true
               description: Array of allowed prefixes.
               items:
                 type: string

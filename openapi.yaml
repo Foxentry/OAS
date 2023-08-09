@@ -1510,7 +1510,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/GetCompanyDataResponseRequest"
@@ -1531,7 +1531,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 allOf:
@@ -2800,7 +2800,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/CompanySearchResultsRequest"
@@ -3111,7 +3111,7 @@ components:
             properties:
               status:
                 type: integer
-                description: API call status.
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/NameValidationResponseRequest"
@@ -3356,7 +3356,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Status of response.
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/ValidatePhoneNumberResponseRequest"
@@ -4605,7 +4605,8 @@ components:
             properties:
               status:
                 type: integer
-                format: int32
+                description: Status of API response.
+                example: 200
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -4729,6 +4730,8 @@ components:
             properties:
               status:
                 type: integer
+                description: Status of API response.
+                example: 200
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -4906,6 +4909,8 @@ components:
             properties:
               status:
                 type: integer
+                description: Status of API response.
+                example: 200
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -5737,6 +5742,8 @@ components:
             properties:
               status:
                 type: integer
+                description: Status of API response.
+                example: 200
               errors:
                 type: array
               request:
@@ -6625,7 +6632,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/ValidateCompanyDataResultsRequest"
@@ -6986,7 +6993,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 allOf:
@@ -7019,11 +7026,11 @@ components:
                             example: true
                           acceptFreemails:
                             type: boolean
-                            example: true                          
+                            example: true
               response:
                 $ref: "#/components/schemas/ValidateEmailResponse"
               errors:
-                type: array                  
+                type: array
             required:
               - errors
               - status
@@ -9454,7 +9461,7 @@ components:
             numberWithPrefix:
               type: string
               description: Phone number with prefix to validate.
-              example: "+420777555666"            
+              example: "+420777555666"
         options:
           type: object
           description: Query options.

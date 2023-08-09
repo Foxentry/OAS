@@ -1458,10 +1458,9 @@ components:
                             amount: "200000"
                             currency: CZK
                           shareholders:
-                            - shareholder:
-                                text: >-
-                                  PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990
-                                  V Zahradách 277, 751 11 Radslavice
+                            - shareholder: >-
+                                PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990
+                                V Zahradách 277, 751 11 Radslavice
                               share:
                                 amount: "200000"
                                 currency: czk

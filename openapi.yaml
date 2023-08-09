@@ -7398,19 +7398,6 @@ components:
           maximum: 20
           default: 10
           example: 10
-        cityFormat:
-          enum:
-            - minimal
-            - basic
-            - extended
-          default: basic
-          example: extended
-        zipFormat:
-          enum:
-            - numeric
-            - standard
-          default: standard
-          example: numeric
         acceptPostOfficeAsCity:
           type: boolean
           default: false
@@ -9797,10 +9784,6 @@ components:
           items:
             type: object
             properties:
-              type:
-                type: string
-                description: TODO
-                example: address
               data:
                 $ref: "#/components/schemas/LocationData"
       required:

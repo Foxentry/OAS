@@ -9327,12 +9327,13 @@ components:
           description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
-          descripton: List of the affected inputs.
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
+          type: string
           enum:
             - Value is empty.
             - Value contains parts in incorrect order.

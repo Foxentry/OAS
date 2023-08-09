@@ -1459,8 +1459,8 @@ components:
                             currency: CZK
                           shareholders:
                             - shareholder: >-
-                                PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990
-                                V Zahradách 277, 751 11 Radslavice
+                                  PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990
+                                  V Zahradách 277, 751 11 Radslavice
                               share:
                                 amount: "200000"
                                 currency: czk
@@ -3186,7 +3186,7 @@ components:
             type: object
             properties:
               status:
-                type: number
+                type: integer
                 description: API call status.
                 example: 200
               request:
@@ -3431,7 +3431,7 @@ components:
             type: object
             properties:
               status:
-                type: number
+                type: integer
                 description: Status of response.
                 example: 200
               request:
@@ -4805,7 +4805,6 @@ components:
             properties:
               status:
                 type: integer
-                format: int32
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -4821,13 +4820,6 @@ components:
                             properties:
                               location:
                                 type: object
-                                properties:
-                                  lat:
-                                    type: number
-                                    example: 50.083
-                                  lon:
-                                    type: number
-                                    example: 14.417
                                 required:
                                   - lat
                                   - lon
@@ -5006,7 +4998,6 @@ components:
             properties:
               status:
                 type: integer
-                format: int32
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -5840,7 +5831,6 @@ components:
             properties:
               status:
                 type: integer
-                format: int32
               errors:
                 type: array
               request:
@@ -7478,21 +7468,9 @@ components:
           allOf:
             - $ref: "#/components/schemas/ClientRequest"
             - type: object
-              description: >-
-                Additional information about the user in order to specify the
-                results in response. Used mainly for web forms.
               properties:
                 location:
                   type: object
-                  properties:
-                    lat:
-                      type: number
-                      description: TODO
-                      example: 50.083
-                    lon:
-                      type: number
-                      description: TODO
-                      example: 14.417
                   required:
                     - lat
                     - lon
@@ -7755,6 +7733,10 @@ components:
               type: string
               description: Default international prefix if not part of the query.
               example: "+420"
+            formatNumber:
+              type: boolean
+              description: Formatting the phone number required or not.
+              example: false
       required:
         - query
     NameValidationRequest:
@@ -8556,11 +8538,12 @@ components:
                       type: boolean
                       description: Determines whether or not the subject is reliable.
                       example: true
-                    unrealiableFrom:
-                      type: boolean
+                    unreliableFrom:
+                      type: string
+                      format: date
                       nullable: true
                       description: Determines from when the subject is unreliable.
-                      example: true
+                      example: "2018-09-01"
                 bankAccounts:
                   type: array
                   description: Bank accounts associated with the VAT payer.
@@ -9273,6 +9256,10 @@ components:
         properties:
           type:
             type: string
+            enum:
+              - name
+              - surname
+              - nameSurname
             description: Type of detail.
             example: name
           value:
@@ -9345,9 +9332,6 @@ components:
             - TOO_LONG
             - TOO_SHORT
             - CONTEXT
-            - CITY
-            - STREET
-            - ZIP
           description: Subtype of error.
           example: NOT_ALLOWED
         severity:
@@ -9672,7 +9656,11 @@ components:
             number:
               type: string
               description: Phone number to validate.
-              example: "+420777555666"
+              example: "777555666"
+            numberWithPrefix:
+              type: string
+              description: Phone number with prefix to validate.
+              example: "+420777555666"            
         options:
           type: object
           description: Query options.
@@ -9689,9 +9677,15 @@ components:
                 type: string
                 example: "+420"
             formatNumber:
+              nullable: true
               type: boolean
               description: Formatting the phone number required or not.
               example: false
+            defaultPrefix:
+              nullable: true
+              type: string
+              description: Default international prefix if not part of the query.
+              example: "+420"
         client:
           $ref: "#/components/schemas/ClientRequest"
     ValidatePhoneNumberResults:
@@ -10795,7 +10789,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 400
     Error400RequestBodyEmpty:
@@ -11193,7 +11187,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 401
     Error401RequestAuth:
@@ -11236,7 +11230,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 402
     Error402RequestBillingNoCredit:
@@ -11280,7 +11274,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 403
     Error403RequestAuthKey:
@@ -11431,7 +11425,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 404
     Error404RequestApiVersion:
@@ -11548,7 +11542,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 405
     Error405RequestNotAllowedMethod:
@@ -11587,7 +11581,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 429
     Error429RequestBillingServiceLimit:
@@ -11742,7 +11736,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 500
     Error500InternalBilling:
@@ -11997,7 +11991,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 503
     Error503RequestEndpointNotAvailable:

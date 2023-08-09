@@ -146,7 +146,7 @@ paths:
       tags:
         - Company
       summary: Search company
-      description: 'You can search for individual companies using this API endpoint. '
+      description: This enpoint mainly serves as <b>autocomplete</b> but can be used to search for specific companies based on filter criteria as well. Foxentry will automatically offer you suggestions to complete the company you are writing down. <br><br>Pay attention to the <b>client</b> section in the request body. You can specify the user's location in order to receive more relevant suggestions.
       operationId: CompanySearch
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -201,7 +201,7 @@ paths:
       tags:
         - Company
       summary: Get company data
-      description: 'This endpoint returns all available data about the company. '
+      description: Foxentry allows you to get information about company based on the <b>dataScope</b> option. <b>Country</b> and <b>registrationNumber</b> parameters are required.
       operationId: GetCompanyData
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -424,7 +424,7 @@ paths:
       tags:
         - Location
       summary: Search location
-      description: Use this API endpoint to search for locations.
+      description: This enpoint mainly serves as <b>autocomplete</b> but can be used to search for specific addresses based on filter criteria as well. Foxentry will automatically offer you suggestions to complete the address you are writing down. <br><br>Pay attention to the <b>client</b> section in the request body. You can specify the user's location in order to receive more relevant suggestions.
       operationId: LocationSearch
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -4637,7 +4637,6 @@ components:
                       query:
                         type: object
                         properties:
-                          type:
                             enum:
                               - street
                               - streetWithNumber
@@ -4650,11 +4649,13 @@ components:
                               - zip
                               - full
                           value:
+                            description: Searched value.
                             oneOf:
                               - type: string
                               - type: integer
                           filter:
                             type: array
+                            description: Additional filter in order to specify the search results.
                             items:
                               enum:
                                 - street
@@ -4669,9 +4670,6 @@ components:
                                 - full
                             example:
                               - street
-                        example:
-                          type: street
-                          value: Jeseniova
                       options:
                         $ref: '#/components/schemas/LocationRequestOptions'
                       client:
@@ -7260,7 +7258,7 @@ components:
                 - type: integer
             filter:
               type: object
-              description: TODO
+              description: Additional filter in order to specify the search results.
               properties:
                 street:
                   type: string
@@ -7794,14 +7792,15 @@ components:
                 - registrationNumber
                 - taxNumber
                 - vatNumber
+              description: Type of search.
               example: name
             value:
               type: string
-              description: The input value you"re looking for.
+              description: Searched value.
               example: Avantro
             filter:
               type: object
-              description: TODO
+              description: Additional filter in order to specify the search results.
               properties:
                 name:
                   type: string
@@ -8305,7 +8304,7 @@ components:
                       example: CZK
                 shareholders:
                   type: array
-                  description: TODO
+                  description: Information about shareholders.
                   items:
                     type: object
                     properties:
@@ -8334,7 +8333,7 @@ components:
                             example: '100'
                       info:
                         type: array
-                        description: TODO
+                        description: Textual information about the share.
                         items:
                           type: string
                           description: Information about share
@@ -8849,11 +8848,11 @@ components:
                 - vatNumber
             value:
               type: string
-              description: Value of search.
+              description: Searched value.
               example: Avantro s.r.o.
             filter:
               type: object
-              description: TODO
+              description: Additional filter in order to specify the search results.
               properties:
                 registrationNumber:
                   type: number

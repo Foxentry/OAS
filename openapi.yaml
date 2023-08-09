@@ -2,60 +2,22 @@ openapi: 3.0.0
 info:
   version: "2.0"
   title: Foxentry API v2
-  description: >-
+  description: |-
     # Welcome to the Foxentry API version 2.0
-
-    Welcome to the new version of Foxentry API 2.0 Our API is designed to
-    enhance your data management experience and provide you with even more
-    powerful tools to harness the potential of getting and working with data.
-
+    Welcome to the new version of Foxentry API 2.0 Our API is designed to enhance your data management experience and provide you with even more powerful tools to harness the potential of getting and working with data.
     ## API usage
-
-    The Foxentry API is used to <b>retrieve</b>, <b>validate</b>, and
-    <b>modify</b> user data. Using our API, you can obtain detailed information,
-    validate customer input, and automatically edit it into the appropriate
-    formats. <br><br>
-
-    The new version of our API also supports automatic corrections, offering you
-    suggestions and corrections for your inputs so that you always get the right
-    data.
-
+    The Foxentry API is used to <b>retrieve</b>, <b>validate</b>, and <b>modify</b> user data. Using our API, you can obtain detailed information, validate customer input, and automatically edit it into the appropriate formats. <br><br>
+    The new version of our API also supports automatic corrections, offering you suggestions and corrections for your inputs so that you always get the right data.
     ## Features in version 2.0
-
-    Foxentry now provides you with a wide variety of information by providing a
-    comprehensive set of endpoints for numerous data categories. Whether you
-    need information on a <b>Company</b>, an <b>Email</b> address, a
-    <b>Location</b>, a <b>Name</b>, or a <b>Phone number</b>, Foxentry can help.
-    We are pleased to offer our valued clients a total of 11 endpoints in this
-    new version. <br><br>
-
-    With the latest version of the Foxentry API, we have implemented advanced
-    <b>Corrections</b> and <b>Suggestions</b>. This means that the data you
-    receive will be more refined and precise, enabling you to make data-driven
-    decisions with the utmost confidence. <br><br>
-
-    The latest Foxentry API version includes <b>HTTP global errors</b> but also
-    <b>local error messages</b>, recognizing the need for clear and useful error
-    feedback. If a problem happens while using the API, you will be notified in
-    descriptive error messages, providing a smoother integration process and
-    quicker issue resolution. <br><br>
-
-    To further enhance data quality, Foxentry has introduced <b>Fixes</b> in the
-    new version of the API. This means that even if there are minor errors in
-    the data you provide, the API will intelligently identify and correct them,
-    reducing the risk of inaccuracies in your results.
-
+    Foxentry now provides you with a wide variety of information by providing a comprehensive set of endpoints for numerous data categories. Whether you need information on a <b>Company</b>, an <b>Email</b> address, a <b>Location</b>, a <b>Name</b>, or a <b>Phone number</b>, Foxentry can help. We are pleased to offer our valued clients a total of 11 endpoints in this new version. <br><br>
+    With the latest version of the Foxentry API, we have implemented advanced <b>Corrections</b> and <b>Suggestions</b>. This means that the data you receive will be more refined and precise, enabling you to make data-driven decisions with the utmost confidence. <br><br>
+    The latest Foxentry API version includes <b>HTTP global errors</b> but also <b>local error messages</b>, recognizing the need for clear and useful error feedback. If a problem happens while using the API, you will be notified in descriptive error messages, providing a smoother integration process and quicker issue resolution. <br><br>
+    To further enhance data quality, Foxentry has introduced <b>Fixes</b> in the new version of the API. This means that even if there are minor errors in the data you provide, the API will intelligently identify and correct them, reducing the risk of inaccuracies in your results.
     ## API call
-
-    Each API call should be directed to a specific endpoint URL. Each API call
-    to an endpoint can only contain one API request.
-
+    Each API call should be directed to a specific endpoint URL. Each API call to an endpoint can only contain one API request.
     ## Environment
-
     Production: https://api.foxentry.com/
-
     ## Supported countries
-
     <table class="center">
       <tr>
         <th>Endpoint</th>
@@ -107,21 +69,11 @@ info:
       </tr>                                                                
     </table>
 
-
     ## Security
-
-    As part of our commitment to data security, you are required to obtain a
-    <b>Bearer token</b> from Foxentry. If you are a new user and do not have an
-    API key, please fill out our registration form at
-    https://foxentry.com/help-center/rest-api. 
-
+    As part of our commitment to data security, you are required to obtain a <b>Bearer token</b> from Foxentry. If you are a new user and do not have an API key, please fill out our registration form at https://foxentry.com/help-center/rest-api. 
 
     ## Need help? 
-
-    Should you encounter any issues, have questions, or need assistance, please
-    feel free to reach out to our dedicated support team at info@foxentry.cz. We
-    are here to help you make the most of our API and resolve any questions you
-    may have.
+    Should you encounter any issues, have questions, or need assistance, please feel free to reach out to our dedicated support team at info@foxentry.cz. We are here to help you make the most of our API and resolve any questions you may have.
   contact:
     name: Foxentry
     email: info@foxentry.cz
@@ -135,11 +87,10 @@ paths:
       tags:
         - Company
       summary: Validate company data
-      description: >-
-        This endpoint requires at least 1 query parameter and will check if this
-        combination of parameters values is valid.
-
-        Returns informations about company matched inputed parameters values.
+      description: |-
+        This endpoint requires at least 1 query parameter and will check if the parameters and their combinations are valid.
+        Returns information about the company based on the datascope set in the options.<br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
+        Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
       operationId: ValidateCompanyData
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -298,10 +249,8 @@ paths:
       tags:
         - Email
       summary: Validate email
-      description: >-
-        Foxentry allows you to check if email address really exists. Foxentry
-        also can give you information 
-
+      description: |-
+        Foxentry allows you to check if email address really exists. Foxentry also can give you information 
         if this mailbox is provided by some temporary emails service.
       operationId: ValidateEmail
       parameters:
@@ -355,9 +304,7 @@ paths:
       tags:
         - Email
       summary: Email search
-      description: >-
-        Foxentry will automatically offer you options to complete the address
-        based on the data you enter.
+      description: Foxentry will automatically offer you options to complete the address based on the data you enter.
       operationId: EmailSearch
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -569,12 +516,9 @@ paths:
       tags:
         - Locations
       summary: Location localization
-      description: >-
-        This endpoint returns max. 10 addresses nearby inputed GPS coordinates.
-        Usable in case you want to localize
-
-        end user by his GPS coordinates (obtained through browser
-        geolocalization service).
+      description: |-
+        This endpoint returns max. 10 addresses nearby inputed GPS coordinates. Usable in case you want to localize
+        end user by his GPS coordinates (obtained through browser geolocalization service).
       operationId: LocationLocalization
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -627,7 +571,9 @@ paths:
       tags:
         - Name
       summary: Name validation
-      description: "Foxentry allows you to check validity and real existence of names. "
+      description:
+        Foxentry allows you to check the validity and real existence of names and their combinations. At least one parameter is required in the query. You can either write down the name separately or use <b>nameSurname</b> as connected parameter. <br><br>Pay attention to the query options. Especially <b>validationDepth</b>, which determines how strict the validation should be based on your use case. For example you'd want minimal validationDepth for web forms since you usually don't want to disturb the user too much with error messages and suggestions.   <br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
+        Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
       operationId: NameValidation
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -680,12 +626,10 @@ paths:
       tags:
         - Phone
       summary: Validate phone number
-      description: >-
-        Foxentry allows you to check validity and real existence of phone
-        number. Foxentry also can give you
-
-        additional informations about validated phone number, for example name
-        of mobile carrier.
+      description: |-
+        Foxentry allows you to check validity and the existence of phone numbers. It can also give you
+        additional information about the validated phone number based on the <b>validationType</b> option.<br><br>Please pay attention to the <b>formatNumber</b> option. This option defines the format of number that should be considered as valid. <br><br>Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
+        Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
       operationId: ValidatePhoneNumber
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -859,9 +803,7 @@ components:
   securitySchemes:
     BearerAuth:
       type: http
-      description: >-
-        Bearer token formatted API key. You can obtain the API key after the
-        sign up at app.foxentry.com/registration.
+      description: Bearer token formatted API key. You can obtain the API key after the sign up at app.foxentry.com/registration.
       scheme: bearer
   responses:
     GetCompanyData:
@@ -1039,14 +981,10 @@ components:
                             name: "Ostatní profesní, vědecké a technické činnosti"
                             isPrimary: null
                           - code: "6820"
-                            name: >-
-                              Pronájem a správa vlastních nebo pronajatých
-                              nemovitostí
+                            name: Pronájem a správa vlastních nebo pronajatých nemovitostí
                             isPrimary: null
                           - code: "00"
-                            name: >-
-                              Výroba, obchod a služby neuvedené v přílohách 1 až
-                              3 živnostenského zákona
+                            name: "Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona"
                             isPrimary: null
                         registrations:
                           - type: businessRegister
@@ -1069,9 +1007,7 @@ components:
                               registrator:
                                 code: null
                                 name: Finanční úřad pro hlavní město Prahu
-                                detail: >-
-                                  Územní pracoviště pro Prahu 8, Trojská 13a,
-                                  PRAHA 8, tel.: 266 013 111
+                                detail: "Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8, tel.: 266 013 111"
                               reference: null
                         legalForm:
                           code: 112
@@ -1276,14 +1212,10 @@ components:
                             name: "Ostatní profesní, vědecké a technické činnosti"
                             isPrimary: null
                           - code: "6820"
-                            name: >-
-                              Pronájem a správa vlastních nebo pronajatých
-                              nemovitostí
+                            name: Pronájem a správa vlastních nebo pronajatých nemovitostí
                             isPrimary: null
                           - code: "00"
-                            name: >-
-                              Výroba, obchod a služby neuvedené v přílohách 1 až
-                              3 živnostenského zákona
+                            name: "Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona"
                             isPrimary: null
                         databoxes:
                           - code: txutpba
@@ -1310,9 +1242,7 @@ components:
                               registrator:
                                 code: null
                                 name: Finanční úřad pro hlavní město Prahu
-                                detail: >-
-                                  Územní pracoviště pro Prahu 8, Trojská 13a,
-                                  PRAHA 8, tel.: 266 013 111
+                                detail: "Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8, tel.: 266 013 111"
                               reference: null
                         legalForm:
                           code: 112
@@ -1458,9 +1388,7 @@ components:
                             amount: "200000"
                             currency: CZK
                           shareholders:
-                            - shareholder: >-
-                                  PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990
-                                  V Zahradách 277, 751 11 Radslavice
+                            - shareholder: "PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277, 751 11 Radslavice"
                               share:
                                 amount: "200000"
                                 currency: czk
@@ -1741,7 +1669,7 @@ components:
                                     "y": 690079.8
                             postOffice:
                               name: Liberec 8
-                            full: České mládeže 452, 460 08 Liberec (nečleněné město)
+                            full: "České mládeže 452, 460 08 Liberec (nečleněné město)"
                         addressOfficial:
                           data:
                             country: null
@@ -1760,7 +1688,7 @@ components:
                             full: null
                     - data:
                         country: CZ
-                        name: Webhelp Enterprise Sales Solutions Czech Republic, s.r.o.
+                        name: "Webhelp Enterprise Sales Solutions Czech Republic, s.r.o."
                         registrationNumber: "29043654"
                         taxNumber: null
                         vatNumber: CZ29043654
@@ -1801,7 +1729,7 @@ components:
                                     "y": 742332.51
                             postOffice:
                               name: Praha 1
-                            full: Václavské náměstí 808/66, 110 00 Praha 1
+                            full: "Václavské náměstí 808/66, 110 00 Praha 1"
                         addressOfficial:
                           data:
                             country: null
@@ -1820,7 +1748,7 @@ components:
                             full: null
                     - data:
                         country: CZ
-                        name: WEBA Olomouc, s.r.o.
+                        name: "WEBA Olomouc, s.r.o."
                         registrationNumber: "47672153"
                         taxNumber: null
                         vatNumber: CZ47672153
@@ -1861,7 +1789,7 @@ components:
                                     "y": 543763.5
                             postOffice:
                               name: Olomouc 9
-                            full: K Mrazírnám 209/16, 779 00 Bystrovany
+                            full: "K Mrazírnám 209/16, 779 00 Bystrovany"
                         addressOfficial:
                           data:
                             country: null
@@ -1921,7 +1849,7 @@ components:
                                     "y": 741139.04
                             postOffice:
                               name: Praha 3
-                            full: Husinecká 903/10, 130 00 Praha 3
+                            full: "Husinecká 903/10, 130 00 Praha 3"
                         addressOfficial:
                           data:
                             country: null
@@ -1981,7 +1909,7 @@ components:
                                     "y": 738054
                             postOffice:
                               name: Jesenice u Prahy
-                            full: V Uličce 49, 252 42 Jesenice
+                            full: "V Uličce 49, 252 42 Jesenice"
                         addressOfficial:
                           data:
                             country: null
@@ -2492,9 +2420,7 @@ components:
                             full: null
                     - data:
                         country: PL
-                        name: >-
-                          "WARSZAWSKIE CENTRUM TARGOWE" SPÓŁKA Z OGRANICZONĄ
-                          ODPOWIEDZIALNOŚCIĄ
+                        name: '"WARSZAWSKIE CENTRUM TARGOWE" SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ'
                         registrationNumber: "015576910"
                         taxNumber: "1080006895"
                         vatNumber: null
@@ -2518,9 +2444,7 @@ components:
                             full: null
                     - data:
                         country: PL
-                        name: >-
-                          PLANTS BROKER POLSKA SPÓŁKA Z OGRANICZONĄ
-                          ODPOWIEDZIALNOŚCIĄ
+                        name: PLANTS BROKER POLSKA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ
                         registrationNumber: "015582890"
                         taxNumber: "1080007239"
                         vatNumber: PL1080007239
@@ -3543,8 +3467,8 @@ components:
                         country: CZ
                         region: Středočeský kraj
                         district: Praha-východ
-                        cityDistrictSpecial:
-                        cityDistrict:
+                        cityDistrictSpecial: null
+                        cityDistrict: null
                         cityPart: Brandýs nad Labem
                         cityAdministrative: null
                         cadastralArea: Brandýs nad Labem
@@ -4830,23 +4754,7 @@ components:
                             properties:
                               singleLocationResultDistance:
                                 type: number
-                                description: >-
-                                  Distance in meters used for single location
-                                  result. It is measured in meters and
-                                  represents a value for determining whether
-                                  only one address or multiple addresses should
-                                  be returned. It is the distance in meters from
-                                  the user's GPS coordinates. If there is only
-                                  one address within a radius of X
-                                  (singleLocationResultDistance) meters, it will
-                                  be returned as the only result. If there are
-                                  multiple addresses within a radius of X, all
-                                  matching addresses will be returned up to the
-                                  limit of options.resultsLimit. If there are no
-                                  addresses within a radius of X, the closest
-                                  addresses outside the radius of X up to a
-                                  maximum of options.resultsLimit will be
-                                  returned.
+                                description: "Distance in meters used for single location result. It is measured in meters and represents a value for determining whether only one address or multiple addresses should be returned. It is the distance in meters from the user's GPS coordinates. If there is only one address within a radius of X (singleLocationResultDistance) meters, it will be returned as the only result. If there are multiple addresses within a radius of X, all matching addresses will be returned up to the limit of options.resultsLimit. If there are no addresses within a radius of X, the closest addresses outside the radius of X up to a maximum of options.resultsLimit will be returned."
                                 minimum: 1
                                 maximum: 100
                                 example: 15
@@ -5011,9 +4919,7 @@ components:
                         properties:
                           country:
                             type: string
-                            description: >-
-                              Country code in format [ISO-3166-1
-                              alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+                            description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                             example: CZ
                           id:
                             type: string
@@ -5895,9 +5801,7 @@ components:
                           country:
                             type: string
                             nullable: true
-                            description: >-
-                              Country code in format [ISO-3166-1
-                              alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+                            description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                             example: CZ
                       options:
                         $ref: "#/components/schemas/LocationRequestOptions"
@@ -6809,9 +6713,7 @@ components:
                         severity: critical
                         relatedTo:
                           - email
-                        description: >-
-                          Domain does not have DNS records set properly for
-                          receiving emails.
+                        description: Domain does not have DNS records set properly for receiving emails.
                   resultCorrected: null
                   suggestions:
                     - isValid: false
@@ -7148,19 +7050,13 @@ components:
                         - $ref: "#/components/schemas/Error400RequestBodyNotJson"
                         - $ref: "#/components/schemas/Error400RequestBodyNoRequest"
                         - $ref: "#/components/schemas/Error400RequestBodyTooBig"
-                        - $ref: >-
-                            #/components/schemas/Error400RequestOptionsParameterNotSupported
-                        - $ref: >-
-                            #/components/schemas/Error400RequestOptionParameterValueNotSupported
+                        - $ref: "#/components/schemas/Error400RequestOptionsParameterNotSupported"
+                        - $ref: "#/components/schemas/Error400RequestOptionParameterValueNotSupported"
                         - $ref: "#/components/schemas/Error400RequestQueryNotSent"
-                        - $ref: >-
-                            #/components/schemas/Error400RequestQueryParameterCombination
-                        - $ref: >-
-                            #/components/schemas/Error400RequestQueryParameterMissing
-                        - $ref: >-
-                            #/components/schemas/Error400RequestQueryParameterNotSupported
-                        - $ref: >-
-                            #/components/schemas/Error400RequestQueryParameterRequired
+                        - $ref: "#/components/schemas/Error400RequestQueryParameterCombination"
+                        - $ref: "#/components/schemas/Error400RequestQueryParameterMissing"
+                        - $ref: "#/components/schemas/Error400RequestQueryParameterNotSupported"
+                        - $ref: "#/components/schemas/Error400RequestQueryParameterRequired"
     Error401:
       description: Unauthorized.
       content:
@@ -7270,14 +7166,10 @@ components:
                     type: array
                     items:
                       oneOf:
-                        - $ref: >-
-                            #/components/schemas/Error429RequestBillingServiceLimit
-                        - $ref: >-
-                            #/components/schemas/Error429RequestRateLimitCreditPerDay
-                        - $ref: >-
-                            #/components/schemas/Error429RequestRateLimitCreditPerIp
-                        - $ref: >-
-                            #/components/schemas/Error429RequestRateLimitTooManyRequests
+                        - $ref: "#/components/schemas/Error429RequestBillingServiceLimit"
+                        - $ref: "#/components/schemas/Error429RequestRateLimitCreditPerDay"
+                        - $ref: "#/components/schemas/Error429RequestRateLimitCreditPerIp"
+                        - $ref: "#/components/schemas/Error429RequestRateLimitTooManyRequests"
     Error500:
       description: Internal Server Error.
       content:
@@ -7296,11 +7188,9 @@ components:
                     items:
                       oneOf:
                         - $ref: "#/components/schemas/Error500InternalBilling"
-                        - $ref: >-
-                            #/components/schemas/Error500InternalDatabaseConnection
+                        - $ref: "#/components/schemas/Error500InternalDatabaseConnection"
                         - $ref: "#/components/schemas/Error500InternalDatabaseError"
-                        - $ref: >-
-                            #/components/schemas/Error500InternalDatabaseNotAvailable
+                        - $ref: "#/components/schemas/Error500InternalDatabaseNotAvailable"
                         - $ref: "#/components/schemas/Error500InternalError"
                         - $ref: "#/components/schemas/Error500Timeout"
                         - $ref: "#/components/schemas/Error500RequestProjectNoData"
@@ -7383,9 +7273,7 @@ components:
                 country:
                   type: string
                   nullable: true
-                  description: >-
-                    Country code in format [ISO-3166-1
-                    alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                   example: CZ
           required:
             - type
@@ -7435,9 +7323,7 @@ components:
           example: numeric
     ClientRequest:
       type: object
-      description: >-
-        Additional information about the user in order to specify the results in
-        response. Used mainly for web forms.
+      description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
       properties:
         ip:
           type: string
@@ -7445,9 +7331,7 @@ components:
           format: ipv4
         country:
           type: string
-          description: >-
-            Country code in format [ISO-3166-1
-            alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+          description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
           example: CZ
         location:
           type: object
@@ -7468,6 +7352,7 @@ components:
           allOf:
             - $ref: "#/components/schemas/ClientRequest"
             - type: object
+              description: Additional information about the user in order to specify the results in response. Used mainly for web forms.
               properties:
                 location:
                   type: object
@@ -7481,19 +7366,7 @@ components:
               properties:
                 singleLocationResultDistance:
                   type: number
-                  description: >-
-                    Distance in meters used for single location result. It is
-                    measured in meters and represents a value for determining
-                    whether only one address or multiple addresses should be
-                    returned. It is the distance in meters from the user's GPS
-                    coordinates. If there is only one address within a radius of
-                    X (singleLocationResultDistance) meters, it will be returned
-                    as the only result. If there are multiple addresses within a
-                    radius of X, all matching addresses will be returned up to
-                    the limit of options.resultsLimit. If there are no addresses
-                    within a radius of X, the closest addresses outside the
-                    radius of X up to a maximum of options.resultsLimit will be
-                    returned.
+                  description: "Distance in meters used for single location result. It is measured in meters and represents a value for determining whether only one address or multiple addresses should be returned. It is the distance in meters from the user's GPS coordinates. If there is only one address within a radius of X (singleLocationResultDistance) meters, it will be returned as the only result. If there are multiple addresses within a radius of X, all matching addresses will be returned up to the limit of options.resultsLimit. If there are no addresses within a radius of X, the closest addresses outside the radius of X up to a maximum of options.resultsLimit will be returned."
                   example: 100
       required:
         - client
@@ -7543,9 +7416,7 @@ components:
           properties:
             country:
               type: string
-              description: >-
-                Country code in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
             id:
               type: string
@@ -7646,9 +7517,7 @@ components:
             country:
               type: string
               nullable: true
-              description: >-
-                Country code in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
         options:
           $ref: "#/components/schemas/LocationRequestOptions"
@@ -7724,14 +7593,14 @@ components:
               example: extended
             allowedPrefixes:
               type: array
+              description: List of allowed prefixes.
               nullable: true
-              description: List of allowed prefixes. All prefixes are allowed by default.
               items:
                 type: string
                 example: "+420"
             defaultPrefix:
               type: string
-              description: Default international prefix if not part of the query.
+              description: Default international prefix if not part of the query. This is used for the validator to make more accurate results.
               example: "+420"
             formatNumber:
               type: boolean
@@ -7748,17 +7617,17 @@ components:
             name:
               type: string
               nullable: true
-              description: TODO
+              description: First name.
               example: Petr
             surname:
               type: string
               nullable: true
-              description: TODO
+              description: Last name / family name.
               example: Novák
             nameSurname:
               type: string
               nullable: true
-              description: TODO
+              description: Name and surname together.
               default: null
               example: Petr Novák
         options:
@@ -7766,6 +7635,7 @@ components:
           description: Query options.
           properties:
             dataScope:
+              description: Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned.
               enum:
                 - basic
                 - full
@@ -7773,16 +7643,12 @@ components:
               example: full
             acceptDegrees:
               type: boolean
-              description: >-
-                Allow to enter a title directly into the name, surname or
-                nameSurname input.
+              description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'
               default: false
               example: false
             acceptContext:
               type: boolean
-              description: >-
-                Allow to insert context directly into name, surname or
-                nameSurname.
+              description: 'Allow to insert context directly into name, surname or nameSurname. For example "Jan Novák ml." or "Jan Novák mladší" would be considered as valid/invalid nameSurname'
               default: false
               example: false
             validationDepth:
@@ -7790,14 +7656,12 @@ components:
                 - minimal
                 - moderate
                 - strict
-              description: Specifies the scope and depth of name validation.
-              default: strict
+              description: Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked.
+              default: minimal
               example: minimal
             smartMode:
               type: boolean
-              description: >-
-                Allows to correct the name (resultCorrected). If this is
-                disabled, the corrections are given as a suggestion.
+              description: "Allows to correct the name (resultCorrected). If this is disabled, the corrections are given as a suggestion."
               default: true
               example: false
           required:
@@ -7816,9 +7680,7 @@ components:
               example: Avantro s.r.o.
             country:
               type: string
-              description: >-
-                Country codes in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+              description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
               example: CZ
             registrationNumber:
               type: string
@@ -7849,22 +7711,18 @@ components:
                 - limit
                 - prefer
                 - null
-              description: >-
-                prefer = Prefer results matching the country filter, limit =
-                Limit to results matching the country filter.
+              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             resultsLimit:
               type: integer
-              description: Results limit of response.
+              description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the
               minimum: 1
               maximum: 20
               default: 10
             includeTerminatedSubjects:
               type: boolean
-              description: >-
-                Whether or not to return in the API response also entities that
-                have already been terminated.
+              description: Whether or not to return in the API response also entities that have already been terminated.
               default: false
               example: false
       required:
@@ -7896,9 +7754,7 @@ components:
                   example: Avantro s.r.o.
                 country:
                   type: string
-                  description: >-
-                    Country code in format [ISO-3166-1
-                    alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                   example: CZ
                 registrationNumber:
                   type: string
@@ -7931,9 +7787,7 @@ components:
               enum:
                 - limit
                 - prefer
-              description: >-
-                prefer = Prefer results matching the country filter, limit =
-                Limit to results matching the country filter.
+              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             resultsLimit:
@@ -7945,9 +7799,7 @@ components:
               example: 10
             includeTerminatedSubjects:
               type: boolean
-              description: >-
-                Whether or not to return in the output also entities that have
-                already been terminated.
+              description: Whether or not to return in the output also entities that have already been terminated.
               default: false
               example: false
       required:
@@ -7984,9 +7836,7 @@ components:
           properties:
             country:
               type: string
-              description: >-
-                Country code in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
             registrationNumber:
               type: string
@@ -8012,9 +7862,7 @@ components:
           example: full
         includeTerminatedSubjects:
           type: boolean
-          description: >-
-            Whether or not to include entities that have already ended their
-            existence in the output.
+          description: Whether or not to include entities that have already ended their existence in the output.
           default: false
           example: false
     GetCompanyDataResponseRequest:
@@ -8038,9 +7886,7 @@ components:
           properties:
             country:
               type: string
-              description: >-
-                Country code in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
             registrationNumber:
               oneOf:
@@ -8087,9 +7933,7 @@ components:
           properties:
             country:
               type: string
-              description: >-
-                Country code in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               nullable: true
               example: CZ
             name:
@@ -8126,9 +7970,7 @@ components:
             addressOfficial:
               $ref: "#/components/schemas/LocationOficial"
               nullable: true
-              description: >-
-                Address data from the official registry. Not validated by
-                Foxentry.
+              description: Address data from the official registry. Not validated by Foxentry.
             nace:
               type: array
               description: Types of business
@@ -8164,9 +8006,7 @@ components:
                     example: AVANTRO s.r.o.
                   receivingMessages:
                     type: boolean
-                    description: >-
-                      Whether the databox is set to receive messages from public
-                      as well.
+                    description: Whether the databox is set to receive messages from public as well.
                     example: true
             registrations:
               type: array
@@ -8195,9 +8035,7 @@ components:
                             type: string
                             nullable: true
                             description: Detail of registration.
-                            example: >-
-                              Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA
-                              8, tel. 266 013 111
+                            example: "Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8, tel. 266 013 111"
                       reference:
                         type: string
                         nullable: true
@@ -8311,8 +8149,7 @@ components:
                         type: string
                         description: Detail URL of insolvency.
                         format: url
-                        example: >-
-                          https://isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=F
+                        example: "https://isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=F"
             businessPremises:
               type: array
               nullable: true
@@ -8409,9 +8246,7 @@ components:
                       shareholder:
                         type: string
                         description: Information about shareholder.
-                        example: >-
-                          PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V
-                          Zahradách 277, 751 11 Radslavice
+                        example: "PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277, 751 11 Radslavice"
                       share:
                         type: object
                         properties:
@@ -8437,18 +8272,14 @@ components:
                         items:
                           type: string
                           description: Information about share
-                          example: >-
-                            Druh podílu: základní, se kterým nejsou spojené
-                            žádné zvláštní práva a povinnosti
+                          example: "Druh podílu: základní, se kterým nejsou spojené žádné zvláštní práva a povinnosti"
                 stocks:
                   type: array
-                  description: TODO
+                  description: Textual description of the stock ammount and value.
                   items:
                     type: string
                     description: List of stocks.
-                    example: >-
-                      100 ks akcie na jméno v listinné podobě ve jmenovité
-                      hodnotě 20 000 ,- Kč.
+                    example: "100 ks akcie na jméno v listinné podobě ve jmenovité hodnotě 20 000 ,- Kč."
             tradeLicences:
               type: array
               description: Trade licence information.
@@ -8463,9 +8294,7 @@ components:
                   name:
                     type: string
                     description: Name of trade licenses.
-                    example: >-
-                      Výroba, obchod a služby neuvedené v přílohách 1 až 3
-                      živnostenského zákona
+                    example: "Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona"
                   valid:
                     type: object
                     properties:
@@ -8521,10 +8350,7 @@ components:
               properties:
                 status:
                   type: string
-                  description: >-
-                    Vat current status. Payer, non payer and subject. Subject
-                    means the company is a VAT payer only for non domestic
-                    transactions (identifikovaná osoba).
+                  description: "Vat current status. Payer, non payer and subject. Subject means the company is a VAT payer only for non domestic transactions (identifikovaná osoba)."
                   example: payer
                   enum:
                     - payer
@@ -8590,32 +8416,28 @@ components:
         country:
           type: string
           nullable: true
-          description: "Company registration country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+          description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
           example: CZ
         region:
           type: string
           nullable: true
-          description: Company registration region.
           example: Hlavní město Praha
         district:
           type: string
           nullable: true
-          description: Company registration discrict.
           example: Hlavní město Praha
         cityDistrict:
           type: string
           nullable: true
-          description: City Disctrict.
           example: Praha 6
         cityDistrictSpecial:
           type: string
           nullable: true
-          description: Company registration discrict special.
+          description: Special types of city districts. Used only in Prague at the moment.
           example: Praha 6
         cityPart:
           type: string
           nullable: true
-          description: Part of the City.
           example: Dejvice
         cityAdministrative:
           type: string
@@ -8639,9 +8461,7 @@ components:
             external:
               type: string
               nullable: true
-              description: >-
-                External address ID. May vary for every supported country. CZ =
-                RUIAN, PL = Government data, SK = no external ID.
+              description: "External address ID. May vary for every supported country. CZ = RUIAN, PL = Government data, SK = no external ID."
               example: "22349995"
             region:
               type: string
@@ -8706,7 +8526,7 @@ components:
           example: "13000"
         postOffice:
           type: object
-          description: In what post office jurisdiction the address fall under.
+          description: In what post office jurisdiction the address falls under.
           properties:
             name:
               type: string
@@ -8742,37 +8562,37 @@ components:
         part1:
           type: string
           nullable: true
-          description: First part of house number.
+          description: First section of house number.
           example: "137"
         part1Number:
           type: string
           nullable: true
-          description: First part of house number.
+          description: Numerical part of the first section.
           example: "137"
         part1Letter:
           type: string
           nullable: true
-          description: The first part of the house number that is text.
+          description: Textual part of the first section.
           example: null
         part2:
           type: string
           nullable: true
-          description: Second part of house number.
+          description: Second section of house number.
           example: "16"
         part2Number:
           type: string
           nullable: true
-          description: The second part of the house number that is numerical.
+          description: Numerical part of the second section.
           example: "16"
         part2Letter:
           type: string
           nullable: true
-          description: The second part of the house number that is text.
+          description: Textual part of the second section.
           example: null
         full:
           type: string
           nullable: true
-          description: Full address number.
+          description: Full house number.
           example: 137/16
       required:
         - part1
@@ -8833,9 +8653,7 @@ components:
             country:
               type: string
               nullable: true
-              description: >-
-                Country of administrative area in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).              nullable: true
+              description: "Country of administrative area in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
             street:
               type: string
@@ -8983,9 +8801,7 @@ components:
                 country:
                   type: string
                   nullable: true
-                  description: >-
-                    Country code in format [ISO-3166-1
-                    alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                   example: CZ
         options:
           type: object
@@ -9042,21 +8858,22 @@ components:
           properties:
             name:
               type: string
-              description: Search name.
+              description: First name.
               example: Jan
             surname:
               type: string
-              description: Search surname.
+              description: Last name / family name.
               example: Novák
             nameSurname:
               type: string
-              description: Name and surname to validate.
+              description: Name and surname together.
               example: Jan Novák
         options:
           type: object
           description: Query options.
           properties:
             dataScope:
+              description: Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned.
               enum:
                 - basic
                 - extended
@@ -9068,27 +8885,21 @@ components:
                 - moderate
                 - strict
                 - null
-              description: Specifies the scope and depth of name validation.
+              description: Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked.
               example: minimal
               default: strict
             smartMode:
               type: boolean
               nullable: true
-              description: >-
-                Allows to correct the name (resultCorrected). If this is
-                disabled, the corrections are given as a suggestion.
+              description: "Allows to correct the name (resultCorrected). If this is disabled, the corrections are given as a suggestion."
               example: false
         client:
           type: object
-          description: >-
-            The information about your client to help specify the search or
-            validation.
+          description: The information about your client to help specify the search or validation.
           properties:
             country:
               type: string
-              description: >-
-                Country code in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
             location:
               type: object
@@ -9111,10 +8922,7 @@ components:
           properties:
             isValid:
               type: boolean
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             proposal:
               enum:
@@ -9125,9 +8933,7 @@ components:
                 - invalidWithPartialCorrection
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
-              description: >-
-                Proposed solution by Foxentry how you should process the
-                response in your form or application.
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
               example: validWithSuggestion
             data:
               $ref: "#/components/schemas/NameValidationResultsData"
@@ -9154,10 +8960,7 @@ components:
           properties:
             isValid:
               type: boolean
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             data:
               $ref: "#/components/schemas/NameValidationResultsData"
@@ -9183,10 +8986,7 @@ components:
             properties:
               isValid:
                 type: boolean
-                description: >-
-                  Determines the validity of the response. <b>True</b> = valid
-                  response / <b>False</b> = invalid response. Can be also
-                  <b>null</b>, which indicates a non-specific error.
+                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
                 example: true
               data:
                 $ref: "#/components/schemas/NameValidationResultsData"
@@ -9212,35 +9012,35 @@ components:
       properties:
         nameSurname:
           type: string
-          description: Name and surname
+          description: Name and surname together.
           example: Petr Novák
           nullable: true
         name:
           type: string
-          description: Name
+          description: First name.
           example: Petr
         surname:
           type: string
-          description: Surname
+          description: Last name / family name.
           nullable: true
           example: Novák
         context:
           type: array
           items:
             type: string
-            description: Context for name and Surname
+            description: Context for name and Surname.
             example: ml.
         degreesBefore:
           type: array
           items:
             type: string
-            description: Degrees before name
+            description: Degrees before name.
             example: Ing.
         degreesAfter:
           type: array
           items:
             type: string
-            description: Degrees after name
+            description: Degrees after name.
             example: Ph.D.
       required:
         - nameSurname
@@ -9279,23 +9079,21 @@ components:
           nameDays:
             type: array
             nullable: true
-            description: TODO
+            description: Date of the name day. Currently works only for czech and slovak names.
             items:
               type: object
               properties:
                 country:
                   type: string
-                  description: >-
-                    Country code in format [ISO-3166-1
-                    alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+                  description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                   example: CZ
                 month:
                   type: string
-                  description: Number of month for name day.
+                  description: Month number for name day.
                   example: "6"
                 day:
                   type: string
-                  description: Number of month for name day.
+                  description: Day number for name day.
                   example: "29"
               required:
                 - country
@@ -9339,9 +9137,10 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -9383,9 +9182,10 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -9424,29 +9224,22 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Invalid case sensitivity. Specific rules are applied to the use of
-              upper and lower case letters.
-            - >-
-              Invalid diacritics. Specific rules are applied to the use of
-              diacritics.
-            - >-
-              Invalid use of spaces. Specific rules are applied to the use of
-              spaces.
+            - Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
+            - Invalid diacritics. Specific rules are applied to the use of diacritics.
+            - Invalid use of spaces. Specific rules are applied to the use of spaces.
             - null
           description: Description of error.
-          example: >-
-            Invalid case sensitivity. Specific rules are applied to the use of
-            upper and lower case letters.
+          example: Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
     ErrorValueGlobal:
       type: object
       properties:
@@ -9475,21 +9268,21 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
+          type: string
           enum:
             - Value is empty.
             - Value contains parts in incorrect order.
             - Value is not valid.
-            - >-
-              The Combination of values listed in relatedTo section is not
-              valid.
+            - The Combination of values listed in relatedTo section is not valid.
             - Context words are not allowed.
           description: Description of error.
           example: Value is empty.
@@ -9520,9 +9313,10 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -9667,19 +9461,19 @@ components:
           properties:
             validationType:
               type: string
-              description: Type of validation used.
+              description: Type of validation used. <b>Basic</b> = checks the format and syntax of validated phone number. <b>Extended</b> = checks whether the phone number is registered in the TELCO net as well. Returns additional information such as carrier name and type of the phone connection (mobile/landline).
               example: extended
             allowedPrefixes:
               type: array
               nullable: true
-              description: Array of allowed prefixes.
+              description: Array of allowed prefixes. If <b>null</b> = all prefixes are allowed.
               items:
                 type: string
                 example: "+420"
             formatNumber:
               nullable: true
               type: boolean
-              description: Formatting the phone number required or not.
+              description: Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.
               example: false
             defaultPrefix:
               nullable: true
@@ -9698,10 +9492,7 @@ components:
             isValid:
               type: boolean
               nullable: true
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             proposal:
               enum:
@@ -9713,9 +9504,7 @@ components:
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
                 - null
-              description: >-
-                Proposed solution by Foxentry how you should process the
-                response in your form or application.
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
               example: invalidWithCorrection
             data:
               $ref: "#/components/schemas/ValidatePhoneNumberData"
@@ -9740,10 +9529,7 @@ components:
           properties:
             isValid:
               type: boolean
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             data:
               $ref: "#/components/schemas/ValidatePhoneNumberData"
@@ -9773,10 +9559,7 @@ components:
             properties:
               isValid:
                 type: boolean
-                description: >-
-                  Determines the validity of the response. <b>True</b> = valid
-                  response / <b>False</b> = invalid response. Can be also
-                  <b>null</b>, which indicates a non-specific error.
+                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
                 example: true
               data:
                 $ref: "#/components/schemas/ValidatePhoneNumberData"
@@ -9809,9 +9592,7 @@ components:
           properties:
             code:
               type: string
-              description: >-
-                Country code in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
             prefix:
               type: string
@@ -9829,7 +9610,7 @@ components:
           example: "+420775111222"
         carrier:
           type: object
-          description: TODO
+          description: Phone carrier information.
           properties:
             name:
               type: string
@@ -9842,7 +9623,7 @@ components:
               description: Type of carrier.
         format:
           type: object
-          description: TODO
+          description: Standardized international and local format.
           properties:
             national:
               type: string
@@ -9896,9 +9677,10 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -9935,9 +9717,10 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -9945,9 +9728,7 @@ components:
         description:
           enum:
             - Prefix is invalid.
-            - >-
-              This prefix is not allowed. Check the 'allowedPrefixes' option in
-              the request.
+            - This prefix is not allowed. Check the 'allowedPrefixes' option in the request.
           description: Description of error.
           example: Prefix is invalid.
     FixSyntaxPhone:
@@ -10048,10 +9829,7 @@ components:
             isValid:
               type: boolean
               nullable: true
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             proposal:
               enum:
@@ -10063,9 +9841,7 @@ components:
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
                 - null
-              description: >-
-                Proposed solution by Foxentry how you should process the
-                response in your form or application.
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
               example: invalidWithCorrection
             data:
               $ref: "#/components/schemas/LocationData"
@@ -10088,10 +9864,7 @@ components:
           properties:
             isValid:
               type: boolean
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             data:
               $ref: "#/components/schemas/LocationData"
@@ -10128,10 +9901,7 @@ components:
               isValid:
                 type: boolean
                 nullable: true
-                description: >-
-                  Determines the validity of the response. <b>True</b> = valid
-                  response / <b>False</b> = invalid response. Can be also
-                  <b>null</b>, which indicates a non-specific error.
+                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
                 example: true
               data:
                 $ref: "#/components/schemas/LocationData"
@@ -10184,9 +9954,10 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -10269,9 +10040,7 @@ components:
               example: Avantro s.r.o.
             country:
               type: string
-              description: >-
-                Country codes in format [ISO-3166-1
-                alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+              description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
               example: CZ
             registrationNumber:
               type: string
@@ -10294,9 +10063,7 @@ components:
                 - limit
                 - prefer
                 - null
-              description: >-
-                prefer = Prefer results matching the country filter, limit =
-                Limit to results matching the country filter.
+              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             dataScope:
@@ -10310,15 +10077,13 @@ components:
             includeTerminatedSubjects:
               type: boolean
               nullable: true
-              description: >-
-                Whether or not to API return in the response also entities that
-                have already been terminated.
+              description: Whether or not to API return in the response also entities that have already been terminated.
               default: false
               example: true
             resultsLimit:
               type: integer
               nullable: true
-              description: Results limit of response.
+              description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
               minimum: 1
               maximum: 20
               default: 10
@@ -10337,10 +10102,7 @@ components:
           properties:
             isValid:
               type: boolean
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             proposal:
               enum:
@@ -10351,9 +10113,7 @@ components:
                 - invalidWithPartialCorrection
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
-              description: >-
-                Proposed solution by Foxentry how you should process the
-                response in your form or application.
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
               example: valid
             errors:
               type: array
@@ -10372,10 +10132,7 @@ components:
           properties:
             isValid:
               type: boolean
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             errors:
               type: array
@@ -10428,9 +10185,10 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -10468,10 +10226,7 @@ components:
       properties:
         isValid:
           type: boolean
-          description: >-
-            Determines the validity of the response. <b>True</b> = valid
-            response / <b>False</b> = invalid response. Can be also <b>null</b>,
-            which indicates a non-specific error.
+          description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
           example: true
         errors:
           type: array
@@ -10506,10 +10261,7 @@ components:
             isValid:
               type: boolean
               nullable: true
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             proposal:
               enum:
@@ -10520,9 +10272,7 @@ components:
                 - invalidWithPartialCorrection
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
-              description: >-
-                Proposed solution by Foxentry how you should process the
-                response in your form or application.
+              description: Proposed solution by Foxentry how you should process the response in your form or application.
             data:
               $ref: "#/components/schemas/EmailData"
             flags:
@@ -10547,10 +10297,7 @@ components:
           properties:
             isValid:
               type: boolean
-              description: >-
-                Determines the validity of the response. <b>True</b> = valid
-                response / <b>False</b> = invalid response. Can be also
-                <b>null</b>, which indicates a non-specific error.
+              description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
               example: true
             data:
               $ref: "#/components/schemas/EmailData"
@@ -10579,10 +10326,7 @@ components:
               isValid:
                 type: boolean
                 nullable: true
-                description: >-
-                  Determines the validity of the response. <b>True</b> = valid
-                  response / <b>False</b> = invalid response. Can be also
-                  <b>null</b>, which indicates a non-specific error.
+                description: "Determines the validity of the response. <b>True</b> = valid response / <b>False</b> = invalid response. Can be also <b>null</b>, which indicates a non-specific error."
                 example: true
               data:
                 $ref: "#/components/schemas/EmailData"
@@ -10666,9 +10410,10 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -10710,9 +10455,10 @@ components:
             - info
             - warning
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -10720,9 +10466,7 @@ components:
         description:
           enum:
             - Domain name is invalid.
-            - >-
-              Domain does not have DNS records set properly for receiving
-              emails.
+            - Domain does not have DNS records set properly for receiving emails.
             - Disposable emails are not allowed.
             - Freemails are not allowed.
           description: Description of error.
@@ -10813,22 +10557,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Cannot process the request because of the empty body. Please check
-              Foxentry.dev for more information.
+            - Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
           description: Description of error.
-          example: >-
-            Cannot process the request because of the empty body. Please check
-            Foxentry.dev for more information.
+          example: Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
     Error400RequestBodyNotJson:
       type: object
       properties:
@@ -10850,22 +10591,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Cannot process the request because the JSON is not valid. Please
-              check Foxentry.dev for more information.
+            - Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
           description: Description of error.
-          example: >-
-            Cannot process the request because the JSON is not valid. Please
-            check Foxentry.dev for more information.
+          example: Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
     Error400RequestBodyNoRequest:
       type: object
       properties:
@@ -10887,9 +10625,10 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -10920,22 +10659,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Your request length is bigger than allowed. Please contact us if
-              you think this is a mistake.
+            - Your request length is bigger than allowed. Please contact us if you think this is a mistake.
           description: Description of error.
-          example: >-
-            Your request length is bigger than allowed. Please contact us if you
-            think this is a mistake.
+          example: Your request length is bigger than allowed. Please contact us if you think this is a mistake.
     Error400RequestOptionsParameterNotSupported:
       type: object
       properties:
@@ -10957,9 +10693,10 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -10990,22 +10727,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Value in paramater is not valid. Please check Foxentry.dev for
-              more information.
+            - Value in paramater is not valid. Please check Foxentry.dev for more information.
           description: Description of error.
-          example: >-
-            Value in paramater is not valid. Please check Foxentry.dev for more
-            information.
+          example: Value in paramater is not valid. Please check Foxentry.dev for more information.
     Error400RequestQueryNotSent:
       type: object
       properties:
@@ -11027,22 +10761,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Your request query is empty. Please check Foxentry.dev for more
-              information about how to set up the query properly.
+            - Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
           description: Description of error.
-          example: >-
-            Your request query is empty. Please check Foxentry.dev for more
-            information about how to set up the query properly.
+          example: Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
     Error400RequestQueryParameterCombination:
       type: object
       properties:
@@ -11064,22 +10795,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              It is not possible to use these parameters at the same time in one
-              request.
+            - It is not possible to use these parameters at the same time in one request.
           description: Description of error.
-          example: >-
-            It is not possible to use these parameters at the same time in one
-            request.
+          example: It is not possible to use these parameters at the same time in one request.
     Error400RequestQueryParameterMissing:
       type: object
       properties:
@@ -11101,22 +10829,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Query parameter is missing. Please check Foxentry.dev for more
-              information about how to set up the query properly.
+            - Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
           description: Description of error.
-          example: >-
-            Query parameter is missing. Please check Foxentry.dev for more
-            information about how to set up the query properly.
+          example: Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
     Error400RequestQueryParameterNotSupported:
       type: object
       properties:
@@ -11138,9 +10863,10 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -11171,9 +10897,10 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -11210,22 +10937,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Invalid authorization credentials sent. Check Foxentry.dev for
-              more information how to set up the AUTH properly.
+            - Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
           description: Description of error.
-          example: >-
-            Invalid authorization credentials sent. Check Foxentry.dev for more
-            information how to set up the AUTH properly.
+          example: Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
     ResponseStatus402:
       type: object
       properties:
@@ -11254,22 +10978,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              No credit available. You need to purchase a sufficient ammount of
-              credits in the project administration at app.foxentry.com.
+            - No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
           description: Description of error.
-          example: >-
-            No credit available. You need to purchase a sufficient ammount of
-            credits in the project administration at app.foxentry.com.
+          example: No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
     ResponseStatus403:
       type: object
       properties:
@@ -11298,22 +11019,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Provided API key is not valid. Please check the project settings
-              at app.foxentry.com.
+            - Provided API key is not valid. Please check the project settings at app.foxentry.com.
           description: Description of error.
-          example: >-
-            Provided API key is not valid. Please check the project settings at
-            app.foxentry.com.
+          example: Provided API key is not valid. Please check the project settings at app.foxentry.com.
     Error403RequestAuthToken:
       type: object
       properties:
@@ -11335,22 +11053,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Provided access token is not valid. Please check the project
-              settings at app.foxentry.com.
+            - Provided access token is not valid. Please check the project settings at app.foxentry.com.
           description: Description of error.
-          example: >-
-            Provided access token is not valid. Please check the project
-            settings at app.foxentry.com.
+          example: Provided access token is not valid. Please check the project settings at app.foxentry.com.
     Error403RequestNotAllowedDomain:
       type: object
       properties:
@@ -11372,9 +11087,10 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -11405,22 +11121,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              The API key has IP limits set and your IP address is not allowed.
-              Change the project settings at app.foxentry.com.
+            - The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
           description: Description of error.
-          example: >-
-            The API key has IP limits set and your IP address is not allowed.
-            Change the project settings at app.foxentry.com.
+          example: The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
     ResponseStatus404:
       type: object
       properties:
@@ -11448,22 +11161,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Requested API version is not available. Please check Foxentry.dev
-              for the supported versions.
+            - Requested API version is not available. Please check Foxentry.dev for the supported versions.
           description: Description of error.
-          example: >-
-            Requested API version is not available. Please check Foxentry.dev
-            for the supported versions.
+          example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
     Error404RequestEndpointNotFound:
       type: object
       properties:
@@ -11485,22 +11195,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Endpoint not found. Please check Foxentry.dev for the supported
-              endpoints.
+            - Endpoint not found. Please check Foxentry.dev for the supported endpoints.
           description: Description of error.
-          example: >-
-            Endpoint not found. Please check Foxentry.dev for the supported
-            endpoints.
+          example: Endpoint not found. Please check Foxentry.dev for the supported endpoints.
     Error404RequestProjetNotFound:
       type: object
       properties:
@@ -11522,22 +11229,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              The project does not exist. Please check the available projects at
-              app.foxentry.com or contact the support.
+            - The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
           description: Description of error.
-          example: >-
-            The project does not exist. Please check the available projects at
-            app.foxentry.com or contact the support.
+          example: The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
     ResponseStatus405:
       type: object
       properties:
@@ -11566,17 +11270,13 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         description:
           enum:
-            - >-
-              HTTP method is not allowed for this endpoint. Please check
-              Foxentry.dev for more information.
+            - HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
           description: Description of error.
-          example: >-
-            HTTP method is not allowed for this endpoint. Please check
-            Foxentry.dev for more information.
+          example: HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
     ResponseStatus429:
       type: object
       properties:
@@ -11605,22 +11305,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Requested API version is not available. Please check Foxentry.dev
-              for the supported versions.
+            - Requested API version is not available. Please check Foxentry.dev for the supported versions.
           description: Description of error.
-          example: >-
-            Requested API version is not available. Please check Foxentry.dev
-            for the supported versions.
+          example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
     Error429RequestRateLimitCreditPerDay:
       type: object
       properties:
@@ -11642,22 +11339,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              The maximum daily limit has been reached. Adjust the settings in
-              the project or wait until the limit is reset.
+            - The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
           description: Description of error.
-          example: >-
-            The maximum daily limit has been reached. Adjust the settings in the
-            project or wait until the limit is reset.
+          example: The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
     Error429RequestRateLimitCreditPerIp:
       type: object
       properties:
@@ -11679,22 +11373,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              The maximum daily limit per IP address has been reached. Adjust
-              the settings in the project or wait until the limit is reset.
+            - The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
           description: Description of error.
-          example: >-
-            The maximum daily limit per IP address has been reached. Adjust the
-            settings in the project or wait until the limit is reset.
+          example: The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
     Error429RequestRateLimitTooManyRequests:
       type: object
       properties:
@@ -11716,22 +11407,19 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              The maximum allowed request rate limit has been reached. Check
-              Foxentry.dev for more information or contact the support.
+            - The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
           description: Description of error.
-          example: >-
-            The maximum allowed request rate limit has been reached. Check
-            Foxentry.dev for more information or contact the support.
+          example: The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
     ResponseStatus500:
       type: object
       properties:
@@ -11758,22 +11446,19 @@ components:
           description: Subtype of error.
         severity:
           type: string
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Failed to process your request due to a billing internal error.
-              Please contact us if the error persists.
+            - Failed to process your request due to a billing internal error. Please contact us if the error persists.
           description: Description of error.
-          example: >-
-            Failed to process your request due to a billing internal error.
-            Please contact us if the error persists.
+          example: Failed to process your request due to a billing internal error. Please contact us if the error persists.
     Error500InternalDatabaseConnection:
       type: object
       properties:
@@ -11794,22 +11479,19 @@ components:
           example: CONNECTION
         severity:
           type: string
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Failed to establish connection with the database server. Please
-              contact us if the error persists.
+            - Failed to establish connection with the database server. Please contact us if the error persists.
           description: Description of error.
-          example: >-
-            Failed to establish connection with the database server. Please
-            contact us if the error persists.
+          example: Failed to establish connection with the database server. Please contact us if the error persists.
     Error500InternalDatabaseError:
       type: object
       properties:
@@ -11830,22 +11512,19 @@ components:
           example: ERROR
         severity:
           type: string
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              An error has occured during the communication with our database.
-              Please contact us if the error persists.
+            - An error has occured during the communication with our database. Please contact us if the error persists.
           description: Description of error.
-          example: >-
-            An error has occured during the communication with our database.
-            Please contact us if the error persists.
+          example: An error has occured during the communication with our database. Please contact us if the error persists.
     Error500InternalDatabaseNotAvailable:
       type: object
       properties:
@@ -11866,22 +11545,19 @@ components:
           example: NOT_AVAILABLE
         severity:
           type: string
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Internal datastore is not available at the moment. No operation on
-              this datastore is possible.
+            - Internal datastore is not available at the moment. No operation on this datastore is possible.
           description: Description of error.
-          example: >-
-            Internal datastore is not available at the moment. No operation on
-            this datastore is possible.
+          example: Internal datastore is not available at the moment. No operation on this datastore is possible.
     Error500InternalError:
       type: object
       properties:
@@ -11902,22 +11578,19 @@ components:
         severity:
           enum:
             - CRITICAL
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: CRITICAL
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Failed to process your request. Please try again later or contact
-              us.
+            - Failed to process your request. Please try again later or contact us.
           description: Description of error.
-          example: >-
-            Failed to process your request. Please try again later or contact
-            us.
+          example: Failed to process your request. Please try again later or contact us.
     Error500Timeout:
       type: object
       properties:
@@ -11938,9 +11611,10 @@ components:
         severity:
           enum:
             - CRITICAL
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: CRITICAL
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
@@ -11971,22 +11645,19 @@ components:
         severity:
           enum:
             - CRITICAL
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: CRITICAL
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              Failed to fetch project data needed for processing your request.
-              Please contact us if the error persists.
+            - Failed to fetch project data needed for processing your request. Please contact us if the error persists.
           description: Description of error.
-          example: >-
-            Failed to fetch project data needed for processing your request.
-            Please contact us if the error persists.
+          example: Failed to fetch project data needed for processing your request. Please contact us if the error persists.
     ResponseStatus503:
       type: object
       properties:
@@ -12015,21 +11686,18 @@ components:
         severity:
           enum:
             - critical
-          description: Severity of error.
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
           example: critical
         relatedTo:
+          description: List of the affected inputs.
           type: array
           items:
             type: string
             description: Error related to.
         description:
           enum:
-            - >-
-              API endpoint is temporary unavailable. Please contact us at
-              info@foxentry.com if the error persists.
+            - API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
           description: Description of error.
-          example: >-
-            API endpoint is temporary unavailable. Please contact us at
-            info@foxentry.com if the error persists.
+          example: API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
 security:
   - BearerAuth: []

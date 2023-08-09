@@ -7082,8 +7082,6 @@ components:
           schema:
             type: object
             properties:
-              errors:
-                type: array
               status:
                 type: integer
                 description: Response status
@@ -7119,9 +7117,11 @@ components:
                             example: true
                           acceptFreemails:
                             type: boolean
-                            example: true
+                            example: true                          
               response:
                 $ref: "#/components/schemas/ValidateEmailResponse"
+              errors:
+                type: array                  
             required:
               - errors
               - status

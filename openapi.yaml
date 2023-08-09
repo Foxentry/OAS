@@ -820,7 +820,7 @@ components:
                   customId: null
                   query:
                     registrationNumber: "04997476"
-                    administrativeArea.country: CZ
+                    country: CZ
                   options:
                     dataScope: basic
                     includeTerminatedSubjects: false
@@ -834,8 +834,7 @@ components:
                   resultsCount: 1
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: AVANTRO s.r.o.
                         registrationNumber: "04997476"
                         taxNumber: null
@@ -880,8 +879,7 @@ components:
                             full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Thámova
                             number:
                               part1: null
@@ -905,7 +903,7 @@ components:
                   customId: null
                   query:
                     registrationNumber: "04997476"
-                    administrativeArea.country: CZ
+                    country: CZ
                   options:
                     dataScope: extended
                     includeTerminatedSubjects: false
@@ -919,8 +917,7 @@ components:
                   resultsCount: 1
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: AVANTRO s.r.o.
                         registrationNumber: "04997476"
                         taxNumber: null
@@ -965,8 +962,7 @@ components:
                             full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Thámova
                             number:
                               part1: null
@@ -1138,7 +1134,7 @@ components:
                   customId: null
                   query:
                     registrationNumber: "04997476"
-                    administrativeArea.country: CZ
+                    country: CZ
                   options:
                     dataScope: full
                     includeTerminatedSubjects: false
@@ -1152,8 +1148,7 @@ components:
                   resultsCount: 1
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: AVANTRO s.r.o.
                         registrationNumber: "04997476"
                         taxNumber: null
@@ -1198,8 +1193,7 @@ components:
                             full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Thámova
                             number:
                               part1: null
@@ -1310,8 +1304,7 @@ components:
                                     full: "V Zahradách 277, 751 11 Radslavice"
                                 addressOfficial:
                                   data:
-                                    administrativeArea:
-                                      country: null
+                                    country: null
                                     street: V Zahradách
                                     number:
                                       part1: null
@@ -1372,8 +1365,7 @@ components:
                                     full: "V Zahradách 277, 751 11 Radslavice"
                                 addressOfficial:
                                   data:
-                                    administrativeArea:
-                                      country: null
+                                    country: null
                                     street: V Zahradách
                                     number:
                                       part1: null
@@ -1396,8 +1388,7 @@ components:
                             amount: "200000"
                             currency: CZK
                           shareholders:
-                            - shareholder:
-                                text: "PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277, 751 11 Radslavice"
+                            - shareholder: "PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277, 751 11 Radslavice"
                               share:
                                 amount: "200000"
                                 currency: czk
@@ -1613,7 +1604,7 @@ components:
                 status: 200
                 request:
                   endpoint: company/search
-                  code: LRrr7hB4XAkP0WJtCTVDfAKyIJCbxC
+                  code: H1cr05z6aXn4krjTOLXoQa44bho9Ff
                   customId: null
                   query:
                     type: name
@@ -1941,7 +1932,7 @@ components:
                 status: 200
                 request:
                   endpoint: company/search
-                  code: r0AOmPxiCF71vS1ma67HJQqZwGx32J
+                  code: kG81xtvFaWGQPG66xEn7DMmsMIflZP
                   customId: null
                   query:
                     type: vatNumber
@@ -1964,8 +1955,7 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: KUWKAW s.r.o.
                         registrationNumber: "10830626"
                         taxNumber: null
@@ -2007,11 +1997,10 @@ components:
                                     "y": 746955.94
                             postOffice:
                               name: Praha 58
-                            full: "V zářezu 902/4, 158 00 Praha 5"
+                            full: V zářezu 902/4, 158 00 Praha 5
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: V zářezu
                             number:
                               part1: null
@@ -2026,8 +2015,7 @@ components:
                             zip: "15800"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Grand job s.r.o.
                         registrationNumber: "10874844"
                         taxNumber: null
@@ -2069,11 +2057,10 @@ components:
                                     "y": 742311.72
                             postOffice:
                               name: Praha 1
-                            full: "Revoluční 762/13, 110 00 Praha 1"
+                            full: Revoluční 762/13, 110 00 Praha 1
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Revoluční
                             number:
                               part1: null
@@ -2088,8 +2075,7 @@ components:
                             zip: "11000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Energetický Holding Malina a.s.
                         registrationNumber: "10931201"
                         taxNumber: null
@@ -2131,11 +2117,10 @@ components:
                                     "y": 742484.89
                             postOffice:
                               name: Praha 1
-                            full: "Krakovská 583/9, 110 00 Praha 1"
+                            full: Krakovská 583/9, 110 00 Praha 1
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Krakovská
                             number:
                               part1: null
@@ -2150,8 +2135,7 @@ components:
                             zip: "11000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: CZECH Employer agency s.r.o.
                         registrationNumber: "10813616"
                         taxNumber: null
@@ -2193,11 +2177,10 @@ components:
                                     "y": 473185.65
                             postOffice:
                               name: Ostrava 9
-                            full: "28. října 864/273, 709 00 Mariánské Hory a Hulváky"
+                            full: 28. října 864/273, 709 00 Mariánské Hory a Hulváky
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: 28. října
                             number:
                               part1: null
@@ -2212,8 +2195,7 @@ components:
                             zip: "70900"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: New Future s.r.o.
                         registrationNumber: "10800816"
                         taxNumber: null
@@ -2255,11 +2237,10 @@ components:
                                     "y": 790620.15
                             postOffice:
                               name: Most 1
-                            full: "Velebudická 3271, 434 01 Most"
+                            full: Velebudická 3271, 434 01 Most
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Velebudická
                             number:
                               part1: null
@@ -2302,8 +2283,7 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: SK
+                        country: SK
                         name: Pavol Maráček - EMPIRIA
                         registrationNumber: "17672520"
                         taxNumber: "1020329596"
@@ -2344,8 +2324,7 @@ components:
                             full: "Priemyselná 12/12, 921 01 Piešťany"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Priemyselná
                             number:
                               part1: null
@@ -2360,8 +2339,7 @@ components:
                             zip: "92101"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: SK
+                        country: SK
                         name: Ľubomír Žolčák - ŽOLÍK
                         registrationNumber: "37643703"
                         taxNumber: "1031416738"
@@ -2402,8 +2380,7 @@ components:
                             full: "Kpt. Nálepku 2854/5, 080 01 Prešov"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Ul.kpt.Nálepku
                             number:
                               part1: null
@@ -2418,8 +2395,7 @@ components:
                             zip: "08001"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: PL
+                        country: PL
                         name: ŁSS SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIELNOŚCIĄ
                         registrationNumber: "001010093"
                         taxNumber: "1050003231"
@@ -2428,8 +2404,7 @@ components:
                         address: null
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: ul. Krakowska
                             number:
                               part1: null
@@ -2444,8 +2419,7 @@ components:
                             zip: 94-214
                             full: null
                     - data:
-                        administrativeArea:
-                          country: PL
+                        country: PL
                         name: '"WARSZAWSKIE CENTRUM TARGOWE" SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ'
                         registrationNumber: "015576910"
                         taxNumber: "1080006895"
@@ -2454,8 +2428,7 @@ components:
                         address: null
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: ul. Solec
                             number:
                               part1: null
@@ -2470,8 +2443,7 @@ components:
                             zip: 00-382
                             full: null
                     - data:
-                        administrativeArea:
-                          country: PL
+                        country: PL
                         name: PLANTS BROKER POLSKA SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ
                         registrationNumber: "015582890"
                         taxNumber: "1080007239"
@@ -2480,8 +2452,7 @@ components:
                         address: null
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: ul. Biała
                             number:
                               part1: null
@@ -2524,8 +2495,7 @@ components:
                   resultsCount: 5
                   results:
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: KUWKAW s.r.o.
                         registrationNumber: "10830626"
                         taxNumber: null
@@ -2570,8 +2540,7 @@ components:
                             full: "V zářezu 902/4, 158 00 Praha 5"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: V zářezu
                             number:
                               part1: null
@@ -2586,8 +2555,7 @@ components:
                             zip: "15800"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Grand job s.r.o.
                         registrationNumber: "10874844"
                         taxNumber: null
@@ -2632,8 +2600,7 @@ components:
                             full: "Revoluční 762/13, 110 00 Praha 1"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Revoluční
                             number:
                               part1: null
@@ -2648,8 +2615,7 @@ components:
                             zip: "11000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Energetický Holding Malina a.s.
                         registrationNumber: "10931201"
                         taxNumber: null
@@ -2694,8 +2660,7 @@ components:
                             full: "Krakovská 583/9, 110 00 Praha 1"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Krakovská
                             number:
                               part1: null
@@ -2710,8 +2675,7 @@ components:
                             zip: "11000"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: CZECH Employer agency s.r.o.
                         registrationNumber: "10813616"
                         taxNumber: null
@@ -2756,8 +2720,7 @@ components:
                             full: "28. října 864/273, 709 00 Mariánské Hory a Hulváky"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: 28. října
                             number:
                               part1: null
@@ -2772,8 +2735,7 @@ components:
                             zip: "70900"
                             full: null
                     - data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: New Future s.r.o.
                         registrationNumber: "10800816"
                         taxNumber: null
@@ -2818,8 +2780,7 @@ components:
                             full: "Velebudická 3271, 434 01 Most"
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Velebudická
                             number:
                               part1: null
@@ -3149,7 +3110,7 @@ components:
             type: object
             properties:
               status:
-                type: number
+                type: integer
                 description: API call status.
                 example: 200
               request:
@@ -3394,7 +3355,7 @@ components:
             type: object
             properties:
               status:
-                type: number
+                type: integer
                 description: Status of response.
                 example: 200
               request:
@@ -4768,7 +4729,6 @@ components:
             properties:
               status:
                 type: integer
-                format: int32
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -4784,13 +4744,6 @@ components:
                             properties:
                               location:
                                 type: object
-                                properties:
-                                  lat:
-                                    type: number
-                                    example: 50.083
-                                  lon:
-                                    type: number
-                                    example: 14.417
                                 required:
                                   - lat
                                   - lon
@@ -4953,7 +4906,6 @@ components:
             properties:
               status:
                 type: integer
-                format: int32
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -5785,7 +5737,6 @@ components:
             properties:
               status:
                 type: integer
-                format: int32
               errors:
                 type: array
               request:
@@ -5897,8 +5848,7 @@ components:
                     isValid: true
                     proposal: valid
                     data:
-                      administrativeArea:
-                        country: CZ
+                      country: CZ
                       name: AVANTRO s.r.o.
                       registrationNumber: "04997476"
                       taxNumber: null
@@ -5943,8 +5893,7 @@ components:
                           full: "Thámova 137/16, 186 00 Praha 8"
                       addressOfficial:
                         data:
-                          administrativeArea:
-                            country: null
+                          country: null
                           street: Thámova
                           number:
                             part1: null
@@ -5991,8 +5940,7 @@ components:
                     isValid: false
                     proposal: invalid
                     data:
-                      administrativeArea:
-                        country: null
+                      country: null
                       name: AVANTRO
                       registrationNumber: "25547"
                       taxNumber: null
@@ -6017,7 +5965,7 @@ components:
                 status: 200
                 request:
                   endpoint: company/validate
-                  code: B5TgQ5Wtc8mvJ9tVgZhueux9U6tvEP
+                  code: flQnmp2K7l3VbhMKATBZkSwb7UPJ3w
                   customId: null
                   query:
                     registrationNumber: "0499747"
@@ -6040,8 +5988,7 @@ components:
                     isValid: false
                     proposal: invalidWithSuggestion
                     data:
-                      administrativeArea:
-                        country: null
+                      country: null
                       name: null
                       registrationNumber: "0499747"
                       taxNumber: null
@@ -6059,8 +6006,7 @@ components:
                   suggestions:
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Martina Brázdilová
                         registrationNumber: "04909747"
                         taxNumber: null
@@ -6102,11 +6048,10 @@ components:
                                     "y": 541769.82
                             postOffice:
                               name: Šternberk 1
-                            full: "Strmá 1129/6, 785 01 Šternberk"
+                            full: Strmá 1129/6, 785 01 Šternberk
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Strmá
                             number:
                               part1: null
@@ -6132,8 +6077,7 @@ components:
                             value: "04909747"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Quang Anh Kieu
                         registrationNumber: "04997417"
                         taxNumber: null
@@ -6175,11 +6119,10 @@ components:
                                     "y": 823065.17
                             postOffice:
                               name: Plzeň 1
-                            full: "Husova 786/19, 301 00 Plzeň 3"
+                            full: Husova 786/19, 301 00 Plzeň 3
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Husova
                             number:
                               part1: null
@@ -6205,8 +6148,7 @@ components:
                             value: "04997417"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Tomáš Minarovič
                         registrationNumber: "04997247"
                         taxNumber: null
@@ -6248,11 +6190,10 @@ components:
                                     "y": 723441.42
                             postOffice:
                               name: Zápy
-                            full: "Zápy 253, 250 61 Zápy"
+                            full: Zápy 253, 250 61 Zápy
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: null
                             number:
                               part1: null
@@ -6278,8 +6219,7 @@ components:
                             value: "04997247"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: BE SOCKS s.r.o.
                         registrationNumber: "05499747"
                         taxNumber: null
@@ -6321,11 +6261,10 @@ components:
                                     "y": 741018.8
                             postOffice:
                               name: Praha 101
-                            full: "Krymská 439/24, 101 00 Praha 10"
+                            full: Krymská 439/24, 101 00 Praha 10
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Krymská
                             number:
                               part1: null
@@ -6351,8 +6290,7 @@ components:
                             value: "05499747"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Jaroslav Ondrúšek
                         registrationNumber: "04799747"
                         taxNumber: null
@@ -6394,11 +6332,10 @@ components:
                                     "y": 528800.27
                             postOffice:
                               name: Bruntál 1
-                            full: "Rýmařovská 1491/31, 792 01 Bruntál"
+                            full: Rýmařovská 1491/31, 792 01 Bruntál
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Rýmařovská
                             number:
                               part1: null
@@ -6424,8 +6361,7 @@ components:
                             value: "04799747"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: AVANTRO s.r.o.
                         registrationNumber: "04997476"
                         taxNumber: null
@@ -6467,11 +6403,10 @@ components:
                                     "y": 740509.43
                             postOffice:
                               name: Praha 86
-                            full: "Thámova 137/16, 186 00 Praha 8"
+                            full: Thámova 137/16, 186 00 Praha 8
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Thámova
                             number:
                               part1: null
@@ -6497,8 +6432,7 @@ components:
                             value: "04997476"
                     - isValid: true
                       data:
-                        administrativeArea:
-                          country: CZ
+                        country: CZ
                         name: Media 8 s.r.o.
                         registrationNumber: "04996747"
                         taxNumber: null
@@ -6540,11 +6474,10 @@ components:
                                     "y": 736720.46
                             postOffice:
                               name: Praha 10
-                            full: "Michelangelova 1995/16, 100 00 Praha 10"
+                            full: Michelangelova 1995/16, 100 00 Praha 10
                         addressOfficial:
                           data:
-                            administrativeArea:
-                              country: null
+                            country: null
                             street: Michelangelova
                             number:
                               part1: null
@@ -6598,8 +6531,7 @@ components:
                     isValid: false
                     proposal: invalidWithCorrection
                     data:
-                      administrativeArea:
-                        country: null
+                      country: null
                       name: AVANTRO
                       registrationNumber: "04997476"
                       taxNumber: null
@@ -6617,8 +6549,7 @@ components:
                   resultCorrected:
                     isValid: true
                     data:
-                      administrativeArea:
-                        country: CZ
+                      country: CZ
                       name: AVANTRO s.r.o.
                       registrationNumber: "04997476"
                       taxNumber: null
@@ -6663,8 +6594,7 @@ components:
                           full: "Thámova 137/16, 186 00 Praha 8"
                       addressOfficial:
                         data:
-                          administrativeArea:
-                            country: null
+                          country: null
                           street: Thámova
                           number:
                             part1: null
@@ -7054,8 +6984,6 @@ components:
           schema:
             type: object
             properties:
-              errors:
-                type: array
               status:
                 type: integer
                 description: Response status
@@ -7091,9 +7019,11 @@ components:
                             example: true
                           acceptFreemails:
                             type: boolean
-                            example: true
+                            example: true                          
               response:
                 $ref: "#/components/schemas/ValidateEmailResponse"
+              errors:
+                type: array                  
             required:
               - errors
               - status
@@ -7426,15 +7356,6 @@ components:
               properties:
                 location:
                   type: object
-                  properties:
-                    lat:
-                      type: number
-                      description: TODO
-                      example: 50.083
-                    lon:
-                      type: number
-                      description: TODO
-                      example: 14.417
                   required:
                     - lat
                     - lon
@@ -7673,6 +7594,7 @@ components:
             allowedPrefixes:
               type: array
               description: List of allowed prefixes.
+              nullable: true
               items:
                 type: string
                 example: "+420"
@@ -7680,6 +7602,10 @@ components:
               type: string
               description: Default international prefix if not part of the query. This is used for the validator to make more accurate results.
               example: "+420"
+            formatNumber:
+              type: boolean
+              description: Formatting the phone number required or not.
+              example: false
       required:
         - query
     NameValidationRequest:
@@ -7798,7 +7724,7 @@ components:
               type: boolean
               description: Whether or not to return in the API response also entities that have already been terminated.
               default: false
-              example: true
+              example: false
       required:
         - query
     CompanySearchRequest:
@@ -7875,7 +7801,7 @@ components:
               type: boolean
               description: Whether or not to return in the output also entities that have already been terminated.
               default: false
-              example: true
+              example: false
       required:
         - query
     EmailSearchRequest:
@@ -8161,12 +8087,15 @@ components:
                 created:
                   type: string
                   description: Company creation date.
+                  format: date
+                  nullable: true
                   example: "2016-04-15"
                 terminated:
-                  type: boolean
-                  nullable: true
+                  type: string
                   description: Company termination date.
-                  example: true
+                  format: date
+                  nullable: true
+                  example: "2016-04-15"
             employees:
               type: object
               description: Employees information.
@@ -8310,16 +8239,14 @@ components:
                       example: CZK
                 shareholders:
                   type: array
+                  description: TODO
                   items:
                     type: object
                     properties:
                       shareholder:
-                        type: object
-                        properties:
-                          text:
-                            type: string
-                            description: Information about shareholder.
-                            example: "PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277, 751 11 Radslavice"
+                        type: string
+                        description: Information about shareholder.
+                        example: "PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách 277, 751 11 Radslavice"
                       share:
                         type: object
                         properties:
@@ -8437,11 +8364,12 @@ components:
                       type: boolean
                       description: Determines whether or not the subject is reliable.
                       example: true
-                    unrealiableFrom:
-                      type: boolean
+                    unreliableFrom:
+                      type: string
+                      format: date
                       nullable: true
                       description: Determines from when the subject is unreliable.
-                      example: true
+                      example: "2018-09-01"
                 bankAccounts:
                   type: array
                   description: Bank accounts associated with the VAT payer.
@@ -8515,7 +8443,7 @@ components:
           type: string
           nullable: true
           description: City Administrative area.
-          example: Dejvice
+          example: Kraków
         cadastralArea:
           type: string
           nullable: true
@@ -8733,19 +8661,28 @@ components:
               nullable: true
               example: Jeseniova
             number:
+              nullable: true
               $ref: "#/components/schemas/LocationNumber"
             streetWithNumber:
               type: string
               description: Street with number.
+              nullable: true
               example: Jeseniova 1151/55
             city:
               type: string
               description: City.
+              nullable: true
               example: Praha
             zip:
               type: string
               description: ZIP code.
+              nullable: true
               example: "13000"
+            full:
+              type: string
+              description: Full address.
+              nullable: true
+              example: Jeseniova 1151/55 Praha 130000
     GlobalRequest:
       type: object
       properties:
@@ -8828,6 +8765,11 @@ components:
               type: string
               description: Type of search.
               example: name
+              enum:
+                - name
+                - registrationNumber
+                - taxNumber
+                - vatNumber
             value:
               type: string
               description: Value of search.
@@ -8945,6 +8887,7 @@ components:
                 - null
               description: Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked.
               example: minimal
+              default: strict
             smartMode:
               type: boolean
               nullable: true
@@ -9113,6 +9056,10 @@ components:
         properties:
           type:
             type: string
+            enum:
+              - name
+              - surname
+              - nameSurname
             description: Type of detail.
             example: name
           value:
@@ -9183,9 +9130,6 @@ components:
             - TOO_LONG
             - TOO_SHORT
             - CONTEXT
-            - CITY
-            - STREET
-            - ZIP
           description: Subtype of error.
           example: NOT_ALLOWED
         severity:
@@ -9506,7 +9450,11 @@ components:
             number:
               type: string
               description: Phone number to validate.
-              example: "+420777555666"
+              example: "777555666"
+            numberWithPrefix:
+              type: string
+              description: Phone number with prefix to validate.
+              example: "+420777555666"            
         options:
           type: object
           description: Query options.
@@ -9517,14 +9465,21 @@ components:
               example: extended
             allowedPrefixes:
               type: array
+              nullable: true
               description: Array of allowed prefixes. If <b>null</b> = all prefixes are allowed.
               items:
                 type: string
                 example: "+420"
             formatNumber:
+              nullable: true
               type: boolean
               description: Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.
               example: false
+            defaultPrefix:
+              nullable: true
+              type: string
+              description: Default international prefix if not part of the query.
+              example: "+420"
         client:
           $ref: "#/components/schemas/ClientRequest"
     ValidatePhoneNumberResults:
@@ -10578,7 +10533,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 400
     Error400RequestBodyEmpty:
@@ -10959,7 +10914,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 401
     Error401RequestAuth:
@@ -10999,7 +10954,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 402
     Error402RequestBillingNoCredit:
@@ -11040,7 +10995,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 403
     Error403RequestAuthKey:
@@ -11183,7 +11138,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 404
     Error404RequestApiVersion:
@@ -11291,7 +11246,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 405
     Error405RequestNotAllowedMethod:
@@ -11326,7 +11281,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 429
     Error429RequestBillingServiceLimit:
@@ -11469,7 +11424,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 500
     Error500InternalBilling:
@@ -11707,7 +11662,7 @@ components:
       type: object
       properties:
         status:
-          type: number
+          type: integer
           description: Status of API response.
           example: 503
     Error503RequestEndpointNotAvailable:

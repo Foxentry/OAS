@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: "2.0"
-  title: Foxentry API v2
+  title: Foxentry API reference
   description: |-
     # Welcome to the Foxentry API version 2.0
     Welcome to the new version of Foxentry API 2.0 Our API is designed to enhance your data management experience and provide you with even more powerful tools to harness the potential of getting and working with data.
@@ -87,7 +87,7 @@ paths:
       tags:
         - Company
       summary: Validate company data
-      description: |-
+      description:
         This endpoint requires at least 1 query parameter and will check if the parameters and their combinations are valid.
         Returns information about the company based on the datascope set in the options.<br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
         Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
@@ -138,12 +138,13 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /company/search:
     post:
       tags:
         - Company
-      summary: Company search
-      description: "You can search for individual companies using this API endpoint. "
+      summary: Search company
+      description: This enpoint mainly serves as <b>autocomplete</b> but can be used to search for specific companies based on filter criteria as well. Foxentry will automatically offer you suggestions to complete the company you are writing down. <br><br>Pay attention to the <b>client</b> section in the request body. You can specify the user's location in order to receive more relevant suggestions.
       operationId: CompanySearch
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -191,12 +192,13 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /company/get:
     post:
       tags:
         - Company
       summary: Get company data
-      description: "This endpoint returns all available data about the company. "
+      description: Foxentry allows you to get information about company based on the <b>dataScope</b> option. <b>Country</b> and <b>registrationNumber</b> parameters are required.
       operationId: GetCompanyData
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -244,14 +246,15 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /email/validate:
     post:
       tags:
         - Email
       summary: Validate email
-      description: |-
-        Foxentry allows you to check if email address really exists. Foxentry also can give you information 
-        if this mailbox is provided by some temporary emails service.
+      description:
+        This endpoint will let you check if the e-mail address sent in query is valid.<br><br> Please pay attention to the <b>validationType</b> option since it has direct impact on the returned data. <b>Extended validation</b> (default) is the more advanced type that checks the real existence of the e-mail address and its deliverability. It also informs you about various flags such as <b>freemail and disposable mail</b> detection. <br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
+        Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
       operationId: ValidateEmail
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -299,12 +302,13 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /email/search:
     post:
       tags:
         - Email
-      summary: Email search
-      description: Foxentry will automatically offer you options to complete the address based on the data you enter.
+      summary: Search email
+      description: Foxentry will automatically offer you suggestions to complete the e-mail address you are writing down. This mainly serves as <b>autocomplete</b>.<br><br> Pay attention to the <b>client</b> section in the request body. You can specify the user's location in order to receive more relevant suggestions.
       operationId: EmailSearch
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -352,12 +356,16 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /location/validate:
     post:
       tags:
-        - Locations
-      summary: Location validation
-      description: Foxentry allows you to check validity and real existence of addresses.
+        - Location
+      summary: Validate location data
+      description:
+        This endpoint requires at least 1 query parameter and will check if the parameters and their combinations are valid.
+        Returns information about the location based on the datascope set in the options.<br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
+        Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
       operationId: LocationValidation
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -405,12 +413,13 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /location/search:
     post:
       tags:
-        - Locations
-      summary: Location Search
-      description: Use this API endpoint to search for locations.
+        - Location
+      summary: Search location
+      description: This enpoint mainly serves as <b>autocomplete</b> but can be used to search for specific addresses based on filter criteria as well. Foxentry will automatically offer you suggestions to complete the address you are writing down. <br><br>Pay attention to the <b>client</b> section in the request body. You can specify the user's location in order to receive more relevant suggestions.
       operationId: LocationSearch
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -458,12 +467,13 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /location/get:
     post:
       tags:
-        - Locations
-      summary: Location get
-      description: Foxentry allows you to check validity and real existence of addresses.
+        - Location
+      summary: Get location data
+      description: Foxentry allows you to get information about location based on the <b>dataScope</b> option. <b>Country</b> and <b>ID</b> parameters are required. You can either choose internal ID, which is assigned by Foxentry or external ID from the data source. <b>CZ external</b> = RUIAN, <b>PL external</b> = Gov data, <b>SK external does not exist</b>.
       operationId: LocationGet
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -511,14 +521,15 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /location/localize:
     post:
       tags:
-        - Locations
-      summary: Location localization
-      description: |-
-        This endpoint returns max. 10 addresses nearby inputed GPS coordinates. Usable in case you want to localize
-        end user by his GPS coordinates (obtained through browser geolocalization service).
+        - Location
+      summary: Localization
+      description:
+        Foxentry allows you to check an area with GPS radius in order to return all the addresses within that area. It can also give you
+        additional information about the addresses based on the <b>dataScope</b> option.<br><br>Please pay attention to the <b>singleLocationResultDistance</b> option, which determines the radius of the search area in meters.<br><br>
       operationId: LocationLocalization
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -566,14 +577,13 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /name/validate:
     post:
       tags:
         - Name
-      summary: Name validation
-      description:
-        Foxentry allows you to check the validity and real existence of names and their combinations. At least one parameter is required in the query. You can either write down the name separately or use <b>nameSurname</b> as connected parameter. <br><br>Pay attention to the query options. Especially <b>validationDepth</b>, which determines how strict the validation should be based on your use case. For example you'd want minimal validationDepth for web forms since you usually don't want to disturb the user too much with error messages and suggestions.   <br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
-        Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
+      summary: Validate name data
+      description: Foxentry allows you to check the validity and real existence of names and their combinations. At least one parameter is required in the query. You can either write down the name separately or use <b>nameSurname</b> as connected parameter. <br><br>Pay attention to the query options. Especially <b>validationDepth</b>, which determines how strict the validation should be based on your use case. For example you''d want minimal validationDepth for web forms since you usually don''t want to disturb the user too much with error messages and suggestions.   <br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br> Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
       operationId: NameValidation
       parameters:
         - name: Foxentry-Include-Request-Details
@@ -621,12 +631,13 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
   /phone/validate:
     post:
       tags:
         - Phone
       summary: Validate phone number
-      description: |-
+      description:
         Foxentry allows you to check validity and the existence of phone numbers. It can also give you
         additional information about the validated phone number based on the <b>validationType</b> option.<br><br>Please pay attention to the <b>formatNumber</b> option. This option defines the format of number that should be considered as valid. <br><br>Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br>
         Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.
@@ -677,12 +688,13 @@ paths:
       servers:
         - url: "https://api.foxentry.com"
         - url: "https://api.foxentry.com/v2.0"
+
 tags:
   - name: Company
     description: Company operations
   - name: Email
     description: Email operations
-  - name: Locations
+  - name: Location
     description: Location operations
   - name: Name
     description: Names operations
@@ -1546,12 +1558,12 @@ components:
                         properties:
                           email:
                             type: string
-                            description: Suggested email
                             example: info@foxentry.com
                         required:
                           - email
                       options:
                         type: object
+                        description: Query options.
                         properties:
                           resultsLimit:
                             type: number
@@ -1993,7 +2005,7 @@ components:
                                     "y": 746955.94
                             postOffice:
                               name: Praha 58
-                            full: V zářezu 902/4, 158 00 Praha 5
+                            full: "V zářezu 902/4, 158 00 Praha 5"
                         addressOfficial:
                           data:
                             country: null
@@ -2053,7 +2065,7 @@ components:
                                     "y": 742311.72
                             postOffice:
                               name: Praha 1
-                            full: Revoluční 762/13, 110 00 Praha 1
+                            full: "Revoluční 762/13, 110 00 Praha 1"
                         addressOfficial:
                           data:
                             country: null
@@ -2113,7 +2125,7 @@ components:
                                     "y": 742484.89
                             postOffice:
                               name: Praha 1
-                            full: Krakovská 583/9, 110 00 Praha 1
+                            full: "Krakovská 583/9, 110 00 Praha 1"
                         addressOfficial:
                           data:
                             country: null
@@ -2173,7 +2185,7 @@ components:
                                     "y": 473185.65
                             postOffice:
                               name: Ostrava 9
-                            full: 28. října 864/273, 709 00 Mariánské Hory a Hulváky
+                            full: "28. října 864/273, 709 00 Mariánské Hory a Hulváky"
                         addressOfficial:
                           data:
                             country: null
@@ -2233,7 +2245,7 @@ components:
                                     "y": 790620.15
                             postOffice:
                               name: Most 1
-                            full: Velebudická 3271, 434 01 Most
+                            full: "Velebudická 3271, 434 01 Most"
                         addressOfficial:
                           data:
                             country: null
@@ -4615,12 +4627,13 @@ components:
                               - zip
                               - full
                           value:
-                            description: TODO
+                            description: Searched value.
                             oneOf:
                               - type: string
                               - type: integer
                           filter:
                             type: array
+                            description: Additional filter in order to specify the search results.
                             items:
                               enum:
                                 - street
@@ -4635,9 +4648,6 @@ components:
                                 - full
                             example:
                               - street
-                        example:
-                          type: street
-                          value: Jeseniova
                       options:
                         $ref: "#/components/schemas/LocationRequestOptionsSearch"
                       client:
@@ -4737,7 +4747,7 @@ components:
                                 example: true                              
                               radius:
                                 type: integer
-                                description: TODO
+                                description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
                                 minimum: 1
                                 maximum: 1000
                                 default: 50
@@ -4935,13 +4945,16 @@ components:
                           - id
                       options:
                         type: object
+                        description: Query options.
                         properties:
                           idType:
+                            description: Internal is assigned by Foxentry. External ID may vary for every supported country. CZ = RUIAN, PL = Government data, SK = no external ID.
                             enum:
                               - internal
                               - external
                             example: internal
                           dataScope:
+                            description: Data scope of returned data.
                             enum:
                               - basic
                               - full
@@ -6041,7 +6054,7 @@ components:
                                     "y": 541769.82
                             postOffice:
                               name: Šternberk 1
-                            full: Strmá 1129/6, 785 01 Šternberk
+                            full: "Strmá 1129/6, 785 01 Šternberk"
                         addressOfficial:
                           data:
                             country: null
@@ -6112,7 +6125,7 @@ components:
                                     "y": 823065.17
                             postOffice:
                               name: Plzeň 1
-                            full: Husova 786/19, 301 00 Plzeň 3
+                            full: "Husova 786/19, 301 00 Plzeň 3"
                         addressOfficial:
                           data:
                             country: null
@@ -6183,7 +6196,7 @@ components:
                                     "y": 723441.42
                             postOffice:
                               name: Zápy
-                            full: Zápy 253, 250 61 Zápy
+                            full: "Zápy 253, 250 61 Zápy"
                         addressOfficial:
                           data:
                             country: null
@@ -6254,7 +6267,7 @@ components:
                                     "y": 741018.8
                             postOffice:
                               name: Praha 101
-                            full: Krymská 439/24, 101 00 Praha 10
+                            full: "Krymská 439/24, 101 00 Praha 10"
                         addressOfficial:
                           data:
                             country: null
@@ -6325,7 +6338,7 @@ components:
                                     "y": 528800.27
                             postOffice:
                               name: Bruntál 1
-                            full: Rýmařovská 1491/31, 792 01 Bruntál
+                            full: "Rýmařovská 1491/31, 792 01 Bruntál"
                         addressOfficial:
                           data:
                             country: null
@@ -6396,7 +6409,7 @@ components:
                                     "y": 740509.43
                             postOffice:
                               name: Praha 86
-                            full: Thámova 137/16, 186 00 Praha 8
+                            full: "Thámova 137/16, 186 00 Praha 8"
                         addressOfficial:
                           data:
                             country: null
@@ -6467,7 +6480,7 @@ components:
                                     "y": 736720.46
                             postOffice:
                               name: Praha 10
-                            full: Michelangelova 1995/16, 100 00 Praha 10
+                            full: "Michelangelova 1995/16, 100 00 Praha 10"
                         addressOfficial:
                           data:
                             country: null
@@ -6997,17 +7010,21 @@ components:
                           - email
                       options:
                         type: object
+                        description: Query options.
                         properties:
                           validationType:
                             enum:
                               - basic
                               - extended
-                            example: extended                          
+                            example: extended
+                            description: Type of validation. <b>Basic</b> = only the format of e-mail is checked and only standard corrections are included. <b>Extended</b> = in depth check of deliverability. Additional information is returned such as temporary mail check or freemail check. More complicated corrections are included.
                           acceptDisposableEmails:
                             type: boolean
+                            description: If true, the disposable e-mails will be marked as valid.
                             example: true
                           acceptFreemails:
                             type: boolean
+                            description: If true, the freemails will be marked as valid.
                             example: true
                       client:
                         $ref: "#/components/schemas/ClientRequest"                              
@@ -7227,7 +7244,7 @@ components:
                 - type: integer
             filter:
               type: object
-              description: TODO
+              description: Additional filter in order to specify the search results.
               properties:
                 street:
                   type: string
@@ -7272,34 +7289,33 @@ components:
           required:
             - type
             - value
-          example:
-            type: street
-            value: Jeseniova
         options:
           $ref: "#/components/schemas/LocationRequestOptionsSearch"
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:
         - query
+
     LocationRequestOptionsSearch:
       type: object
+      description: Query options.
       properties:
         dataScope:
-          description: TODO
+          description: Data scope of returned data.
           enum:
             - basic
             - full
           default: basic
           example: full
         countryMode:
-          description: TODO
+          description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
           enum:
             - prefer
             - limit
           default: prefer
           example: prefer
         resultsLimit:
-          description: TODO
+          description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
           type: integer
           minimum: 1
           maximum: 20
@@ -7338,6 +7354,7 @@ components:
               type: number
               description: Client's longitude
               example: 13.9271
+
     LocationLocalizationRequest:
       type: object
       properties:
@@ -7348,7 +7365,7 @@ components:
               properties:
                 radius:
                   type: integer
-                  description: TODO
+                  description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
                   minimum: 1
                   maximum: 1000
                   default: 50
@@ -7373,26 +7390,28 @@ components:
                     - lon                           
       required:
         - client
+
     LocationRequestOptions:
       type: object
+      description: Query options.
       properties:
         dataScope:
+          description: Data scope of returned data.
           enum:
             - basic
             - full
           default: basic
-          description: TODO
           example: full
         countryMode:
+          description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
           enum:
             - prefer
             - limit
           default: prefer
-          description: TODO
           example: prefer
         resultsLimit:
+          description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
           type: integer
-          description: TODO
           minimum: 1
           maximum: 20
           default: 10
@@ -7433,12 +7452,14 @@ components:
           description: Query options.
           properties:
             idType:
+              description: Internal is assigned by Foxentry. External ID may vary for every supported country. CZ = RUIAN, PL = Government data, SK = no external ID.
               enum:
                 - internal
                 - external
               default: internal
               example: internal
             dataScope:
+              description: Data scope of returned data.
               enum:
                 - basic
                 - full
@@ -7451,6 +7472,7 @@ components:
           $ref: "#/components/schemas/ClientRequest"
       required:
         - query
+
     LocationValidationRequest:
       type: object
       properties:
@@ -7528,6 +7550,7 @@ components:
           $ref: "#/components/schemas/ClientRequest"
       required:
         - query
+
     ValidateEmailRequest:
       type: object
       properties:
@@ -7536,7 +7559,6 @@ components:
           properties:
             email:
               type: string
-              description: TODO
               example: info@foxentry.cz
           required:
             - email
@@ -7548,23 +7570,24 @@ components:
               enum:
                 - basic
                 - extended
-              description: TODO
+              description: Type of validation. <b>Basic</b> = only the format of e-mail is checked and only standard corrections are included. <b>Extended</b> = in depth check of deliverability. Additional information is returned such as temporary mail check or freemail check. More complicated corrections are included.
               default: basic
               example: extended
             acceptDisposableEmails:
               type: boolean
-              description: TODO
+              description: If true, the disposable e-mails will be marked as valid.
               default: true
               example: true
             acceptFreemails:
               type: boolean
-              description: TODO
+              description: If true, the freemails will be marked as valid.
               default: true
               example: true
         client:
           $ref: "#/components/schemas/ClientRequest"              
       required:
         - query
+
     ValidatePhoneNumberRequest:
       type: object
       properties:
@@ -7613,6 +7636,7 @@ components:
           $ref: "#/components/schemas/ClientRequest"                    
       required:
         - query
+
     NameValidationRequest:
       type: object
       properties:
@@ -7640,7 +7664,7 @@ components:
           description: Query options.
           properties:
             dataScope:
-              description: Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned.
+              description: "Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned."
               enum:
                 - basic
                 - full
@@ -7661,7 +7685,7 @@ components:
                 - minimal
                 - moderate
                 - strict
-              description: Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked.
+              description: "Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked."
               default: minimal
               example: minimal
             smartMode:
@@ -7675,6 +7699,7 @@ components:
             - query
       required:
         - query
+
     ValidateCompanyDataRequest:
       type: object
       properties:
@@ -7718,7 +7743,7 @@ components:
                 - limit
                 - prefer
                 - null
-              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+              description: "<b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter."
               default: prefer
               example: limit
             resultsLimit:
@@ -7736,6 +7761,7 @@ components:
           $ref: "#/components/schemas/ClientRequest"              
       required:
         - query
+
     CompanySearchRequest:
       type: object
       properties:
@@ -7748,14 +7774,15 @@ components:
                 - registrationNumber
                 - taxNumber
                 - vatNumber
+              description: Type of search.
               example: name
             value:
               type: string
-              description: The input value you"re looking for.
+              description: Searched value.
               example: Avantro
             filter:
               type: object
-              description: TODO
+              description: Additional filter in order to specify the search results.
               properties:
                 name:
                   type: string
@@ -7796,7 +7823,7 @@ components:
               enum:
                 - limit
                 - prefer
-              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+              description: "<b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter."
               default: prefer
               example: limit
             resultsLimit:
@@ -7824,6 +7851,7 @@ components:
           $ref: "#/components/schemas/ClientRequest"                  
       required:
         - query
+
     EmailSearchRequest:
       type: object
       properties:
@@ -7832,7 +7860,6 @@ components:
           properties:
             email:
               type: string
-              description: Suggested email
               example: info@foxentry.com
           required:
             - email
@@ -7848,6 +7875,7 @@ components:
               example: 5
         client:
           $ref: "#/components/schemas/ClientRequest"
+
     GetCompanyDataRequest:
       type: object
       properties:
@@ -7871,15 +7899,17 @@ components:
           $ref: "#/components/schemas/ClientRequest"  
       required:
         - query
+
     CompanyDataRequestOption:
       type: object
+      description: Query options.
       properties:
         dataScope:
           enum:
             - basic
             - extended
             - full
-          description: Scope of required data.
+          description: Data scope of returned data.
           default: basic
           example: full
         includeTerminatedSubjects:
@@ -7887,6 +7917,7 @@ components:
           description: Whether or not to include entities that have already ended their existence in the output.
           default: false
           example: false
+
     GetCompanyDataResponseRequest:
       type: object
       properties:
@@ -7927,7 +7958,7 @@ components:
                 - basic
                 - extended
                 - full
-              description: Scope of required data.
+              description: Data scope of returned data.
               default: basic
               example: full
             includeTerminatedSubjects:
@@ -7937,6 +7968,7 @@ components:
               example: false              
         client:
           $ref: "#/components/schemas/ClientRequest"
+
     GetCompanyDataResults:
       type: object
       properties:
@@ -7946,12 +7978,12 @@ components:
           example: 1
         results:
           type: array
-          description: TODO
           items:
             $ref: "#/components/schemas/CompanyResultsResponseResults"
       required:
         - resultsCount
         - results
+
     CompanyResultsResponseResults:
       type: object
       properties:
@@ -8266,7 +8298,7 @@ components:
                       example: CZK
                 shareholders:
                   type: array
-                  description: TODO
+                  description: Information about shareholders.
                   items:
                     type: object
                     properties:
@@ -8295,7 +8327,7 @@ components:
                             example: "100"
                       info:
                         type: array
-                        description: TODO
+                        description: Textual information about the share.
                         items:
                           type: string
                           description: Information about share
@@ -8437,6 +8469,7 @@ components:
                         example: false
       required:
         - data
+
     LocationData:
       type: object
       properties:
@@ -8583,6 +8616,7 @@ components:
         - zip
         - geometry
         - full
+
     LocationNumber:
       type: object
       properties:
@@ -8624,6 +8658,7 @@ components:
       required:
         - part1
         - part2
+
     DataGeometry:
       type: object
       properties:
@@ -8669,6 +8704,7 @@ components:
                     type: number
                     description: Second coordinate.
                     example: 1043425.38
+
     LocationOficial:
       type: object
       description: Address data from the official registry. Not validated by Foxentry.
@@ -8710,6 +8746,7 @@ components:
               description: Full address.
               nullable: true
               example: Jeseniova 1151/55 Praha 130000
+
     GlobalRequest:
       type: object
       properties:
@@ -8729,6 +8766,7 @@ components:
         - endpoint
         - code
         - customId
+
     EmailSearchResponse:
       type: object
       properties:
@@ -8740,22 +8778,19 @@ components:
           example: 1
         results:
           type: array
-          description: TODO
           items:
             type: object
-            description: TODO
             properties:
               data:
                 type: object
-                description: TODO
                 properties:
                   email:
                     type: string
-                    description: Suggested email
+                    description: Suggested e-mail
                     example: info@gmail.com
                   user:
                     type: string
-                    description: Suggested info
+                    description: Suggested user
                     example: info
                   domain:
                     type: string
@@ -8769,6 +8804,7 @@ components:
       required:
         - resultsCount
         - results
+
     CompanySearchResultsRequest:
       type: object
       properties:
@@ -8799,11 +8835,11 @@ components:
                 - vatNumber
             value:
               type: string
-              description: Value of search.
+              description: Searched value.
               example: Avantro s.r.o.
             filter:
               type: object
-              description: TODO
+              description: Additional filter in order to specify the search results.
               properties:
                 registrationNumber:
                   type: number
@@ -8876,6 +8912,7 @@ components:
         - endpoint
         - code
         - customId
+
     CompanySearchResults:
       type: object
       properties:
@@ -8885,12 +8922,12 @@ components:
           example: 1
         results:
           type: array
-          description: TODO
           items:
             $ref: "#/components/schemas/CompanyResultsResponseResults"
       required:
         - resultsCount
         - results
+
     NameValidationResponseRequest:
       type: object
       properties:
@@ -8927,7 +8964,7 @@ components:
           description: Query options.
           properties:
             dataScope:
-              description: Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned.
+              description: "Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned."
               enum:
                 - basic
                 - extended
@@ -8949,7 +8986,7 @@ components:
                 - moderate
                 - strict
                 - null
-              description: Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked.
+              description: "Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked."
               example: minimal
               default: strict
             smartMode:
@@ -8977,6 +9014,7 @@ components:
                   type: number
                   description: Client's longitude
                   example: 13.9271
+
     NameValidationResults:
       type: object
       properties:
@@ -9071,6 +9109,7 @@ components:
       required:
         - result
         - suggestions
+
     NameValidationResultsData:
       type: object
       properties:
@@ -9113,6 +9152,7 @@ components:
         - context
         - degreesBefore
         - degreesAfter
+
     NameValidationResultsDetails:
       type: array
       items:
@@ -9169,6 +9209,7 @@ components:
           - gender
           - vocative
           - nameDays
+
     ErrorSyntaxGlobal:
       type: object
       properties:
@@ -9220,6 +9261,7 @@ components:
             - Value contains unneccessary context.
           description: Description of error.
           example: Disallowed characters were used in the value.
+
     ErrorSyntaxName:
       type: object
       properties:
@@ -9261,6 +9303,7 @@ components:
             - The DEGREE part of the value is placed in the wrong position.
           description: Description of error.
           example: Value is missing the name part.
+
     ErrorFormatGlobal:
       type: object
       properties:
@@ -9304,6 +9347,7 @@ components:
             - null
           description: Description of error.
           example: Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
+
     ErrorValueGlobal:
       type: object
       properties:
@@ -9350,6 +9394,7 @@ components:
             - Context words are not allowed.
           description: Description of error.
           example: Value is empty.
+
     ErrorValueName:
       type: object
       properties:
@@ -9394,6 +9439,7 @@ components:
             - Degrees are not allowed.
           description: Description of error.
           example: Degree value is invalid.
+
     FixFormatGlobal:
       type: object
       properties:
@@ -9417,6 +9463,7 @@ components:
           example: CASE_SENSITIVITY
         data:
           $ref: "#/components/schemas/FixData"
+
     FixData:
       type: object
       description: Data that has been changed
@@ -9437,6 +9484,7 @@ components:
           type: string
           description: Changed value
           example: me@gmail.com
+
     FixSyntaxGlobal:
       type: object
       properties:
@@ -9463,6 +9511,7 @@ components:
           example: CHARACTERS
         data:
           $ref: "#/components/schemas/FixData"
+
     FixValueGlobal:
       type: object
       properties:
@@ -9488,6 +9537,7 @@ components:
           example: INTERNAL_RULE
         data:
           $ref: "#/components/schemas/FixData"
+
     ValidatePhoneNumberResponseRequest:
       type: object
       properties:
@@ -9537,7 +9587,7 @@ components:
             formatNumber:
               nullable: true
               type: boolean
-              description: Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.
+              description: "Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid."
               example: false
             defaultPrefix:
               nullable: true
@@ -9546,6 +9596,7 @@ components:
               example: "+420"
         client:
           $ref: "#/components/schemas/ClientRequest"
+
     ValidatePhoneNumberResults:
       type: object
       properties:
@@ -9648,6 +9699,7 @@ components:
       required:
         - result
         - suggestions
+
     ValidatePhoneNumberData:
       type: object
       properties:
@@ -9721,6 +9773,7 @@ components:
         - numberWithPrefix
         - carrier
         - format
+
     ErrorSyntaxPhone:
       type: object
       properties:
@@ -9763,6 +9816,7 @@ components:
             - Value is missing the prefix.
           description: Description of error.
           example: Value contains duplicated '+' sign.
+
     ErrorValuePhone:
       type: object
       properties:
@@ -9801,6 +9855,7 @@ components:
             - This prefix is not allowed. Check the 'allowedPrefixes' option in the request.
           description: Description of error.
           example: Prefix is invalid.
+
     FixSyntaxPhone:
       type: object
       properties:
@@ -9824,22 +9879,23 @@ components:
           example: PLUS_SIGN
         data:
           $ref: "#/components/schemas/FixData"
+
     LocationSearchResponse:
       type: object
       title: LocationSearchResponse
       properties:
         resultsCount:
           type: integer
-          description: TODO
+          description: Number of results.
           format: int32
         results:
           type: array
-          description: TODO
           items:
             $ref: "#/components/schemas/LocationSearchResults"
       required:
         - resultsCount
         - results
+
     LocationSearchResults:
       type: object
       properties:
@@ -9847,16 +9903,16 @@ components:
           $ref: "#/components/schemas/LocationData"
       required:
         - data
+
     LocationLocalizationResults:
       type: object
       properties:
         resultsCount:
           type: number
-          description: TODO
+          description: Number of results.
           example: 1
         results:
           type: array
-          description: TODO
           items:
             type: object
             properties:
@@ -9865,16 +9921,16 @@ components:
       required:
         - resultsCount
         - results
+
     LocationGetResults:
       type: object
       properties:
         resultsCount:
           type: integer
-          description: TODO
+          description: Number of results.
           format: int32
         results:
           type: array
-          description: TODO
           items:
             type: object
             properties:
@@ -9885,6 +9941,7 @@ components:
       required:
         - resultsCount
         - results
+
     LocationValidationResponse:
       type: object
       properties:
@@ -9994,6 +10051,7 @@ components:
               - data
       required:
         - result
+
     ErrorSyntaxLocation:
       type: object
       properties:
@@ -10037,6 +10095,7 @@ components:
             - Value is missing part of the number.
           description: Description of error.
           example: Value is missing the city.
+
     FixSyntaxLocation:
       type: object
       properties:
@@ -10058,6 +10117,7 @@ components:
           example: NUMBER
         data:
           $ref: "#/components/schemas/FixData"
+
     FixValueLocation:
       type: object
       properties:
@@ -10081,6 +10141,7 @@ components:
           example: CITY
         data:
           $ref: "#/components/schemas/FixData"
+
     ValidateCompanyDataResultsRequest:
       type: object
       properties:
@@ -10129,7 +10190,7 @@ components:
                 - limit
                 - prefer
                 - null
-              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+              description: "<b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter."
               default: prefer
               example: limit
             dataScope:
@@ -10159,6 +10220,7 @@ components:
         - endpoint
         - code
         - customId
+
     ValidateCompanyDataResults:
       type: object
       properties:
@@ -10227,6 +10289,7 @@ components:
       required:
         - result
         - suggestions
+
     ErrorSyntaxCompany:
       type: object
       properties:
@@ -10265,6 +10328,7 @@ components:
             - Company name is missing the legal form.
           description: Description of error.
           example: Value contains duplicated legal form.
+
     FixSyntaxCompany:
       type: object
       properties:
@@ -10287,6 +10351,7 @@ components:
           example: LEGAL_FORM
         data:
           $ref: "#/components/schemas/FixData"
+
     ValidateCompanyDataResultCorrected:
       type: object
       properties:
@@ -10317,6 +10382,7 @@ components:
         - fixes
       allOf:
         - $ref: "#/components/schemas/CompanyResultsResponseResults"
+
     ValidateEmailResponse:
       type: object
       properties:
@@ -10414,6 +10480,7 @@ components:
                     - $ref: "#/components/schemas/ErrorValueEmail"
       required:
         - result
+
     EmailData:
       type: object
       properties:
@@ -10430,24 +10497,26 @@ components:
           description: Customer domain.
           example: gmali.com
           nullable: true
+
     EmailFlags:
       type: object
       properties:
         isCatchAllServer:
           type: boolean
           nullable: true
-          description: Determine if API catch-all server is present.
+          description: Determines if the domain is set as catchAll. That means no matter what is in front the '@' sign, every e-mail is deliverable
           example: false
         isDisposableEmailLocation:
           type: boolean
           nullable: true
-          description: Determine if the email address is disposable.
+          description: Determines if the email address is disposable.
           example: false
         isFreeMail:
           type: boolean
           nullable: true
-          description: Determine if the email address is free.
+          description: Determines if the email address is hosted on freemail.
           example: false
+
     ErrorSyntaxEmail:
       type: object
       properties:
@@ -10493,6 +10562,7 @@ components:
             - The TLD part of the value is placed in the wrong position.
           description: Description of error.
           example: The domain contains invalid syntax.
+
     ErrorValueEmail:
       type: object
       properties:
@@ -10537,6 +10607,7 @@ components:
             - Freemails are not allowed.
           description: Description of error.
           example: Domain name is invalid.
+
     FixSyntaxEmail:
       type: object
       properties:
@@ -10561,6 +10632,7 @@ components:
           example: AT_SIGN
         data:
           $ref: "#/components/schemas/FixData"
+
     EmailFixes:
       type: object
       nullable: true
@@ -10595,6 +10667,7 @@ components:
               type: string
               description: Value.
               example: me@gmail.com
+
     ResponseStatus400:
       type: object
       properties:
@@ -10602,6 +10675,7 @@ components:
           type: integer
           description: Status of API response.
           example: 400
+
     Error400RequestBodyEmpty:
       type: object
       properties:
@@ -10636,6 +10710,7 @@ components:
             - Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
           description: Description of error.
           example: Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
+
     Error400RequestBodyNotJson:
       type: object
       properties:
@@ -10670,6 +10745,7 @@ components:
             - Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
           description: Description of error.
           example: Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
+
     Error400RequestBodyNoRequest:
       type: object
       properties:
@@ -10704,6 +10780,7 @@ components:
             - Your API call body does not contain any requests.
           description: Description of error.
           example: Your API call body does not contain any requests.
+
     Error400RequestBodyTooBig:
       type: object
       properties:
@@ -10738,6 +10815,7 @@ components:
             - Your request length is bigger than allowed. Please contact us if you think this is a mistake.
           description: Description of error.
           example: Your request length is bigger than allowed. Please contact us if you think this is a mistake.
+
     Error400RequestOptionsParameterNotSupported:
       type: object
       properties:
@@ -10772,6 +10850,7 @@ components:
             - Options parameter is not supported for this endpoint.
           description: Description of error.
           example: Options parameter is not supported for this endpoint.
+
     Error400RequestOptionParameterValueNotSupported:
       type: object
       properties:
@@ -10806,6 +10885,7 @@ components:
             - Value in paramater is not valid. Please check Foxentry.dev for more information.
           description: Description of error.
           example: Value in paramater is not valid. Please check Foxentry.dev for more information.
+
     Error400RequestQueryNotSent:
       type: object
       properties:
@@ -10840,6 +10920,7 @@ components:
             - Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
           description: Description of error.
           example: Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
+
     Error400RequestQueryParameterCombination:
       type: object
       properties:
@@ -10874,6 +10955,7 @@ components:
             - It is not possible to use these parameters at the same time in one request.
           description: Description of error.
           example: It is not possible to use these parameters at the same time in one request.
+
     Error400RequestQueryParameterMissing:
       type: object
       properties:
@@ -10908,6 +10990,7 @@ components:
             - Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
           description: Description of error.
           example: Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
+
     Error400RequestQueryParameterNotSupported:
       type: object
       properties:
@@ -10942,6 +11025,7 @@ components:
             - Query parameter is not supported for this endpoint.
           description: Description of error.
           example: Query parameter is not supported for this endpoint.
+
     Error400RequestQueryParameterRequired:
       type: object
       properties:
@@ -10976,6 +11060,7 @@ components:
             - At least one of listed parameters is required.
           description: Description of error.
           example: At least one of listed parameters is required.
+
     ResponseStatus401:
       type: object
       properties:
@@ -10983,6 +11068,7 @@ components:
           type: integer
           description: Status of API response.
           example: 401
+
     Error401RequestAuth:
       type: object
       properties:
@@ -11016,6 +11102,7 @@ components:
             - Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
           description: Description of error.
           example: Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
+
     ResponseStatus402:
       type: object
       properties:
@@ -11023,6 +11110,7 @@ components:
           type: integer
           description: Status of API response.
           example: 402
+
     Error402RequestBillingNoCredit:
       type: object
       properties:
@@ -11057,6 +11145,7 @@ components:
             - No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
           description: Description of error.
           example: No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
+
     ResponseStatus403:
       type: object
       properties:
@@ -11064,6 +11153,7 @@ components:
           type: integer
           description: Status of API response.
           example: 403
+
     Error403RequestAuthKey:
       type: object
       properties:
@@ -11098,6 +11188,7 @@ components:
             - Provided API key is not valid. Please check the project settings at app.foxentry.com.
           description: Description of error.
           example: Provided API key is not valid. Please check the project settings at app.foxentry.com.
+
     Error403RequestAuthToken:
       type: object
       properties:
@@ -11132,6 +11223,7 @@ components:
             - Provided access token is not valid. Please check the project settings at app.foxentry.com.
           description: Description of error.
           example: Provided access token is not valid. Please check the project settings at app.foxentry.com.
+
     Error403RequestNotAllowedDomain:
       type: object
       properties:
@@ -11166,6 +11258,7 @@ components:
             - Website domain is not allowed in the project settings.
           description: Description of error.
           example: Website domain is not allowed in the project settings.
+
     Error403RequestNotAllowedIp:
       type: object
       properties:
@@ -11200,6 +11293,7 @@ components:
             - The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
           description: Description of error.
           example: The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
+
     ResponseStatus404:
       type: object
       properties:
@@ -11207,6 +11301,7 @@ components:
           type: integer
           description: Status of API response.
           example: 404
+
     Error404RequestApiVersion:
       type: object
       properties:
@@ -11240,6 +11335,7 @@ components:
             - Requested API version is not available. Please check Foxentry.dev for the supported versions.
           description: Description of error.
           example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
+
     Error404RequestEndpointNotFound:
       type: object
       properties:
@@ -11274,6 +11370,7 @@ components:
             - Endpoint not found. Please check Foxentry.dev for the supported endpoints.
           description: Description of error.
           example: Endpoint not found. Please check Foxentry.dev for the supported endpoints.
+
     Error404RequestProjetNotFound:
       type: object
       properties:
@@ -11308,6 +11405,7 @@ components:
             - The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
           description: Description of error.
           example: The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
+
     ResponseStatus405:
       type: object
       properties:
@@ -11315,6 +11413,7 @@ components:
           type: integer
           description: Status of API response.
           example: 405
+
     Error405RequestNotAllowedMethod:
       type: object
       properties:
@@ -11343,6 +11442,7 @@ components:
             - HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
           description: Description of error.
           example: HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
+
     ResponseStatus429:
       type: object
       properties:
@@ -11350,6 +11450,7 @@ components:
           type: integer
           description: Status of API response.
           example: 429
+
     Error429RequestBillingServiceLimit:
       type: object
       properties:
@@ -11384,6 +11485,7 @@ components:
             - Requested API version is not available. Please check Foxentry.dev for the supported versions.
           description: Description of error.
           example: Requested API version is not available. Please check Foxentry.dev for the supported versions.
+
     Error429RequestRateLimitCreditPerDay:
       type: object
       properties:
@@ -11418,6 +11520,7 @@ components:
             - The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
           description: Description of error.
           example: The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
+
     Error429RequestRateLimitCreditPerIp:
       type: object
       properties:
@@ -11452,6 +11555,7 @@ components:
             - The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
           description: Description of error.
           example: The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
+
     Error429RequestRateLimitTooManyRequests:
       type: object
       properties:
@@ -11486,6 +11590,7 @@ components:
             - The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
           description: Description of error.
           example: The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
+
     ResponseStatus500:
       type: object
       properties:
@@ -11493,6 +11598,7 @@ components:
           type: integer
           description: Status of API response.
           example: 500
+
     Error500InternalBilling:
       type: object
       properties:
@@ -11525,6 +11631,7 @@ components:
             - Failed to process your request due to a billing internal error. Please contact us if the error persists.
           description: Description of error.
           example: Failed to process your request due to a billing internal error. Please contact us if the error persists.
+
     Error500InternalDatabaseConnection:
       type: object
       properties:
@@ -11558,6 +11665,7 @@ components:
             - Failed to establish connection with the database server. Please contact us if the error persists.
           description: Description of error.
           example: Failed to establish connection with the database server. Please contact us if the error persists.
+
     Error500InternalDatabaseError:
       type: object
       properties:
@@ -11591,6 +11699,7 @@ components:
             - An error has occured during the communication with our database. Please contact us if the error persists.
           description: Description of error.
           example: An error has occured during the communication with our database. Please contact us if the error persists.
+
     Error500InternalDatabaseNotAvailable:
       type: object
       properties:
@@ -11624,6 +11733,7 @@ components:
             - Internal datastore is not available at the moment. No operation on this datastore is possible.
           description: Description of error.
           example: Internal datastore is not available at the moment. No operation on this datastore is possible.
+
     Error500InternalError:
       type: object
       properties:
@@ -11657,6 +11767,7 @@ components:
             - Failed to process your request. Please try again later or contact us.
           description: Description of error.
           example: Failed to process your request. Please try again later or contact us.
+
     Error500Timeout:
       type: object
       properties:
@@ -11690,6 +11801,7 @@ components:
             - API timeout in effect. Your request took too much time to process.
           description: Description of error.
           example: API timeout in effect. Your request took too much time to process.
+
     Error500RequestProjectNoData:
       type: object
       properties:
@@ -11724,6 +11836,7 @@ components:
             - Failed to fetch project data needed for processing your request. Please contact us if the error persists.
           description: Description of error.
           example: Failed to fetch project data needed for processing your request. Please contact us if the error persists.
+
     ResponseStatus503:
       type: object
       properties:
@@ -11731,6 +11844,7 @@ components:
           type: integer
           description: Status of API response.
           example: 503
+
     Error503RequestEndpointNotAvailable:
       type: object
       properties:
@@ -11765,5 +11879,6 @@ components:
             - API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
           description: Description of error.
           example: API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
+
 security:
   - BearerAuth: []

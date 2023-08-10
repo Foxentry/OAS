@@ -11414,9 +11414,9 @@ components:
           example: ENDPOINT
         subtype:
           enum:
-            - NOT_FOUND
+            - NOT_ALLOWED
           description: Subtype of error.
-          example: NOT_FOUND
+          example: NOT_ALLOWED
         severity:
           enum:
             - critical

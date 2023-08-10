@@ -4725,16 +4725,6 @@ components:
                       endpoint:
                         type: string
                         example: location/localize
-                      client:
-                        allOf:
-                          - $ref: "#/components/schemas/ClientRequest"
-                          - type: object
-                            properties:
-                              location:
-                                type: object
-                                required:
-                                  - lat
-                                  - lon
                       options:
                         allOf:
                           - $ref: "#/components/schemas/LocationRequestOptionsSearch"
@@ -4758,7 +4748,17 @@ components:
                                 description: TODO
                                 default: false 
                                 example: false 
-                                nullable: true    
+                                nullable: true
+                      client:
+                        allOf:
+                          - $ref: "#/components/schemas/ClientRequest"
+                          - type: object
+                            properties:
+                              location:
+                                type: object
+                                required:
+                                  - lat
+                                  - lon                                    
               response:
                 $ref: "#/components/schemas/LocationLocalizationResults"
               errors:
@@ -6987,8 +6987,6 @@ components:
                       endpoint:
                         type: string
                         example: location/validate
-                      client:
-                        $ref: "#/components/schemas/ClientRequest"
                       query:
                         type: object
                         properties:
@@ -7004,13 +7002,15 @@ components:
                             enum:
                               - basic
                               - extended
-                            example: extended
+                            example: extended                          
                           acceptDisposableEmails:
                             type: boolean
                             example: true
                           acceptFreemails:
                             type: boolean
                             example: true
+                      client:
+                        $ref: "#/components/schemas/ClientRequest"                              
               response:
                 $ref: "#/components/schemas/ValidateEmailResponse"
               errors:
@@ -7341,17 +7341,6 @@ components:
     LocationLocalizationRequest:
       type: object
       properties:
-        client:
-          allOf:
-            - $ref: "#/components/schemas/ClientRequest"
-            - type: object
-              description: Additional information about the user in order to specify the results in response. Used mainly for web forms.
-              properties:
-                location:
-                  type: object
-                  required:
-                    - lat
-                    - lon
         options:
           allOf:
             - $ref: "#/components/schemas/LocationRequestOptions"
@@ -7370,7 +7359,18 @@ components:
                   description: TODO
                   default: false 
                   example: false 
-                  nullable: true         
+                  nullable: true
+        client:
+          allOf:
+            - $ref: "#/components/schemas/ClientRequest"
+            - type: object
+              description: Additional information about the user in order to specify the results in response. Used mainly for web forms.
+              properties:
+                location:
+                  type: object
+                  required:
+                    - lat
+                    - lon                           
       required:
         - client
     LocationRequestOptions:
@@ -7531,8 +7531,6 @@ components:
     ValidateEmailRequest:
       type: object
       properties:
-        client:
-          $ref: "#/components/schemas/ClientRequest"
         query:
           type: object
           properties:
@@ -7563,6 +7561,8 @@ components:
               description: TODO
               default: true
               example: true
+        client:
+          $ref: "#/components/schemas/ClientRequest"              
       required:
         - query
     ValidatePhoneNumberRequest:
@@ -7609,6 +7609,8 @@ components:
               type: boolean
               description: Formatting the phone number required or not.
               example: false
+        client:
+          $ref: "#/components/schemas/ClientRequest"                    
       required:
         - query
     NameValidationRequest:
@@ -7667,8 +7669,10 @@ components:
               description: "Allows to correct the name (resultCorrected). If this is disabled, the corrections are given as a suggestion."
               default: true
               example: false
+        client:
+          $ref: "#/components/schemas/ClientRequest"              
           required:
-            - dataScope
+            - query
       required:
         - query
     ValidateCompanyDataRequest:
@@ -7728,6 +7732,8 @@ components:
               description: Whether or not to return in the API response also entities that have already been terminated.
               default: false
               example: false
+        client:
+          $ref: "#/components/schemas/ClientRequest"              
       required:
         - query
     CompanySearchRequest:
@@ -7813,7 +7819,9 @@ components:
                 - prefer
               example: limit
               default: limit
-              nullable: true              
+              nullable: true  
+        client:
+          $ref: "#/components/schemas/ClientRequest"                  
       required:
         - query
     EmailSearchRequest:
@@ -7859,6 +7867,8 @@ components:
             - registrationNumber
         options:
           $ref: "#/components/schemas/CompanyDataRequestOption"
+        client:
+          $ref: "#/components/schemas/ClientRequest"  
       required:
         - query
     CompanyDataRequestOption:

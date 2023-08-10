@@ -61,7 +61,7 @@ info:
       </tr> 
       <tr>
         <td>name/validate</td>
-        <td>Czech Republic, Slovakia, and Poland</td>
+        <td>Czech Republic, Slovakia</td>
       </tr> 
       <tr>
         <td>phone/validate</td>
@@ -843,7 +843,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -926,7 +925,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -1157,7 +1155,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -4614,15 +4611,15 @@ components:
                         properties:
                           type:
                             type: string
-                            description: TODO
+                            description: Type of search.
                             enum:
                               - street
                               - streetWithNumber
                               - number.full
                               - number.part1
-                              - number.part1.number
+                              - number.part1Number
                               - number.part2
-                              - number.part2.number
+                              - number.part2Number
                               - city
                               - zip
                               - full
@@ -4633,16 +4630,16 @@ components:
                               - type: integer
                           filter:
                             type: array
-                            description: Additional filter in order to specify the search results.
+                            description: Additional filter in order to specify the search results. You can for example set as a filter city of Prague, so the the search engine would look for the addresses only in Prague. Pay attention to the options, which determines how the filter should behave.
                             items:
                               enum:
                                 - street
                                 - streetWithNumber
                                 - number.full
                                 - number.part1
-                                - number.part1.number
+                                - number.part1Number
                                 - number.part2
-                                - number.part2.number
+                                - number.part2Number
                                 - city
                                 - zip
                                 - full
@@ -4742,7 +4739,7 @@ components:
                             properties:
                               acceptPostOfficeAsCity:
                                 type: boolean
-                                description: TODO
+                                description: If true, the inputed address with post office instead of city would be marked as valid. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
                                 default: false
                                 example: true                              
                               radius:
@@ -4755,7 +4752,7 @@ components:
                                 nullable: true
                               acceptNearest:
                                 type: boolean
-                                description: TODO
+                                description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
                                 default: false 
                                 example: false 
                                 nullable: true
@@ -4801,7 +4798,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -4867,7 +4863,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -5776,11 +5771,11 @@ components:
                             type: string
                             nullable: true
                             example: "1151"
-                          number.part1.number:
+                          number.part1Number:
                             type: string
                             nullable: true
                             example: "1151"
-                          number.part1.latter:
+                          number.part1Latter:
                             type: string
                             nullable: true
                             example: null
@@ -5788,11 +5783,11 @@ components:
                             type: string
                             nullable: true
                             example: 55d
-                          number.part2.number:
+                          number.part2Number:
                             type: string
                             nullable: true
                             example: "55"
-                          number.part2.latter:
+                          number.part2Latter:
                             type: string
                             nullable: true
                             example: d
@@ -7228,7 +7223,7 @@ components:
           properties:
             type:
               type: string
-              description: TODO
+              description: Type of search.
               enum:
                 - street
                 - streetWithNumber
@@ -7238,48 +7233,48 @@ components:
                 - city
                 - zip
             value:
-              description: TODO
+              description: Searched value.
               oneOf:
                 - type: string
                 - type: integer
             filter:
               type: object
-              description: Additional filter in order to specify the search results.
+              description: Additional filter in order to specify the search results. You can for example set as a filter city of Prague, so the the search engine would look for the addresses only in Prague. Pay attention to the options, which determines how the filter should behave.
               properties:
                 street:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: Street.
                   example: Jeseniova
                 streetWithNumber:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: Street with number.
                   example: Jeseniova 55
                 number.full:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: Full number.
                   example: 1151/55d
                 number.part1:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: First part of the number.
                   example: "1151"
                 number.part2:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: Second part of the number.
                   example: 55d
                 city:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: City.
                   example: Praha
                 zip:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: ZIP code.
                   example: 130 00
                 country:
                   type: string
@@ -7373,7 +7368,7 @@ components:
                   nullable: true
                 acceptNearest:
                   type: boolean
-                  description: TODO
+                  description: description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
                   default: false 
                   example: false 
                   nullable: true
@@ -7418,7 +7413,7 @@ components:
           example: 10
         acceptPostOfficeAsCity:
           type: boolean
-          description: TODO
+          description: If true, the inputed address with post office instead of city would be marked as valid. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
           default: false
           example: true
         filterMode:
@@ -7499,12 +7494,12 @@ components:
               nullable: true
               description: TODO
               example: "1151"
-            number.part1.number:
+            number.part1Number:
               type: string
               nullable: true
               description: TODO
               example: "1151"
-            number.part1.latter:
+            number.part1Latter:
               type: string
               nullable: true
               description: TODO
@@ -7514,12 +7509,12 @@ components:
               nullable: true
               description: TODO
               example: 55d
-            number.part2.number:
+            number.part2Number:
               type: string
               nullable: true
               description: TODO
               example: "55"
-            number.part2.latter:
+            number.part2Latter:
               type: string
               nullable: true
               description: TODO
@@ -7769,12 +7764,13 @@ components:
           type: object
           properties:
             type:
+              type: string
+              description: Type of search.
               enum:
                 - name
                 - registrationNumber
                 - taxNumber
                 - vatNumber
-              description: Type of search.
               example: name
             value:
               type: string
@@ -7782,7 +7778,7 @@ components:
               example: Avantro
             filter:
               type: object
-              description: Additional filter in order to specify the search results.
+              description: Additional filter in order to specify the search results. You can for example set as a filter country CZ, so the the search engine would look for the companies only in the Czech republic. Pay attention to the options, which determines how the filter should behave.
               properties:
                 name:
                   type: string
@@ -7972,16 +7968,11 @@ components:
     GetCompanyDataResults:
       type: object
       properties:
-        resultsCount:
-          type: integer
-          description: Number of results.
-          example: 1
         results:
           type: array
           items:
             $ref: "#/components/schemas/CompanyResultsResponseResults"
       required:
-        - resultsCount
         - results
 
     CompanyResultsResponseResults:
@@ -8839,7 +8830,7 @@ components:
               example: Avantro s.r.o.
             filter:
               type: object
-              description: Additional filter in order to specify the search results.
+              description: Additional filter in order to specify the search results. You can for example set as a filter country CZ, so the the search engine would look for the companies only in the Czech republic. Pay attention to the options, which determines how the filter should behave.
               properties:
                 registrationNumber:
                   type: number
@@ -9925,10 +9916,6 @@ components:
     LocationGetResults:
       type: object
       properties:
-        resultsCount:
-          type: integer
-          description: Number of results.
-          format: int32
         results:
           type: array
           items:
@@ -9939,7 +9926,6 @@ components:
             required:
               - data
       required:
-        - resultsCount
         - results
 
     LocationValidationResponse:
@@ -11429,9 +11415,9 @@ components:
           example: ENDPOINT
         subtype:
           enum:
-            - NOT_FOUND
+            - NOT_ALLOWED
           description: Subtype of error.
-          example: NOT_FOUND
+          example: NOT_ALLOWED
         severity:
           enum:
             - critical

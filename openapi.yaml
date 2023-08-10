@@ -1522,7 +1522,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/GetCompanyDataResponseRequest"
@@ -1543,7 +1543,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 allOf:
@@ -1628,8 +1628,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -1956,8 +1954,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -2284,8 +2280,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -2496,8 +2490,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -2812,7 +2804,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/CompanySearchResultsRequest"
@@ -3123,7 +3115,7 @@ components:
             properties:
               status:
                 type: integer
-                description: API call status.
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/NameValidationResponseRequest"
@@ -3368,7 +3360,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Status of response.
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/ValidatePhoneNumberResponseRequest"
@@ -3401,8 +3393,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -3588,8 +3578,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -3775,8 +3763,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -3982,8 +3968,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -4169,8 +4153,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -4617,7 +4599,8 @@ components:
             properties:
               status:
                 type: integer
-                format: int32
+                description: Status of API response.
+                example: 200
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -4631,7 +4614,7 @@ components:
                         properties:
                           type:
                             type: string
-                            description: todo
+                            description: TODO
                             enum:
                               - street
                               - streetWithNumber
@@ -4666,7 +4649,7 @@ components:
                             example:
                               - street
                       options:
-                        $ref: "#/components/schemas/LocationRequestOptions"
+                        $ref: "#/components/schemas/LocationRequestOptionsSearch"
                       client:
                         $ref: "#/components/schemas/ClientRequest"
               response:
@@ -4691,7 +4674,7 @@ components:
                   options:
                     dataScope: basic
                     resultsLimit: 10
-                    singleLocationResultDistance: 15
+                    radius: 15
                   client:
                     country: CZ
                     location:
@@ -4742,6 +4725,8 @@ components:
             properties:
               status:
                 type: integer
+                description: Status of API response.
+                example: 200
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -4750,6 +4735,30 @@ components:
                       endpoint:
                         type: string
                         example: location/localize
+                      options:
+                        allOf:
+                          - $ref: "#/components/schemas/LocationRequestOptionsSearch"
+                          - type: object
+                            properties:
+                              acceptPostOfficeAsCity:
+                                type: boolean
+                                description: TODO
+                                default: false
+                                example: true                              
+                              radius:
+                                type: integer
+                                description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
+                                minimum: 1
+                                maximum: 1000
+                                default: 50
+                                example: 50
+                                nullable: true
+                              acceptNearest:
+                                type: boolean
+                                description: TODO
+                                default: false 
+                                example: false 
+                                nullable: true
                       client:
                         allOf:
                           - $ref: "#/components/schemas/ClientRequest"
@@ -4759,20 +4768,11 @@ components:
                                 type: object
                                 required:
                                   - lat
-                                  - lon
-                      options:
-                        allOf:
-                          - $ref: "#/components/schemas/LocationRequestOptionsSearch"
-                          - type: object
-                            properties:
-                              singleLocationResultDistance:
-                                type: number
-                                description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
-                                minimum: 1
-                                maximum: 100
-                                example: 15
+                                  - lon                                    
               response:
                 $ref: "#/components/schemas/LocationLocalizationResults"
+              errors:
+                type: array
             required:
               - status
               - request
@@ -4919,6 +4919,8 @@ components:
             properties:
               status:
                 type: integer
+                description: Status of API response.
+                example: 200
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -4962,10 +4964,10 @@ components:
                           - dataScope
                       client:
                         $ref: "#/components/schemas/ClientRequest"
-              errors:
-                type: array
               response:
                 $ref: "#/components/schemas/LocationGetResults"
+              errors:
+                type: array                
             required:
               - status
               - request
@@ -4993,8 +4995,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
-                    cityFormat: minimal
-                    zipFormat: standard
                     acceptPostOfficeAsCity: false
                   client:
                     country: CZ
@@ -5062,8 +5062,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
-                    cityFormat: minimal
-                    zipFormat: standard
                     acceptPostOfficeAsCity: false
                   client:
                     country: CZ
@@ -5136,8 +5134,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
-                    cityFormat: minimal
-                    zipFormat: standard
                     acceptPostOfficeAsCity: false
                   client:
                     country: CZ
@@ -5270,8 +5266,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
-                    cityFormat: minimal
-                    zipFormat: standard
                     acceptPostOfficeAsCity: false
                   client:
                     country: CZ
@@ -5753,8 +5747,8 @@ components:
             properties:
               status:
                 type: integer
-              errors:
-                type: array
+                description: Status of API response.
+                example: 200
               request:
                 allOf:
                   - $ref: "#/components/schemas/GlobalRequest"
@@ -5825,6 +5819,8 @@ components:
                         $ref: "#/components/schemas/ClientRequest"
               response:
                 $ref: "#/components/schemas/LocationValidationResponse"
+              errors:
+                type: array                
             required:
               - status
               - errors
@@ -5852,8 +5848,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -5944,8 +5938,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -5992,8 +5984,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -6535,8 +6525,6 @@ components:
                     countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
-                    cityFormat: basic
-                    zipFormat: standard
                   client:
                     country: CZ
                     location:
@@ -6641,7 +6629,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 $ref: "#/components/schemas/ValidateCompanyDataResultsRequest"
@@ -7002,7 +6990,7 @@ components:
             properties:
               status:
                 type: integer
-                description: Response status
+                description: Status of API response.
                 example: 200
               request:
                 allOf:
@@ -7012,8 +7000,6 @@ components:
                       endpoint:
                         type: string
                         example: location/validate
-                      client:
-                        $ref: "#/components/schemas/ClientRequest"
                       query:
                         type: object
                         properties:
@@ -7040,6 +7026,8 @@ components:
                             type: boolean
                             description: If true, the freemails will be marked as valid.
                             example: true
+                      client:
+                        $ref: "#/components/schemas/ClientRequest"                              
               response:
                 $ref: "#/components/schemas/ValidateEmailResponse"
               errors:
@@ -7239,6 +7227,8 @@ components:
           type: object
           properties:
             type:
+              type: string
+              description: TODO
               enum:
                 - street
                 - streetWithNumber
@@ -7248,6 +7238,7 @@ components:
                 - city
                 - zip
             value:
+              description: TODO
               oneOf:
                 - type: string
                 - type: integer
@@ -7330,20 +7321,15 @@ components:
           maximum: 20
           default: 10
           example: 10
-        cityFormat:
+        filterMode:
+          type: string
+          description: TODO
           enum:
-            - minimal
-            - basic
-            - extended
-          default: basic
-          example: extended
-        zipFormat:
-          enum:
-            - numeric
-            - standard
-          default: standard
-          example: numeric
-
+            - limit
+            - prefer
+          example: limit
+          default: limit
+          nullable: true
     ClientRequest:
       type: object
       description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
@@ -7372,6 +7358,25 @@ components:
     LocationLocalizationRequest:
       type: object
       properties:
+        options:
+          allOf:
+            - $ref: "#/components/schemas/LocationRequestOptions"
+            - type: object
+              properties:
+                radius:
+                  type: integer
+                  description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
+                  minimum: 1
+                  maximum: 1000
+                  default: 50
+                  example: 50
+                  nullable: true
+                acceptNearest:
+                  type: boolean
+                  description: TODO
+                  default: false 
+                  example: false 
+                  nullable: true
         client:
           allOf:
             - $ref: "#/components/schemas/ClientRequest"
@@ -7382,16 +7387,7 @@ components:
                   type: object
                   required:
                     - lat
-                    - lon
-        options:
-          allOf:
-            - $ref: "#/components/schemas/LocationRequestOptions"
-            - type: object
-              properties:
-                singleLocationResultDistance:
-                  type: number
-                  description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
-                  example: 100
+                    - lon                           
       required:
         - client
 
@@ -7420,24 +7416,20 @@ components:
           maximum: 20
           default: 10
           example: 10
-        cityFormat:
-          enum:
-            - minimal
-            - basic
-            - extended
-          default: basic
-          example: extended
-        zipFormat:
-          enum:
-            - numeric
-            - standard
-          default: standard
-          example: numeric
         acceptPostOfficeAsCity:
           type: boolean
+          description: TODO
           default: false
           example: true
-
+        filterMode:
+          type: string
+          description: TODO
+          enum:
+            - limit
+            - prefer
+          example: limit
+          default: limit
+          nullable: true          
     LocationGetRequest:
       type: object
       properties:
@@ -7562,8 +7554,6 @@ components:
     ValidateEmailRequest:
       type: object
       properties:
-        client:
-          $ref: "#/components/schemas/ClientRequest"
         query:
           type: object
           properties:
@@ -7593,6 +7583,8 @@ components:
               description: If true, the freemails will be marked as valid.
               default: true
               example: true
+        client:
+          $ref: "#/components/schemas/ClientRequest"              
       required:
         - query
 
@@ -7640,6 +7632,8 @@ components:
               type: boolean
               description: Formatting the phone number required or not.
               example: false
+        client:
+          $ref: "#/components/schemas/ClientRequest"                    
       required:
         - query
 
@@ -7699,8 +7693,10 @@ components:
               description: "Allows to correct the name (resultCorrected). If this is disabled, the corrections are given as a suggestion."
               default: true
               example: false
+        client:
+          $ref: "#/components/schemas/ClientRequest"              
           required:
-            - dataScope
+            - query
       required:
         - query
 
@@ -7761,6 +7757,8 @@ components:
               description: Whether or not to return in the API response also entities that have already been terminated.
               default: false
               example: false
+        client:
+          $ref: "#/components/schemas/ClientRequest"              
       required:
         - query
 
@@ -7840,6 +7838,17 @@ components:
               description: Whether or not to return in the output also entities that have already been terminated.
               default: false
               example: false
+            filterMode:
+              type: string
+              description: TODO
+              enum:
+                - limit
+                - prefer
+              example: limit
+              default: limit
+              nullable: true  
+        client:
+          $ref: "#/components/schemas/ClientRequest"                  
       required:
         - query
 
@@ -7886,6 +7895,8 @@ components:
             - registrationNumber
         options:
           $ref: "#/components/schemas/CompanyDataRequestOption"
+        client:
+          $ref: "#/components/schemas/ClientRequest"  
       required:
         - query
 
@@ -7950,6 +7961,11 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            includeTerminatedSubjects:
+              type: boolean
+              description: Whether or not to include entities that have already ended their existence in the output.
+              default: false
+              example: false              
         client:
           $ref: "#/components/schemas/ClientRequest"
 
@@ -8855,14 +8871,41 @@ components:
           description: Query options.
           properties:
             dataScope:
-              type: string
-              description: Required Data Scope.
-              default: basic
-              example: full
               enum:
                 - basic
                 - extended
                 - full
+              description: Data scope of returned data.
+              default: basic
+              example: full
+            countryMode:
+              enum:
+                - limit
+                - prefer
+              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+              default: prefer
+              example: limit
+            resultsLimit:
+              type: integer
+              description: Result limit.
+              minimum: 1
+              maximum: 20
+              default: 10
+              example: 10
+            includeTerminatedSubjects:
+              type: boolean
+              description: Whether or not to return in the output also entities that have already been terminated.
+              default: false
+              example: false
+            filterMode:
+              type: string
+              description: TODO
+              enum:
+                - limit
+                - prefer
+              example: limit
+              default: limit
+              nullable: true              
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:
@@ -8927,6 +8970,16 @@ components:
                 - extended
               default: basic
               example: extended
+            acceptDegrees:
+              type: boolean
+              description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'
+              default: false
+              example: false
+            acceptContext:
+              type: boolean
+              description: 'Allow to insert context directly into name, surname or nameSurname. For example "Jan Novák ml." or "Jan Novák mladší" would be considered as valid/invalid nameSurname'
+              default: false
+              example: false              
             validationDepth:
               enum:
                 - minimal
@@ -9684,6 +9737,12 @@ components:
               type: string
               nullable: true
               description: Type of carrier.
+              example: landline
+              enum:
+                - landline
+                - mobile
+                - voip
+                - null
         format:
           type: object
           description: Standardized international and local format.
@@ -9857,10 +9916,6 @@ components:
           items:
             type: object
             properties:
-              type:
-                type: string
-                description: TODO
-                example: address
               data:
                 $ref: "#/components/schemas/LocationData"
       required:

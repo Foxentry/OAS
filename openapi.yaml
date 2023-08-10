@@ -4617,9 +4617,9 @@ components:
                               - streetWithNumber
                               - number.full
                               - number.part1
-                              - number.part1.number
+                              - number.part1Number
                               - number.part2
-                              - number.part2.number
+                              - number.part2Number
                               - city
                               - zip
                               - full
@@ -4637,9 +4637,9 @@ components:
                                 - streetWithNumber
                                 - number.full
                                 - number.part1
-                                - number.part1.number
+                                - number.part1Number
                                 - number.part2
-                                - number.part2.number
+                                - number.part2Number
                                 - city
                                 - zip
                                 - full
@@ -5771,11 +5771,11 @@ components:
                             type: string
                             nullable: true
                             example: "1151"
-                          number.part1.number:
+                          number.part1Number:
                             type: string
                             nullable: true
                             example: "1151"
-                          number.part1.latter:
+                          number.part1Latter:
                             type: string
                             nullable: true
                             example: null
@@ -5783,11 +5783,11 @@ components:
                             type: string
                             nullable: true
                             example: 55d
-                          number.part2.number:
+                          number.part2Number:
                             type: string
                             nullable: true
                             example: "55"
-                          number.part2.latter:
+                          number.part2Latter:
                             type: string
                             nullable: true
                             example: d
@@ -7494,12 +7494,12 @@ components:
               nullable: true
               description: TODO
               example: "1151"
-            number.part1.number:
+            number.part1Number:
               type: string
               nullable: true
               description: TODO
               example: "1151"
-            number.part1.latter:
+            number.part1Latter:
               type: string
               nullable: true
               description: TODO
@@ -7509,12 +7509,12 @@ components:
               nullable: true
               description: TODO
               example: 55d
-            number.part2.number:
+            number.part2Number:
               type: string
               nullable: true
               description: TODO
               example: "55"
-            number.part2.latter:
+            number.part2Latter:
               type: string
               nullable: true
               description: TODO

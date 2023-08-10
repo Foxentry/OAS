@@ -843,7 +843,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -926,7 +925,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -1157,7 +1155,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -4801,7 +4798,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -4867,7 +4863,6 @@ components:
                       lat: 50.0643
                       lon: 14.4684
                 response:
-                  resultsCount: 1
                   results:
                     - data:
                         country: CZ
@@ -7972,16 +7967,11 @@ components:
     GetCompanyDataResults:
       type: object
       properties:
-        resultsCount:
-          type: integer
-          description: Number of results.
-          example: 1
         results:
           type: array
           items:
             $ref: "#/components/schemas/CompanyResultsResponseResults"
       required:
-        - resultsCount
         - results
 
     CompanyResultsResponseResults:
@@ -9925,10 +9915,6 @@ components:
     LocationGetResults:
       type: object
       properties:
-        resultsCount:
-          type: integer
-          description: Number of results.
-          format: int32
         results:
           type: array
           items:
@@ -9939,7 +9925,6 @@ components:
             required:
               - data
       required:
-        - resultsCount
         - results
 
     LocationValidationResponse:

@@ -7253,6 +7253,11 @@ components:
     LocationSearchRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7388,6 +7393,11 @@ components:
     LocationLocalizationRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         options:
           allOf:
             - $ref: "#/components/schemas/LocationRequestOptions"
@@ -7458,6 +7468,11 @@ components:
     LocationGetRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7501,6 +7516,11 @@ components:
     LocationValidationRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7587,6 +7607,11 @@ components:
     ValidateEmailRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7624,6 +7649,11 @@ components:
     ValidatePhoneNumberRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7673,6 +7703,11 @@ components:
     NameValidationRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7736,6 +7771,11 @@ components:
     ValidateCompanyDataRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7798,6 +7838,11 @@ components:
     CompanySearchRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7889,6 +7934,11 @@ components:
     EmailSearchRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7913,6 +7963,11 @@ components:
     GetCompanyDataRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:

@@ -1553,7 +1553,7 @@ components:
                       query:
                         type: object
                         properties:
-                          email:
+                          value:
                             type: string
                             example: info@foxentry.com
                         required:
@@ -1568,6 +1568,21 @@ components:
                             minimum: 1
                             maximum: 5
                             example: 5
+                          filterAcceptFormat:
+                            type: boolean
+                            description: TODO
+                            example: true 
+                            default: true
+                          filterAcceptAlternatives:
+                            type: boolean
+                            description: TODO
+                            example: true 
+                            default: true 
+                          filterExactMatch:
+                            type: boolean
+                            description: TODO
+                            example: true 
+                            default: true                             
                       client:
                         $ref: "#/components/schemas/ClientRequest"
               response:
@@ -4760,29 +4775,51 @@ components:
                         type: string
                         example: location/localize
                       options:
-                        allOf:
-                          - $ref: "#/components/schemas/LocationRequestOptionsSearch"
-                          - type: object
-                            properties:
-                              acceptPostOfficeAsCity:
-                                type: boolean
-                                description: If true, the inputed address with post office instead of city would be marked as valid. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
-                                default: false
-                                example: true
-                              radius:
-                                type: integer
-                                description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
-                                minimum: 1
-                                maximum: 1000
-                                default: 50
-                                example: 50
-                                nullable: true
-                              acceptNearest:
-                                type: boolean
-                                description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
-                                default: false
-                                example: false
-                                nullable: true
+                        properties:
+                          dataScope:
+                            description: Data scope of returned data.
+                            enum:
+                              - basic
+                              - full
+                            default: basic
+                            example: full
+                          countryMode:
+                            description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+                            enum:
+                              - prefer
+                              - limit
+                            default: prefer
+                            example: prefer
+                          resultsLimit:
+                            description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
+                            type: integer
+                            minimum: 1
+                            maximum: 20
+                            default: 10
+                            example: 10
+                          filterMode:
+                            type: string
+                            description: TODO
+                            enum:
+                              - limit
+                              - prefer
+                            example: limit
+                            default: limit
+                            nullable: true                          
+                          radius:
+                            type: integer
+                            description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
+                            minimum: 1
+                            maximum: 1000
+                            default: 50
+                            example: 50
+                            nullable: true
+                          acceptNearest:
+                            type: boolean
+                            description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
+                            default: false
+                            example: false
+                            nullable: true
                       client:
                         allOf:
                           - $ref: "#/components/schemas/ClientRequest"
@@ -7365,6 +7402,21 @@ components:
           example: limit
           default: limit
           nullable: true
+        filterAcceptFormat:
+          type: boolean
+          description: TODO
+          example: true 
+          default: true
+        filterAcceptAlternatives:
+          type: boolean
+          description: TODO
+          example: true 
+          default: true 
+        filterExactMatch:
+          type: boolean
+          description: TODO
+          example: true 
+          default: true           
     ClientRequest:
       type: object
       description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
@@ -7926,6 +7978,21 @@ components:
               example: limit
               default: limit
               nullable: true
+            filterAcceptFormat:
+              type: boolean
+              description: TODO
+              example: true 
+              default: true
+            filterAcceptAlternatives:
+              type: boolean
+              description: TODO
+              example: true 
+              default: true 
+            filterExactMatch:
+              type: boolean
+              description: TODO
+              example: true 
+              default: true 
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:
@@ -7942,7 +8009,7 @@ components:
         query:
           type: object
           properties:
-            email:
+            value:
               type: string
               example: info@foxentry.com
           required:
@@ -7957,6 +8024,21 @@ components:
               minimum: 1
               maximum: 5
               example: 5
+            filterAcceptFormat:
+              type: boolean
+              description: TODO
+              example: true 
+              default: true
+            filterAcceptAlternatives:
+              type: boolean
+              description: TODO
+              example: true 
+              default: true 
+            filterExactMatch:
+              type: boolean
+              description: TODO
+              example: true 
+              default: true               
         client:
           $ref: "#/components/schemas/ClientRequest"
 
@@ -8990,6 +9072,21 @@ components:
               example: limit
               default: limit
               nullable: true
+            filterAcceptFormat:
+              type: boolean
+              description: TODO
+              example: true 
+              default: true
+            filterAcceptAlternatives:
+              type: boolean
+              description: TODO
+              example: true 
+              default: true 
+            filterExactMatch:
+              type: boolean
+              description: TODO
+              example: true 
+              default: true               
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:

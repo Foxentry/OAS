@@ -5836,7 +5836,15 @@ components:
                             description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                             example: CZ
                       options:
-                        $ref: "#/components/schemas/LocationRequestOptions"
+                        allOf:
+                          - $ref: "#/components/schemas/LocationRequestOptions"
+                          - type: object
+                            properties:
+                              acceptPostOfficeAsCity:
+                                type: boolean
+                                description: TODO
+                                default: false
+                                example: true
                       client:
                         $ref: "#/components/schemas/ClientRequest"
               response:
@@ -7438,11 +7446,6 @@ components:
           maximum: 20
           default: 10
           example: 10
-        acceptPostOfficeAsCity:
-          type: boolean
-          description: If true, the inputed address with post office instead of city would be marked as valid. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
-          default: false
-          example: true
         filterMode:
           type: string
           description: TODO
@@ -7567,7 +7570,15 @@ components:
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
         options:
-          $ref: "#/components/schemas/LocationRequestOptions"
+          allOf:
+            - $ref: "#/components/schemas/LocationRequestOptions"
+            - type: object
+              properties:
+                acceptPostOfficeAsCity:
+                  type: boolean
+                  description: TODO
+                  default: false
+                  example: true
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:

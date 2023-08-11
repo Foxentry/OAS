@@ -1553,7 +1553,7 @@ components:
                       query:
                         type: object
                         properties:
-                          email:
+                          value:
                             type: string
                             example: info@foxentry.com
                         required:
@@ -1568,6 +1568,21 @@ components:
                             minimum: 1
                             maximum: 5
                             example: 5
+                          filterAcceptFormat:
+                            type: boolean
+                            description: If true, values with different format would be accepted. (Uppercase and diacritics).
+                            example: true 
+                            default: true
+                          filterAcceptAlternatives:
+                            type: boolean
+                            description: If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).
+                            example: true 
+                            default: true 
+                          filterExactMatch:
+                            type: boolean
+                            description: If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.
+                            example: true 
+                            default: true                             
                       client:
                         $ref: "#/components/schemas/ClientRequest"
               response:
@@ -4635,37 +4650,37 @@ components:
                               street:
                                 type: string
                                 nullable: true
-                                description: TODO
+                                description: Street.
                                 example: Jeseniova
                               streetWithNumber:
                                 type: string
                                 nullable: true
-                                description: TODO
+                                description: Street with number.
                                 example: Jeseniova 55
                               number.full:
                                 type: string
                                 nullable: true
-                                description: TODO
+                                description: Full number.
                                 example: 1151/55d
                               number.part1:
                                 type: string
                                 nullable: true
-                                description: TODO
+                                description: First part of the number
                                 example: "1151"
                               number.part2:
                                 type: string
                                 nullable: true
-                                description: TODO
+                                description: Second part of the number.
                                 example: 55d
                               city:
                                 type: string
                                 nullable: true
-                                description: TODO
+                                description: City.
                                 example: Praha
                               zip:
                                 type: string
                                 nullable: true
-                                description: TODO
+                                description: ZIP code.
                                 example: 130 00
                               country:
                                 type: string
@@ -4760,29 +4775,51 @@ components:
                         type: string
                         example: location/localize
                       options:
-                        allOf:
-                          - $ref: "#/components/schemas/LocationRequestOptionsSearch"
-                          - type: object
-                            properties:
-                              acceptPostOfficeAsCity:
-                                type: boolean
-                                description: If true, the inputed address with post office instead of city would be marked as valid. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
-                                default: false
-                                example: true
-                              radius:
-                                type: integer
-                                description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
-                                minimum: 1
-                                maximum: 1000
-                                default: 50
-                                example: 50
-                                nullable: true
-                              acceptNearest:
-                                type: boolean
-                                description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
-                                default: false
-                                example: false
-                                nullable: true
+                        properties:
+                          dataScope:
+                            description: Data scope of returned data.
+                            enum:
+                              - basic
+                              - full
+                            default: basic
+                            example: full
+                          countryMode:
+                            description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+                            enum:
+                              - prefer
+                              - limit
+                            default: prefer
+                            example: prefer
+                          resultsLimit:
+                            description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
+                            type: integer
+                            minimum: 1
+                            maximum: 20
+                            default: 10
+                            example: 10
+                          filterMode:
+                            type: string
+                            description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
+                            enum:
+                              - limit
+                              - prefer
+                            example: limit
+                            default: limit
+                            nullable: true                          
+                          radius:
+                            type: integer
+                            description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
+                            minimum: 1
+                            maximum: 1000
+                            default: 50
+                            example: 50
+                            nullable: true
+                          acceptNearest:
+                            type: boolean
+                            description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
+                            default: false
+                            example: false
+                            nullable: true
                       client:
                         allOf:
                           - $ref: "#/components/schemas/ClientRequest"
@@ -5842,7 +5879,7 @@ components:
                             properties:
                               acceptPostOfficeAsCity:
                                 type: boolean
-                                description: TODO
+                                description: If true, the postOffice name is accepted as city. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
                                 default: false
                                 example: true
                       client:
@@ -7358,13 +7395,28 @@ components:
           example: 10
         filterMode:
           type: string
-          description: TODO
+          description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
           enum:
             - limit
             - prefer
           example: limit
           default: limit
           nullable: true
+        filterAcceptFormat:
+          type: boolean
+          description: If true, values with different format would be accepted. (Uppercase and diacritics).
+          example: true 
+          default: true
+        filterAcceptAlternatives:
+          type: boolean
+          description: If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).
+          example: true 
+          default: true 
+        filterExactMatch:
+          type: boolean
+          description: If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.
+          example: true 
+          default: true           
     ClientRequest:
       type: object
       description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
@@ -7458,7 +7510,7 @@ components:
           example: 10
         filterMode:
           type: string
-          description: TODO
+          description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
           enum:
             - limit
             - prefer
@@ -7527,62 +7579,62 @@ components:
             street:
               type: string
               nullable: true
-              description: TODO
+              description: Street.
               example: Jeseniova
             streetWithNumber:
               type: string
               nullable: true
-              description: TODO
+              description: Street with number.
               example: Jeseniova 55
             number.full:
               type: string
               nullable: true
-              description: TODO
+              description: Full house number.
               example: 1151/55d
             number.part1:
               type: string
               nullable: true
-              description: TODO
+              description: First section of house number.
               example: "1151"
             number.part1Number:
               type: string
               nullable: true
-              description: TODO
+              description: Numerical part of the first section.
               example: "1151"
             number.part1Letter:
               type: string
               nullable: true
-              description: TODO
+              description: Textual part of the first section.
               example: null
             number.part2:
               type: string
               nullable: true
-              description: TODO
+              description: Second section of house number.
               example: 55d
             number.part2Number:
               type: string
               nullable: true
-              description: TODO
+              description: Numerical part of the second section.
               example: "55"
             number.part2Letter:
               type: string
               nullable: true
-              description: TODO
+              description: Textual part of the second section.
               example: d
             city:
               type: string
               nullable: true
-              description: TODO
+              description: City.
               example: Praha
             zip:
               type: string
               nullable: true
-              description: TODO
+              description: ZIP code.
               example: 130 00
             full:
               type: string
               nullable: true
-              description: TODO
+              description: Full address.
               example: "Jeseniova 2770/56d, 130 00 Praha"
             country:
               type: string
@@ -7596,7 +7648,7 @@ components:
               properties:
                 acceptPostOfficeAsCity:
                   type: boolean
-                  description: TODO
+                  description: If true, the postOffice name is accepted as city. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
                   default: false
                   example: true
         client:
@@ -7693,7 +7745,7 @@ components:
               example: "+420"
             formatNumber:
               type: boolean
-              description: "Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid."
+              description: Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.
               example: false
         client:
           $ref: "#/components/schemas/ClientRequest"
@@ -7919,13 +7971,28 @@ components:
               example: false
             filterMode:
               type: string
-              description: TODO
+              description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
               enum:
                 - limit
                 - prefer
               example: limit
               default: limit
               nullable: true
+            filterAcceptFormat:
+              type: boolean
+              description: If true, values with different format would be accepted. (Uppercase and diacritics).
+              example: true 
+              default: true
+            filterAcceptAlternatives:
+              type: boolean
+              description: If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).
+              example: true 
+              default: true 
+            filterExactMatch:
+              type: boolean
+              description: If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.
+              example: true 
+              default: true 
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:
@@ -7942,7 +8009,7 @@ components:
         query:
           type: object
           properties:
-            email:
+            value:
               type: string
               example: info@foxentry.com
           required:
@@ -7957,6 +8024,21 @@ components:
               minimum: 1
               maximum: 5
               example: 5
+            filterAcceptFormat:
+              type: boolean
+              description: If true, values with different format would be accepted. (Uppercase and diacritics).
+              example: true 
+              default: true
+            filterAcceptAlternatives:
+              type: boolean
+              description: If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).
+              example: true 
+              default: true 
+            filterExactMatch:
+              type: boolean
+              description: If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.
+              example: true 
+              default: true               
         client:
           $ref: "#/components/schemas/ClientRequest"
 
@@ -8319,7 +8401,6 @@ components:
               type: array
               items:
                 type: object
-                description: TODO
                 properties:
                   name:
                     type: string
@@ -8428,7 +8509,6 @@ components:
               description: Trade licence information.
               items:
                 type: object
-                description: TODO
                 properties:
                   type:
                     type: string
@@ -8485,7 +8565,7 @@ components:
                     type: array
                     items:
                       type: string
-                      description: TODO
+                      description: Subject of activity.
                       example: Broušení technického a šperkového kamene
             vat:
               type: object
@@ -8527,7 +8607,6 @@ components:
                   description: History of the VAT payer.
                   items:
                     type: object
-                    description: TODO
                     nullable: true
                     properties:
                       vatNumber:
@@ -8767,7 +8846,6 @@ components:
           description: Custom coordinate system. May vary for every country.
           items:
             type: object
-            description: TODO
             properties:
               type:
                 type: string
@@ -8983,13 +9061,28 @@ components:
               example: false
             filterMode:
               type: string
-              description: TODO
+              description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
               enum:
                 - limit
                 - prefer
               example: limit
               default: limit
               nullable: true
+            filterAcceptFormat:
+              type: boolean
+              description: If true, values with different format will be accepted. (Uppercase and diacritics)
+              example: true 
+              default: true
+            filterAcceptAlternatives:
+              type: boolean
+              description: If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).
+              example: true 
+              default: true 
+            filterExactMatch:
+              type: boolean
+              description: If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.
+              example: true 
+              default: true               
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:
@@ -9127,7 +9220,6 @@ components:
               $ref: "#/components/schemas/NameValidationResultsDetails"
             errors:
               type: array
-              description: TODO
               items:
                 oneOf:
                   - $ref: "#/components/schemas/ErrorSyntaxGlobal"
@@ -10072,7 +10164,6 @@ components:
               $ref: "#/components/schemas/LocationData"
             errors:
               type: array
-              description: TODO
               items:
                 oneOf:
                   - $ref: "#/components/schemas/ErrorSyntaxGlobal"
@@ -10098,7 +10189,6 @@ components:
           items:
             type: object
             nullable: true
-            description: TODO
             properties:
               isValid:
                 type: boolean
@@ -10119,7 +10209,6 @@ components:
                     - $ref: "#/components/schemas/FixValueLocation"
               errors:
                 type: array
-                description: TODO
                 items:
                   oneOf:
                     - $ref: "#/components/schemas/ErrorSyntaxGlobal"
@@ -10532,7 +10621,6 @@ components:
           items:
             type: object
             nullable: true
-            description: TODO
             properties:
               isValid:
                 type: boolean
@@ -10728,7 +10816,6 @@ components:
           example: AT_SIGN_DUPLICITY
         data:
           type: object
-          description: TODO
           properties:
             typeFrom:
               type: string

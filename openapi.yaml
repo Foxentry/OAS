@@ -4784,7 +4784,7 @@ components:
                             default: basic
                             example: full
                           countryMode:
-                            description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+                            description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
                             enum:
                               - prefer
                               - limit
@@ -7380,7 +7380,7 @@ components:
           default: basic
           example: full
         countryMode:
-          description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+          description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
           enum:
             - prefer
             - limit
@@ -7495,7 +7495,7 @@ components:
           default: basic
           example: full
         countryMode:
-          description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+          description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
           enum:
             - prefer
             - limit
@@ -7868,7 +7868,7 @@ components:
                 - limit
                 - prefer
                 - null
-              description: "<b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter."
+              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             resultsLimit:
@@ -7954,7 +7954,7 @@ components:
               enum:
                 - limit
                 - prefer
-              description: "<b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter."
+              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             resultsLimit:
@@ -9044,7 +9044,7 @@ components:
               enum:
                 - limit
                 - prefer
-              description: <b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter.
+              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             resultsLimit:
@@ -10358,7 +10358,7 @@ components:
                 - limit
                 - prefer
                 - null
-              description: "<b>Prefer</b> = prefer results matching the country parameter (used in query.country or query.filter), <b>limit</b> = limit to results matching the country parameter."
+              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
               default: prefer
               example: limit
             dataScope:

@@ -5836,7 +5836,15 @@ components:
                             description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
                             example: CZ
                       options:
-                        $ref: "#/components/schemas/LocationRequestOptions"
+                        allOf:
+                          - $ref: "#/components/schemas/LocationRequestOptions"
+                          - type: object
+                            properties:
+                              acceptPostOfficeAsCity:
+                                type: boolean
+                                description: TODO
+                                default: false
+                                example: true
                       client:
                         $ref: "#/components/schemas/ClientRequest"
               response:
@@ -7245,6 +7253,11 @@ components:
     LocationSearchRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7380,6 +7393,11 @@ components:
     LocationLocalizationRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         options:
           allOf:
             - $ref: "#/components/schemas/LocationRequestOptions"
@@ -7438,11 +7456,6 @@ components:
           maximum: 20
           default: 10
           example: 10
-        acceptPostOfficeAsCity:
-          type: boolean
-          description: If true, the inputed address with post office instead of city would be marked as valid. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
-          default: false
-          example: true
         filterMode:
           type: string
           description: TODO
@@ -7455,6 +7468,11 @@ components:
     LocationGetRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7498,6 +7516,11 @@ components:
     LocationValidationRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7567,7 +7590,15 @@ components:
               description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
               example: CZ
         options:
-          $ref: "#/components/schemas/LocationRequestOptions"
+          allOf:
+            - $ref: "#/components/schemas/LocationRequestOptions"
+            - type: object
+              properties:
+                acceptPostOfficeAsCity:
+                  type: boolean
+                  description: TODO
+                  default: false
+                  example: true
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:
@@ -7576,6 +7607,11 @@ components:
     ValidateEmailRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7613,6 +7649,11 @@ components:
     ValidatePhoneNumberRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7652,7 +7693,7 @@ components:
               example: "+420"
             formatNumber:
               type: boolean
-              description: Formatting the phone number required or not.
+              description: "Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid."
               example: false
         client:
           $ref: "#/components/schemas/ClientRequest"
@@ -7662,6 +7703,11 @@ components:
     NameValidationRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7725,6 +7771,11 @@ components:
     ValidateCompanyDataRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7787,6 +7838,11 @@ components:
     CompanySearchRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7878,6 +7934,11 @@ components:
     EmailSearchRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:
@@ -7902,6 +7963,11 @@ components:
     GetCompanyDataRequest:
       type: object
       properties:
+        customId:
+          type: string
+          nullable: true
+          description: Custom ID assigned by you if you need so.
+          example: customer567914
         query:
           type: object
           properties:

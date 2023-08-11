@@ -61,7 +61,7 @@ info:
       </tr> 
       <tr>
         <td>name/validate</td>
-        <td>Czech Republic, Slovakia, and Poland</td>
+        <td>Czech Republic, Slovakia</td>
       </tr> 
       <tr>
         <td>phone/validate</td>
@@ -4611,7 +4611,7 @@ components:
                         properties:
                           type:
                             type: string
-                            description: TODO
+                            description: Type of search.
                             enum:
                               - street
                               - streetWithNumber
@@ -4630,7 +4630,7 @@ components:
                               - type: integer
                           filter:
                             type: object
-                            description: Additional filter in order to specify the search results.
+                            description: Additional filter in order to specify the search results. You can for example set as a filter city of Prague, so the the search engine would look for the addresses only in Prague. Pay attention to the options, which determines how the filter should behave.
                             properties:
                               street:
                                 type: string
@@ -4766,9 +4766,9 @@ components:
                             properties:
                               acceptPostOfficeAsCity:
                                 type: boolean
-                                description: TODO
+                                description: If true, the inputed address with post office instead of city would be marked as valid. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
                                 default: false
-                                example: true                              
+                                example: true
                               radius:
                                 type: integer
                                 description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
@@ -4779,9 +4779,9 @@ components:
                                 nullable: true
                               acceptNearest:
                                 type: boolean
-                                description: TODO
-                                default: false 
-                                example: false 
+                                description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
+                                default: false
+                                example: false
                                 nullable: true
                       client:
                         allOf:
@@ -4792,7 +4792,7 @@ components:
                                 type: object
                                 required:
                                   - lat
-                                  - lon                                    
+                                  - lon
               response:
                 $ref: "#/components/schemas/LocationLocalizationResults"
               errors:
@@ -4989,7 +4989,7 @@ components:
               response:
                 $ref: "#/components/schemas/LocationGetResults"
               errors:
-                type: array                
+                type: array
             required:
               - status
               - request
@@ -5842,7 +5842,7 @@ components:
               response:
                 $ref: "#/components/schemas/LocationValidationResponse"
               errors:
-                type: array                
+                type: array
             required:
               - status
               - errors
@@ -7049,7 +7049,7 @@ components:
                             description: If true, the freemails will be marked as valid.
                             example: true
                       client:
-                        $ref: "#/components/schemas/ClientRequest"                              
+                        $ref: "#/components/schemas/ClientRequest"
               response:
                 $ref: "#/components/schemas/ValidateEmailResponse"
               errors:
@@ -7250,7 +7250,7 @@ components:
           properties:
             type:
               type: string
-              description: TODO
+              description: Type of search.
               enum:
                 - street
                 - streetWithNumber
@@ -7260,48 +7260,48 @@ components:
                 - city
                 - zip
             value:
-              description: TODO
+              description: Searched value.
               oneOf:
                 - type: string
                 - type: integer
             filter:
               type: object
-              description: Additional filter in order to specify the search results.
+              description: Additional filter in order to specify the search results. You can for example set as a filter city of Prague, so the the search engine would look for the addresses only in Prague. Pay attention to the options, which determines how the filter should behave.
               properties:
                 street:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: Street.
                   example: Jeseniova
                 streetWithNumber:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: Street with number.
                   example: Jeseniova 55
                 number.full:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: Full number.
                   example: 1151/55d
                 number.part1:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: First part of the number.
                   example: "1151"
                 number.part2:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: Second part of the number.
                   example: 55d
                 city:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: City.
                   example: Praha
                 zip:
                   type: string
                   nullable: true
-                  description: TODO
+                  description: ZIP code.
                   example: 130 00
                 country:
                   type: string
@@ -7395,9 +7395,9 @@ components:
                   nullable: true
                 acceptNearest:
                   type: boolean
-                  description: TODO
-                  default: false 
-                  example: false 
+                  description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
+                  default: false
+                  example: false
                   nullable: true
         client:
           allOf:
@@ -7409,7 +7409,7 @@ components:
                   type: object
                   required:
                     - lat
-                    - lon                           
+                    - lon
       required:
         - client
 
@@ -7440,7 +7440,7 @@ components:
           example: 10
         acceptPostOfficeAsCity:
           type: boolean
-          description: TODO
+          description: If true, the inputed address with post office instead of city would be marked as valid. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
           default: false
           example: true
         filterMode:
@@ -7451,7 +7451,7 @@ components:
             - prefer
           example: limit
           default: limit
-          nullable: true          
+          nullable: true
     LocationGetRequest:
       type: object
       properties:
@@ -7606,7 +7606,7 @@ components:
               default: true
               example: true
         client:
-          $ref: "#/components/schemas/ClientRequest"              
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7655,7 +7655,7 @@ components:
               description: Formatting the phone number required or not.
               example: false
         client:
-          $ref: "#/components/schemas/ClientRequest"                    
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7716,7 +7716,7 @@ components:
               default: true
               example: false
         client:
-          $ref: "#/components/schemas/ClientRequest"              
+          $ref: "#/components/schemas/ClientRequest"
           required:
             - query
       required:
@@ -7780,7 +7780,7 @@ components:
               default: false
               example: false
         client:
-          $ref: "#/components/schemas/ClientRequest"              
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7791,12 +7791,13 @@ components:
           type: object
           properties:
             type:
+              type: string
+              description: Type of search.
               enum:
                 - name
                 - registrationNumber
                 - taxNumber
                 - vatNumber
-              description: Type of search.
               example: name
             value:
               type: string
@@ -7804,7 +7805,7 @@ components:
               example: Avantro
             filter:
               type: object
-              description: Additional filter in order to specify the search results.
+              description: Additional filter in order to specify the search results. You can for example set as a filter country CZ, so the the search engine would look for the companies only in the Czech republic. Pay attention to the options, which determines how the filter should behave.
               properties:
                 name:
                   type: string
@@ -7868,9 +7869,9 @@ components:
                 - prefer
               example: limit
               default: limit
-              nullable: true  
+              nullable: true
         client:
-          $ref: "#/components/schemas/ClientRequest"                  
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7918,7 +7919,7 @@ components:
         options:
           $ref: "#/components/schemas/CompanyDataRequestOption"
         client:
-          $ref: "#/components/schemas/ClientRequest"  
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7987,7 +7988,7 @@ components:
               type: boolean
               description: Whether or not to include entities that have already ended their existence in the output.
               default: false
-              example: false              
+              example: false
         client:
           $ref: "#/components/schemas/ClientRequest"
 
@@ -8856,7 +8857,7 @@ components:
               example: Avantro s.r.o.
             filter:
               type: object
-              description: Additional filter in order to specify the search results.
+              description: Additional filter in order to specify the search results. You can for example set as a filter country CZ, so the the search engine would look for the companies only in the Czech republic. Pay attention to the options, which determines how the filter should behave.
               properties:
                 registrationNumber:
                   type: number
@@ -8922,7 +8923,7 @@ components:
                 - prefer
               example: limit
               default: limit
-              nullable: true              
+              nullable: true
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:
@@ -8996,7 +8997,7 @@ components:
               type: boolean
               description: 'Allow to insert context directly into name, surname or nameSurname. For example "Jan Novák ml." or "Jan Novák mladší" would be considered as valid/invalid nameSurname'
               default: false
-              example: false              
+              example: false
             validationDepth:
               enum:
                 - minimal

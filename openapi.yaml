@@ -4741,7 +4741,7 @@ components:
                                 type: boolean
                                 description: If true, the inputed address with post office instead of city would be marked as valid. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
                                 default: false
-                                example: true                              
+                                example: true
                               radius:
                                 type: integer
                                 description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
@@ -4753,8 +4753,8 @@ components:
                               acceptNearest:
                                 type: boolean
                                 description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
-                                default: false 
-                                example: false 
+                                default: false
+                                example: false
                                 nullable: true
                       client:
                         allOf:
@@ -4765,7 +4765,7 @@ components:
                                 type: object
                                 required:
                                   - lat
-                                  - lon                                    
+                                  - lon
               response:
                 $ref: "#/components/schemas/LocationLocalizationResults"
               errors:
@@ -4962,7 +4962,7 @@ components:
               response:
                 $ref: "#/components/schemas/LocationGetResults"
               errors:
-                type: array                
+                type: array
             required:
               - status
               - request
@@ -5815,7 +5815,7 @@ components:
               response:
                 $ref: "#/components/schemas/LocationValidationResponse"
               errors:
-                type: array                
+                type: array
             required:
               - status
               - errors
@@ -7022,7 +7022,7 @@ components:
                             description: If true, the freemails will be marked as valid.
                             example: true
                       client:
-                        $ref: "#/components/schemas/ClientRequest"                              
+                        $ref: "#/components/schemas/ClientRequest"
               response:
                 $ref: "#/components/schemas/ValidateEmailResponse"
               errors:
@@ -7368,9 +7368,9 @@ components:
                   nullable: true
                 acceptNearest:
                   type: boolean
-                  description: description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
-                  default: false 
-                  example: false 
+                  description: If the searched area does not contain any addreses, Foxentry can return list of the Nearest locations to the searched area (acceptNearest = true).
+                  default: false
+                  example: false
                   nullable: true
         client:
           allOf:
@@ -7382,7 +7382,7 @@ components:
                   type: object
                   required:
                     - lat
-                    - lon                           
+                    - lon
       required:
         - client
 
@@ -7424,7 +7424,7 @@ components:
             - prefer
           example: limit
           default: limit
-          nullable: true          
+          nullable: true
     LocationGetRequest:
       type: object
       properties:
@@ -7579,7 +7579,7 @@ components:
               default: true
               example: true
         client:
-          $ref: "#/components/schemas/ClientRequest"              
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7628,7 +7628,7 @@ components:
               description: Formatting the phone number required or not.
               example: false
         client:
-          $ref: "#/components/schemas/ClientRequest"                    
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7689,7 +7689,7 @@ components:
               default: true
               example: false
         client:
-          $ref: "#/components/schemas/ClientRequest"              
+          $ref: "#/components/schemas/ClientRequest"
           required:
             - query
       required:
@@ -7753,7 +7753,7 @@ components:
               default: false
               example: false
         client:
-          $ref: "#/components/schemas/ClientRequest"              
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7842,9 +7842,9 @@ components:
                 - prefer
               example: limit
               default: limit
-              nullable: true  
+              nullable: true
         client:
-          $ref: "#/components/schemas/ClientRequest"                  
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7892,7 +7892,7 @@ components:
         options:
           $ref: "#/components/schemas/CompanyDataRequestOption"
         client:
-          $ref: "#/components/schemas/ClientRequest"  
+          $ref: "#/components/schemas/ClientRequest"
       required:
         - query
 
@@ -7961,7 +7961,7 @@ components:
               type: boolean
               description: Whether or not to include entities that have already ended their existence in the output.
               default: false
-              example: false              
+              example: false
         client:
           $ref: "#/components/schemas/ClientRequest"
 
@@ -8896,7 +8896,7 @@ components:
                 - prefer
               example: limit
               default: limit
-              nullable: true              
+              nullable: true
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:
@@ -8970,7 +8970,7 @@ components:
               type: boolean
               description: 'Allow to insert context directly into name, surname or nameSurname. For example "Jan Novák ml." or "Jan Novák mladší" would be considered as valid/invalid nameSurname'
               default: false
-              example: false              
+              example: false
             validationDepth:
               enum:
                 - minimal

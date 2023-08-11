@@ -4629,22 +4629,49 @@ components:
                               - type: string
                               - type: integer
                           filter:
-                            type: array
+                            type: object
                             description: Additional filter in order to specify the search results. You can for example set as a filter city of Prague, so the the search engine would look for the addresses only in Prague. Pay attention to the options, which determines how the filter should behave.
-                            items:
-                              enum:
-                                - street
-                                - streetWithNumber
-                                - number.full
-                                - number.part1
-                                - number.part1Number
-                                - number.part2
-                                - number.part2Number
-                                - city
-                                - zip
-                                - full
-                            example:
-                              - street
+                            properties:
+                              street:
+                                type: string
+                                nullable: true
+                                description: TODO
+                                example: Jeseniova
+                              streetWithNumber:
+                                type: string
+                                nullable: true
+                                description: TODO
+                                example: Jeseniova 55
+                              number.full:
+                                type: string
+                                nullable: true
+                                description: TODO
+                                example: 1151/55d
+                              number.part1:
+                                type: string
+                                nullable: true
+                                description: TODO
+                                example: "1151"
+                              number.part2:
+                                type: string
+                                nullable: true
+                                description: TODO
+                                example: 55d
+                              city:
+                                type: string
+                                nullable: true
+                                description: TODO
+                                example: Praha
+                              zip:
+                                type: string
+                                nullable: true
+                                description: TODO
+                                example: 130 00
+                              country:
+                                type: string
+                                nullable: true
+                                description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                                example: CZ
                       options:
                         $ref: "#/components/schemas/LocationRequestOptionsSearch"
                       client:
@@ -5775,7 +5802,7 @@ components:
                             type: string
                             nullable: true
                             example: "1151"
-                          number.part1Latter:
+                          number.part1Letter:
                             type: string
                             nullable: true
                             example: null
@@ -5787,7 +5814,7 @@ components:
                             type: string
                             nullable: true
                             example: "55"
-                          number.part2Latter:
+                          number.part2Letter:
                             type: string
                             nullable: true
                             example: d
@@ -7499,7 +7526,7 @@ components:
               nullable: true
               description: TODO
               example: "1151"
-            number.part1Latter:
+            number.part1Letter:
               type: string
               nullable: true
               description: TODO
@@ -7514,7 +7541,7 @@ components:
               nullable: true
               description: TODO
               example: "55"
-            number.part2Latter:
+            number.part2Letter:
               type: string
               nullable: true
               description: TODO

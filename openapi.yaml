@@ -8455,8 +8455,9 @@ components:
                         birthDate:
                           type: string
                           nullable: true
+                          format: date
                           description: Member date of birth.
-                          example: TODO
+                          example: "1988-08-01"
                         registrationNumber:
                           type: number
                           nullable: true

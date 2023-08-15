@@ -7090,6 +7090,7 @@ components:
                               - basic
                               - extended
                             example: extended
+                            default: extended
                             description: Type of validation. <b>Basic</b> = only the format of e-mail is checked and only standard corrections are included. <b>Extended</b> = in depth check of deliverability. Additional information is returned such as temporary mail check or freemail check. More complicated corrections are included.
                           acceptDisposableEmails:
                             type: boolean
@@ -7705,7 +7706,7 @@ components:
                 - basic
                 - extended
               description: Type of validation. <b>Basic</b> = only the format of e-mail is checked and only standard corrections are included. <b>Extended</b> = in depth check of deliverability. Additional information is returned such as temporary mail check or freemail check. More complicated corrections are included.
-              default: basic
+              default: extended
               example: extended
             acceptDisposableEmails:
               type: boolean

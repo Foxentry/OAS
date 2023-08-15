@@ -1568,21 +1568,6 @@ components:
                             minimum: 1
                             maximum: 5
                             example: 5
-                          filterAcceptFormat:
-                            type: boolean
-                            description: If true, values with different format would be accepted. (Uppercase and diacritics).
-                            example: true
-                            default: true
-                          filterAcceptAlternatives:
-                            type: boolean
-                            description: If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).
-                            example: true
-                            default: true
-                          filterExactMatch:
-                            type: boolean
-                            description: If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.
-                            example: true
-                            default: true
                       client:
                         $ref: "#/components/schemas/ClientRequest"
               response:
@@ -4797,15 +4782,6 @@ components:
                             maximum: 20
                             default: 10
                             example: 10
-                          filterMode:
-                            type: string
-                            description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
-                            enum:
-                              - limit
-                              - prefer
-                            example: limit
-                            default: limit
-                            nullable: true
                           radius:
                             type: integer
                             description: Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.
@@ -7386,13 +7362,6 @@ components:
             - full
           default: basic
           example: full
-        countryMode:
-          description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-          enum:
-            - prefer
-            - limit
-          default: prefer
-          example: prefer
         resultsLimit:
           description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
           type: integer
@@ -7521,15 +7490,6 @@ components:
           maximum: 20
           default: 10
           example: 10
-        filterMode:
-          type: string
-          description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
-          enum:
-            - limit
-            - prefer
-          example: limit
-          default: limit
-          nullable: true
     LocationGetRequest:
       type: object
       properties:
@@ -7975,13 +7935,6 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
-            countryMode:
-              enum:
-                - limit
-                - prefer
-              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-              default: prefer
-              example: limit
             resultsLimit:
               type: integer
               description: Result limit.
@@ -8049,21 +8002,6 @@ components:
               minimum: 1
               maximum: 5
               example: 5
-            filterAcceptFormat:
-              type: boolean
-              description: If true, values with different format would be accepted. (Uppercase and diacritics).
-              example: true
-              default: true
-            filterAcceptAlternatives:
-              type: boolean
-              description: If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).
-              example: true
-              default: true
-            filterExactMatch:
-              type: boolean
-              description: If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.
-              example: true
-              default: true
         client:
           $ref: "#/components/schemas/ClientRequest"
 
@@ -8373,7 +8311,7 @@ components:
                       reference:
                         type: string
                         description: Official reference of insolvency.
-                        example: TODO
+                        example: 65 INS 12632 / 2023
                       dateFrom:
                         type: string
                         description: Since when is the insolvence valid.
@@ -9066,13 +9004,6 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
-            countryMode:
-              enum:
-                - limit
-                - prefer
-              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-              default: prefer
-              example: limit
             resultsLimit:
               type: integer
               description: Result limit.

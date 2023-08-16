@@ -7599,7 +7599,7 @@ components:
           example: false
           nullable: true
         cityFormat:
-          description: description: This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.
+          description: This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.
           type: string
           enum:
             - minimal
@@ -7706,7 +7706,7 @@ components:
           example: false
           nullable: false
         cityFormat:
-          description: description: This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.
+          description: This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.
           type: string
           enum:
             - minimal
@@ -7762,7 +7762,7 @@ components:
               example: false
               nullable: false
             cityFormat:
-              description: description: This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.
+              description: This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.
               type: string
               enum:
                 - minimal

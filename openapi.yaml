@@ -712,6 +712,29 @@ components:
                 $ref: "#/components/schemas/LocationSearchRequest"
             required:
               - request
+          examples:
+            Request Example:
+              value:
+                request:
+                  customId: customer567914
+                  query:
+                    type: streetWithNumber
+                    value: thamo
+                    filter:
+                      country: CZ
+                  options:
+                    dataScope: basic
+                    resultsLimit: 10
+                    filterMode: prefer
+                    filterAcceptFormat: true
+                    filterAcceptAlternatives: true
+                    filterExactMatch: true
+                  client:
+                    ip: 127.0.1.1
+                    country: CZ
+                    location:
+                      lat: 50.0628
+                      lon: 13.9271
     LocationLocalization:
       content:
         application/json:
@@ -732,6 +755,16 @@ components:
                 $ref: "#/components/schemas/LocationGetRequest"
             required:
               - request
+          examples:
+            Request Example:
+              value:
+                request:
+                  query:
+                    country: CZ
+                    id: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+                  options:
+                    idType: internal
+                    dataScope: full
     LocationValidation:
       content:
         application/json:
@@ -742,6 +775,25 @@ components:
                 $ref: "#/components/schemas/LocationValidationRequest"
             required:
               - request
+          examples:
+            Request Example:
+              value:
+                request:
+                  query:
+                    streetWithNumber: Jeseniova 55
+                    city: Praha
+                    zip: '13000'
+                    country: CZ
+                  options:
+                    dataScope: full
+                    countryMode: limit
+                    resultsLimit: 10
+                    acceptPostOfficeAsCity: true
+                  client:
+                    location:
+                      lat: 50.0628
+                      lon: 13.9271
+                    country: CZ                
     ValidateEmail:
       content:
         application/json:
@@ -752,6 +804,21 @@ components:
                 $ref: "#/components/schemas/ValidateEmailRequest"
             required:
               - request
+          examples:
+            Request Example:
+              value:
+                request:
+                  query:
+                    email: p.novak@gamil.com
+                  options:
+                    validationType: extended
+                    acceptDisposableEmails: true
+                    acceptFreemails: true
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0628
+                      lon: 13.9271                    
     ValidatePhoneNumber:
       content:
         application/json:
@@ -762,6 +829,24 @@ components:
                 $ref: "#/components/schemas/ValidatePhoneNumberRequest"
             required:
               - request
+          examples:
+            Example Request:
+              value:
+                request:
+                  query:
+                    numberWithPrefix: '+420775111222'
+                  options:
+                    validationType: extended
+                    allowedPrefixes:
+                      - +420,+421
+                    defaultPrefix: '+420'
+                    formatNumber: false
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0628
+                      lon: 13.9271
+
     NameValidation:
       content:
         application/json:
@@ -772,6 +857,24 @@ components:
                 $ref: "#/components/schemas/NameValidationRequest"
             required:
               - request
+          examples:
+            Request Example:
+              value:
+                request:
+                  query:
+                    nameSurname: Ing. Petr Novák ml.
+                  options:
+                    dataScope: full
+                    acceptDegrees: true
+                    acceptContext: false
+                    validationDepth: strict
+                    smartMode: true
+                  client:
+                    location:
+                      lat: 50.0628
+                      lon: 13.9271
+                    country: CZ
+
     ValidateCompanyData:
       content:
         application/json:
@@ -782,6 +885,24 @@ components:
                 $ref: "#/components/schemas/ValidateCompanyDataRequest"
             required:
               - request
+          examples:
+            Request Example:
+              value:
+                request:
+                  query:
+                    name: AVANTRO
+                    country: CZ
+                    registrationNumber: '04997476'
+                  options:
+                    dataScope: basic
+                    countryMode: prefer
+                    resultsLimit: 10
+                    includeTerminatedSubjects: false
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0628
+                      lon: 13.9271                    
     CompanySearch:
       content:
         application/json:
@@ -792,6 +913,27 @@ components:
                 $ref: "#/components/schemas/CompanySearchRequest"
             required:
               - request
+          examples:
+            Request Example:
+              value:
+                request:
+                  query:
+                    type: name
+                    value: ava
+                    filter:
+                      country: CZ
+                  options:
+                    dataScope: basic
+                    resultsLimit: 10
+                    includeTerminatedSubjects: false
+                    filterMode: limit
+                    filterAcceptFormat: true
+                    filterExactMatch: true
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0628
+                      lon: 13.9271                              
     EmailSearch:
       content:
         application/json:
@@ -802,6 +944,22 @@ components:
                 $ref: "#/components/schemas/EmailSearchRequest"
             required:
               - request
+          examples:
+            Request Example:
+              value:  
+                request:
+                  query:
+                    value: p.novak@
+                  options:
+                    resultsLimit: 5
+                    filterAcceptFormat: true
+                    filterAcceptAlternatives: true
+                    filterExactMatch: true
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0628
+                      lon: 13.9271                                
     GetCompanyData:
       content:
         application/json:
@@ -812,6 +970,21 @@ components:
                 $ref: "#/components/schemas/GetCompanyDataRequest"
             required:
               - request
+          examples:
+            Request Example:
+              value:
+                request:
+                  query:
+                    country: CZ
+                    registrationNumber: '04997476'
+                  options:
+                    dataScope: full
+                    includeTerminatedSubjects: false
+                  client:
+                    country: CZ
+                    location:
+                      lat: 50.0628
+                      lon: 13.9271                    
   securitySchemes:
     BearerAuth:
       type: http
@@ -7991,7 +8164,7 @@ components:
               type: string
               example: info@foxentry.com
           required:
-            - email
+            - value
         options:
           type: object
           description: Query options.

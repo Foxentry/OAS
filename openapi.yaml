@@ -4969,6 +4969,22 @@ components:
                             default: false
                             example: false
                             nullable: true
+                          zipFormat:
+                            description: TODO
+                            type: boolean
+                            default: false
+                            example: false
+                            nullable: false
+                          cityFormat:
+                            description: TODO
+                            type: string
+                            enum:
+                              - minimal
+                              - basic
+                              - extended
+                            default: basic
+                            example: basic
+                            nullable: false
                       client:
                         allOf:
                           - $ref: "#/components/schemas/ClientRequest"
@@ -5167,6 +5183,22 @@ components:
                               - basic
                               - full
                             example: full
+                          zipFormat:
+                            description: TODO
+                            type: boolean
+                            default: false
+                            example: false
+                            nullable: false
+                          cityFormat:
+                            description: TODO
+                            type: string
+                            enum:
+                              - minimal
+                              - basic
+                              - extended
+                            default: basic
+                            example: basic
+                            nullable: false
                         required:
                           - idType
                           - dataScope
@@ -6031,12 +6063,6 @@ components:
                                 description: If true, the postOffice name is accepted as city. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
                                 default: false
                                 example: true
-                              zipFormat:
-                                description: TODO
-                                type: boolean
-                                default: false
-                                example: false
-                                nullable: true
                       client:
                         $ref: "#/components/schemas/ClientRequest"
               response:
@@ -7572,6 +7598,16 @@ components:
           default: false
           example: false
           nullable: true
+        cityFormat:
+          description: TODO
+          type: string
+          enum:
+            - minimal
+            - basic
+            - extended
+          default: basic
+          example: basic
+          nullable: false
     ClientRequest:
       type: object
       description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
@@ -7663,6 +7699,22 @@ components:
           maximum: 20
           default: 10
           example: 10
+        zipFormat:
+          description: TODO
+          type: boolean
+          default: false
+          example: false
+          nullable: false
+        cityFormat:
+          description: TODO
+          type: string
+          enum:
+            - minimal
+            - basic
+            - extended
+          default: basic
+          example: basic
+          nullable: false
     LocationGetRequest:
       type: object
       properties:
@@ -7708,7 +7760,17 @@ components:
               type: boolean
               default: false
               example: false
-              nullable: true
+              nullable: false
+            cityFormat:
+              description: TODO
+              type: string
+              enum:
+                - minimal
+                - basic
+                - extended
+              default: basic
+              example: basic
+              nullable: false
           required:
             - idType
             - dataScope
@@ -7803,12 +7865,6 @@ components:
                   description: If true, the postOffice name is accepted as city. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.
                   default: false
                   example: true
-                zipFormat:
-                  description: TODO
-                  type: boolean
-                  default: false
-                  example: false
-                  nullable: true
         client:
           $ref: "#/components/schemas/ClientRequest"
       required:

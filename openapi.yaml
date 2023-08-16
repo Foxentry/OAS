@@ -790,10 +790,10 @@ components:
                     resultsLimit: 10
                     acceptPostOfficeAsCity: true
                   client:
+                    country: CZ 
                     location:
                       lat: 50.0628
-                      lon: 13.9271
-                    country: CZ                
+                      lon: 13.9271               
     ValidateEmail:
       content:
         application/json:
@@ -870,10 +870,10 @@ components:
                     validationDepth: strict
                     smartMode: true
                   client:
+                    country: CZ
                     location:
                       lat: 50.0628
-                      lon: 13.9271
-                    country: CZ
+                      lon: 13.9271               
 
     ValidateCompanyData:
       content:

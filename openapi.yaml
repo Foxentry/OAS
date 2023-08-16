@@ -830,7 +830,7 @@ components:
             required:
               - request
           examples:
-            Example Request:
+            Request Example:
               value:
                 request:
                   query:

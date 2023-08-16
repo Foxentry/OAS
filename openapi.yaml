@@ -952,9 +952,6 @@ components:
                     value: p.novak@
                   options:
                     resultsLimit: 5
-                    filterAcceptFormat: true
-                    filterAcceptAlternatives: true
-                    filterExactMatch: true
                   client:
                     country: CZ
                     location:

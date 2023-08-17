@@ -782,7 +782,7 @@ components:
                   query:
                     streetWithNumber: Jeseniova 55
                     city: Praha
-                    zip: '13000'
+                    zip: "13000"
                     country: CZ
                   options:
                     dataScope: full
@@ -790,10 +790,10 @@ components:
                     resultsLimit: 10
                     acceptPostOfficeAsCity: true
                   client:
-                    country: CZ 
+                    country: CZ
                     location:
                       lat: 50.0628
-                      lon: 13.9271               
+                      lon: 13.9271
     ValidateEmail:
       content:
         application/json:
@@ -818,7 +818,7 @@ components:
                     country: CZ
                     location:
                       lat: 50.0628
-                      lon: 13.9271                    
+                      lon: 13.9271
     ValidatePhoneNumber:
       content:
         application/json:
@@ -834,12 +834,12 @@ components:
               value:
                 request:
                   query:
-                    numberWithPrefix: '+420775111222'
+                    numberWithPrefix: "+420775111222"
                   options:
                     validationType: extended
                     allowedPrefixes:
                       - +420,+421
-                    defaultPrefix: '+420'
+                    defaultPrefix: "+420"
                     formatNumber: false
                   client:
                     country: CZ
@@ -873,7 +873,7 @@ components:
                     country: CZ
                     location:
                       lat: 50.0628
-                      lon: 13.9271               
+                      lon: 13.9271
 
     ValidateCompanyData:
       content:
@@ -892,7 +892,7 @@ components:
                   query:
                     name: AVANTRO
                     country: CZ
-                    registrationNumber: '04997476'
+                    registrationNumber: "04997476"
                   options:
                     dataScope: basic
                     countryMode: prefer
@@ -902,7 +902,7 @@ components:
                     country: CZ
                     location:
                       lat: 50.0628
-                      lon: 13.9271                    
+                      lon: 13.9271
     CompanySearch:
       content:
         application/json:
@@ -933,7 +933,7 @@ components:
                     country: CZ
                     location:
                       lat: 50.0628
-                      lon: 13.9271                              
+                      lon: 13.9271
     EmailSearch:
       content:
         application/json:
@@ -946,7 +946,7 @@ components:
               - request
           examples:
             Request Example:
-              value:  
+              value:
                 request:
                   query:
                     value: p.novak@
@@ -959,7 +959,7 @@ components:
                     country: CZ
                     location:
                       lat: 50.0628
-                      lon: 13.9271                                
+                      lon: 13.9271
     GetCompanyData:
       content:
         application/json:
@@ -976,7 +976,7 @@ components:
                 request:
                   query:
                     country: CZ
-                    registrationNumber: '04997476'
+                    registrationNumber: "04997476"
                   options:
                     dataScope: full
                     includeTerminatedSubjects: false
@@ -984,7 +984,7 @@ components:
                     country: CZ
                     location:
                       lat: 50.0628
-                      lon: 13.9271                    
+                      lon: 13.9271
   securitySchemes:
     BearerAuth:
       type: http

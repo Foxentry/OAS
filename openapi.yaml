@@ -4867,16 +4867,15 @@ components:
                   endpoint: location/localize
                   code: pH6Sx97GNdPNsByNBLbVOjlnEEvo8i
                   customId: null
-                  query: {}
+                  query:
+                    lat: 50.0920004
+                    lon: 14.4527362
                   options:
                     dataScope: basic
                     resultsLimit: 10
                     radius: 15
                   client:
                     country: CZ
-                    location:
-                      lat: 50.0920004
-                      lon: 14.4527362
                 response:
                   resultsCount: 1
                   results:
@@ -4932,6 +4931,21 @@ components:
                       endpoint:
                         type: string
                         example: location/localize
+                      query:
+                        type: object
+                        description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
+                        properties:
+                          lat:
+                            type: number
+                            description: Client's latitude
+                            example: 50.0628
+                          lon:
+                            type: number
+                            description: Client's longitude
+                            example: 13.9271
+                        required:
+                          - lat
+                          - lon
                       options:
                         properties:
                           dataScope:
@@ -4986,15 +5000,17 @@ components:
                             example: basic
                             nullable: false
                       client:
-                        allOf:
-                          - $ref: "#/components/schemas/ClientRequest"
-                          - type: object
-                            properties:
-                              location:
-                                type: object
-                                required:
-                                  - lat
-                                  - lon
+                        type: object
+                        description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
+                        properties:
+                          ip:
+                            type: string
+                            example: 127.0.1.1
+                            format: ipv4
+                          country:
+                            type: string
+                            description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+                            example: CZ
               response:
                 $ref: "#/components/schemas/LocationLocalizationResults"
               errors:
@@ -7641,6 +7657,20 @@ components:
           nullable: true
           description: Custom ID assigned by you if you need so.
           example: customer567914
+        query:
+          type: object
+          required:
+            - lat
+            - lon
+          properties:
+            lat:
+              type: number
+              description: Client's latitude
+              example: 50.0628
+            lon:
+              type: number
+              description: Client's longitude
+              example: 13.9271
         options:
           allOf:
             - $ref: "#/components/schemas/LocationRequestOptions"
@@ -7661,18 +7691,19 @@ components:
                   example: false
                   nullable: true
         client:
-          allOf:
-            - $ref: "#/components/schemas/ClientRequest"
-            - type: object
-              description: Additional information about the user in order to specify the results in response. Used mainly for web forms.
-              properties:
-                location:
-                  type: object
-                  required:
-                    - lat
-                    - lon
+          type: object
+          description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
+          properties:
+            ip:
+              type: string
+              example: 127.0.1.1
+              format: ipv4
+            country:
+              type: string
+              description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
+              example: CZ
       required:
-        - client
+        - query
 
     LocationRequestOptions:
       type: object

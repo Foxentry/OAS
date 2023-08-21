@@ -838,7 +838,8 @@ components:
                   options:
                     validationType: extended
                     allowedPrefixes:
-                      - +420,+421
+                      - "+420"
+                      - "+421"
                     defaultPrefix: "+420"
                     formatNumber: false
                   client:

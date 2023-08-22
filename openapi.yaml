@@ -7998,7 +7998,7 @@ components:
           description: Query options.
           properties:
             dataScope:
-              description: "Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned."
+              description: "Data scope of returned data. In full datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned."
               enum:
                 - basic
                 - full
@@ -9327,7 +9327,7 @@ components:
           description: Query options.
           properties:
             dataScope:
-              description: "Data scope of returned data. In extended datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned."
+              description: "Data scope of returned data. In full datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned."
               enum:
                 - basic
                 - extended

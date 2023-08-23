@@ -992,7 +992,7 @@ components:
       scheme: bearer
   responses:
     GetCompanyData:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -1705,7 +1705,7 @@ components:
               - request
               - response
     EmailSearch:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           schema:
@@ -1777,7 +1777,7 @@ components:
                         domain: post.cz
                 errors: []
     CompanySearch:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -2987,7 +2987,7 @@ components:
               - request
               - response
     NameValidation:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -3299,7 +3299,7 @@ components:
               - response
               - errors
     ValidatePhoneNumber:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -3543,7 +3543,7 @@ components:
               - request
               - response
     LocationSearch:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -4856,7 +4856,7 @@ components:
             required:
               - status
     LocationLocalization:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -5004,7 +5004,7 @@ components:
               - request
               - response
     LocationGet:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -5214,7 +5214,7 @@ components:
               - errors
               - response
     LocationValidation:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -6075,7 +6075,7 @@ components:
               - request
               - response
     ValidateCompanyData:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -6890,7 +6890,7 @@ components:
               - request
               - response
     ValidateEmail:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:

@@ -953,9 +953,6 @@ components:
                     value: p.novak@
                   options:
                     resultsLimit: 5
-                    filterAcceptFormat: true
-                    filterAcceptAlternatives: true
-                    filterExactMatch: true
                   client:
                     country: CZ
                     location:
@@ -4934,15 +4931,15 @@ components:
                         example: location/localize
                       query:
                         type: object
-                        description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
+                        description: TODO
                         properties:
                           lat:
                             type: number
-                            description: Client's latitude
+                            description: TODO
                             example: 50.0628
                           lon:
                             type: number
-                            description: Client's longitude
+                            description: TODO
                             example: 13.9271
                         required:
                           - lat
@@ -7666,11 +7663,11 @@ components:
           properties:
             lat:
               type: number
-              description: Client's latitude
+              description: TODO
               example: 50.0628
             lon:
               type: number
-              description: Client's longitude
+              description: TODO
               example: 13.9271
         options:
           allOf:
@@ -8210,7 +8207,7 @@ components:
               example: false
             filterMode:
               type: string
-              description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
+              description: TODO
               enum:
                 - limit
                 - prefer
@@ -8219,17 +8216,17 @@ components:
               nullable: true
             filterAcceptFormat:
               type: boolean
-              description: If true, values with different format would be accepted. (Uppercase and diacritics).
+              description: TODO
               example: true
               default: true
             filterAcceptAlternatives:
               type: boolean
-              description: If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).
+              description: TODO
               example: true
               default: true
             filterExactMatch:
               type: boolean
-              description: If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.
+              description: TODO
               example: true
               default: true
         client:
@@ -9279,7 +9276,7 @@ components:
               example: false
             filterMode:
               type: string
-              description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
+              description: TODO
               enum:
                 - limit
                 - prefer
@@ -9288,17 +9285,17 @@ components:
               nullable: true
             filterAcceptFormat:
               type: boolean
-              description: If true, values with different format will be accepted. (Uppercase and diacritics)
+              description: TODO
               example: true
               default: true
             filterAcceptAlternatives:
               type: boolean
-              description: If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).
+              description: TODO
               example: true
               default: true
             filterExactMatch:
               type: boolean
-              description: If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.
+              description: TODO
               example: true
               default: true
         client:

@@ -786,7 +786,6 @@ components:
                     country: CZ
                   options:
                     dataScope: full
-                    countryMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: true
                   client:
@@ -896,7 +895,6 @@ components:
                     registrationNumber: "04997476"
                   options:
                     dataScope: basic
-                    countryMode: prefer
                     resultsLimit: 10
                     includeTerminatedSubjects: false
                   client:
@@ -1794,7 +1792,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -2120,7 +2117,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -2446,7 +2442,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -2656,7 +2651,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -3559,7 +3553,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -3744,7 +3737,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -3929,7 +3921,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -4134,7 +4125,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -4319,7 +4309,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -4955,13 +4944,6 @@ components:
                               - full
                             default: basic
                             example: full
-                          countryMode:
-                            description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-                            enum:
-                              - prefer
-                              - limit
-                            default: prefer
-                            example: prefer
                           resultsLimit:
                             description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
                             type: integer
@@ -5248,7 +5230,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: false
@@ -5315,7 +5296,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: false
@@ -5387,7 +5367,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: false
@@ -5519,7 +5498,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: false
@@ -6109,7 +6087,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                   client:
@@ -6199,7 +6176,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                   client:
@@ -6245,7 +6221,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                   client:
@@ -6786,7 +6761,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                   client:
@@ -7716,13 +7690,6 @@ components:
             - full
           default: basic
           example: full
-        countryMode:
-          description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-          enum:
-            - prefer
-            - limit
-          default: prefer
-          example: prefer
         resultsLimit:
           description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
           type: integer
@@ -8108,14 +8075,6 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
-            countryMode:
-              enum:
-                - limit
-                - prefer
-                - null
-              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-              default: prefer
-              example: limit
             resultsLimit:
               type: integer
               description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the
@@ -10582,14 +10541,6 @@ components:
           type: object
           description: Query options.
           properties:
-            countryMode:
-              enum:
-                - limit
-                - prefer
-                - null
-              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-              default: prefer
-              example: limit
             dataScope:
               enum:
                 - basic

@@ -8140,11 +8140,11 @@ components:
                 registrationNumber:
                   type: string
                   description: Company registration number (ID).
-                  example: 48167941
+                  example: "48167941"
                 taxNumber:
                   type: string
                   description: Company national TAX number.
-                  example: 2120092029
+                  example: "2120092029"
                 vatNumber:
                   type: string
                   description: Company VAT number.

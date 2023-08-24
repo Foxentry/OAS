@@ -8220,7 +8220,7 @@ components:
               default: true
             filterAcceptAlternatives:
               type: boolean
-              description: If true, alternative values for filter types would be accepted. Currently used mainly for the Polish companies names.
+              description: If true, alternative values for filter types would be accepted. Currently used mainly for the Polish companies names. (for example name of company: ELBI-WROCŁAW SP.Z O.O. ; alternative name: ELBI-WROCŁAW SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ).
               example: true
               default: true
             filterExactMatch:
@@ -9289,7 +9289,7 @@ components:
               default: true
             filterAcceptAlternatives:
               type: boolean
-              description: If true, alternative values for filter types would be accepted. Currently used mainly for the Polish companies names.
+              description: If true, alternative values for filter types would be accepted. Currently used mainly for the Polish companies names. (for example name of company: ELBI-WROCŁAW SP.Z O.O. ; alternative name: ELBI-WROCŁAW SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ).
               example: true
               default: true
             filterExactMatch:

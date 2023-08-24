@@ -4931,15 +4931,14 @@ components:
                         example: location/localize
                       query:
                         type: object
-                        description: TODO
                         properties:
                           lat:
                             type: number
-                            description: TODO
+                            description: Latitude of the searched point.
                             example: 50.0628
                           lon:
                             type: number
-                            description: TODO
+                            description: Longitude of the searched point.
                             example: 13.9271
                         required:
                           - lat
@@ -7663,11 +7662,11 @@ components:
           properties:
             lat:
               type: number
-              description: TODO
+              description: Latitude of the searched point.
               example: 50.0628
             lon:
               type: number
-              description: TODO
+              description: Longitude of the searched point.
               example: 13.9271
         options:
           allOf:
@@ -8207,7 +8206,7 @@ components:
               example: false
             filterMode:
               type: string
-              description: TODO
+              description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
               enum:
                 - limit
                 - prefer
@@ -8216,17 +8215,17 @@ components:
               nullable: true
             filterAcceptFormat:
               type: boolean
-              description: TODO
+              description: If true, values with different format would be accepted. (Uppercase and diacritics).
               example: true
               default: true
             filterAcceptAlternatives:
               type: boolean
-              description: TODO
+              description: If true, alternative values for filter types would be accepted. Currently used mainly for the Polish companies names.
               example: true
               default: true
             filterExactMatch:
               type: boolean
-              description: TODO
+              description: If true, only exact match would be accepted. For example filter registrationID "0499" would return 0 results, since no company with the exact registration ID exists.
               example: true
               default: true
         client:
@@ -9276,7 +9275,7 @@ components:
               example: false
             filterMode:
               type: string
-              description: TODO
+              description: <b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.
               enum:
                 - limit
                 - prefer
@@ -9285,17 +9284,17 @@ components:
               nullable: true
             filterAcceptFormat:
               type: boolean
-              description: TODO
+              description: If true, values with different format would be accepted. (Uppercase and diacritics).
               example: true
               default: true
             filterAcceptAlternatives:
               type: boolean
-              description: TODO
+              description: If true, alternative values for filter types would be accepted. Currently used mainly for the Polish companies names.
               example: true
               default: true
             filterExactMatch:
               type: boolean
-              description: TODO
+              description: If true, only exact match would be accepted. For example filter registrationID "0499" would return 0 results, since no company with the exact registration ID exists.
               example: true
               default: true
         client:

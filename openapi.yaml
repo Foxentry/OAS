@@ -1747,6 +1747,7 @@ components:
                 type: array
             required:
               - status
+              - request
           examples:
             searchResults:
               value:
@@ -4853,6 +4854,7 @@ components:
                 type: array
             required:
               - status
+              - request
     LocationLocalization:
       description: Successful response
       content:
@@ -8312,6 +8314,10 @@ components:
 
     GetCompanyDataResponseRequest:
       type: object
+      required:
+        - endpoint
+        - code
+        - customId
       properties:
         endpoint:
           type: string
@@ -9322,6 +9328,10 @@ components:
 
     NameValidationResponseRequest:
       type: object
+      required:
+        - endpoint
+        - code
+        - customId      
       properties:
         endpoint:
           type: string
@@ -9931,6 +9941,10 @@ components:
 
     ValidatePhoneNumberResponseRequest:
       type: object
+      required:
+        - endpoint
+        - code
+        - customId      
       properties:
         endpoint:
           type: string

@@ -4944,6 +4944,15 @@ components:
                               - full
                             default: basic
                             example: full
+                          dataSource:
+                            description: TODO
+                            type: array
+                            items:
+                              type: string
+                              nullable: false
+                            nullable: true
+                            default: ["CZ", "SK", "PL"]
+                            example: ["CZ", "SK", "PL"]
                           resultsLimit:
                             description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
                             type: integer
@@ -5181,6 +5190,15 @@ components:
                               - basic
                               - full
                             example: full
+                          dataSource:
+                            description: TODO
+                            type: array
+                            items:
+                              type: string
+                              nullable: false
+                            nullable: true
+                            default: ["CZ", "SK", "PL"]
+                            example: ["CZ", "SK", "PL"]
                           zipFormat:
                             description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
                             type: boolean
@@ -7551,6 +7569,15 @@ components:
             - full
           default: basic
           example: full
+        dataSource:
+          description: TODO
+          type: array
+          items:
+            type: string
+            nullable: false
+          nullable: true
+          default: ["CZ", "SK", "PL"]
+          example: ["CZ", "SK", "PL"]
         resultsLimit:
           description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
           type: integer
@@ -7690,6 +7717,15 @@ components:
             - full
           default: basic
           example: full
+        dataSource:
+          description: TODO
+          type: array
+          items:
+            type: string
+            nullable: false
+          nullable: true
+          default: ["CZ", "SK", "PL"]
+          example: ["CZ", "SK", "PL"]
         resultsLimit:
           description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
           type: integer
@@ -7753,6 +7789,15 @@ components:
                 - full
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             zipFormat:
               description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
               type: boolean
@@ -8002,6 +8047,15 @@ components:
                 - full
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             acceptDegrees:
               type: boolean
               description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'
@@ -8075,6 +8129,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             resultsLimit:
               type: integer
               description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the
@@ -8154,6 +8217,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             resultsLimit:
               type: integer
               description: Result limit.
@@ -8265,6 +8337,15 @@ components:
           description: Data scope of returned data.
           default: basic
           example: full
+        dataSource:
+          description: TODO
+          type: array
+          items:
+            type: string
+            nullable: false
+          nullable: true
+          default: ["CZ", "SK", "PL"]
+          example: ["CZ", "SK", "PL"]
         includeTerminatedSubjects:
           type: boolean
           description: Whether or not to include entities that have already ended their existence in the output.
@@ -8318,6 +8399,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             includeTerminatedSubjects:
               type: boolean
               description: Whether or not to include entities that have already ended their existence in the output.
@@ -9227,6 +9317,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             resultsLimit:
               type: integer
               description: Result limit.
@@ -9290,7 +9389,7 @@ components:
       required:
         - endpoint
         - code
-        - customId      
+        - customId
       properties:
         endpoint:
           type: string
@@ -9331,6 +9430,15 @@ components:
                 - extended
               default: basic
               example: extended
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             acceptDegrees:
               type: boolean
               description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'
@@ -9903,7 +10011,7 @@ components:
       required:
         - endpoint
         - code
-        - customId      
+        - customId
       properties:
         endpoint:
           type: string
@@ -10549,6 +10657,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             includeTerminatedSubjects:
               type: boolean
               nullable: true

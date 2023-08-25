@@ -4786,9 +4786,7 @@ components:
                               - full
                           value:
                             description: Searched value.
-                            oneOf:
-                              - type: string
-                              - type: integer
+                            type: string
                           filter:
                             type: object
                             description: Additional filter in order to specify the search results. You can for example set as a filter city of Prague, so the the search engine would look for the addresses only in Prague. Pay attention to the options, which determines how the filter should behave.
@@ -7501,9 +7499,7 @@ components:
                 - zip
             value:
               description: Searched value.
-              oneOf:
-                - type: string
-                - type: integer
+              type: string
             filter:
               type: object
               description: Additional filter in order to specify the search results. You can for example set as a filter city of Prague, so the the search engine would look for the addresses only in Prague. Pay attention to the options, which determines how the filter should behave.

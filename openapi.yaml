@@ -7496,6 +7496,7 @@ components:
                 - number.part2
                 - city
                 - zip
+                - full
             value:
               description: Searched value.
               type: string

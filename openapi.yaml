@@ -8049,8 +8049,8 @@ components:
                 type: string
                 nullable: false
               nullable: true
-              default: ["CZ", "SK", "PL"]
-              example: ["CZ", "SK", "PL"]
+              default: ["CZ", "SK"]
+              example: ["CZ", "SK"]
             acceptDegrees:
               type: boolean
               description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'
@@ -9432,8 +9432,8 @@ components:
                 type: string
                 nullable: false
               nullable: true
-              default: ["CZ", "SK", "PL"]
-              example: ["CZ", "SK", "PL"]
+              default: ["CZ", "SK"]
+              example: ["CZ", "SK"]
             acceptDegrees:
               type: boolean
               description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'

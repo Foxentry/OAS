@@ -862,7 +862,8 @@ components:
               value:
                 request:
                   query:
-                    nameSurname: Ing. Petr Novák ml.
+                    name: test
+                    surname: Ing. Petr Novák ml.
                   options:
                     dataScope: full
                     acceptDegrees: true
@@ -8014,24 +8015,34 @@ components:
           description: Custom ID assigned by you if you need so.
           example: customer567914
         query:
-          type: object
-          properties:
-            name:
-              type: string
-              nullable: true
-              description: First name.
-              example: Petr
-            surname:
-              type: string
-              nullable: true
-              description: Last name / family name.
-              example: Novák
-            nameSurname:
-              type: string
-              nullable: true
-              description: Name and surname together.
-              default: null
-              example: Petr Novák
+          oneOf:
+            - type: object
+              title: "Separate field for name and surname"
+              required:
+                - name
+                - surname
+              properties:
+                name:
+                  type: string
+                  nullable: true
+                  description: First name.
+                  example: Petr
+                surname:
+                  type: string
+                  nullable: true
+                  description: Last name / family name.
+                  example: Novák
+            - type: object
+              title: "One field for name and surname"
+              required:
+                - nameSurname
+              properties:
+                nameSurname:
+                  type: string
+                  nullable: true
+                  description: Name and surname together.
+                  default: null
+                  example: Petr Novák
         options:
           type: object
           description: Query options.

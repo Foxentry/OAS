@@ -786,7 +786,6 @@ components:
                     country: CZ
                   options:
                     dataScope: full
-                    countryMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: true
                   client:
@@ -896,7 +895,6 @@ components:
                     registrationNumber: "04997476"
                   options:
                     dataScope: basic
-                    countryMode: prefer
                     resultsLimit: 10
                     includeTerminatedSubjects: false
                   client:
@@ -990,7 +988,7 @@ components:
       scheme: bearer
   responses:
     GetCompanyData:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -1703,7 +1701,7 @@ components:
               - request
               - response
     EmailSearch:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           schema:
@@ -1747,6 +1745,7 @@ components:
                 type: array
             required:
               - status
+              - request
           examples:
             searchResults:
               value:
@@ -1775,7 +1774,7 @@ components:
                         domain: post.cz
                 errors: []
     CompanySearch:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -1793,7 +1792,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -2119,7 +2117,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -2445,7 +2442,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -2655,7 +2651,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -2985,7 +2980,7 @@ components:
               - request
               - response
     NameValidation:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -3297,7 +3292,7 @@ components:
               - response
               - errors
     ValidatePhoneNumber:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -3541,7 +3536,7 @@ components:
               - request
               - response
     LocationSearch:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -3558,7 +3553,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -3743,7 +3737,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -3928,7 +3921,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -4133,7 +4125,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -4318,7 +4309,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 5
                   client:
@@ -4796,9 +4786,7 @@ components:
                               - full
                           value:
                             description: Searched value.
-                            oneOf:
-                              - type: string
-                              - type: integer
+                            type: string
                           filter:
                             type: object
                             description: Additional filter in order to specify the search results. You can for example set as a filter city of Prague, so the the search engine would look for the addresses only in Prague. Pay attention to the options, which determines how the filter should behave.
@@ -4853,8 +4841,9 @@ components:
                 type: array
             required:
               - status
+              - request
     LocationLocalization:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -4952,13 +4941,15 @@ components:
                               - full
                             default: basic
                             example: full
-                          countryMode:
-                            description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-                            enum:
-                              - prefer
-                              - limit
-                            default: prefer
-                            example: prefer
+                          dataSource:
+                            description: TODO
+                            type: array
+                            items:
+                              type: string
+                              nullable: false
+                            nullable: true
+                            default: ["CZ", "SK", "PL"]
+                            example: ["CZ", "SK", "PL"]
                           resultsLimit:
                             description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
                             type: integer
@@ -5017,7 +5008,7 @@ components:
               - request
               - response
     LocationGet:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -5196,6 +5187,15 @@ components:
                               - basic
                               - full
                             example: full
+                          dataSource:
+                            description: TODO
+                            type: array
+                            items:
+                              type: string
+                              nullable: false
+                            nullable: true
+                            default: ["CZ", "SK", "PL"]
+                            example: ["CZ", "SK", "PL"]
                           zipFormat:
                             description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
                             type: boolean
@@ -5227,7 +5227,7 @@ components:
               - errors
               - response
     LocationValidation:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -5245,7 +5245,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: false
@@ -5312,7 +5311,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: false
@@ -5384,7 +5382,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: false
@@ -5516,7 +5513,6 @@ components:
                   options:
                     dataScope: basic
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                     acceptPostOfficeAsCity: false
@@ -6088,7 +6084,7 @@ components:
               - request
               - response
     ValidateCompanyData:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -6106,7 +6102,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                   client:
@@ -6196,7 +6191,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                   client:
@@ -6242,7 +6236,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                   client:
@@ -6783,7 +6776,6 @@ components:
                     dataScope: basic
                     includeTerminatedSubjects: false
                     addressType: official
-                    countryMode: limit
                     filterMode: limit
                     resultsLimit: 10
                   client:
@@ -6903,7 +6895,7 @@ components:
               - request
               - response
     ValidateEmail:
-      description: Successfull response
+      description: Successful response
       content:
         application/json:
           examples:
@@ -7506,9 +7498,7 @@ components:
                 - zip
             value:
               description: Searched value.
-              oneOf:
-                - type: string
-                - type: integer
+              type: string
             filter:
               type: object
               description: Additional filter in order to specify the search results. You can for example set as a filter city of Prague, so the the search engine would look for the addresses only in Prague. Pay attention to the options, which determines how the filter should behave.
@@ -7574,6 +7564,15 @@ components:
             - full
           default: basic
           example: full
+        dataSource:
+          description: TODO
+          type: array
+          items:
+            type: string
+            nullable: false
+          nullable: true
+          default: ["CZ", "SK", "PL"]
+          example: ["CZ", "SK", "PL"]
         resultsLimit:
           description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
           type: integer
@@ -7713,13 +7712,15 @@ components:
             - full
           default: basic
           example: full
-        countryMode:
-          description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-          enum:
-            - prefer
-            - limit
-          default: prefer
-          example: prefer
+        dataSource:
+          description: TODO
+          type: array
+          items:
+            type: string
+            nullable: false
+          nullable: true
+          default: ["CZ", "SK", "PL"]
+          example: ["CZ", "SK", "PL"]
         resultsLimit:
           description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
           type: integer
@@ -7783,6 +7784,15 @@ components:
                 - full
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             zipFormat:
               description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
               type: boolean
@@ -8032,6 +8042,15 @@ components:
                 - full
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             acceptDegrees:
               type: boolean
               description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'
@@ -8105,14 +8124,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
-            countryMode:
-              enum:
-                - limit
-                - prefer
-                - null
-              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-              default: prefer
-              example: limit
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             resultsLimit:
               type: integer
               description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the
@@ -8192,6 +8212,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             resultsLimit:
               type: integer
               description: Result limit.
@@ -8303,6 +8332,15 @@ components:
           description: Data scope of returned data.
           default: basic
           example: full
+        dataSource:
+          description: TODO
+          type: array
+          items:
+            type: string
+            nullable: false
+          nullable: true
+          default: ["CZ", "SK", "PL"]
+          example: ["CZ", "SK", "PL"]
         includeTerminatedSubjects:
           type: boolean
           description: Whether or not to include entities that have already ended their existence in the output.
@@ -8311,6 +8349,10 @@ components:
 
     GetCompanyDataResponseRequest:
       type: object
+      required:
+        - endpoint
+        - code
+        - customId
       properties:
         endpoint:
           type: string
@@ -8352,6 +8394,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             includeTerminatedSubjects:
               type: boolean
               description: Whether or not to include entities that have already ended their existence in the output.
@@ -9261,6 +9312,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             resultsLimit:
               type: integer
               description: Result limit.
@@ -9321,6 +9381,10 @@ components:
 
     NameValidationResponseRequest:
       type: object
+      required:
+        - endpoint
+        - code
+        - customId
       properties:
         endpoint:
           type: string
@@ -9361,6 +9425,15 @@ components:
                 - extended
               default: basic
               example: extended
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             acceptDegrees:
               type: boolean
               description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'
@@ -9930,6 +10003,10 @@ components:
 
     ValidatePhoneNumberResponseRequest:
       type: object
+      required:
+        - endpoint
+        - code
+        - customId
       properties:
         endpoint:
           type: string
@@ -10567,14 +10644,6 @@ components:
           type: object
           description: Query options.
           properties:
-            countryMode:
-              enum:
-                - limit
-                - prefer
-                - null
-              description: <b>Prefer</b> = prefer results matching the country parameter in query, <b>limit</b> = limit to results matching the country parameter.
-              default: prefer
-              example: limit
             dataScope:
               enum:
                 - basic
@@ -10583,6 +10652,15 @@ components:
               description: Data scope of returned data.
               default: basic
               example: full
+            dataSource:
+              description: TODO
+              type: array
+              items:
+                type: string
+                nullable: false
+              nullable: true
+              default: ["CZ", "SK", "PL"]
+              example: ["CZ", "SK", "PL"]
             includeTerminatedSubjects:
               type: boolean
               nullable: true

@@ -7968,9 +7968,9 @@ components:
               description: Phone number prefix.
               example: "+420"
             number:
-              type: integer
+              type: string
               description: Phone number.
-              example: 607123456
+              example: "607123456"
             numberWithPrefix:
               type: string
               description: Phone number with prefix.

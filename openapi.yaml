@@ -862,7 +862,8 @@ components:
               value:
                 request:
                   query:
-                    nameSurname: Ing. Petr Novák ml.
+                    name: test
+                    surname: Ing. Petr Novák ml.
                   options:
                     dataScope: full
                     acceptDegrees: true
@@ -7496,6 +7497,7 @@ components:
                 - number.part2
                 - city
                 - zip
+                - full
             value:
               description: Searched value.
               type: string
@@ -7966,9 +7968,9 @@ components:
               description: Phone number prefix.
               example: "+420"
             number:
-              type: integer
+              type: string
               description: Phone number.
-              example: 607123456
+              example: "607123456"
             numberWithPrefix:
               type: string
               description: Phone number with prefix.
@@ -8013,24 +8015,33 @@ components:
           description: Custom ID assigned by you if you need so.
           example: customer567914
         query:
-          type: object
-          properties:
-            name:
-              type: string
-              nullable: true
-              description: First name.
-              example: Petr
-            surname:
-              type: string
-              nullable: true
-              description: Last name / family name.
-              example: Novák
-            nameSurname:
-              type: string
-              nullable: true
-              description: Name and surname together.
-              default: null
-              example: Petr Novák
+          oneOf:
+            - type: object
+              title: "Separate field for name and surname"
+              required:
+                - name
+                - surname
+              properties:
+                name:
+                  type: string
+                  nullable: true
+                  description: First name.
+                  example: Petr
+                surname:
+                  type: string
+                  nullable: true
+                  description: Last name / family name.
+                  example: Novák
+            - type: object
+              title: "One field for name and surname"
+              required:
+                - nameSurname
+              properties:
+                nameSurname:
+                  type: string
+                  nullable: true
+                  description: Name and surname together.
+                  example: Petr Novák
         options:
           type: object
           description: Query options.
@@ -8049,8 +8060,8 @@ components:
                 type: string
                 nullable: false
               nullable: true
-              default: ["CZ", "SK", "PL"]
-              example: ["CZ", "SK", "PL"]
+              default: ["CZ", "SK"]
+              example: ["CZ", "SK"]
             acceptDegrees:
               type: boolean
               description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'
@@ -9432,8 +9443,8 @@ components:
                 type: string
                 nullable: false
               nullable: true
-              default: ["CZ", "SK", "PL"]
-              example: ["CZ", "SK", "PL"]
+              default: ["CZ", "SK"]
+              example: ["CZ", "SK"]
             acceptDegrees:
               type: boolean
               description: 'Allow to enter a title directly into the name, surname or nameSurname input. For example "Ing. Jan Novák" would be considered as valid/invalid nameSurname'

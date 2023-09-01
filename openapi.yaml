@@ -4943,7 +4943,7 @@ components:
                             default: basic
                             example: full
                           dataSource:
-                            description: TODO
+                            description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
                             type: array
                             items:
                               type: string
@@ -5189,7 +5189,7 @@ components:
                               - full
                             example: full
                           dataSource:
-                            description: TODO
+                            description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
                             type: array
                             items:
                               type: string
@@ -7567,7 +7567,7 @@ components:
           default: basic
           example: full
         dataSource:
-          description: TODO
+          description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
           type: array
           items:
             type: string
@@ -7715,7 +7715,7 @@ components:
           default: basic
           example: full
         dataSource:
-          description: TODO
+          description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
           type: array
           items:
             type: string
@@ -7787,7 +7787,7 @@ components:
               default: basic
               example: full
             dataSource:
-              description: TODO
+              description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
               type: array
               items:
                 type: string
@@ -8054,7 +8054,7 @@ components:
               default: basic
               example: full
             dataSource:
-              description: TODO
+              description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
               type: array
               items:
                 type: string
@@ -8136,7 +8136,7 @@ components:
               default: basic
               example: full
             dataSource:
-              description: TODO
+              description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
               type: array
               items:
                 type: string
@@ -8224,7 +8224,7 @@ components:
               default: basic
               example: full
             dataSource:
-              description: TODO
+              description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
               type: array
               items:
                 type: string
@@ -8344,7 +8344,7 @@ components:
           default: basic
           example: full
         dataSource:
-          description: TODO
+          description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
           type: array
           items:
             type: string
@@ -8406,7 +8406,7 @@ components:
               default: basic
               example: full
             dataSource:
-              description: TODO
+              description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
               type: array
               items:
                 type: string
@@ -9324,7 +9324,7 @@ components:
               default: basic
               example: full
             dataSource:
-              description: TODO
+              description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
               type: array
               items:
                 type: string
@@ -9437,7 +9437,7 @@ components:
               default: basic
               example: extended
             dataSource:
-              description: TODO
+              description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
               type: array
               items:
                 type: string
@@ -10664,7 +10664,7 @@ components:
               default: basic
               example: full
             dataSource:
-              description: TODO
+              description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
               type: array
               items:
                 type: string

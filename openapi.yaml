@@ -7664,11 +7664,11 @@ components:
             lat:
               type: number
               description: Latitude of the searched point.
-              example: 50.0628
+              example: 50.0919999
             lon:
               type: number
               description: Longitude of the searched point.
-              example: 13.9271
+              example: 14.4527403
         options:
           allOf:
             - $ref: "#/components/schemas/LocationRequestOptions"

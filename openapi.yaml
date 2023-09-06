@@ -8106,23 +8106,23 @@ components:
             name:
               type: string
               description: Company name
-              example: Avantro s.r.o.
+              example: AVA Trans s.r.o.
             country:
               type: string
               description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
-              example: CZ
+              example: SK
             registrationNumber:
               type: string
               description: Company registration number (ID)
-              example: Jeseniova 55
+              example: 52072169
             taxNumber:
               type: string
-              description: Company national TAX number
-              example: Jeseniova
+              description: Company national TAX number. Currently available only for SK subjects.
+              example: 2120884337
             vatNumber:
               type: string
               description: Company VAT number
-              example: CZ123456789
+              example: SK2120884337
         options:
           type: object
           description: Query options.
@@ -8191,7 +8191,7 @@ components:
                 name:
                   type: string
                   description: Company name.
-                  example: AVA Trade, s. r. o.
+                  example: AVA Trans s.r.o.
                 country:
                   type: string
                   description: "Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)."
@@ -8199,11 +8199,11 @@ components:
                 registrationNumber:
                   type: string
                   description: Company registration number (ID).
-                  example: "48167941"
+                  example: 52072169
                 taxNumber:
                   type: string
-                  description: Company national TAX number.
-                  example: "2120092029"
+                  description: Company national TAX number. Currently available only for SK subjects.
+                  example: 2120884337
                 vatNumber:
                   type: string
                   description: Company VAT number.
@@ -10634,23 +10634,23 @@ components:
             name:
               type: string
               description: Company name
-              example: Avantro s.r.o.
+              example: AVA Trans s.r.o.
             country:
               type: string
               description: "Country codes in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)"
-              example: CZ
+              example: SK
             registrationNumber:
               type: string
               description: Company registration number (ID)
-              example: Jeseniova 55
+              example: 52072169
             taxNumber:
               type: string
-              description: Company national TAX number
-              example: Jeseniova
+              description: Company national TAX number. Currently available only for SK subjects.
+              example: 2120884337
             vatNumber:
               type: string
               description: Company VAT number
-              example: CZ123456789
+              example: SK2120884337
         options:
           type: object
           description: Query options.

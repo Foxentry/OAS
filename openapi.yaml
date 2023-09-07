@@ -3173,7 +3173,7 @@ components:
                             valueFrom: Pawel
                             value: Pavel
                 errors: []
-            validNameSurnameExtendedDataScope:
+            validNameSurnameFullDataScope:
               value:
                 status: 200
                 request:
@@ -3183,7 +3183,7 @@ components:
                   query:
                     nameSurname: Pavel Novák
                   options:
-                    dataScope: extended
+                    dataScope: full
                     acceptDegrees: false
                     acceptContext: false
                     smartMode: true
@@ -3230,7 +3230,7 @@ components:
                   resultCorrected: null
                   suggestions: []
                 errors: []
-            extendedDataScope:
+            fullDataScope:
               value:
                 status: 200
                 request:
@@ -3240,7 +3240,7 @@ components:
                   query:
                     name: Pavel
                   options:
-                    dataScope: extended
+                    dataScope: full
                     acceptDegrees: false
                     acceptContext: false
                     smartMode: true
@@ -9433,9 +9433,9 @@ components:
               description: "Data scope of returned data. In full datascope information like <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is returned."
               enum:
                 - basic
-                - extended
+                - full
               default: basic
-              example: extended
+              example: full
             dataSource:
               description: Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).
               type: array

@@ -5715,9 +5715,6 @@ components:
           oneOf:
             - type: object
               title: Separate field for name and surname
-              required:
-                - name
-                - surname
               properties:
                 name:
                   type: string

@@ -8114,11 +8114,11 @@ components:
             registrationNumber:
               type: string
               description: Company registration number (ID)
-              example: 52072169
+              example: "52072169"
             taxNumber:
               type: string
               description: Company national TAX number. Currently available only for SK subjects.
-              example: 2120884337
+              example: "2120884337"
             vatNumber:
               type: string
               description: Company VAT number
@@ -8199,11 +8199,11 @@ components:
                 registrationNumber:
                   type: string
                   description: Company registration number (ID).
-                  example: 52072169
+                  example: "52072169"
                 taxNumber:
                   type: string
                   description: Company national TAX number. Currently available only for SK subjects.
-                  example: 2120884337
+                  example: "2120884337"
                 vatNumber:
                   type: string
                   description: Company VAT number.
@@ -10642,11 +10642,11 @@ components:
             registrationNumber:
               type: string
               description: Company registration number (ID)
-              example: 52072169
+              example: "52072169"
             taxNumber:
               type: string
               description: Company national TAX number. Currently available only for SK subjects.
-              example: 2120884337
+              example: "2120884337"
             vatNumber:
               type: string
               description: Company VAT number

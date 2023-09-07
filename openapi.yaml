@@ -2453,8 +2453,8 @@ components:
                         vocative: Pavle
                         nameDays:
                           - country: CZ
-                            month: '6'
-                            day: '29'
+                            month: 6
+                            day: 29
                       - type: surname
                         value: Novák
                         gender: 1
@@ -2466,8 +2466,8 @@ components:
                         vocative: Pavle Nováku
                         nameDays:
                           - country: CZ
-                            month: '6'
-                            day: '29'
+                            month: 6
+                            day: 29
                     errors: []
                   resultCorrected: null
                   suggestions: []
@@ -2496,16 +2496,16 @@ components:
                         vocative: Pavle
                         nameDays:
                           - country: CZ
-                            month: '6'
-                            day: '29'
+                            month: 6
+                            day: 29
                       - type: nameSurname
                         value: Pavel
                         gender: 1
                         vocative: Pavle
                         nameDays:
                           - country: CZ
-                            month: '6'
-                            day: '29'
+                            month: 6
+                            day: 29
                     errors:
                       - group: VALUE
                         type: EMPTY
@@ -7369,13 +7369,13 @@ components:
                   description: 'Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).'
                   example: CZ
                 month:
-                  type: string
+                  type: number
                   description: Month number for name day.
-                  example: '6'
+                  example: 6
                 day:
-                  type: string
+                  type: number
                   description: Day number for name day.
-                  example: '29'
+                  example: 29
               required:
                 - country
                 - month

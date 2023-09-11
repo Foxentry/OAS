@@ -7540,10 +7540,8 @@ components:
           example: EMPTY
         subtype:
           enum:
-            - CONTEXT
             - null
           description: Subtype of error.
-          example: CONTEXT
         severity:
           enum:
             - info
@@ -7587,6 +7585,7 @@ components:
             - NAME
             - NAMESURNAME
             - SURNAME
+            - CONTEXT
           description: Subtype of error.
           example: DEGREE
         severity:

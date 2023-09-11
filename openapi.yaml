@@ -4662,19 +4662,7 @@ components:
                 status: 200
                 request:
                   endpoint: email/validate
-                  code: RXGgaRcYqUzFIjbu2vUXhxTZpeklQt
-                  customId: null
-                  query:
-                    email: info@gmali.com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: true
-                    acceptFreemails: true
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
+                  code: xzRE9ufIsJd1KqcxEtrCsz6TMqqTgX
                 response:
                   result:
                     isValid: false
@@ -4715,15 +4703,14 @@ components:
                             type: email
                             valueFrom: info@gmali.com
                             value: info@gmail.com
+                      errors:
                         - group: VALUE
-                          type: CHANGED
-                          subtype: TYPO
-                          data:
-                            typeFrom: email
-                            type: email
-                            valueFrom: info@gmali.com
-                            value: info@gmail.com
-                      errors: []
+                          type: INVALID
+                          subtype: null
+                          severity: critical
+                          relatedTo:
+                            - email
+                          description: Value is not valid.
                 errors: []
             invalid:
               value:
@@ -4801,19 +4788,7 @@ components:
                 status: 200
                 request:
                   endpoint: email/validate
-                  code: uhnFcafZsyYMSLeaSVJQfEOPyErNtM
-                  customId: null
-                  query:
-                    email: infogmail.com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: true
-                    acceptFreemails: true
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
+                  code: 678dF7zRTR4DMWXNyr1yI7diGy9rh6
                 response:
                   result:
                     isValid: false
@@ -4841,7 +4816,13 @@ components:
                       isCatchAllServer: false
                       isDisposableEmailAddress: false
                       isFreemail: true
-                    errors: []
+                    errors:
+                      - group: VALUE
+                        type: INVALID
+                        subtype: null
+                        severity: critical
+                        relatedTo:
+                          - email
                     fixes:
                       - group: SYNTAX
                         type: VALUE_PART_ADDED
@@ -4887,19 +4868,7 @@ components:
                 status: 200
                 request:
                   endpoint: email/validate
-                  code: lE7l2QQ2sQpgNk6Iu2CxWeIL1fCP8S
-                  customId: null
-                  query:
-                    email: info@gmail.com
-                  options:
-                    validationType: extended
-                    acceptDisposableEmails: true
-                    acceptFreemails: false
-                  client:
-                    country: CZ
-                    location:
-                      lat: 50.0643
-                      lon: 14.4684
+                  code: ooUyXo4UODJRblSE4wZ7sLBEzYOCzX
                 response:
                   result:
                     isValid: false

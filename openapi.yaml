@@ -5668,6 +5668,7 @@ components:
               type: boolean
               description: 'Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.'
               example: false
+              default: false
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
@@ -5745,13 +5746,13 @@ components:
                 - moderate
                 - strict
               description: 'Specifies the depth of name validation. In other words how strict the validator should behave. <b>Minimal</b> = all the names are considered valid as long as there are no forbidden characters used or we are 100% sure the name is invalid. Usually the only thing corrected is format. <b>Moderate</b> = something in between the minimal and strict validation. There are more instances of corrections like typos etc. <b>Strict</b> = the most strict validation depth. Missing names in our database are marked as invalid, the scoring for corrections and suggestions is tweaked.'
-              default: minimal
-              example: minimal
+              default: strict
+              example: strict
             smartMode:
               type: boolean
               description: 'Allows to correct the name (resultCorrected). If this is disabled, the corrections are given as a suggestion.'
               default: true
-              example: false
+              example: true
         client:
           $ref: '#/components/schemas/ClientRequest'
           required:

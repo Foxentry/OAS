@@ -1,5 +1,5 @@
 # OAS
-Foxentry API reference OpenAPI file
+Foxentry API reference OpenAPI file used in Foxentry API reference on [Foxentry.dev](https://foxentry.dev)
 
  ```
      ::::::::  :::    :::     :::     ::::    :::  ::::::::  :::::::::: :::        ::::::::   :::::::: 

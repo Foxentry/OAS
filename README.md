@@ -13,6 +13,6 @@ Foxentry API reference OpenAPI file
 
 Date format: **YYYY-MM-DD**
 
----
-**2023/09/20** - The first official version
----
+***
+## 2023/09/20 - The first official version <br>
+This is the first official public version. Yay! <br><br>

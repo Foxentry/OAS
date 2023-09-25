@@ -2272,26 +2272,19 @@ components:
                 status: 200
                 request:
                   endpoint: name/validate
-                  code: etX1BtdWrShgDprFUVbooHtb65cp0Z
+                  code: qk1ERgQ7HtijUfOFAo00PHXxy6L72I
                 response:
                   result:
                     isValid: true
                     proposal: valid
                     data:
                       name: Pavel
-                      surname: ''
-                      nameSurname: 'Pavel '
+                      surname: null
+                      nameSurname: null
                       context: []
                       degreesBefore: []
                       degreesAfter: []
-                    errors:
-                      - group: VALUE
-                        type: EMPTY
-                        subtype: null
-                        description: Value is empty.
-                        severity: critical
-                        relatedTo:
-                          - surname
+                    errors: []
                   resultCorrected: null
                   suggestions: []
                 errors: []
@@ -2300,15 +2293,15 @@ components:
                 status: 200
                 request:
                   endpoint: name/validate
-                  code: xMYcAuouUUqmyVoker6ImmlMa5T7Q0
+                  code: NbnvwsCLTJzukWtytqkjJ1fOTOksKp
                 response:
                   result:
                     isValid: false
                     proposal: invalid
                     data:
                       name: Paeeewas
-                      surname: ''
-                      nameSurname: 'Paeeewas '
+                      surname: null
+                      nameSurname: null
                       context: []
                       degreesBefore: []
                       degreesAfter: []
@@ -2320,13 +2313,6 @@ components:
                         severity: warning
                         relatedTo:
                           - name
-                      - group: VALUE
-                        type: EMPTY
-                        subtype: null
-                        description: Value is empty.
-                        severity: critical
-                        relatedTo:
-                          - surname
                   resultCorrected: null
                   suggestions: []
                 errors: []
@@ -2335,15 +2321,15 @@ components:
                 status: 200
                 request:
                   endpoint: name/validate
-                  code: Ad2doc6igMwFo4cgECUdtgn9zS5O3L
+                  code: RAE4EeYFdCOjd8de0lLgNfVzw2GZYU
                 response:
                   result:
                     isValid: false
                     proposal: invalidWithCorrection
                     data:
                       name: Palve
-                      surname: ''
-                      nameSurname: 'Palve '
+                      surname: null
+                      nameSurname: null
                       context: []
                       degreesBefore: []
                       degreesAfter: []
@@ -2355,17 +2341,10 @@ components:
                         severity: warning
                         relatedTo:
                           - name
-                      - group: VALUE
-                        type: EMPTY
-                        subtype: null
-                        description: Value is empty.
-                        severity: critical
-                        relatedTo:
-                          - surname
                   resultCorrected:
                     isValid: true
                     data:
-                      name: Pavel
+                      name: Jalée
                       surname: null
                       nameSurname: null
                       context: []
@@ -2380,7 +2359,7 @@ components:
                           typeFrom: name
                           type: name
                           valueFrom: Palve
-                          value: Pavel
+                          value: Jalée
                   suggestions: []
                 errors: []
             validWithSuggestion:
@@ -2388,33 +2367,26 @@ components:
                 status: 200
                 request:
                   endpoint: name/validate
-                  code: Y8GXVGdDvSgjMry1Bqe84VC6Sz1FOB
+                  code: rBIJyrQo80YV56WFDG70Vo8rsyQe1s
                 response:
                   result:
                     isValid: true
                     proposal: validWithSuggestion
                     data:
                       name: Pawel
-                      surname: ''
-                      nameSurname: 'Pawel '
+                      surname: null
+                      nameSurname: null
                       context: []
                       degreesBefore: []
                       degreesAfter: []
-                    errors:
-                      - group: VALUE
-                        type: EMPTY
-                        subtype: null
-                        description: Value is empty.
-                        severity: critical
-                        relatedTo:
-                          - surname
+                    errors: []
                   resultCorrected: null
                   suggestions:
                     - isValid: true
                       data:
                         name: Pavel
-                        surname: ''
-                        nameSurname: 'Pavel '
+                        surname: null
+                        nameSurname: null
                         context: []
                         degreesBefore: []
                         degreesAfter: []
@@ -2434,7 +2406,7 @@ components:
                 status: 200
                 request:
                   endpoint: name/validate
-                  code: 2PRkxDEB39Vowhu0jF9LbfAOmqM4bl
+                  code: BPORco3Jh8iDiwF7dAT3IpoWU9Xtwi
                 response:
                   result:
                     isValid: true
@@ -2477,15 +2449,15 @@ components:
                 status: 200
                 request:
                   endpoint: name/validate
-                  code: ndroVvjjQTENIIfTgRkY80w5vbz7cZ
+                  code: 03NOJyxQqT5LWWIevUehlbNlVlBzIX
                 response:
                   result:
                     isValid: true
                     proposal: valid
                     data:
                       name: Pavel
-                      surname: ''
-                      nameSurname: 'Pavel '
+                      surname: null
+                      nameSurname: null
                       context: []
                       degreesBefore: []
                       degreesAfter: []
@@ -2498,22 +2470,7 @@ components:
                           - country: CZ
                             month: 6
                             day: 29
-                      - type: nameSurname
-                        value: Pavel
-                        gender: 1
-                        vocative: Pavle
-                        nameDays:
-                          - country: CZ
-                            month: 6
-                            day: 29
-                    errors:
-                      - group: VALUE
-                        type: EMPTY
-                        subtype: null
-                        description: Value is empty.
-                        severity: critical
-                        relatedTo:
-                          - surname
+                    errors: []
                   resultCorrected: null
                   suggestions: []
                 errors: []

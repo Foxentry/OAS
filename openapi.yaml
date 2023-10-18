@@ -871,7 +871,9 @@ components:
                   options:
                     dataScope: basic
                     resultsLimit: 10
-                    includeTerminatedSubjects: false
+                    includeTerminatedSubjects: false,
+                    cityFormat: basic
+                    zipFormat: false
                   client:
                     country: CZ
                     location:
@@ -902,7 +904,9 @@ components:
                     includeTerminatedSubjects: false
                     filterMode: limit
                     filterAcceptFormat: true
-                    filterExactMatch: true
+                    filterExactMatch: true,
+                    cityFormat: basic
+                    zipFormat: false
                   client:
                     country: CZ
                     location:
@@ -950,7 +954,9 @@ components:
                     registrationNumber: '04997476'
                   options:
                     dataScope: full
-                    includeTerminatedSubjects: false
+                    includeTerminatedSubjects: false,
+                    cityFormat: basic
+                    zipFormat: false
                   client:
                     country: CZ
                     location:
@@ -5785,6 +5791,22 @@ components:
               description: Whether or not to return in the API response also entities that have already been terminated.
               default: false
               example: false
+            zipFormat:
+              description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
+              type: boolean
+              default: false
+              example: false
+              nullable: false
+            cityFormat:
+              description: 'This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.'
+              type: string
+              enum:
+                - minimal
+                - basic
+                - extended
+              default: basic
+              example: basic
+              nullable: false
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
@@ -5903,6 +5925,22 @@ components:
               description: 'If true, only exact match would be accepted. For example filter registrationID "0499" would return 0 results, since no company with the exact registration ID exists.'
               example: true
               default: true
+            zipFormat:
+              description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
+              type: boolean
+              default: false
+              example: false
+              nullable: false
+            cityFormat:
+              description: 'This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.'
+              type: string
+              enum:
+                - minimal
+                - basic
+                - extended
+              default: basic
+              example: basic
+              nullable: false
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
@@ -5995,6 +6033,22 @@ components:
           description: Whether or not to include entities that have already ended their existence in the output.
           default: false
           example: false
+        zipFormat:
+          description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
+          type: boolean
+          default: false
+          example: false
+          nullable: false
+        cityFormat:
+          description: 'This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.'
+          type: string
+          enum:
+            - minimal
+            - basic
+            - extended
+          default: basic
+          example: basic
+          nullable: false
     GetCompanyDataResponseRequest:
       type: object
       required:
@@ -7001,6 +7055,22 @@ components:
               description: 'If true, only exact match would be accepted. For example filter registrationID "0499" would return 0 results, since no company with the exact registration ID exists.'
               example: true
               default: true
+            zipFormat:
+              description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
+              type: boolean
+              default: false
+              example: false
+              nullable: false
+            cityFormat:
+              description: 'This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.'
+              type: string
+              enum:
+                - minimal
+                - basic
+                - extended
+              default: basic
+              example: basic
+              nullable: false
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
@@ -8295,6 +8365,22 @@ components:
               minimum: 1
               maximum: 20
               default: 10
+            zipFormat:
+              description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
+              type: boolean
+              default: false
+              example: false
+              nullable: false
+            cityFormat:
+              description: 'This option determines in what format is city returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.'
+              type: string
+              enum:
+                - minimal
+                - basic
+                - extended
+              default: basic
+              example: basic
+              nullable: false
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:

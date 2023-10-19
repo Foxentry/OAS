@@ -871,7 +871,7 @@ components:
                   options:
                     dataScope: basic
                     resultsLimit: 10
-                    includeTerminatedSubjects: false,
+                    includeTerminatedSubjects: false
                     cityFormat: basic
                     zipFormat: false
                   client:
@@ -904,7 +904,7 @@ components:
                     includeTerminatedSubjects: false
                     filterMode: limit
                     filterAcceptFormat: true
-                    filterExactMatch: true,
+                    filterExactMatch: true
                     cityFormat: basic
                     zipFormat: false
                   client:
@@ -954,7 +954,7 @@ components:
                     registrationNumber: '04997476'
                   options:
                     dataScope: full
-                    includeTerminatedSubjects: false,
+                    includeTerminatedSubjects: false
                     cityFormat: basic
                     zipFormat: false
                   client:

@@ -14,5 +14,8 @@ Foxentry API reference OpenAPI file used in Foxentry API reference on [Foxentry.
 Date format: **YYYY-MM-DD**
 
 ***
+## 2023/10/19 - New options for company endpoints <br>
+Added new cityFormat and zipFormat options for endpoints company/get, company/search and company/validate <br><br>
+
 ## 2023/09/20 - The first official version <br>
 This is the first official public version. Yay! <br><br>

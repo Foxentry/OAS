@@ -5591,20 +5591,30 @@ components:
           description: Custom ID assigned by you if you need so.
           example: customer567914
         query:
-          type: object
-          properties:
-            prefix:
-              type: string
-              description: Phone number prefix.
-              example: '+420'
-            number:
-              type: string
-              description: Phone number.
-              example: '607123456'
-            numberWithPrefix:
-              type: string
-              description: Phone number with prefix.
-              example: '+420775111222'
+          oneOf:
+            - type: object
+              required:
+                - prefix
+                - number
+              title: Separate field for number and prefix
+              properties:
+                prefix:
+                  type: string
+                  description: Phone number prefix.
+                  example: '+420'
+                number:
+                  type: string
+                  description: Phone number.
+                  example: '607123456'
+            - type: object
+              required:
+                - numberWithPrefix
+              title: One field for number with prefix.
+              properties:
+                numberWithPrefix:
+                  type: string
+                  description: Phone number with prefix.
+                  example: '+420775111222'        
         options:
           type: object
           description: Query options.
@@ -8565,6 +8575,8 @@ components:
                 - invalidWithPartialCorrection
                 - invalidWithSuggestion
                 - invalidWithCorrectionWithSuggestion
+                - unknownWithCorrection
+                - unknownWithPartialCorrection
               description: Proposed solution by Foxentry how you should process the response in your form or application.
             data:
               $ref: '#/components/schemas/EmailData'

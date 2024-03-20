@@ -7623,6 +7623,7 @@ components:
         group:
           enum:
             - FORMAT
+            - VALUE
           description: Group of fix.
           example: FORMAT
         type:
@@ -7635,6 +7636,7 @@ components:
             - CASE_SENSITIVITY
             - DIACRITICS
             - WHITESPACES
+            - TYPO
             - null
           description: Subtype of fix.
           example: CASE_SENSITIVITY

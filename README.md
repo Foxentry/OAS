@@ -14,6 +14,9 @@ Foxentry API reference OpenAPI file used in Foxentry API reference on [Foxentry.
 Date format: **YYYY-MM-DD**
 
 ***
+## 2024/03/20<br>
+- added missing enum values to the FixFormatGlobal object
+
 ## 2023/10/25<br>
 - added new proposal values for endpoint email/validate (unknownWithCorrection, unknownWithPartialCorrection)
 - updated query definition for endpoint phone/validate

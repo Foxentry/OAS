@@ -96,6 +96,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -149,6 +151,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -202,6 +206,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -255,6 +261,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -308,6 +316,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -361,6 +371,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -414,6 +426,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -467,6 +481,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -520,6 +536,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -573,6 +591,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -626,6 +646,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -5614,7 +5636,7 @@ components:
                 numberWithPrefix:
                   type: string
                   description: Phone number with prefix.
-                  example: '+420775111222'        
+                  example: '+420775111222'
         options:
           type: object
           description: Query options.

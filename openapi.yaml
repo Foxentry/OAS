@@ -3206,6 +3206,7 @@ components:
                             items:
                               type: string
                               nullable: false
+                              example: CZ
                             nullable: true
                             default:
                               - CZ
@@ -3434,6 +3435,7 @@ components:
                             items:
                               type: string
                               nullable: false
+                              example: CZ
                             nullable: true
                             default:
                               - CZ
@@ -5211,6 +5213,7 @@ components:
           items:
             type: string
             nullable: false
+            example: CZ
           nullable: true
           default:
             - CZ
@@ -5363,6 +5366,7 @@ components:
           items:
             type: string
             nullable: false
+            example: CZ
           nullable: true
           default:
             - CZ
@@ -5441,6 +5445,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -5718,6 +5723,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -5803,6 +5809,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -5912,6 +5919,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -6051,6 +6059,7 @@ components:
           items:
             type: string
             nullable: false
+            example: CZ
           nullable: true
           default:
             - CZ
@@ -6133,6 +6142,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -7042,6 +7052,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -7173,6 +7184,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -8386,6 +8398,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -9176,6 +9189,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: streetWithNumber
           example:
             - streetWithNumber
             - street
@@ -9213,6 +9227,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: prefix
         description:
           enum:
             - Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
@@ -9247,6 +9262,8 @@ components:
           items:
             type: string
             description: Error related to.
+          example:
+            - unsupportedParameter
         description:
           enum:
             - Query parameter is not supported for this endpoint.
@@ -9281,6 +9298,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: email
         description:
           enum:
             - At least one of listed parameters is required.

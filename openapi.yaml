@@ -5113,10 +5113,6 @@ components:
       headers:
         Foxentry-Api-Version':
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
         Foxentry-Rate-Limit':
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
@@ -5156,10 +5152,6 @@ components:
       headers:
         Foxentry-Api-Version':
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
         Foxentry-Rate-Limit':
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
@@ -5186,10 +5178,6 @@ components:
       headers:
         Foxentry-Api-Version':
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
         Foxentry-Rate-Limit':
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
@@ -5216,10 +5204,6 @@ components:
       headers:
         Foxentry-Api-Version':
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
         Foxentry-Rate-Limit':
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
@@ -5250,10 +5234,6 @@ components:
       headers:
         Foxentry-Api-Version':
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
         Foxentry-Rate-Limit':
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
@@ -5283,10 +5263,6 @@ components:
       headers:
         Foxentry-Api-Version':
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
         Foxentry-Rate-Limit':
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
@@ -5313,10 +5289,6 @@ components:
       headers:
         Foxentry-Api-Version':
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
         Foxentry-Rate-Limit':
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
@@ -5347,10 +5319,6 @@ components:
       headers:
         Foxentry-Api-Version':
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
         Foxentry-Rate-Limit':
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
@@ -5384,10 +5352,6 @@ components:
       headers:
         Foxentry-Api-Version':
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
         Foxentry-Rate-Limit':
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:

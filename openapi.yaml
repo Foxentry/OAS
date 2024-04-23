@@ -96,6 +96,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -149,6 +151,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -202,6 +206,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -255,6 +261,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -308,6 +316,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -361,6 +371,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -414,6 +426,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -467,6 +481,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -520,6 +536,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -573,6 +591,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -626,6 +646,8 @@ paths:
           required: false
           schema:
             type: boolean
+            default: false
+            example: false
         - name: Api-Version
           in: header
           description: API version.
@@ -3184,6 +3206,7 @@ components:
                             items:
                               type: string
                               nullable: false
+                              example: CZ
                             nullable: true
                             default:
                               - CZ
@@ -3412,6 +3435,7 @@ components:
                             items:
                               type: string
                               nullable: false
+                              example: CZ
                             nullable: true
                             default:
                               - CZ
@@ -5189,6 +5213,7 @@ components:
           items:
             type: string
             nullable: false
+            example: CZ
           nullable: true
           default:
             - CZ
@@ -5341,6 +5366,7 @@ components:
           items:
             type: string
             nullable: false
+            example: CZ
           nullable: true
           default:
             - CZ
@@ -5419,6 +5445,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -5614,7 +5641,7 @@ components:
                 numberWithPrefix:
                   type: string
                   description: Phone number with prefix.
-                  example: '+420775111222'        
+                  example: '+420775111222'
         options:
           type: object
           description: Query options.
@@ -5696,6 +5723,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -5781,6 +5809,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -5890,6 +5919,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -6029,6 +6059,7 @@ components:
           items:
             type: string
             nullable: false
+            example: CZ
           nullable: true
           default:
             - CZ
@@ -6111,6 +6142,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -7020,6 +7052,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -7151,6 +7184,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -7364,6 +7398,7 @@ components:
           vocative:
             type: string
             description: Vocative form of value.
+            example: Petře
           nameDays:
             type: array
             nullable: true
@@ -7433,6 +7468,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: numberWithPrefix
         description:
           enum:
             - Disallowed characters were used in the value.
@@ -7478,6 +7514,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: name
         description:
           enum:
             - Value is missing the name part.
@@ -7520,6 +7557,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: numberWithPrefix
         description:
           enum:
             - Invalid case sensitivity. Specific rules are applied to the use of upper and lower case letters.
@@ -7562,6 +7600,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: numberWithPrefix
         description:
           type: string
           enum:
@@ -7608,6 +7647,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: name
         description:
           enum:
             - Degree value is invalid.
@@ -7983,6 +8023,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: numberWithPrefix
         description:
           enum:
             - Value contains duplicated '+' sign.
@@ -8023,6 +8064,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: numberWithPrefix
         description:
           enum:
             - Prefix is invalid.
@@ -8245,6 +8287,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: streetWithNumber
         description:
           enum:
             - Value is missing the city.
@@ -8355,6 +8398,7 @@ components:
               items:
                 type: string
                 nullable: false
+                example: CZ
               nullable: true
               default:
                 - CZ
@@ -8498,6 +8542,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: name
         description:
           enum:
             - Value contains duplicated legal form.
@@ -8724,6 +8769,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: email
         description:
           enum:
             - The domain contains invalid syntax.
@@ -8769,6 +8815,7 @@ components:
           items:
             type: string
             description: Error related to.
+            example: email
         description:
           enum:
             - Domain name is invalid.
@@ -8867,6 +8914,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Cannot process the request because of the empty body. Please check Foxentry.dev for more information.
@@ -8898,6 +8948,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Cannot process the request because the JSON is not valid. Please check Foxentry.dev for more information.
@@ -8929,6 +8982,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Your API call body does not contain any requests.
@@ -8960,6 +9016,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Your request length is bigger than allowed. Please contact us if you think this is a mistake.
@@ -8991,6 +9050,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Options parameter is not supported for this endpoint.
@@ -9022,6 +9084,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Value in paramater is not valid. Please check Foxentry.dev for more information.
@@ -9053,6 +9118,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Your request query is empty. Please check Foxentry.dev for more information about how to set up the query properly.
@@ -9084,6 +9152,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Combination of options or their values is not valid.
@@ -9115,6 +9186,13 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
+            example: streetWithNumber
+          example:
+            - streetWithNumber
+            - street
         description:
           enum:
             - It is not possible to use these parameters at the same time in one request.
@@ -9146,6 +9224,10 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
+            example: prefix
         description:
           enum:
             - Query parameter is missing. Please check Foxentry.dev for more information about how to set up the query properly.
@@ -9177,6 +9259,11 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
+          example:
+            - unsupportedParameter
         description:
           enum:
             - Query parameter is not supported for this endpoint.
@@ -9208,6 +9295,10 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
+            example: email
         description:
           enum:
             - At least one of listed parameters is required.
@@ -9245,6 +9336,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Invalid authorization credentials sent. Check Foxentry.dev for more information how to set up the AUTH properly.
@@ -9283,6 +9377,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - No credit available. You need to purchase a sufficient ammount of credits in the project administration at app.foxentry.com.
@@ -9321,6 +9418,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Provided API key is not valid. Please check the project settings at app.foxentry.com.
@@ -9352,6 +9452,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Provided access token is not valid. Please check the project settings at app.foxentry.com.
@@ -9383,6 +9486,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Website domain is not allowed in the project settings.
@@ -9414,6 +9520,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - The API key has IP limits set and your IP address is not allowed. Change the project settings at app.foxentry.com.
@@ -9451,6 +9560,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Requested API version is not available. Please check Foxentry.dev for the supported versions.
@@ -9482,6 +9594,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Endpoint not found. Please check Foxentry.dev for the supported endpoints.
@@ -9513,6 +9628,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - The project does not exist. Please check the available projects at app.foxentry.com or contact the support.
@@ -9551,6 +9669,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - HTTP method is not allowed for this endpoint. Please check Foxentry.dev for more information.
@@ -9589,6 +9710,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Requested API version is not available. Please check Foxentry.dev for the supported versions.
@@ -9620,6 +9744,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - The maximum daily limit has been reached. Adjust the settings in the project or wait until the limit is reset.
@@ -9651,6 +9778,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - The maximum daily limit per IP address has been reached. Adjust the settings in the project or wait until the limit is reset.
@@ -9682,6 +9812,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - The maximum allowed request rate limit has been reached. Check Foxentry.dev for more information or contact the support.
@@ -9718,6 +9851,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Failed to process your request due to a billing internal error. Please contact us if the error persists.
@@ -9748,6 +9884,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Failed to establish connection with the database server. Please contact us if the error persists.
@@ -9778,6 +9917,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - An error has occured during the communication with our database. Please contact us if the error persists.
@@ -9808,6 +9950,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Internal datastore is not available at the moment. No operation on this datastore is possible.
@@ -9838,6 +9983,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Failed to process your request. Please try again later or contact us.
@@ -9868,6 +10016,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - API timeout in effect. Your request took too much time to process.
@@ -9899,6 +10050,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - Failed to fetch project data needed for processing your request. Please contact us if the error persists.
@@ -9937,6 +10091,9 @@ components:
         relatedTo:
           description: List of the affected inputs.
           type: array
+          items:
+            type: string
+            description: Error related to.
         description:
           enum:
             - API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.

@@ -14,8 +14,14 @@ Foxentry API reference OpenAPI file used in Foxentry API reference on [Foxentry.
 Date format: **YYYY-MM-DD**
 
 ***
+## 2024/04/23<br>
+- added missing examples and default values
+- added response headers
+<br><br>
+
 ## 2024/03/20<br>
 - added missing enum values to the FixFormatGlobal object
+<br><br>
 
 ## 2023/10/25<br>
 - added new proposal values for endpoint email/validate (unknownWithCorrection, unknownWithPartialCorrection)

@@ -1026,13 +1026,13 @@ components:
     GetCompanyData:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -1701,13 +1701,13 @@ components:
     EmailSearch:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -1786,13 +1786,13 @@ components:
     CompanySearch:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -2365,13 +2365,13 @@ components:
     NameValidation:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -2608,13 +2608,13 @@ components:
     ValidatePhoneNumber:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -2815,13 +2815,13 @@ components:
     LocationSearch:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -3243,13 +3243,13 @@ components:
     LocationLocalization:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -3400,13 +3400,13 @@ components:
     LocationGet:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -3615,13 +3615,13 @@ components:
     LocationValidation:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -4181,13 +4181,13 @@ components:
     ValidateCompanyData:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -4786,13 +4786,13 @@ components:
     ValidateEmail:
       description: Successful response
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
         Foxentry-Daily-Credits-Left:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
         Foxentry-Daily-Credits-Limit:
             $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -5111,9 +5111,9 @@ components:
     Error400:
       description: Bad Request.
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -5150,9 +5150,9 @@ components:
     Error401:
       description: Unauthorized.
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -5176,9 +5176,9 @@ components:
     Error402:
       description: Payment Required.
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -5202,9 +5202,9 @@ components:
     Error403:
       description: Forbidden.
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -5232,9 +5232,9 @@ components:
     Error404:
       description: Not Found.
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -5261,9 +5261,9 @@ components:
     Error405:
       description: Method Not Allowed.
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -5287,9 +5287,9 @@ components:
     Error429:
       description: Too Many Requests.
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -5317,9 +5317,9 @@ components:
     Error500:
       description: Internal Server Error.
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
@@ -5350,9 +5350,9 @@ components:
     Error503:
       description: Service Unavailable.
       headers:
-        Foxentry-Api-Version':
+        Foxentry-Api-Version:
             $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit':
+        Foxentry-Rate-Limit:
             $ref: '#/components/headers/Foxentry-Rate-Limit'
         Foxentry-Rate-Limit-Period:
             $ref: '#/components/headers/Foxentry-Rate-Limit-Period'

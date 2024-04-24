@@ -698,7 +698,40 @@ tags:
     description: Names operations
   - name: Phone
     description: Phone operations
+
 components:
+  headers:
+    Foxentry-Api-Version:
+      schema:
+        type: string
+        example: '2.0'
+      description: The version of the Foxentry API
+    Foxentry-Daily-Credits-Left:
+      schema:
+        type: number
+        example: 9881.64
+      description: The amount of daily credits left
+    Foxentry-Daily-Credits-Limit:
+      schema:
+        type: number
+        example: 10000
+      description: The daily credits limit
+    Foxentry-Rate-Limit:
+      schema:
+        type: integer
+        example: 5000
+      description: The rate limit
+    Foxentry-Rate-Limit-Period:
+      schema:
+        type: integer
+        example: 900
+      description: The rate limit period
+    Foxentry-Rate-Limit-Remaining:
+      schema:
+        type: integer
+        example: 4999
+      description: The remaining rate limit
+
   requestBodies:
     LocationSearch:
       content:
@@ -992,6 +1025,19 @@ components:
   responses:
     GetCompanyData:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -1654,6 +1700,19 @@ components:
               - response
     EmailSearch:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -1726,6 +1785,19 @@ components:
                 errors: []
     CompanySearch:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -2292,6 +2364,19 @@ components:
               - response
     NameValidation:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -2522,6 +2607,19 @@ components:
               - errors
     ValidatePhoneNumber:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -2716,6 +2814,19 @@ components:
               - response
     LocationSearch:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -3131,6 +3242,19 @@ components:
               - request
     LocationLocalization:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -3275,6 +3399,19 @@ components:
               - response
     LocationGet:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -3477,6 +3614,19 @@ components:
               - response
     LocationValidation:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -4030,6 +4180,19 @@ components:
               - response
     ValidateCompanyData:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -4622,6 +4785,19 @@ components:
               - response
     ValidateEmail:
       description: Successful response
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Daily-Credits-Left:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        Foxentry-Daily-Credits-Limit:
+            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -4934,6 +5110,15 @@ components:
               - response
     Error400:
       description: Bad Request.
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -4964,6 +5149,15 @@ components:
 
     Error401:
       description: Unauthorized.
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -4981,6 +5175,15 @@ components:
                       $ref: '#/components/schemas/Error401RequestAuth'
     Error402:
       description: Payment Required.
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -4998,6 +5201,15 @@ components:
                       $ref: '#/components/schemas/Error402RequestBillingNoCredit'
     Error403:
       description: Forbidden.
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5019,6 +5231,15 @@ components:
                         - $ref: '#/components/schemas/Error403RequestNotAllowedIp'
     Error404:
       description: Not Found.
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5039,6 +5260,15 @@ components:
                         - $ref: '#/components/schemas/Error404RequestProjetNotFound'
     Error405:
       description: Method Not Allowed.
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5056,6 +5286,15 @@ components:
                       $ref: '#/components/schemas/Error405RequestNotAllowedMethod'
     Error429:
       description: Too Many Requests.
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5077,6 +5316,15 @@ components:
                         - $ref: '#/components/schemas/Error429RequestRateLimitTooManyRequests'
     Error500:
       description: Internal Server Error.
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5101,6 +5349,15 @@ components:
                         - $ref: '#/components/schemas/Error500RequestProjectNoData'
     Error503:
       description: Service Unavailable.
+      headers:
+        Foxentry-Api-Version':
+            $ref: '#/components/headers/Foxentry-Api-Version'
+        Foxentry-Rate-Limit':
+            $ref: '#/components/headers/Foxentry-Rate-Limit'
+        Foxentry-Rate-Limit-Period:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        Foxentry-Rate-Limit-Remaining:
+            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -10099,5 +10356,6 @@ components:
             - API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
           description: Description of error.
           example: API endpoint is temporary unavailable. Please contact us at info@foxentry.com if the error persists.
+
 security:
   - BearerAuth: []

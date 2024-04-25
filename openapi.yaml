@@ -5295,7 +5295,7 @@ components:
                       oneOf:
                         - $ref: '#/components/schemas/Error404RequestApiVersion'
                         - $ref: '#/components/schemas/Error404RequestEndpointNotFound'
-                        - $ref: '#/components/schemas/Error404RequestProjetNotFound'
+                        - $ref: '#/components/schemas/Error404RequestProjectNotFound'
     Error405:
       description: Method Not Allowed.
       headers:
@@ -5958,6 +5958,17 @@ components:
               items:
                 type: string
                 example: '+420'
+            preferredPrefixes:
+              type: array
+              description: Ordered list of preferred prefixes. If phone number is valid with multiple prefixes, the resultCorrected will use the first valid prefix from this list. If not set, the resultCorrected will be null and there will be all valid combinations in the suggestions.
+              nullable: true
+              items:
+                type: string
+                example: '+420'
+              default: []
+              example:
+                - '+420'
+                - '+421'
             defaultPrefix:
               type: string
               description: Default international prefix if not part of the query. This is used for the validator to make more accurate results.
@@ -9910,7 +9921,7 @@ components:
             - Endpoint not found. Please check Foxentry.dev for the supported endpoints.
           description: Description of error.
           example: Endpoint not found. Please check Foxentry.dev for the supported endpoints.
-    Error404RequestProjetNotFound:
+    Error404RequestProjectNotFound:
       type: object
       properties:
         group:

@@ -1693,7 +1693,10 @@ components:
               response:
                 $ref: '#/components/schemas/GetCompanyDataResults'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - request
@@ -1753,7 +1756,10 @@ components:
               response:
                 $ref: '#/components/schemas/EmailSearchResponse'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - request
@@ -2357,7 +2363,10 @@ components:
               response:
                 $ref: '#/components/schemas/CompanySearchResults'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - request
@@ -2599,7 +2608,10 @@ components:
               response:
                 $ref: '#/components/schemas/NameValidationResults'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - request
@@ -2807,7 +2819,10 @@ components:
               response:
                 $ref: '#/components/schemas/ValidatePhoneNumberResults'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - request
@@ -3236,7 +3251,10 @@ components:
               response:
                 $ref: '#/components/schemas/LocationSearchResponse'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - request
@@ -3392,7 +3410,10 @@ components:
               response:
                 $ref: '#/components/schemas/LocationLocalizationResults'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - request
@@ -3606,7 +3627,10 @@ components:
               response:
                 $ref: '#/components/schemas/LocationGetResults'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - request
@@ -4172,7 +4196,10 @@ components:
               response:
                 $ref: '#/components/schemas/LocationValidationResponse'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - errors
@@ -4778,7 +4805,10 @@ components:
               response:
                 $ref: '#/components/schemas/ValidateCompanyDataResults'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - status
               - request
@@ -5102,7 +5132,10 @@ components:
               response:
                 $ref: '#/components/schemas/ValidateEmailResponse'
               errors:
+                description: List of errors related to the request. Should be empty if the request finished successfully.
                 type: array
+                items: {}
+                maxItems: 0
             required:
               - errors
               - status
@@ -5131,6 +5164,7 @@ components:
               - type: object
                 properties:
                   errors:
+                    description: List of errors related to the request. Should be empty if the request finished successfully.
                     type: array
                     items:
                       oneOf:
@@ -5170,6 +5204,7 @@ components:
               - type: object
                 properties:
                   errors:
+                    description: List of errors related to the request. Should be empty if the request finished successfully.
                     type: array
                     items:
                       $ref: '#/components/schemas/Error401RequestAuth'
@@ -5196,6 +5231,7 @@ components:
               - type: object
                 properties:
                   errors:
+                    description: List of errors related to the request. Should be empty if the request finished successfully.
                     type: array
                     items:
                       $ref: '#/components/schemas/Error402RequestBillingNoCredit'
@@ -5222,6 +5258,7 @@ components:
               - type: object
                 properties:
                   errors:
+                    description: List of errors related to the request. Should be empty if the request finished successfully.
                     type: array
                     items:
                       oneOf:
@@ -5252,12 +5289,13 @@ components:
               - type: object
                 properties:
                   errors:
+                    description: List of errors related to the request. Should be empty if the request finished successfully.
                     type: array
                     items:
                       oneOf:
                         - $ref: '#/components/schemas/Error404RequestApiVersion'
                         - $ref: '#/components/schemas/Error404RequestEndpointNotFound'
-                        - $ref: '#/components/schemas/Error404RequestProjetNotFound'
+                        - $ref: '#/components/schemas/Error404RequestProjectNotFound'
     Error405:
       description: Method Not Allowed.
       headers:
@@ -5307,6 +5345,7 @@ components:
               - type: object
                 properties:
                   errors:
+                    description: List of errors related to the request. Should be empty if the request finished successfully.
                     type: array
                     items:
                       oneOf:
@@ -5337,6 +5376,7 @@ components:
               - type: object
                 properties:
                   errors:
+                    description: List of errors related to the request. Should be empty if the request finished successfully.
                     type: array
                     items:
                       oneOf:
@@ -5370,6 +5410,7 @@ components:
               - type: object
                 properties:
                   errors:
+                    description: List of errors related to the request. Should be empty if the request finished successfully.
                     type: array
                     items:
                       $ref: '#/components/schemas/Error503RequestEndpointNotAvailable'
@@ -5917,6 +5958,17 @@ components:
               items:
                 type: string
                 example: '+420'
+            preferredPrefixes:
+              type: array
+              description: Ordered list of preferred prefixes. If phone number is valid with multiple prefixes, the resultCorrected will use the first valid prefix from this list. If not set, the resultCorrected will be null and there will be all valid combinations in the suggestions.
+              nullable: true
+              items:
+                type: string
+                example: '+420'
+              default: []
+              example:
+                - '+420'
+                - '+421'
             defaultPrefix:
               type: string
               description: Default international prefix if not part of the query. This is used for the validator to make more accurate results.
@@ -6013,8 +6065,6 @@ components:
               example: true
         client:
           $ref: '#/components/schemas/ClientRequest'
-          required:
-            - query
       required:
         - query
     ValidateCompanyDataRequest:
@@ -7051,6 +7101,7 @@ components:
         - full
     LocationNumber:
       type: object
+      nullable: true
       properties:
         part1:
           type: string
@@ -7153,7 +7204,6 @@ components:
               nullable: true
               example: Jeseniova
             number:
-              nullable: true
               $ref: '#/components/schemas/LocationNumber'
             streetWithNumber:
               type: string
@@ -7520,6 +7570,7 @@ components:
             details:
               $ref: '#/components/schemas/NameValidationResultsDetails'
             errors:
+              description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
               type: array
               items:
                 oneOf:
@@ -7547,7 +7598,7 @@ components:
               $ref: '#/components/schemas/NameValidationResultsDetails'
             fixes:
               type: array
-              description: All changes listed in comparison to the sent query.
+              description: List of all changes applied to the query data in order to get the corrected result.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -7573,7 +7624,7 @@ components:
                 $ref: '#/components/schemas/NameValidationResultsDetails'
               fixes:
                 type: array
-                description: All changes listed in comparison to the sent query.
+                description: List of all changes applied to the query data in order to get the suggested result.
                 items:
                   oneOf:
                     - $ref: '#/components/schemas/FixFormatGlobal'
@@ -8099,6 +8150,7 @@ components:
               $ref: '#/components/schemas/ValidatePhoneNumberData'
             errors:
               type: array
+              description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8124,6 +8176,7 @@ components:
               $ref: '#/components/schemas/ValidatePhoneNumberData'
             errors:
               type: array
+              description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8133,7 +8186,7 @@ components:
                   - $ref: '#/components/schemas/ErrorValuePhone'
             fixes:
               type: array
-              description: All changes listed in comparison to the sent query.
+              description: List of all changes applied to the query data in order to get the corrected result.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -8154,6 +8207,7 @@ components:
                 $ref: '#/components/schemas/ValidatePhoneNumberData'
               errors:
                 type: array
+                description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
                 items:
                   oneOf:
                     - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8163,7 +8217,7 @@ components:
                     - $ref: '#/components/schemas/ErrorValuePhone'
               fixes:
                 type: array
-                description: All changes listed in comparison to the sent query.
+                description: List of all changes applied to the query data in order to get the suggested result.
                 items:
                   oneOf:
                     - $ref: '#/components/schemas/FixFormatGlobal'
@@ -8432,6 +8486,7 @@ components:
               $ref: '#/components/schemas/LocationData'
             errors:
               type: array
+              description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8455,6 +8510,7 @@ components:
               $ref: '#/components/schemas/LocationData'
             errors:
               type: array
+              description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8463,7 +8519,7 @@ components:
                   - $ref: '#/components/schemas/ErrorValueGlobal'
             fixes:
               type: array
-              description: All changes listed in comparison to the sent query.
+              description: List of all changes applied to the query data in order to get the corrected result.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -8490,7 +8546,7 @@ components:
                 $ref: '#/components/schemas/LocationData'
               fixes:
                 type: array
-                description: All changes listed in comparison to the sent query.
+                description: List of all changes applied to the query data in order to get the suggested result.
                 items:
                   oneOf:
                     - $ref: '#/components/schemas/FixFormatGlobal'
@@ -8500,6 +8556,7 @@ components:
                     - $ref: '#/components/schemas/FixValueLocation'
               errors:
                 type: array
+                description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
                 items:
                   oneOf:
                     - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8723,6 +8780,7 @@ components:
               example: valid
             errors:
               type: array
+              description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8742,6 +8800,7 @@ components:
               example: true
             errors:
               type: array
+              description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8750,7 +8809,7 @@ components:
                   - $ref: '#/components/schemas/ErrorValueGlobal'
             fixes:
               type: array
-              description: All changes listed in comparison to the sent query.
+              description: List of all changes applied to the query data in order to get the corrected result.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -8837,6 +8896,7 @@ components:
           example: true
         errors:
           type: array
+          description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
           items:
             oneOf:
               - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8845,7 +8905,7 @@ components:
               - $ref: '#/components/schemas/ErrorValueGlobal'
         fixes:
           type: array
-          description: All changes listed in comparison to the sent query.
+          description: List of all changes applied to the query data in order to get the corrected result.
           items:
             oneOf:
               - $ref: '#/components/schemas/FixFormatGlobal'
@@ -8888,6 +8948,7 @@ components:
               $ref: '#/components/schemas/EmailFlags'
             errors:
               type: array
+              description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -8914,7 +8975,7 @@ components:
               $ref: '#/components/schemas/EmailFlags'
             fixes:
               type: array
-              description: All changes listed in comparison to the sent query.
+              description: List of all changes applied to the query data in order to get the corrected result.
               items:
                 oneOf:
                   - $ref: '#/components/schemas/FixFormatGlobal'
@@ -8942,11 +9003,12 @@ components:
                 $ref: '#/components/schemas/EmailFlags'
               fixes:
                 type: array
-                description: All changes listed in comparison to the sent query.
+                description: List of all changes applied to the query data in order to get the suggested result.
                 items:
                   $ref: '#/components/schemas/EmailFixes'
               errors:
                 type: array
+                description: List of errors related to the query. Provides information about which query fields were deemed invalid and why.
                 items:
                   oneOf:
                     - $ref: '#/components/schemas/ErrorSyntaxGlobal'
@@ -9108,7 +9170,7 @@ components:
     EmailFixes:
       type: object
       nullable: true
-      description: All changes listed in comparison to the sent query.
+      description: List of all changes applied to the query data in order to get the corrected result.
       properties:
         type:
           type: string
@@ -9859,7 +9921,7 @@ components:
             - Endpoint not found. Please check Foxentry.dev for the supported endpoints.
           description: Description of error.
           example: Endpoint not found. Please check Foxentry.dev for the supported endpoints.
-    Error404RequestProjetNotFound:
+    Error404RequestProjectNotFound:
       type: object
       properties:
         group:

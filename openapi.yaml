@@ -5528,6 +5528,11 @@ components:
           maximum: 20
           default: 10
           example: 10
+        allowPartialResults:
+          type: boolean
+          description: If true, the results can contain streets without number when using the streetWithNumber search type. This might occur when the street is present in multiple cities.
+          default: true
+          example: true
         filterMode:
           type: string
           description: '<b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.'

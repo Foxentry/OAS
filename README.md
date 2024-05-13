@@ -14,6 +14,10 @@ Foxentry API reference OpenAPI file used in Foxentry API reference on [Foxentry.
 Date format: **YYYY-MM-DD**
 
 ***
+## 2024/05/13<br>
+- added allowPartialResults to LocationRequestOptionsSearch
+<br><br>
+
 ## 2024/04/25<br>
 - added preferredPrefixes to ValidatePhoneNumberRequest options
 - fixed empty arrays not having items defined

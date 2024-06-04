@@ -5976,8 +5976,9 @@ components:
                 - '+421'
             defaultPrefix:
               type: string
-              description: Default international prefix if not part of the query. This is used for the validator to make more accurate results.
+              description: Deprecated - use preferredPrefixes instead. Default international prefix if not part of the query. This is used for the validator to make more accurate results.
               example: '+420'
+              deprecated: true
             formatNumber:
               type: boolean
               description: 'Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.'

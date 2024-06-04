@@ -90,7 +90,7 @@ paths:
       description: 'This endpoint requires at least 1 query parameter and will check if the parameters and their combinations are valid. Returns information about the company based on the datascope set in the options.<br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br> Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.'
       operationId: ValidateCompanyData
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -98,7 +98,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -145,7 +145,7 @@ paths:
       description: This enpoint mainly serves as <b>autocomplete</b> but can be used to search for specific companies based on filter criteria as well. Foxentry will automatically offer you suggestions to complete the company you are writing down. <br><br>Pay attention to the <b>client</b> section in the request body. You can specify the user's location in order to receive more relevant suggestions.
       operationId: CompanySearch
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -153,7 +153,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -200,7 +200,7 @@ paths:
       description: Foxentry allows you to get information about company based on the <b>dataScope</b> option. <b>Country</b> and <b>registrationNumber</b> parameters are required.
       operationId: GetCompanyData
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -208,7 +208,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -255,7 +255,7 @@ paths:
       description: 'This endpoint will let you check if the e-mail address sent in query is valid.<br><br> Please pay attention to the <b>validationType</b> option since it has direct impact on the returned data. <b>Extended validation</b> (default) is the more advanced type that checks the real existence of the e-mail address and its deliverability. It also informs you about various flags such as <b>freemail and disposable mail</b> detection. <br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br> Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.'
       operationId: ValidateEmail
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -263,7 +263,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -310,7 +310,7 @@ paths:
       description: Foxentry will automatically offer you suggestions to complete the e-mail address you are writing down. This mainly serves as <b>autocomplete</b>.<br><br> Pay attention to the <b>client</b> section in the request body. You can specify the user's location in order to receive more relevant suggestions.
       operationId: EmailSearch
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -318,7 +318,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -365,7 +365,7 @@ paths:
       description: 'This endpoint requires at least 1 query parameter and will check if the parameters and their combinations are valid. Returns information about the location based on the datascope set in the options.<br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br> Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.'
       operationId: LocationValidation
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -373,7 +373,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -420,7 +420,7 @@ paths:
       description: This enpoint mainly serves as <b>autocomplete</b> but can be used to search for specific addresses based on filter criteria as well. Foxentry will automatically offer you suggestions to complete the address you are writing down. <br><br>Pay attention to the <b>client</b> section in the request body. You can specify the user's location in order to receive more relevant suggestions.
       operationId: LocationSearch
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -428,7 +428,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -475,7 +475,7 @@ paths:
       description: 'Foxentry allows you to get information about location based on the <b>dataScope</b> option. <b>Country</b> and <b>ID</b> parameters are required. You can either choose internal ID, which is assigned by Foxentry or external ID from the data source. <b>CZ external</b> = RUIAN, <b>PL external</b> = Gov data, <b>SK external does not exist</b>.'
       operationId: LocationGet
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -483,7 +483,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -530,7 +530,7 @@ paths:
       description: 'Foxentry allows you to check an area with GPS radius in order to return all the addresses within that area. It can also give you additional information about the addresses based on the <b>dataScope</b> option.<br><br>Please pay attention to the <b>singleLocationResultDistance</b> option, which determines the radius of the search area in meters.<br><br>'
       operationId: LocationLocalization
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -538,7 +538,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -582,10 +582,10 @@ paths:
       tags:
         - Name
       summary: Validate name data
-      description: 'Foxentry allows you to check the validity and real existence of names and their combinations. At least one parameter is required in the query. You can either write down the name separately or use <b>nameSurname</b> as connected parameter. <br><br>Pay attention to the query options. Especially <b>validationDepth</b>, which determines how strict the validation should be based on your use case. For example you''''d want minimal validationDepth for web forms since you usually don''''t want to disturb the user too much with error messages and suggestions.   <br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br> Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.'
+      description: "Foxentry allows you to check the validity and real existence of names and their combinations. At least one parameter is required in the query. You can either write down the name separately or use <b>nameSurname</b> as connected parameter. <br><br>Pay attention to the query options. Especially <b>validationDepth</b>, which determines how strict the validation should be based on your use case. For example you''d want minimal validationDepth for web forms since you usually don''t want to disturb the user too much with error messages and suggestions.   <br><br> Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br> Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application."
       operationId: NameValidation
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -593,7 +593,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -640,7 +640,7 @@ paths:
       description: 'Foxentry allows you to check validity and the existence of phone numbers. It can also give you additional information about the validated phone number based on the <b>validationType</b> option.<br><br>Please pay attention to the <b>formatNumber</b> option. This option defines the format of number that should be considered as valid. <br><br>Foxentry validator is able not only to evaluate the validity of the inputed information but it also can fix various typos, errors and missing data. Foxentry can also suggest more suitable alternatives to the data sent in query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the response.<br><br> Always check <b>result.proposal</b> in the response for a proposed solution by Foxentry how you should process the response in your form or application.'
       operationId: ValidatePhoneNumber
       parameters:
-        - name: Foxentry-Include-Request-Details
+        - name: foxentry-include-request-details
           in: header
           description: Parameter to add details of your request.
           required: false
@@ -648,7 +648,7 @@ paths:
             type: boolean
             default: false
             example: false
-        - name: Api-Version
+        - name: api-version
           in: header
           description: API version.
           required: false
@@ -1026,18 +1026,18 @@ components:
     GetCompanyData:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -1704,18 +1704,18 @@ components:
     EmailSearch:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -1792,18 +1792,18 @@ components:
     CompanySearch:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -2374,18 +2374,18 @@ components:
     NameValidation:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -2620,18 +2620,18 @@ components:
     ValidatePhoneNumber:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -2830,18 +2830,18 @@ components:
     LocationSearch:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -3261,18 +3261,18 @@ components:
     LocationLocalization:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -3367,7 +3367,7 @@ components:
                             example: 10
                           radius:
                             type: integer
-                            description: 'Radius of the search area in meters. In other words the distance in meters from the user''s GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.'
+                            description: "Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option."
                             minimum: 1
                             maximum: 1000
                             default: 50
@@ -3421,18 +3421,18 @@ components:
     LocationGet:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -3639,18 +3639,18 @@ components:
     LocationValidation:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -4208,18 +4208,18 @@ components:
     ValidateCompanyData:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -4816,18 +4816,18 @@ components:
     ValidateEmail:
       description: Successful response
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Daily-Credits-Left:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
-        Foxentry-Daily-Credits-Limit:
-            $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-daily-credits-left:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Left'
+        foxentry-daily-credits-limit:
+          $ref: '#/components/headers/Foxentry-Daily-Credits-Limit'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           examples:
@@ -5144,14 +5144,14 @@ components:
     Error400:
       description: Bad Request.
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5184,14 +5184,14 @@ components:
     Error401:
       description: Unauthorized.
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5211,14 +5211,14 @@ components:
     Error402:
       description: Payment Required.
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5238,14 +5238,14 @@ components:
     Error403:
       description: Forbidden.
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5269,14 +5269,14 @@ components:
     Error404:
       description: Not Found.
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5299,14 +5299,14 @@ components:
     Error405:
       description: Method Not Allowed.
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5325,14 +5325,14 @@ components:
     Error429:
       description: Too Many Requests.
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5356,14 +5356,14 @@ components:
     Error500:
       description: Internal Server Error.
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5390,14 +5390,14 @@ components:
     Error503:
       description: Service Unavailable.
       headers:
-        Foxentry-Api-Version:
-            $ref: '#/components/headers/Foxentry-Api-Version'
-        Foxentry-Rate-Limit:
-            $ref: '#/components/headers/Foxentry-Rate-Limit'
-        Foxentry-Rate-Limit-Period:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
-        Foxentry-Rate-Limit-Remaining:
-            $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
+        foxentry-api-version:
+          $ref: '#/components/headers/Foxentry-Api-Version'
+        foxentry-rate-limit:
+          $ref: '#/components/headers/Foxentry-Rate-Limit'
+        foxentry-rate-limit-period:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Period'
+        foxentry-rate-limit-remaining:
+          $ref: '#/components/headers/Foxentry-Rate-Limit-Remaining'
       content:
         application/json:
           schema:
@@ -5626,7 +5626,7 @@ components:
               properties:
                 radius:
                   type: integer
-                  description: 'Radius of the search area in meters. In other words the distance in meters from the user''s GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option.'
+                  description: "Radius of the search area in meters. In other words the distance in meters from the user's GPS coordinates. The number of suggested addresses depends on the size of the radius. If there are too many suitable addresses, the result count is limited by the <b>resultsLimit</b> option."
                   minimum: 1
                   maximum: 1000
                   default: 50
@@ -5976,8 +5976,9 @@ components:
                 - '+421'
             defaultPrefix:
               type: string
-              description: Default international prefix if not part of the query. This is used for the validator to make more accurate results.
+              description: Deprecated - use preferredPrefixes instead. Default international prefix if not part of the query. This is used for the validator to make more accurate results.
               example: '+420'
+              deprecated: true
             formatNumber:
               type: boolean
               description: 'Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.'
@@ -9045,7 +9046,7 @@ components:
         isCatchAllServer:
           type: boolean
           nullable: true
-          description: 'Determines if the domain is set as catchAll. That means no matter what is in front the ''@'' sign, every e-mail is deliverable'
+          description: "Determines if the domain is set as catchAll. That means no matter what is in front the '@' sign, every e-mail is deliverable"
           example: false
         isDisposableEmailLocation:
           type: boolean

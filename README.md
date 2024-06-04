@@ -14,9 +14,13 @@ Foxentry API reference OpenAPI file used in Foxentry API reference on [Foxentry.
 Date format: **YYYY-MM-DD**
 
 ***
+## 2024/06/04<br>
+- fixed capitalization of header names
+- deprecated the defaultPrefix option
+<br><br>
+
 ## 2024/05/13<br>
 - added allowPartialResults to LocationRequestOptionsSearch
-<br><br>
 
 ## 2024/04/25<br>
 - added preferredPrefixes to ValidatePhoneNumberRequest options

@@ -15,6 +15,11 @@ Date format: **YYYY-MM-DD**
 
 ***
 ## 2024/06/04<br>
+- added countryFormat option for company requests
+<br><br>
+
+
+## 2024/06/04<br>
 - fixed capitalization of header names
 - deprecated the defaultPrefix option
 <br><br>

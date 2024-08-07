@@ -714,7 +714,7 @@ components:
     Foxentry-Daily-Credits-Limit:
       schema:
         type: number
-        example: 10000
+        example: 1000.0
       description: The daily credits limit
     Foxentry-Rate-Limit:
       schema:
@@ -1347,7 +1347,7 @@ components:
                                 - type: JTSK
                                   coordinates:
                                     x: 1042819.66
-                                    'y': 740509.43
+                                    y: 740509.43
                             postOffice:
                               name: Praha 86
                             full: 'Thámova 137/16, 18600 Praha 8 - Karlín'
@@ -1466,7 +1466,7 @@ components:
                                         - type: JTSK
                                           coordinates:
                                             x: 1136105.4
-                                            'y': 529721.06
+                                            y: 529721.06
                                     postOffice:
                                       name: Radslavice
                                     full: 'V Zahradách 277, 75111 Radslavice'
@@ -1535,7 +1535,7 @@ components:
                                         - type: JTSK
                                           coordinates:
                                             x: 1136105.4
-                                            'y': 529721.06
+                                            y: 529721.06
                                     postOffice:
                                       name: Radslavice
                                     full: 'V Zahradách 277, 75111 Radslavice'
@@ -3484,7 +3484,7 @@ components:
                             - type: JTSK
                               coordinates:
                                 x: 1042819.66
-                                'y': 740509.43
+                                y: 740509.43
                         postOffice:
                           name: Praha 86
                         full: 'Thámova 137/16, 18600 Praha 8'
@@ -3537,7 +3537,7 @@ components:
                             - type: JTSK
                               coordinates:
                                 x: 1042819.66
-                                'y': 740509.43
+                                y: 740509.43
                         postOffice:
                           name: Praha 86
                         full: 'Thámova 137/16, 18600 Praha 8'
@@ -6533,6 +6533,9 @@ components:
               description: 'Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).'
               nullable: true
               example: CZ
+            uuid:
+              type: string
+              nullable: true
             name:
               type: string
               nullable: true
@@ -6644,9 +6647,9 @@ components:
               type: object
               properties:
                 code:
-                  type: number
+                  type: string
                   description: Code of legal form.
-                  example: 112
+                  example: '112'
                 name:
                   type: string
                   description: Name of legal form.
@@ -6670,10 +6673,10 @@ components:
               description: The European System of National and Regional Accounts.
               properties:
                 code:
-                  type: number
+                  type: string
                   nullable: true
                   description: Code of ESA2010.
-                  example: 11002
+                  example: '11002'
                 name:
                   type: string
                   nullable: true
@@ -7137,6 +7140,7 @@ components:
         full:
           type: string
           example: 'Jeseniova 1151/55, 130 00 Praha 3'
+          nullable: true
       required:
         - country
         - ids
@@ -7228,7 +7232,7 @@ components:
                     type: number
                     description: First coordinate.
                     example: 739831.1
-                  'y':
+                  y:
                     type: number
                     description: Second coordinate.
                     example: 1043425.38
@@ -7364,20 +7368,20 @@ components:
               description: 'Additional filter in order to specify the search results. You can for example set as a filter country CZ, so the the search engine would look for the companies only in the Czech republic. Pay attention to the options, which determines how the filter should behave.'
               properties:
                 registrationNumber:
-                  type: number
+                  type: string
                   nullable: true
                   description: Company registration number.
-                  example: 1234567
+                  example: '1234567'
                 taxNumber:
-                  type: number
+                  type: string
                   nullable: true
                   description: Company tax number.
-                  example: 11223344
+                  example: '11223344'
                 vatNumber:
-                  type: number
+                  type: string
                   nullable: true
                   description: Company vat number.
-                  example: 11223344
+                  example: '11223344'
                 name:
                   type: string
                   nullable: true
@@ -7715,6 +7719,7 @@ components:
             example: Ing.
         degreesAfter:
           type: array
+          nullable: true
           items:
             type: string
             description: Degrees after name.
@@ -7780,8 +7785,6 @@ components:
         required:
           - type
           - value
-          - gender
-          - vocative
           - nameDays
     ErrorSyntaxGlobal:
       type: object

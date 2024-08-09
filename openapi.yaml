@@ -6381,8 +6381,6 @@ components:
               default: alpha2
               example: alpha2
               nullable: false
-            legalFormType:
-              type: string
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
@@ -7576,6 +7574,9 @@ components:
               default: alpha2
               example: alpha2
               nullable: false
+            legalFormType:
+              type: string
+              nullable: true
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
@@ -8942,6 +8943,9 @@ components:
                 - prefer
               example: limit
               default: limit
+              nullable: true
+            legalFormType:
+              type: string
               nullable: true
         client:
           $ref: '#/components/schemas/ClientRequest'

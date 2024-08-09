@@ -8359,6 +8359,11 @@ components:
               type: string
               description: Country phone prefix.
               example: '+420'
+        prefix:
+          type: string
+          description: Phone prefix.
+          example: '+420'
+          nullable: true
         number:
           type: string
           nullable: true

@@ -3245,7 +3245,7 @@ components:
                                 description: 'Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).'
                                 example: CZ
                       options:
-                        $ref: '#/components/schemas/LocationResponseRequestOptionsSearch'
+                        $ref: '#/components/schemas/LocationSearchResponseRequestOptions'
                       client:
                         $ref: '#/components/schemas/ClientRequest'
               response:
@@ -5525,12 +5525,12 @@ components:
             - type
             - value
         options:
-          $ref: '#/components/schemas/LocationRequestOptionsSearch'
+          $ref: '#/components/schemas/LocationSearchRequestOptions'
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
         - query
-    LocationRequestOptionsSearch:
+    LocationSearchRequestOptions:
       type: object
       description: Query options.
       properties:
@@ -5609,7 +5609,7 @@ components:
           default: basic
           example: basic
           nullable: false
-    LocationResponseRequestOptionsSearch:
+    LocationSearchResponseRequestOptions:
       type: object
       description: Query options.
       properties:

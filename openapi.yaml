@@ -3245,32 +3245,7 @@ components:
                                 description: 'Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).'
                                 example: CZ
                       options:
-                        allOf:
-                          - $ref: '#/components/schemas/LocationRequestOptionsSearch'
-                          - type: object
-                            properties:
-                              countryFormat:
-                                description: 'This option determines the format in which the country is returned. Choices include local and international variants with their shortened counterparts as well as ISO 3166 alpha codes.'
-                                type: string
-                                enum:
-                                  - alpha2
-                                  - alpha3
-                                  - local
-                                  - localShortened
-                                  - international
-                                  - internationalShortened
-                                default: alpha2
-                                example: alpha2
-                                nullable: false
-                              filterMode:
-                                type: string
-                                description: '<b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.'
-                                enum:
-                                  - limit
-                                  - prefer
-                                example: limit
-                                default: limit
-                                nullable: true
+                        $ref: '#/components/schemas/LocationResponseRequestOptionsSearch'
                       client:
                         $ref: '#/components/schemas/ClientRequest'
               response:
@@ -5633,6 +5608,98 @@ components:
             - extended
           default: basic
           example: basic
+          nullable: false
+    LocationResponseRequestOptionsSearch:
+      type: object
+      description: Query options.
+      properties:
+        dataScope:
+          description: Data scope of returned data.
+          enum:
+            - basic
+            - full
+          default: basic
+          example: full
+        dataSource:
+          description: 'Allowed data sources. You can specify the exact data sources that should be used by the validator. This option is not available for the endpoints that do not use any internal databases (e-mails, phone numbers).'
+          type: array
+          items:
+            type: string
+            nullable: false
+            example: CZ
+          nullable: true
+          default:
+            - CZ
+            - SK
+            - PL
+          example:
+            - CZ
+            - SK
+            - PL
+        resultsLimit:
+          description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
+          type: integer
+          minimum: 1
+          maximum: 20
+          default: 10
+          example: 10
+        allowPartialResults:
+          type: boolean
+          description: If true, the results can contain streets without number when using the streetWithNumber search type. This might occur when the street is present in multiple cities.
+          default: true
+          example: true
+        filterMode:
+          type: string
+          description: '<b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.'
+          enum:
+            - limit
+            - prefer
+          example: limit
+          default: limit
+          nullable: true
+        filterAcceptFormat:
+          type: boolean
+          description: 'If true, values with different format would be accepted. (Uppercase and diacritics).'
+          example: true
+          default: true
+        filterAcceptAlternatives:
+          type: boolean
+          description: 'If true, alternative values for filter types would be accepted. For example for City, also CityDistrict and CityDistrictSpecial would be accepted. (Praha, Praha 8, Karlín).'
+          example: true
+          default: true
+        filterExactMatch:
+          type: boolean
+          description: 'If true, only exact match would be accepted. For example "Prah" would return 0 results, since no city with the exact name exists.'
+          example: true
+          default: true
+        zipFormat:
+          description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
+          type: boolean
+          default: false
+          example: false
+          nullable: true
+        cityFormat:
+          description: 'This option determines the format in which the city is returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.'
+          type: string
+          enum:
+            - minimal
+            - basic
+            - extended
+          default: basic
+          example: basic
+          nullable: false
+        countryFormat:
+          description: 'This option determines the format in which the country is returned. Choices include local and international variants with their shortened counterparts as well as ISO 3166 alpha codes.'
+          type: string
+          enum:
+            - alpha2
+            - alpha3
+            - local
+            - localShortened
+            - international
+            - internationalShortened
+          default: alpha2
+          example: alpha2
           nullable: false
     ClientRequest:
       type: object

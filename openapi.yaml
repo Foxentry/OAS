@@ -8222,6 +8222,17 @@ components:
               type: boolean
               description: 'Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.'
               example: false
+            preferredPrefixes:
+              type: array
+              description: Ordered list of preferred prefixes. If phone number is valid with multiple prefixes, the resultCorrected will use the first valid prefix from this list. If not set, the resultCorrected will be null and there will be all valid combinations in the suggestions.
+              nullable: true
+              items:
+                type: string
+                example: '+420'
+              default: []
+              example:
+                - '+420'
+                - '+421'
             defaultPrefix:
               nullable: true
               type: string

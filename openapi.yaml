@@ -73,10 +73,10 @@ info:
     As part of our commitment to data security, you are required to obtain a <b>Bearer token</b> from Foxentry. If you are a new user and do not have an API key, please fill out our registration form at https://foxentry.com/help-center/rest-api. 
 
     ## Need help? 
-    Should you encounter any issues, have questions, or need assistance, please feel free to reach out to our dedicated support team at info@foxentry.cz. We are here to help you make the most of our API and resolve any questions you may have.
+    Should you encounter any issues, have questions, or need assistance, please feel free to reach out to our dedicated support team at info@foxentry.com. We are here to help you make the most of our API and resolve any questions you may have.
   contact:
     name: Foxentry
-    email: info@foxentry.cz
+    email: info@foxentry.com
     url: 'http://www.foxentry.com'
 servers:
   - url: 'https://api.foxentry.com'
@@ -5141,7 +5141,7 @@ components:
                         properties:
                           email:
                             type: string
-                            example: info@foxentry.cz
+                            example: info@foxentry.com
                         required:
                           - email
                       options:
@@ -6012,7 +6012,7 @@ components:
           properties:
             email:
               type: string
-              example: info@foxentry.cz
+              example: info@foxentry.com
           required:
             - email
         options:

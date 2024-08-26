@@ -8941,7 +8941,14 @@ components:
               default: limit
               nullable: true
             legalFormType:
+              description: 'This option filters results by the legal form type.'
               type: string
+              enum:
+                - juridical
+                - physical
+                - any
+              default: any
+              example: any
               nullable: true
         client:
           $ref: '#/components/schemas/ClientRequest'

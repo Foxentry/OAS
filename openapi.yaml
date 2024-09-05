@@ -5212,6 +5212,7 @@ components:
                         - $ref: '#/components/schemas/Error400RequestOptionParameterValueNotSupported'
                         - $ref: '#/components/schemas/Error400RequestQueryNotSent'
                         - $ref: '#/components/schemas/Error400RequestQueryParameterCombination'
+                        - $ref: '#/components/schemas/Error400RequestQueryParameterNotSupportedForQuery'
                         - $ref: '#/components/schemas/Error400RequestOptionsParameterCombination'
                         - $ref: '#/components/schemas/Error400RequestQueryParameterMissing'
                         - $ref: '#/components/schemas/Error400RequestQueryParameterNotSupported'
@@ -5566,7 +5567,7 @@ components:
           example: 10
         allowPartialResults:
           type: boolean
-          description: If true, the results can contain streets without number when using the streetWithNumber search type. This might occur when the street is present in multiple cities.
+          description: If true, the results can contain streets without number. This might occur when the street is present in multiple cities. Applicable only when using the <b>streetWithNumber</b> or <b>full</b> search types.
           default: true
           example: true
         filterMode:
@@ -9678,6 +9679,7 @@ components:
             - Combination of options or their values is not valid.
           description: Description of error.
           example: Combination of options or their values is not valid.
+
     Error400RequestQueryParameterCombination:
       type: object
       properties:
@@ -9716,6 +9718,45 @@ components:
             - It is not possible to use these parameters at the same time in one request.
           description: Description of error.
           example: It is not possible to use these parameters at the same time in one request.
+
+    Error400RequestQueryParameterNotSupportedForQuery:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - OPTIONS
+          description: Type of error.
+          example: OPTIONS
+        subtype:
+          enum:
+            - PARAMETER_NOT_SUPPORTED_FOR_QUERY
+          description: Subtype of error.
+          example: PARAMETER_NOT_SUPPORTED_FOR_QUERY
+        severity:
+          enum:
+            - critical
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
+          example: critical
+        relatedTo:
+          description: List of the affected inputs.
+          type: array
+          items:
+            type: string
+            description: Error related to.
+            example: allowPartialResults
+          example:
+            - allowPartialResults
+        description:
+          enum:
+            - Parameter can not be used in combination with this query parameters.
+          description: Description of error.
+          example: Parameter can not be used in combination with this query parameters.
+
     Error400RequestQueryParameterMissing:
       type: object
       properties:

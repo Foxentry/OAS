@@ -73,10 +73,10 @@ info:
     As part of our commitment to data security, you are required to obtain a <b>Bearer token</b> from Foxentry. If you are a new user and do not have an API key, please fill out our registration form at https://foxentry.com/help-center/rest-api. 
 
     ## Need help? 
-    Should you encounter any issues, have questions, or need assistance, please feel free to reach out to our dedicated support team at info@foxentry.cz. We are here to help you make the most of our API and resolve any questions you may have.
+    Should you encounter any issues, have questions, or need assistance, please feel free to reach out to our dedicated support team at info@foxentry.com. We are here to help you make the most of our API and resolve any questions you may have.
   contact:
     name: Foxentry
-    email: info@foxentry.cz
+    email: info@foxentry.com
     url: 'http://www.foxentry.com'
 servers:
   - url: 'https://api.foxentry.com'
@@ -714,7 +714,7 @@ components:
     Foxentry-Daily-Credits-Limit:
       schema:
         type: number
-        example: 10000
+        example: 1000.0
       description: The daily credits limit
     Foxentry-Rate-Limit:
       schema:
@@ -1347,7 +1347,7 @@ components:
                                 - type: JTSK
                                   coordinates:
                                     x: 1042819.66
-                                    'y': 740509.43
+                                    y: 740509.43
                             postOffice:
                               name: Praha 86
                             full: 'Thámova 137/16, 18600 Praha 8 - Karlín'
@@ -1466,7 +1466,7 @@ components:
                                         - type: JTSK
                                           coordinates:
                                             x: 1136105.4
-                                            'y': 529721.06
+                                            y: 529721.06
                                     postOffice:
                                       name: Radslavice
                                     full: 'V Zahradách 277, 75111 Radslavice'
@@ -1535,7 +1535,7 @@ components:
                                         - type: JTSK
                                           coordinates:
                                             x: 1136105.4
-                                            'y': 529721.06
+                                            y: 529721.06
                                     postOffice:
                                       name: Radslavice
                                     full: 'V Zahradách 277, 75111 Radslavice'
@@ -3245,7 +3245,7 @@ components:
                                 description: 'Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).'
                                 example: CZ
                       options:
-                        $ref: '#/components/schemas/LocationRequestOptionsSearch'
+                        $ref: '#/components/schemas/LocationSearchRequestOptions'
                       client:
                         $ref: '#/components/schemas/ClientRequest'
               response:
@@ -3484,7 +3484,7 @@ components:
                             - type: JTSK
                               coordinates:
                                 x: 1042819.66
-                                'y': 740509.43
+                                y: 740509.43
                         postOffice:
                           name: Praha 86
                         full: 'Thámova 137/16, 18600 Praha 8'
@@ -3537,7 +3537,7 @@ components:
                             - type: JTSK
                               coordinates:
                                 x: 1042819.66
-                                'y': 740509.43
+                                y: 740509.43
                         postOffice:
                           name: Praha 86
                         full: 'Thámova 137/16, 18600 Praha 8'
@@ -3619,6 +3619,19 @@ components:
                               - extended
                             default: basic
                             example: basic
+                            nullable: false
+                          countryFormat:
+                            description: 'This option determines the format in which the country is returned. Choices include local and international variants with their shortened counterparts as well as ISO 3166 alpha codes.'
+                            type: string
+                            enum:
+                              - alpha2
+                              - alpha3
+                              - local
+                              - localShortened
+                              - international
+                              - internationalShortened
+                            default: alpha2
+                            example: alpha2
                             nullable: false
                         required:
                           - idType
@@ -4192,6 +4205,28 @@ components:
                                 description: 'If true, the postOffice name is accepted as city. For example <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b> would be both valid.'
                                 default: false
                                 example: true
+                              countryFormat:
+                                description: 'This option determines the format in which the country is returned. Choices include local and international variants with their shortened counterparts as well as ISO 3166 alpha codes.'
+                                type: string
+                                enum:
+                                  - alpha2
+                                  - alpha3
+                                  - local
+                                  - localShortened
+                                  - international
+                                  - internationalShortened
+                                default: alpha2
+                                example: alpha2
+                                nullable: false
+                              filterMode:
+                                type: string
+                                description: '<b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.'
+                                enum:
+                                  - limit
+                                  - prefer
+                                example: limit
+                                default: limit
+                                nullable: true
                       client:
                         $ref: '#/components/schemas/ClientRequest'
               response:
@@ -5106,7 +5141,7 @@ components:
                         properties:
                           email:
                             type: string
-                            example: info@foxentry.cz
+                            example: info@foxentry.com
                         required:
                           - email
                       options:
@@ -5177,6 +5212,7 @@ components:
                         - $ref: '#/components/schemas/Error400RequestOptionParameterValueNotSupported'
                         - $ref: '#/components/schemas/Error400RequestQueryNotSent'
                         - $ref: '#/components/schemas/Error400RequestQueryParameterCombination'
+                        - $ref: '#/components/schemas/Error400RequestQueryParameterNotSupportedForQuery'
                         - $ref: '#/components/schemas/Error400RequestOptionsParameterCombination'
                         - $ref: '#/components/schemas/Error400RequestQueryParameterMissing'
                         - $ref: '#/components/schemas/Error400RequestQueryParameterNotSupported'
@@ -5490,12 +5526,12 @@ components:
             - type
             - value
         options:
-          $ref: '#/components/schemas/LocationRequestOptionsSearch'
+          $ref: '#/components/schemas/LocationSearchRequestOptions'
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
         - query
-    LocationRequestOptionsSearch:
+    LocationSearchRequestOptions:
       type: object
       description: Query options.
       properties:
@@ -5531,7 +5567,7 @@ components:
           example: 10
         allowPartialResults:
           type: boolean
-          description: If true, the results can contain streets without number when using the streetWithNumber search type. This might occur when the street is present in multiple cities.
+          description: If true, the results can contain streets without number. This might occur when the street is present in multiple cities. Applicable only when using the <b>streetWithNumber</b> or <b>full</b> search types.
           default: true
           example: true
         filterMode:
@@ -5564,6 +5600,19 @@ components:
           default: false
           example: false
           nullable: true
+        countryFormat:
+          description: 'This option determines the format in which the country is returned. Choices include local and international variants with their shortened counterparts as well as ISO 3166 alpha codes.'
+          type: string
+          enum:
+            - alpha2
+            - alpha3
+            - local
+            - localShortened
+            - international
+            - internationalShortened
+          default: alpha2
+          example: alpha2
+          nullable: false
         cityFormat:
           description: 'This option determines the format in which the city is returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.'
           type: string
@@ -5574,6 +5623,7 @@ components:
           default: basic
           example: basic
           nullable: false
+
     ClientRequest:
       type: object
       description: Additional information about your user (from whom you've obtained the data sent in query) in order to specify the results in response. Used mainly in web forms when you need more relevant search/autocomplete results.
@@ -5885,7 +5935,7 @@ components:
           properties:
             email:
               type: string
-              example: info@foxentry.cz
+              example: info@foxentry.com
           required:
             - email
         options:
@@ -6511,6 +6561,35 @@ components:
               description: Whether or not to include entities that have already ended their existence in the output.
               default: false
               example: false
+            zipFormat:
+              description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
+              type: boolean
+              default: false
+              example: false
+              nullable: false
+            cityFormat:
+              description: 'This option determines the format in which the city is returned. <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.'
+              type: string
+              enum:
+                - minimal
+                - basic
+                - extended
+              default: basic
+              example: basic
+              nullable: false
+            countryFormat:
+              description: 'This option determines the format in which the country is returned. Choices include local and international variants with their shortened counterparts as well as ISO 3166 alpha codes.'
+              type: string
+              enum:
+                - alpha2
+                - alpha3
+                - local
+                - localShortened
+                - international
+                - internationalShortened
+              default: alpha2
+              example: alpha2
+              nullable: false
         client:
           $ref: '#/components/schemas/ClientRequest'
     GetCompanyDataResults:
@@ -6533,6 +6612,9 @@ components:
               description: 'Country code in format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).'
               nullable: true
               example: CZ
+            uuid:
+              type: string
+              nullable: true
             name:
               type: string
               nullable: true
@@ -6644,9 +6726,9 @@ components:
               type: object
               properties:
                 code:
-                  type: number
+                  type: string
                   description: Code of legal form.
-                  example: 112
+                  example: '112'
                 name:
                   type: string
                   description: Name of legal form.
@@ -6670,10 +6752,10 @@ components:
               description: The European System of National and Regional Accounts.
               properties:
                 code:
-                  type: number
+                  type: string
                   nullable: true
                   description: Code of ESA2010.
-                  example: 11002
+                  example: '11002'
                 name:
                   type: string
                   nullable: true
@@ -7137,6 +7219,7 @@ components:
         full:
           type: string
           example: 'Jeseniova 1151/55, 130 00 Praha 3'
+          nullable: true
       required:
         - country
         - ids
@@ -7228,7 +7311,7 @@ components:
                     type: number
                     description: First coordinate.
                     example: 739831.1
-                  'y':
+                  y:
                     type: number
                     description: Second coordinate.
                     example: 1043425.38
@@ -7364,20 +7447,20 @@ components:
               description: 'Additional filter in order to specify the search results. You can for example set as a filter country CZ, so the the search engine would look for the companies only in the Czech republic. Pay attention to the options, which determines how the filter should behave.'
               properties:
                 registrationNumber:
-                  type: number
+                  type: string
                   nullable: true
                   description: Company registration number.
-                  example: 1234567
+                  example: '1234567'
                 taxNumber:
-                  type: number
+                  type: string
                   nullable: true
                   description: Company tax number.
-                  example: 11223344
+                  example: '11223344'
                 vatNumber:
-                  type: number
+                  type: string
                   nullable: true
                   description: Company vat number.
-                  example: 11223344
+                  example: '11223344'
                 name:
                   type: string
                   nullable: true
@@ -7468,6 +7551,29 @@ components:
               default: basic
               example: basic
               nullable: false
+            countryFormat:
+              description: 'This option determines the format in which the country is returned. Choices include local and international variants with their shortened counterparts as well as ISO 3166 alpha codes.'
+              type: string
+              enum:
+                - alpha2
+                - alpha3
+                - local
+                - localShortened
+                - international
+                - internationalShortened
+              default: alpha2
+              example: alpha2
+              nullable: false
+            legalFormType:
+              description: 'This option filters results by the legal form type.'
+              type: string
+              enum:
+                - juridical
+                - physical
+                - any
+              default: any
+              example: any
+              nullable: true
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
@@ -7715,6 +7821,7 @@ components:
             example: Ing.
         degreesAfter:
           type: array
+          nullable: true
           items:
             type: string
             description: Degrees after name.
@@ -7780,8 +7887,6 @@ components:
         required:
           - type
           - value
-          - gender
-          - vocative
           - nameDays
     ErrorSyntaxGlobal:
       type: object
@@ -8162,6 +8267,17 @@ components:
               type: boolean
               description: 'Determines whether the formatted phone number (with spaces) should be considered as valid or not. If this option is set to <b>false</b>, a phone number with spaces would be considered as invalid with format error and a correction would be proposed in resultCorrected. If set to <b>true</b>, a phone number with correct use of spaces would be considered as valid and the national format invalid.'
               example: false
+            preferredPrefixes:
+              type: array
+              description: Ordered list of preferred prefixes. If phone number is valid with multiple prefixes, the resultCorrected will use the first valid prefix from this list. If not set, the resultCorrected will be null and there will be all valid combinations in the suggestions.
+              nullable: true
+              items:
+                type: string
+                example: '+420'
+              default: []
+              example:
+                - '+420'
+                - '+421'
             defaultPrefix:
               nullable: true
               type: string
@@ -8288,6 +8404,11 @@ components:
               type: string
               description: Country phone prefix.
               example: '+420'
+        prefix:
+          type: string
+          description: Country phone prefix.
+          example: '+420'
+          nullable: true
         number:
           type: string
           nullable: true
@@ -8798,6 +8919,38 @@ components:
               default: basic
               example: basic
               nullable: false
+            countryFormat:
+              description: 'This option determines the format in which the country is returned. Choices include local and international variants with their shortened counterparts as well as ISO 3166 alpha codes.'
+              type: string
+              enum:
+                - alpha2
+                - alpha3
+                - local
+                - localShortened
+                - international
+                - internationalShortened
+              default: alpha2
+              example: alpha2
+              nullable: false
+            filterMode:
+              type: string
+              description: '<b>Prefer</b> = prefer results matching the filter parameters, <b>limit</b> = limit to results matching the filter parameters.'
+              enum:
+                - limit
+                - prefer
+              example: limit
+              default: limit
+              nullable: true
+            legalFormType:
+              description: 'This option filters results by the legal form type.'
+              type: string
+              enum:
+                - juridical
+                - physical
+                - any
+              default: any
+              example: any
+              nullable: true
         client:
           $ref: '#/components/schemas/ClientRequest'
       required:
@@ -9526,6 +9679,7 @@ components:
             - Combination of options or their values is not valid.
           description: Description of error.
           example: Combination of options or their values is not valid.
+
     Error400RequestQueryParameterCombination:
       type: object
       properties:
@@ -9564,6 +9718,45 @@ components:
             - It is not possible to use these parameters at the same time in one request.
           description: Description of error.
           example: It is not possible to use these parameters at the same time in one request.
+
+    Error400RequestQueryParameterNotSupportedForQuery:
+      type: object
+      properties:
+        group:
+          enum:
+            - REQUEST
+          description: Group of error.
+          example: REQUEST
+        type:
+          enum:
+            - OPTIONS
+          description: Type of error.
+          example: OPTIONS
+        subtype:
+          enum:
+            - PARAMETER_NOT_SUPPORTED_FOR_QUERY
+          description: Subtype of error.
+          example: PARAMETER_NOT_SUPPORTED_FOR_QUERY
+        severity:
+          enum:
+            - critical
+          description: Severity of error. <b>Info</b> = cosmetic changes that don't change the overall meaning. <b>Warning</b> = typos and other errors that could affect the meaning. <b>Critical</b> = critical errors.
+          example: critical
+        relatedTo:
+          description: List of the affected inputs.
+          type: array
+          items:
+            type: string
+            description: Error related to.
+            example: allowPartialResults
+          example:
+            - allowPartialResults
+        description:
+          enum:
+            - Parameter can not be used in combination with this query parameters.
+          description: Description of error.
+          example: Parameter can not be used in combination with this query parameters.
+
     Error400RequestQueryParameterMissing:
       type: object
       properties:

@@ -14,6 +14,12 @@ Foxentry API reference OpenAPI file used in Foxentry API reference on [Foxentry.
 Date format: **YYYY-MM-DD**
 
 ***
+## 2024/10/03<br>
+- Added missing fields and descriptions
+- Added missing error 400
+- Added various minor fixes
+<br><br> 
+
 ## 2024/06/04<br>
 - added countryFormat option for company requests
 <br><br>

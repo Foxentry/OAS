@@ -1747,7 +1747,7 @@ components:
                         properties:
                           resultsLimit:
                             type: number
-                            description: Number of results
+                            description: Limits number of results returned by the endpoint.
                             minimum: 1
                             maximum: 5
                             example: 5
@@ -3359,7 +3359,7 @@ components:
                               - SK
                               - PL
                           resultsLimit:
-                            description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
+                            description: Limits number of results returned by the endpoint.
                             type: integer
                             minimum: 1
                             maximum: 20
@@ -5559,7 +5559,7 @@ components:
             - SK
             - PL
         resultsLimit:
-          description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
+          description: Limits number of results returned by the endpoint.
           type: integer
           minimum: 1
           maximum: 20
@@ -5731,7 +5731,7 @@ components:
             - SK
             - PL
         resultsLimit:
-          description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
+          description: Limits number of suggestions returned by the endpoint.
           type: integer
           minimum: 1
           maximum: 20
@@ -6185,7 +6185,7 @@ components:
                 - PL
             resultsLimit:
               type: integer
-              description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the
+              description: Limits number of suggestions returned by the endpoint.
               minimum: 1
               maximum: 20
               default: 10
@@ -6308,7 +6308,7 @@ components:
                 - PL
             resultsLimit:
               type: integer
-              description: Result limit.
+              description: Limits number of results returned by the endpoint.
               minimum: 1
               maximum: 20
               default: 10
@@ -6397,7 +6397,7 @@ components:
           properties:
             resultsLimit:
               type: number
-              description: Number of results
+              description: Limits number of results returned by the endpoint.
               minimum: 1
               maximum: 5
               example: 5
@@ -7501,7 +7501,7 @@ components:
                 - PL
             resultsLimit:
               type: integer
-              description: Result limit.
+              description: Limits number of results returned by the endpoint.
               minimum: 1
               maximum: 20
               default: 10
@@ -8899,7 +8899,7 @@ components:
             resultsLimit:
               type: integer
               nullable: true
-              description: Results limit of response. You can choose the limit of results for the /search endpoints as well as the limit of suggestions for the /validate endpoints.
+              description: Limits number of suggestions returned by the endpoint.
               minimum: 1
               maximum: 20
               default: 10

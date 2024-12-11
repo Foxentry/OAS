@@ -1,0 +1,4 @@
+schema:
+  type: integer
+  example: 900
+description: The rate limit period

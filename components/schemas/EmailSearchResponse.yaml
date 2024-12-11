@@ -1,0 +1,36 @@
+type: object
+properties:
+  resultsCount:
+    type: number
+    description: Number of results
+    minimum: 1
+    maximum: 5
+    example: 1
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            email:
+              type: string
+              description: Suggested e-mail
+              example: info@gmail.com
+            user:
+              type: string
+              description: Suggested user
+              example: info
+            domain:
+              type: string
+              description: Suggested domain
+              example: gmail.com
+          required:
+            - email
+            - domain
+      required:
+        - data
+required:
+  - resultsCount
+  - results

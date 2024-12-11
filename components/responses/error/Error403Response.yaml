@@ -1,0 +1,35 @@
+description: Forbidden.
+headers:
+  foxentry-api-version:
+    $ref: ../../headers/Foxentry-Api-Version.yaml
+  foxentry-rate-limit:
+    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    schema:
+      allOf:
+        - type: object
+          properties:
+            status:
+              example: 403
+        - type: object
+          properties:
+            request:
+              $ref: ../../schemas/GlobalRequest.yaml
+        - type: object
+          properties:
+            errors:
+              description: >-
+                List of errors related to the request. Should be empty if the
+                request finished successfully.
+              type: array
+              items:
+                oneOf:
+                  - $ref: ../../schemas/requestErrors/403/Error403RequestAuthKey.yaml
+                  - $ref: ../../schemas/requestErrors/403/Error403RequestAuthToken.yaml
+                  - $ref: ../../schemas/requestErrors/403/Error403RequestNotAllowedDomain.yaml
+                  - $ref: ../../schemas/requestErrors/403/Error403RequestNotAllowedIp.yaml

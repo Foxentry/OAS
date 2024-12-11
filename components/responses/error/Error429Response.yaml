@@ -1,0 +1,35 @@
+description: Too Many Requests.
+headers:
+  foxentry-api-version:
+    $ref: ../../headers/Foxentry-Api-Version.yaml
+  foxentry-rate-limit:
+    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    schema:
+      allOf:
+        - type: object
+          properties:
+            status:
+              example: 429
+        - type: object
+          properties:
+            request:
+              $ref: ../../schemas/GlobalRequest.yaml
+        - type: object
+          properties:
+            errors:
+              description: >-
+                List of errors related to the request. Should be empty if the
+                request finished successfully.
+              type: array
+              items:
+                oneOf:
+                  - $ref: ../../schemas/requestErrors/429/Error429RequestBillingServiceLimit.yaml
+                  - $ref: ../../schemas/requestErrors/429/Error429RequestRateLimitCreditPerDay.yaml
+                  - $ref: ../../schemas/requestErrors/429/Error429RequestRateLimitCreditPerIp.yaml
+                  - $ref: ../../schemas/requestErrors/429/Error429RequestRateLimitTooManyRequests.yaml

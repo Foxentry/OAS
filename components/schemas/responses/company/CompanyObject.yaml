@@ -1,0 +1,507 @@
+type: object
+properties:
+  data:
+    type: object
+    properties:
+      country:
+        type: string
+        description: >-
+          Country code in format [ISO-3166-1
+          alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+        nullable: true
+        example: CZ
+      uuid:
+        type: string
+        nullable: true
+      name:
+        type: string
+        nullable: true
+        description: Name of company.
+        example: Avantro s.r.o.
+      registrationNumber:
+        type: string
+        description: Company registration number.
+        example: '04997476'
+      taxNumber:
+        type: string
+        nullable: true
+        description: Company tax number.
+        example: CZ04997476
+      vatNumber:
+        type: string
+        nullable: true
+        description: Company vat number.
+        example: CZ04997476
+      vatNumberSpecial:
+        type: string
+        nullable: true
+        description: Special vat number in case that subject is part of VAT group.
+        example: CZ0581019
+      address:
+        type: object
+        nullable: true
+        description: Address data
+        properties:
+          data:
+            $ref: ./LocationData.yaml
+      addressOfficial:
+        allOf:
+          - type: object
+            nullable: true
+            description: >-
+              Address data from the official registry. Not validated by
+              Foxentry.
+          - $ref: ./LocationOficial.yaml
+      nace:
+        type: array
+        description: Types of business
+        items:
+          type: object
+          properties:
+            code:
+              type: string
+              description: Code of business.
+              example: '74'
+            name:
+              type: string
+              description: Name of business
+              example: Ostatní profesní, vědecké a technické činnosti
+            isPrimary:
+              type: boolean
+              nullable: true
+              description: Determines if it is the main object of the business.
+              example: false
+      databoxes:
+        type: array
+        description: Company's electronic mail boxes (databoxes).
+        items:
+          type: object
+          properties:
+            code:
+              type: string
+              description: Code of databox.
+              example: txutpba
+            name:
+              type: string
+              description: Name of databox.
+              example: AVANTRO s.r.o.
+            receivingMessages:
+              type: boolean
+              description: >-
+                Whether the databox is set to receive messages from public as
+                well.
+              example: true
+      registrations:
+        type: array
+        description: Information about the company's registrations.
+        items:
+          type: object
+          properties:
+            type:
+              enum:
+                - businessRegister
+                - vatRegister
+              description: Type of registration.
+              example: businessRegister
+            data:
+              type: object
+              properties:
+                registrator:
+                  type: object
+                  description: Information about registrator.
+                  properties:
+                    name:
+                      type: string
+                      description: Name of registrator.
+                      example: Městský soud v Praze
+                    detail:
+                      type: string
+                      nullable: true
+                      description: Detail of registration.
+                      example: >-
+                        Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8,
+                        tel. 266 013 111
+                reference:
+                  type: string
+                  nullable: true
+                  description: Registration reference.
+                  example: C 256795
+      legalForm:
+        type: object
+        properties:
+          code:
+            type: string
+            description: Code of legal form.
+            example: '112'
+          name:
+            type: string
+            description: Name of legal form.
+            example: Společnost s ručením omezeným.
+      legalFormSpecific:
+        type: object
+        description: Specific cases of legalForm.
+        properties:
+          code:
+            type: string
+            nullable: true
+            description: Code of legal form for Polish companies.
+            example: null
+          name:
+            type: string
+            nullable: true
+            description: Name of legal form for Polish companies.
+            example: null
+      esa2010:
+        type: object
+        description: The European System of National and Regional Accounts.
+        properties:
+          code:
+            type: string
+            nullable: true
+            description: Code of ESA2010.
+            example: '11002'
+          name:
+            type: string
+            nullable: true
+            description: Name of ESA2010.
+            example: Nefinanční podniky soukromé národní
+      dates:
+        type: object
+        description: Important dates associated with company.
+        properties:
+          created:
+            type: string
+            description: Company creation date.
+            format: date
+            nullable: true
+            example: '2016-04-15'
+          terminated:
+            type: string
+            description: Company termination date.
+            format: date
+            nullable: true
+            example: '2016-04-15'
+      employees:
+        type: object
+        description: Employees information.
+        properties:
+          count:
+            type: number
+            nullable: true
+            description: Number of employees.
+            example: null
+          category:
+            type: string
+            nullable: true
+            description: Category of employees.
+            example: 1000-1499
+      insolvency:
+        type: object
+        nullable: true
+        description: Company insolvency status with history
+        properties:
+          history:
+            type: array
+            items:
+              type: object
+              properties:
+                reference:
+                  type: string
+                  description: Official reference of insolvency.
+                  example: 65 INS 12632 / 2023
+                dateFrom:
+                  type: string
+                  description: Since when is the insolvence valid.
+                  format: date
+                  example: '2021-08-01'
+                dateTo:
+                  type: string
+                  description: Until when is the insolvency valid.
+                  format: date
+                  example: '2025-08-01'
+                court:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name of court
+                      example: Krajský soud v Hradci Králové.
+                status:
+                  type: string
+                  description: Status of insolvency.
+                  example: NEVYRIZENA
+                detailUrl:
+                  type: string
+                  description: Detail URL of insolvency.
+                  format: url
+                  example: >-
+                    https://isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=F
+      businessPremises:
+        type: array
+        nullable: true
+        items:
+          type: object
+          properties:
+            label:
+              type: string
+              nullable: true
+              description: Label of business premises
+              example: Obchodní centrum Havlíčkův Brod.
+            address:
+              type: object
+              properties:
+                full:
+                  type: string
+                  description: Full address.
+                  example: Nad Rybníkem 3169, 580 01,  Havlíčkův Brod
+            activitySubjects:
+              type: string
+              description: Types of activity associated with the premise.
+              example: Zprostředkovatelská činnost
+      authority:
+        type: array
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+              description: Name of authority.
+              example: Statutární orgán
+            members:
+              type: array
+              description: Members associated with company.
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: name of member.
+                    example: Pavel Hrdlička
+                  address:
+                    type: object
+                    properties:
+                      data:
+                        $ref: ./LocationData.yaml
+                  addressOficial:
+                    $ref: ./LocationOficial.yaml
+                  function:
+                    type: string
+                    nullable: true
+                    description: Member function.
+                    example: jednatel
+                  birthDate:
+                    type: string
+                    nullable: true
+                    format: date
+                    description: Member date of birth.
+                    example: '1988-08-01'
+                  registrationNumber:
+                    type: number
+                    nullable: true
+                    description: Member registration number.
+                    example: null
+            decisions:
+              type: array
+              description: Information about the company's manner of decision making.
+              items:
+                type: string
+                nullable: true
+                description: Member decisions.
+                example: Společnost zastupuje jednatel samostatně.
+      capital:
+        type: object
+        description: Company's funding
+        properties:
+          value:
+            type: object
+            properties:
+              amount:
+                type: string
+                description: Amount of capital.
+                example: '200000'
+              currency:
+                type: string
+                description: Currency of capital.
+                example: CZK
+          shareholders:
+            type: array
+            description: Information about shareholders.
+            items:
+              type: object
+              properties:
+                shareholder:
+                  type: string
+                  description: Information about shareholder.
+                  example: >-
+                    PAVEL HRDLIČKA , dat. nar. 14. listopadu 1990 V Zahradách
+                    277, 751 11 Radslavice
+                share:
+                  type: object
+                  properties:
+                    amount:
+                      type: string
+                      description: Amount of share.
+                      example: '200000'
+                    currency:
+                      type: string
+                      description: Currency of share.
+                      example: CZK
+                    percent:
+                      type: string
+                      description: Share percentage.
+                      example: '100'
+                    percentPaid:
+                      type: string
+                      description: Share percentage paid.
+                      example: '100'
+                info:
+                  type: array
+                  description: Textual information about the share.
+                  items:
+                    type: string
+                    description: Information about share
+                    example: >-
+                      Druh podílu: základní, se kterým nejsou spojené žádné
+                      zvláštní práva a povinnosti
+          stocks:
+            type: array
+            description: Textual description of the stock ammount and value.
+            items:
+              type: string
+              description: List of stocks.
+              example: >-
+                100 ks akcie na jméno v listinné podobě ve jmenovité hodnotě 20
+                000 ,- Kč.
+      tradeLicences:
+        type: array
+        description: Trade licence information.
+        items:
+          type: object
+          properties:
+            type:
+              type: string
+              description: Type of trade licence.
+              example: Ohlašovací volná
+            name:
+              type: string
+              description: Name of trade licenses.
+              example: >-
+                Výroba, obchod a služby neuvedené v přílohách 1 až 3
+                živnostenského zákona
+            valid:
+              type: object
+              properties:
+                from:
+                  type: string
+                  description: Valid from.
+                  example: '2016-04-15'
+                fromText:
+                  type: string
+                  nullable: true
+                  description: Description of validation (from).
+                  example: Dnem zápisu do spolkového rejstříku.
+                to:
+                  type: string
+                  description: Valid to.
+                  nullable: true
+                  example: '2030-04-15'
+                toText:
+                  type: string
+                  nullable: true
+                  description: Description of validation (to).
+                  example: Na dobu neurčitou.
+            interrupted:
+              type: object
+              description: Dates of interuption.
+              properties:
+                from:
+                  type: string
+                  nullable: true
+                  description: Validity of the authorisation (from).
+                  format: date
+                  example: '2021-08-15'
+                to:
+                  type: string
+                  nullable: true
+                  description: Validity of the authorisation (to).
+                  format: date
+                  example: '2025-08-15'
+            responsiblePerson:
+              type: string
+              description: Responsible person.
+              nullable: true
+              example: Jan Novák
+            activitySubject:
+              type: array
+              items:
+                type: string
+                description: Subject of activity.
+                example: Broušení technického a šperkového kamene
+      vat:
+        type: object
+        description: Vat payer information.
+        properties:
+          status:
+            type: string
+            description: >-
+              Vat current status. Payer, non payer and subject. Subject means
+              the company is a VAT payer only for non domestic transactions
+              (identifikovaná osoba).
+            example: payer
+            enum:
+              - payer
+              - nonpayer
+              - subject
+          reliability:
+            type: object
+            description: Reliability of the VAT payer.
+            properties:
+              reliable:
+                type: boolean
+                description: Determines whether or not the subject is reliable.
+                example: true
+              unreliableFrom:
+                type: string
+                format: date
+                nullable: true
+                description: Determines from when the subject is unreliable.
+                example: '2018-09-01'
+          bankAccounts:
+            type: array
+            description: Bank accounts associated with the VAT payer.
+            items:
+              type: object
+              properties:
+                number:
+                  type: string
+                  example: 55567899/2010
+          history:
+            type: array
+            description: History of the VAT payer.
+            items:
+              type: object
+              nullable: true
+              properties:
+                vatNumber:
+                  type: string
+                  description: Company vat number.
+                  example: CZ04997476
+                registrationType:
+                  type: string
+                  description: Company registration type.
+                  example: payer
+                validFrom:
+                  type: string
+                  description: Valid from.
+                  example: '2017-09-01'
+                validTo:
+                  type: string
+                  nullable: true
+                  description: Valid to.
+                  example: null
+                isGroupRegistration:
+                  type: boolean
+                  description: Is part of group registration.
+                  example: false
+required:
+  - data

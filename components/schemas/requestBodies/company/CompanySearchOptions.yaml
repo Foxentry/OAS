@@ -1,0 +1,47 @@
+allOf:
+  - $ref: ./CompanyGetOptions.yaml
+  - type: object
+    description: Query options.
+    properties:
+      resultsLimit:
+        type: integer
+        description: Limits number of results returned by the endpoint.
+        minimum: 1
+        maximum: 20
+        default: 10
+        example: 10
+      filterMode:
+        type: string
+        description: >-
+          <b>Prefer</b> = prefer results matching the filter parameters,
+          <b>limit</b> = limit to results matching the filter parameters.
+        enum:
+          - limit
+          - prefer
+        example: limit
+        default: limit
+        nullable: true
+      filterAcceptFormat:
+        type: boolean
+        description: >-
+          If true, values with different format would be accepted. (Uppercase
+          and diacritics).
+        example: true
+        default: true
+      filterAcceptAlternatives:
+        type: boolean
+        description: >-
+          If true, alternative values for filter types would be accepted.
+          Currently used mainly for the Polish companies names. (for example
+          name of company: ELBI-WROCŁAW SP.Z O.O. ; alternative name:
+          ELBI-WROCŁAW SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ).
+        example: true
+        default: true
+      filterExactMatch:
+        type: boolean
+        description: >-
+          If true, only exact match would be accepted. For example filter
+          registrationID "0499" would return 0 results, since no company with
+          the exact registration ID exists.
+        example: true
+        default: true

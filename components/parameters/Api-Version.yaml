@@ -1,0 +1,8 @@
+name: api-version
+in: header
+description: API version.
+required: false
+schema:
+  type: string
+  default: '2.0'
+  example: '2.0'

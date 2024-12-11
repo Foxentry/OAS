@@ -1,0 +1,48 @@
+type: object
+properties:
+  group:
+    enum:
+      - SYNTAX
+    description: Group of error.
+    example: SYNTAX
+  type:
+    enum:
+      - VALUE_PART
+      - VALUE_PART_EXTRA
+      - VALUE_PART_MISSING
+      - VALUE_PART_POSITION
+    description: Type of error.
+    example: VALUE_PART_EXTRA
+  subtype:
+    enum:
+      - DOMAIN
+      - AT_SIGN
+      - TLD
+    description: Subtype of error.
+    example: DOMAIN
+  severity:
+    enum:
+      - info
+      - warning
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+      example: email
+  description:
+    enum:
+      - The domain contains invalid syntax.
+      - Value contains duplicated '@' sign.
+      - Value does not contain '@' sign.
+      - Value is missing the top level domain.
+      - The TLD part of the value is placed in the wrong position.
+    description: Description of error.
+    example: The domain contains invalid syntax.

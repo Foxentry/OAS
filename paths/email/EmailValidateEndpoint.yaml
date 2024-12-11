@@ -1,0 +1,50 @@
+post:
+  tags:
+    - Email
+  summary: Validate email
+  description: >-
+    This endpoint will let you check if the e-mail address sent in query is
+    valid.<br><br> Please pay attention to the <b>validationType</b> option
+    since it has direct impact on the returned data. <b>Extended validation</b>
+    (default) is the more advanced type that checks the real existence of the
+    e-mail address and its deliverability. It also informs you about various
+    flags such as <b>freemail and disposable mail</b> detection. <br><br>
+    Foxentry validator is able not only to evaluate the validity of the inputed
+    information but it also can fix various typos, errors and missing data.
+    Foxentry can also suggest more suitable alternatives to the data sent in
+    query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and
+    <b>suggestions</b> in the response.<br><br> Always check
+    <b>result.proposal</b> in the response for a proposed solution by Foxentry
+    how you should process the response in your form or application.
+  operationId: ValidateEmail
+  parameters:
+    - $ref: ../../components/parameters/Api-Version.yaml
+    - $ref: ../../components/parameters/Foxentry-Include-Request-Details.yaml
+  requestBody:
+    $ref: ../../components/requestBodies/email/EmailValidationRequest.yaml
+  responses:
+    '200':
+      $ref: ../../components/responses/email/ValidateEmail.yaml
+    '400':
+      $ref: ../../components/responses/error/Error400Response.yaml
+    '401':
+      $ref: ../../components/responses/error/Error401Response.yaml
+    '402':
+      $ref: ../../components/responses/error/Error402Response.yaml
+    '403':
+      $ref: ../../components/responses/error/Error403Response.yaml
+    '404':
+      $ref: ../../components/responses/error/Error404Response.yaml
+    '405':
+      $ref: ../../components/responses/error/Error405Response.yaml
+    '429':
+      $ref: ../../components/responses/error/Error429Response.yaml
+    '500':
+      $ref: ../../components/responses/error/Error500Response.yaml
+    '503':
+      $ref: ../../components/responses/error/Error503Response.yaml
+  security:
+    - BearerAuth: []
+  servers:
+    - url: https://api.foxentry.com
+    - url: https://api.foxentry.com/v2.0

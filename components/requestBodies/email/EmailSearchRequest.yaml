@@ -1,0 +1,22 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          $ref: ../../schemas/EmailSearchRequest.yaml
+      required:
+        - request
+    examples:
+      Request Example:
+        value:
+          request:
+            query:
+              value: p.novak@
+            options:
+              resultsLimit: 5
+            client:
+              country: CZ
+              location:
+                lat: 50.0628
+                lon: 13.9271

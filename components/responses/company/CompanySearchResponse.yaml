@@ -1,0 +1,589 @@
+description: Successful response
+headers:
+  foxentry-api-version:
+    $ref: ../../headers/Foxentry-Api-Version.yaml
+  foxentry-daily-credits-left:
+    $ref: ../../headers/Foxentry-Daily-Credits-Left.yaml
+  foxentry-daily-credits-limit:
+    $ref: ../../headers/Foxentry-Daily-Credits-Limit.yaml
+  foxentry-rate-limit:
+    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Status of API response.
+          example: 200
+        request:
+          allOf:
+            - $ref: ../../schemas/GlobalRequest.yaml
+            - $ref: ../../schemas/requestBodies/company/CompanySearchBody.yaml
+            - type: object
+              properties:
+                endpoint:
+                  example: company/search
+        response:
+          $ref: "../../schemas/responses/company/CompanySearchResult.yaml"
+        errors:
+          description: >-
+            List of errors related to the request. Should be empty if the
+            request finished successfully.
+          type: array
+          items: {}
+          maxItems: 0
+      required:
+        - status
+        - request
+        - response
+    examples:
+      searchName:
+        value:
+          status: 200
+          request:
+            endpoint: company/search
+            code: nZsizE2dmlYjphFcy9z6k6EAdkGvw4
+          response:
+            resultsCount: 3
+            results:
+              - data:
+                  country: CZ
+                  name: Balance Agency s.r.o.
+                  registrationNumber: '10865845'
+                  taxNumber: null
+                  vatNumber: CZ10865845
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2088010'
+                        external: '22541691'
+                      street: Freyova
+                      number:
+                        part1: '82'
+                        part1Number: '82'
+                        part1Letter: null
+                        part2: '27'
+                        part2Number: '27'
+                        part2Letter: null
+                        full: 82/27
+                      streetWithNumber: Freyova 82/27
+                      city: Praha 9
+                      zip: '19000'
+                      full: Freyova 82/27, 19000 Praha 9
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Freyova
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 82/27
+                      streetWithNumber: Freyova 82/27
+                      city: Praha
+                      zip: '19000'
+                      full: null
+              - data:
+                  country: CZ
+                  name: Extreme Light Infrastructure ERIC (ELI ERIC)
+                  registrationNumber: '10974938'
+                  taxNumber: null
+                  vatNumber: CZ10974938
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2814036'
+                        external: '73833584'
+                      street: Za Radnicí
+                      number:
+                        part1: '835'
+                        part1Number: '835'
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: '835'
+                      streetWithNumber: Za Radnicí 835
+                      city: Dolní Břežany
+                      zip: '25241'
+                      full: Za Radnicí 835, 25241 Dolní Břežany
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Za Radnicí
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: '835'
+                      streetWithNumber: Za Radnicí 835
+                      city: Dolní Břežany
+                      zip: '25241'
+                      full: null
+              - data:
+                  country: CZ
+                  name: Františkovy Lázně AQUAFORUM a.s.
+                  registrationNumber: '10989391'
+                  taxNumber: null
+                  vatNumber: null
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '1212962'
+                        external: '12969885'
+                      street: 5. května
+                      number:
+                        part1: '106'
+                        part1Number: '106'
+                        part1Letter: null
+                        part2: '9'
+                        part2Number: '9'
+                        part2Letter: null
+                        full: 106/9
+                      streetWithNumber: 5. května 106/9
+                      city: Františkovy Lázně
+                      zip: '35101'
+                      full: 5. května 106/9, 35101 Františkovy Lázně
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: 5. května
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 106/9
+                      streetWithNumber: 5. května 106/9
+                      city: Františkovy Lázně
+                      zip: '35101'
+                      full: null
+          errors: []
+      searchRegistrationNumber:
+        value:
+          status: 200
+          request:
+            endpoint: company/search
+            code: nZsizE2dmlYjphFcy9z6k6EAdkGvw4
+          response:
+            resultsCount: 3
+            results:
+              - data:
+                  country: CZ
+                  name: Balance Agency s.r.o.
+                  registrationNumber: '10865845'
+                  taxNumber: null
+                  vatNumber: CZ10865845
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2088010'
+                        external: '22541691'
+                      street: Freyova
+                      number:
+                        part1: '82'
+                        part1Number: '82'
+                        part1Letter: null
+                        part2: '27'
+                        part2Number: '27'
+                        part2Letter: null
+                        full: 82/27
+                      streetWithNumber: Freyova 82/27
+                      city: Praha 9
+                      zip: '19000'
+                      full: Freyova 82/27, 19000 Praha 9
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Freyova
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 82/27
+                      streetWithNumber: Freyova 82/27
+                      city: Praha
+                      zip: '19000'
+                      full: null
+              - data:
+                  country: CZ
+                  name: Extreme Light Infrastructure ERIC (ELI ERIC)
+                  registrationNumber: '10974938'
+                  taxNumber: null
+                  vatNumber: CZ10974938
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2814036'
+                        external: '73833584'
+                      street: Za Radnicí
+                      number:
+                        part1: '835'
+                        part1Number: '835'
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: '835'
+                      streetWithNumber: Za Radnicí 835
+                      city: Dolní Břežany
+                      zip: '25241'
+                      full: Za Radnicí 835, 25241 Dolní Břežany
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Za Radnicí
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: '835'
+                      streetWithNumber: Za Radnicí 835
+                      city: Dolní Břežany
+                      zip: '25241'
+                      full: null
+              - data:
+                  country: CZ
+                  name: Františkovy Lázně AQUAFORUM a.s.
+                  registrationNumber: '10989391'
+                  taxNumber: null
+                  vatNumber: null
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '1212962'
+                        external: '12969885'
+                      street: 5. května
+                      number:
+                        part1: '106'
+                        part1Number: '106'
+                        part1Letter: null
+                        part2: '9'
+                        part2Number: '9'
+                        part2Letter: null
+                        full: 106/9
+                      streetWithNumber: 5. května 106/9
+                      city: Františkovy Lázně
+                      zip: '35101'
+                      full: 5. května 106/9, 35101 Františkovy Lázně
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: 5. května
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 106/9
+                      streetWithNumber: 5. května 106/9
+                      city: Františkovy Lázně
+                      zip: '35101'
+                      full: null
+          errors: []
+      searchTaxNumber:
+        value:
+          status: 200
+          request:
+            endpoint: company/search
+            code: XH0MgpS3kZbOngCsSh7J05880BDnUR
+          response:
+            resultsCount: 3
+            results:
+              - data:
+                  country: SK
+                  name: Pavol Maráček - EMPIRIA
+                  registrationNumber: '17672520'
+                  taxNumber: '1020329596'
+                  vatNumber: SK1020329596
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: SK
+                      ids:
+                        internal: '6869348'
+                        external: null
+                      street: Priemyselná
+                      number:
+                        part1: '12'
+                        part1Number: '12'
+                        part1Letter: null
+                        part2: '12'
+                        part2Number: '12'
+                        part2Letter: null
+                        full: 12/12
+                      streetWithNumber: Priemyselná 12/12
+                      city: Piešťany
+                      zip: '92101'
+                      full: Priemyselná 12/12, 92101 Piešťany
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Priemyselná
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 12/
+                      streetWithNumber: Priemyselná 12/
+                      city: Piešťany
+                      zip: '92101'
+                      full: null
+              - data:
+                  country: SK
+                  name: Ľubomír Žolčák - ŽOLÍK
+                  registrationNumber: '37643703'
+                  taxNumber: '1031416738'
+                  vatNumber: SK1031416738
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: SK
+                      ids:
+                        internal: '5908780'
+                        external: null
+                      street: Kpt. Nálepku
+                      number:
+                        part1: '2854'
+                        part1Number: '2854'
+                        part1Letter: null
+                        part2: '5'
+                        part2Number: '5'
+                        part2Letter: null
+                        full: 2854/5
+                      streetWithNumber: Kpt. Nálepku 2854/5
+                      city: Prešov
+                      zip: '08001'
+                      full: Kpt. Nálepku 2854/5, 08001 Prešov
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Ul.kpt.Nálepku
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 5/
+                      streetWithNumber: Ul.kpt.Nálepku 5/
+                      city: Prešov
+                      zip: '08001'
+                      full: null
+              - data:
+                  country: SK
+                  name: Pavol Táborský a spol.
+                  registrationNumber: '14104199'
+                  taxNumber: '1020351365'
+                  vatNumber: SK1020351365
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: SK
+                      ids:
+                        internal: '6226536'
+                        external: null
+                      street: null
+                      number:
+                        part1: '305'
+                        part1Number: '305'
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: '305'
+                      streetWithNumber: Veľké Orvište 305
+                      city: Veľké Orvište
+                      zip: '92201'
+                      full: 305, 92201 Veľké Orvište
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: null
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 305/
+                      streetWithNumber: ' 305/'
+                      city: Veľké Orvište
+                      zip: '92201'
+                      full: null
+          errors: []
+      searchVatNumber:
+        value:
+          status: 200
+          request:
+            endpoint: company/search
+            code: UCyxflYW7kkpDkDllba36EIdZ7wMWg
+          response:
+            resultsCount: 3
+            results:
+              - data:
+                  country: CZ
+                  name: Balance Agency s.r.o.
+                  registrationNumber: '10865845'
+                  taxNumber: null
+                  vatNumber: CZ10865845
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2088010'
+                        external: '22541691'
+                      street: Freyova
+                      number:
+                        part1: '82'
+                        part1Number: '82'
+                        part1Letter: null
+                        part2: '27'
+                        part2Number: '27'
+                        part2Letter: null
+                        full: 82/27
+                      streetWithNumber: Freyova 82/27
+                      city: Praha 9
+                      zip: '19000'
+                      full: Freyova 82/27, 19000 Praha 9
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Freyova
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 82/27
+                      streetWithNumber: Freyova 82/27
+                      city: Praha
+                      zip: '19000'
+                      full: null
+              - data:
+                  country: CZ
+                  name: Extreme Light Infrastructure ERIC (ELI ERIC)
+                  registrationNumber: '10974938'
+                  taxNumber: null
+                  vatNumber: CZ10974938
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2814036'
+                        external: '73833584'
+                      street: Za Radnicí
+                      number:
+                        part1: '835'
+                        part1Number: '835'
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: '835'
+                      streetWithNumber: Za Radnicí 835
+                      city: Dolní Břežany
+                      zip: '25241'
+                      full: Za Radnicí 835, 25241 Dolní Břežany
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Za Radnicí
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: '835'
+                      streetWithNumber: Za Radnicí 835
+                      city: Dolní Břežany
+                      zip: '25241'
+                      full: null
+              - data:
+                  country: CZ
+                  name: Františkovy Lázně AQUAFORUM a.s.
+                  registrationNumber: '10989391'
+                  taxNumber: null
+                  vatNumber: null
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '1212962'
+                        external: '12969885'
+                      street: 5. května
+                      number:
+                        part1: '106'
+                        part1Number: '106'
+                        part1Letter: null
+                        part2: '9'
+                        part2Number: '9'
+                        part2Letter: null
+                        full: 106/9
+                      streetWithNumber: 5. května 106/9
+                      city: Františkovy Lázně
+                      zip: '35101'
+                      full: 5. května 106/9, 35101 Františkovy Lázně
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: 5. května
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 106/9
+                      streetWithNumber: 5. května 106/9
+                      city: Františkovy Lázně
+                      zip: '35101'
+                      full: null
+          errors: []

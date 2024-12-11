@@ -1,0 +1,24 @@
+type: object
+properties:
+  group:
+    enum:
+      - FORMAT
+      - VALUE
+    description: Group of fix.
+    example: FORMAT
+  type:
+    enum:
+      - CHANGED
+    description: Type of fix.
+    example: CHANGED
+  subtype:
+    enum:
+      - CASE_SENSITIVITY
+      - DIACRITICS
+      - WHITESPACES
+      - TYPO
+      - null
+    description: Subtype of fix.
+    example: CASE_SENSITIVITY
+  data:
+    $ref: ./FixData.yaml

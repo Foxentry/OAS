@@ -1,0 +1,28 @@
+description: Method Not Allowed.
+headers:
+  foxentry-api-version:
+    $ref: ../../headers/Foxentry-Api-Version.yaml
+  foxentry-rate-limit:
+    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    schema:
+      allOf:
+        - type: object
+          properties:
+            status:
+              example: 405
+        - type: object
+          properties:
+            request:
+              $ref: ../../schemas/GlobalRequest.yaml
+        - type: object
+          properties:
+            errors:
+              type: array
+              items:
+                $ref: ../../schemas/requestErrors/405/Error405RequestNotAllowedMethod.yaml

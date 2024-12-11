@@ -1,0 +1,4 @@
+schema:
+  type: integer
+  example: 5000
+description: The rate limit

@@ -1,0 +1,39 @@
+type: object
+properties:
+  group:
+    enum:
+      - INTERNAL
+    description: Group of error.
+    example: INTERNAL
+  type:
+    enum:
+      - DATABASE
+    description: Type of error.
+    example: DATABASE
+  subtype:
+    enum:
+      - NOT_AVAILABLE
+    description: Subtype of error.
+    example: NOT_AVAILABLE
+  severity:
+    type: string
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+  description:
+    enum:
+      - >-
+        Internal datastore is not available at the moment. No operation on this
+        datastore is possible.
+    description: Description of error.
+    example: >-
+      Internal datastore is not available at the moment. No operation on this
+      datastore is possible.

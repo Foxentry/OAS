@@ -1,0 +1,41 @@
+type: object
+properties:
+  group:
+    enum:
+      - SYNTAX
+    description: Group of error.
+    example: SYNTAX
+  type:
+    enum:
+      - VALUE_PART_EXTRA
+      - VALUE_PART_MISSING
+    description: Type of error.
+    example: VALUE_PART_EXTRA
+  subtype:
+    enum:
+      - LEGAL_FORM
+    description: Subtype of error.
+    example: LEGAL_FORM
+  severity:
+    enum:
+      - info
+      - warning
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+      example: name
+  description:
+    enum:
+      - Value contains duplicated legal form.
+      - Company name is missing the legal form.
+    description: Description of error.
+    example: Value contains duplicated legal form.

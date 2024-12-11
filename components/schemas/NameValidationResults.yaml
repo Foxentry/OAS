@@ -1,0 +1,110 @@
+type: object
+properties:
+  result:
+    type: object
+    description: Evaluation of the sent query.
+    properties:
+      isValid:
+        type: boolean
+        description: >-
+          Determines the validity of the response. <b>True</b> = valid response
+          / <b>False</b> = invalid response. Can be also <b>null</b>, which
+          indicates a non-specific error.
+        example: true
+      proposal:
+        enum:
+          - valid
+          - validWithSuggestion
+          - invalid
+          - invalidWithCorrection
+          - invalidWithPartialCorrection
+          - invalidWithSuggestion
+          - invalidWithCorrectionWithSuggestion
+        description: >-
+          Proposed solution by Foxentry how you should process the response in
+          your form or application.
+        example: validWithSuggestion
+      data:
+        $ref: ./NameValidationResultsData.yaml
+      details:
+        $ref: ./NameValidationResultsDetails.yaml
+      errors:
+        description: >-
+          List of errors related to the query. Provides information about which
+          query fields were deemed invalid and why.
+        type: array
+        items:
+          oneOf:
+            - $ref: ./ErrorSyntaxGlobal.yaml
+            - $ref: ./ErrorSyntaxName.yaml
+            - $ref: ./ErrorFormatGlobal.yaml
+            - $ref: ./ErrorValueGlobal.yaml
+            - $ref: ./ErrorValueName.yaml
+    required:
+      - isValid
+      - proposal
+      - data
+  resultCorrected:
+    nullable: true
+    type: object
+    description: Corrected version of the sent query.
+    properties:
+      isValid:
+        type: boolean
+        description: >-
+          Determines the validity of the response. <b>True</b> = valid response
+          / <b>False</b> = invalid response. Can be also <b>null</b>, which
+          indicates a non-specific error.
+        example: true
+      data:
+        $ref: ./NameValidationResultsData.yaml
+      details:
+        $ref: ./NameValidationResultsDetails.yaml
+      fixes:
+        type: array
+        description: >-
+          List of all changes applied to the query data in order to get the
+          corrected result.
+        items:
+          oneOf:
+            - $ref: ./FixFormatGlobal.yaml
+            - $ref: ./FixSyntaxGlobal.yaml
+            - $ref: ./FixValueGlobal.yaml
+    required:
+      - isValid
+      - data
+      - fixes
+  suggestions:
+    type: array
+    items:
+      type: object
+      description: Alternatives suggested for the sent query.
+      properties:
+        isValid:
+          type: boolean
+          description: >-
+            Determines the validity of the response. <b>True</b> = valid
+            response / <b>False</b> = invalid response. Can be also <b>null</b>,
+            which indicates a non-specific error.
+          example: true
+        data:
+          $ref: ./NameValidationResultsData.yaml
+        details:
+          $ref: ./NameValidationResultsDetails.yaml
+        fixes:
+          type: array
+          description: >-
+            List of all changes applied to the query data in order to get the
+            suggested result.
+          items:
+            oneOf:
+              - $ref: ./FixFormatGlobal.yaml
+              - $ref: ./FixSyntaxGlobal.yaml
+              - $ref: ./FixValueGlobal.yaml
+      required:
+        - isValid
+        - data
+        - fixes
+required:
+  - result
+  - suggestions

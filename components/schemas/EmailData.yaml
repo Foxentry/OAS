@@ -1,0 +1,15 @@
+type: object
+properties:
+  email:
+    type: string
+    description: Email address.
+    example: me@gmali.com
+  user:
+    type: string
+    description: Customer user name.
+    example: me
+  domain:
+    type: string
+    description: Customer domain.
+    example: gmali.com
+    nullable: true

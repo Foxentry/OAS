@@ -1,0 +1,92 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    properties:
+      country:
+        type: string
+        description: >-
+          Country code in format [ISO-3166-1
+          alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+        example: CZ
+      id:
+        type: string
+        description: Location ID
+        example: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+    required:
+      - country
+      - id
+  options:
+    type: object
+    description: Query options.
+    properties:
+      idType:
+        description: >-
+          Internal is assigned by Foxentry. External ID may vary for every
+          supported country. CZ = RUIAN, PL = Government data, SK = no external
+          ID.
+        enum:
+          - internal
+          - external
+        default: internal
+        example: internal
+      dataScope:
+        description: Data scope of returned data.
+        enum:
+          - basic
+          - full
+        default: basic
+        example: full
+      dataSource:
+        description: >-
+          Allowed data sources. You can specify the exact data sources that
+          should be used by the validator. This option is not available for the
+          endpoints that do not use any internal databases (e-mails, phone
+          numbers).
+        type: array
+        items:
+          type: string
+          nullable: false
+          example: CZ
+        nullable: true
+        default:
+          - CZ
+          - SK
+          - PL
+        example:
+          - CZ
+          - SK
+          - PL
+      zipFormat:
+        description: >-
+          Whether to return locally formatted ZIP code or not. (130 00 vs
+          13000).
+        type: boolean
+        default: false
+        example: false
+        nullable: false
+      cityFormat:
+        description: >-
+          This option determines the format in which the city is returned.
+          <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> =
+          Praha 8 - Karlín.
+        type: string
+        enum:
+          - minimal
+          - basic
+          - extended
+        default: basic
+        example: basic
+        nullable: false
+    required:
+      - idType
+      - dataScope
+  client:
+    $ref: ./ClientRequest.yaml
+required:
+  - query

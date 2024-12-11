@@ -1,0 +1,21 @@
+type: object
+properties:
+  group:
+    enum:
+      - SYNTAX
+    description: Group of fix.
+    example: SYNTAX
+  type:
+    enum:
+      - VALUE_PART_ADDED
+      - VALUE_PART_CHANGED
+      - VALUE_PART_REMOVED
+    description: Type of fix.
+    example: VALUE_PART_ADDED
+  subtype:
+    enum:
+      - LEGAL_FORM
+    description: Subtype of fix.
+    example: LEGAL_FORM
+  data:
+    $ref: ./FixData.yaml

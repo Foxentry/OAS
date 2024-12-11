@@ -1,0 +1,40 @@
+type: object
+properties:
+  group:
+    enum:
+      - REQUEST
+    description: Group of error.
+    example: REQUEST
+  type:
+    enum:
+      - QUERY
+    description: Type of error.
+    example: QUERY
+  subtype:
+    enum:
+      - NOT_SENT
+    description: Subtype of error.
+    example: NOT_SENT
+  severity:
+    enum:
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+  description:
+    enum:
+      - >-
+        Your request query is empty. Please check Foxentry.dev for more
+        information about how to set up the query properly.
+    description: Description of error.
+    example: >-
+      Your request query is empty. Please check Foxentry.dev for more
+      information about how to set up the query properly.

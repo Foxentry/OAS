@@ -1,0 +1,13 @@
+type: object
+properties:
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        data:
+          $ref: ./LocationData.yaml
+      required:
+        - data
+required:
+  - results

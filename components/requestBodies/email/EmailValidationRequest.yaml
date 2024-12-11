@@ -1,0 +1,24 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          $ref: ../../schemas/ValidateEmailRequest.yaml
+      required:
+        - request
+    examples:
+      Request Example:
+        value:
+          request:
+            query:
+              email: p.novak@gamil.com
+            options:
+              validationType: extended
+              acceptDisposableEmails: true
+              acceptFreemails: true
+            client:
+              country: CZ
+              location:
+                lat: 50.0628
+                lon: 13.9271

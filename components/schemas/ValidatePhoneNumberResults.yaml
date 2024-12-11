@@ -1,0 +1,125 @@
+type: object
+properties:
+  result:
+    type: object
+    description: Evaluation of the sent query.
+    properties:
+      isValid:
+        type: boolean
+        nullable: true
+        description: >-
+          Determines the validity of the response. <b>True</b> = valid response
+          / <b>False</b> = invalid response. Can be also <b>null</b>, which
+          indicates a non-specific error.
+        example: true
+      proposal:
+        enum:
+          - valid
+          - validWithSuggestion
+          - invalid
+          - invalidWithCorrection
+          - invalidWithPartialCorrection
+          - invalidWithSuggestion
+          - invalidWithCorrectionWithSuggestion
+          - null
+        description: >-
+          Proposed solution by Foxentry how you should process the response in
+          your form or application.
+        example: invalidWithCorrection
+      data:
+        $ref: ./ValidatePhoneNumberData.yaml
+      errors:
+        type: array
+        description: >-
+          List of errors related to the query. Provides information about which
+          query fields were deemed invalid and why.
+        items:
+          oneOf:
+            - $ref: ./ErrorSyntaxGlobal.yaml
+            - $ref: ./ErrorSyntaxPhone.yaml
+            - $ref: ./ErrorFormatGlobal.yaml
+            - $ref: ./ErrorValueGlobal.yaml
+            - $ref: ./ErrorValuePhone.yaml
+    required:
+      - isValid
+      - proposal
+      - data
+      - errors
+  resultCorrected:
+    type: object
+    nullable: true
+    description: Corrected version of the sent query.
+    properties:
+      isValid:
+        type: boolean
+        description: >-
+          Determines the validity of the response. <b>True</b> = valid response
+          / <b>False</b> = invalid response. Can be also <b>null</b>, which
+          indicates a non-specific error.
+        example: true
+      data:
+        $ref: ./ValidatePhoneNumberData.yaml
+      errors:
+        type: array
+        description: >-
+          List of errors related to the query. Provides information about which
+          query fields were deemed invalid and why.
+        items:
+          oneOf:
+            - $ref: ./ErrorSyntaxGlobal.yaml
+            - $ref: ./ErrorSyntaxPhone.yaml
+            - $ref: ./ErrorFormatGlobal.yaml
+            - $ref: ./ErrorValueGlobal.yaml
+            - $ref: ./ErrorValuePhone.yaml
+      fixes:
+        type: array
+        description: >-
+          List of all changes applied to the query data in order to get the
+          corrected result.
+        items:
+          oneOf:
+            - $ref: ./FixFormatGlobal.yaml
+            - $ref: ./FixSyntaxGlobal.yaml
+            - $ref: ./FixSyntaxPhone.yaml
+            - $ref: ./FixValueGlobal.yaml
+  suggestions:
+    type: array
+    description: Alternatives suggested for the sent query.
+    items:
+      type: object
+      properties:
+        isValid:
+          type: boolean
+          description: >-
+            Determines the validity of the response. <b>True</b> = valid
+            response / <b>False</b> = invalid response. Can be also <b>null</b>,
+            which indicates a non-specific error.
+          example: true
+        data:
+          $ref: ./ValidatePhoneNumberData.yaml
+        errors:
+          type: array
+          description: >-
+            List of errors related to the query. Provides information about
+            which query fields were deemed invalid and why.
+          items:
+            oneOf:
+              - $ref: ./ErrorSyntaxGlobal.yaml
+              - $ref: ./ErrorSyntaxPhone.yaml
+              - $ref: ./ErrorFormatGlobal.yaml
+              - $ref: ./ErrorValueGlobal.yaml
+              - $ref: ./ErrorValuePhone.yaml
+        fixes:
+          type: array
+          description: >-
+            List of all changes applied to the query data in order to get the
+            suggested result.
+          items:
+            oneOf:
+              - $ref: ./FixFormatGlobal.yaml
+              - $ref: ./FixSyntaxGlobal.yaml
+              - $ref: ./FixSyntaxPhone.yaml
+              - $ref: ./FixValueGlobal.yaml
+required:
+  - result
+  - suggestions

@@ -1,0 +1,16 @@
+type: object
+properties:
+  resultsCount:
+    type: number
+    description: Number of results.
+    example: 1
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        data:
+          $ref: ./LocationData.yaml
+required:
+  - resultsCount
+  - results

@@ -1,0 +1,41 @@
+type: object
+nullable: true
+properties:
+  part1:
+    type: string
+    nullable: true
+    description: First section of house number.
+    example: '137'
+  part1Number:
+    type: string
+    nullable: true
+    description: Numerical part of the first section.
+    example: '137'
+  part1Letter:
+    type: string
+    nullable: true
+    description: Textual part of the first section.
+    example: null
+  part2:
+    type: string
+    nullable: true
+    description: Second section of house number.
+    example: '16'
+  part2Number:
+    type: string
+    nullable: true
+    description: Numerical part of the second section.
+    example: '16'
+  part2Letter:
+    type: string
+    nullable: true
+    description: Textual part of the second section.
+    example: null
+  full:
+    type: string
+    nullable: true
+    description: Full house number.
+    example: 137/16
+required:
+  - part1
+  - part2

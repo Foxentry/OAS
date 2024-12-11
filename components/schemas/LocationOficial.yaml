@@ -1,0 +1,41 @@
+type: object
+description: Address data from the official registry. Not validated by Foxentry.
+properties:
+  data:
+    type: object
+    nullable: true
+    properties:
+      country:
+        type: string
+        nullable: true
+        description: >-
+          Country of administrative area in format [ISO-3166-1
+          alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+        example: CZ
+      street:
+        type: string
+        description: Street.
+        nullable: true
+        example: Jeseniova
+      number:
+        $ref: ./LocationNumber.yaml
+      streetWithNumber:
+        type: string
+        description: Street with number.
+        nullable: true
+        example: Jeseniova 1151/55
+      city:
+        type: string
+        description: City.
+        nullable: true
+        example: Praha
+      zip:
+        type: string
+        description: ZIP code.
+        nullable: true
+        example: '13000'
+      full:
+        type: string
+        description: Full address.
+        nullable: true
+        example: Jeseniova 1151/55 Praha 130000

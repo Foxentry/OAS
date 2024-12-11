@@ -1,0 +1,108 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    oneOf:
+      - type: object
+        title: Separate field for name and surname
+        properties:
+          name:
+            type: string
+            nullable: true
+            description: First name.
+            example: Petr
+          surname:
+            type: string
+            nullable: true
+            description: Last name / family name.
+            example: Novák
+      - type: object
+        title: One field for name and surname
+        required:
+          - nameSurname
+        properties:
+          nameSurname:
+            type: string
+            nullable: true
+            description: Name and surname together.
+            example: Petr Novák
+  options:
+    type: object
+    description: Query options.
+    properties:
+      dataScope:
+        description: >-
+          Data scope of returned data. In full datascope information like
+          <b>gender</b>, <b>vocative</b> and <b>date</b> of the name days is
+          returned.
+        enum:
+          - basic
+          - full
+        default: basic
+        example: full
+      dataSource:
+        description: >-
+          Allowed data sources. You can specify the exact data sources that
+          should be used by the validator. This option is not available for the
+          endpoints that do not use any internal databases (e-mails, phone
+          numbers).
+        type: array
+        items:
+          type: string
+          nullable: false
+          example: CZ
+        nullable: true
+        default:
+          - CZ
+          - SK
+        example:
+          - CZ
+          - SK
+      acceptDegrees:
+        type: boolean
+        description: >-
+          Allow to enter a title directly into the name, surname or nameSurname
+          input. For example "Ing. Jan Novák" would be considered as
+          valid/invalid nameSurname
+        default: false
+        example: false
+      acceptContext:
+        type: boolean
+        description: >-
+          Allow to insert context directly into name, surname or nameSurname.
+          For example "Jan Novák ml." or "Jan Novák mladší" would be considered
+          as valid/invalid nameSurname
+        default: false
+        example: false
+      validationDepth:
+        enum:
+          - minimal
+          - moderate
+          - strict
+        description: >-
+          Specifies the depth of name validation. In other words how strict the
+          validator should behave. <b>Minimal</b> = all the names are considered
+          valid as long as there are no forbidden characters used or we are 100%
+          sure the name is invalid. Usually the only thing corrected is format.
+          <b>Moderate</b> = something in between the minimal and strict
+          validation. There are more instances of corrections like typos etc.
+          <b>Strict</b> = the most strict validation depth. Missing names in our
+          database are marked as invalid, the scoring for corrections and
+          suggestions is tweaked.
+        default: strict
+        example: strict
+      smartMode:
+        type: boolean
+        description: >-
+          Allows to correct the name (resultCorrected). If this is disabled, the
+          corrections are given as a suggestion.
+        default: true
+        example: true
+  client:
+    $ref: ./ClientRequest.yaml
+required:
+  - query

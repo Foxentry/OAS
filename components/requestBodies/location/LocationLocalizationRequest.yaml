@@ -1,0 +1,9 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          $ref: ../../schemas/LocationLocalizationRequest.yaml
+      required:
+        - request

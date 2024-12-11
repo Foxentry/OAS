@@ -1,0 +1,44 @@
+type: object
+properties:
+  group:
+    enum:
+      - REQUEST
+    description: Group of error.
+    example: REQUEST
+  type:
+    enum:
+      - QUERY
+    description: Type of error.
+    example: QUERY
+  subtype:
+    enum:
+      - PARAMETERS_COMBINATION
+    description: Subtype of error.
+    example: PARAMETERS_COMBINATION
+  severity:
+    enum:
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+      example: streetWithNumber
+    example:
+      - streetWithNumber
+      - street
+  description:
+    enum:
+      - >-
+        It is not possible to use these parameters at the same time in one
+        request.
+    description: Description of error.
+    example: >-
+      It is not possible to use these parameters at the same time in one
+      request.

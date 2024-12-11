@@ -1,0 +1,27 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          $ref: ../../schemas/NameValidationRequest.yaml
+      required:
+        - request
+    examples:
+      Request Example:
+        value:
+          request:
+            query:
+              name: test
+              surname: Ing. Petr Novák ml.
+            options:
+              dataScope: full
+              acceptDegrees: true
+              acceptContext: false
+              validationDepth: strict
+              smartMode: true
+            client:
+              country: CZ
+              location:
+                lat: 50.0628
+                lon: 13.9271

@@ -1,0 +1,38 @@
+type: object
+properties:
+  group:
+    enum:
+      - REQUEST
+    description: Group of error.
+    example: REQUEST
+  type:
+    enum:
+      - ENDPOINT
+    description: Type of error.
+    example: ENDPOINT
+  subtype:
+    enum:
+      - NOT_FOUND
+    description: Subtype of error.
+    example: NOT_FOUND
+  severity:
+    enum:
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+  description:
+    enum:
+      - >-
+        Endpoint not found. Please check Foxentry.dev for the supported
+        endpoints.
+    description: Description of error.
+    example: Endpoint not found. Please check Foxentry.dev for the supported endpoints.

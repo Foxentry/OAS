@@ -1,0 +1,439 @@
+description: Successful response
+headers:
+  foxentry-api-version:
+    $ref: ../../headers/Foxentry-Api-Version.yaml
+  foxentry-daily-credits-left:
+    $ref: ../../headers/Foxentry-Daily-Credits-Left.yaml
+  foxentry-daily-credits-limit:
+    $ref: ../../headers/Foxentry-Daily-Credits-Limit.yaml
+  foxentry-rate-limit:
+    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    examples:
+      searchStreet:
+        value:
+          status: 200
+          request:
+            endpoint: location/search
+            code: mRVG6yuxblMxwBEECk7o4ZhymZcXmJ
+          response:
+            resultsCount: 3
+            results:
+              - data:
+                  country: CZ
+                  ids:
+                    internal: null
+                    external: null
+                  street: Thámova
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: Thámova
+                  city: null
+                  zip: ''
+                  full: Thámova
+              - data:
+                  country: CZ
+                  ids:
+                    internal: null
+                    external: null
+                  street: Thákurova
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: Thákurova
+                  city: Praha
+                  zip: '16000'
+                  full: Thákurova, 16000 Praha
+              - data:
+                  country: SK
+                  ids:
+                    internal: null
+                    external: null
+                  street: Ul. K. Thalyho
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: Ul. K. Thalyho
+                  city: Komárno
+                  zip: '94501'
+                  full: Ul. K. Thalyho, 94501 Komárno
+          errors: []
+      searchCity:
+        value:
+          status: 200
+          request:
+            endpoint: location/search
+            code: RvCASBkpi69AOTpVzEi9UrqIRbQR2u
+          response:
+            resultsCount: 3
+            results:
+              - data:
+                  country: CZ
+                  ids:
+                    internal: null
+                    external: null
+                  street: null
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: null
+                  city: Praha
+                  zip: ''
+                  full: Praha
+              - data:
+                  country: CZ
+                  ids:
+                    internal: null
+                    external: null
+                  street: null
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: null
+                  city: Praha 4
+                  zip: ''
+                  full: Praha 4
+              - data:
+                  country: CZ
+                  ids:
+                    internal: null
+                    external: null
+                  street: null
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: null
+                  city: Praha 9
+                  zip: ''
+                  full: Praha 9
+          errors: []
+      searchStreetWithNumber:
+        value:
+          status: 200
+          request:
+            endpoint: location/search
+            code: eEAsIlENdS8ll2lCOaDZZx8CYz5OmM
+          response:
+            resultsCount: 3
+            results:
+              - data:
+                  country: CZ
+                  ids:
+                    internal: 93d15062-1b34-48c0-a78e-546e8fac0c11
+                    external: '26766540'
+                  street: Jeseniova
+                  number:
+                    part1: '2770'
+                    part1Number: '2770'
+                    part1Letter: null
+                    part2: '56'
+                    part2Number: '56'
+                    part2Letter: null
+                    full: 2770/56
+                  streetWithNumber: Jeseniova 2770/56
+                  city: Praha 3
+                  zip: '13000'
+                  full: Jeseniova 2770/56, 13000 Praha 3
+              - data:
+                  country: CZ
+                  ids:
+                    internal: 225363a8-2115-4b0d-8fc7-95da5f54b465
+                    external: '18320333'
+                  street: Jeseniova
+                  number:
+                    part1: '561'
+                    part1Number: '561'
+                    part1Letter: null
+                    part2: '22'
+                    part2Number: '22'
+                    part2Letter: null
+                    full: 561/22
+                  streetWithNumber: Jeseniova 561/22
+                  city: Poděbrady
+                  zip: '29001'
+                  full: Jeseniova 561/22, 29001 Poděbrady
+              - data:
+                  country: CZ
+                  ids:
+                    internal: fdc4067e-83ed-4e61-b9f1-4e9048db731f
+                    external: '75256690'
+                  street: Jeseniova
+                  number:
+                    part1: '2760'
+                    part1Number: '2760'
+                    part1Letter: null
+                    part2: 56f
+                    part2Number: '56'
+                    part2Letter: f
+                    full: 2760/56f
+                  streetWithNumber: Jeseniova 2760/56f
+                  city: Praha 3
+                  zip: '13000'
+                  full: Jeseniova 2760/56f, 13000 Praha 3
+          errors: []
+      searchZip:
+        value:
+          status: 200
+          request:
+            endpoint: location/search
+            code: umF4xS360o4CjJOttHZ9aOP8UdfO6B
+          response:
+            resultsCount: 3
+            results:
+              - data:
+                  country: CZ
+                  ids:
+                    internal: null
+                    external: null
+                  street: null
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: null
+                  city: Praha
+                  zip: '10000'
+                  full: 10000 Praha
+              - data:
+                  country: CZ
+                  ids:
+                    internal: null
+                    external: null
+                  street: null
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: null
+                  city: Praha
+                  zip: '10100'
+                  full: 10100 Praha
+              - data:
+                  country: CZ
+                  ids:
+                    internal: null
+                    external: null
+                  street: null
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: null
+                  city: Praha
+                  zip: '10200'
+                  full: 10200 Praha
+          errors: []
+      searchFull:
+        value:
+          status: 200
+          request:
+            endpoint: location/search
+            code: CCsDdl37ewdnCqhc7zJy85N4TOYUZB
+          response:
+            resultsCount: 3
+            results:
+              - data:
+                  country: CZ
+                  ids:
+                    internal: null
+                    external: null
+                  street: Jeseniova
+                  number:
+                    part1: null
+                    part1Number: null
+                    part1Letter: null
+                    part2: null
+                    part2Number: null
+                    part2Letter: null
+                    full: null
+                  streetWithNumber: Jeseniova
+                  city: Praha 3
+                  zip: '13000'
+                  full: Jeseniova, 13000 Praha 3
+              - data:
+                  country: CZ
+                  ids:
+                    internal: 9672518f-2c32-4d8c-861b-fbef273aac6b
+                    external: '27227979'
+                  street: Jeseniova
+                  number:
+                    part1: '2853'
+                    part1Number: '2853'
+                    part1Letter: null
+                    part2: '22'
+                    part2Number: '22'
+                    part2Letter: null
+                    full: 2853/22
+                  streetWithNumber: Jeseniova 2853/22
+                  city: Praha 3
+                  zip: '13000'
+                  full: Jeseniova 2853/22, 13000 Praha 3
+              - data:
+                  country: CZ
+                  ids:
+                    internal: 80878c84-8218-4052-bfc0-21665cdd11a4
+                    external: '27141608'
+                  street: Jeseniova
+                  number:
+                    part1: '2852'
+                    part1Number: '2852'
+                    part1Letter: null
+                    part2: '16'
+                    part2Number: '16'
+                    part2Letter: null
+                    full: 2852/16
+                  streetWithNumber: Jeseniova 2852/16
+                  city: Praha 3
+                  zip: '13000'
+                  full: Jeseniova 2852/16, 13000 Praha 3
+          errors: []
+    schema:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Status of API response.
+          example: 200
+        request:
+          allOf:
+            - $ref: ../../schemas/GlobalRequest.yaml
+            - type: object
+              properties:
+                endpoint:
+                  type: string
+                  example: location/search
+                query:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      description: Type of search.
+                      enum:
+                        - street
+                        - streetWithNumber
+                        - number.full
+                        - number.part1
+                        - number.part1Number
+                        - number.part2
+                        - number.part2Number
+                        - city
+                        - zip
+                        - full
+                    value:
+                      description: Searched value.
+                      type: string
+                    filter:
+                      type: object
+                      description: >-
+                        Additional filter in order to specify the search
+                        results. You can for example set as a filter city of
+                        Prague, so the the search engine would look for the
+                        addresses only in Prague. Pay attention to the options,
+                        which determines how the filter should behave.
+                      properties:
+                        street:
+                          type: string
+                          nullable: true
+                          description: Street.
+                          example: Jeseniova
+                        streetWithNumber:
+                          type: string
+                          nullable: true
+                          description: Street with number.
+                          example: Jeseniova 55
+                        number.full:
+                          type: string
+                          nullable: true
+                          description: Full number.
+                          example: 1151/55d
+                        number.part1:
+                          type: string
+                          nullable: true
+                          description: First part of the number
+                          example: '1151'
+                        number.part2:
+                          type: string
+                          nullable: true
+                          description: Second part of the number.
+                          example: 55d
+                        city:
+                          type: string
+                          nullable: true
+                          description: City.
+                          example: Praha
+                        zip:
+                          type: string
+                          nullable: true
+                          description: ZIP code.
+                          example: 130 00
+                        country:
+                          type: string
+                          nullable: true
+                          description: >-
+                            Country code in format [ISO-3166-1
+                            alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+                          example: CZ
+                options:
+                  $ref: ../../schemas/LocationSearchRequestOptions.yaml
+                client:
+                  $ref: ../../schemas/ClientRequest.yaml
+        response:
+          $ref: ../../schemas/LocationSearchResponse.yaml
+        errors:
+          description: >-
+            List of errors related to the request. Should be empty if the
+            request finished successfully.
+          type: array
+          items: {}
+          maxItems: 0
+      required:
+        - status
+        - request

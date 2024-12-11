@@ -1,0 +1,24 @@
+type: object
+properties:
+  group:
+    enum:
+      - VALUE
+    description: Group of fix.
+    example: VALUE
+  type:
+    enum:
+      - ADDED
+      - CHANGED
+      - PART_CHANGED
+      - REMOVED
+    description: Type of fix.
+    example: ADDED
+  subtype:
+    enum:
+      - INTERNAL_RULE
+      - TYPO
+      - null
+    description: Subtype of error.
+    example: INTERNAL_RULE
+  data:
+    $ref: ./FixData.yaml

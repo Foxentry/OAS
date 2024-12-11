@@ -1,0 +1,86 @@
+type: object
+required:
+  - endpoint
+  - code
+properties:
+  endpoint:
+    type: string
+    description: Endpoint used in API call.
+    example: phone/validate
+  code:
+    type: string
+    description: Internal API call code.
+    example: gc0nCfcELaPSHH4Qo4UBaC7DbAj6G4
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    properties:
+      prefix:
+        type: string
+        description: Phone prefix.
+        example: '+420'
+      number:
+        type: string
+        description: Phone number to validate.
+        example: '777555666'
+      numberWithPrefix:
+        type: string
+        description: Phone number with prefix to validate.
+        example: '+420777555666'
+  options:
+    type: object
+    description: Query options.
+    properties:
+      validationType:
+        type: string
+        description: >-
+          Type of validation used. <b>Basic</b> = checks the format and syntax
+          of validated phone number. <b>Extended</b> = checks whether the phone
+          number is registered in the TELCO net as well. Returns additional
+          information such as carrier name and type of the phone connection
+          (mobile/landline).
+        example: extended
+      allowedPrefixes:
+        type: array
+        nullable: true
+        description: Array of allowed prefixes. If <b>null</b> = all prefixes are allowed.
+        items:
+          type: string
+          example: '+420'
+      formatNumber:
+        nullable: true
+        type: boolean
+        description: >-
+          Determines whether the formatted phone number (with spaces) should be
+          considered as valid or not. If this option is set to <b>false</b>, a
+          phone number with spaces would be considered as invalid with format
+          error and a correction would be proposed in resultCorrected. If set to
+          <b>true</b>, a phone number with correct use of spaces would be
+          considered as valid and the national format invalid.
+        example: false
+      preferredPrefixes:
+        type: array
+        description: >-
+          Ordered list of preferred prefixes. If phone number is valid with
+          multiple prefixes, the resultCorrected will use the first valid prefix
+          from this list. If not set, the resultCorrected will be null and there
+          will be all valid combinations in the suggestions.
+        nullable: true
+        items:
+          type: string
+          example: '+420'
+        default: []
+        example:
+          - '+420'
+          - '+421'
+      defaultPrefix:
+        nullable: true
+        type: string
+        description: Default international prefix if not part of the query.
+        example: '+420'
+  client:
+    $ref: ./ClientRequest.yaml

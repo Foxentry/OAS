@@ -1,0 +1,19 @@
+type: object
+description: Data that has been changed
+properties:
+  typeFrom:
+    type: string
+    description: Original type of changed value
+    example: email
+  type:
+    type: string
+    description: New type of value
+    example: email
+  valueFrom:
+    type: string
+    description: Original value
+    example: me@gmail.cz
+  value:
+    type: string
+    description: Changed value
+    example: me@gmail.com

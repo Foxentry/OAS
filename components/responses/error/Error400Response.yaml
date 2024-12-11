@@ -1,0 +1,50 @@
+description: Bad Request.
+headers:
+  foxentry-api-version:
+    $ref: ../../headers/Foxentry-Api-Version.yaml
+  foxentry-rate-limit:
+    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    schema:
+      allOf:
+        - type: object
+          properties:
+            status:
+              type: integer
+              description: Status of API response.
+              example: 400
+        - type: object
+          properties:
+            request:
+              $ref: ../../schemas/GlobalRequest.yaml
+        - type: object
+          properties:
+            status:
+              type: integer
+              description: Status of API response.
+              example: 400
+            errors:
+              description: >-
+                List of errors related to the request. Should be empty if the
+                request finished successfully.
+              type: array
+              items:
+                oneOf:
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestBodyEmpty.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestBodyNotJson.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestBodyNoRequest.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestBodyTooBig.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestOptionsParameterNotSupported.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestOptionParameterValueNotSupported.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestQueryNotSent.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestQueryParameterCombination.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestQueryParameterNotSupportedForQuery.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestOptionsParameterCombination.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestQueryParameterMissing.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestQueryParameterNotSupported.yaml
+                  - $ref: ../../schemas/requestErrors/400/Error400RequestQueryParameterRequired.yaml

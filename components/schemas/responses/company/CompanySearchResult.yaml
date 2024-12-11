@@ -1,0 +1,13 @@
+type: object
+properties:
+  resultsCount:
+    type: number
+    description: Number of results.
+    example: 1
+  results:
+    type: array
+    items:
+      $ref: ./CompanyObject.yaml
+required:
+  - resultsCount
+  - results

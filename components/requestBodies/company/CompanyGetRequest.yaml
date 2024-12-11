@@ -1,0 +1,26 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          $ref: ../../schemas/requestBodies/company/CompanyGetBody.yaml
+      required:
+        - request
+    examples:
+      Request Example:
+        value:
+          request:
+            query:
+              country: CZ
+              registrationNumber: '04997476'
+            options:
+              dataScope: full
+              includeTerminatedSubjects: false
+              cityFormat: basic
+              zipFormat: false
+            client:
+              country: CZ
+              location:
+                lat: 50.0628
+                lon: 13.9271

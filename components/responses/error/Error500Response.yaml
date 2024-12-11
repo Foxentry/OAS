@@ -1,0 +1,38 @@
+description: Internal Server Error.
+headers:
+  foxentry-api-version:
+    $ref: ../../headers/Foxentry-Api-Version.yaml
+  foxentry-rate-limit:
+    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    schema:
+      allOf:
+        - type: object
+          properties:
+            status:
+              example: 500
+        - type: object
+          properties:
+            request:
+              $ref: ../../schemas/GlobalRequest.yaml
+        - type: object
+          properties:
+            errors:
+              description: >-
+                List of errors related to the request. Should be empty if the
+                request finished successfully.
+              type: array
+              items:
+                oneOf:
+                  - $ref: ../../schemas/requestErrors/500/Error500InternalBilling.yaml
+                  - $ref: ../../schemas/requestErrors/500/Error500InternalDatabaseConnection.yaml
+                  - $ref: ../../schemas/requestErrors/500/Error500InternalDatabaseError.yaml
+                  - $ref: ../../schemas/requestErrors/500/Error500InternalDatabaseNotAvailable.yaml
+                  - $ref: ../../schemas/requestErrors/500/Error500InternalError.yaml
+                  - $ref: ../../schemas/requestErrors/500/Error500Timeout.yaml
+                  - $ref: ../../schemas/requestErrors/500/Error500RequestProjectNoData.yaml

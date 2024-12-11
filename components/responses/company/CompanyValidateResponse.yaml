@@ -1,0 +1,609 @@
+description: Successful response
+headers:
+  foxentry-api-version:
+    $ref: ../../headers/Foxentry-Api-Version.yaml
+  foxentry-daily-credits-left:
+    $ref: ../../headers/Foxentry-Daily-Credits-Left.yaml
+  foxentry-daily-credits-limit:
+    $ref: ../../headers/Foxentry-Daily-Credits-Limit.yaml
+  foxentry-rate-limit:
+    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    examples:
+      valid:
+        value:
+          status: 200
+          request:
+            endpoint: company/validate
+            code: 1k4QDATGegVc9lHK5ntuqy4xPoZrst
+          response:
+            result:
+              isValid: true
+              proposal: valid
+              data:
+                country: CZ
+                name: AVANTRO s.r.o.
+                registrationNumber: '04997476'
+                taxNumber: null
+                vatNumber: CZ04997476
+                vatNumberSpecial: null
+                address:
+                  data:
+                    country: CZ
+                    ids:
+                      internal: '2070391'
+                      external: '22349995'
+                    street: Thámova
+                    number:
+                      part1: '137'
+                      part1Number: '137'
+                      part1Letter: null
+                      part2: '16'
+                      part2Number: '16'
+                      part2Letter: null
+                      full: 137/16
+                    streetWithNumber: Thámova 137/16
+                    city: Praha 8
+                    zip: '18600'
+                    full: Thámova 137/16, 18600 Praha 8
+                addressOfficial:
+                  data:
+                    country: null
+                    street: Thámova
+                    number:
+                      part1: null
+                      part1Number: null
+                      part1Letter: null
+                      part2: null
+                      part2Number: null
+                      part2Letter: null
+                      full: 137/16
+                    streetWithNumber: Thámova 137/16
+                    city: Praha
+                    zip: '18600'
+                    full: null
+              errors: []
+              resultsCorrected: null
+            suggestions: []
+          errors: []
+      invalid:
+        value:
+          status: 200
+          request:
+            endpoint: company/validate
+            code: ca65OjL9IBjzDNQDCsmBkPrFocm50B
+          response:
+            result:
+              isValid: false
+              proposal: invalid
+              data:
+                country: null
+                name: AVANTRO
+                registrationNumber: '25547'
+                taxNumber: null
+                vatNumber: null
+                addressOfficial: null
+                vatNumberSpecial: null
+                address: null
+            errors:
+              - group: VALUE
+                type: INVALID
+                subtype: null
+                severity: critical
+                relatedTo:
+                  - name
+                  - registrationNumber
+                description: Value is not valid.
+            resultCorrected: null
+            suggestions: []
+          errors: []
+      invalidWithSuggestion:
+        value:
+          status: 200
+          request:
+            endpoint: company/validate
+            code: onGK6jOLFObOGN5jDJUx4uhwNXyFfB
+          response:
+            result:
+              isValid: false
+              proposal: invalidWithSuggestion
+              data:
+                country: null
+                name: null
+                registrationNumber: '0499747'
+                taxNumber: null
+                vatNumber: null
+                vatNumberSpecial: null
+                address: null
+              errors:
+                - group: VALUE
+                  type: INVALID
+                  subtype: null
+                  severity: critical
+                  relatedTo:
+                    - registrationNumber
+                  description: Value is not valid.
+              resultsCorrected: null
+            suggestions:
+              - isValid: true
+                data:
+                  country: CZ
+                  name: Martina Brázdilová
+                  registrationNumber: '04909747'
+                  taxNumber: null
+                  vatNumber: null
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '1530660'
+                        external: '16349491'
+                      street: Strmá
+                      number:
+                        part1: '1129'
+                        part1Number: '1129'
+                        part1Letter: null
+                        part2: '6'
+                        part2Number: '6'
+                        part2Letter: null
+                        full: 1129/6
+                      streetWithNumber: Strmá 1129/6
+                      city: Šternberk
+                      zip: '78501'
+                      full: Strmá 1129/6, 78501 Šternberk
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Strmá
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 1129/6
+                      streetWithNumber: Strmá 1129/6
+                      city: Šternberk
+                      zip: '78501'
+                      full: null
+                errors: []
+                fixes:
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
+                    data:
+                      typeFrom: registrationNumber
+                      type: registrationNumber
+                      valueFrom: '0499747'
+                      value: '04909747'
+              - isValid: true
+                data:
+                  country: CZ
+                  name: Quang Anh Kieu
+                  registrationNumber: '04997417'
+                  taxNumber: null
+                  vatNumber: null
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2270634'
+                        external: '24537110'
+                      street: Husova
+                      number:
+                        part1: '786'
+                        part1Number: '786'
+                        part1Letter: null
+                        part2: '19'
+                        part2Number: '19'
+                        part2Letter: null
+                        full: 786/19
+                      streetWithNumber: Husova 786/19
+                      city: Plzeň 3
+                      zip: '30100'
+                      full: Husova 786/19, 30100 Plzeň 3
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Husova
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 786/19
+                      streetWithNumber: Husova 786/19
+                      city: Plzeň
+                      zip: '30100'
+                      full: null
+                errors: []
+                fixes:
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
+                    data:
+                      typeFrom: registrationNumber
+                      type: registrationNumber
+                      valueFrom: '0499747'
+                      value: '04997417'
+              - isValid: true
+                data:
+                  country: CZ
+                  name: Tomáš Minarovič
+                  registrationNumber: '04997247'
+                  taxNumber: null
+                  vatNumber: null
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2359109'
+                        external: '25528807'
+                      street: null
+                      number:
+                        part1: '253'
+                        part1Number: '253'
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: '253'
+                      streetWithNumber: Zápy 253
+                      city: Zápy
+                      zip: '25061'
+                      full: 253, 25061 Zápy
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: null
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: '253'
+                      streetWithNumber: ' 253'
+                      city: Zápy
+                      zip: '25001'
+                      full: null
+                errors: []
+                fixes:
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
+                    data:
+                      typeFrom: registrationNumber
+                      type: registrationNumber
+                      valueFrom: '0499747'
+                      value: '04997247'
+              - isValid: true
+                data:
+                  country: CZ
+                  name: BE SOCKS s.r.o.
+                  registrationNumber: '05499747'
+                  taxNumber: null
+                  vatNumber: null
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2098912'
+                        external: '22659251'
+                      street: Krymská
+                      number:
+                        part1: '439'
+                        part1Number: '439'
+                        part1Letter: null
+                        part2: '24'
+                        part2Number: '24'
+                        part2Letter: null
+                        full: 439/24
+                      streetWithNumber: Krymská 439/24
+                      city: Praha 10
+                      zip: '10100'
+                      full: Krymská 439/24, 10100 Praha 10
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Krymská
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 439/24
+                      streetWithNumber: Krymská 439/24
+                      city: Praha
+                      zip: '10100'
+                      full: null
+                errors: []
+                fixes:
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
+                    data:
+                      typeFrom: registrationNumber
+                      type: registrationNumber
+                      valueFrom: '0499747'
+                      value: '05499747'
+              - isValid: true
+                data:
+                  country: CZ
+                  name: Jaroslav Ondrúšek
+                  registrationNumber: '04799747'
+                  taxNumber: null
+                  vatNumber: null
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '268366'
+                        external: '2833816'
+                      street: Rýmařovská
+                      number:
+                        part1: '1491'
+                        part1Number: '1491'
+                        part1Letter: null
+                        part2: '31'
+                        part2Number: '31'
+                        part2Letter: null
+                        full: 1491/31
+                      streetWithNumber: Rýmařovská 1491/31
+                      city: Bruntál
+                      zip: '79201'
+                      full: Rýmařovská 1491/31, 79201 Bruntál
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Rýmařovská
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 1491/31
+                      streetWithNumber: Rýmařovská 1491/31
+                      city: Bruntál
+                      zip: '79201'
+                      full: null
+                errors: []
+                fixes:
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
+                    data:
+                      typeFrom: registrationNumber
+                      type: registrationNumber
+                      valueFrom: '0499747'
+                      value: '04799747'
+              - isValid: true
+                data:
+                  country: CZ
+                  name: Media 8 s.r.o.
+                  registrationNumber: '04996747'
+                  taxNumber: null
+                  vatNumber: CZ04996747
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2095647'
+                        external: '22623400'
+                      street: Michelangelova
+                      number:
+                        part1: '1995'
+                        part1Number: '1995'
+                        part1Letter: null
+                        part2: '16'
+                        part2Number: '16'
+                        part2Letter: null
+                        full: 1995/16
+                      streetWithNumber: Michelangelova 1995/16
+                      city: Praha 10
+                      zip: '10000'
+                      full: Michelangelova 1995/16, 10000 Praha 10
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Michelangelova
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 1995/16
+                      streetWithNumber: Michelangelova 1995/16
+                      city: Praha
+                      zip: '10000'
+                      full: null
+                errors: []
+                fixes:
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
+                    data:
+                      typeFrom: registrationNumber
+                      type: registrationNumber
+                      valueFrom: '0499747'
+                      value: '04996747'
+              - isValid: true
+                data:
+                  country: CZ
+                  name: AVANTRO s.r.o.
+                  registrationNumber: '04997476'
+                  taxNumber: null
+                  vatNumber: CZ04997476
+                  vatNumberSpecial: null
+                  address:
+                    data:
+                      country: CZ
+                      ids:
+                        internal: '2070391'
+                        external: '22349995'
+                      street: Thámova
+                      number:
+                        part1: '137'
+                        part1Number: '137'
+                        part1Letter: null
+                        part2: '16'
+                        part2Number: '16'
+                        part2Letter: null
+                        full: 137/16
+                      streetWithNumber: Thámova 137/16
+                      city: Praha 8
+                      zip: '18600'
+                      full: Thámova 137/16, 18600 Praha 8
+                  addressOfficial:
+                    data:
+                      country: null
+                      street: Thámova
+                      number:
+                        part1: null
+                        part1Number: null
+                        part1Letter: null
+                        part2: null
+                        part2Number: null
+                        part2Letter: null
+                        full: 137/16
+                      streetWithNumber: Thámova 137/16
+                      city: Praha
+                      zip: '18600'
+                      full: null
+                errors: []
+                fixes:
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
+                    data:
+                      typeFrom: registrationNumber
+                      type: registrationNumber
+                      valueFrom: '0499747'
+                      value: '04997476'
+          errors: []
+      invalidWithCorrection:
+        value:
+          status: 200
+          request:
+            endpoint: company/validate
+            code: nccg9a5VBknoA8Mz7z489FLmLsVLfY
+          response:
+            result:
+              isValid: false
+              proposal: invalidWithCorrection
+              data:
+                country: null
+                name: AVANTRO
+                registrationNumber: '04997476'
+                taxNumber: null
+                vatNumber: null
+                vatNumberSpecial: null
+                address: null
+                addressOficial: null
+              errors:
+                - group: SYNTAX
+                  type: VALUE_PART_MISSING
+                  subtype: LEGAL_FORM
+                  severity: critical
+                  relatedTo:
+                    - name
+                  description: Company name is missing the legal form.
+            resultCorrected:
+              isValid: true
+              data:
+                country: CZ
+                name: AVANTRO s.r.o.
+                registrationNumber: '04997476'
+                taxNumber: null
+                vatNumber: CZ04997476
+                vatNumberSpecial: null
+                address:
+                  data:
+                    country: CZ
+                    ids:
+                      internal: '2070391'
+                      external: '22349995'
+                    street: Thámova
+                    number:
+                      part1: '137'
+                      part1Number: '137'
+                      part1Letter: null
+                      part2: '16'
+                      part2Number: '16'
+                      part2Letter: null
+                      full: 137/16
+                    streetWithNumber: Thámova 137/16
+                    city: Praha 8
+                    zip: '18600'
+                    full: Thámova 137/16, 18600 Praha 8
+                addressOfficial:
+                  data:
+                    country: null
+                    street: Thámova
+                    number:
+                      part1: null
+                      part1Number: null
+                      part1Letter: null
+                      part2: null
+                      part2Number: null
+                      part2Letter: null
+                      full: 137/16
+                    streetWithNumber: Thámova 137/16
+                    city: Praha
+                    zip: '18600'
+                    full: null
+              errors: []
+              fixes:
+                - group: SYNTAX
+                  type: VALUE_PART_ADDED
+                  subtype: LEGAL_FORM
+                  data:
+                    typeFrom: name
+                    type: name
+                    valueFrom: AVANTRO
+                    value: AVANTRO s.r.o.
+            suggestions: []
+          errors: []
+    schema:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Status of API response.
+          example: 200
+        request:
+          $ref: ../../schemas/ValidateCompanyDataResultsRequest.yaml
+        response:
+          $ref: ../../schemas/ValidateCompanyDataResults.yaml
+        errors:
+          description: >-
+            List of errors related to the request. Should be empty if the
+            request finished successfully.
+          type: array
+          items: {}
+          maxItems: 0
+      required:
+        - status
+        - request
+        - response

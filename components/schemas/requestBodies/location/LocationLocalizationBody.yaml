@@ -1,0 +1,67 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    required:
+      - lat
+      - lon
+    properties:
+      lat:
+        type: number
+        description: Latitude of the searched point.
+        example: 50.0919999
+      lon:
+        type: number
+        description: Longitude of the searched point.
+        example: 14.4527403
+  options:
+    allOf:
+      - $ref: ./LocationOptions.yaml
+      - type: object
+        properties:
+          radius:
+            type: integer
+            description: >-
+              Radius of the search area in meters. In other words the distance
+              in meters from the user's GPS coordinates. The number of suggested
+              addresses depends on the size of the radius. If there are too many
+              suitable addresses, the result count is limited by the
+              <b>resultsLimit</b> option.
+            minimum: 1
+            maximum: 1000
+            default: 50
+            example: 50
+            nullable: true
+          acceptNearest:
+            type: boolean
+            description: >-
+              If the searched area does not contain any addreses, Foxentry can
+              return list of the Nearest locations to the searched area
+              (acceptNearest = true).
+            default: false
+            example: false
+            nullable: true
+  client:
+    type: object
+    description: >-
+      Additional information about your user (from whom you've obtained the data
+      sent in query) in order to specify the results in response. Used mainly in
+      web forms when you need more relevant search/autocomplete results.
+    properties:
+      ip:
+        type: string
+        example: 127.0.1.1
+        format: ipv4
+      country:
+        type: string
+        description: >-
+          Country code in format [ISO-3166-1
+          alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+        example: CZ
+required:
+  - query

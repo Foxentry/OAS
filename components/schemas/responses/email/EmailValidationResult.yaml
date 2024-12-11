@@ -1,0 +1,34 @@
+type: object
+properties:
+  result:
+    type: object
+    description: Evaluation of the sent query.
+    properties:
+      isValid:
+        example: true
+      proposal:
+        enum:
+          - valid
+          - validWithSuggestion
+          - invalid
+          - invalidWithCorrection
+          - invalidWithPartialCorrection
+          - invalidWithSuggestion
+          - invalidWithCorrectionWithSuggestion
+          - unknownWithCorrection
+          - unknownWithPartialCorrection
+        description: >-
+          Proposed solution by Foxentry how you should process the response in
+          your form or application.
+    allOf:
+      - $ref: ./EmailDataValidity.yaml
+  resultCorrected:
+    $ref: ./EmailDataCorrection.yaml
+  suggestions:
+    type: array
+    nullable: true
+    description: Alternatives suggested for the sent query.
+    items:
+        $ref: ./EmailDataCorrection.yaml
+required:
+  - result

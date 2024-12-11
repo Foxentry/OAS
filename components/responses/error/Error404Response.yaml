@@ -1,13 +1,13 @@
 description: Not Found.
 headers:
   foxentry-api-version:
-    $ref: ../../headers/Foxentry-Api-Version.yaml
+    $ref: ./../../headers/Foxentry-Api-Version.yaml
   foxentry-rate-limit:
-    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit.yaml
   foxentry-rate-limit-period:
-    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Period.yaml
   foxentry-rate-limit-remaining:
-    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Remaining.yaml
 content:
   application/json:
     schema:
@@ -19,7 +19,7 @@ content:
         - type: object
           properties:
             request:
-              $ref: ../../schemas/GlobalRequest.yaml
+              $ref: ./../../schemas/GlobalRequest.yaml
         - type: object
           properties:
             errors:
@@ -29,6 +29,6 @@ content:
               type: array
               items:
                 oneOf:
-                  - $ref: ../../schemas/requestErrors/404/Error404RequestApiVersion.yaml
-                  - $ref: ../../schemas/requestErrors/404/Error404RequestEndpointNotFound.yaml
-                  - $ref: ../../schemas/requestErrors/404/Error404RequestProjectNotFound.yaml
+                  - $ref: ./../../schemas/requestErrors/404/Error404RequestApiVersion.yaml
+                  - $ref: ./../../schemas/requestErrors/404/Error404RequestEndpointNotFound.yaml
+                  - $ref: ./../../schemas/requestErrors/404/Error404RequestProjectNotFound.yaml

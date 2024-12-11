@@ -1,13 +1,13 @@
 description: Method Not Allowed.
 headers:
   foxentry-api-version:
-    $ref: ../../headers/Foxentry-Api-Version.yaml
+    $ref: ./../../headers/Foxentry-Api-Version.yaml
   foxentry-rate-limit:
-    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit.yaml
   foxentry-rate-limit-period:
-    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Period.yaml
   foxentry-rate-limit-remaining:
-    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Remaining.yaml
 content:
   application/json:
     schema:
@@ -19,10 +19,10 @@ content:
         - type: object
           properties:
             request:
-              $ref: ../../schemas/GlobalRequest.yaml
+              $ref: ./../../schemas/GlobalRequest.yaml
         - type: object
           properties:
             errors:
               type: array
               items:
-                $ref: ../../schemas/requestErrors/405/Error405RequestNotAllowedMethod.yaml
+                $ref: ./../../schemas/requestErrors/405/Error405RequestNotAllowedMethod.yaml

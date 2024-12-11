@@ -1,19 +1,43 @@
 description: Successful response
 headers:
   foxentry-api-version:
-    $ref: ../../headers/Foxentry-Api-Version.yaml
+    $ref: ./../../headers/Foxentry-Api-Version.yaml
   foxentry-daily-credits-left:
-    $ref: ../../headers/Foxentry-Daily-Credits-Left.yaml
+    $ref: ./../../headers/Foxentry-Daily-Credits-Left.yaml
   foxentry-daily-credits-limit:
-    $ref: ../../headers/Foxentry-Daily-Credits-Limit.yaml
+    $ref: ./../../headers/Foxentry-Daily-Credits-Limit.yaml
   foxentry-rate-limit:
-    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit.yaml
   foxentry-rate-limit-period:
-    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Period.yaml
   foxentry-rate-limit-remaining:
-    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Remaining.yaml
 content:
   application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          allOf:
+            - $ref: ./../../schemas/GlobalRequest.yaml
+            - $ref: ./../../schemas/requestBodies/location/LocationSearchBody.yaml
+            - type: object
+              properties:
+                endpoint:
+                  example: location/search
+        response:
+          $ref: ./../../schemas/responses/location/LocationSearchResponse.yaml
+        errors:
+          description: >-
+            List of errors related to the request. Should be empty if the
+            request finished successfully.
+          type: array
+          items: { }
+          maxItems: 0
+      required:
+        - status
+        - request
+
     examples:
       searchStreet:
         value:
@@ -78,7 +102,7 @@ content:
                   city: Komárno
                   zip: '94501'
                   full: Ul. K. Thalyho, 94501 Komárno
-          errors: []
+          errors: [ ]
       searchCity:
         value:
           status: 200
@@ -142,7 +166,7 @@ content:
                   city: Praha 9
                   zip: ''
                   full: Praha 9
-          errors: []
+          errors: [ ]
       searchStreetWithNumber:
         value:
           status: 200
@@ -206,7 +230,7 @@ content:
                   city: Praha 3
                   zip: '13000'
                   full: Jeseniova 2760/56f, 13000 Praha 3
-          errors: []
+          errors: [ ]
       searchZip:
         value:
           status: 200
@@ -270,7 +294,7 @@ content:
                   city: Praha
                   zip: '10200'
                   full: 10200 Praha
-          errors: []
+          errors: [ ]
       searchFull:
         value:
           status: 200
@@ -334,106 +358,4 @@ content:
                   city: Praha 3
                   zip: '13000'
                   full: Jeseniova 2852/16, 13000 Praha 3
-          errors: []
-    schema:
-      type: object
-      properties:
-        status:
-          type: integer
-          description: Status of API response.
-          example: 200
-        request:
-          allOf:
-            - $ref: ../../schemas/GlobalRequest.yaml
-            - type: object
-              properties:
-                endpoint:
-                  type: string
-                  example: location/search
-                query:
-                  type: object
-                  properties:
-                    type:
-                      type: string
-                      description: Type of search.
-                      enum:
-                        - street
-                        - streetWithNumber
-                        - number.full
-                        - number.part1
-                        - number.part1Number
-                        - number.part2
-                        - number.part2Number
-                        - city
-                        - zip
-                        - full
-                    value:
-                      description: Searched value.
-                      type: string
-                    filter:
-                      type: object
-                      description: >-
-                        Additional filter in order to specify the search
-                        results. You can for example set as a filter city of
-                        Prague, so the the search engine would look for the
-                        addresses only in Prague. Pay attention to the options,
-                        which determines how the filter should behave.
-                      properties:
-                        street:
-                          type: string
-                          nullable: true
-                          description: Street.
-                          example: Jeseniova
-                        streetWithNumber:
-                          type: string
-                          nullable: true
-                          description: Street with number.
-                          example: Jeseniova 55
-                        number.full:
-                          type: string
-                          nullable: true
-                          description: Full number.
-                          example: 1151/55d
-                        number.part1:
-                          type: string
-                          nullable: true
-                          description: First part of the number
-                          example: '1151'
-                        number.part2:
-                          type: string
-                          nullable: true
-                          description: Second part of the number.
-                          example: 55d
-                        city:
-                          type: string
-                          nullable: true
-                          description: City.
-                          example: Praha
-                        zip:
-                          type: string
-                          nullable: true
-                          description: ZIP code.
-                          example: 130 00
-                        country:
-                          type: string
-                          nullable: true
-                          description: >-
-                            Country code in format [ISO-3166-1
-                            alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-                          example: CZ
-                options:
-                  $ref: ../../schemas/LocationSearchRequestOptions.yaml
-                client:
-                  $ref: ../../schemas/ClientRequest.yaml
-        response:
-          $ref: ../../schemas/LocationSearchResponse.yaml
-        errors:
-          description: >-
-            List of errors related to the request. Should be empty if the
-            request finished successfully.
-          type: array
-          items: {}
-          maxItems: 0
-      required:
-        - status
-        - request
+          errors: [ ]

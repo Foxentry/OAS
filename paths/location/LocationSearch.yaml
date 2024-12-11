@@ -1,0 +1,43 @@
+post:
+  tags:
+    - Location
+  summary: Search location
+  description: >-
+    This enpoint mainly serves as <b>autocomplete</b> but can be used to search
+    for specific addresses based on filter criteria as well. Foxentry will
+    automatically offer you suggestions to complete the address you are writing
+    down. <br><br>Pay attention to the <b>client</b> section in the request
+    body. You can specify the user's location in order to receive more relevant
+    suggestions.
+  operationId: LocationSearch
+  parameters:
+    - $ref: ./../../components/parameters/Api-Version.yaml
+    - $ref: ./../../components/parameters/Foxentry-Include-Request-Details.yaml
+  requestBody:
+    $ref: ./../../components/requestBodies/location/LocationSearchRequest.yaml
+  responses:
+    '200':
+      $ref: ./../../components/responses/location/LocationSearch.yaml
+    '400':
+      $ref: ./../../components/responses/error/Error400Response.yaml
+    '401':
+      $ref: ./../../components/responses/error/Error401Response.yaml
+    '402':
+      $ref: ./../../components/responses/error/Error402Response.yaml
+    '403':
+      $ref: ./../../components/responses/error/Error403Response.yaml
+    '404':
+      $ref: ./../../components/responses/error/Error404Response.yaml
+    '405':
+      $ref: ./../../components/responses/error/Error405Response.yaml
+    '429':
+      $ref: ./../../components/responses/error/Error429Response.yaml
+    '500':
+      $ref: ./../../components/responses/error/Error500Response.yaml
+    '503':
+      $ref: ./../../components/responses/error/Error503Response.yaml
+  security:
+    - BearerAuth: []
+  servers:
+    - url: https://api.foxentry.com
+    - url: https://api.foxentry.com/v2.0

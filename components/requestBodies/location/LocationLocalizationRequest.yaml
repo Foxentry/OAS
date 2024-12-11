@@ -4,6 +4,6 @@ content:
       type: object
       properties:
         request:
-          $ref: ../../schemas/LocationLocalizationRequest.yaml
+          $ref: ./../../schemas/requestBodies/location/LocationLocalizationBody.yaml
       required:
         - request

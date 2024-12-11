@@ -4,7 +4,7 @@ content:
       type: object
       properties:
         request:
-          $ref: ../../schemas/ValidatePhoneNumberRequest.yaml
+          $ref: ./../../schemas/requestBodies/phone/PhoneValidationBody.yaml
       required:
         - request
     examples:

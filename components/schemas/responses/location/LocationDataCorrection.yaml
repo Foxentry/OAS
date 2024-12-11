@@ -1,0 +1,16 @@
+type: object
+allOf:
+  - $ref: ./LocationDataValidity.yaml
+properties:
+  fixes:
+    type: array
+    description: >-
+      List of all changes applied to the query data in order to get the
+      corrected result.
+    items:
+      oneOf:
+        - $ref: ./../../validationFixes/FixFormatGlobal.yaml
+        - $ref: ./../../validationFixes/FixSyntaxGlobal.yaml
+        - $ref: ./../../validationFixes/FixSyntaxLocation.yaml
+        - $ref: ./../../validationFixes/FixValueGlobal.yaml
+        - $ref: ./../../validationFixes/FixValueLocation.yaml

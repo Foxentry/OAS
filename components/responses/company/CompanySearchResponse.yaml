@@ -1,17 +1,17 @@
 description: Successful response
 headers:
   foxentry-api-version:
-    $ref: ../../headers/Foxentry-Api-Version.yaml
+    $ref: ./../../headers/Foxentry-Api-Version.yaml
   foxentry-daily-credits-left:
-    $ref: ../../headers/Foxentry-Daily-Credits-Left.yaml
+    $ref: ./../../headers/Foxentry-Daily-Credits-Left.yaml
   foxentry-daily-credits-limit:
-    $ref: ../../headers/Foxentry-Daily-Credits-Limit.yaml
+    $ref: ./../../headers/Foxentry-Daily-Credits-Limit.yaml
   foxentry-rate-limit:
-    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit.yaml
   foxentry-rate-limit-period:
-    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Period.yaml
   foxentry-rate-limit-remaining:
-    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Remaining.yaml
 content:
   application/json:
     schema:
@@ -23,8 +23,8 @@ content:
           example: 200
         request:
           allOf:
-            - $ref: ../../schemas/GlobalRequest.yaml
-            - $ref: ../../schemas/requestBodies/company/CompanySearchBody.yaml
+            - $ref: ./../../schemas/GlobalRequest.yaml
+            - $ref: ./../../schemas/requestBodies/company/CompanySearchBody.yaml
             - type: object
               properties:
                 endpoint:

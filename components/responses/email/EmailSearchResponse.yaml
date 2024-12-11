@@ -1,0 +1,69 @@
+description: Successful response
+headers:
+  foxentry-api-version:
+    $ref: ./../../headers/Foxentry-Api-Version.yaml
+  foxentry-daily-credits-left:
+    $ref: ./../../headers/Foxentry-Daily-Credits-Left.yaml
+  foxentry-daily-credits-limit:
+    $ref: ./../../headers/Foxentry-Daily-Credits-Limit.yaml
+  foxentry-rate-limit:
+    $ref: ./../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ./../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ./../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Status of API response.
+          example: 200
+        request:
+          allOf:
+            - $ref: ./../../schemas/GlobalRequest.yaml
+            - $ref: ./../../schemas/requestBodies/email/EmailSearchBody.yaml
+            - type: object
+              properties:
+                endpoint:
+                  example: email/search
+        response:
+          $ref: ./../../schemas/responses/email/EmailSearchResult.yaml
+        errors:
+          description: >-
+            List of errors related to the request. Should be empty if the
+            request finished successfully.
+          type: array
+          items: {}
+          maxItems: 0
+      required:
+        - status
+        - request
+    examples:
+      searchResults:
+        value:
+          status: 200
+          request:
+            endpoint: email/search
+            code: 9aI4lDnCPd72BYZeRuX8wMxX4wtqyO
+          response:
+            resultsCount: 5
+            results:
+              - data:
+                  email: info@seznam.cz
+                  domain: seznam.cz
+              - data:
+                  email: info@gmail.com
+                  domain: gmail.com
+              - data:
+                  email: info@email.cz
+                  domain: email.cz
+              - data:
+                  email: info@centrum.cz
+                  domain: centrum.cz
+              - data:
+                  email: info@azet.sk
+                  domain: azet.sk
+          errors: []

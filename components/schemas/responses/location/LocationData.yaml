@@ -1,0 +1,149 @@
+type: object
+description: Location data.
+properties:
+  data:
+    type: object
+    properties:
+      country:
+        type: string
+        nullable: true
+        description: >-
+          Country code in format [ISO-3166-1
+          alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+        example: CZ
+      region:
+        type: string
+        nullable: true
+        example: Hlavní město Praha
+      district:
+        type: string
+        nullable: true
+        example: Hlavní město Praha
+      cityDistrict:
+        type: string
+        nullable: true
+        example: Praha 6
+      cityDistrictSpecial:
+        type: string
+        nullable: true
+        description: Special types of city districts. Used only in Prague at the moment.
+        example: Praha 6
+      cityPart:
+        type: string
+        nullable: true
+        example: Dejvice
+      cityAdministrative:
+        type: string
+        nullable: true
+        description: City Administrative area.
+        example: Kraków
+      cadastralArea:
+        type: string
+        nullable: true
+        description: City cadastral area.
+        example: Dejvice
+      ids:
+        type: object
+        description: Address internal & external ids.
+        properties:
+          internal:
+            type: string
+            nullable: true
+            description: Internal address ID.
+            example: '2070391'
+          external:
+            type: string
+            nullable: true
+            description: >-
+              External address ID. May vary for every supported country. CZ = RUIAN,
+              PL = Government data, SK = no external ID.
+            example: '22349995'
+          region:
+            type: string
+            nullable: true
+            description: Region ID.
+            example: '19'
+          discrict:
+            type: string
+            nullable: true
+            description: District ID.
+            example: '9999'
+          cityDistrictSpecial:
+            type: string
+            nullable: true
+            description: City district special ID.
+            example: '86'
+          cityDistrict:
+            type: string
+            nullable: true
+            description: City district ID.
+            example: '500208'
+          cityPart:
+            type: string
+            nullable: true
+            description: City part ID.
+            example: '400637'
+          cadastralArea:
+            type: string
+            nullable: true
+            description: Cadastral area ID.
+            example: '730955'
+          city:
+            type: string
+            nullable: true
+            description: City ID.
+            example: '554782'
+          street:
+            type: string
+            nullable: true
+            description: Street ID.
+            example: '554782'
+      street:
+        type: string
+        description: Street.
+        example: Jeseniova
+        nullable: true
+      number:
+        $ref: ./LocationNumber.yaml
+      streetWithNumber:
+        type: string
+        description: Street with number.
+        nullable: true
+        example: Jeseniova 1151/55
+      city:
+        type: string
+        description: Location city.
+        example: Praha
+        nullable: true
+      zip:
+        type: string
+        description: ZIP code.
+        nullable: true
+        example: '13000'
+      postOffice:
+        type: object
+        description: In what post office jurisdiction the address falls under.
+        properties:
+          name:
+            type: string
+            nullable: true
+            example: Praha 086
+        required:
+          - name
+      geometry:
+        $ref: ./DataGeometry.yaml
+      full:
+        type: string
+        example: Jeseniova 1151/55, 130 00 Praha 3
+        nullable: true
+    required:
+      - country
+      - ids
+      - street
+      - number
+      - streetWithNumber
+      - city
+      - zip
+      - full
+required:
+        - data

@@ -22,8 +22,8 @@ properties:
       - country
       - registrationNumber
   options:
-    $ref: ./CompanyGetOptions.yaml
+    $ref: ./CompanyOptions.yaml
   client:
-    $ref: ../ClientRequest.yaml
+    $ref: ./../ClientRequest.yaml
 required:
   - query

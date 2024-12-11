@@ -4,7 +4,7 @@ content:
       type: object
       properties:
         request:
-          $ref: ../../schemas/requestBodies/company/CompanyValidateBody.yaml
+          $ref: ./../../schemas/requestBodies/company/CompanyValidationBody.yaml
       required:
         - request
     examples:

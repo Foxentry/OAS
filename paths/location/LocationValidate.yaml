@@ -1,0 +1,47 @@
+post:
+  tags:
+    - Location
+  summary: Validate location data
+  description: >-
+    This endpoint requires at least 1 query parameter and will check if the
+    parameters and their combinations are valid. Returns information about the
+    location based on the datascope set in the options.<br><br> Foxentry
+    validator is able not only to evaluate the validity of the inputed
+    information but it also can fix various typos, errors and missing data.
+    Foxentry can also suggest more suitable alternatives to the data sent in
+    query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and
+    <b>suggestions</b> in the response.<br><br> Always check
+    <b>result.proposal</b> in the response for a proposed solution by Foxentry
+    how you should process the response in your form or application.
+  operationId: LocationValidation
+  parameters:
+    - $ref: ./../../components/parameters/Api-Version.yaml
+    - $ref: ./../../components/parameters/Foxentry-Include-Request-Details.yaml
+  requestBody:
+    $ref: ./../../components/requestBodies/location/LocationValidationRequest.yaml
+  responses:
+    '200':
+      $ref: ./../../components/responses/location/LocationValidation.yaml
+    '400':
+      $ref: ./../../components/responses/error/Error400Response.yaml
+    '401':
+      $ref: ./../../components/responses/error/Error401Response.yaml
+    '402':
+      $ref: ./../../components/responses/error/Error402Response.yaml
+    '403':
+      $ref: ./../../components/responses/error/Error403Response.yaml
+    '404':
+      $ref: ./../../components/responses/error/Error404Response.yaml
+    '405':
+      $ref: ./../../components/responses/error/Error405Response.yaml
+    '429':
+      $ref: ./../../components/responses/error/Error429Response.yaml
+    '500':
+      $ref: ./../../components/responses/error/Error500Response.yaml
+    '503':
+      $ref: ./../../components/responses/error/Error503Response.yaml
+  security:
+    - BearerAuth: []
+  servers:
+    - url: https://api.foxentry.com
+    - url: https://api.foxentry.com/v2.0

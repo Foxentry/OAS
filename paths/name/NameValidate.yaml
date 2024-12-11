@@ -1,0 +1,52 @@
+post:
+  tags:
+    - Name
+  summary: Validate name data
+  description: >-
+    Foxentry allows you to check the validity and real existence of names and
+    their combinations. At least one parameter is required in the query. You can
+    either write down the name separately or use <b>nameSurname</b> as connected
+    parameter. <br><br>Pay attention to the query options. Especially
+    <b>validationDepth</b>, which determines how strict the validation should be
+    based on your use case. For example you''d want minimal validationDepth for
+    web forms since you usually don''t want to disturb the user too much with
+    error messages and suggestions.   <br><br> Foxentry validator is able not
+    only to evaluate the validity of the inputed information but it also can fix
+    various typos, errors and missing data. Foxentry can also suggest more
+    suitable alternatives to the data sent in query. Please pay attention to the
+    <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the
+    response.<br><br> Always check <b>result.proposal</b> in the response for a
+    proposed solution by Foxentry how you should process the response in your
+    form or application.
+  operationId: NameValidation
+  parameters:
+    - $ref: ./../../components/parameters/Api-Version.yaml
+    - $ref: ./../../components/parameters/Foxentry-Include-Request-Details.yaml
+  requestBody:
+    $ref: ./../../components/requestBodies/name/NameValidationRequest.yaml
+  responses:
+    '200':
+      $ref: ./../../components/responses/name/NameValidationResponse.yaml
+    '400':
+      $ref: ./../../components/responses/error/Error400Response.yaml
+    '401':
+      $ref: ./../../components/responses/error/Error401Response.yaml
+    '402':
+      $ref: ./../../components/responses/error/Error402Response.yaml
+    '403':
+      $ref: ./../../components/responses/error/Error403Response.yaml
+    '404':
+      $ref: ./../../components/responses/error/Error404Response.yaml
+    '405':
+      $ref: ./../../components/responses/error/Error405Response.yaml
+    '429':
+      $ref: ./../../components/responses/error/Error429Response.yaml
+    '500':
+      $ref: ./../../components/responses/error/Error500Response.yaml
+    '503':
+      $ref: ./../../components/responses/error/Error503Response.yaml
+  security:
+    - BearerAuth: []
+  servers:
+    - url: https://api.foxentry.com
+    - url: https://api.foxentry.com/v2.0

@@ -1,6 +1,0 @@
-type: object
-properties:
-  data:
-    $ref: ./LocationData.yaml
-required:
-  - data

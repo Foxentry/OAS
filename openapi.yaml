@@ -131,27 +131,27 @@ servers:
   - url: https://api.foxentry.com/v2.0
 paths:
   /company/validate:
-    $ref: paths/company/CompanyValidateEndpoint.yaml
+    $ref: paths/company/CompanyValidate.yaml
   /company/search:
-    $ref: paths/company/CompanySearchEndpoint.yaml
+    $ref: paths/company/CompanySearch.yaml
   /company/get:
-    $ref: paths/company/CompanyGetEndpoint.yaml
+    $ref: paths/company/CompanyGet.yaml
   /email/validate:
-    $ref: paths/email/EmailValidateEndpoint.yaml
+    $ref: paths/email/EmailValidate.yaml
   /email/search:
-    $ref: paths/email/EmailSearchEndpoint.yaml
+    $ref: paths/email/EmailSearch.yaml
   /location/validate:
-    $ref: paths/location/LocationValidateEndpoint.yaml
+    $ref: paths/location/LocationValidate.yaml
   /location/search:
-    $ref: paths/location/LocationSearchEndpoint.yaml
+    $ref: paths/location/LocationSearch.yaml
   /location/get:
-    $ref: paths/location/LocationGetEndpoint.yaml
+    $ref: paths/location/LocationGet.yaml
   /location/localize:
-    $ref: paths/location/LocationLocalizeEndpoint.yaml
+    $ref: paths/location/LocationLocalize.yaml
   /name/validate:
-    $ref: paths/name/NameValidateEndpoint.yaml
+    $ref: paths/name/NameValidate.yaml
   /phone/validate:
-    $ref: paths/phone/PhoneValidateEndpoint.yaml
+    $ref: paths/phone/PhoneValidate.yaml
 tags:
   - name: Company
     description: Company operations

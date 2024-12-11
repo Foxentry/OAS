@@ -1,0 +1,14 @@
+type: object
+title: LocationSearchResponse
+properties:
+  resultsCount:
+    type: integer
+    description: Number of results.
+    format: int32
+  results:
+    type: array
+    items:
+      $ref: ./LocationData.yaml
+required:
+  - resultsCount
+  - results

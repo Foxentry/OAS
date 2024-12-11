@@ -1,0 +1,88 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    oneOf:
+      - type: object
+        required:
+          - prefix
+          - number
+        title: Separate field for number and prefix
+        properties:
+          prefix:
+            type: string
+            description: Phone number prefix.
+            example: '+420'
+          number:
+            type: string
+            description: Phone number.
+            example: '607123456'
+      - type: object
+        required:
+          - numberWithPrefix
+        title: One field for number with prefix.
+        properties:
+          numberWithPrefix:
+            type: string
+            description: Phone number with prefix.
+            example: '+420775111222'
+  options:
+    type: object
+    description: Query options.
+    properties:
+      validationType:
+        enum:
+          - basic
+          - extended
+        description: Type of validation.
+        default: basic
+        example: extended
+      allowedPrefixes:
+        type: array
+        description: List of allowed prefixes.
+        nullable: true
+        items:
+          type: string
+          example: '+420'
+      preferredPrefixes:
+        type: array
+        description: >-
+          Ordered list of preferred prefixes. If phone number is valid with
+          multiple prefixes, the resultCorrected will use the first valid prefix
+          from this list. If not set, the resultCorrected will be null and there
+          will be all valid combinations in the suggestions.
+        nullable: true
+        items:
+          type: string
+          example: '+420'
+        default: []
+        example:
+          - '+420'
+          - '+421'
+      defaultPrefix:
+        type: string
+        description: >-
+          Deprecated - use preferredPrefixes instead. Default international
+          prefix if not part of the query. This is used for the validator to
+          make more accurate results.
+        example: '+420'
+        deprecated: true
+      formatNumber:
+        type: boolean
+        description: >-
+          Determines whether the formatted phone number (with spaces) should be
+          considered as valid or not. If this option is set to <b>false</b>, a
+          phone number with spaces would be considered as invalid with format
+          error and a correction would be proposed in resultCorrected. If set to
+          <b>true</b>, a phone number with correct use of spaces would be
+          considered as valid and the national format invalid.
+        example: false
+        default: false
+  client:
+    $ref: ./../ClientRequest.yaml
+required:
+  - query

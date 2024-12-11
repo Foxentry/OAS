@@ -4,7 +4,7 @@ content:
       type: object
       properties:
         request:
-          $ref: ../../schemas/NameValidationRequest.yaml
+          $ref: ./../../schemas/requestBodies/name/NameValidationBody.yaml
       required:
         - request
     examples:

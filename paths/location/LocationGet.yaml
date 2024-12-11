@@ -1,0 +1,42 @@
+post:
+  tags:
+    - Location
+  summary: Get location data
+  description: >-
+    Foxentry allows you to get information about location based on the
+    <b>dataScope</b> option. <b>Country</b> and <b>ID</b> parameters are
+    required. You can either choose internal ID, which is assigned by Foxentry
+    or external ID from the data source. <b>CZ external</b> = RUIAN, <b>PL
+    external</b> = Gov data, <b>SK external does not exist</b>.
+  operationId: LocationGet
+  parameters:
+    - $ref: ./../../components/parameters/Api-Version.yaml
+    - $ref: ./../../components/parameters/Foxentry-Include-Request-Details.yaml
+  requestBody:
+    $ref: ./../../components/requestBodies/location/LocationGetRequest.yaml
+  responses:
+    '200':
+      $ref: ./../../components/responses/location/LocationGet.yaml
+    '400':
+      $ref: ./../../components/responses/error/Error400Response.yaml
+    '401':
+      $ref: ./../../components/responses/error/Error401Response.yaml
+    '402':
+      $ref: ./../../components/responses/error/Error402Response.yaml
+    '403':
+      $ref: ./../../components/responses/error/Error403Response.yaml
+    '404':
+      $ref: ./../../components/responses/error/Error404Response.yaml
+    '405':
+      $ref: ./../../components/responses/error/Error405Response.yaml
+    '429':
+      $ref: ./../../components/responses/error/Error429Response.yaml
+    '500':
+      $ref: ./../../components/responses/error/Error500Response.yaml
+    '503':
+      $ref: ./../../components/responses/error/Error503Response.yaml
+  security:
+    - BearerAuth: []
+  servers:
+    - url: https://api.foxentry.com
+    - url: https://api.foxentry.com/v2.0

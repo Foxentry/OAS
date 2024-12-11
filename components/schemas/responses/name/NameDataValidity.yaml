@@ -1,0 +1,39 @@
+type: object
+properties:
+  isValid:
+    type: boolean
+    description: >-
+      Determines the validity of the response. <b>True</b> = valid response
+      / <b>False</b> = invalid response. Can be also <b>null</b>, which
+      indicates a non-specific error.
+    example: true
+  data:
+    $ref: ./NameData.yaml
+  details:
+    $ref: ./NameDetails.yaml
+  errors:
+    description: >-
+      List of errors related to the query. Provides information about which
+      query fields were deemed invalid and why.
+    type: array
+    items:
+      oneOf:
+        - $ref: ./../../validationErrors/ErrorSyntaxGlobal.yaml
+        - $ref: ./../../validationErrors/ErrorSyntaxName.yaml
+        - $ref: ./../../validationErrors/ErrorFormatGlobal.yaml
+        - $ref: ./../../validationErrors/ErrorValueGlobal.yaml
+        - $ref: ./../../validationErrors/ErrorValueName.yaml
+  fixes:
+    type: array
+    description: >-
+      List of all changes applied to the query data in order to get the
+      suggested result.
+    items:
+      oneOf:
+        - $ref: ./../../validationFixes/FixFormatGlobal.yaml
+        - $ref: ./../../validationFixes/FixSyntaxGlobal.yaml
+        - $ref: ./../../validationFixes/FixValueGlobal.yaml
+required:
+  - isValid
+  - data
+  - fixes

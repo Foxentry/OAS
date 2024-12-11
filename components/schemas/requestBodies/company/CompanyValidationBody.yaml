@@ -1,0 +1,47 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Company name
+        example: AVA Trans s.r.o.
+      country:
+        type: string
+        description: >-
+          Country codes in format [ISO-3166-1
+          alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+        example: SK
+      registrationNumber:
+        type: string
+        description: Company registration number (ID)
+        example: '52072169'
+      taxNumber:
+        type: string
+        description: Company national TAX number. Currently available only for SK subjects.
+        example: '2120884337'
+      vatNumber:
+        type: string
+        description: Company VAT number
+        example: SK2120884337
+  options:
+    allOf:
+      - $ref: ./CompanyOptions.yaml
+    properties:
+      resultsLimit:
+        type: integer
+        description: Limits number of results returned by the endpoint.
+        minimum: 1
+        maximum: 20
+        default: 10
+        example: 10
+  client:
+    $ref: ./../ClientRequest.yaml
+required:
+  - query

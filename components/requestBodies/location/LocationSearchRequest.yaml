@@ -4,7 +4,7 @@ content:
       type: object
       properties:
         request:
-          $ref: ../../schemas/LocationSearchRequest.yaml
+          $ref: ./../../schemas/requestBodies/location/LocationSearchBody.yaml
       required:
         - request
     examples:

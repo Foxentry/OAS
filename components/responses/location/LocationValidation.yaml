@@ -1,19 +1,45 @@
 description: Successful response
 headers:
   foxentry-api-version:
-    $ref: ../../headers/Foxentry-Api-Version.yaml
+    $ref: ./../../headers/Foxentry-Api-Version.yaml
   foxentry-daily-credits-left:
-    $ref: ../../headers/Foxentry-Daily-Credits-Left.yaml
+    $ref: ./../../headers/Foxentry-Daily-Credits-Left.yaml
   foxentry-daily-credits-limit:
-    $ref: ../../headers/Foxentry-Daily-Credits-Limit.yaml
+    $ref: ./../../headers/Foxentry-Daily-Credits-Limit.yaml
   foxentry-rate-limit:
-    $ref: ../../headers/Foxentry-Rate-Limit.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit.yaml
   foxentry-rate-limit-period:
-    $ref: ../../headers/Foxentry-Rate-Limit-Period.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Period.yaml
   foxentry-rate-limit-remaining:
-    $ref: ../../headers/Foxentry-Rate-Limit-Remaining.yaml
+    $ref: ./../../headers/Foxentry-Rate-Limit-Remaining.yaml
 content:
   application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          allOf:
+            - $ref: ./../../schemas/GlobalRequest.yaml
+            - $ref: ./../../schemas/requestBodies/location/LocationValidationBody.yaml
+            - type: object
+              properties:
+                endpoint:
+                  example: location/validate
+        response:
+          $ref: ./../../schemas/responses/location/LocationValidationResponse.yaml
+        errors:
+          description: >-
+            List of errors related to the request. Should be empty if the
+            request finished successfully.
+          type: array
+          items: { }
+          maxItems: 0
+      required:
+        - status
+        - errors
+        - request
+        - response
+
     examples:
       valid:
         value:
@@ -43,10 +69,10 @@ content:
                 city: Praha
                 zip: '18600'
                 full: Thámova 137/16, 18600 Praha
-              errors: []
+              errors: [ ]
             resultCorrected: null
-            suggestions: []
-          errors: []
+            suggestions: [ ]
+          errors: [ ]
       invalid:
         value:
           status: 200
@@ -86,8 +112,8 @@ content:
                     - zip
                   description: Value is not valid.
             resultCorrected: null
-            suggestions: []
-          errors: []
+            suggestions: [ ]
+          errors: [ ]
       invalidWithCorrection:
         value:
           status: 200
@@ -151,7 +177,7 @@ content:
                 city: Praha
                 zip: 186 00
                 full: Thámova 137/16, 186 00 Praha
-              errors: []
+              errors: [ ]
               fixes:
                 - group: SYNTAX
                   type: VALUE_PART_ADDED
@@ -169,8 +195,8 @@ content:
                     type: zip
                     valueFrom: '18600'
                     value: 186 00
-            suggestions: []
-          errors: []
+            suggestions: [ ]
+          errors: [ ]
       invalidWithSuggestion:
         value:
           status: 200
@@ -228,7 +254,7 @@ content:
                   city: Praha
                   zip: 130 00
                   full: Olšanská 2898/4a, 130 00 Praha
-                errors: []
+                errors: [ ]
                 fixes:
                   - group: SYNTAX
                     type: VALUE_PART_ADDED
@@ -257,7 +283,7 @@ content:
                   city: Praha
                   zip: 130 00
                   full: Olšanská 2898/4b, 130 00 Praha
-                errors: []
+                errors: [ ]
                 fixes:
                   - group: SYNTAX
                     type: VALUE_PART_ADDED
@@ -286,7 +312,7 @@ content:
                   city: Praha
                   zip: 130 00
                   full: Olšanská 2898/4g, 130 00 Praha
-                errors: []
+                errors: [ ]
                 fixes:
                   - group: SYNTAX
                     type: VALUE_PART_ADDED
@@ -315,7 +341,7 @@ content:
                   city: Praha
                   zip: 130 00
                   full: Olšanská 2898/4h, 130 00 Praha
-                errors: []
+                errors: [ ]
                 fixes:
                   - group: SYNTAX
                     type: VALUE_PART_ADDED
@@ -344,7 +370,7 @@ content:
                   city: Praha
                   zip: 130 00
                   full: Olšanská 2898/4i, 130 00 Praha
-                errors: []
+                errors: [ ]
                 fixes:
                   - group: SYNTAX
                     type: VALUE_PART_ADDED
@@ -373,7 +399,7 @@ content:
                   city: Praha
                   zip: 130 00
                   full: Olšanská 2898/4d, 130 00 Praha
-                errors: []
+                errors: [ ]
                 fixes:
                   - group: SYNTAX
                     type: VALUE_PART_ADDED
@@ -402,7 +428,7 @@ content:
                   city: Praha
                   zip: 130 00
                   full: Olšanská 2898/4e, 130 00 Praha
-                errors: []
+                errors: [ ]
                 fixes:
                   - group: SYNTAX
                     type: VALUE_PART_ADDED
@@ -431,7 +457,7 @@ content:
                   city: Praha
                   zip: 130 00
                   full: Olšanská 2898/4f, 130 00 Praha
-                errors: []
+                errors: [ ]
                 fixes:
                   - group: SYNTAX
                     type: VALUE_PART_ADDED
@@ -460,7 +486,7 @@ content:
                   city: Praha
                   zip: 130 00
                   full: Olšanská 2898/4c, 130 00 Praha
-                errors: []
+                errors: [ ]
                 fixes:
                   - group: SYNTAX
                     type: VALUE_PART_ADDED
@@ -470,135 +496,4 @@ content:
                       type: streetWithNumber
                       valueFrom: Olšanská 2898/4
                       value: Olšanská 2898/4c
-          errors: []
-    schema:
-      type: object
-      properties:
-        status:
-          type: integer
-          description: Status of API response.
-          example: 200
-        request:
-          allOf:
-            - $ref: ../../schemas/GlobalRequest.yaml
-            - type: object
-              properties:
-                endpoint:
-                  type: string
-                  example: location/validate
-                query:
-                  type: object
-                  properties:
-                    street:
-                      type: string
-                      nullable: true
-                      example: Jeseniova
-                    streetWithNumber:
-                      type: string
-                      nullable: true
-                      example: Jeseniova 55
-                    number.full:
-                      type: string
-                      nullable: true
-                      example: 1151/55d
-                    number.part1:
-                      type: string
-                      nullable: true
-                      example: '1151'
-                    number.part1Number:
-                      type: string
-                      nullable: true
-                      example: '1151'
-                    number.part1Letter:
-                      type: string
-                      nullable: true
-                      example: null
-                    number.part2:
-                      type: string
-                      nullable: true
-                      example: 55d
-                    number.part2Number:
-                      type: string
-                      nullable: true
-                      example: '55'
-                    number.part2Letter:
-                      type: string
-                      nullable: true
-                      example: d
-                    city:
-                      type: string
-                      nullable: true
-                      example: Praha
-                    zip:
-                      type: string
-                      nullable: true
-                      example: 130 00
-                    full:
-                      type: string
-                      nullable: true
-                      example: Jeseniova 2770/56d, 130 00 Praha
-                    country:
-                      type: string
-                      nullable: true
-                      description: >-
-                        Country code in format [ISO-3166-1
-                        alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-                      example: CZ
-                options:
-                  allOf:
-                    - $ref: ../../schemas/LocationRequestOptions.yaml
-                    - type: object
-                      properties:
-                        acceptPostOfficeAsCity:
-                          type: boolean
-                          description: >-
-                            If true, the postOffice name is accepted as city.
-                            For example <b>Thámova 137/16, Praha 8</b> and
-                            <b>Thámova 137/16, Praha 86</b> would be both valid.
-                          default: false
-                          example: true
-                        countryFormat:
-                          description: >-
-                            This option determines the format in which the
-                            country is returned. Choices include local and
-                            international variants with their shortened
-                            counterparts as well as ISO 3166 alpha codes.
-                          type: string
-                          enum:
-                            - alpha2
-                            - alpha3
-                            - local
-                            - localShortened
-                            - international
-                            - internationalShortened
-                          default: alpha2
-                          example: alpha2
-                          nullable: false
-                        filterMode:
-                          type: string
-                          description: >-
-                            <b>Prefer</b> = prefer results matching the filter
-                            parameters, <b>limit</b> = limit to results matching
-                            the filter parameters.
-                          enum:
-                            - limit
-                            - prefer
-                          example: limit
-                          default: limit
-                          nullable: true
-                client:
-                  $ref: ../../schemas/ClientRequest.yaml
-        response:
-          $ref: ../../schemas/LocationValidationResponse.yaml
-        errors:
-          description: >-
-            List of errors related to the request. Should be empty if the
-            request finished successfully.
-          type: array
-          items: {}
-          maxItems: 0
-      required:
-        - status
-        - errors
-        - request
-        - response
+          errors: [ ]

@@ -7,7 +7,7 @@ properties:
   results:
     type: array
     items:
-      $ref: ./CompanyObject.yaml
+      $ref: ./CompanyData.yaml
 required:
   - resultsCount
   - results

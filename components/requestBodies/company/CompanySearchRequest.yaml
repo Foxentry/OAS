@@ -4,7 +4,7 @@ content:
       type: object
       properties:
         request:
-          $ref: ../../schemas/requestBodies/company/CompanySearchBody.yaml
+          $ref: ./../../schemas/requestBodies/company/CompanySearchBody.yaml
       required:
         - request
     examples:

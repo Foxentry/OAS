@@ -23,12 +23,12 @@ content:
           example: 200
         request:
           allOf:
-            - $ref: ./../../schemas/GlobalRequest.yaml
-            - $ref: ./../../schemas/requestBodies/company/CompanySearchBody.yaml
             - type: object
               properties:
                 endpoint:
                   example: company/search
+            - $ref: ./../../schemas/GlobalRequest.yaml
+            - $ref: ./../../schemas/requestBodies/company/CompanySearchBody.yaml
         response:
           $ref: "../../schemas/responses/company/CompanySearchResult.yaml"
         errors:

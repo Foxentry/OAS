@@ -17,14 +17,18 @@ content:
     schema:
       type: object
       properties:
+        status:
+          type: integer
+          description: Status of API response.
+          example: 200
         request:
           allOf:
-            - $ref: ./../../schemas/GlobalRequest.yaml
-            - $ref: ./../../schemas/requestBodies/location/LocationValidationBody.yaml
             - type: object
               properties:
                 endpoint:
                   example: location/validate
+            - $ref: ./../../schemas/GlobalRequest.yaml
+            - $ref: ./../../schemas/requestBodies/location/LocationValidationBody.yaml
         response:
           $ref: ./../../schemas/responses/location/LocationValidationResponse.yaml
         errors:

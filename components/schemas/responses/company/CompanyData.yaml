@@ -44,8 +44,7 @@ properties:
           - type: object
             nullable: true
             description: >-
-              Address data from the official registry. Not validated by
-              Foxentry.
+              Address data from the official registry. Not validated by Foxentry.
           - $ref: ./CompanyAddressOfficial.yaml
       nace:
         type: array
@@ -273,10 +272,7 @@ properties:
                     description: name of member.
                     example: Pavel Hrdlička
                   address:
-                    type: object
-                    properties:
-                      data:
-                        $ref: ./../location/LocationData.yaml
+                    $ref: ./../location/LocationData.yaml
                   addressOficial:
                     $ref: ./CompanyAddressOfficial.yaml
                   function:

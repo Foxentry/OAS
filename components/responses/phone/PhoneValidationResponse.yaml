@@ -23,12 +23,12 @@ content:
           example: 200
         request:
           allOf:
-            - $ref: ./../../schemas/GlobalRequest.yaml
-            - $ref: ./../../schemas/requestBodies/phone/PhoneValidationBody.yaml
             - type: object
               properties:
                 endpoint:
                   example: phone/validate
+            - $ref: ./../../schemas/GlobalRequest.yaml
+            - $ref: ./../../schemas/requestBodies/phone/PhoneValidationBody.yaml
         response:
           $ref: ./../../schemas/responses/phone/PhoneValidationResult.yaml
         errors:

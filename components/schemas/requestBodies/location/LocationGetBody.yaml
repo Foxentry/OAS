@@ -22,7 +22,16 @@ properties:
       - country
       - id
   options:
-    $ref: ./LocationOptions.yaml
+    allOf:
+      - $ref: ./LocationOptions.yaml
+      - type: object
+        properties:
+          idType:
+            description: 'Internal is assigned by Foxentry. External ID may vary for every supported country. CZ = RUIAN, PL = Government data, SK = no external ID.'
+            enum:
+              - internal
+              - external
+            example: internal
   client:
     $ref: ./../ClientRequest.yaml
 required:

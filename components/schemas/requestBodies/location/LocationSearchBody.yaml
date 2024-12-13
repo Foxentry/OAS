@@ -80,5 +80,3 @@ properties:
     $ref: ./LocationSearchOptions.yaml
   client:
     $ref: ./../ClientRequest.yaml
-required:
-  - query

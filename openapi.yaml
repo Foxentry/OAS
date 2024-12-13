@@ -1,7 +1,8 @@
 openapi: 3.0.0
 info:
   version: '2.0'
-  title: Foxentry API reference
+  title: Foxentry API reference)
+  termsOfService: https://foxentry.com/terms-and-conditions
   description: >-
     # Welcome to the Foxentry API version 2.0
 

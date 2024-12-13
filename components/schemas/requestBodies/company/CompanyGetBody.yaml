@@ -25,5 +25,3 @@ properties:
     $ref: ./CompanyOptions.yaml
   client:
     $ref: ./../ClientRequest.yaml
-required:
-  - query

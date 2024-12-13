@@ -97,7 +97,7 @@ content:
                     zip: '18600'
                     full: null
               errors: []
-              resultsCorrected: null
+            resultCorrected: null
             suggestions: []
           errors: []
       invalid:
@@ -119,15 +119,15 @@ content:
                 addressOfficial: null
                 vatNumberSpecial: null
                 address: null
-            errors:
-              - group: VALUE
-                type: INVALID
-                subtype: null
-                severity: critical
-                relatedTo:
-                  - name
-                  - registrationNumber
-                description: Value is not valid.
+              errors:
+                - group: VALUE
+                  type: INVALID
+                  subtype: null
+                  severity: critical
+                  relatedTo:
+                    - name
+                    - registrationNumber
+                  description: Value is not valid.
             resultCorrected: null
             suggestions: []
           errors: []
@@ -157,7 +157,7 @@ content:
                   relatedTo:
                     - registrationNumber
                   description: Value is not valid.
-              resultsCorrected: null
+            resultCorrected: null
             suggestions:
               - isValid: true
                 data:

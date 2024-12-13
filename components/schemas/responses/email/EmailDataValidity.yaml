@@ -18,7 +18,7 @@ properties:
       List of errors related to the query. Provides information about which
       query fields were deemed invalid and why.
     items:
-      oneOf:
+      anyOf:
         - $ref: ./../../validationErrors/ErrorSyntaxGlobal.yaml
         - $ref: ./../../validationErrors/ErrorSyntaxEmail.yaml
         - $ref: ./../../validationErrors/ErrorFormatGlobal.yaml
@@ -27,4 +27,3 @@ properties:
 required:
   - isValid
   - errors
-  - fixes

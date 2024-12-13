@@ -19,7 +19,6 @@ properties:
       type: string
       nullable: false
       example: CZ
-    nullable: true
     default:
       - CZ
       - SK
@@ -34,7 +33,6 @@ properties:
     type: boolean
     default: false
     example: false
-    nullable: true
 
   countryFormat:
     description: >-

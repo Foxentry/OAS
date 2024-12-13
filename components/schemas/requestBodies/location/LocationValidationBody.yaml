@@ -97,5 +97,3 @@ properties:
             example: true
   client:
     $ref: ./../ClientRequest.yaml
-required:
-  - query

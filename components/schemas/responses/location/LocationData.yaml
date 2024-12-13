@@ -63,7 +63,7 @@ properties:
             nullable: true
             description: Region ID.
             example: '19'
-          discrict:
+          district:
             type: string
             nullable: true
             description: District ID.

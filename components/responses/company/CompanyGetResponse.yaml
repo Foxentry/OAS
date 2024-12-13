@@ -182,13 +182,13 @@ content:
                             tel.: 266 013 111
                         reference: null
                   legalForm:
-                    code: 112
+                    code: '112'
                     name: Společnost s ručením omezeným
                   legalFormSpecific:
                     code: null
                     name: null
                   esa2010:
-                    code: 11002
+                    code: '11002'
                     name: Nefinanční podniky soukromé národní
                   dates:
                     created: '2016-04-15'
@@ -415,13 +415,13 @@ content:
                             tel.: 266 013 111
                         reference: null
                   legalForm:
-                    code: 112
+                    code: '112'
                     name: Společnost s ručením omezeným
                   legalFormSpecific:
                     code: null
                     name: null
                   esa2010:
-                    code: 11002
+                    code: '11002'
                     name: Nefinanční podniky soukromé národní
                   dates:
                     created: '2016-04-15'

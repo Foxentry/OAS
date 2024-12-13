@@ -4,7 +4,11 @@ content:
       type: object
       properties:
         request:
-          $ref: ./../../schemas/requestBodies/phone/PhoneValidationBody.yaml
+          type: object
+          allOf:
+            - $ref: ./../../schemas/requestBodies/phone/PhoneValidationBody.yaml
+          required:
+            - query
       required:
         - request
     examples:

@@ -34,5 +34,3 @@ properties:
             example: internal
   client:
     $ref: ./../ClientRequest.yaml
-required:
-  - query

@@ -84,5 +84,3 @@ properties:
         default: false
   client:
     $ref: ./../ClientRequest.yaml
-required:
-  - query

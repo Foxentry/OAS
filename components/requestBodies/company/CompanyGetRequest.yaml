@@ -4,7 +4,11 @@ content:
       type: object
       properties:
         request:
-          $ref: ./../../schemas/requestBodies/company/CompanyGetBody.yaml
+          type: object
+          allOf:
+              - $ref: ./../../schemas/requestBodies/company/CompanyGetBody.yaml
+          required:
+            - query
       required:
         - request
     examples:

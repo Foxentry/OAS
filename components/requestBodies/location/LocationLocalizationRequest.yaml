@@ -4,6 +4,10 @@ content:
       type: object
       properties:
         request:
-          $ref: ./../../schemas/requestBodies/location/LocationLocalizationBody.yaml
+          type: object
+          allOf:
+            - $ref: ./../../schemas/requestBodies/location/LocationLocalizationBody.yaml
+          required:
+            - query
       required:
         - request

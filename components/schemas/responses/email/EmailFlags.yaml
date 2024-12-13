@@ -7,12 +7,12 @@ properties:
       Determines if the domain is set as catchAll. That means no matter what is
       in front the '@' sign, every e-mail is deliverable
     example: false
-  isDisposableEmailLocation:
+  isDisposableEmailAddress:
     type: boolean
     nullable: true
     description: Determines if the email address is disposable.
     example: false
-  isFreeMail:
+  isFreemail:
     type: boolean
     nullable: true
     description: Determines if the email address is hosted on freemail.

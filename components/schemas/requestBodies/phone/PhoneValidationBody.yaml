@@ -11,7 +11,7 @@ properties:
         required:
           - prefix
           - number
-        title: Separate field for number and prefix
+        title: Separate fields for number and prefix
         properties:
           prefix:
             type: string

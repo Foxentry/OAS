@@ -5,7 +5,12 @@ properties:
     description: Evaluation of the sent query.
     properties:
       isValid:
-        example: true
+        type: boolean
+        description: >-
+          Determines the validity of the response. <b>True</b> = valid
+          response / <b>False</b> = invalid response. Can be also <b>null</b>,
+          which indicates a non-specific error.
+        example: false
       proposal:
         enum:
           - valid

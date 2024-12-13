@@ -23,16 +23,6 @@ properties:
         - $ref: ./../../validationErrors/ErrorFormatGlobal.yaml
         - $ref: ./../../validationErrors/ErrorValueGlobal.yaml
         - $ref: ./../../validationErrors/ErrorValueName.yaml
-  fixes:
-    type: array
-    description: >-
-      List of all changes applied to the query data in order to get the
-      suggested result.
-    items:
-      oneOf:
-        - $ref: ./../../validationFixes/FixFormatGlobal.yaml
-        - $ref: ./../../validationFixes/FixSyntaxGlobal.yaml
-        - $ref: ./../../validationFixes/FixValueGlobal.yaml
 required:
   - isValid
   - data

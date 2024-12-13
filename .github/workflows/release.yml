@@ -1,0 +1,35 @@
+name: Release OpenAPI definition
+
+# Run workflow on release
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+
+      - name: Install Redocly CLI
+        run: npm install -g @redocly/cli
+
+      - name: Bundle Openapi spec
+        run: redocly bundle openapi.yaml -o openapi-bundled.yaml
+
+      - name: Add bundled Openapi spec to release
+        uses: softprops/action-gh-release@v1
+        if: ${{startsWith(github.ref, 'refs/tags/') }}
+        with:
+            files: openapi-bundled.yaml
+
+      - name: Sync Openapi spec
+        uses: readmeio/rdme@v9
+        with:
+          rdme: openapi upload ./openapi.yaml --key=${{ secrets.README_API_KEY }} --id=64d389d9f6e898001137e15b

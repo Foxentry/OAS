@@ -1,6 +1,6 @@
 type: object
 allOf:
-  - $ref: ./NameDataValidity.yaml
+  - $ref: ./PhoneDataValidity.yaml
   - type: object
     properties:
       fixes:
@@ -12,8 +12,5 @@ allOf:
           oneOf:
             - $ref: ./../../validationFixes/FixFormatGlobal.yaml
             - $ref: ./../../validationFixes/FixSyntaxGlobal.yaml
+            - $ref: ./../../validationFixes/FixSyntaxPhone.yaml
             - $ref: ./../../validationFixes/FixValueGlobal.yaml
-required:
-  - isValid
-  - data
-  - fixes

@@ -8,7 +8,7 @@ properties:
       which indicates a non-specific error.
     example: true
   data:
-    $ref: ./ValidatePhoneNumberData.yaml
+    $ref: ./PhoneData.yaml
   errors:
     type: array
     description: >-
@@ -21,14 +21,3 @@ properties:
         - $ref: ./../../validationErrors/ErrorFormatGlobal.yaml
         - $ref: ./../../validationErrors/ErrorValueGlobal.yaml
         - $ref: ./../../validationErrors/ErrorValuePhone.yaml
-  fixes:
-    type: array
-    description: >-
-      List of all changes applied to the query data in order to get the
-      suggested result.
-    items:
-      oneOf:
-        - $ref: ./../../validationFixes/FixFormatGlobal.yaml
-        - $ref: ./../../validationFixes/FixSyntaxGlobal.yaml
-        - $ref: ./../../validationFixes/FixSyntaxPhone.yaml
-        - $ref: ./../../validationFixes/FixValueGlobal.yaml

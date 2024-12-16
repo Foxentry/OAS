@@ -28,9 +28,9 @@ content:
                 endpoint:
                   example: name/validate
             - $ref: ./../../schemas/GlobalRequest.yaml
-            - $ref: ./../../schemas/requestBodies/name/NameValidationBody.yaml
+            - $ref: ./../../schemas/requests/name/NameValidationBody.yaml
         response:
-          $ref: ./../../schemas/responses/name/NameValidationResult.yaml
+          $ref: ./../../schemas/results/name/NameValidationResult.yaml
         errors:
           description: >-
             List of errors related to the request. Should be empty if the

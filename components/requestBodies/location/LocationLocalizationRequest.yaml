@@ -6,7 +6,7 @@ content:
         request:
           type: object
           allOf:
-            - $ref: ./../../schemas/requestBodies/location/LocationLocalizationBody.yaml
+            - $ref: ./../../schemas/requests/location/LocationLocalizationBody.yaml
           required:
             - query
       required:

@@ -28,9 +28,9 @@ content:
                 endpoint:
                   example: phone/validate
             - $ref: ./../../schemas/GlobalRequest.yaml
-            - $ref: ./../../schemas/requestBodies/phone/PhoneValidationBody.yaml
+            - $ref: ./../../schemas/requests/phone/PhoneValidationBody.yaml
         response:
-          $ref: ./../../schemas/responses/phone/PhoneValidationResult.yaml
+          $ref: ./../../schemas/results/phone/PhoneValidationResult.yaml
         errors:
           description: >-
             List of errors related to the request. Should be empty if the

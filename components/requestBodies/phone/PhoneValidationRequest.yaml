@@ -6,7 +6,7 @@ content:
         request:
           type: object
           allOf:
-            - $ref: ./../../schemas/requestBodies/phone/PhoneValidationBody.yaml
+            - $ref: ./../../schemas/requests/phone/PhoneValidationBody.yaml
           required:
             - query
       required:

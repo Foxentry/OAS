@@ -6,7 +6,7 @@ content:
         request:
           type: object
           allOf:
-            - $ref: ./../../schemas/requestBodies/email/EmailSearchBody.yaml
+            - $ref: ./../../schemas/requests/email/EmailSearchBody.yaml
           required:
             - query
       required:

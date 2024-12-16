@@ -6,7 +6,7 @@ content:
         request:
           type: object
           allOf:
-            - $ref: ./../../schemas/requestBodies/email/EmailValidationBody.yaml
+            - $ref: ./../../schemas/requests/email/EmailValidationBody.yaml
           required:
             - query
       required:

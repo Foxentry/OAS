@@ -1,0 +1,47 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    properties:
+      email:
+        type: string
+        example: info@foxentry.com
+    required:
+      - email
+  options:
+    type: object
+    description: Query options.
+    properties:
+      validationType:
+        enum:
+          - basic
+          - extended
+        description: >-
+          Type of validation. <b>Basic</b> = only the format of e-mail is
+          checked and only standard corrections are included. <b>Extended</b> =
+          in depth check of deliverability. Additional information is returned
+          such as temporary mail check or freemail check. More complicated
+          corrections are included.
+        default: extended
+        example: extended
+      acceptDisposableEmails:
+        type: boolean
+        description: >-
+          If true, the disposable e-mails will be marked as valid. Works only in
+          <b>Extended validation</b>.
+        default: true
+        example: true
+      acceptFreemails:
+        type: boolean
+        description: >-
+          If true, the freemails will be marked as valid. Works only in
+          <b>Extended validation</b>.
+        default: true
+        example: true
+  client:
+    $ref: ./../ClientRequest.yaml

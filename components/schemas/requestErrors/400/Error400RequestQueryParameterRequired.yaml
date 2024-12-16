@@ -1,0 +1,37 @@
+type: object
+properties:
+  group:
+    enum:
+      - REQUEST
+    description: Group of error.
+    example: REQUEST
+  type:
+    enum:
+      - QUERY
+    description: Type of error.
+    example: QUERY
+  subtype:
+    enum:
+      - PARAMETERS_REQUIRED
+    description: Subtype of error.
+    example: PARAMETERS_REQUIRED
+  severity:
+    enum:
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+      example: email
+  description:
+    enum:
+      - At least one of listed parameters is required.
+    description: Description of error.
+    example: At least one of listed parameters is required.

@@ -1,0 +1,4 @@
+schema:
+  type: number
+  example: 9881.64
+description: The amount of daily credits left

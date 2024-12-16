@@ -1,0 +1,20 @@
+type: object
+nullable: true
+allOf:
+  - $ref: ./LocationData.yaml
+properties:
+  errors:
+    type: array
+    description: >-
+      List of errors related to the query. Provides information about which
+      query fields were deemed invalid and why.
+    items:
+      anyOf:
+        - $ref: ./../../validationErrors/ErrorSyntaxGlobal.yaml
+        - $ref: ./../../validationErrors/ErrorSyntaxLocation.yaml
+        - $ref: ./../../validationErrors/ErrorFormatGlobal.yaml
+        - $ref: ./../../validationErrors/ErrorValueGlobal.yaml
+
+required:
+  - isValid
+  - errors

@@ -1,0 +1,31 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          type: object
+          allOf:
+            - $ref: ./../../schemas/requestBodies/phone/PhoneValidationBody.yaml
+          required:
+            - query
+      required:
+        - request
+    examples:
+      Request Example:
+        value:
+          request:
+            query:
+              numberWithPrefix: '+420775111222'
+            options:
+              validationType: extended
+              allowedPrefixes:
+                - '+420'
+                - '+421'
+              defaultPrefix: '+420'
+              formatNumber: false
+            client:
+              country: CZ
+              location:
+                lat: 50.0628
+                lon: 13.9271

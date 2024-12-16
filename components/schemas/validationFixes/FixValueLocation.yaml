@@ -1,0 +1,22 @@
+type: object
+properties:
+  group:
+    enum:
+      - VALUE
+    description: Group of fix.
+    example: VALUE
+  type:
+    enum:
+      - PART_CHANGED
+    description: Type of fix.
+    example: PART_CHANGED
+  subtype:
+    enum:
+      - CITY
+      - NUMBER
+      - STREET
+      - ZIP
+    description: Subtype of error.
+    example: CITY
+  data:
+    $ref: ./FixData.yaml

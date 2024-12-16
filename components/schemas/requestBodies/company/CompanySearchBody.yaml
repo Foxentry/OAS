@@ -1,0 +1,62 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    properties:
+      type:
+        type: string
+        description: Type of search.
+        enum:
+          - name
+          - registrationNumber
+          - taxNumber
+          - vatNumber
+        example: name
+      value:
+        type: string
+        description: Searched value.
+        example: Avantro
+      filter:
+        type: object
+        description: >-
+          Additional filter in order to specify the search results. You can for
+          example set as a filter country CZ, so the the search engine would
+          look for the companies only in the Czech republic. Pay attention to
+          the options, which determines how the filter should behave.
+        properties:
+          name:
+            type: string
+            description: Company name.
+            example: AVA Trans s.r.o.
+          country:
+            type: string
+            description: >-
+              Country code in format [ISO-3166-1
+              alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+            example: SK
+          registrationNumber:
+            type: string
+            description: Company registration number (ID).
+            example: '52072169'
+          taxNumber:
+            type: string
+            description: >-
+              Company national TAX number. Currently available only for SK
+              subjects.
+            example: '2120884337'
+          vatNumber:
+            type: string
+            description: Company VAT number.
+            example: SK2120092029
+    required:
+      - type
+      - value
+  options:
+    $ref: ./CompanySearchOptions.yaml
+  client:
+    $ref: ./../ClientRequest.yaml

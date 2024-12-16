@@ -1,0 +1,56 @@
+type: array
+items:
+  type: object
+  properties:
+    type:
+      type: string
+      enum:
+        - name
+        - surname
+        - nameSurname
+      description: Type of detail.
+      example: name
+    value:
+      type: string
+      description: Value of detail.
+      example: Petr
+    gender:
+      enum:
+        - 0
+        - 1
+        - 2
+      description: Gender of name. 0 for unspecified, 1 for men, 2 for women
+      example: 1
+    vocative:
+      type: string
+      description: Vocative form of value.
+      example: Petře
+    nameDays:
+      type: array
+      nullable: true
+      description: Date of the name day. Currently works only for czech and slovak names.
+      items:
+        type: object
+        properties:
+          country:
+            type: string
+            description: >-
+              Country code in format [ISO-3166-1
+              alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+            example: CZ
+          month:
+            type: number
+            description: Month number for name day.
+            example: 6
+          day:
+            type: number
+            description: Day number for name day.
+            example: 29
+        required:
+          - country
+          - month
+          - day
+  required:
+    - type
+    - value
+    - nameDays

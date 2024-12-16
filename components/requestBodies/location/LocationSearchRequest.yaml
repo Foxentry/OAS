@@ -1,0 +1,36 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          type: object
+          allOf:
+            - $ref: ./../../schemas/requestBodies/location/LocationSearchBody.yaml
+          required:
+            - query
+      required:
+        - request
+    examples:
+      Request Example:
+        value:
+          request:
+            customId: customer567914
+            query:
+              type: streetWithNumber
+              value: thamo
+              filter:
+                country: CZ
+            options:
+              dataScope: basic
+              resultsLimit: 10
+              filterMode: prefer
+              filterAcceptFormat: true
+              filterAcceptAlternatives: true
+              filterExactMatch: true
+            client:
+              ip: 127.0.1.1
+              country: CZ
+              location:
+                lat: 50.0628
+                lon: 13.9271

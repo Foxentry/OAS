@@ -1,0 +1,36 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    properties:
+      country:
+        type: string
+        description: >-
+          Country code in format [ISO-3166-1
+          alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+        example: CZ
+      id:
+        type: string
+        description: Location ID
+        example: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+    required:
+      - country
+      - id
+  options:
+    allOf:
+      - $ref: ./LocationOptions.yaml
+      - type: object
+        properties:
+          idType:
+            description: 'Internal is assigned by Foxentry. External ID may vary for every supported country. CZ = RUIAN, PL = Government data, SK = no external ID.'
+            enum:
+              - internal
+              - external
+            example: internal
+  client:
+    $ref: ./../ClientRequest.yaml

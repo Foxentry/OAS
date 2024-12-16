@@ -1,0 +1,27 @@
+type: object
+description: >-
+  Additional information about your user (from whom you've obtained the data
+  sent in query) in order to specify the results in response. Used mainly in web
+  forms when you need more relevant search/autocomplete results.
+properties:
+  ip:
+    type: string
+    example: 127.0.1.1
+    format: ipv4
+  country:
+    type: string
+    description: >-
+      Country code in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.
+    example: CZ
+  location:
+    type: object
+    description: Latitude & longitude of the client's aprox location.
+    properties:
+      lat:
+        type: number
+        description: Client's latitude
+        example: 50.0628
+      lon:
+        type: number
+        description: Client's longitude
+        example: 13.9271

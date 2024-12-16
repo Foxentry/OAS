@@ -1,0 +1,25 @@
+type: object
+properties:
+  group:
+    enum:
+      - SYNTAX
+    description: Group of fix.
+    example: SYNTAX
+  type:
+    enum:
+      - VALUE_CHANGED
+      - VALUE_PART_CHANGED
+      - VALUE_PART_REMOVED
+    description: Type of fix.
+    example: VALUE_CHANGED
+  subtype:
+    enum:
+      - CHARACTERS
+      - WHITESPACES
+      - CONTEXT
+      - DUPLICITY
+      - null
+    description: Subtype of fix.
+    example: CHARACTERS
+  data:
+    $ref: ./FixData.yaml

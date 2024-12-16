@@ -1,0 +1,36 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          type: object
+          allOf:
+            - $ref: ./../../schemas/requestBodies/company/CompanySearchBody.yaml
+          required:
+            - query
+      required:
+        - request
+    examples:
+      Request Example:
+        value:
+          request:
+            query:
+              type: name
+              value: ava
+              filter:
+                country: CZ
+            options:
+              dataScope: basic
+              resultsLimit: 10
+              includeTerminatedSubjects: false
+              filterMode: limit
+              filterAcceptFormat: true
+              filterExactMatch: true
+              cityFormat: basic
+              zipFormat: false
+            client:
+              country: CZ
+              location:
+                lat: 50.0628
+                lon: 13.9271

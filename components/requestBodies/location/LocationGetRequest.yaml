@@ -1,0 +1,23 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          type: object
+          allOf:
+            - $ref: ./../../schemas/requestBodies/location/LocationGetBody.yaml
+          required:
+            - query
+      required:
+        - request
+    examples:
+      Request Example:
+        value:
+          request:
+            query:
+              country: CZ
+              id: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+            options:
+              idType: internal
+              dataScope: full

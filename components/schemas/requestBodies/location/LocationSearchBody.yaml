@@ -1,0 +1,82 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    properties:
+      type:
+        type: string
+        description: Type of search.
+        enum:
+          - street
+          - streetWithNumber
+          - number.full
+          - number.part1
+          - number.part2
+          - city
+          - zip
+          - full
+      value:
+        description: Searched value.
+        type: string
+      filter:
+        type: object
+        description: >-
+          Additional filter in order to specify the search results. You can for
+          example set as a filter city of Prague, so the the search engine would
+          look for the addresses only in Prague. Pay attention to the options,
+          which determines how the filter should behave.
+        properties:
+          street:
+            type: string
+            nullable: true
+            description: Street.
+            example: Jeseniova
+          streetWithNumber:
+            type: string
+            nullable: true
+            description: Street with number.
+            example: Jeseniova 55
+          number.full:
+            type: string
+            nullable: true
+            description: Full number.
+            example: 1151/55d
+          number.part1:
+            type: string
+            nullable: true
+            description: First part of the number.
+            example: '1151'
+          number.part2:
+            type: string
+            nullable: true
+            description: Second part of the number.
+            example: 55d
+          city:
+            type: string
+            nullable: true
+            description: City.
+            example: Praha
+          zip:
+            type: string
+            nullable: true
+            description: ZIP code.
+            example: 130 00
+          country:
+            type: string
+            nullable: true
+            description: >-
+              Country code in format [ISO-3166-1
+              alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+            example: CZ
+    required:
+      - type
+      - value
+  options:
+    $ref: ./LocationSearchOptions.yaml
+  client:
+    $ref: ./../ClientRequest.yaml

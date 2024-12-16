@@ -1,0 +1,8 @@
+name: foxentry-include-request-details
+in: header
+description: Parameter to add details of your request.
+required: false
+schema:
+  type: boolean
+  default: false
+  example: false

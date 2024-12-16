@@ -1,0 +1,54 @@
+type: object
+properties:
+  group:
+    enum:
+      - SYNTAX
+    description: Group of error.
+    example: SYNTAX
+  type:
+    enum:
+      - CHARACTERS
+      - INVALID
+      - UNABLE_TO_PROCESS
+      - VALUE_LENGTH
+      - VALUE_PART_EXTRA
+      - VALUE_PART_MISSING
+    description: Type of error.
+    example: CHARACTERS
+  subtype:
+    enum:
+      - NOT_ALLOWED
+      - WHITESPACES
+      - TOO_LONG
+      - TOO_SHORT
+      - CONTEXT
+    description: Subtype of error.
+    example: NOT_ALLOWED
+  severity:
+    enum:
+      - info
+      - warning
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+      example: numberWithPrefix
+  description:
+    enum:
+      - Disallowed characters were used in the value.
+      - Value contains invalid use of spaces.
+      - Value has invalid syntax.
+      - Cannot be processed due to the invalid syntax.
+      - Value is too long.
+      - Value is too short.
+      - Value contains unneccessary context.
+    description: Description of error.
+    example: Disallowed characters were used in the value.

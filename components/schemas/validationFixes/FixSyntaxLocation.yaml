@@ -1,0 +1,20 @@
+type: object
+properties:
+  group:
+    enum:
+      - SYNTAX
+    description: Group of fix.
+    example: SYNTAX
+  type:
+    enum:
+      - VALUE_PART_ADDED
+    description: Type of fix.
+    example: VALUE_PART_ADDED
+  subtype:
+    enum:
+      - NUMBER
+      - NUMBER_PART
+    description: Subtype of fix.
+    example: NUMBER
+  data:
+    $ref: ./FixData.yaml

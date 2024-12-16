@@ -1,0 +1,43 @@
+type: object
+properties:
+  gps:
+    type: object
+    properties:
+      lat:
+        type: number
+        nullable: true
+        description: Latitude coordinate.
+        example: 50.087440865479
+      lon:
+        type: number
+        nullable: true
+        description: Longitude coordinate.
+        example: 14.463284033285
+    required:
+      - lat
+      - lon
+  custom:
+    type: array
+    description: Custom coordinate system. May vary for every country.
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Type of coordinate system.
+          example: JTSK
+          nullable: true
+          enum:
+            - JTSK
+            - ETRS89
+        coordinates:
+          type: object
+          properties:
+            x:
+              type: number
+              description: First coordinate.
+              example: 739831.1
+            'y':
+              type: number
+              description: Second coordinate.
+              example: 1043425.38

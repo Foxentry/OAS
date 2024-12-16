@@ -1,0 +1,47 @@
+type: object
+properties:
+  group:
+    enum:
+      - VALUE
+    description: Group of error.
+    example: VALUE
+  type:
+    enum:
+      - EMPTY
+      - INCORRECT_ORDER
+      - INVALID
+      - INVALID_COMBINATION
+      - NOT_ALLOWED
+    description: Type of error.
+    example: EMPTY
+  subtype:
+    enum:
+      - null
+    description: Subtype of error.
+  severity:
+    enum:
+      - info
+      - warning
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+      example: numberWithPrefix
+  description:
+    type: string
+    enum:
+      - Value is empty.
+      - Value contains parts in incorrect order.
+      - Value is not valid.
+      - The Combination of values listed in relatedTo section is not valid.
+      - Context words are not allowed.
+    description: Description of error.
+    example: Value is empty.

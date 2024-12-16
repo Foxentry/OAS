@@ -1,0 +1,19 @@
+type: object
+properties:
+  isCatchAllServer:
+    type: boolean
+    nullable: true
+    description: >-
+      Determines if the domain is set as catchAll. That means no matter what is
+      in front the '@' sign, every e-mail is deliverable
+    example: false
+  isDisposableEmailAddress:
+    type: boolean
+    nullable: true
+    description: Determines if the email address is disposable.
+    example: false
+  isFreemail:
+    type: boolean
+    nullable: true
+    description: Determines if the email address is hosted on freemail.
+    example: false

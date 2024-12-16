@@ -1,0 +1,42 @@
+type: object
+properties:
+  result:
+    type: object
+    description: Evaluation of the sent query.
+    properties:
+      isValid:
+        type: boolean
+        description: >-
+          Determines the validity of the response. <b>True</b> = valid
+          response / <b>False</b> = invalid response. Can be also <b>null</b>,
+          which indicates a non-specific error.
+        example: false
+      proposal:
+        enum:
+          - valid
+          - validWithSuggestion
+          - invalid
+          - invalidWithCorrection
+          - invalidWithPartialCorrection
+          - invalidWithSuggestion
+          - invalidWithCorrectionWithSuggestion
+          - null
+        description: >-
+          Proposed solution by Foxentry how you should process the response in
+          your form or application.
+        example: invalidWithCorrection
+    allOf:
+      - $ref: ./LocationDataValidity.yaml
+    required:
+      - isValid
+      - proposal
+      - data
+  resultCorrected:
+    $ref: ./LocationDataCorrection.yaml
+  suggestions:
+    type: array
+    description: Alternatives suggested for the sent query.
+    items:
+      $ref: ./LocationDataCorrection.yaml
+required:
+  - result

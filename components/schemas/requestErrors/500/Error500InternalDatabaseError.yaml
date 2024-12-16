@@ -1,0 +1,39 @@
+type: object
+properties:
+  group:
+    enum:
+      - INTERNAL
+    description: Group of error.
+    example: INTERNAL
+  type:
+    enum:
+      - DATABASE
+    description: Type of error.
+    example: DATABASE
+  subtype:
+    enum:
+      - ERROR
+    description: Subtype of error.
+    example: ERROR
+  severity:
+    type: string
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+  description:
+    enum:
+      - >-
+        An error has occured during the communication with our database. Please
+        contact us if the error persists.
+    description: Description of error.
+    example: >-
+      An error has occured during the communication with our database. Please
+      contact us if the error persists.

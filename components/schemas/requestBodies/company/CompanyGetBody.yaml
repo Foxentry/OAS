@@ -1,0 +1,27 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    properties:
+      country:
+        type: string
+        description: >-
+          Country code in format [ISO-3166-1
+          alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+        example: CZ
+      registrationNumber:
+        type: string
+        description: Company registration number.
+        example: '04997476'
+    required:
+      - country
+      - registrationNumber
+  options:
+    $ref: ./CompanyOptions.yaml
+  client:
+    $ref: ./../ClientRequest.yaml

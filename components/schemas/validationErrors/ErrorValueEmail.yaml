@@ -1,0 +1,47 @@
+type: object
+properties:
+  group:
+    enum:
+      - VALUE
+    description: Group of error.
+    example: VALUE
+  type:
+    enum:
+      - INVALID
+      - NOT_ALLOWED
+    description: Type of error.
+    example: INVALID
+  subtype:
+    enum:
+      - DOMAIN
+      - DOMAIN_DNS
+      - DISPOSABLE
+      - FREEMAIL
+      - null
+    description: Subtype of error.
+    example: DOMAIN
+  severity:
+    enum:
+      - info
+      - warning
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+      example: email
+  description:
+    enum:
+      - Domain name is invalid.
+      - Domain does not have DNS records set properly for receiving emails.
+      - Disposable emails are not allowed.
+      - Freemails are not allowed.
+    description: Description of error.
+    example: Domain name is invalid.

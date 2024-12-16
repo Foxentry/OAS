@@ -1,0 +1,4 @@
+schema:
+  type: integer
+  example: 4999
+description: The remaining rate limit

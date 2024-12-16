@@ -1,0 +1,46 @@
+type: object
+properties:
+  group:
+    enum:
+      - SYNTAX
+    description: Group of error.
+    example: SYNTAX
+  type:
+    enum:
+      - VALUE_PART_MISSING
+    description: Type of error.
+    example: VALUE_PART_MISSING
+  subtype:
+    enum:
+      - CITY
+      - NUMBER_PART
+      - STREET
+      - ZIP
+    description: Subtype of error.
+    example: CITY
+  severity:
+    enum:
+      - info
+      - warning
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+      example: streetWithNumber
+  description:
+    enum:
+      - Value is missing the city.
+      - Value is missing the number part.
+      - Value is missing the street.
+      - Value is missing the zip.
+      - Value is missing some part of the number.
+    description: Description of error.
+    example: Value is missing the city.

@@ -1,0 +1,42 @@
+type: object
+properties:
+  nameSurname:
+    type: string
+    description: Name and surname together.
+    example: Petr Novák
+    nullable: true
+  name:
+    type: string
+    description: First name.
+    example: Petr
+  surname:
+    type: string
+    description: Last name / family name.
+    nullable: true
+    example: Novák
+  context:
+    type: array
+    items:
+      type: string
+      description: Context for name and Surname.
+      example: ml.
+  degreesBefore:
+    type: array
+    items:
+      type: string
+      description: Degrees before name.
+      example: Ing.
+  degreesAfter:
+    type: array
+    nullable: true
+    items:
+      type: string
+      description: Degrees after name.
+      example: Ph.D.
+required:
+  - nameSurname
+  - name
+  - surname
+  - context
+  - degreesBefore
+  - degreesAfter

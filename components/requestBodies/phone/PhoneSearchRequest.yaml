@@ -16,7 +16,7 @@ content:
         value:
           request:
             query:
-              value: +42
+              value: "+42"
             options:
               resultsLimit: 5
             client:

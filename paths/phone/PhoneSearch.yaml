@@ -6,7 +6,7 @@ post:
     Foxentry will list all phone prefixes matching your query. This can be used to implement 
     a simple <b>autocomplete</b>.<br><br> Pay attention to the <b>client</b> section in
     the request body. You can specify the user's location in order to receive more relevant suggestions.
-  operationId: EmailSearch
+  operationId: PhoneSearch
   parameters:
     - $ref: ./../../components/parameters/Api-Version.yaml
     - $ref: ./../../components/parameters/Foxentry-Include-Request-Details.yaml

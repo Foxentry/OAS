@@ -32,4 +32,4 @@ jobs:
       - name: Sync Openapi spec
         uses: readmeio/rdme@v9
         with:
-          rdme: openapi upload ./openapi.yaml --key=${{ secrets.README_API_KEY }} --id=64d389d9f6e898001137e15b
+          rdme: openapi ./openapi.yaml --key=${{ secrets.README_API_KEY }} --id=64d389d9f6e898001137e15b

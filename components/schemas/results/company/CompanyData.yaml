@@ -107,18 +107,16 @@ properties:
                     code:
                       type: string
                       description: Code of register.
-                      example: MSPH
+                      example: null
                     name:
                       type: string
-                      description: Name of registrator.
-                      example: Městský soud v Praze
+                      description: Name of register.
+                      example: CENTRALNA EWIDENCJA I INFORMACJA O DZIAŁALNOŚCI GOSPODARCZEJ
                     detail:
                       type: string
                       nullable: true
-                      description: Detail of registration.
-                      example: >-
-                        Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8,
-                        tel. 266 013 111
+                      description: Detail of register.
+                      example: null
                 registrator:
                   type: object
                   description: Information about registrator.

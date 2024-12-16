@@ -50,11 +50,17 @@ content:
           status: 200
           request:
             endpoint: location/validate
-            code: qPh9KJXok0EPEMKPnvxxWSJ7LvyERa
+            code: 318f6dbb-f9ad-4639-825e-417d4196d8f7
           response:
             result:
               isValid: true
               proposal: valid
+              dataTypes:
+                valid:
+                  - city
+                  - streetWithNumber
+                  - zip
+                invalid: []
               data:
                 country: CZ
                 ids:
@@ -62,6 +68,7 @@ content:
                   external: '22349995'
                 street: Thámova
                 number:
+                  type: č.p.
                   part1: '137'
                   part1Number: '137'
                   part1Letter: null
@@ -70,23 +77,31 @@ content:
                   part2Letter: null
                   full: 137/16
                 streetWithNumber: Thámova 137/16
-                city: Praha
+                city: Praha 8
                 zip: '18600'
-                full: Thámova 137/16, 18600 Praha
-              errors: [ ]
+                full: Thámova 137/16, 18600 Praha 8
+              errors: []
             resultCorrected: null
-            suggestions: [ ]
-          errors: [ ]
+            suggestions: []
+          errors: []
       invalid:
         value:
           status: 200
           request:
             endpoint: location/validate
-            code: 74JOIzVFc44Va2mhQmAq8vUYOX4bnh
+            code: 8b4dc7ba-3117-49d4-946c-d13847ba35d3
           response:
             result:
               isValid: false
               proposal: invalid
+              dataTypes:
+                valid:
+                  - street
+                invalid:
+                  - city
+                  - number.full
+                  - streetWithNumber
+                  - zip
               data:
                 country: null
                 ids:
@@ -94,6 +109,7 @@ content:
                   external: null
                 street: null
                 number:
+                  type: null
                   part1: null
                   part1Number: null
                   part1Letter: null
@@ -104,7 +120,7 @@ content:
                 streetWithNumber: Thámova 123456789
                 city: Parharlin
                 zip: '457545754'
-                full: 457545754 Parharlin
+                full: Thámova 123456789, 457545754 Parharlin
               errors:
                 - group: VALUE
                   type: INVALID
@@ -112,22 +128,27 @@ content:
                   severity: critical
                   relatedTo:
                     - streetWithNumber
-                    - city
-                    - zip
                   description: Value is not valid.
             resultCorrected: null
-            suggestions: [ ]
-          errors: [ ]
+            suggestions: []
+          errors: []
       invalidWithCorrection:
         value:
           status: 200
           request:
             endpoint: location/validate
-            code: YTRGiUQQt4tFxoJQjcGSDdP7dzkzNG
+            code: d713ab1f-48cb-4ff7-abd2-5dc51744c7b8
           response:
             result:
               isValid: false
               proposal: invalidWithCorrection
+              dataTypes:
+                valid:
+                  - street
+                  - zip
+                invalid:
+                  - city
+                  - streetWithNumber
               data:
                 country: null
                 ids:
@@ -135,6 +156,7 @@ content:
                   external: null
                 street: null
                 number:
+                  type: null
                   part1: null
                   part1Number: null
                   part1Letter: null
@@ -145,7 +167,7 @@ content:
                 streetWithNumber: Thámova 137
                 city: Praha
                 zip: '18600'
-                full: 18600 Praha
+                full: Thámova 137, 18600 Praha
               errors:
                 - group: SYNTAX
                   type: VALUE_PART_MISSING
@@ -155,14 +177,22 @@ content:
                     - streetWithNumber
                   description: Value is missing some part of the number.
                 - group: FORMAT
-                  type: CHARACTERS
+                  type: INVALID
                   subtype: null
                   severity: warning
                   relatedTo:
-                    - zip
+                    - city
                   description: null
             resultCorrected:
               isValid: true
+              dataTypes:
+                valid:
+                  - city
+                  - number.full
+                  - street
+                  - streetWithNumber
+                  - zip
+                invalid: []
               data:
                 country: CZ
                 ids:
@@ -170,6 +200,7 @@ content:
                   external: '22349995'
                 street: Thámova
                 number:
+                  type: č.p.
                   part1: '137'
                   part1Number: '137'
                   part1Letter: null
@@ -178,10 +209,10 @@ content:
                   part2Letter: null
                   full: 137/16
                 streetWithNumber: Thámova 137/16
-                city: Praha
-                zip: 186 00
-                full: Thámova 137/16, 186 00 Praha
-              errors: [ ]
+                city: Praha 8
+                zip: '18600'
+                full: Thámova 137/16, 18600 Praha 8
+              errors: []
               fixes:
                 - group: SYNTAX
                   type: VALUE_PART_ADDED
@@ -195,22 +226,30 @@ content:
                   type: CHANGED
                   subtype: null
                   data:
-                    typeFrom: zip
-                    type: zip
-                    valueFrom: '18600'
-                    value: 186 00
-            suggestions: [ ]
-          errors: [ ]
+                    typeFrom: city
+                    type: city
+                    valueFrom: Praha
+                    value: Praha 8
+            suggestions: []
+          errors: []
       invalidWithSuggestion:
         value:
           status: 200
           request:
             endpoint: location/validate
-            code: 9hapGLFrLMxbocuGfTck9KApNhPa0i
+            code: 2d6729f0-6726-4435-b7a8-b17a4c76e9b0
           response:
             result:
               isValid: false
               proposal: invalidWithSuggestion
+              dataTypes:
+                valid:
+                  - city
+                  - number.full
+                  - street
+                  - zip
+                invalid:
+                  - streetWithNumber
               data:
                 country: null
                 ids:
@@ -218,6 +257,7 @@ content:
                   external: null
                 street: null
                 number:
+                  type: null
                   part1: null
                   part1Number: null
                   part1Letter: null
@@ -226,9 +266,9 @@ content:
                   part2Letter: null
                   full: null
                 streetWithNumber: Olšanská 2898/4
-                city: Praha
-                zip: 130 00
-                full: 130 00 Praha
+                city: Praha 3
+                zip: '13000'
+                full: Olšanská 2898/4, 13000 Praha 3
               errors:
                 - group: VALUE
                   type: INVALID
@@ -240,151 +280,14 @@ content:
             resultCorrected: null
             suggestions:
               - isValid: true
-                data:
-                  country: CZ
-                  ids:
-                    internal: 2b57d49a-4e21-4c09-aba4-211fbc49ba93
-                    external: '75428920'
-                  street: Olšanská
-                  number:
-                    part1: '2898'
-                    part1Number: '2898'
-                    part1Letter: null
-                    part2: 4a
-                    part2Number: '4'
-                    part2Letter: a
-                    full: 2898/4a
-                  streetWithNumber: Olšanská 2898/4a
-                  city: Praha
-                  zip: 130 00
-                  full: Olšanská 2898/4a, 130 00 Praha
-                errors: [ ]
-                fixes:
-                  - group: SYNTAX
-                    type: VALUE_PART_ADDED
-                    subtype: NUMBER_PART
-                    data:
-                      typeFrom: streetWithNumber
-                      type: streetWithNumber
-                      valueFrom: Olšanská 2898/4
-                      value: Olšanská 2898/4a
-              - isValid: true
-                data:
-                  country: CZ
-                  ids:
-                    internal: d56e5b6b-6742-4978-ba01-aaa0929910a0
-                    external: '75429098'
-                  street: Olšanská
-                  number:
-                    part1: '2898'
-                    part1Number: '2898'
-                    part1Letter: null
-                    part2: 4b
-                    part2Number: '4'
-                    part2Letter: b
-                    full: 2898/4b
-                  streetWithNumber: Olšanská 2898/4b
-                  city: Praha
-                  zip: 130 00
-                  full: Olšanská 2898/4b, 130 00 Praha
-                errors: [ ]
-                fixes:
-                  - group: SYNTAX
-                    type: VALUE_PART_ADDED
-                    subtype: NUMBER_PART
-                    data:
-                      typeFrom: streetWithNumber
-                      type: streetWithNumber
-                      valueFrom: Olšanská 2898/4
-                      value: Olšanská 2898/4b
-              - isValid: true
-                data:
-                  country: CZ
-                  ids:
-                    internal: 9266190a-76da-45e5-86b4-d168d631ddf8
-                    external: '75429462'
-                  street: Olšanská
-                  number:
-                    part1: '2898'
-                    part1Number: '2898'
-                    part1Letter: null
-                    part2: 4g
-                    part2Number: '4'
-                    part2Letter: g
-                    full: 2898/4g
-                  streetWithNumber: Olšanská 2898/4g
-                  city: Praha
-                  zip: 130 00
-                  full: Olšanská 2898/4g, 130 00 Praha
-                errors: [ ]
-                fixes:
-                  - group: SYNTAX
-                    type: VALUE_PART_ADDED
-                    subtype: NUMBER_PART
-                    data:
-                      typeFrom: streetWithNumber
-                      type: streetWithNumber
-                      valueFrom: Olšanská 2898/4
-                      value: Olšanská 2898/4g
-              - isValid: true
-                data:
-                  country: CZ
-                  ids:
-                    internal: 0794e4b1-2ac8-498a-b02f-23b1e59b7178
-                    external: '75429527'
-                  street: Olšanská
-                  number:
-                    part1: '2898'
-                    part1Number: '2898'
-                    part1Letter: null
-                    part2: 4h
-                    part2Number: '4'
-                    part2Letter: h
-                    full: 2898/4h
-                  streetWithNumber: Olšanská 2898/4h
-                  city: Praha
-                  zip: 130 00
-                  full: Olšanská 2898/4h, 130 00 Praha
-                errors: [ ]
-                fixes:
-                  - group: SYNTAX
-                    type: VALUE_PART_ADDED
-                    subtype: NUMBER_PART
-                    data:
-                      typeFrom: streetWithNumber
-                      type: streetWithNumber
-                      valueFrom: Olšanská 2898/4
-                      value: Olšanská 2898/4h
-              - isValid: true
-                data:
-                  country: CZ
-                  ids:
-                    internal: a3c8146d-ff67-4e97-80bc-40cacdd06a4d
-                    external: '75429551'
-                  street: Olšanská
-                  number:
-                    part1: '2898'
-                    part1Number: '2898'
-                    part1Letter: null
-                    part2: 4i
-                    part2Number: '4'
-                    part2Letter: i
-                    full: 2898/4i
-                  streetWithNumber: Olšanská 2898/4i
-                  city: Praha
-                  zip: 130 00
-                  full: Olšanská 2898/4i, 130 00 Praha
-                errors: [ ]
-                fixes:
-                  - group: SYNTAX
-                    type: VALUE_PART_ADDED
-                    subtype: NUMBER_PART
-                    data:
-                      typeFrom: streetWithNumber
-                      type: streetWithNumber
-                      valueFrom: Olšanská 2898/4
-                      value: Olšanská 2898/4i
-              - isValid: true
+                dataTypes:
+                  valid:
+                    - city
+                    - number.full
+                    - street
+                    - streetWithNumber
+                    - zip
+                  invalid: []
                 data:
                   country: CZ
                   ids:
@@ -392,28 +295,45 @@ content:
                     external: '75429195'
                   street: Olšanská
                   number:
+                    type: č.p.
                     part1: '2898'
                     part1Number: '2898'
                     part1Letter: null
-                    part2: 4d
+                    part2: '4d'
                     part2Number: '4'
                     part2Letter: d
                     full: 2898/4d
                   streetWithNumber: Olšanská 2898/4d
-                  city: Praha
-                  zip: 130 00
-                  full: Olšanská 2898/4d, 130 00 Praha
-                errors: [ ]
+                  city: Praha 3
+                  zip: '13000'
+                  full: Olšanská 2898/4d, 13000 Praha 3
+                errors: []
                 fixes:
-                  - group: SYNTAX
-                    type: VALUE_PART_ADDED
-                    subtype: NUMBER_PART
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
                     data:
                       typeFrom: streetWithNumber
                       type: streetWithNumber
                       valueFrom: Olšanská 2898/4
                       value: Olšanská 2898/4d
+                  - group: FORMAT
+                    type: CHANGED
+                    subtype: WHITESPACES
+                    data:
+                      typeFrom: zip
+                      type: zip
+                      valueFrom: '130 00'
+                      value: '13000'
               - isValid: true
+                dataTypes:
+                  valid:
+                    - city
+                    - number.full
+                    - street
+                    - streetWithNumber
+                    - zip
+                  invalid: []
                 data:
                   country: CZ
                   ids:
@@ -421,83 +341,34 @@ content:
                     external: '75429411'
                   street: Olšanská
                   number:
+                    type: č.p.
                     part1: '2898'
                     part1Number: '2898'
                     part1Letter: null
-                    part2: 4e
+                    part2: '4e'
                     part2Number: '4'
                     part2Letter: e
                     full: 2898/4e
                   streetWithNumber: Olšanská 2898/4e
-                  city: Praha
-                  zip: 130 00
-                  full: Olšanská 2898/4e, 130 00 Praha
-                errors: [ ]
+                  city: Praha 3
+                  zip: '13000'
+                  full: Olšanská 2898/4e, 13000 Praha 3
+                errors: []
                 fixes:
-                  - group: SYNTAX
-                    type: VALUE_PART_ADDED
-                    subtype: NUMBER_PART
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
                     data:
                       typeFrom: streetWithNumber
                       type: streetWithNumber
                       valueFrom: Olšanská 2898/4
                       value: Olšanská 2898/4e
-              - isValid: true
-                data:
-                  country: CZ
-                  ids:
-                    internal: f07afd40-b8be-45e5-89ae-828ce059f719
-                    external: '75429446'
-                  street: Olšanská
-                  number:
-                    part1: '2898'
-                    part1Number: '2898'
-                    part1Letter: null
-                    part2: 4f
-                    part2Number: '4'
-                    part2Letter: f
-                    full: 2898/4f
-                  streetWithNumber: Olšanská 2898/4f
-                  city: Praha
-                  zip: 130 00
-                  full: Olšanská 2898/4f, 130 00 Praha
-                errors: [ ]
-                fixes:
-                  - group: SYNTAX
-                    type: VALUE_PART_ADDED
-                    subtype: NUMBER_PART
+                  - group: FORMAT
+                    type: CHANGED
+                    subtype: WHITESPACES
                     data:
-                      typeFrom: streetWithNumber
-                      type: streetWithNumber
-                      valueFrom: Olšanská 2898/4
-                      value: Olšanská 2898/4f
-              - isValid: true
-                data:
-                  country: CZ
-                  ids:
-                    internal: 37b9bfcc-733b-49e0-ae68-c32d2634732e
-                    external: '75429152'
-                  street: Olšanská
-                  number:
-                    part1: '2898'
-                    part1Number: '2898'
-                    part1Letter: null
-                    part2: 4c
-                    part2Number: '4'
-                    part2Letter: c
-                    full: 2898/4c
-                  streetWithNumber: Olšanská 2898/4c
-                  city: Praha
-                  zip: 130 00
-                  full: Olšanská 2898/4c, 130 00 Praha
-                errors: [ ]
-                fixes:
-                  - group: SYNTAX
-                    type: VALUE_PART_ADDED
-                    subtype: NUMBER_PART
-                    data:
-                      typeFrom: streetWithNumber
-                      type: streetWithNumber
-                      valueFrom: Olšanská 2898/4
-                      value: Olšanská 2898/4c
-          errors: [ ]
+                      typeFrom: zip
+                      type: zip
+                      valueFrom: '130 00'
+                      value: '13000'
+          errors: []

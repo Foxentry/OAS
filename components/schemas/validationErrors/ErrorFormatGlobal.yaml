@@ -8,6 +8,7 @@ properties:
   type:
     enum:
       - CHARACTERS
+      - INVALID
     description: Type of error.
     example: CHARACTERS
   subtype:

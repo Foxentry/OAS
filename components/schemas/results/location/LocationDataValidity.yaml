@@ -3,6 +3,19 @@ nullable: true
 allOf:
   - $ref: ./LocationData.yaml
 properties:
+  dataTypes:
+    description: >-
+      List of data types that were validated. Provides information about which types were valid and which were invalid.
+    type: object
+    properties:
+      valid:
+        type: array
+        items:
+          type: string
+      invalid:
+        type: array
+        items:
+          type: string
   errors:
     type: array
     description: >-

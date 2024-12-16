@@ -1,0 +1,62 @@
+description: Successful response
+headers:
+  foxentry-api-version:
+    $ref: ./../../headers/Foxentry-Api-Version.yaml
+  foxentry-daily-credits-left:
+    $ref: ./../../headers/Foxentry-Daily-Credits-Left.yaml
+  foxentry-daily-credits-limit:
+    $ref: ./../../headers/Foxentry-Daily-Credits-Limit.yaml
+  foxentry-rate-limit:
+    $ref: ./../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ./../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ./../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Status of API response.
+          example: 200
+        request:
+          allOf:
+            - type: object
+              properties:
+                endpoint:
+                  example: phone/search
+            - $ref: ./../../schemas/GlobalRequest.yaml
+            - $ref: ./../../schemas/requestBodies/phone/PhoneSearchBody.yaml
+        response:
+          $ref: ./../../schemas/responses/phone/PhoneSearchResult.yaml
+        errors:
+          description: >-
+            List of errors related to the request. Should be empty if the
+            request finished successfully.
+          type: array
+          items: {}
+          maxItems: 0
+      required:
+        - status
+        - request
+    examples:
+      searchResults:
+        value:
+          status: 200
+          request:
+            endpoint: phone/search
+            code: 03647e0f-2eb1-41a9-9dbc-a5947fdc697a
+          response:
+            resultsCount: 2
+            results:
+              - data:
+                  country: CZ
+                  prefix: '+420'
+                  icon: 'https://cdn.foxentry.com/svg/flags/cz.svg'
+              - data:
+                  country: SK
+                  prefix: '+421'
+                  icon: 'https://cdn.foxentry.com/svg/flags/sk.svg'
+          errors: []

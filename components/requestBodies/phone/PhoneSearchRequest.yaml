@@ -1,0 +1,26 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        request:
+          type: object
+          allOf:
+            - $ref: ./../../schemas/requestBodies/phone/PhoneSearchBody.yaml
+          required:
+            - query
+      required:
+        - request
+    examples:
+      Request Example:
+        value:
+          request:
+            query:
+              value: +42
+            options:
+              resultsLimit: 5
+            client:
+              country: CZ
+              location:
+                lat: 50.0628
+                lon: 13.9271

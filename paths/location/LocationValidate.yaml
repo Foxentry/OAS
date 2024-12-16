@@ -21,7 +21,7 @@ post:
     $ref: ./../../components/requestBodies/location/LocationValidationRequest.yaml
   responses:
     '200':
-      $ref: ./../../components/responses/location/LocationValidation.yaml
+      $ref: ./../../components/responses/location/LocationValidationResponse.yaml
     '400':
       $ref: ./../../components/responses/error/Error400Response.yaml
     '401':

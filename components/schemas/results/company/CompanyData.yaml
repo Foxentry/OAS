@@ -46,15 +46,12 @@ properties:
         description: Special vat number in case that subject is part of VAT group.
         example: CZ0581019
       address:
-        $ref: ./../location/LocationData.yaml
+        address:
+          oneOf:
+            - type: "null"
+            - $ref: ./../location/LocationData.yaml
       addressOfficial:
-        allOf:
-          - type:
-              - object
-              - "null"
-            description: >-
-              Address data from the official registry. Not validated by Foxentry.
-          - $ref: ./CompanyAddressOfficial.yaml
+        $ref: ./CompanyAddressOfficial.yaml
       nace:
         type: array
         description: Types of business
@@ -115,11 +112,15 @@ properties:
                   description: Information about register.
                   properties:
                     code:
-                      type: string
+                      type:
+                        - string
+                        - "null"
                       description: Code of register.
                       example: null
                     name:
-                      type: string
+                      type:
+                        - string
+                        - "null"
                       description: Name of register.
                       example: CENTRALNA EWIDENCJA I INFORMACJA O DZIAŁALNOŚCI GOSPODARCZEJ
                     detail:
@@ -133,11 +134,15 @@ properties:
                   description: Information about registrator.
                   properties:
                     code:
-                      type: string
+                      type:
+                        - string
+                        - "null"
                       description: Code of register.
                       example: MSPH
                     name:
-                      type: string
+                      type:
+                        - string
+                        - "null"
                       description: Name of registrator.
                       example: Městský soud v Praze
                     detail:
@@ -319,7 +324,9 @@ properties:
                     description: name of member.
                     example: Pavel Hrdlička
                   address:
-                    $ref: ./../location/LocationData.yaml
+                    oneOf:
+                      - type: "null"
+                      - $ref: ./../location/LocationData.yaml
                   addressOfficial:
                     $ref: ./CompanyAddressOfficial.yaml
                   function:

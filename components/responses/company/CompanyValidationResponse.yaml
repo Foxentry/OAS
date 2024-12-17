@@ -549,7 +549,7 @@ content:
                 vatNumber: null
                 vatNumberSpecial: null
                 address: null
-                addressOficial: null
+                addressOfficial: null
               errors:
                 - group: SYNTAX
                   type: VALUE_PART_MISSING

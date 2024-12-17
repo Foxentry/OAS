@@ -1,4 +1,6 @@
-type: object
+type:
+  - object
+  - "null"
 description: Address data from the official registry. Not validated by Foxentry.
 properties:
   data:

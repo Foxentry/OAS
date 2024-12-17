@@ -27,7 +27,6 @@ properties:
       allowedPrefixes:
         type: array
         description: List of allowed prefixes. If not provided, all prefixes are allowed.
-        nullable: true
         items:
           type: string
           example: '+420'

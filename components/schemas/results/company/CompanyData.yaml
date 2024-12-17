@@ -46,10 +46,9 @@ properties:
         description: Special vat number in case that subject is part of VAT group.
         example: CZ0581019
       address:
-        address:
-          oneOf:
-            - type: "null"
-            - $ref: ./../location/LocationData.yaml
+        oneOf:
+          - type: "null"
+          - $ref: ./../location/LocationData.yaml
       addressOfficial:
         $ref: ./CompanyAddressOfficial.yaml
       nace:

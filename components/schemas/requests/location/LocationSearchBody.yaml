@@ -33,43 +33,51 @@ properties:
           which determines how the filter should behave.
         properties:
           street:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: Street.
             example: Jeseniova
           streetWithNumber:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: Street with number.
             example: Jeseniova 55
           number.full:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: Full number.
             example: 1151/55d
           number.part1:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: First part of the number.
             example: '1151'
           number.part2:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: Second part of the number.
             example: 55d
           city:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: City.
             example: Praha
           zip:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: ZIP code.
             example: 130 00
           country:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: >-
               Country code in format [ISO-3166-1
               alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).

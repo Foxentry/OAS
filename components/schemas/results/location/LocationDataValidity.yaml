@@ -12,10 +12,12 @@ properties:
         type: array
         items:
           type: string
+          example: city
       invalid:
         type: array
         items:
           type: string
+          example: street
   errors:
     type: array
     description: >-

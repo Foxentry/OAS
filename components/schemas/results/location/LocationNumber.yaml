@@ -36,6 +36,11 @@ properties:
     nullable: true
     description: Full house number.
     example: 137/16
+  type:
+    type: string
+    nullable: true
+    description: Type of house number.
+    example: "č.p."
 required:
   - part1
   - part2

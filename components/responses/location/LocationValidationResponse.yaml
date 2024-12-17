@@ -1,0 +1,374 @@
+description: Successful response
+headers:
+  foxentry-api-version:
+    $ref: ./../../headers/Foxentry-Api-Version.yaml
+  foxentry-daily-credits-left:
+    $ref: ./../../headers/Foxentry-Daily-Credits-Left.yaml
+  foxentry-daily-credits-limit:
+    $ref: ./../../headers/Foxentry-Daily-Credits-Limit.yaml
+  foxentry-rate-limit:
+    $ref: ./../../headers/Foxentry-Rate-Limit.yaml
+  foxentry-rate-limit-period:
+    $ref: ./../../headers/Foxentry-Rate-Limit-Period.yaml
+  foxentry-rate-limit-remaining:
+    $ref: ./../../headers/Foxentry-Rate-Limit-Remaining.yaml
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: Status of API response.
+          example: 200
+        request:
+          allOf:
+            - type: object
+              properties:
+                endpoint:
+                  example: location/validate
+            - $ref: ./../../schemas/GlobalRequest.yaml
+            - $ref: ./../../schemas/requests/location/LocationValidationBody.yaml
+        response:
+          $ref: ./../../schemas/results/location/LocationValidationResult.yaml
+        errors:
+          description: >-
+            List of errors related to the request. Should be empty if the
+            request finished successfully.
+          type: array
+          items: { }
+          maxItems: 0
+      required:
+        - status
+        - errors
+        - request
+        - response
+
+    examples:
+      valid:
+        value:
+          status: 200
+          request:
+            endpoint: location/validate
+            code: 318f6dbb-f9ad-4639-825e-417d4196d8f7
+          response:
+            result:
+              isValid: true
+              proposal: valid
+              dataTypes:
+                valid:
+                  - city
+                  - streetWithNumber
+                  - zip
+                invalid: []
+              data:
+                country: CZ
+                ids:
+                  internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+                  external: '22349995'
+                street: Thámova
+                number:
+                  type: č.p.
+                  part1: '137'
+                  part1Number: '137'
+                  part1Letter: null
+                  part2: '16'
+                  part2Number: '16'
+                  part2Letter: null
+                  full: 137/16
+                streetWithNumber: Thámova 137/16
+                city: Praha 8
+                zip: '18600'
+                full: Thámova 137/16, 18600 Praha 8
+              errors: []
+            resultCorrected: null
+            suggestions: []
+          errors: []
+      invalid:
+        value:
+          status: 200
+          request:
+            endpoint: location/validate
+            code: 8b4dc7ba-3117-49d4-946c-d13847ba35d3
+          response:
+            result:
+              isValid: false
+              proposal: invalid
+              dataTypes:
+                valid:
+                  - street
+                invalid:
+                  - city
+                  - number.full
+                  - streetWithNumber
+                  - zip
+              data:
+                country: null
+                ids:
+                  internal: null
+                  external: null
+                street: null
+                number:
+                  type: null
+                  part1: null
+                  part1Number: null
+                  part1Letter: null
+                  part2: null
+                  part2Number: null
+                  part2Letter: null
+                  full: null
+                streetWithNumber: Thámova 123456789
+                city: Parharlin
+                zip: '457545754'
+                full: Thámova 123456789, 457545754 Parharlin
+              errors:
+                - group: VALUE
+                  type: INVALID
+                  subtype: null
+                  severity: critical
+                  relatedTo:
+                    - streetWithNumber
+                  description: Value is not valid.
+            resultCorrected: null
+            suggestions: []
+          errors: []
+      invalidWithCorrection:
+        value:
+          status: 200
+          request:
+            endpoint: location/validate
+            code: d713ab1f-48cb-4ff7-abd2-5dc51744c7b8
+          response:
+            result:
+              isValid: false
+              proposal: invalidWithCorrection
+              dataTypes:
+                valid:
+                  - street
+                  - zip
+                invalid:
+                  - city
+                  - streetWithNumber
+              data:
+                country: null
+                ids:
+                  internal: null
+                  external: null
+                street: null
+                number:
+                  type: null
+                  part1: null
+                  part1Number: null
+                  part1Letter: null
+                  part2: null
+                  part2Number: null
+                  part2Letter: null
+                  full: null
+                streetWithNumber: Thámova 137
+                city: Praha
+                zip: '18600'
+                full: Thámova 137, 18600 Praha
+              errors:
+                - group: SYNTAX
+                  type: VALUE_PART_MISSING
+                  subtype: NUMBER_PART
+                  severity: critical
+                  relatedTo:
+                    - streetWithNumber
+                  description: Value is missing some part of the number.
+                - group: FORMAT
+                  type: INVALID
+                  subtype: null
+                  severity: warning
+                  relatedTo:
+                    - city
+                  description: null
+            resultCorrected:
+              isValid: true
+              dataTypes:
+                valid:
+                  - city
+                  - number.full
+                  - street
+                  - streetWithNumber
+                  - zip
+                invalid: []
+              data:
+                country: CZ
+                ids:
+                  internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+                  external: '22349995'
+                street: Thámova
+                number:
+                  type: č.p.
+                  part1: '137'
+                  part1Number: '137'
+                  part1Letter: null
+                  part2: '16'
+                  part2Number: '16'
+                  part2Letter: null
+                  full: 137/16
+                streetWithNumber: Thámova 137/16
+                city: Praha 8
+                zip: '18600'
+                full: Thámova 137/16, 18600 Praha 8
+              errors: []
+              fixes:
+                - group: SYNTAX
+                  type: VALUE_PART_ADDED
+                  subtype: NUMBER_PART
+                  data:
+                    typeFrom: streetWithNumber
+                    type: streetWithNumber
+                    valueFrom: Thámova 137
+                    value: Thámova 137/16
+                - group: FORMAT
+                  type: CHANGED
+                  subtype: null
+                  data:
+                    typeFrom: city
+                    type: city
+                    valueFrom: Praha
+                    value: Praha 8
+            suggestions: []
+          errors: []
+      invalidWithSuggestion:
+        value:
+          status: 200
+          request:
+            endpoint: location/validate
+            code: 2d6729f0-6726-4435-b7a8-b17a4c76e9b0
+          response:
+            result:
+              isValid: false
+              proposal: invalidWithSuggestion
+              dataTypes:
+                valid:
+                  - city
+                  - number.full
+                  - street
+                  - zip
+                invalid:
+                  - streetWithNumber
+              data:
+                country: null
+                ids:
+                  internal: null
+                  external: null
+                street: null
+                number:
+                  type: null
+                  part1: null
+                  part1Number: null
+                  part1Letter: null
+                  part2: null
+                  part2Number: null
+                  part2Letter: null
+                  full: null
+                streetWithNumber: Olšanská 2898/4
+                city: Praha 3
+                zip: '13000'
+                full: Olšanská 2898/4, 13000 Praha 3
+              errors:
+                - group: VALUE
+                  type: INVALID
+                  subtype: null
+                  severity: critical
+                  relatedTo:
+                    - streetWithNumber
+                  description: Value is not valid.
+            resultCorrected: null
+            suggestions:
+              - isValid: true
+                dataTypes:
+                  valid:
+                    - city
+                    - number.full
+                    - street
+                    - streetWithNumber
+                    - zip
+                  invalid: []
+                data:
+                  country: CZ
+                  ids:
+                    internal: 8a978ce4-d769-456e-abdd-7b6174848237
+                    external: '75429195'
+                  street: Olšanská
+                  number:
+                    type: č.p.
+                    part1: '2898'
+                    part1Number: '2898'
+                    part1Letter: null
+                    part2: '4d'
+                    part2Number: '4'
+                    part2Letter: d
+                    full: 2898/4d
+                  streetWithNumber: Olšanská 2898/4d
+                  city: Praha 3
+                  zip: '13000'
+                  full: Olšanská 2898/4d, 13000 Praha 3
+                errors: []
+                fixes:
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
+                    data:
+                      typeFrom: streetWithNumber
+                      type: streetWithNumber
+                      valueFrom: Olšanská 2898/4
+                      value: Olšanská 2898/4d
+                  - group: FORMAT
+                    type: CHANGED
+                    subtype: WHITESPACES
+                    data:
+                      typeFrom: zip
+                      type: zip
+                      valueFrom: '130 00'
+                      value: '13000'
+              - isValid: true
+                dataTypes:
+                  valid:
+                    - city
+                    - number.full
+                    - street
+                    - streetWithNumber
+                    - zip
+                  invalid: []
+                data:
+                  country: CZ
+                  ids:
+                    internal: 33bb5444-73c5-474e-8ce7-2f157b947230
+                    external: '75429411'
+                  street: Olšanská
+                  number:
+                    type: č.p.
+                    part1: '2898'
+                    part1Number: '2898'
+                    part1Letter: null
+                    part2: '4e'
+                    part2Number: '4'
+                    part2Letter: e
+                    full: 2898/4e
+                  streetWithNumber: Olšanská 2898/4e
+                  city: Praha 3
+                  zip: '13000'
+                  full: Olšanská 2898/4e, 13000 Praha 3
+                errors: []
+                fixes:
+                  - group: VALUE
+                    type: CHANGED
+                    subtype: TYPO
+                    data:
+                      typeFrom: streetWithNumber
+                      type: streetWithNumber
+                      valueFrom: Olšanská 2898/4
+                      value: Olšanská 2898/4e
+                  - group: FORMAT
+                    type: CHANGED
+                    subtype: WHITESPACES
+                    data:
+                      typeFrom: zip
+                      type: zip
+                      valueFrom: '130 00'
+                      value: '13000'
+          errors: []

@@ -16,7 +16,7 @@ post:
     $ref: ./../../components/requestBodies/location/LocationLocalizationRequest.yaml
   responses:
     '200':
-      $ref: ./../../components/responses/location/LocationLocalization.yaml
+      $ref: ./../../components/responses/location/LocationLocalizationResponse.yaml
     '400':
       $ref: ./../../components/responses/error/Error400Response.yaml
     '401':

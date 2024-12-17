@@ -30,7 +30,7 @@ content:
             - $ref: ./../../schemas/GlobalRequest.yaml
             - $ref: ./../../schemas/requests/location/LocationSearchBody.yaml
         response:
-          $ref: ./../../schemas/results/location/LocationSearchResponse.yaml
+          $ref: ./../../schemas/results/location/LocationSearchResult.yaml
         errors:
           description: >-
             List of errors related to the request. Should be empty if the

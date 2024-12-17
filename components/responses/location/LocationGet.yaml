@@ -28,9 +28,9 @@ content:
                 endpoint:
                   example: location/get
             - $ref: ./../../schemas/GlobalRequest.yaml
-            - $ref: ./../../schemas/requestBodies/location/LocationGetBody.yaml
+            - $ref: ./../../schemas/requests/location/LocationGetBody.yaml
         response:
-          $ref: ./../../schemas/responses/location/LocationGetResult.yaml
+          $ref: ./../../schemas/results/location/LocationGetResult.yaml
         errors:
           description: >-
             List of errors related to the request. Should be empty if the

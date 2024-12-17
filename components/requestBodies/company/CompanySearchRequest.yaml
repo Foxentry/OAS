@@ -6,7 +6,7 @@ content:
         request:
           type: object
           allOf:
-            - $ref: ./../../schemas/requestBodies/company/CompanySearchBody.yaml
+            - $ref: ./../../schemas/requests/company/CompanySearchBody.yaml
           required:
             - query
       required:

@@ -28,9 +28,9 @@ content:
                 endpoint:
                   example: email/search
             - $ref: ./../../schemas/GlobalRequest.yaml
-            - $ref: ./../../schemas/requestBodies/email/EmailSearchBody.yaml
+            - $ref: ./../../schemas/requests/email/EmailSearchBody.yaml
         response:
-          $ref: ./../../schemas/responses/email/EmailSearchResult.yaml
+          $ref: ./../../schemas/results/email/EmailSearchResult.yaml
         errors:
           description: >-
             List of errors related to the request. Should be empty if the

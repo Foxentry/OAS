@@ -1,0 +1,40 @@
+post:
+  tags:
+    - Phone
+  summary: Search phone prefix
+  description: >-
+    Foxentry will list all phone prefixes matching your query. This can be used to implement 
+    a simple <b>autocomplete</b>.<br><br> Pay attention to the <b>client</b> section in
+    the request body. You can specify the user's location in order to receive more relevant suggestions.
+  operationId: PhoneSearch
+  parameters:
+    - $ref: ./../../components/parameters/Api-Version.yaml
+    - $ref: ./../../components/parameters/Foxentry-Include-Request-Details.yaml
+  requestBody:
+    $ref: ./../../components/requestBodies/phone/PhoneSearchRequest.yaml
+  responses:
+    '200':
+      $ref: ./../../components/responses/phone/PhoneSearchResponse.yaml
+    '400':
+      $ref: ./../../components/responses/error/Error400Response.yaml
+    '401':
+      $ref: ./../../components/responses/error/Error401Response.yaml
+    '402':
+      $ref: ./../../components/responses/error/Error402Response.yaml
+    '403':
+      $ref: ./../../components/responses/error/Error403Response.yaml
+    '404':
+      $ref: ./../../components/responses/error/Error404Response.yaml
+    '405':
+      $ref: ./../../components/responses/error/Error405Response.yaml
+    '429':
+      $ref: ./../../components/responses/error/Error429Response.yaml
+    '500':
+      $ref: ./../../components/responses/error/Error500Response.yaml
+    '503':
+      $ref: ./../../components/responses/error/Error503Response.yaml
+  security:
+    - BearerAuth: []
+  servers:
+    - url: https://api.foxentry.com
+    - url: https://api.foxentry.com/v2.0

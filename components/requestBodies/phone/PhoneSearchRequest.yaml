@@ -6,7 +6,7 @@ content:
         request:
           type: object
           allOf:
-            - $ref: ./../../schemas/requests/email/EmailSearchBody.yaml
+            - $ref: ./../../schemas/requests/phone/PhoneSearchBody.yaml
           required:
             - query
       required:
@@ -16,7 +16,7 @@ content:
         value:
           request:
             query:
-              value: p.novak@
+              value: "+42"
             options:
               resultsLimit: 5
             client:

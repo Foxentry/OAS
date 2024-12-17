@@ -28,9 +28,9 @@ content:
                 endpoint:
                   example: location/validate
             - $ref: ./../../schemas/GlobalRequest.yaml
-            - $ref: ./../../schemas/requestBodies/location/LocationValidationBody.yaml
+            - $ref: ./../../schemas/requests/location/LocationValidationBody.yaml
         response:
-          $ref: ./../../schemas/responses/location/LocationValidationResponse.yaml
+          $ref: ./../../schemas/results/location/LocationValidationResponse.yaml
         errors:
           description: >-
             List of errors related to the request. Should be empty if the

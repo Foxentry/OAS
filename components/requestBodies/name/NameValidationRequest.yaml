@@ -6,7 +6,7 @@ content:
         request:
           type: object
           allOf:
-            - $ref: ./../../schemas/requestBodies/name/NameValidationBody.yaml
+            - $ref: ./../../schemas/requests/name/NameValidationBody.yaml
           required:
             - query
       required:

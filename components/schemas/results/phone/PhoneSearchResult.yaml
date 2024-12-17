@@ -1,0 +1,34 @@
+type: object
+properties:
+  resultsCount:
+    type: number
+    description: Number of results
+    minimum: 1
+    maximum: 5
+    example: 1
+  results:
+    type: array
+    items:
+      type: object
+      properties:
+        data:
+          type: object
+          properties:
+            country:
+              type: string
+              example: CZ
+            prefix:
+              type: string
+              example: +420
+            icon:
+              type: string
+              example: https://cdn.foxentry.com/svg/flags/cz.svg
+          required:
+            - country
+            - prefix
+            - icon
+      required:
+        - data
+required:
+  - resultsCount
+  - results

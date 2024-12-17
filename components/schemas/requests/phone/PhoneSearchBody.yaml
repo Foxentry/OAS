@@ -1,0 +1,34 @@
+type: object
+properties:
+  customId:
+    type: string
+    nullable: true
+    description: Custom ID assigned by you if you need so.
+    example: customer567914
+  query:
+    type: object
+    properties:
+      value:
+        type: string
+        example: +42
+    required:
+      - value
+  options:
+    type: object
+    description: Query options.
+    properties:
+      resultsLimit:
+        type: number
+        description: Limits number of results returned by the endpoint.
+        minimum: 1
+        maximum: 5
+        example: 5
+      allowedPrefixes:
+        type: array
+        description: List of allowed prefixes. If not provided, all prefixes are allowed.
+        nullable: true
+        items:
+          type: string
+          example: '+420'
+  client:
+    $ref: ./../ClientRequest.yaml

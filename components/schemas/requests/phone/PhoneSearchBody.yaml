@@ -1,8 +1,9 @@
 type: object
 properties:
   customId:
-    type: string
-    nullable: true
+    type: 
+      - string
+      - "null"
     description: Custom ID assigned by you if you need so.
     example: customer567914
   query:
@@ -26,7 +27,6 @@ properties:
       allowedPrefixes:
         type: array
         description: List of allowed prefixes. If not provided, all prefixes are allowed.
-        nullable: true
         items:
           type: string
           example: '+420'

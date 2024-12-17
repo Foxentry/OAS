@@ -1,8 +1,9 @@
 type: object
 properties:
   customId:
-    type: string
-    nullable: true
+    type: 
+      - string
+      - "null"
     description: Custom ID assigned by you if you need so.
     example: customer567914
   query:
@@ -44,7 +45,6 @@ properties:
       allowedPrefixes:
         type: array
         description: List of allowed prefixes.
-        nullable: true
         items:
           type: string
           example: '+420'
@@ -55,7 +55,6 @@ properties:
           multiple prefixes, the resultCorrected will use the first valid prefix
           from this list. If not set, the resultCorrected will be null and there
           will be all valid combinations in the suggestions.
-        nullable: true
         items:
           type: string
           example: '+420'

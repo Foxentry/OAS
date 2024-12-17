@@ -27,7 +27,9 @@ properties:
     allOf:
       - $ref: ./CompanyDataValidity.yaml
   resultCorrected:
-    $ref: ./CompanyDataCorrection.yaml
+    oneOf:
+      - $ref: ./CompanyDataCorrection.yaml
+      - type: "null"
   suggestions:
     type: array
     description: Alternatives suggested for the sent query.

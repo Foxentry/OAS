@@ -8,8 +8,9 @@ properties:
     description: Code of request.
     example: gc0nCfcELaPSHH4Qo4UBaC7DbAj6G4
   customId:
-    type: string
-    nullable: true
+    type:
+      - string
+      - "null"
     description: Custom ID assigned by you if you need so.
     example: customer567914
 required:

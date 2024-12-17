@@ -1,18 +1,22 @@
 type: object
 properties:
   nameSurname:
-    type: string
+    type:
+      - string
+      - "null"
     description: Name and surname together.
     example: Petr Novák
-    nullable: true
   name:
-    type: string
+    type:
+      - string
+      - "null"
     description: First name.
     example: Petr
   surname:
-    type: string
+    type:
+      - string
+      - "null"
     description: Last name / family name.
-    nullable: true
     example: Novák
   context:
     type: array
@@ -28,7 +32,6 @@ properties:
       example: Ing.
   degreesAfter:
     type: array
-    nullable: true
     items:
       type: string
       description: Degrees after name.

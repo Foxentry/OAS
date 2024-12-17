@@ -1,8 +1,9 @@
 type: object
 properties:
   customId:
-    type: string
-    nullable: true
+    type:
+      - string
+      - "null"
     description: Custom ID assigned by you if you need so.
     example: customer567914
   query:
@@ -36,7 +37,6 @@ properties:
             maximum: 1000
             default: 50
             example: 50
-            nullable: true
           acceptNearest:
             type: boolean
             description: >-
@@ -45,7 +45,6 @@ properties:
               (acceptNearest = true).
             default: false
             example: false
-            nullable: true
   client:
     type: object
     description: >-

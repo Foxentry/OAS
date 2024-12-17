@@ -11,8 +11,9 @@ properties:
     description: Type of error.
     example: ERROR
   subtype:
-    type: string
-    nullable: true
+    type:
+      - string
+      - "null"
     description: Subtype of error.
   severity:
     enum:

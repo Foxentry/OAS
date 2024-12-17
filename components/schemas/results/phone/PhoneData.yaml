@@ -14,32 +14,37 @@ properties:
         description: Country phone prefix.
         example: '+420'
   prefix:
-    type: string
+    type:
+      - string
+      - "null"
     description: Country phone prefix.
     example: '+420'
-    nullable: true
   number:
-    type: string
-    nullable: true
+    type:
+      - string
+      - "null"
     description: Validated phone number.
     example: '775111222'
   numberWithPrefix:
-    type: string
+    type:
+      - string
+      - "null"
     description: Validated phone number with prefix.
-    nullable: true
     example: '+420775111222'
   carrier:
     type: object
     description: Phone carrier information.
     properties:
       name:
-        type: string
+        type:
+          - string
+          - "null"
         description: Name of carrier.
-        nullable: true
         example: Vodafone
       type:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
         description: Type of carrier.
         example: landline
         enum:
@@ -52,23 +57,27 @@ properties:
     description: Standardized international and local format.
     properties:
       national:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
         description: National phone number format.
         example: '775111222'
       nationalFormatted:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
         description: Formated national phone number.
         example: 775 111 222
       international:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
         description: International phone number format.
         example: '+420775111222'
       internationalFormatted:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
         description: Formated international phone number.
         example: +420 775 111 222
 required:

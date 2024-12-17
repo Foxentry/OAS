@@ -34,7 +34,9 @@ properties:
       - errors
 
   resultCorrected:
-    $ref: ./PhoneDataCorrection.yaml
+    oneOf:
+      - $ref: ./PhoneDataCorrection.yaml
+      - type: "null"
 
   suggestions:
     type: array

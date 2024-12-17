@@ -4,13 +4,15 @@ properties:
     type: object
     properties:
       lat:
-        type: number
-        nullable: true
+        type:
+          - number
+          - "null"
         description: Latitude coordinate.
         example: 50.087440865479
       lon:
-        type: number
-        nullable: true
+        type:
+          - number
+          - "null"
         description: Longitude coordinate.
         example: 14.463284033285
     required:
@@ -23,10 +25,11 @@ properties:
       type: object
       properties:
         type:
-          type: string
+          type:
+            - string
+            - "null"
           description: Type of coordinate system.
           example: JTSK
-          nullable: true
           enum:
             - JTSK
             - ETRS89

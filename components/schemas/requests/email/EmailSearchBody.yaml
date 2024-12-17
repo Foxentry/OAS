@@ -1,8 +1,9 @@
 type: object
 properties:
   customId:
-    type: string
-    nullable: true
+    type: 
+      - string
+      - "null"
     description: Custom ID assigned by you if you need so.
     example: customer567914
   query:

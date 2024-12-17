@@ -17,7 +17,6 @@ properties:
     type: array
     items:
       type: string
-      nullable: false
       example: CZ
     default:
       - CZ
@@ -49,7 +48,6 @@ properties:
       - internationalShortened
     default: alpha2
     example: alpha2
-    nullable: false
 
   cityFormat:
     description: >-
@@ -63,5 +61,4 @@ properties:
       - extended
     default: basic
     example: basic
-    nullable: false
 

@@ -4,45 +4,54 @@ properties:
     type: object
     properties:
       country:
-        type: string
+        type:
+          - string
+          - "null"
         description: >-
           Country code in format [ISO-3166-1
           alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
-        nullable: true
         example: CZ
       uuid:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
       name:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
         description: Name of company.
         example: Avantro s.r.o.
       registrationNumber:
-        type: string
+        type:
+          - string
+          - "null"
         description: Company registration number.
         example: '04997476'
       taxNumber:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
         description: Company tax number.
         example: CZ04997476
       vatNumber:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
         description: Company vat number.
         example: CZ04997476
       vatNumberSpecial:
-        type: string
-        nullable: true
+        type:
+          - string
+          - "null"
         description: Special vat number in case that subject is part of VAT group.
         example: CZ0581019
       address:
         $ref: ./../location/LocationData.yaml
       addressOfficial:
         allOf:
-          - type: object
-            nullable: true
+          - type:
+              - object
+              - "null"
             description: >-
               Address data from the official registry. Not validated by Foxentry.
           - $ref: ./CompanyAddressOfficial.yaml
@@ -61,8 +70,9 @@ properties:
               description: Name of business
               example: Ostatní profesní, vědecké a technické činnosti
             isPrimary:
-              type: boolean
-              nullable: true
+              type:
+                - boolean
+                - "null"
               description: Determines if it is the main object of the business.
               example: false
       databoxes:
@@ -113,8 +123,9 @@ properties:
                       description: Name of register.
                       example: CENTRALNA EWIDENCJA I INFORMACJA O DZIAŁALNOŚCI GOSPODARCZEJ
                     detail:
-                      type: string
-                      nullable: true
+                      type:
+                        - string
+                        - "null"
                       description: Detail of register.
                       example: null
                 registrator:
@@ -130,26 +141,32 @@ properties:
                       description: Name of registrator.
                       example: Městský soud v Praze
                     detail:
-                      type: string
-                      nullable: true
+                      type:
+                        - string
+                        - "null"
                       description: Detail of registration.
                       example: >-
                         Územní pracoviště pro Prahu 8, Trojská 13a, PRAHA 8,
                         tel. 266 013 111
                 reference:
-                  type: string
-                  nullable: true
+                  type:
+                    - string
+                    - "null"
                   description: Registration reference.
                   example: C 256795
       legalForm:
         type: object
         properties:
           code:
-            type: string
+            type:
+              - string
+              - "null"
             description: Code of legal form.
             example: '112'
           name:
-            type: string
+            type:
+              - string
+              - "null"
             description: Name of legal form.
             example: Společnost s ručením omezeným.
       legalFormSpecific:
@@ -157,13 +174,15 @@ properties:
         description: Specific cases of legalForm.
         properties:
           code:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: Code of legal form for Polish companies.
             example: null
           name:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: Name of legal form for Polish companies.
             example: null
       esa2010:
@@ -171,13 +190,15 @@ properties:
         description: The European System of National and Regional Accounts.
         properties:
           code:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: Code of ESA2010.
             example: '11002'
           name:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: Name of ESA2010.
             example: Nefinanční podniky soukromé národní
       dates:
@@ -185,34 +206,39 @@ properties:
         description: Important dates associated with company.
         properties:
           created:
-            type: string
+            type:
+              - string
+              - "null"
             description: Company creation date.
             format: date
-            nullable: true
             example: '2016-04-15'
           terminated:
-            type: string
+            type:
+              - string
+              - "null"
             description: Company termination date.
             format: date
-            nullable: true
             example: '2016-04-15'
       employees:
         type: object
         description: Employees information.
         properties:
           count:
-            type: number
-            nullable: true
+            type:
+              - number
+              - "null"
             description: Number of employees.
             example: null
           category:
-            type: string
-            nullable: true
+            type:
+              - string
+              - "null"
             description: Category of employees.
             example: 1000-1499
       insolvency:
-        type: object
-        nullable: true
+        type:
+          - object
+          - "null"
         description: Company insolvency status with history
         properties:
           history:
@@ -253,13 +279,13 @@ properties:
                     https://isir.justice.cz/isir/ueu/evidence_upadcu_detail.do?id=F
       businessPremises:
         type: array
-        nullable: true
         items:
           type: object
           properties:
             label:
-              type: string
-              nullable: true
+              type:
+               - string
+               - "null"
               description: Label of business premises
               example: Obchodní centrum Havlíčkův Brod.
             address:
@@ -297,27 +323,31 @@ properties:
                   addressOfficial:
                     $ref: ./CompanyAddressOfficial.yaml
                   function:
-                    type: string
-                    nullable: true
+                    type:
+                      - string
+                      - "null"
                     description: Member function.
                     example: jednatel
                   birthDate:
-                    type: string
-                    nullable: true
+                    type:
+                      - string
+                      - "null"
                     format: date
                     description: Member date of birth.
                     example: '1988-08-01'
                   registrationNumber:
-                    type: number
-                    nullable: true
+                    type:
+                      - number
+                      - "null"
                     description: Member registration number.
                     example: null
             decisions:
               type: array
               description: Information about the company's manner of decision making.
               items:
-                type: string
-                nullable: true
+                type:
+                  - string
+                  - "null"
                 description: Member decisions.
                 example: Společnost zastupuje jednatel samostatně.
       capital:
@@ -408,18 +438,21 @@ properties:
                   description: Valid from.
                   example: '2016-04-15'
                 fromText:
-                  type: string
-                  nullable: true
+                  type:
+                    - string
+                    - "null"
                   description: Description of validation (from).
                   example: Dnem zápisu do spolkového rejstříku.
                 to:
-                  type: string
+                  type:
+                    - string
+                    - "null"
                   description: Valid to.
-                  nullable: true
                   example: '2030-04-15'
                 toText:
-                  type: string
-                  nullable: true
+                  type:
+                    - string
+                    - "null"
                   description: Description of validation (to).
                   example: Na dobu neurčitou.
             interrupted:
@@ -427,21 +460,24 @@ properties:
               description: Dates of interuption.
               properties:
                 from:
-                  type: string
-                  nullable: true
+                  type:
+                    - string
+                    - "null"
                   description: Validity of the authorisation (from).
                   format: date
                   example: '2021-08-15'
                 to:
-                  type: string
-                  nullable: true
+                  type:
+                    - string
+                    - "null"
                   description: Validity of the authorisation (to).
                   format: date
                   example: '2025-08-15'
             responsiblePerson:
-              type: string
+              type:
+                - string
+                - "null"
               description: Responsible person.
-              nullable: true
               example: Jan Novák
             activitySubjects:
               type: array
@@ -454,7 +490,9 @@ properties:
         description: Vat payer information.
         properties:
           status:
-            type: string
+            type:
+              - string
+              - "null"
             description: >-
               Vat current status. Payer, non payer and subject. Subject means
               the company is a VAT payer only for non domestic transactions
@@ -469,13 +507,16 @@ properties:
             description: Reliability of the VAT payer.
             properties:
               reliable:
-                type: boolean
+                type:
+                  - boolean
+                  - "null"
                 description: Determines whether or not the subject is reliable.
                 example: true
               unreliableFrom:
-                type: string
+                type:
+                  - string
+                  - "null"
                 format: date
-                nullable: true
                 description: Determines from when the subject is unreliable.
                 example: '2018-09-01'
           bankAccounts:
@@ -492,7 +533,6 @@ properties:
             description: History of the VAT payer.
             items:
               type: object
-              nullable: true
               properties:
                 vatNumber:
                   type: string
@@ -507,8 +547,9 @@ properties:
                   description: Valid from.
                   example: '2017-09-01'
                 validTo:
-                  type: string
-                  nullable: true
+                  type:
+                    - string
+                    - "null"
                   description: Valid to.
                   example: null
                 isGroupRegistration:

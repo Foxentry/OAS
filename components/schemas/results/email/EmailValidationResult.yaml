@@ -31,7 +31,6 @@ properties:
     $ref: ./EmailDataCorrection.yaml
   suggestions:
     type: array
-    nullable: true
     description: Alternatives suggested for the sent query.
     items:
         $ref: ./EmailDataCorrection.yaml

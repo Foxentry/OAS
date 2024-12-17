@@ -17,9 +17,7 @@ properties:
     type: array
     items:
       type: string
-      nullable: false
       example: CZ
-    nullable: true
     default:
       - CZ
       - SK
@@ -40,7 +38,6 @@ properties:
     type: boolean
     default: false
     example: false
-    nullable: false
   cityFormat:
     description: >-
       This option determines the format in which the city is returned.
@@ -53,7 +50,6 @@ properties:
       - extended
     default: basic
     example: basic
-    nullable: false
   countryFormat:
     description: >-
       This option determines the format in which the country is returned.
@@ -69,4 +65,3 @@ properties:
       - internationalShortened
     default: alpha2
     example: alpha2
-    nullable: false

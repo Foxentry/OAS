@@ -11,8 +11,9 @@ properties:
     description: Type of error.
     example: API_VERSION
   subtype:
-    type: string
-    nullable: true
+    type:
+      - string
+      - "null"
     description: Subtype of error.
   severity:
     enum:

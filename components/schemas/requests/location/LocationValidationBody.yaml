@@ -74,7 +74,7 @@ properties:
           - string
           - "null"
         description: ZIP code.
-        example: 130 00
+        example: '130 00'
       full:
         type:
           - string

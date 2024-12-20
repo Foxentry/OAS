@@ -11,7 +11,7 @@ properties:
     properties:
       value:
         type: string
-        example: +42
+        example: '+42'
     required:
       - value
   options:

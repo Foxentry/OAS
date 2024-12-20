@@ -19,7 +19,7 @@ properties:
               example: CZ
             prefix:
               type: string
-              example: +420
+              example: '+420'
             icon:
               type: string
               example: https://cdn.foxentry.com/svg/flags/cz.svg

@@ -67,7 +67,7 @@ properties:
           - string
           - "null"
         description: Formated national phone number.
-        example: 775 111 222
+        example: '775 111 222'
       international:
         type:
           - string
@@ -79,7 +79,7 @@ properties:
           - string
           - "null"
         description: Formated international phone number.
-        example: +420 775 111 222
+        example: '+420 775 111 222'
 required:
   - country
   - number

@@ -64,9 +64,9 @@ content:
                   type: mobile
                 format:
                   national: '607123456'
-                  nationalFormatted: 607 123 456
+                  nationalFormatted: '607 123 456'
                   international: '+420607123456'
-                  internationalFormatted: +420 607 123 456
+                  internationalFormatted: '+420 607 123 456'
               errors: []
             resultCorrected: null
             suggestions: []
@@ -151,9 +151,9 @@ content:
                   type: mobile
                 format:
                   national: '607123456'
-                  nationalFormatted: 607 123 456
+                  nationalFormatted: '607 123 456'
                   international: '+420607123456'
-                  internationalFormatted: +420 607 123 456
+                  internationalFormatted: '+420 607 123 456'
               errors: []
               fixes:
                 - group: VALUE
@@ -185,9 +185,9 @@ content:
                 carrier: {}
                 format:
                   national: '728984101'
-                  nationalFormatted: 728 984 101
+                  nationalFormatted: '728 984 101'
                   international: '+48728984101'
-                  internationalFormatted: +48 728 984 101
+                  internationalFormatted: '+48 728 984 101'
               errors: []
             resultCorrected: null
             suggestions:
@@ -201,9 +201,9 @@ content:
                   carrier: {}
                   format:
                     national: '728984101'
-                    nationalFormatted: 728 984 101
+                    nationalFormatted: '728 984 101'
                     international: '+420728984101'
-                    internationalFormatted: +420 728 984 101
+                    internationalFormatted: '+420 728 984 101'
                 errors: []
                 fixes:
                   - group: VALUE

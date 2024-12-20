@@ -9,7 +9,8 @@ properties:
     description: Customer user name.
     example: me
   domain:
-    type: string
+    type:
+      - string
+      - "null"
     description: Customer domain.
     example: gmali.com
-    nullable: true

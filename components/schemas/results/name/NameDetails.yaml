@@ -26,8 +26,9 @@ items:
       description: Vocative form of value.
       example: Petře
     nameDays:
-      type: array
-      nullable: true
+      type:
+        - array
+        - "null"
       description: Date of the name day. Currently works only for czech and slovak names.
       items:
         type: object

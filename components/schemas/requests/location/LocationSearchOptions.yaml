@@ -28,7 +28,6 @@ properties:
       - prefer
     example: limit
     default: limit
-    nullable: true
   filterAcceptFormat:
     type: boolean
     description: >-

@@ -32,7 +32,9 @@ properties:
       - proposal
       - data
   resultCorrected:
-    $ref: ./LocationDataCorrection.yaml
+    oneOf:
+      - $ref: ./LocationDataCorrection.yaml
+      - type: "null"
   suggestions:
     type: array
     description: Alternatives suggested for the sent query.

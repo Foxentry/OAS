@@ -28,10 +28,11 @@ properties:
     allOf:
       - $ref: ./EmailDataValidity.yaml
   resultCorrected:
-    $ref: ./EmailDataCorrection.yaml
+    oneOf:
+      - $ref: ./EmailDataCorrection.yaml
+      - type: "null"
   suggestions:
     type: array
-    nullable: true
     description: Alternatives suggested for the sent query.
     items:
         $ref: ./EmailDataCorrection.yaml

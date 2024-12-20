@@ -32,7 +32,9 @@ properties:
       - proposal
       - data
   resultCorrected:
-    $ref: ./NameDataCorrection.yaml
+    oneOf:
+      - $ref: ./NameDataCorrection.yaml
+      - type: "null"
 
   suggestions:
     type: array

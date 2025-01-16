@@ -1,3 +1,4 @@
+title: Internal database error
 type: object
 properties:
   group:

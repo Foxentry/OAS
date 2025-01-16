@@ -1,5 +1,6 @@
+title: Location data
+description: Location data
 type: object
-description: Location data.
 properties:
   data:
     type: object

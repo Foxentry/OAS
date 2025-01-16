@@ -1,3 +1,4 @@
+title: Empty request body error
 type: object
 properties:
   group:

@@ -1,3 +1,4 @@
+title: Request authorization error
 type: object
 properties:
   group:

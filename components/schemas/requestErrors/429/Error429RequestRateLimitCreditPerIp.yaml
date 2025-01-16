@@ -1,3 +1,4 @@
+title: Daily credit limit per IP reached error
 type: object
 properties:
   group:

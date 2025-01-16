@@ -1,3 +1,4 @@
+title: Invalid api key error
 type: object
 properties:
   group:

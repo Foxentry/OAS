@@ -1,3 +1,4 @@
+title: No request in request body error
 type: object
 properties:
   group:

@@ -1,3 +1,4 @@
+title: Maximum service limit reached error
 type: object
 properties:
   group:
@@ -32,9 +33,9 @@ properties:
   description:
     enum:
       - >-
-        Requested API version is not available. Please check Foxentry.dev for
-        the supported versions.
+        The maximum service limit has been reached. Move to the higher paying plan or allow requests 
+        over the subscription.
     description: Description of error.
     example: >-
-      Requested API version is not available. Please check Foxentry.dev for the
-      supported versions.
+      The maximum service limit has been reached. Move to the higher paying plan or allow requests 
+      over the subscription.

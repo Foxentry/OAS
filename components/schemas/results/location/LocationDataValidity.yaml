@@ -1,3 +1,4 @@
+title: Location validation result
 type: object
 allOf:
   - $ref: ./LocationData.yaml

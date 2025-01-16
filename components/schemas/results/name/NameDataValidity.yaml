@@ -1,3 +1,4 @@
+title: Name validation result
 type: object
 properties:
   isValid:

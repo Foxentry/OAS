@@ -47,8 +47,9 @@ properties:
         example: CZ0581019
       address:
         oneOf:
-          - type: "null"
           - $ref: ./../location/LocationData.yaml
+          - type: "null"
+            title: No data
       addressOfficial:
         $ref: ./CompanyAddressOfficial.yaml
       nace:
@@ -324,8 +325,8 @@ properties:
                     example: Pavel Hrdlička
                   address:
                     oneOf:
-                      - type: "null"
                       - $ref: ./../location/LocationData.yaml
+                      - type: "null"
                   addressOfficial:
                     $ref: ./CompanyAddressOfficial.yaml
                   function:

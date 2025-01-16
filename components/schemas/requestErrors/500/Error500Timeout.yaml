@@ -1,3 +1,4 @@
+title: API timeout error
 type: object
 properties:
   group:

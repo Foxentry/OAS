@@ -1,3 +1,4 @@
+title: Request body not JSON error
 type: object
 properties:
   group:

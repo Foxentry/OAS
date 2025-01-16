@@ -1,3 +1,4 @@
+title: Request method not allowed error
 type: object
 properties:
   group:

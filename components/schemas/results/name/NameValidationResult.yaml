@@ -35,6 +35,7 @@ properties:
     oneOf:
       - $ref: ./NameDataCorrection.yaml
       - type: "null"
+        title: No data
 
   suggestions:
     type: array

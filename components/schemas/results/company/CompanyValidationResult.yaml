@@ -30,6 +30,7 @@ properties:
     oneOf:
       - $ref: ./CompanyDataCorrection.yaml
       - type: "null"
+        title: No data
   suggestions:
     type: array
     description: Alternatives suggested for the sent query.

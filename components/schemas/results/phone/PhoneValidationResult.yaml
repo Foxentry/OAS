@@ -37,6 +37,7 @@ properties:
     oneOf:
       - $ref: ./PhoneDataCorrection.yaml
       - type: "null"
+        title: No data
 
   suggestions:
     type: array

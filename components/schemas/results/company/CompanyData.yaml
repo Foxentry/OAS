@@ -327,6 +327,7 @@ properties:
                     oneOf:
                       - $ref: ./../location/LocationData.yaml
                       - type: "null"
+                        title: No data
                   addressOfficial:
                     $ref: ./CompanyAddressOfficial.yaml
                   function:

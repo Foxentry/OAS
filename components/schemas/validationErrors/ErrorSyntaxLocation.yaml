@@ -1,4 +1,4 @@
-type: Location specific syntax error
+title: Location specific syntax error
 type: object
 properties:
   group:

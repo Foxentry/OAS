@@ -44,19 +44,4 @@ content:
     examples:
       searchResults:
         value:
-          status: 200
-          request:
-            endpoint: phone/search
-            code: 03647e0f-2eb1-41a9-9dbc-a5947fdc697a
-          response:
-            resultsCount: 2
-            results:
-              - data:
-                  country: CZ
-                  prefix: '+420'
-                  icon: 'https://cdn.foxentry.com/svg/flags/cz.svg'
-              - data:
-                  country: SK
-                  prefix: '+421'
-                  icon: 'https://cdn.foxentry.com/svg/flags/sk.svg'
-          errors: []
+          $ref: ./../../responseExamples/phone/search/PhoneSearchResultsExample.yaml

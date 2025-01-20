@@ -1,0 +1,12 @@
+{
+  "request": {
+    "query": {
+      "email": "info@gmail.com"
+    },
+    "options": {
+      "validationType": "extended",
+      "acceptDisposableEmails": true,
+      "acceptFreemails": false
+    }
+  }
+}

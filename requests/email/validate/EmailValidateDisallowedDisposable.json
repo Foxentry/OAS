@@ -1,0 +1,12 @@
+{
+  "request": {
+    "query": {
+      "email": "rasini3451@naymedia.com"
+    },
+    "options": {
+      "validationType": "extended",
+      "acceptDisposableEmails": false,
+      "acceptFreemails": true
+    }
+  }
+}

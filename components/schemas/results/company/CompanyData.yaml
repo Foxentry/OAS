@@ -164,16 +164,10 @@ properties:
         properties:
           type:
             description: 'Legal form type'
-            oneOf:
-              - title: 'Legal form type'
-                type:
-                  - string
-                enum:
-                  - juridical
-                  - physical
-              - title: "No data"
-                type: "null"
-
+            enum:
+              - juridical
+              - physical
+              - null
             default: juridical
             example: juridical
           code:

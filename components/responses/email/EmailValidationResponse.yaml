@@ -47,257 +47,28 @@ content:
     examples:
       valid:
         value:
-          status: 200
-          request:
-            endpoint: email/validate
-            code: 5J2NU2QX5NdKPmjvgsaFKD3xgHeOq4
-          response:
-            result:
-              isValid: true
-              proposal: valid
-              data:
-                user: info
-                domain: foxentry.com
-                email: info@foxentry.com
-              flags: {}
-              errors: []
-            resultCorrected: null
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/email/validate/EmailValidateValidExample.yaml
+
       invalidWithSuggestion:
         value:
-          status: 200
-          request:
-            endpoint: email/validate
-            code: xzRE9ufIsJd1KqcxEtrCsz6TMqqTgX
-          response:
-            result:
-              isValid: false
-              proposal: invalidWithSuggestion
-              data:
-                user: info
-                domain: gmali.com
-                email: info@gmali.com
-              flags:
-                isCatchAllServer: false
-                isDisposableEmailAddress: true
-                isFreemail: false
-              errors:
-                - group: VALUE
-                  type: INVALID
-                  subtype: DOMAIN_DNS
-                  severity: critical
-                  relatedTo:
-                    - email
-                  description: >-
-                    Domain does not have DNS records set properly for receiving
-                    emails.
-            resultCorrected: null
-            suggestions:
-              - isValid: false
-                data:
-                  user: info
-                  domain: gmail.com
-                  email: info@gmail.com
-                flags:
-                  isCatchAllServer: false
-                  isDisposableEmailAddress: false
-                  isFreemail: true
-                fixes:
-                  - group: VALUE
-                    type: CHANGED
-                    subtype: TYPO
-                    data:
-                      typeFrom: email
-                      type: email
-                      valueFrom: info@gmali.com
-                      value: info@gmail.com
-                errors:
-                  - group: VALUE
-                    type: INVALID
-                    subtype: null
-                    severity: critical
-                    relatedTo:
-                      - email
-                    description: Value is not valid.
-          errors: []
+          $ref: ./../../responseExamples/email/validate/EmailValidateInvalidWithSuggestionExample.yaml
+
       invalid:
         value:
-          status: 200
-          request:
-            endpoint: email/validate
-            code: uDfWHiVHZdoyb7Cz0olU7EmDvWnZqF
-          response:
-            result:
-              isValid: false
-              proposal: invalid
-              data:
-                user: invalidUser
-                domain: foxentry.com
-                email: invalidUser@foxentry.com
-              flags:
-                isCatchAllServer: false
-                isDisposableEmailAddress: false
-                isFreemail: false
-              errors:
-                - group: VALUE
-                  type: INVALID
-                  subtype: null
-                  severity: critical
-                  relatedTo:
-                    - email
-                  description: Value is not valid.
-            resultCorrected: null
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/email/validate/EmailValidateInvalidExample.yaml
+
       invalidWithCorrection:
         value:
-          status: 200
-          request:
-            endpoint: email/validate
-            code: ylkQt7VK29Q6cg64UKpJvARmx4Dflz
-          response:
-            result:
-              isValid: false
-              proposal: invalidWithCorrection
-              data:
-                user: info
-                domain: foxentry,com
-                email: info@foxentry,com
-              flags: {}
-              errors:
-                - group: SYNTAX
-                  type: VALUE_PART
-                  subtype: DOMAIN
-                  severity: critical
-                  relatedTo:
-                    - email
-                  description: The domain contains invalid syntax.
-            resultCorrected:
-              isValid: true
-              data:
-                user: info
-                domain: foxentry.com
-                email: info@foxentry.com
-              flags: {}
-              errors: []
-              fixes:
-                - group: SYNTAX
-                  type: VALUE_PART_CHANGED
-                  subtype: CHARACTERS
-                  data:
-                    typeFrom: email
-                    type: email
-                    valueFrom: info@foxentry,com
-                    value: info@foxentry.com
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/email/validate/EmailValidateInvalidWithCorrectionExample.yaml
+
       invalidWithPartialCorrection:
         value:
-          status: 200
-          request:
-            endpoint: email/validate
-            code: 678dF7zRTR4DMWXNyr1yI7diGy9rh6
-          response:
-            result:
-              isValid: false
-              proposal: invalidWithPartialCorrection
-              data:
-                user: infogmail.com
-                domain: null
-                email: infogmail.com
-              flags: {}
-              errors:
-                - group: SYNTAX
-                  type: VALUE_PART_MISSING
-                  subtype: AT_SIGN
-                  severity: critical
-                  relatedTo:
-                    - email
-                  description: Value does not contain '@' sign.
-            resultCorrected:
-              isValid: false
-              data:
-                user: info
-                domain: gmail.com
-                email: info@gmail.com
-              flags:
-                isCatchAllServer: false
-                isDisposableEmailAddress: false
-                isFreemail: true
-              errors:
-                - group: VALUE
-                  type: INVALID
-                  subtype: null
-                  severity: critical
-                  relatedTo:
-                    - email
-              fixes:
-                - group: SYNTAX
-                  type: VALUE_PART_ADDED
-                  subtype: AT_SIGN
-                  data:
-                    typeFrom: email
-                    type: email
-                    valueFrom: infogmail.com
-                    value: info@gmail.com
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/email/validate/EmailValidateInvalidWithPartialCorrectionExample.yaml
+
       disallowedDisposable:
         value:
-          status: 200
-          request:
-            endpoint: email/validate
-            code: mHvThABr04jaEAPMMpZeBZqIfQ7luB
-          response:
-            result:
-              isValid: false
-              proposal: invalid
-              data:
-                user: rasini3451
-                domain: naymedia.com
-                email: rasini3451@naymedia.com
-              flags:
-                isCatchAllServer: false
-                isDisposableEmailAddress: true
-                isFreemail: false
-              errors:
-                - group: VALUE
-                  type: NOT_ALLOWED
-                  subtype: DISPOSABLE
-                  severity: critical
-                  relatedTo:
-                    - email
-                  description: Disposable emails are not allowed.
-            resultCorrected: null
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/email/validate/EmailValidateDisallowedDisposableExample.yaml
+
       disallowedFreemails:
         value:
-          status: 200
-          request:
-            endpoint: email/validate
-            code: ooUyXo4UODJRblSE4wZ7sLBEzYOCzX
-          response:
-            result:
-              isValid: false
-              proposal: invalid
-              data:
-                user: info
-                domain: gmail.com
-                email: info@gmail.com
-              flags:
-                isCatchAllServer: false
-                isDisposableEmailAddress: false
-                isFreemail: true
-              errors:
-                - group: VALUE
-                  type: NOT_ALLOWED
-                  subtype: FREEMAIL
-                  severity: critical
-                  relatedTo:
-                    - email
-                  description: Freemails are not allowed.
-            resultCorrected: null
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/email/validate/EmailValidateDisallowedFreemailsExample.yaml

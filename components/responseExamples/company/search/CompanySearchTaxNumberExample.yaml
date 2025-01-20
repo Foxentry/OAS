@@ -1,0 +1,477 @@
+status: 200
+request:
+  endpoint: company/search
+  code: d9dd07c7-1e2b-4561-8075-168e2a46ef0b
+  query:
+    type: taxNumber
+    value: '2120884'
+  options:
+    dataSource:
+      - CZ
+      - SK
+      - PL
+    dataScope: basic
+    includeTerminatedSubjects: false
+    filterMode: limit
+    filterAcceptAlternatives: true
+    filterAcceptFormat: true
+    filterExactMatch: true
+    resultsLimit: 10
+    countryFormat: alpha2
+    cityFormat: basic
+    zipFormat: false
+    legalFormType: any
+response:
+  resultsCount: 10
+  results:
+    - data:
+        uuid: 76aca24f-f823-45bb-a866-842acd17b26d
+        country: SK
+        name: TRESPON, s.r.o.
+        registrationNumber: '52082865'
+        taxNumber: '2120884315'
+        vatNumber: SK2120884315
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: ae6a2bd8-9154-4d5f-8c70-0fcd33eb321e
+              external: null
+            street: R.Dilonga
+            number:
+              part1: '129'
+              part1Number: '129'
+              part1Letter: null
+              part2: 6B
+              part2Number: '6'
+              part2Letter: B
+              full: 129/6B
+            streetWithNumber: R.Dilonga 129/6B
+            city: Hlohovec
+            zip: '92001'
+            full: R.Dilonga 129/6B, 92001 Hlohovec
+        addressOfficial:
+          data:
+            country: SK
+            street: R. Dilonga
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 129/6B
+            streetWithNumber: R. Dilonga 129/6B
+            city: Hlohovec
+            zip: '92001'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 451e40b7-6d07-43f0-87f2-d9b4ea9bd139
+        country: SK
+        name: KG bet, s. r. o.
+        registrationNumber: '52078892'
+        taxNumber: '2120884084'
+        vatNumber: SK2120884084
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: 0fb2edf4-1f8a-40b6-b4c6-1efb1a452815
+              external: null
+            street: M. R. Štefánika
+            number:
+              part1: '1840'
+              part1Number: '1840'
+              part1Letter: null
+              part2: '20'
+              part2Number: '20'
+              part2Letter: null
+              full: 1840/20
+            streetWithNumber: M. R. Štefánika 1840/20
+            city: Dolný Kubín
+            zip: '02601'
+            full: M. R. Štefánika 1840/20, 02601 Dolný Kubín
+        addressOfficial:
+          data:
+            country: SK
+            street: M. R. Štefánika
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 1840/20
+            streetWithNumber: M. R. Štefánika 1840/20
+            city: Dolný Kubín
+            zip: '02601'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: d5f5494b-090e-4986-939e-eb2ddfd57d8b
+        country: SK
+        name: AKC - STUDIO s.r.o.
+        registrationNumber: '52071103'
+        taxNumber: '2120884183'
+        vatNumber: SK2120884183
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: b1af2a3c-4ab4-42bd-89ab-0af72bde3ae8
+              external: null
+            street: Hájske
+            number:
+              part1: '95'
+              part1Number: '95'
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '95'
+            streetWithNumber: Hájske 95
+            city: Hájske
+            zip: '95133'
+            full: Hájske 95, 95133 Hájske
+        addressOfficial:
+          data:
+            country: SK
+            street: null
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '95'
+            streetWithNumber: '95'
+            city: Hájske
+            zip: '95133'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 4f985edc-47da-49da-b41d-f14f4f89cf34
+        country: SK
+        name: BISTRANS s.r.o.
+        registrationNumber: '52029956'
+        taxNumber: '2120884865'
+        vatNumber: SK2120884865
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: 79454954-7212-4263-9dfd-3f7fdf163677
+              external: null
+            street: Lichardova
+            number:
+              part1: '152'
+              part1Number: '152'
+              part1Letter: null
+              part2: '21'
+              part2Number: '21'
+              part2Letter: null
+              full: 152/21
+            streetWithNumber: Lichardova 152/21
+            city: Košice
+            zip: '04001'
+            full: Lichardova 152/21, 04001 Košice
+        addressOfficial:
+          data:
+            country: SK
+            street: Lichardova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 152/21
+            streetWithNumber: Lichardova 152/21
+            city: Košice - Juh
+            zip: '04001'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 7b8db674-4b26-4622-9061-80874414758a
+        country: SK
+        name: Staviválubela s.r.o.
+        registrationNumber: '52079716'
+        taxNumber: '2120884161'
+        vatNumber: SK2120884161
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: 3a8b143b-a3e7-4d26-af80-e55a0701a7bf
+              external: null
+            street: Ľubeľa
+            number:
+              part1: '419'
+              part1Number: '419'
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '419'
+            streetWithNumber: Ľubeľa 419
+            city: Ľubeľa
+            zip: '03214'
+            full: Ľubeľa 419, 03214 Ľubeľa
+        addressOfficial:
+          data:
+            country: SK
+            street: Ľubeľa
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '419'
+            streetWithNumber: Ľubeľa 419
+            city: Ľubeľa
+            zip: '03214'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 05e5128d-4399-4afd-aa24-8e1ba8fa2731
+        country: SK
+        name: MEDICARE CENTRUM s.r.o.
+        registrationNumber: '52078639'
+        taxNumber: '2120884942'
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: f6962c5c-ab85-4ebc-b607-0ee022247be2
+              external: null
+            street: Strečnianska
+            number:
+              part1: '2975'
+              part1Number: '2975'
+              part1Letter: null
+              part2: '13'
+              part2Number: '13'
+              part2Letter: null
+              full: 2975/13
+            streetWithNumber: Strečnianska 2975/13
+            city: Bratislava
+            zip: '85105'
+            full: Strečnianska 2975/13, 85105 Bratislava
+        addressOfficial:
+          data:
+            country: SK
+            street: Strečnianska
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '13'
+            streetWithNumber: Strečnianska 13
+            city: Bratislava - Petržalka
+            zip: '85105'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 9f4abeb0-456c-4dce-9901-09e08ff016d0
+        country: SK
+        name: by Ell s. r. o.
+        registrationNumber: '52063666'
+        taxNumber: '2120884425'
+        vatNumber: SK2120884425
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: 446e33b3-5fe3-43f5-8a5c-21329c1c1ede
+              external: null
+            street: Karpatské námestie
+            number:
+              part1: '7770'
+              part1Number: '7770'
+              part1Letter: null
+              part2: 10A
+              part2Number: '10'
+              part2Letter: A
+              full: 7770/10A
+            streetWithNumber: Karpatské námestie 7770/10A
+            city: Bratislava
+            zip: '83106'
+            full: Karpatské námestie 7770/10A, 83106 Bratislava
+        addressOfficial:
+          data:
+            country: SK
+            street: Karpatské námestie
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 10/A
+            streetWithNumber: Karpatské námestie 10/A
+            city: Bratislava - Rača
+            zip: '83106'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 5598e02c-2f31-43f6-8d30-482f90129797
+        country: SK
+        name: KUKUZA s.r.o.
+        registrationNumber: '52089151'
+        taxNumber: '2120884964'
+        vatNumber: SK2120884964
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: 4562fd83-3f85-41f2-96a6-10456127d008
+              external: null
+            street: Zuzany Chalupovej
+            number:
+              part1: '3981'
+              part1Number: '3981'
+              part1Letter: null
+              part2: '8'
+              part2Number: '8'
+              part2Letter: null
+              full: 3981/8
+            streetWithNumber: Zuzany Chalupovej 3981/8
+            city: Bratislava
+            zip: '85107'
+            full: Zuzany Chalupovej 3981/8, 85107 Bratislava
+        addressOfficial:
+          data:
+            country: SK
+            street: Zuzany Chalupovej
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 3981/8
+            streetWithNumber: Zuzany Chalupovej 3981/8
+            city: Bratislava - Petržalka
+            zip: '85107'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: ac143b30-e995-4b78-84d6-9b7b037cc403
+        country: SK
+        name: ConIS, s. r. o.
+        registrationNumber: '52004414'
+        taxNumber: '2120884733'
+        vatNumber: SK2120884733
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: 46d9b3e7-0563-4a51-be68-b08682140987
+              external: null
+            street: Jurská
+            number:
+              part1: '13770'
+              part1Number: '13770'
+              part1Letter: null
+              part2: '25'
+              part2Number: '25'
+              part2Letter: null
+              full: 13770/25
+            streetWithNumber: Jurská 13770/25
+            city: Bratislava
+            zip: '83102'
+            full: Jurská 13770/25, 83102 Bratislava
+        addressOfficial:
+          data:
+            country: SK
+            street: Jurská
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 13770/25
+            streetWithNumber: Jurská 13770/25
+            city: Bratislava - Nové Mesto
+            zip: '83102'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 2fbf787e-e00b-4d8c-9db0-04a0ea2f1ca4
+        country: SK
+        name: PATU s.r.o.
+        registrationNumber: '52055850'
+        taxNumber: '2120884348'
+        vatNumber: SK2120884348
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: 1db9b6d7-4fb7-44b2-b7f3-6a744ec607ff
+              external: null
+            street: Němcovej
+            number:
+              part1: '34'
+              part1Number: '34'
+              part1Letter: null
+              part2: '8'
+              part2Number: '8'
+              part2Letter: null
+              full: 34/8
+            streetWithNumber: Němcovej 34/8
+            city: Košice
+            zip: '04001'
+            full: Němcovej 34/8, 04001 Košice
+        addressOfficial:
+          data:
+            country: SK
+            street: Nemcovej
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 34/8
+            streetWithNumber: Nemcovej 34/8
+            city: Košice - Sever
+            zip: '04001'
+            full: null
+        legalForm:
+          type: juridical
+errors: []

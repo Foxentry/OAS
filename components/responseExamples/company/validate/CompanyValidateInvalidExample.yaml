@@ -1,0 +1,48 @@
+status: 200
+request:
+  endpoint: company/validate
+  code: c21b1bff-7986-403c-afb6-93e7ab7d8f2c
+  query:
+    name: AVANTRO s.r.o.
+    registrationNumber: '25547'
+    country: CZ
+  options:
+    dataSource:
+      - CZ
+      - SK
+      - PL
+    dataScope: basic
+    includeTerminatedSubjects: false
+    filterMode: limit
+    resultsLimit: 10
+    countryFormat: alpha2
+    cityFormat: basic
+    zipFormat: false
+    legalFormType: any
+response:
+  result:
+    isValid: false
+    proposal: invalid
+    data:
+      uuid: null
+      country: CZ
+      name: AVANTRO s.r.o.
+      registrationNumber: '25547'
+      taxNumber: null
+      vatNumber: null
+      vatNumberSpecial: null
+      address: null
+      addressOfficial: null
+      legalForm:
+        type: null
+    errors:
+      - group: VALUE
+        type: INVALID
+        subtype: null
+        severity: critical
+        relatedTo:
+          - registrationNumber
+        description: Value is not valid.
+  resultCorrected: null
+  suggestions: []
+errors: []

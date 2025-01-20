@@ -1,0 +1,65 @@
+status: 200
+request:
+  endpoint: company/get
+  code: d7250f53-ab89-4481-be6e-27b7ce3ee995
+  query:
+    registrationNumber: '04997476'
+    country: CZ
+  options:
+    dataSource:
+      - CZ
+      - SK
+      - PL
+    dataScope: basic
+    includeTerminatedSubjects: false
+    countryFormat: alpha2
+    cityFormat: basic
+    zipFormat: false
+response:
+  results:
+    - data:
+        uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
+        country: CZ
+        name: AVANTRO s.r.o.
+        registrationNumber: '04997476'
+        taxNumber: null
+        vatNumber: CZ04997476
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+              external: '22349995'
+            street: Thámova
+            number:
+              part1: '137'
+              part1Number: '137'
+              part1Letter: null
+              part2: '16'
+              part2Number: '16'
+              part2Letter: null
+              full: 137/16
+            streetWithNumber: Thámova 137/16
+            city: Praha 8
+            zip: '18600'
+            full: Thámova 137/16, 18600 Praha 8
+        addressOfficial:
+          data:
+            country: CZ
+            street: Thámova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 137/16
+            streetWithNumber: Thámova 137/16
+            city: Praha
+            zip: '18600'
+            full: Thámova 137/16, Karlín, 18600 Praha 8
+        legalForm:
+          type: juridical
+errors: []

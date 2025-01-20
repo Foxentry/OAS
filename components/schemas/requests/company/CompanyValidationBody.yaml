@@ -33,7 +33,7 @@ properties:
         example: SK2120884337
   options:
     allOf:
-      - $ref: ./CompanyOptions.yaml
+      - $ref: ./CompanyValidationOptions.yaml
     properties:
       resultsLimit:
         type: integer

@@ -65,14 +65,3 @@ properties:
       - internationalShortened
     default: alpha2
     example: alpha2
-  legalFormType:
-    description: 'This option filters results by the legal form type.'
-    type:
-      - string
-      - "null"
-    enum:
-      - juridical
-      - physical
-      - any
-    default: any
-    example: any

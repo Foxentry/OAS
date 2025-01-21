@@ -162,6 +162,14 @@ properties:
       legalForm:
         type: object
         properties:
+          type:
+            description: 'Legal form type'
+            enum:
+              - juridical
+              - physical
+              - null
+            default: juridical
+            example: juridical
           code:
             type:
               - string
@@ -366,11 +374,15 @@ properties:
             type: object
             properties:
               amount:
-                type: string
+                type:
+                  - string
+                  - "null"
                 description: Amount of capital.
                 example: '200000'
               currency:
-                type: string
+                type:
+                  - string
+                  - "null"
                 description: Currency of capital.
                 example: CZK
           shareholders:
@@ -564,5 +576,6 @@ properties:
                   type: boolean
                   description: Is part of group registration.
                   example: false
+
 required:
   - data

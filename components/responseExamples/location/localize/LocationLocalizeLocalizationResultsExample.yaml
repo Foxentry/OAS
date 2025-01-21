@@ -1,0 +1,118 @@
+status: 200
+request:
+  endpoint: location/localize
+  code: 84400ebb-ebeb-47e1-9cea-6225e3637327
+  query:
+    lat: 50.0919999
+    lon: 14.4527403
+  options:
+    dataSource:
+      - CZ
+      - SK
+      - PL
+    dataScope: basic
+    resultsLimit: 10
+    radius: 50
+    acceptNearest: false
+    cityFormat: basic
+    zipFormat: false
+    countryFormat: alpha2
+response:
+  resultsCount: 5
+  results:
+    - data:
+        country: CZ
+        ids:
+          internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+          external: '22349995'
+        street: Thámova
+        number:
+          type: č.p.
+          part1: '137'
+          part1Number: '137'
+          part1Letter: null
+          part2: '16'
+          part2Number: '16'
+          part2Letter: null
+          full: 137/16
+        streetWithNumber: Thámova 137/16
+        city: Praha 8
+        zip: '18600'
+        full: Thámova 137/16, 18600 Praha 8
+    - data:
+        country: CZ
+        ids:
+          internal: 97485ce7-ae19-45b4-8fc6-a3d19406e1b8
+          external: '22350489'
+        street: Thámova
+        number:
+          type: č.p.
+          part1: '183'
+          part1Number: '183'
+          part1Letter: null
+          part2: '11'
+          part2Number: '11'
+          part2Letter: null
+          full: 183/11
+        streetWithNumber: Thámova 183/11
+        city: Praha 8
+        zip: '18600'
+        full: Thámova 183/11, 18600 Praha 8
+    - data:
+        country: CZ
+        ids:
+          internal: 078253ba-212b-4767-8176-8eb85f7db3b1
+          external: '22349987'
+        street: Thámova
+        number:
+          type: č.p.
+          part1: '136'
+          part1Number: '136'
+          part1Letter: null
+          part2: '8'
+          part2Number: '8'
+          part2Letter: null
+          full: 136/8
+        streetWithNumber: Thámova 136/8
+        city: Praha 8
+        zip: '18600'
+        full: Thámova 136/8, 18600 Praha 8
+    - data:
+        country: CZ
+        ids:
+          internal: 2990893e-c14d-4149-b937-54038c4ebb0f
+          external: '22350918'
+        street: Thámova
+        number:
+          type: č.p.
+          part1: '221'
+          part1Number: '221'
+          part1Letter: null
+          part2: '9'
+          part2Number: '9'
+          part2Letter: null
+          full: 221/9
+        streetWithNumber: Thámova 221/9
+        city: Praha 8
+        zip: '18600'
+        full: Thámova 221/9, 18600 Praha 8
+    - data:
+        country: CZ
+        ids:
+          internal: 6e2bb229-d20f-4082-b437-bce6b5d7fe5b
+          external: '22350284'
+        street: Thámova
+        number:
+          type: č.p.
+          part1: '166'
+          part1Number: '166'
+          part1Letter: null
+          part2: '18'
+          part2Number: '18'
+          part2Letter: null
+          full: 166/18
+        streetWithNumber: Thámova 166/18
+        city: Praha 8
+        zip: '18600'
+        full: Thámova 166/18, 18600 Praha 8
+errors: []

@@ -1,0 +1,21 @@
+{
+  "request": {
+    "query": {
+      "lat": 50.0919999,
+      "lon": 14.4527403
+    },
+    "options": {
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "zipFormat": false,
+      "countryFormat": "alpha2",
+      "cityFormat": "basic",
+      "radius": 50,
+      "acceptNearest": false
+    }
+  }
+}

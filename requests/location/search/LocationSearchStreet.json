@@ -1,0 +1,29 @@
+{
+  "request": {
+    "query": {
+      "type": "street",
+      "filter": {
+        "city": "Praha",
+        "country": "CZ"
+      },
+      "value": "tha"
+    },
+    "options": {
+      "resultsLimit": 3,
+      "allowPartialResults": true,
+      "filterMode": "limit",
+      "filterAcceptFormat": true,
+      "filterAcceptAlternatives": true,
+      "filterExactMatch": true,
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "zipFormat": false,
+      "countryFormat": "alpha2",
+      "cityFormat": "basic"
+    }
+  }
+}

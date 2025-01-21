@@ -1,0 +1,26 @@
+{
+  "request": {
+    "query": {
+      "type": "taxNumber",
+      "value": "2120884"
+    },
+    "options": {
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "includeTerminatedSubjects": false,
+      "zipFormat": false,
+      "cityFormat": "basic",
+      "countryFormat": "alpha2",
+      "legalFormType": "any",
+      "resultsLimit": 10,
+      "filterMode": "limit",
+      "filterAcceptFormat": true,
+      "filterAcceptAlternatives": true,
+      "filterExactMatch": true
+    }
+  }
+}

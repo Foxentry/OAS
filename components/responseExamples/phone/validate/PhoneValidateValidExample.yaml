@@ -1,0 +1,34 @@
+status: 200
+request:
+  endpoint: phone/validate
+  code: db3c5b24-1b8d-4912-aa85-7f73603f666b
+  query:
+    numberWithPrefix: '+420607123456'
+  options:
+    validationType: basic
+    allowedPrefixes: []
+    preferredPrefixes: []
+    defaultPrefix: null
+    formatNumber: false
+response:
+  result:
+    isValid: true
+    proposal: valid
+    data:
+      country:
+        code: CZ
+        prefix: '+420'
+      prefix: '+420'
+      number: '607123456'
+      numberWithPrefix: '+420607123456'
+      carrier:
+        type: mobile
+      format:
+        national: '607123456'
+        nationalFormatted: 607 123 456
+        international: '+420607123456'
+        internationalFormatted: +420 607 123 456
+    errors: []
+  resultCorrected: null
+  suggestions: []
+errors: []

@@ -1,0 +1,12 @@
+{
+  "request": {
+    "query": {
+      "email": "info@gmali.com"
+    },
+    "options": {
+      "validationType": "extended",
+      "acceptDisposableEmails": true,
+      "acceptFreemails": true
+    }
+  }
+}

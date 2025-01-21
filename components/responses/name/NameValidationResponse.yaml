@@ -47,208 +47,24 @@ content:
     examples:
       valid:
         value:
-          status: 200
-          request:
-            endpoint: name/validate
-            code: qk1ERgQ7HtijUfOFAo00PHXxy6L72I
-          response:
-            result:
-              isValid: true
-              proposal: valid
-              data:
-                name: Pavel
-                surname: null
-                nameSurname: null
-                context: []
-                degreesBefore: []
-                degreesAfter: []
-              errors: []
-            resultCorrected: null
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/name/validate/NameValidateValidExample.yaml
+
       invalid:
         value:
-          status: 200
-          request:
-            endpoint: name/validate
-            code: NbnvwsCLTJzukWtytqkjJ1fOTOksKp
-          response:
-            result:
-              isValid: false
-              proposal: invalid
-              data:
-                name: Paeeewas
-                surname: null
-                nameSurname: null
-                context: []
-                degreesBefore: []
-                degreesAfter: []
-              errors:
-                - group: VALUE
-                  type: INVALID
-                  subtype: NAME
-                  description: Name has not been found in our database.
-                  severity: warning
-                  relatedTo:
-                    - name
-            resultCorrected: null
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/name/validate/NameValidateInvalidExample.yaml
+
       invalidWithCorrection:
         value:
-          status: 200
-          request:
-            endpoint: name/validate
-            code: RAE4EeYFdCOjd8de0lLgNfVzw2GZYU
-          response:
-            result:
-              isValid: false
-              proposal: invalidWithCorrection
-              data:
-                name: Palve
-                surname: null
-                nameSurname: null
-                context: []
-                degreesBefore: []
-                degreesAfter: []
-              errors:
-                - group: VALUE
-                  type: INVALID
-                  subtype: NAME
-                  description: Name has not been found in our database.
-                  severity: warning
-                  relatedTo:
-                    - name
-            resultCorrected:
-              isValid: true
-              data:
-                name: Jalée
-                surname: null
-                nameSurname: null
-                context: []
-                degreesBefore: []
-                degreesAfter: []
-              errors: []
-              fixes:
-                - group: VALUE
-                  type: CHANGED
-                  subtype: TYPO
-                  data:
-                    typeFrom: name
-                    type: name
-                    valueFrom: Palve
-                    value: Jalée
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/name/validate/NameValidateInvalidWithCorrectionExample.yaml
+
       validWithSuggestion:
         value:
-          status: 200
-          request:
-            endpoint: name/validate
-            code: rBIJyrQo80YV56WFDG70Vo8rsyQe1s
-          response:
-            result:
-              isValid: true
-              proposal: validWithSuggestion
-              data:
-                name: Pawel
-                surname: null
-                nameSurname: null
-                context: []
-                degreesBefore: []
-                degreesAfter: []
-              errors: []
-            resultCorrected: null
-            suggestions:
-              - isValid: true
-                data:
-                  name: Pavel
-                  surname: null
-                  nameSurname: null
-                  context: []
-                  degreesBefore: []
-                  degreesAfter: []
-                errors: []
-                fixes:
-                  - group: VALUE
-                    type: CHANGED
-                    subtype: TYPO
-                    data:
-                      typeFrom: name
-                      type: name
-                      valueFrom: Pawel
-                      value: Pavel
-          errors: []
+          $ref: ./../../responseExamples/name/validate/NameValidateValidWithSuggestionExample.yaml
+
       validNameSurnameFullDataScope:
         value:
-          status: 200
-          request:
-            endpoint: name/validate
-            code: BPORco3Jh8iDiwF7dAT3IpoWU9Xtwi
-          response:
-            result:
-              isValid: true
-              proposal: valid
-              data:
-                nameSurname: Pavel Novák
-                name: Pavel
-                surname: Novák
-                context: []
-                degreesBefore: []
-                degreesAfter: []
-              details:
-                - type: name
-                  value: Pavel
-                  gender: 1
-                  vocative: Pavle
-                  nameDays:
-                    - country: CZ
-                      month: 6
-                      day: 29
-                - type: surname
-                  value: Novák
-                  gender: 1
-                  vocative: Nováku
-                  nameDays: null
-                - type: nameSurname
-                  value: Pavel Novák
-                  gender: 1
-                  vocative: Pavle Nováku
-                  nameDays:
-                    - country: CZ
-                      month: 6
-                      day: 29
-              errors: []
-            resultCorrected: null
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/name/validate/NameValidateValidNameSurnameFullDataScopeExample.yaml
+
       fullDataScope:
         value:
-          status: 200
-          request:
-            endpoint: name/validate
-            code: 03NOJyxQqT5LWWIevUehlbNlVlBzIX
-          response:
-            result:
-              isValid: true
-              proposal: valid
-              data:
-                name: Pavel
-                surname: null
-                nameSurname: null
-                context: []
-                degreesBefore: []
-                degreesAfter: []
-              details:
-                - type: name
-                  value: Pavel
-                  gender: 1
-                  vocative: Pavle
-                  nameDays:
-                    - country: CZ
-                      month: 6
-                      day: 29
-              errors: []
-            resultCorrected: null
-            suggestions: []
-          errors: []
+          $ref: ./../../responseExamples/name/validate/NameValidateValidFullDataScopeExample.yaml

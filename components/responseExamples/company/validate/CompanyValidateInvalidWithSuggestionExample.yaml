@@ -1,0 +1,439 @@
+status: 200
+request:
+  endpoint: company/validate
+  code: 43f613f8-4e3c-4b4b-902f-eca4eb93e057
+  query:
+    registrationNumber: '0499747'
+    country: CZ
+  options:
+    dataSource:
+      - CZ
+      - SK
+      - PL
+    dataScope: basic
+    includeTerminatedSubjects: false
+    filterMode: limit
+    resultsLimit: 10
+    countryFormat: alpha2
+    cityFormat: basic
+    zipFormat: false
+    legalFormType: any
+response:
+  result:
+    isValid: false
+    proposal: invalidWithSuggestion
+    data:
+      uuid: null
+      country: CZ
+      name: null
+      registrationNumber: '0499747'
+      taxNumber: null
+      vatNumber: null
+      vatNumberSpecial: null
+      address: null
+      addressOfficial: null
+      legalForm:
+        type: null
+    errors:
+      - group: VALUE
+        type: INVALID
+        subtype: null
+        severity: critical
+        relatedTo:
+          - registrationNumber
+        description: Value is not valid.
+  resultCorrected: null
+  suggestions:
+    - isValid: true
+      data:
+        uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
+        country: CZ
+        name: AVANTRO s.r.o.
+        registrationNumber: '04997476'
+        taxNumber: null
+        vatNumber: CZ04997476
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+              external: '22349995'
+            street: Thámova
+            number:
+              part1: '137'
+              part1Number: '137'
+              part1Letter: null
+              part2: '16'
+              part2Number: '16'
+              part2Letter: null
+              full: 137/16
+            streetWithNumber: Thámova 137/16
+            city: Praha 8
+            zip: '18600'
+            full: Thámova 137/16, 18600 Praha 8
+        addressOfficial:
+          data:
+            country: CZ
+            street: Thámova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 137/16
+            streetWithNumber: Thámova 137/16
+            city: Praha
+            zip: '18600'
+            full: Thámova 137/16, Karlín, 18600 Praha 8
+        legalForm:
+          type: juridical
+      errors: []
+      fixes:
+        - group: VALUE
+          type: CHANGED
+          subtype: TYPO
+          data:
+            typeFrom: registrationNumber
+            type: registrationNumber
+            valueFrom: '0499747'
+            value: '04997476'
+    - isValid: true
+      data:
+        uuid: c87e2dda-de00-452b-bd8c-595538f6d93e
+        country: CZ
+        name: Jaroslav Ondrúšek
+        registrationNumber: '04799747'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 701a876d-d3e5-42b8-8be3-05559ccf7b6b
+              external: '2833816'
+            street: Rýmařovská
+            number:
+              part1: '1491'
+              part1Number: '1491'
+              part1Letter: null
+              part2: '31'
+              part2Number: '31'
+              part2Letter: null
+              full: 1491/31
+            streetWithNumber: Rýmařovská 1491/31
+            city: Bruntál
+            zip: '79201'
+            full: Rýmařovská 1491/31, 79201 Bruntál
+        addressOfficial:
+          data:
+            country: CZ
+            street: Rýmařovská
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 1491/31
+            streetWithNumber: Rýmařovská 1491/31
+            city: Bruntál
+            zip: '79201'
+            full: Rýmařovská 1491/31, 79201 Bruntál
+        legalForm:
+          type: physical
+      errors: []
+      fixes:
+        - group: VALUE
+          type: CHANGED
+          subtype: TYPO
+          data:
+            typeFrom: registrationNumber
+            type: registrationNumber
+            valueFrom: '0499747'
+            value: '04799747'
+    - isValid: true
+      data:
+        uuid: 9433bf10-3ba4-448d-bd99-4bb11e8600ff
+        country: CZ
+        name: Martina Suková
+        registrationNumber: '04909747'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 9fa792e7-c439-4201-b2ae-86094c9c035f
+              external: '16354486'
+            street: Křížkovského
+            number:
+              part1: '1656'
+              part1Number: '1656'
+              part1Letter: null
+              part2: '8'
+              part2Number: '8'
+              part2Letter: null
+              full: 1656/8
+            streetWithNumber: Křížkovského 1656/8
+            city: Šternberk
+            zip: '78501'
+            full: Křížkovského 1656/8, 78501 Šternberk
+        addressOfficial:
+          data:
+            country: CZ
+            street: Křížkovského
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 1656/8
+            streetWithNumber: Křížkovského 1656/8
+            city: Šternberk
+            zip: '78501'
+            full: Křížkovského 1656/8, 78501 Šternberk
+        legalForm:
+          type: physical
+      errors: []
+      fixes:
+        - group: VALUE
+          type: CHANGED
+          subtype: TYPO
+          data:
+            typeFrom: registrationNumber
+            type: registrationNumber
+            valueFrom: '0499747'
+            value: '04909747'
+    - isValid: true
+      data:
+        uuid: 131effcb-e6a6-4a39-ad9d-c8087524857a
+        country: CZ
+        name: BE SOCKS s.r.o.
+        registrationNumber: '05499747'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 0e0c7033-c83d-4b64-bbaa-f69fed29cec5
+              external: '22659251'
+            street: Krymská
+            number:
+              part1: '439'
+              part1Number: '439'
+              part1Letter: null
+              part2: '24'
+              part2Number: '24'
+              part2Letter: null
+              full: 439/24
+            streetWithNumber: Krymská 439/24
+            city: Praha 10
+            zip: '10100'
+            full: Krymská 439/24, 10100 Praha 10
+        addressOfficial:
+          data:
+            country: CZ
+            street: Krymská
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 439/24
+            streetWithNumber: Krymská 439/24
+            city: Praha
+            zip: '10100'
+            full: Krymská 439/24, Vršovice, 10100 Praha 10
+        legalForm:
+          type: juridical
+      errors: []
+      fixes:
+        - group: VALUE
+          type: CHANGED
+          subtype: TYPO
+          data:
+            typeFrom: registrationNumber
+            type: registrationNumber
+            valueFrom: '0499747'
+            value: '05499747'
+    - isValid: true
+      data:
+        uuid: a195f355-3b0b-422b-b5d0-11419d719cc6
+        country: CZ
+        name: Media 8 s.r.o.
+        registrationNumber: '04996747'
+        taxNumber: null
+        vatNumber: CZ04996747
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: a15fb931-0572-48a4-a592-1167c44dc406
+              external: '22623400'
+            street: Michelangelova
+            number:
+              part1: '1995'
+              part1Number: '1995'
+              part1Letter: null
+              part2: '16'
+              part2Number: '16'
+              part2Letter: null
+              full: 1995/16
+            streetWithNumber: Michelangelova 1995/16
+            city: Praha 10
+            zip: '10000'
+            full: Michelangelova 1995/16, 10000 Praha 10
+        addressOfficial:
+          data:
+            country: CZ
+            street: Michelangelova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 1995/16
+            streetWithNumber: Michelangelova 1995/16
+            city: Praha
+            zip: '10000'
+            full: Michelangelova 1995/16, Strašnice, 10000 Praha 10
+        legalForm:
+          type: juridical
+      errors: []
+      fixes:
+        - group: VALUE
+          type: CHANGED
+          subtype: TYPO
+          data:
+            typeFrom: registrationNumber
+            type: registrationNumber
+            valueFrom: '0499747'
+            value: '04996747'
+    - isValid: true
+      data:
+        uuid: f469a719-bb95-41e2-9285-6da4d5143750
+        country: CZ
+        name: Tomáš Minarovič
+        registrationNumber: '04997247'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 95a25831-6615-4b07-9ef0-a7fd8cb0c21e
+              external: '25528807'
+            street: Zápy
+            number:
+              part1: '253'
+              part1Number: '253'
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '253'
+            streetWithNumber: Zápy 253
+            city: Zápy
+            zip: '25061'
+            full: Zápy 253, 25061 Zápy
+        addressOfficial:
+          data:
+            country: CZ
+            street: Zápy
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '253'
+            streetWithNumber: Zápy 253
+            city: Zápy
+            zip: '25061'
+            full: č.p. 253, 25061 Zápy
+        legalForm:
+          type: physical
+      errors: []
+      fixes:
+        - group: VALUE
+          type: CHANGED
+          subtype: TYPO
+          data:
+            typeFrom: registrationNumber
+            type: registrationNumber
+            valueFrom: '0499747'
+            value: '04997247'
+    - isValid: true
+      data:
+        uuid: c02871f0-de95-45a0-9279-cd1d9399a195
+        country: CZ
+        name: Quang Anh Kieu
+        registrationNumber: '04997417'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 4c66b59f-cdc1-4c8f-b0f8-6294e2fbd6ac
+              external: '24537110'
+            street: Husova
+            number:
+              part1: '786'
+              part1Number: '786'
+              part1Letter: null
+              part2: '19'
+              part2Number: '19'
+              part2Letter: null
+              full: 786/19
+            streetWithNumber: Husova 786/19
+            city: Plzeň
+            zip: '30100'
+            full: Husova 786/19, 30100 Plzeň
+        addressOfficial:
+          data:
+            country: CZ
+            street: Husova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 786/19
+            streetWithNumber: Husova 786/19
+            city: Plzeň
+            zip: '30100'
+            full: Husova 786/19, Jižní Předměstí, 30100 Plzeň
+        legalForm:
+          type: physical
+      errors: []
+      fixes:
+        - group: VALUE
+          type: CHANGED
+          subtype: TYPO
+          data:
+            typeFrom: registrationNumber
+            type: registrationNumber
+            valueFrom: '0499747'
+            value: '04997417'
+errors: []

@@ -1,0 +1,20 @@
+{
+  "request": {
+    "query": {
+      "registrationNumber": "04997476",
+      "country": "CZ"
+    },
+    "options": {
+      "dataScope": "full",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "includeTerminatedSubjects": false,
+      "zipFormat": false,
+      "cityFormat": "basic",
+      "countryFormat": "alpha2"
+    }
+  }
+}

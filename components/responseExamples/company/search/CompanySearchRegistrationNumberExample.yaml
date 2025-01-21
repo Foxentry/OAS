@@ -1,0 +1,477 @@
+status: 200
+request:
+  endpoint: company/search
+  code: ac9399b6-6321-4449-af01-1cc27224b165
+  query:
+    type: registrationNumber
+    value: '049974'
+  options:
+    dataSource:
+      - CZ
+      - SK
+      - PL
+    dataScope: basic
+    includeTerminatedSubjects: false
+    filterMode: limit
+    filterAcceptAlternatives: true
+    filterAcceptFormat: true
+    filterExactMatch: true
+    resultsLimit: 10
+    countryFormat: alpha2
+    cityFormat: basic
+    zipFormat: false
+    legalFormType: any
+response:
+  resultsCount: 16
+  results:
+    - data:
+        uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
+        country: CZ
+        name: AVANTRO s.r.o.
+        registrationNumber: '04997476'
+        taxNumber: null
+        vatNumber: CZ04997476
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+              external: '22349995'
+            street: Thámova
+            number:
+              part1: '137'
+              part1Number: '137'
+              part1Letter: null
+              part2: '16'
+              part2Number: '16'
+              part2Letter: null
+              full: 137/16
+            streetWithNumber: Thámova 137/16
+            city: Praha 8
+            zip: '18600'
+            full: Thámova 137/16, 18600 Praha 8
+        addressOfficial:
+          data:
+            country: CZ
+            street: Thámova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 137/16
+            streetWithNumber: Thámova 137/16
+            city: Praha
+            zip: '18600'
+            full: Thámova 137/16, Karlín, 18600 Praha 8
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 9542f9f1-2e1d-4c81-a87c-8762e31ff958
+        country: CZ
+        name: Manotick s.r.o.
+        registrationNumber: '04997441'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: a31b9a04-efb2-4351-8b05-5ae90b185909
+              external: '21715475'
+            street: Křižovnická
+            number:
+              part1: '86'
+              part1Number: '86'
+              part1Letter: null
+              part2: '6'
+              part2Number: '6'
+              part2Letter: null
+              full: 86/6
+            streetWithNumber: Křižovnická 86/6
+            city: Praha 1
+            zip: '11000'
+            full: Křižovnická 86/6, 11000 Praha 1
+        addressOfficial:
+          data:
+            country: CZ
+            street: Křižovnická
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 86/6
+            streetWithNumber: Křižovnická 86/6
+            city: Praha
+            zip: '11000'
+            full: Křižovnická 86/6, Staré Město, 11000 Praha 1
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 75809988-2e08-4ac4-ba73-25e8528a4aab
+        country: CZ
+        name: VEMIO s.r.o.
+        registrationNumber: '04997468'
+        taxNumber: null
+        vatNumber: CZ04997468
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: bac4bac1-8d64-4c8e-b937-fa417f7512ab
+              external: '24534161'
+            street: Plovární
+            number:
+              part1: '478'
+              part1Number: '478'
+              part1Letter: null
+              part2: '1'
+              part2Number: '1'
+              part2Letter: null
+              full: 478/1
+            streetWithNumber: Plovární 478/1
+            city: Plzeň
+            zip: '30100'
+            full: Plovární 478/1, 30100 Plzeň
+        addressOfficial:
+          data:
+            country: CZ
+            street: Plovární
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 478/1
+            streetWithNumber: Plovární 478/1
+            city: Plzeň
+            zip: '30100'
+            full: Plovární 478/1, Jižní Předměstí, 30100 Plzeň
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 90121cd5-d0af-46b6-8060-fa8b97a115c8
+        country: CZ
+        name: Miloš Kulhánek
+        registrationNumber: '04997492'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 61271a32-4db2-411e-a40f-9d5860ac3354
+              external: '628590'
+            street: Dřevec
+            number:
+              part1: '5'
+              part1Number: '5'
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '5'
+            streetWithNumber: Dřevec 5
+            city: Kožlany
+            zip: '33141'
+            full: Dřevec 5, 33141 Kožlany
+        addressOfficial:
+          data:
+            country: CZ
+            street: Dřevec
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '5'
+            streetWithNumber: Dřevec 5
+            city: Kožlany
+            zip: '33141'
+            full: Dřevec 5, 33141 Kožlany
+        legalForm:
+          type: physical
+    - data:
+        uuid: bc6b7eca-6e0b-4d3c-9f57-ea34470a7f88
+        country: CZ
+        name: Mgr. Iva Sladkovská
+        registrationNumber: '04997433'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: ee6fa3db-88a0-479b-990b-ae157f4b579d
+              external: '79260667'
+            street: Džbánka
+            number:
+              part1: '558'
+              part1Number: '558'
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '558'
+            streetWithNumber: Džbánka 558
+            city: Sulice
+            zip: '25168'
+            full: Džbánka 558, 25168 Sulice
+        addressOfficial:
+          data:
+            country: CZ
+            street: Džbánka
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '558'
+            streetWithNumber: Džbánka 558
+            city: Sulice
+            zip: '25168'
+            full: Džbánka 558, Nechánice, 25168 Sulice
+        legalForm:
+          type: physical
+    - data:
+        uuid: c02871f0-de95-45a0-9279-cd1d9399a195
+        country: CZ
+        name: Quang Anh Kieu
+        registrationNumber: '04997417'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 4c66b59f-cdc1-4c8f-b0f8-6294e2fbd6ac
+              external: '24537110'
+            street: Husova
+            number:
+              part1: '786'
+              part1Number: '786'
+              part1Letter: null
+              part2: '19'
+              part2Number: '19'
+              part2Letter: null
+              full: 786/19
+            streetWithNumber: Husova 786/19
+            city: Plzeň
+            zip: '30100'
+            full: Husova 786/19, 30100 Plzeň
+        addressOfficial:
+          data:
+            country: CZ
+            street: Husova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 786/19
+            streetWithNumber: Husova 786/19
+            city: Plzeň
+            zip: '30100'
+            full: Husova 786/19, Jižní Předměstí, 30100 Plzeň
+        legalForm:
+          type: physical
+    - data:
+        uuid: ccf750e3-8721-4524-9b27-510915e7b334
+        country: CZ
+        name: FAT-CAT s.r.o.
+        registrationNumber: '04995074'
+        taxNumber: null
+        vatNumber: CZ04995074
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 51e00536-c5be-4b96-b6fb-5ff131a87707
+              external: '21735425'
+            street: Trojická
+            number:
+              part1: '1910'
+              part1Number: '1910'
+              part1Letter: null
+              part2: '7'
+              part2Number: '7'
+              part2Letter: null
+              full: 1910/7
+            streetWithNumber: Trojická 1910/7
+            city: Praha 2
+            zip: '12800'
+            full: Trojická 1910/7, 12800 Praha 2
+        addressOfficial:
+          data:
+            country: CZ
+            street: Trojická
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 1910/7
+            streetWithNumber: Trojická 1910/7
+            city: Praha
+            zip: '12800'
+            full: Trojická 1910/7, Nové Město, 12800 Praha 2
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 264b970b-4e65-48d4-aa6c-ec26ef02c52c
+        country: SK
+        name: iKom s.r.o.
+        registrationNumber: '50499874'
+        taxNumber: '2120350364'
+        vatNumber: SK2120350364
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            ids:
+              internal: b38a5814-f5f6-473a-ae22-64ad7358d24e
+              external: null
+            street: Horná Mičiná
+            number:
+              part1: '215'
+              part1Number: '215'
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '215'
+            streetWithNumber: Horná Mičiná 215
+            city: Horná Mičiná
+            zip: '97401'
+            full: Horná Mičiná 215, 97401 Horná Mičiná
+        addressOfficial:
+          data:
+            country: SK
+            street: null
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '215'
+            streetWithNumber: '215'
+            city: Horná Mičiná
+            zip: '97401'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: ef4d6623-7180-4752-9c2c-b50e4e702a6b
+        country: CZ
+        name: Buršíková s.r.o.
+        registrationNumber: '04699874'
+        taxNumber: null
+        vatNumber: CZ04699874
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 9275c893-f9d0-478c-9bf2-bf988a0148f4
+              external: '75851270'
+            street: 9. května
+            number:
+              part1: '3549'
+              part1Number: '3549'
+              part1Letter: null
+              part2: 88b
+              part2Number: '88'
+              part2Letter: b
+              full: 3549/88b
+            streetWithNumber: 9. května 3549/88b
+            city: Přerov
+            zip: '75002'
+            full: 9. května 3549/88b, 75002 Přerov
+        addressOfficial:
+          data:
+            country: CZ
+            street: 9. května
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 3549/88b
+            streetWithNumber: 9. května 3549/88b
+            city: Přerov
+            zip: '75002'
+            full: 9. května 3549/88b, Přerov I-Město, 75002 Přerov
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 5481eca8-b429-423b-ab6d-7bedfabb231d
+        country: CZ
+        name: Jezdecký klub Xaverov, Přední Poříčí, z.s.
+        registrationNumber: '04999274'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: 58178c05-fb75-4535-8974-9db07cabc439
+              external: '17255571'
+            street: Přední Poříčí
+            number:
+              part1: '20'
+              part1Number: '20'
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '20'
+            streetWithNumber: Přední Poříčí 20
+            city: Březnice
+            zip: '26272'
+            full: Přední Poříčí 20, 26272 Březnice
+        addressOfficial:
+          data:
+            country: CZ
+            street: Přední Poříčí
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '20'
+            streetWithNumber: Přední Poříčí 20
+            city: Březnice
+            zip: '26272'
+            full: Přední Poříčí 20, 26272 Březnice
+        legalForm:
+          type: juridical
+errors: []

@@ -1,0 +1,26 @@
+allOf:
+  - $ref: ./CompanyGetOptions.yaml
+  - type: object
+    description: Query options.
+    properties:
+        legalFormType:
+          description: 'This option filters results by the legal form type.'
+          type:
+            - string
+            - "null"
+          enum:
+            - juridical
+            - physical
+            - any
+          default: any
+          example: any
+        filterMode:
+          type: string
+          description: >-
+            <b>Prefer</b> = prefer results matching the filter parameters,
+            <b>limit</b> = limit to results matching the filter parameters.
+          enum:
+            - limit
+            - prefer
+          example: limit
+          default: limit

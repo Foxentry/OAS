@@ -1,0 +1,20 @@
+{
+  "request": {
+    "query": {
+      "country": "CZ",
+      "id": "d2ade877-1e95-4a83-baa6-5431ce5b3ca8"
+    },
+    "options": {
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "zipFormat": false,
+      "countryFormat": "alpha2",
+      "cityFormat": "basic",
+      "idType": "internal"
+    }
+  }
+}

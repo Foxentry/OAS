@@ -1,0 +1,23 @@
+{
+  "request": {
+    "query": {
+      "name": "AVANTRO s.r.o.",
+      "registrationNumber": "04997476",
+      "country": "CZ"
+    },
+    "options": {
+      "resultsLimit": 10,
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "includeTerminatedSubjects": false,
+      "zipFormat": false,
+      "cityFormat": "basic",
+      "countryFormat": "alpha2",
+      "legalFormType": "any"
+    }
+  }
+}

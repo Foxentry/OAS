@@ -1,7 +1,7 @@
 type: object
 properties:
   customId:
-    type: 
+    type:
       - string
       - "null"
     description: Custom ID assigned by you if you need so.
@@ -23,6 +23,6 @@ properties:
       - country
       - registrationNumber
   options:
-    $ref: ./CompanyOptions.yaml
+    $ref: ./CompanyGetOptions.yaml
   client:
     $ref: ./../ClientRequest.yaml

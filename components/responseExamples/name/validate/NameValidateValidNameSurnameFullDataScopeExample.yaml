@@ -1,0 +1,52 @@
+status: 200
+request:
+  endpoint: name/validate
+  code: e74ef92d-5669-498a-8ba3-6181b72d659e
+  query:
+    nameSurname: Pavel Novák
+  options:
+    dataSource:
+      - CZ
+      - SK
+    dataScope: full
+    acceptDegrees: false
+    acceptContext: false
+    smartMode: true
+    validationDepth: strict
+response:
+  result:
+    isValid: true
+    proposal: valid
+    data:
+      nameSurname: Pavel Novák
+      name: Pavel
+      surname: Novák
+      context: []
+      degreesBefore: []
+      degreesAfter: []
+    details:
+      - type: name
+        value: Pavel
+        gender: 1
+        vocative: Pavle
+        nameDays:
+          - country: CZ
+            month: 6
+            day: 29
+      - type: surname
+        value: Novák
+        gender: 1
+        vocative: Nováku
+        nameDays: null
+      - type: nameSurname
+        value: Pavel Novák
+        gender: 1
+        vocative: Pavle Nováku
+        nameDays:
+          - country: CZ
+            month: 6
+            day: 29
+    errors: []
+  resultCorrected: null
+  suggestions: []
+errors: []

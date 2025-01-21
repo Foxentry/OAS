@@ -1,0 +1,23 @@
+status: 200
+request:
+  endpoint: email/validate
+  code: ba871b55-2e6f-48c7-bac9-398707d5eead
+  query:
+    email: info@foxentry.com
+  options:
+    validationType: extended
+    acceptDisposableEmails: true
+    acceptFreemails: true
+response:
+  result:
+    isValid: true
+    proposal: valid
+    data:
+      user: info
+      domain: foxentry.com
+      email: info@foxentry.com
+    flags: {}
+    errors: []
+  resultCorrected: null
+  suggestions: []
+errors: []

@@ -1,0 +1,46 @@
+status: 200
+request:
+  endpoint: email/validate
+  code: 68031feb-5fbb-46a8-b76a-83c6bfe7daf3
+  query:
+    email: info@foxentry,com
+  options:
+    validationType: extended
+    acceptDisposableEmails: true
+    acceptFreemails: true
+response:
+  result:
+    isValid: false
+    proposal: invalidWithCorrection
+    data:
+      user: info
+      domain: foxentry,com
+      email: info@foxentry,com
+    flags: {}
+    errors:
+      - group: SYNTAX
+        type: VALUE_PART
+        subtype: DOMAIN
+        severity: critical
+        relatedTo:
+          - email
+        description: The domain contains invalid syntax.
+  resultCorrected:
+    isValid: true
+    data:
+      user: info
+      domain: foxentry.com
+      email: info@foxentry.com
+    flags: {}
+    errors: []
+    fixes:
+      - group: SYNTAX
+        type: VALUE_PART_CHANGED
+        subtype: CHARACTERS
+        data:
+          typeFrom: email
+          type: email
+          valueFrom: info@foxentry,com
+          value: info@foxentry.com
+  suggestions: []
+errors: []

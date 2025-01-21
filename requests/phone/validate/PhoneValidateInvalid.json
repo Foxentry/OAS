@@ -1,0 +1,11 @@
+{
+  "request": {
+    "query": {
+      "numberWithPrefix": "+42060712345"
+    },
+    "options": {
+      "validationType": "basic",
+      "formatNumber": false
+    }
+  }
+}

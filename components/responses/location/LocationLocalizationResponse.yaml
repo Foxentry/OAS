@@ -45,29 +45,4 @@ content:
     examples:
       localizationResults:
         value:
-          status: 200
-          request:
-            endpoint: location/localize
-            code: 5JmDgHmhH7DLgvIv3HsJaQ3lqz5dV1
-          response:
-            resultsCount: 1
-            results:
-              - data:
-                  country: CZ
-                  ids:
-                    internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
-                    external: '22349995'
-                  street: Thámova
-                  number:
-                    part1: '137'
-                    part1Number: '137'
-                    part1Letter: null
-                    part2: '16'
-                    part2Number: '16'
-                    part2Letter: null
-                    full: 137/16
-                  streetWithNumber: Thámova 137/16
-                  city: Praha 8
-                  zip: '18600'
-                  full: Thámova 137/16, 18600 Praha 8
-          errors: []
+          $ref: ./../../responseExamples/location/localize/LocationLocalizeLocalizationResultsExample.yaml

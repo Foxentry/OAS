@@ -1,0 +1,12 @@
+{
+  "request": {
+    "query": {
+      "email": "invalid@example.com"
+    },
+    "options": {
+      "validationType": "extended",
+      "acceptDisposableEmails": true,
+      "acceptFreemails": true
+    }
+  }
+}

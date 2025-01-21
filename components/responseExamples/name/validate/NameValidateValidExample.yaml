@@ -1,0 +1,30 @@
+status: 200
+request:
+  endpoint: name/validate
+  code: e0dd1966-b200-4060-a819-5cfa8a38cf28
+  query:
+    name: Pavel
+  options:
+    dataSource:
+      - CZ
+      - SK
+    dataScope: basic
+    acceptDegrees: false
+    acceptContext: false
+    smartMode: true
+    validationDepth: strict
+response:
+  result:
+    isValid: true
+    proposal: valid
+    data:
+      name: Pavel
+      surname: null
+      nameSurname: null
+      context: []
+      degreesBefore: []
+      degreesAfter: []
+    errors: []
+  resultCorrected: null
+  suggestions: []
+errors: []

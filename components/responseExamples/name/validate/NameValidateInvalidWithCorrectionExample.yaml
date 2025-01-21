@@ -1,0 +1,55 @@
+status: 200
+request:
+  endpoint: name/validate
+  code: 8bde2eb3-4d02-49c6-97f6-3fec29276c07
+  query:
+    name: Palve
+  options:
+    dataSource:
+      - CZ
+      - SK
+    dataScope: basic
+    acceptDegrees: false
+    acceptContext: false
+    smartMode: true
+    validationDepth: strict
+response:
+  result:
+    isValid: false
+    proposal: invalidWithCorrection
+    data:
+      name: Palve
+      surname: null
+      nameSurname: null
+      context: []
+      degreesBefore: []
+      degreesAfter: []
+    errors:
+      - group: VALUE
+        type: INVALID
+        subtype: NAME
+        description: Name has not been found in our database.
+        severity: warning
+        relatedTo:
+          - name
+  resultCorrected:
+    isValid: true
+    data:
+      name: Jalée
+      surname: null
+      nameSurname: null
+      context: []
+      degreesBefore: []
+      degreesAfter: []
+    errors: []
+    fixes:
+      - group: VALUE
+        type: CHANGED
+        subtype: TYPO
+        data:
+          typeFrom: name
+          type: name
+          valueFrom: Palve
+          value: Jalée
+  suggestions: []
+errors: []

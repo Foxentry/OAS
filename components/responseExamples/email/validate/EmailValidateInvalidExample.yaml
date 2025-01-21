@@ -1,0 +1,30 @@
+status: 200
+request:
+  endpoint: email/validate
+  code: 45d4597d-44de-4f6c-a38a-f1580fb1a4b2
+  query:
+    email: invalid@example.com
+  options:
+    validationType: extended
+    acceptDisposableEmails: true
+    acceptFreemails: true
+response:
+  result:
+    isValid: false
+    proposal: invalid
+    data:
+      user: invalid
+      domain: example.com
+      email: invalid@example.com
+    flags: {}
+    errors:
+      - group: VALUE
+        type: INVALID
+        subtype: null
+        severity: critical
+        relatedTo:
+          - email
+        description: Value is not valid.
+  resultCorrected: null
+  suggestions: []
+errors: []

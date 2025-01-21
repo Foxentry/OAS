@@ -1,0 +1,80 @@
+status: 200
+request:
+  endpoint: location/search
+  code: c0eadd08-bbee-4a37-94af-bb04882f3557
+  query:
+    type: zip
+    value: '10000'
+  options:
+    dataSource:
+      - CZ
+      - SK
+      - PL
+    dataScope: basic
+    filterMode: limit
+    filterAcceptAlternatives: true
+    filterAcceptFormat: true
+    filterExactMatch: true
+    resultsLimit: 3
+    cityFormat: basic
+    zipFormat: false
+    countryFormat: alpha2
+    allowPartialResults: true
+response:
+  resultsCount: 3
+  results:
+    - data:
+        country: CZ
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha
+        zip: '10000'
+        full: 10000 Praha
+    - data:
+        country: PL
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Olsztyn
+        zip: '10009'
+        full: 10009 Olsztyn
+    - data:
+        country: PL
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Olsztyn
+        zip: '10050'
+        full: 10050 Olsztyn
+errors: []

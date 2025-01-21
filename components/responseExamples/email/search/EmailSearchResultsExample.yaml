@@ -1,0 +1,27 @@
+status: 200
+request:
+  endpoint: email/search
+  code: ed8faecc-b47e-4ef0-adc1-edeee8ff2268
+  query:
+    value: info
+  options:
+    resultsLimit: 5
+response:
+  resultsCount: 5
+  results:
+    - data:
+        email: info@gmail.com
+        domain: gmail.com
+    - data:
+        email: info@icloud.com
+        domain: icloud.com
+    - data:
+        email: info@outlook.com
+        domain: outlook.com
+    - data:
+        email: info@yahoo.com
+        domain: yahoo.com
+    - data:
+        email: info@yahoo.fr
+        domain: yahoo.fr
+errors: []

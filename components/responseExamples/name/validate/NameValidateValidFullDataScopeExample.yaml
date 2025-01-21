@@ -1,0 +1,39 @@
+status: 200
+request:
+  endpoint: name/validate
+  code: 9758a139-8575-4fba-94b2-ef87012563b6
+  query:
+    name: Pavel
+  options:
+    dataSource:
+      - CZ
+      - SK
+    dataScope: full
+    acceptDegrees: false
+    acceptContext: false
+    smartMode: true
+    validationDepth: strict
+response:
+  result:
+    isValid: true
+    proposal: valid
+    data:
+      name: Pavel
+      surname: null
+      nameSurname: null
+      context: []
+      degreesBefore: []
+      degreesAfter: []
+    details:
+      - type: name
+        value: Pavel
+        gender: 1
+        vocative: Pavle
+        nameDays:
+          - country: CZ
+            month: 6
+            day: 29
+    errors: []
+  resultCorrected: null
+  suggestions: []
+errors: []

@@ -1,0 +1,33 @@
+status: 200
+request:
+  endpoint: email/validate
+  code: 1cfe7a7e-f85c-45ce-89fb-b516c72a56d8
+  query:
+    email: rasini3451@naymedia.com
+  options:
+    validationType: extended
+    acceptDisposableEmails: false
+    acceptFreemails: true
+response:
+  result:
+    isValid: false
+    proposal: invalid
+    data:
+      user: rasini3451
+      domain: naymedia.com
+      email: rasini3451@naymedia.com
+    flags:
+      isCatchAllServer: false
+      isDisposableEmailAddress: true
+      isFreemail: false
+    errors:
+      - group: VALUE
+        type: NOT_ALLOWED
+        subtype: DISPOSABLE
+        severity: critical
+        relatedTo:
+          - email
+        description: Disposable emails are not allowed.
+  resultCorrected: null
+  suggestions: []
+errors: []

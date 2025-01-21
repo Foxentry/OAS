@@ -1,0 +1,53 @@
+status: 200
+request:
+  endpoint: location/validate
+  code: bdf5ad07-03d8-4054-a588-ca9332d9572f
+  query:
+    streetWithNumber: Thámova 137/16
+    city: Praha 8
+    zip: '18600'
+  options:
+    dataSource:
+      - CZ
+      - SK
+      - PL
+    dataScope: basic
+    filterMode: limit
+    resultsLimit: 10
+    cityFormat: basic
+    countryFormat: alpha2
+    zipFormat: false
+    acceptPostOfficeAsCity: false
+response:
+  result:
+    isValid: true
+    proposal: valid
+    dataTypes:
+      valid:
+        - city
+        - streetWithNumber
+        - zip
+      invalid: []
+    data:
+      country: CZ
+      ids:
+        internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+        external: '22349995'
+      street: Thámova
+      number:
+        type: č.p.
+        part1: '137'
+        part1Number: '137'
+        part1Letter: null
+        part2: '16'
+        part2Number: '16'
+        part2Letter: null
+        full: 137/16
+      streetWithNumber: Thámova 137/16
+      city: Praha 8
+      zip: '18600'
+      full: Thámova 137/16, 18600 Praha 8
+    errors: []
+  resultCorrected: null
+  suggestions: []
+errors: []

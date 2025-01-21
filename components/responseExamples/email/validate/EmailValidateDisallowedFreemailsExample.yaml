@@ -1,0 +1,33 @@
+status: 200
+request:
+  endpoint: email/validate
+  code: 58250e5a-674a-4592-87ac-8ac2ae661166
+  query:
+    email: info@gmail.com
+  options:
+    validationType: extended
+    acceptDisposableEmails: true
+    acceptFreemails: false
+response:
+  result:
+    isValid: false
+    proposal: invalid
+    data:
+      user: info
+      domain: gmail.com
+      email: info@gmail.com
+    flags:
+      isCatchAllServer: false
+      isDisposableEmailAddress: false
+      isFreemail: true
+    errors:
+      - group: VALUE
+        type: NOT_ALLOWED
+        subtype: FREEMAIL
+        severity: critical
+        relatedTo:
+          - email
+        description: Freemails are not allowed.
+  resultCorrected: null
+  suggestions: []
+errors: []

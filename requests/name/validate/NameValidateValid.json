@@ -1,0 +1,18 @@
+{
+  "request": {
+    "query": {
+      "name": "Pavel"
+    },
+    "options": {
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK"
+      ],
+      "acceptDegrees": false,
+      "acceptContext": false,
+      "validationDepth": "strict",
+      "smartMode": true
+    }
+  }
+}

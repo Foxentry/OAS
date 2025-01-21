@@ -1,0 +1,18 @@
+{
+  "request": {
+    "query": {
+      "nameSurname": "Pavel Novák"
+    },
+    "options": {
+      "dataScope": "full",
+      "dataSource": [
+        "CZ",
+        "SK"
+      ],
+      "acceptDegrees": false,
+      "acceptContext": false,
+      "validationDepth": "strict",
+      "smartMode": true
+    }
+  }
+}

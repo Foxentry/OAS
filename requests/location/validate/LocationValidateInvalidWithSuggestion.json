@@ -1,0 +1,22 @@
+{
+  "request": {
+    "query": {
+      "streetWithNumber": "Olšanská 2898/4",
+      "city": "Praha 3",
+      "zip": "13000"
+    },
+    "options": {
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "zipFormat": false,
+      "countryFormat": "alpha2",
+      "cityFormat": "basic",
+      "resultsLimit": 10,
+      "acceptPostOfficeAsCity": false
+    }
+  }
+}

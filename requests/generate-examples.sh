@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Check if API_KEY is set, if not, exit with error
+if [ -z "$API_KEY" ]; then
+  echo "API_KEY is not set"
+  exit 1
+fi
+
+
 # Iterate over all JSON files in the requests directory
 find . -type f -name "*.json" | while read json_file; do
   folder=$(dirname "$json_file")

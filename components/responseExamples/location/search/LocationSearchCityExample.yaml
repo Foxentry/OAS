@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: 96a1ca76-e92d-439f-8556-c08ec091e6ea
+  code: 17f5b211-b5ad-43a7-9737-fee6665d3773
   query:
     type: city
     value: Praha
@@ -16,12 +16,15 @@ request:
     filterAcceptFormat: true
     filterExactMatch: true
     resultsLimit: 3
+    resultsOffset: 0
     cityFormat: basic
     zipFormat: false
     countryFormat: alpha2
     allowPartialResults: true
 response:
   resultsCount: 3
+  resultsOffset: 0
+  resultsTotal: null
   results:
     - data:
         country: CZ

@@ -1,0 +1,29 @@
+{
+  "request": {
+    "query": {
+      "type": "streetWithNumber",
+      "filter": {
+        "city": "Peine",
+        "country": "DE"
+      },
+      "value": "Amselweg 12H"
+    },
+    "options": {
+      "resultsLimit": 3,
+      "allowPartialResults": true,
+      "filterMode": "limit",
+      "filterAcceptFormat": true,
+      "filterAcceptAlternatives": true,
+      "filterExactMatch": true,
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "zipFormat": false,
+      "countryFormat": "alpha2",
+      "cityFormat": "basic"
+    }
+  }
+}

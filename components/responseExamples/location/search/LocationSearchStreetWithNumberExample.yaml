@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: 75baafa0-f5c9-427d-a97c-83490451bf00
+  code: b4c1d2d6-2663-4240-9611-2b4b0e8c13cf
   query:
     type: streetWithNumber
     filter:
@@ -19,12 +19,15 @@ request:
     filterAcceptFormat: true
     filterExactMatch: true
     resultsLimit: 3
+    resultsOffset: 0
     cityFormat: basic
     zipFormat: false
     countryFormat: alpha2
     allowPartialResults: true
 response:
   resultsCount: 3
+  resultsOffset: 0
+  resultsTotal: null
   results:
     - data:
         country: CZ
@@ -33,6 +36,7 @@ response:
           external: '26766540'
         street: Jeseniova
         number:
+          type: č.p.
           part1: '2770'
           part1Number: '2770'
           part1Letter: null
@@ -51,6 +55,7 @@ response:
           external: '75256690'
         street: Jeseniova
         number:
+          type: č.p.
           part1: '2760'
           part1Number: '2760'
           part1Letter: null
@@ -65,19 +70,20 @@ response:
     - data:
         country: CZ
         ids:
-          internal: e5c4365c-f223-4e54-a820-17e74390b40f
-          external: '75195364'
+          internal: b2a36c3a-a34d-45ea-8951-785439184eef
+          external: '75195500'
         street: Jeseniova
         number:
+          type: č.p.
           part1: '2770'
           part1Number: '2770'
           part1Letter: null
-          part2: 56a
+          part2: 56c
           part2Number: '56'
-          part2Letter: a
-          full: 2770/56a
-        streetWithNumber: Jeseniova 2770/56a
+          part2Letter: c
+          full: 2770/56c
+        streetWithNumber: Jeseniova 2770/56c
         city: Praha 3
         zip: '13000'
-        full: Jeseniova 2770/56a, 13000 Praha 3
+        full: Jeseniova 2770/56c, 13000 Praha 3
 errors: []

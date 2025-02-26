@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: ac01c278-2015-4d12-994b-89b88c04de8b
+  code: bd305e02-79e9-4c8d-88a5-2efdef710148
   query:
     type: full
     value: Jeseniova, 13000 Praha 3
@@ -16,31 +16,54 @@ request:
     filterAcceptFormat: true
     filterExactMatch: true
     resultsLimit: 3
+    resultsOffset: 0
     cityFormat: basic
     zipFormat: false
     countryFormat: alpha2
     allowPartialResults: true
 response:
   resultsCount: 3
+  resultsOffset: 0
+  resultsTotal: null
   results:
     - data:
         country: CZ
         ids:
-          internal: null
-          external: null
+          internal: 9589b261-05d7-418d-b6e0-561786a80f68
+          external: '21769435'
         street: Jeseniova
         number:
-          part1: null
-          part1Number: null
+          type: č.p.
+          part1: '246'
+          part1Number: '246'
           part1Letter: null
-          part2: null
-          part2Number: null
+          part2: '3'
+          part2Number: '3'
           part2Letter: null
-          full: null
-        streetWithNumber: Jeseniova
+          full: 246/3
+        streetWithNumber: Jeseniova 246/3
         city: Praha 3
         zip: '13000'
-        full: Jeseniova, 13000 Praha 3
+        full: Jeseniova 246/3, 13000 Praha 3
+    - data:
+        country: CZ
+        ids:
+          internal: fdc4067e-83ed-4e61-b9f1-4e9048db731f
+          external: '75256690'
+        street: Jeseniova
+        number:
+          type: č.p.
+          part1: '2760'
+          part1Number: '2760'
+          part1Letter: null
+          part2: 56f
+          part2Number: '56'
+          part2Letter: f
+          full: 2760/56f
+        streetWithNumber: Jeseniova 2760/56f
+        city: Praha 3
+        zip: '13000'
+        full: Jeseniova 2760/56f, 13000 Praha 3
     - data:
         country: CZ
         ids:
@@ -48,6 +71,7 @@ response:
           external: '21787727'
         street: Jeseniova
         number:
+          type: č.p.
           part1: '1872'
           part1Number: '1872'
           part1Letter: null
@@ -59,22 +83,4 @@ response:
         city: Praha 3
         zip: '13000'
         full: Jeseniova 1872/111, 13000 Praha 3
-    - data:
-        country: CZ
-        ids:
-          internal: 54fe17e7-7785-4dd9-8c03-70e451e899ff
-          external: '21787964'
-        street: Jeseniova
-        number:
-          part1: '1893'
-          part1Number: '1893'
-          part1Letter: null
-          part2: '107'
-          part2Number: '107'
-          part2Letter: null
-          full: 1893/107
-        streetWithNumber: Jeseniova 1893/107
-        city: Praha 3
-        zip: '13000'
-        full: Jeseniova 1893/107, 13000 Praha 3
 errors: []

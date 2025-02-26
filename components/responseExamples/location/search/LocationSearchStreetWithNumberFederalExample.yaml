@@ -1,10 +1,13 @@
 status: 200
 request:
   endpoint: location/search
-  code: 4fd1f7af-2829-46c5-b234-4c83c98aa7d7
+  code: 680ec33e-ca43-41be-87ba-5b5e3a7bcf09
   query:
-    type: zip
-    value: '10000'
+    type: streetWithNumber
+    filter:
+      city: Peine
+      country: DE
+    value: Amselweg 12H
   options:
     dataSource:
       - CZ
@@ -27,11 +30,11 @@ response:
   resultsTotal: null
   results:
     - data:
-        country: CZ
+        country: DE
         ids:
-          internal: null
+          internal: bc0e60e6-94dd-4ead-b9b4-715eb7a4265e
           external: null
-        street: null
+        street: Amselweg
         number:
           type: null
           part1: null
@@ -40,9 +43,9 @@ response:
           part2: null
           part2Number: null
           part2Letter: null
-          full: null
-        streetWithNumber: null
-        city: Praha
-        zip: '10000'
-        full: 10000 Praha
+          full: 12H
+        streetWithNumber: Amselweg 12H
+        city: Peine
+        zip: '31224'
+        full: Amselweg 12H, 31224 Peine
 errors: []

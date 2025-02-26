@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: 55ee6927-5c33-4f6d-a359-4c89f8a17887
+  code: 3f9da2db-c66c-4db4-bb3d-6411611e3954
   query:
     type: street
     filter:
@@ -19,12 +19,15 @@ request:
     filterAcceptFormat: true
     filterExactMatch: true
     resultsLimit: 3
+    resultsOffset: 0
     cityFormat: basic
     zipFormat: false
     countryFormat: alpha2
     allowPartialResults: true
 response:
   resultsCount: 3
+  resultsOffset: 0
+  resultsTotal: null
   results:
     - data:
         country: CZ

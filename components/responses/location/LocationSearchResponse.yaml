@@ -55,6 +55,10 @@ content:
         value:
           $ref: ./../../responseExamples/location/search/LocationSearchStreetWithNumberExample.yaml
 
+      searchStreetWithNumberFederal:
+        value:
+          $ref: ./../../responseExamples/location/search/LocationSearchStreetWithNumberFederalExample.yaml
+
       searchZip:
         value:
           $ref: ./../../responseExamples/location/search/LocationSearchZipExample.yaml

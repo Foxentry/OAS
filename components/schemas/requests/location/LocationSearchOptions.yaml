@@ -10,6 +10,13 @@ properties:
     maximum: 20
     default: 10
     example: 10
+  resultsOffset:
+    type: integer
+    description: Pagination offset. Available only if the resultsTotal in response is not null.
+    format: int32
+    minimum: 0
+    example: 0
+    default: 0
   allowPartialResults:
     type: boolean
     description: >-

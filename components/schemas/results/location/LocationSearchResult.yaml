@@ -5,6 +5,19 @@ properties:
     type: integer
     description: Number of results.
     format: int32
+    example: 3
+  resultsOffset:
+    type: integer
+    description: Pagination offset
+    format: int32
+    example: 0
+  resultsTotal:
+    type:
+      - integer
+      - "null"
+    description: Maximum number of results that can be returned. Null if pagination not available.
+    format: int32
+    example: 40
   results:
     type: array
     items:

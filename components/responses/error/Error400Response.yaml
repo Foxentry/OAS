@@ -40,7 +40,9 @@ content:
                   - $ref: ./../../schemas/requestErrors/400/Error400RequestBodyNoRequest.yaml
                   - $ref: ./../../schemas/requestErrors/400/Error400RequestBodyTooBig.yaml
                   - $ref: ./../../schemas/requestErrors/400/Error400RequestOptionsParameterNotSupported.yaml
-                  - $ref: ./../../schemas/requestErrors/400/Error400RequestOptionParameterValueNotSupported.yaml
+                  - $ref: ./../../schemas/requestErrors/400/Error400RequestOptionsParameterValueNotSupported.yaml
+                  - $ref: ./../../schemas/requestErrors/400/Error400RequestClientParameterNotSupported.yaml
+                  - $ref: ./../../schemas/requestErrors/400/Error400RequestClientParameterValueNotSupported.yaml
                   - $ref: ./../../schemas/requestErrors/400/Error400RequestQueryNotSent.yaml
                   - $ref: ./../../schemas/requestErrors/400/Error400RequestQueryParameterCombination.yaml
                   - $ref: ./../../schemas/requestErrors/400/Error400RequestQueryParameterNotSupportedForQuery.yaml

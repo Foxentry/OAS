@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: 4fd1f7af-2829-46c5-b234-4c83c98aa7d7
+  code: ea1c9dc2-264a-4459-b031-153899619330
   query:
     type: zip
     value: '10000'
@@ -22,7 +22,7 @@ request:
     countryFormat: alpha2
     allowPartialResults: true
 response:
-  resultsCount: 1
+  resultsCount: 2
   resultsOffset: 0
   resultsTotal: null
   results:
@@ -45,4 +45,23 @@ response:
         city: Praha
         zip: '10000'
         full: 10000 Praha
+    - data:
+        country: CZ
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha
+        zip: '15000'
+        full: 15000 Praha
 errors: []

@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/validate
-  code: 43f613f8-4e3c-4b4b-902f-eca4eb93e057
+  code: 8459170f-925f-419b-9b4f-06f092858b9c
   query:
     registrationNumber: '0499747'
     country: CZ
@@ -61,6 +61,7 @@ response:
               external: '22349995'
             street: Thámova
             number:
+              type: č.p.
               part1: '137'
               part1Number: '137'
               part1Letter: null
@@ -117,6 +118,7 @@ response:
               external: '2833816'
             street: Rýmařovská
             number:
+              type: č.p.
               part1: '1491'
               part1Number: '1491'
               part1Letter: null
@@ -173,6 +175,7 @@ response:
               external: '16354486'
             street: Křížkovského
             number:
+              type: č.p.
               part1: '1656'
               part1Number: '1656'
               part1Letter: null
@@ -229,6 +232,7 @@ response:
               external: '22659251'
             street: Krymská
             number:
+              type: č.p.
               part1: '439'
               part1Number: '439'
               part1Letter: null
@@ -285,6 +289,7 @@ response:
               external: '22623400'
             street: Michelangelova
             number:
+              type: č.p.
               part1: '1995'
               part1Number: '1995'
               part1Letter: null
@@ -341,6 +346,7 @@ response:
               external: '25528807'
             street: Zápy
             number:
+              type: č.p.
               part1: '253'
               part1Number: '253'
               part1Letter: null
@@ -397,6 +403,7 @@ response:
               external: '24537110'
             street: Husova
             number:
+              type: č.p.
               part1: '786'
               part1Number: '786'
               part1Letter: null

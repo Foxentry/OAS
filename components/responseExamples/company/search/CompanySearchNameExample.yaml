@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: 35623cd9-8b7b-4037-bdc3-b010853665db
+  code: a60a829c-7be4-4338-9cb2-a2a8c818bd50
   query:
     type: name
     value: Avantro
@@ -40,6 +40,7 @@ response:
               external: '22349995'
             street: Thámova
             number:
+              type: č.p.
               part1: '137'
               part1Number: '137'
               part1Letter: null
@@ -70,51 +71,6 @@ response:
         legalForm:
           type: juridical
     - data:
-        uuid: df80bd9e-4a48-494b-8203-6cee1dadff70
-        country: CZ
-        name: AVANERO s.r.o.
-        registrationNumber: '24260207'
-        taxNumber: null
-        vatNumber: CZ24260207
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            ids:
-              internal: f73b8ee7-8965-42d4-86e7-e71dd8db9e7d
-              external: '21700966'
-            street: Jungmannova
-            number:
-              part1: '30'
-              part1Number: '30'
-              part1Letter: null
-              part2: '21'
-              part2Number: '21'
-              part2Letter: null
-              full: 30/21
-            streetWithNumber: Jungmannova 30/21
-            city: Praha 1
-            zip: '11000'
-            full: Jungmannova 30/21, 11000 Praha 1
-        addressOfficial:
-          data:
-            country: CZ
-            street: Jungmannova
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 30/21
-            streetWithNumber: Jungmannova 30/21
-            city: Praha
-            zip: '11000'
-            full: Jungmannova 30/21, Nové Město, 11000 Praha 1
-        legalForm:
-          type: juridical
-    - data:
         uuid: 53890dc6-8d68-483c-b636-7c3cba1c5208
         country: CZ
         name: AVENTRO, a.s.
@@ -130,6 +86,7 @@ response:
               external: '10876537'
             street: Práče
             number:
+              type: č.p.
               part1: '168'
               part1Number: '168'
               part1Letter: null
@@ -160,6 +117,52 @@ response:
         legalForm:
           type: juridical
     - data:
+        uuid: df80bd9e-4a48-494b-8203-6cee1dadff70
+        country: CZ
+        name: AVANERO s.r.o.
+        registrationNumber: '24260207'
+        taxNumber: null
+        vatNumber: CZ24260207
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: f73b8ee7-8965-42d4-86e7-e71dd8db9e7d
+              external: '21700966'
+            street: Jungmannova
+            number:
+              type: č.p.
+              part1: '30'
+              part1Number: '30'
+              part1Letter: null
+              part2: '21'
+              part2Number: '21'
+              part2Letter: null
+              full: 30/21
+            streetWithNumber: Jungmannova 30/21
+            city: Praha 1
+            zip: '11000'
+            full: Jungmannova 30/21, 11000 Praha 1
+        addressOfficial:
+          data:
+            country: CZ
+            street: Jungmannova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 30/21
+            streetWithNumber: Jungmannova 30/21
+            city: Praha
+            zip: '11000'
+            full: Jungmannova 30/21, Nové Město, 11000 Praha 1
+        legalForm:
+          type: juridical
+    - data:
         uuid: 392f1833-4e53-477f-af96-85f21418be7a
         country: SK
         name: Avanto, s. r. o.
@@ -175,6 +178,7 @@ response:
               external: null
             street: Kopečná
             number:
+              type: null
               part1: '252'
               part1Number: '252'
               part1Letter: null
@@ -220,6 +224,7 @@ response:
               external: '27382800'
             street: Hvězdova
             number:
+              type: č.p.
               part1: '1716'
               part1Number: '1716'
               part1Letter: null
@@ -265,6 +270,7 @@ response:
               external: null
             street: Karpatské námestie
             number:
+              type: null
               part1: '7770'
               part1Number: '7770'
               part1Letter: null
@@ -310,6 +316,7 @@ response:
               external: null
             street: Sv.Jakuba
             number:
+              type: null
               part1: '508'
               part1Number: '508'
               part1Letter: null
@@ -355,6 +362,7 @@ response:
               external: '22600698'
             street: Starostrašnická
             number:
+              type: č.p.
               part1: '151'
               part1Number: '151'
               part1Letter: null
@@ -385,36 +393,37 @@ response:
         legalForm:
           type: juridical
     - data:
-        uuid: 0fa25bbc-9df2-4569-9858-7ff2e21b3afe
+        uuid: 9efb95ac-ec00-44ef-b111-013c8e4edc5e
         country: CZ
-        name: ADENTRO, s.r.o.
-        registrationNumber: '28600819'
+        name: AVATRON s.r.o.
+        registrationNumber: '28392477'
         taxNumber: null
-        vatNumber: CZ28600819
+        vatNumber: CZ28392477
         vatNumberSpecial: null
         address:
           data:
             country: CZ
             ids:
-              internal: 3f83ef8a-1c77-48b3-9a5a-aad99a017ede
-              external: '28412141'
-            street: Na Břížku
+              internal: 103af604-6386-4579-b59b-797c5151cb12
+              external: '22553517'
+            street: U transformátoru
             number:
-              part1: '447'
-              part1Number: '447'
+              type: č.p.
+              part1: '126'
+              part1Number: '126'
               part1Letter: null
-              part2: null
-              part2Number: null
+              part2: '6'
+              part2Number: '6'
               part2Letter: null
-              full: '447'
-            streetWithNumber: Na Břížku 447
-            city: Dolní Lhota
-            zip: '74766'
-            full: Na Břížku 447, 74766 Dolní Lhota
+              full: 126/6
+            streetWithNumber: U transformátoru 126/6
+            city: Praha 10
+            zip: '10700'
+            full: U transformátoru 126/6, 10700 Praha 10
         addressOfficial:
           data:
             country: CZ
-            street: Na Břížku
+            street: U transformátoru
             number:
               part1: null
               part1Number: null
@@ -422,44 +431,45 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: '447'
-            streetWithNumber: Na Břížku 447
-            city: Dolní Lhota
-            zip: '74766'
-            full: Na Břížku 447, 74766 Dolní Lhota
+              full: 126/6
+            streetWithNumber: U transformátoru 126/6
+            city: Praha
+            zip: '10700'
+            full: U transformátoru 126/6, Dubeč, 10700 Praha 10
         legalForm:
           type: juridical
     - data:
-        uuid: 1908cf18-8a55-4fc0-8894-5c430653fca6
+        uuid: 160bb137-cab5-4de6-8d41-7be2c70ae8a4
         country: CZ
-        name: AVANSKO s.r.o.
-        registrationNumber: '28194870'
+        name: Avangor, s.r.o.
+        registrationNumber: '28438990'
         taxNumber: null
-        vatNumber: CZ28194870
+        vatNumber: CZ28438990
         vatNumberSpecial: null
         address:
           data:
             country: CZ
             ids:
-              internal: ddb9cd1e-1091-4a72-a669-06ad2618f137
-              external: '21951632'
-            street: U Pernštejnských
+              internal: c0525e64-bb0c-4cf9-94c7-a5c9f1d57e9b
+              external: '25120450'
+            street: Ohradní
             number:
-              part1: '1369'
-              part1Number: '1369'
+              type: č.p.
+              part1: '1421'
+              part1Number: '1421'
               part1Letter: null
-              part2: '2'
-              part2Number: '2'
-              part2Letter: null
-              full: 1369/2
-            streetWithNumber: U Pernštejnských 1369/2
+              part2: 63a
+              part2Number: '63'
+              part2Letter: a
+              full: 1421/63a
+            streetWithNumber: Ohradní 1421/63a
             city: Praha 4
             zip: '14000'
-            full: U Pernštejnských 1369/2, 14000 Praha 4
+            full: Ohradní 1421/63a, 14000 Praha 4
         addressOfficial:
           data:
             country: CZ
-            street: U Pernštejnských
+            street: Ohradní
             number:
               part1: null
               part1Number: null
@@ -467,11 +477,11 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: 1369/2
-            streetWithNumber: U Pernštejnských 1369/2
+              full: 1421/63a
+            streetWithNumber: Ohradní 1421/63a
             city: Praha
             zip: '14000'
-            full: U Pernštejnských 1369/2, Nusle, 14000 Praha 4
+            full: Ohradní 1421/63a, Michle, 14000 Praha 4
         legalForm:
           type: juridical
 errors: []

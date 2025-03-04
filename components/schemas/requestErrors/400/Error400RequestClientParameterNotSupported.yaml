@@ -1,0 +1,37 @@
+title: Options parameter not supported error
+type: object
+properties:
+  group:
+    enum:
+      - REQUEST
+    description: Group of error.
+    example: REQUEST
+  type:
+    enum:
+      - CLIENT
+    description: Type of error.
+    example: CLIENT
+  subtype:
+    enum:
+      - PARAMETER_NOT_SUPPORTED
+    description: Subtype of error.
+    example: PARAMETER_NOT_SUPPORTED
+  severity:
+    enum:
+      - critical
+    description: >-
+      Severity of error. <b>Info</b> = cosmetic changes that don't change the
+      overall meaning. <b>Warning</b> = typos and other errors that could affect
+      the meaning. <b>Critical</b> = critical errors.
+    example: critical
+  relatedTo:
+    description: List of the affected inputs.
+    type: array
+    items:
+      type: string
+      description: Error related to.
+  description:
+    enum:
+      - Options parameter is not supported for this endpoint.
+    description: Description of error.
+    example: Options parameter is not supported for this endpoint.

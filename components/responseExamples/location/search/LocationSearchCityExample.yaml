@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: 17f5b211-b5ad-43a7-9737-fee6665d3773
+  code: 1a604c46-3c1d-409b-a519-8af38d1a1afb
   query:
     type: city
     value: Praha
@@ -24,7 +24,7 @@ request:
 response:
   resultsCount: 3
   resultsOffset: 0
-  resultsTotal: null
+  resultsTotal: 10
   results:
     - data:
         country: CZ
@@ -33,6 +33,7 @@ response:
           external: null
         street: null
         number:
+          type: null
           part1: null
           part1Number: null
           part1Letter: null
@@ -41,9 +42,9 @@ response:
           part2Letter: null
           full: null
         streetWithNumber: null
-        city: Praha
+        city: Praha 1
         zip: null
-        full: Praha
+        full: Praha 1
     - data:
         country: CZ
         ids:
@@ -51,6 +52,7 @@ response:
           external: null
         street: null
         number:
+          type: null
           part1: null
           part1Number: null
           part1Letter: null
@@ -59,9 +61,9 @@ response:
           part2Letter: null
           full: null
         streetWithNumber: null
-        city: Praha 4
+        city: Praha 2
         zip: null
-        full: Praha 4
+        full: Praha 2
     - data:
         country: CZ
         ids:
@@ -69,6 +71,7 @@ response:
           external: null
         street: null
         number:
+          type: null
           part1: null
           part1Number: null
           part1Letter: null
@@ -77,7 +80,7 @@ response:
           part2Letter: null
           full: null
         streetWithNumber: null
-        city: Praha 9
+        city: Praha 3
         zip: null
-        full: Praha 9
+        full: Praha 3
 errors: []

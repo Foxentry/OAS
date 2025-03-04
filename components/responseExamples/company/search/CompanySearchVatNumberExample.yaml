@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: f6cada37-7483-48e0-8e92-205a80689d0f
+  code: a25a22b8-1e0f-47f7-adf4-6253a12a90d1
   query:
     type: vatNumber
     value: CZ04997
@@ -40,6 +40,7 @@ response:
               external: '21889945'
             street: Durychova
             number:
+              type: č.p.
               part1: '101'
               part1Number: '101'
               part1Letter: null
@@ -85,6 +86,7 @@ response:
               external: '27325296'
             street: Zápy
             number:
+              type: č.p.
               part1: '271'
               part1Number: '271'
               part1Letter: null
@@ -130,6 +132,7 @@ response:
               external: '21692882'
             street: Elišky Krásnohorské
             number:
+              type: č.p.
               part1: '11'
               part1Number: '11'
               part1Letter: null
@@ -160,51 +163,6 @@ response:
         legalForm:
           type: juridical
     - data:
-        uuid: 2197de26-a98a-451d-b533-da457e73af5b
-        country: CZ
-        name: Niema pawn s.r.o.
-        registrationNumber: '04997557'
-        taxNumber: null
-        vatNumber: CZ04997557
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            ids:
-              internal: f14f8dca-fa2b-427c-b7f2-7b1261dde4c6
-              external: '4406311'
-            street: Spojná
-            number:
-              part1: '383'
-              part1Number: '383'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '383'
-            streetWithNumber: Spojná 383
-            city: Markvartovice
-            zip: '74714'
-            full: Spojná 383, 74714 Markvartovice
-        addressOfficial:
-          data:
-            country: CZ
-            street: Spojná
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '383'
-            streetWithNumber: Spojná 383
-            city: Markvartovice
-            zip: '74714'
-            full: Spojná 383, 74714 Markvartovice
-        legalForm:
-          type: juridical
-    - data:
         uuid: ed969ebb-db8d-427b-8c58-7ecaca7d7f92
         country: CZ
         name: NIKOLUNA s.r.o.
@@ -220,6 +178,7 @@ response:
               external: '8662991'
             street: Pod Nemocnicí
             number:
+              type: č.p.
               part1: '2154'
               part1Number: '2154'
               part1Letter: null
@@ -250,6 +209,52 @@ response:
         legalForm:
           type: juridical
     - data:
+        uuid: 2197de26-a98a-451d-b533-da457e73af5b
+        country: CZ
+        name: Niema pawn s.r.o.
+        registrationNumber: '04997557'
+        taxNumber: null
+        vatNumber: CZ04997557
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            ids:
+              internal: f14f8dca-fa2b-427c-b7f2-7b1261dde4c6
+              external: '4406311'
+            street: Spojná
+            number:
+              type: č.p.
+              part1: '383'
+              part1Number: '383'
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '383'
+            streetWithNumber: Spojná 383
+            city: Markvartovice
+            zip: '74714'
+            full: Spojná 383, 74714 Markvartovice
+        addressOfficial:
+          data:
+            country: CZ
+            street: Spojná
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '383'
+            streetWithNumber: Spojná 383
+            city: Markvartovice
+            zip: '74714'
+            full: Spojná 383, 74714 Markvartovice
+        legalForm:
+          type: juridical
+    - data:
         uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
         country: CZ
         name: AVANTRO s.r.o.
@@ -265,6 +270,7 @@ response:
               external: '22349995'
             street: Thámova
             number:
+              type: č.p.
               part1: '137'
               part1Number: '137'
               part1Letter: null
@@ -310,6 +316,7 @@ response:
               external: '4125631'
             street: Rudimov
             number:
+              type: č.p.
               part1: '105'
               part1Number: '105'
               part1Letter: null
@@ -355,6 +362,7 @@ response:
               external: '42289475'
             street: Pražákova
             number:
+              type: č.p.
               part1: '1008'
               part1Number: '1008'
               part1Letter: null
@@ -400,6 +408,7 @@ response:
               external: '21843139'
             street: Donovalská
             number:
+              type: č.p.
               part1: '1756'
               part1Number: '1756'
               part1Letter: null
@@ -445,6 +454,7 @@ response:
               external: '22653473'
             street: Na zájezdu
             number:
+              type: č.p.
               part1: '2132'
               part1Number: '2132'
               part1Letter: null

@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/validate
-  code: 2891082e-05fb-4cb3-9d71-2a92b397800b
+  code: 33ff1c5a-8d5c-4c3d-b248-b622f09d715e
   query:
     name: AVANTRO
     registrationNumber: '04997476'
@@ -61,6 +61,7 @@ response:
             external: '22349995'
           street: Thámova
           number:
+            type: č.p.
             part1: '137'
             part1Number: '137'
             part1Letter: null

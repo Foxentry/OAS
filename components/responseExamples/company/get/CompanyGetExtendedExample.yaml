@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/get
-  code: 6551a060-23df-4cf3-9e6a-52b434073caf
+  code: 1c4e6bdb-b168-43dd-9fdb-5fc3d672b3c5
   query:
     registrationNumber: '04997476'
     country: CZ
@@ -33,6 +33,7 @@ response:
               external: '22349995'
             street: Thámova
             number:
+              type: č.p.
               part1: '137'
               part1Number: '137'
               part1Letter: null

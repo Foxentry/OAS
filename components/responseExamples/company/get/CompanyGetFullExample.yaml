@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/get
-  code: 72c90f43-71e6-450b-9bb3-9b557750cc47
+  code: 703c9e0b-94c9-4be2-a1d0-f798996c6eed
   query:
     registrationNumber: '04997476'
     country: CZ
@@ -28,6 +28,7 @@ response:
         address:
           data:
             country: CZ
+            state: null
             region: Hlavní město Praha
             district: území Hlavního města Prahy
             cityDistrictSpecial: Praha 8
@@ -48,6 +49,7 @@ response:
               street: '472093'
             street: Thámova
             number:
+              type: č.p.
               part1: '137'
               part1Number: '137'
               part1Letter: null
@@ -60,8 +62,8 @@ response:
             zip: '18600'
             geometry:
               gps:
-                lat: 50.092000490337
-                lon: 14.452736264264
+                lat: 50.0920005
+                lon: 14.4527363
               custom:
                 - type: JTSK
                   coordinates:
@@ -139,7 +141,7 @@ response:
           terminated: null
         employees:
           category: 1-5
-        insolvency: {}
+        insolvency: null
         businessPremises: []
         authority:
           - name: Statutární orgán
@@ -148,6 +150,7 @@ response:
                 address:
                   data:
                     country: CZ
+                    state: null
                     region: Olomoucký kraj
                     district: Přerov
                     cityDistrictSpecial: null
@@ -168,6 +171,7 @@ response:
                       street: '524549'
                     street: V Zahradách
                     number:
+                      type: č.p.
                       part1: '277'
                       part1Number: '277'
                       part1Letter: null
@@ -180,8 +184,8 @@ response:
                     zip: '75111'
                     geometry:
                       gps:
-                        lat: 49.478117480843
-                        lon: 17.510483069891
+                        lat: 49.4781175
+                        lon: 17.5104831
                       custom:
                         - type: JTSK
                           coordinates:

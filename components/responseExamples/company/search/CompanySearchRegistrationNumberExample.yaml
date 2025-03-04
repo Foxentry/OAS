@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: ac9399b6-6321-4449-af01-1cc27224b165
+  code: e4484e7d-1b40-488a-8bde-61fd4652269f
   query:
     type: registrationNumber
     value: '049974'
@@ -40,6 +40,7 @@ response:
               external: '22349995'
             street: Thámova
             number:
+              type: č.p.
               part1: '137'
               part1Number: '137'
               part1Letter: null
@@ -85,6 +86,7 @@ response:
               external: '21715475'
             street: Křižovnická
             number:
+              type: č.p.
               part1: '86'
               part1Number: '86'
               part1Letter: null
@@ -130,6 +132,7 @@ response:
               external: '24534161'
             street: Plovární
             number:
+              type: č.p.
               part1: '478'
               part1Number: '478'
               part1Letter: null
@@ -175,6 +178,7 @@ response:
               external: '628590'
             street: Dřevec
             number:
+              type: č.p.
               part1: '5'
               part1Number: '5'
               part1Letter: null
@@ -220,6 +224,7 @@ response:
               external: '79260667'
             street: Džbánka
             number:
+              type: č.p.
               part1: '558'
               part1Number: '558'
               part1Letter: null
@@ -265,6 +270,7 @@ response:
               external: '24537110'
             street: Husova
             number:
+              type: č.p.
               part1: '786'
               part1Number: '786'
               part1Letter: null
@@ -310,6 +316,7 @@ response:
               external: '21735425'
             street: Trojická
             number:
+              type: č.p.
               part1: '1910'
               part1Number: '1910'
               part1Letter: null
@@ -340,36 +347,37 @@ response:
         legalForm:
           type: juridical
     - data:
-        uuid: 264b970b-4e65-48d4-aa6c-ec26ef02c52c
-        country: SK
-        name: iKom s.r.o.
-        registrationNumber: '50499874'
-        taxNumber: '2120350364'
-        vatNumber: SK2120350364
+        uuid: 0c63af7c-49bc-4d03-9737-ffbc728b75e3
+        country: CZ
+        name: XR Institute s.r.o.
+        registrationNumber: '04999746'
+        taxNumber: null
+        vatNumber: CZ04999746
         vatNumberSpecial: null
         address:
           data:
-            country: SK
+            country: CZ
             ids:
-              internal: b38a5814-f5f6-473a-ae22-64ad7358d24e
-              external: null
-            street: Horná Mičiná
+              internal: ea9fb45c-8b80-41ae-9cd5-a3c18d3819ec
+              external: '83026274'
+            street: Koterovská
             number:
-              part1: '215'
-              part1Number: '215'
+              type: č.p.
+              part1: '2827'
+              part1Number: '2827'
               part1Letter: null
-              part2: null
-              part2Number: null
+              part2: '152'
+              part2Number: '152'
               part2Letter: null
-              full: '215'
-            streetWithNumber: Horná Mičiná 215
-            city: Horná Mičiná
-            zip: '97401'
-            full: Horná Mičiná 215, 97401 Horná Mičiná
+              full: 2827/152
+            streetWithNumber: Koterovská 2827/152
+            city: Plzeň
+            zip: '32600'
+            full: Koterovská 2827/152, 32600 Plzeň
         addressOfficial:
           data:
-            country: SK
-            street: null
+            country: CZ
+            street: Koterovská
             number:
               part1: null
               part1Number: null
@@ -377,44 +385,45 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: '215'
-            streetWithNumber: '215'
-            city: Horná Mičiná
-            zip: '97401'
-            full: null
+              full: 2827/152
+            streetWithNumber: Koterovská 2827/152
+            city: Plzeň
+            zip: '32600'
+            full: Koterovská 2827/152, Východní Předměstí, 32600 Plzeň
         legalForm:
           type: juridical
     - data:
-        uuid: ef4d6623-7180-4752-9c2c-b50e4e702a6b
+        uuid: c2cdcdcd-14ee-4869-94a9-58618b2a25c2
         country: CZ
-        name: Buršíková s.r.o.
-        registrationNumber: '04699874'
+        name: Bohemia Wheels s.r.o.
+        registrationNumber: '04949714'
         taxNumber: null
-        vatNumber: CZ04699874
+        vatNumber: CZ04949714
         vatNumberSpecial: null
         address:
           data:
             country: CZ
             ids:
-              internal: 9275c893-f9d0-478c-9bf2-bf988a0148f4
-              external: '75851270'
-            street: 9. května
+              internal: 54c4cce4-3e0a-49e9-8e2a-499225d677df
+              external: '26106167'
+            street: Ústecká
             number:
-              part1: '3549'
-              part1Number: '3549'
+              type: č.p.
+              part1: '98'
+              part1Number: '98'
               part1Letter: null
-              part2: 88b
-              part2Number: '88'
-              part2Letter: b
-              full: 3549/88b
-            streetWithNumber: 9. května 3549/88b
-            city: Přerov
-            zip: '75002'
-            full: 9. května 3549/88b, 75002 Přerov
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '98'
+            streetWithNumber: Ústecká 98
+            city: Děčín
+            zip: '40502'
+            full: Ústecká 98, 40502 Děčín
         addressOfficial:
           data:
             country: CZ
-            street: 9. května
+            street: Ústecká
             number:
               part1: null
               part1Number: null
@@ -422,44 +431,45 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: 3549/88b
-            streetWithNumber: 9. května 3549/88b
-            city: Přerov
-            zip: '75002'
-            full: 9. května 3549/88b, Přerov I-Město, 75002 Přerov
+              full: '98'
+            streetWithNumber: Ústecká 98
+            city: Děčín
+            zip: '40502'
+            full: Ústecká 98, Děčín XII-Vilsnice, 40502 Děčín
         legalForm:
           type: juridical
     - data:
-        uuid: 5481eca8-b429-423b-ab6d-7bedfabb231d
+        uuid: 14fee83a-59af-482c-917d-13b62acca917
         country: CZ
-        name: Jezdecký klub Xaverov, Přední Poříčí, z.s.
-        registrationNumber: '04999274'
+        name: ADUS technik s.r.o.
+        registrationNumber: '04099745'
         taxNumber: null
-        vatNumber: null
+        vatNumber: CZ04099745
         vatNumberSpecial: null
         address:
           data:
             country: CZ
             ids:
-              internal: 58178c05-fb75-4535-8974-9db07cabc439
-              external: '17255571'
-            street: Přední Poříčí
+              internal: 225b36ee-0963-44f6-9c2b-e00b4d88b7ba
+              external: '24601489'
+            street: V Kamení
             number:
-              part1: '20'
-              part1Number: '20'
+              type: č.p.
+              part1: '681'
+              part1Number: '681'
               part1Letter: null
-              part2: null
-              part2Number: null
+              part2: '26'
+              part2Number: '26'
               part2Letter: null
-              full: '20'
-            streetWithNumber: Přední Poříčí 20
-            city: Březnice
-            zip: '26272'
-            full: Přední Poříčí 20, 26272 Březnice
+              full: 681/26
+            streetWithNumber: V Kamení 681/26
+            city: Plzeň
+            zip: '32600'
+            full: V Kamení 681/26, 32600 Plzeň
         addressOfficial:
           data:
             country: CZ
-            street: Přední Poříčí
+            street: V Kamení
             number:
               part1: null
               part1Number: null
@@ -467,11 +477,11 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: '20'
-            streetWithNumber: Přední Poříčí 20
-            city: Březnice
-            zip: '26272'
-            full: Přední Poříčí 20, 26272 Březnice
+              full: 681/26
+            streetWithNumber: V Kamení 681/26
+            city: Plzeň
+            zip: '32600'
+            full: V Kamení 681/26, Černice, 32600 Plzeň
         legalForm:
           type: juridical
 errors: []

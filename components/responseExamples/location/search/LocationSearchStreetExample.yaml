@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: 3f9da2db-c66c-4db4-bb3d-6411611e3954
+  code: 65ccd6d2-20c7-4646-bf43-ea33eeac28e8
   query:
     type: street
     filter:
@@ -25,7 +25,7 @@ request:
     countryFormat: alpha2
     allowPartialResults: true
 response:
-  resultsCount: 3
+  resultsCount: 2
   resultsOffset: 0
   resultsTotal: null
   results:
@@ -34,26 +34,9 @@ response:
         ids:
           internal: null
           external: null
-        street: Thákurova
-        number:
-          part1: null
-          part1Number: null
-          part1Letter: null
-          part2: null
-          part2Number: null
-          part2Letter: null
-          full: null
-        streetWithNumber: Thákurova
-        city: Praha 6
-        zip: '16000'
-        full: Thákurova, 16000 Praha 6
-    - data:
-        country: CZ
-        ids:
-          internal: null
-          external: null
         street: Thámova
         number:
+          type: null
           part1: null
           part1Number: null
           part1Letter: null
@@ -70,8 +53,9 @@ response:
         ids:
           internal: null
           external: null
-        street: Táhlá
+        street: Thákurova
         number:
+          type: null
           part1: null
           part1Number: null
           part1Letter: null
@@ -79,8 +63,8 @@ response:
           part2Number: null
           part2Letter: null
           full: null
-        streetWithNumber: Táhlá
-        city: Praha 4
-        zip: '14700'
-        full: Táhlá, 14700 Praha 4
+        streetWithNumber: Thákurova
+        city: Praha 6
+        zip: '16000'
+        full: Thákurova, 16000 Praha 6
 errors: []

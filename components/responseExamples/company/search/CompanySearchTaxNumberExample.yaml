@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: bd952c88-a969-4e84-b2f7-32999cd153f4
+  code: 576bcaea-907e-4f68-b494-31f8faafd41a
   query:
     type: taxNumber
     value: '2120884'
@@ -40,6 +40,7 @@ response:
               external: null
             street: R.Dilonga
             number:
+              type: null
               part1: '129'
               part1Number: '129'
               part1Letter: null
@@ -85,6 +86,7 @@ response:
               external: null
             street: M. R. Štefánika
             number:
+              type: null
               part1: '1840'
               part1Number: '1840'
               part1Letter: null
@@ -130,6 +132,7 @@ response:
               external: null
             street: Hájske
             number:
+              type: null
               part1: '95'
               part1Number: '95'
               part1Letter: null
@@ -175,6 +178,7 @@ response:
               external: null
             street: Lichardova
             number:
+              type: null
               part1: '152'
               part1Number: '152'
               part1Letter: null
@@ -220,6 +224,7 @@ response:
               external: null
             street: Ľubeľa
             number:
+              type: null
               part1: '419'
               part1Number: '419'
               part1Letter: null
@@ -265,6 +270,7 @@ response:
               external: null
             street: Strečnianska
             number:
+              type: null
               part1: '2975'
               part1Number: '2975'
               part1Letter: null
@@ -310,6 +316,7 @@ response:
               external: null
             street: Karpatské námestie
             number:
+              type: null
               part1: '7770'
               part1Number: '7770'
               part1Letter: null
@@ -355,6 +362,7 @@ response:
               external: null
             street: Zuzany Chalupovej
             number:
+              type: null
               part1: '3981'
               part1Number: '3981'
               part1Letter: null
@@ -400,6 +408,7 @@ response:
               external: null
             street: Jurská
             number:
+              type: null
               part1: '13770'
               part1Number: '13770'
               part1Letter: null
@@ -445,6 +454,7 @@ response:
               external: null
             street: Němcovej
             number:
+              type: null
               part1: '34'
               part1Number: '34'
               part1Letter: null

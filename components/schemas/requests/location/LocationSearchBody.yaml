@@ -1,7 +1,7 @@
 type: object
 properties:
   customId:
-    type: 
+    type:
       - string
       - "null"
     description: Custom ID assigned by you if you need so.
@@ -74,6 +74,24 @@ properties:
               - "null"
             description: ZIP code.
             example: '130 00'
+          state:
+            type:
+              - string
+              - "null"
+            description: Federal state.
+            example: '130 00'
+          region:
+            type:
+              - string
+              - "null"
+            description: Region.
+            example: 'Hlavní město Praha'
+          district:
+            type:
+              - string
+              - "null"
+            description: District.
+            example: 'Praha 3'
           country:
             type:
               - string

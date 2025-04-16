@@ -26,6 +26,7 @@ properties:
         - $ref: ./../../validationErrors/ErrorFormatGlobal.yaml
         - $ref: ./../../validationErrors/ErrorValueGlobal.yaml
         - $ref: ./../../validationErrors/ErrorValueEmail.yaml
+        - $ref: ./../../validationErrors/ErrorTemporaryInvalidEmail.yaml
 required:
   - isValid
   - errors

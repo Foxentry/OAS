@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: 576bcaea-907e-4f68-b494-31f8faafd41a
+  code: 2565afa1-cd74-4de3-afdb-03404bcd4473
   query:
     type: taxNumber
     value: '2120884'
@@ -35,6 +35,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Trnavský
+            district: Hlohovec
             ids:
               internal: ae6a2bd8-9154-4d5f-8c70-0fcd33eb321e
               external: null
@@ -81,6 +84,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Žilinský
+            district: Dolný Kubín
             ids:
               internal: 0fb2edf4-1f8a-40b6-b4c6-1efb1a452815
               external: null
@@ -127,6 +133,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Nitriansky
+            district: Šaľa
             ids:
               internal: b1af2a3c-4ab4-42bd-89ab-0af72bde3ae8
               external: null
@@ -173,6 +182,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Košický
+            district: Košice IV
             ids:
               internal: 79454954-7212-4263-9dfd-3f7fdf163677
               external: null
@@ -219,6 +231,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Žilinský
+            district: Liptovský Mikuláš
             ids:
               internal: 3a8b143b-a3e7-4d26-af80-e55a0701a7bf
               external: null
@@ -265,6 +280,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Bratislavský
+            district: Bratislava V
             ids:
               internal: f6962c5c-ab85-4ebc-b607-0ee022247be2
               external: null
@@ -311,6 +329,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Bratislavský
+            district: Bratislava III
             ids:
               internal: 446e33b3-5fe3-43f5-8a5c-21329c1c1ede
               external: null
@@ -357,6 +378,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Bratislavský
+            district: Bratislava V
             ids:
               internal: 4562fd83-3f85-41f2-96a6-10456127d008
               external: null
@@ -403,6 +427,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Bratislavský
+            district: Bratislava III
             ids:
               internal: 46d9b3e7-0563-4a51-be68-b08682140987
               external: null
@@ -449,6 +476,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Košický
+            district: Košice I
             ids:
               internal: 1db9b6d7-4fb7-44b2-b7f3-6a744ec607ff
               external: null

@@ -1,0 +1,170 @@
+status: 200
+request:
+  endpoint: location/validate
+  code: 54a06f80-41dc-4fa6-9b39-11126cedd5d3
+  query:
+    streetWithNumber: Thámova 137/16
+    city: Praha 8
+    zip: '18600'
+    country: Czech Republic
+  options:
+    dataSource:
+      - CZ
+      - SK
+      - PL
+    dataScope: basic
+    filterMode: limit
+    resultsLimit: 10
+    cityFormat: basic
+    countryFormat: international
+    zipFormat: false
+    acceptPostOfficeAsCity: false
+response:
+  result:
+    isValid: false
+    proposal: invalidWithCorrection
+    dataTypes:
+      valid:
+        - number.full
+        - street
+      invalid:
+        - city
+        - country
+        - streetWithNumber
+        - zip
+    data:
+      country: null
+      state: null
+      region: null
+      district: null
+      ids:
+        internal: null
+        external: null
+      street: null
+      number:
+        type: null
+        part1: null
+        part1Number: null
+        part1Letter: null
+        part2: null
+        part2Number: null
+        part2Letter: null
+        full: null
+      streetWithNumber: Thámova 137/16
+      city: Praha 8
+      zip: '18600'
+      full: Thámova 137/16, 18600 Praha 8
+    errors:
+      - group: VALUE
+        type: INVALID_COMBINATION
+        subtype: null
+        severity: critical
+        relatedTo:
+          - city
+          - country
+        description: The Combination of values listed in relatedTo section is not
+          valid.
+      - group: VALUE
+        type: INVALID_COMBINATION
+        subtype: null
+        severity: critical
+        relatedTo:
+          - country
+          - streetWithNumber
+        description: The Combination of values listed in relatedTo section is not
+          valid.
+      - group: VALUE
+        type: INVALID_COMBINATION
+        subtype: null
+        severity: critical
+        relatedTo:
+          - city
+          - country
+          - streetWithNumber
+        description: The Combination of values listed in relatedTo section is not
+          valid.
+      - group: VALUE
+        type: INVALID_COMBINATION
+        subtype: null
+        severity: critical
+        relatedTo:
+          - country
+          - zip
+        description: The Combination of values listed in relatedTo section is not
+          valid.
+      - group: VALUE
+        type: INVALID_COMBINATION
+        subtype: null
+        severity: critical
+        relatedTo:
+          - city
+          - country
+          - zip
+        description: The Combination of values listed in relatedTo section is not
+          valid.
+      - group: VALUE
+        type: INVALID_COMBINATION
+        subtype: null
+        severity: critical
+        relatedTo:
+          - country
+          - streetWithNumber
+          - zip
+        description: The Combination of values listed in relatedTo section is not
+          valid.
+      - group: VALUE
+        type: INVALID_COMBINATION
+        subtype: null
+        severity: critical
+        relatedTo:
+          - city
+          - country
+          - streetWithNumber
+          - zip
+        description: The Combination of values listed in relatedTo section is not
+          valid.
+  resultCorrected:
+    isValid: true
+    dataTypes:
+      valid:
+        - city
+        - country
+        - number.full
+        - street
+        - streetWithNumber
+        - zip
+      invalid: []
+    data:
+      country: Czech republic
+      state: null
+      region: Hlavní město Praha
+      district: území Hlavního města Prahy
+      ids:
+        internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+        external: '22349995'
+      street: Thámova
+      number:
+        type: č.p.
+        part1: '137'
+        part1Number: '137'
+        part1Letter: null
+        part2: '16'
+        part2Number: '16'
+        part2Letter: null
+        full: 137/16
+      streetWithNumber: Thámova 137/16
+      city: Praha 8
+      zip: '18600'
+      full: Thámova 137/16, 18600 Praha 8
+    errors: []
+    fixes:
+      - group: VALUE
+        type: CHANGED
+        subtype: null
+        data:
+          typeFrom: country
+          type: country
+          valueFrom: Czech Republic
+          value: Czech republic
+  suggestions: []
+errors: []

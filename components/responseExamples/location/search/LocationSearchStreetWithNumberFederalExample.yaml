@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: 680ec33e-ca43-41be-87ba-5b5e3a7bcf09
+  code: 59bf426d-353d-4fae-8189-393b52b24e5a
   query:
     type: streetWithNumber
     filter:
@@ -25,12 +25,15 @@ request:
     countryFormat: alpha2
     allowPartialResults: true
 response:
-  resultsCount: 1
+  resultsCount: 3
   resultsOffset: 0
   resultsTotal: null
   results:
     - data:
         country: DE
+        state: Niedersachsen
+        region: Peine
+        district: null
         ids:
           internal: bc0e60e6-94dd-4ead-b9b4-715eb7a4265e
           external: null
@@ -48,4 +51,48 @@ response:
         city: Peine
         zip: '31224'
         full: Amselweg 12H, 31224 Peine
+    - data:
+        country: DE
+        state: Niedersachsen
+        region: Peine
+        district: null
+        ids:
+          internal: 9ec5d7c2-edbc-43ea-be3c-7e3db0525c42
+          external: null
+        street: Haselweg
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: '12'
+        streetWithNumber: Haselweg 12
+        city: Peine
+        zip: '31228'
+        full: Haselweg 12, 31228 Peine
+    - data:
+        country: DE
+        state: Niedersachsen
+        region: Peine
+        district: null
+        ids:
+          internal: f151a4cb-2bee-4f41-9464-4e46e5c07fed
+          external: null
+        street: Haselweg
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: '14'
+        streetWithNumber: Haselweg 14
+        city: Peine
+        zip: '31228'
+        full: Haselweg 14, 31228 Peine
 errors: []

@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: a25a22b8-1e0f-47f7-adf4-6253a12a90d1
+  code: 8750dbe1-fcd1-4ece-b341-16fd34801ff5
   query:
     type: vatNumber
     value: CZ04997
@@ -35,6 +35,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: 8ffc809c-11f0-44ae-a949-ee6dd840c1dc
               external: '21889945'
@@ -81,6 +84,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Středočeský kraj
+            district: Praha-východ
             ids:
               internal: f227d8d5-09ba-4689-97bb-a9f8fb7a2dd1
               external: '27325296'
@@ -127,6 +133,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: 5cfda44d-273b-4068-b600-c0454dce8f37
               external: '21692882'
@@ -173,6 +182,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Středočeský kraj
+            district: Rakovník
             ids:
               internal: ae1e3cc3-9023-463c-95b7-f543b733016f
               external: '8662991'
@@ -219,6 +231,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Moravskoslezský kraj
+            district: Opava
             ids:
               internal: f14f8dca-fa2b-427c-b7f2-7b1261dde4c6
               external: '4406311'
@@ -265,6 +280,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
               external: '22349995'
@@ -311,6 +329,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Zlínský kraj
+            district: Zlín
             ids:
               internal: 19582178-658f-40b6-97c1-53d960b4e1e3
               external: '4125631'
@@ -357,6 +378,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Jihomoravský kraj
+            district: Brno-město
             ids:
               internal: 3cbaf324-011b-48f3-95dd-f2c60b5905f5
               external: '42289475'
@@ -403,6 +427,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: 86ef6d6d-79f8-4c4b-9328-5179c0725b10
               external: '21843139'
@@ -449,6 +476,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: c3c2369b-c2d0-4c5c-910c-20116e7395c2
               external: '22653473'

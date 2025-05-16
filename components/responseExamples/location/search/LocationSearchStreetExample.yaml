@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: 65ccd6d2-20c7-4646-bf43-ea33eeac28e8
+  code: 3361c398-a943-4ed9-bfbf-790e0cdb93b1
   query:
     type: street
     filter:
@@ -31,6 +31,9 @@ response:
   results:
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: null
           external: null
@@ -50,6 +53,9 @@ response:
         full: Thámova, 18600 Praha 8
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: null
           external: null

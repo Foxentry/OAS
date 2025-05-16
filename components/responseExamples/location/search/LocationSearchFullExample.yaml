@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: d8813830-6434-41f6-8118-a1646db74365
+  code: 45e56719-493d-411f-ad98-ee2dcca8f0df
   query:
     type: full
     value: Jeseniova, 13000 Praha 3
@@ -28,6 +28,9 @@ response:
   results:
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: 9589b261-05d7-418d-b6e0-561786a80f68
           external: '21769435'
@@ -47,6 +50,9 @@ response:
         full: Jeseniova 246/3, 13000 Praha 3
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: 455f3ab0-7e54-44b9-9a56-0d67a14b6dba
           external: '21787018'
@@ -66,6 +72,9 @@ response:
         full: Jeseniova 1817/81, 13000 Praha 3
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: f458ca96-01af-4f49-8ba9-1fa8af73c711
           external: '21787107'

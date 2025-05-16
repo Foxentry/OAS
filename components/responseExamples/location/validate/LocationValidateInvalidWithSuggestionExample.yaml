@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/validate
-  code: f6288c83-a107-4bd5-a0fa-848e0317eab3
+  code: d76c75f3-47c4-4f04-b9a3-c90e96d38432
   query:
     streetWithNumber: Olšanská 2898/4
     city: Praha 3
@@ -32,6 +32,9 @@ response:
         - streetWithNumber
     data:
       country: null
+      state: null
+      region: null
+      district: null
       ids:
         internal: null
         external: null
@@ -70,6 +73,9 @@ response:
         invalid: []
       data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: 8a978ce4-d769-456e-abdd-7b6174848237
           external: '75429195'
@@ -116,6 +122,9 @@ response:
         invalid: []
       data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: 33bb5444-73c5-474e-8ce7-2f157b947230
           external: '75429411'
@@ -162,6 +171,9 @@ response:
         invalid: []
       data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: f07afd40-b8be-45e5-89ae-828ce059f719
           external: '75429446'
@@ -208,6 +220,9 @@ response:
         invalid: []
       data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: 37b9bfcc-733b-49e0-ae68-c32d2634732e
           external: '75429152'
@@ -254,6 +269,9 @@ response:
         invalid: []
       data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: 2b57d49a-4e21-4c09-aba4-211fbc49ba93
           external: '75428920'
@@ -300,6 +318,9 @@ response:
         invalid: []
       data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: d56e5b6b-6742-4978-ba01-aaa0929910a0
           external: '75429098'
@@ -346,6 +367,9 @@ response:
         invalid: []
       data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: 9266190a-76da-45e5-86b4-d168d631ddf8
           external: '75429462'
@@ -392,6 +416,9 @@ response:
         invalid: []
       data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: 0794e4b1-2ac8-498a-b02f-23b1e59b7178
           external: '75429527'
@@ -438,6 +465,9 @@ response:
         invalid: []
       data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: a3c8146d-ff67-4e97-80bc-40cacdd06a4d
           external: '75429551'

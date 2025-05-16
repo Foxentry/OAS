@@ -4,7 +4,7 @@
       "streetWithNumber": "Thámova 137/16",
       "city": "Praha 8",
       "zip": "18600",
-      "country": "CZ"
+      "country": "Česko"
     },
     "options": {
       "dataScope": "basic",
@@ -14,7 +14,7 @@
         "PL"
       ],
       "zipFormat": false,
-      "countryFormat": "alpha2",
+      "countryFormat": "localShortened",
       "cityFormat": "basic",
       "resultsLimit": 10,
       "acceptPostOfficeAsCity": false

@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: ea1c9dc2-264a-4459-b031-153899619330
+  code: b32e1c1a-5f70-4222-9555-ba07f45a2a06
   query:
     type: zip
     value: '10000'
@@ -22,12 +22,15 @@ request:
     countryFormat: alpha2
     allowPartialResults: true
 response:
-  resultsCount: 2
+  resultsCount: 18
   resultsOffset: 0
   resultsTotal: null
   results:
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: null
           external: null
@@ -47,6 +50,273 @@ response:
         full: 10000 Praha
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha
+        zip: '10100'
+        full: 10100 Praha
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha 10
+        zip: '10200'
+        full: 10200 Praha 10
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha 10
+        zip: '10300'
+        full: 10300 Praha 10
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha 10
+        zip: '10400'
+        full: 10400 Praha 10
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha 10
+        zip: '10600'
+        full: 10600 Praha 10
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha 10
+        zip: '10700'
+        full: 10700 Praha 10
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha 10
+        zip: '10800'
+        full: 10800 Praha 10
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha 10
+        zip: '10900'
+        full: 10900 Praha 10
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha
+        zip: '11000'
+        full: 11000 Praha
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha
+        zip: '12000'
+        full: 12000 Praha
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha
+        zip: '13000'
+        full: 13000 Praha
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha
+        zip: '14000'
+        full: 14000 Praha
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: null
           external: null
@@ -64,4 +334,92 @@ response:
         city: Praha
         zip: '15000'
         full: 15000 Praha
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha 6
+        zip: '16000'
+        full: 16000 Praha 6
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha 7
+        zip: '17000'
+        full: 17000 Praha 7
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha
+        zip: '18000'
+        full: 18000 Praha
+    - data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: null
+        city: Praha
+        zip: '19000'
+        full: 19000 Praha
 errors: []

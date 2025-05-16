@@ -2,6 +2,7 @@ type: object
 description: Query options.
 properties:
   dataScope:
+    type: string
     enum:
       - basic
       - extended

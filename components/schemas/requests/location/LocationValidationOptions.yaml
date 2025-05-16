@@ -38,6 +38,7 @@ properties:
 
   dataScope:
     description: Data scope of returned data.
+    type: string
     enum:
       - basic
       - full

@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: e4484e7d-1b40-488a-8bde-61fd4652269f
+  code: ffc0fc72-d0ee-456b-bedd-96aaed17e0b7
   query:
     type: registrationNumber
     value: '049974'
@@ -35,6 +35,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
               external: '22349995'
@@ -81,6 +84,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: a31b9a04-efb2-4351-8b05-5ae90b185909
               external: '21715475'
@@ -127,6 +133,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Plzeňský kraj
+            district: Plzeň-město
             ids:
               internal: bac4bac1-8d64-4c8e-b937-fa417f7512ab
               external: '24534161'
@@ -173,6 +182,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Plzeňský kraj
+            district: Plzeň-sever
             ids:
               internal: 61271a32-4db2-411e-a40f-9d5860ac3354
               external: '628590'
@@ -219,6 +231,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Středočeský kraj
+            district: Praha-východ
             ids:
               internal: ee6fa3db-88a0-479b-990b-ae157f4b579d
               external: '79260667'
@@ -265,6 +280,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Plzeňský kraj
+            district: Plzeň-město
             ids:
               internal: 4c66b59f-cdc1-4c8f-b0f8-6294e2fbd6ac
               external: '24537110'
@@ -311,6 +329,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: 51e00536-c5be-4b96-b6fb-5ff131a87707
               external: '21735425'
@@ -357,6 +378,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Plzeňský kraj
+            district: Plzeň-město
             ids:
               internal: ea9fb45c-8b80-41ae-9cd5-a3c18d3819ec
               external: '83026274'
@@ -403,6 +427,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Ústecký kraj
+            district: Děčín
             ids:
               internal: 54c4cce4-3e0a-49e9-8e2a-499225d677df
               external: '26106167'
@@ -449,6 +476,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Plzeňský kraj
+            district: Plzeň-město
             ids:
               internal: 225b36ee-0963-44f6-9c2b-e00b4d88b7ba
               external: '24601489'

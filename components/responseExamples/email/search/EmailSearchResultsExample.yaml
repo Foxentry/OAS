@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: email/search
-  code: ed8faecc-b47e-4ef0-adc1-edeee8ff2268
+  code: 0357ef34-a16f-4171-b99d-2c50b28a7019
   query:
     value: info
   options:
@@ -10,18 +10,18 @@ response:
   resultsCount: 5
   results:
     - data:
+        email: info@seznam.cz
+        domain: seznam.cz
+    - data:
         email: info@gmail.com
         domain: gmail.com
     - data:
-        email: info@icloud.com
-        domain: icloud.com
+        email: info@email.cz
+        domain: email.cz
     - data:
-        email: info@outlook.com
-        domain: outlook.com
+        email: info@centrum.cz
+        domain: centrum.cz
     - data:
-        email: info@yahoo.com
-        domain: yahoo.com
-    - data:
-        email: info@yahoo.fr
-        domain: yahoo.fr
+        email: info@post.cz
+        domain: post.cz
 errors: []

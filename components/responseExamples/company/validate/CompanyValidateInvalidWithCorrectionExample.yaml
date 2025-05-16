@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/validate
-  code: 33ff1c5a-8d5c-4c3d-b248-b622f09d715e
+  code: fc17c74d-767e-4bb4-b884-a953de8b4175
   query:
     name: AVANTRO
     registrationNumber: '04997476'
@@ -56,6 +56,9 @@ response:
       address:
         data:
           country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
           ids:
             internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
             external: '22349995'

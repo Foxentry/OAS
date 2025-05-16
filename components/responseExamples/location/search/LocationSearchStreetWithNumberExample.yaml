@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/search
-  code: a55d6e1d-0ad8-4618-8b57-3f194baada32
+  code: 487d4332-6fd5-46de-b5f1-69ce5c4f6c26
   query:
     type: streetWithNumber
     filter:
@@ -31,6 +31,9 @@ response:
   results:
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: 93d15062-1b34-48c0-a78e-546e8fac0c11
           external: '26766540'
@@ -50,6 +53,9 @@ response:
         full: Jeseniova 2770/56, 13000 Praha 3
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: fdc4067e-83ed-4e61-b9f1-4e9048db731f
           external: '75256690'
@@ -69,6 +75,9 @@ response:
         full: Jeseniova 2760/56f, 13000 Praha 3
     - data:
         country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
         ids:
           internal: e5c4365c-f223-4e54-a820-17e74390b40f
           external: '75195364'

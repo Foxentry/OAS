@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: email/validate
-  code: ba871b55-2e6f-48c7-bac9-398707d5eead
+  code: e7d47c3a-3ce7-4e7d-9681-a9f9b4c8deee
   query:
     email: info@foxentry.com
   options:
@@ -16,7 +16,10 @@ response:
       user: info
       domain: foxentry.com
       email: info@foxentry.com
-    flags: {}
+    flags:
+      isCatchAllServer: false
+      isDisposableEmailAddress: false
+      isFreemail: false
     errors: []
   resultCorrected: null
   suggestions: []

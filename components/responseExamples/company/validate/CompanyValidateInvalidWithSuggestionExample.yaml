@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/validate
-  code: 8459170f-925f-419b-9b4f-06f092858b9c
+  code: cd072d76-712c-4e48-a597-be3f30add2fa
   query:
     registrationNumber: '0499747'
     country: CZ
@@ -56,6 +56,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
               external: '22349995'
@@ -113,6 +116,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Moravskoslezský kraj
+            district: Bruntál
             ids:
               internal: 701a876d-d3e5-42b8-8be3-05559ccf7b6b
               external: '2833816'
@@ -160,63 +166,6 @@ response:
             value: '04799747'
     - isValid: true
       data:
-        uuid: 9433bf10-3ba4-448d-bd99-4bb11e8600ff
-        country: CZ
-        name: Martina Suková
-        registrationNumber: '04909747'
-        taxNumber: null
-        vatNumber: null
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            ids:
-              internal: 9fa792e7-c439-4201-b2ae-86094c9c035f
-              external: '16354486'
-            street: Křížkovského
-            number:
-              type: č.p.
-              part1: '1656'
-              part1Number: '1656'
-              part1Letter: null
-              part2: '8'
-              part2Number: '8'
-              part2Letter: null
-              full: 1656/8
-            streetWithNumber: Křížkovského 1656/8
-            city: Šternberk
-            zip: '78501'
-            full: Křížkovského 1656/8, 78501 Šternberk
-        addressOfficial:
-          data:
-            country: CZ
-            street: Křížkovského
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 1656/8
-            streetWithNumber: Křížkovského 1656/8
-            city: Šternberk
-            zip: '78501'
-            full: Křížkovského 1656/8, 78501 Šternberk
-        legalForm:
-          type: physical
-      errors: []
-      fixes:
-        - group: VALUE
-          type: CHANGED
-          subtype: TYPO
-          data:
-            typeFrom: registrationNumber
-            type: registrationNumber
-            valueFrom: '0499747'
-            value: '04909747'
-    - isValid: true
-      data:
         uuid: 131effcb-e6a6-4a39-ad9d-c8087524857a
         country: CZ
         name: BE SOCKS s.r.o.
@@ -227,6 +176,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: 0e0c7033-c83d-4b64-bbaa-f69fed29cec5
               external: '22659251'
@@ -284,6 +236,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: a15fb931-0572-48a4-a592-1167c44dc406
               external: '22623400'
@@ -341,6 +296,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Středočeský kraj
+            district: Praha-východ
             ids:
               internal: 95a25831-6615-4b07-9ef0-a7fd8cb0c21e
               external: '25528807'
@@ -398,6 +356,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Plzeňský kraj
+            district: Plzeň-město
             ids:
               internal: 4c66b59f-cdc1-4c8f-b0f8-6294e2fbd6ac
               external: '24537110'
@@ -443,4 +404,64 @@ response:
             type: registrationNumber
             valueFrom: '0499747'
             value: '04997417'
+    - isValid: true
+      data:
+        uuid: 9433bf10-3ba4-448d-bd99-4bb11e8600ff
+        country: CZ
+        name: Martina Suková
+        registrationNumber: '04909747'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            state: null
+            region: Olomoucký kraj
+            district: Olomouc
+            ids:
+              internal: 9fa792e7-c439-4201-b2ae-86094c9c035f
+              external: '16354486'
+            street: Křížkovského
+            number:
+              type: č.p.
+              part1: '1656'
+              part1Number: '1656'
+              part1Letter: null
+              part2: '8'
+              part2Number: '8'
+              part2Letter: null
+              full: 1656/8
+            streetWithNumber: Křížkovského 1656/8
+            city: Šternberk
+            zip: '78501'
+            full: Křížkovského 1656/8, 78501 Šternberk
+        addressOfficial:
+          data:
+            country: CZ
+            street: Křížkovského
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 1656/8
+            streetWithNumber: Křížkovského 1656/8
+            city: Šternberk
+            zip: '78501'
+            full: Křížkovského 1656/8, 78501 Šternberk
+        legalForm:
+          type: physical
+      errors: []
+      fixes:
+        - group: VALUE
+          type: CHANGED
+          subtype: TYPO
+          data:
+            typeFrom: registrationNumber
+            type: registrationNumber
+            valueFrom: '0499747'
+            value: '04909747'
 errors: []

@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: a60a829c-7be4-4338-9cb2-a2a8c818bd50
+  code: 27484525-57cd-4075-b63f-f3890003b3ad
   query:
     type: name
     value: Avantro
@@ -35,6 +35,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
               external: '22349995'
@@ -71,52 +74,6 @@ response:
         legalForm:
           type: juridical
     - data:
-        uuid: 53890dc6-8d68-483c-b636-7c3cba1c5208
-        country: CZ
-        name: AVENTRO, a.s.
-        registrationNumber: '02265982'
-        taxNumber: null
-        vatNumber: CZ02265982
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            ids:
-              internal: dadb39a6-7e06-42fd-8b92-aca919e1b34a
-              external: '10876537'
-            street: Práče
-            number:
-              type: č.p.
-              part1: '168'
-              part1Number: '168'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '168'
-            streetWithNumber: Práče 168
-            city: Práče
-            zip: '67161'
-            full: Práče 168, 67161 Práče
-        addressOfficial:
-          data:
-            country: CZ
-            street: Práče
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '168'
-            streetWithNumber: Práče 168
-            city: Práče
-            zip: '67161'
-            full: č.p. 168, 67161 Práče
-        legalForm:
-          type: juridical
-    - data:
         uuid: df80bd9e-4a48-494b-8203-6cee1dadff70
         country: CZ
         name: AVANERO s.r.o.
@@ -127,6 +84,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: f73b8ee7-8965-42d4-86e7-e71dd8db9e7d
               external: '21700966'
@@ -163,37 +123,40 @@ response:
         legalForm:
           type: juridical
     - data:
-        uuid: 392f1833-4e53-477f-af96-85f21418be7a
-        country: SK
-        name: Avanto, s. r. o.
-        registrationNumber: '56533136'
-        taxNumber: '2122343674'
-        vatNumber: null
+        uuid: 53890dc6-8d68-483c-b636-7c3cba1c5208
+        country: CZ
+        name: AVENTRO, a.s.
+        registrationNumber: '02265982'
+        taxNumber: null
+        vatNumber: CZ02265982
         vatNumberSpecial: null
         address:
           data:
-            country: SK
+            country: CZ
+            state: null
+            region: Jihomoravský kraj
+            district: Znojmo
             ids:
-              internal: 726f0da3-35c2-4520-9aec-feb8565f2fc4
-              external: null
-            street: Kopečná
+              internal: dadb39a6-7e06-42fd-8b92-aca919e1b34a
+              external: '10876537'
+            street: Práče
             number:
-              type: null
-              part1: '252'
-              part1Number: '252'
+              type: č.p.
+              part1: '168'
+              part1Number: '168'
               part1Letter: null
-              part2: '2'
-              part2Number: '2'
+              part2: null
+              part2Number: null
               part2Letter: null
-              full: 252/2
-            streetWithNumber: Kopečná 252/2
-            city: Poprad
-            zip: '05801'
-            full: Kopečná 252/2, 05801 Poprad
+              full: '168'
+            streetWithNumber: Práče 168
+            city: Práče
+            zip: '67161'
+            full: Práče 168, 67161 Práče
         addressOfficial:
           data:
-            country: SK
-            street: Kopečná
+            country: CZ
+            street: Práče
             number:
               part1: null
               part1Number: null
@@ -201,11 +164,11 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: '2'
-            streetWithNumber: Kopečná 2
-            city: Poprad
-            zip: '05801'
-            full: null
+              full: '168'
+            streetWithNumber: Práče 168
+            city: Práče
+            zip: '67161'
+            full: č.p. 168, 67161 Práče
         legalForm:
           type: juridical
     - data:
@@ -219,6 +182,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: 50bea978-08a9-44b7-9acd-2ca7547194fa
               external: '27382800'
@@ -255,6 +221,55 @@ response:
         legalForm:
           type: juridical
     - data:
+        uuid: 392f1833-4e53-477f-af96-85f21418be7a
+        country: SK
+        name: Avanto, s. r. o.
+        registrationNumber: '56533136'
+        taxNumber: '2122343674'
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            state: null
+            region: Prešovský
+            district: Poprad
+            ids:
+              internal: 726f0da3-35c2-4520-9aec-feb8565f2fc4
+              external: null
+            street: Kopečná
+            number:
+              type: null
+              part1: '252'
+              part1Number: '252'
+              part1Letter: null
+              part2: '2'
+              part2Number: '2'
+              part2Letter: null
+              full: 252/2
+            streetWithNumber: Kopečná 252/2
+            city: Poprad
+            zip: '05801'
+            full: Kopečná 252/2, 05801 Poprad
+        addressOfficial:
+          data:
+            country: SK
+            street: Kopečná
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '2'
+            streetWithNumber: Kopečná 2
+            city: Poprad
+            zip: '05801'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
         uuid: 6e2ab83d-84b9-430f-b785-7a4aa522c022
         country: SK
         name: Avant PRO s. r. o.
@@ -265,6 +280,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Bratislavský
+            district: Bratislava III
             ids:
               internal: 446e33b3-5fe3-43f5-8a5c-21329c1c1ede
               external: null
@@ -311,6 +329,9 @@ response:
         address:
           data:
             country: SK
+            state: null
+            region: Prešovský
+            district: Bardejov
             ids:
               internal: af46c126-5461-49b8-86cd-0055dbf31bb5
               external: null
@@ -357,6 +378,9 @@ response:
         address:
           data:
             country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
             ids:
               internal: c72b42db-874d-4394-9dbf-ca8cee3e204d
               external: '22600698'
@@ -393,37 +417,40 @@ response:
         legalForm:
           type: juridical
     - data:
-        uuid: 9efb95ac-ec00-44ef-b111-013c8e4edc5e
+        uuid: 0b4e3376-07e7-4bdc-bd71-2c4b69583fec
         country: CZ
-        name: AVATRON s.r.o.
-        registrationNumber: '28392477'
+        name: Aveniro s.r.o.
+        registrationNumber: '27289591'
         taxNumber: null
-        vatNumber: CZ28392477
+        vatNumber: CZ27289591
         vatNumberSpecial: null
         address:
           data:
             country: CZ
+            state: null
+            region: Liberecký kraj
+            district: Česká Lípa
             ids:
-              internal: 103af604-6386-4579-b59b-797c5151cb12
-              external: '22553517'
-            street: U transformátoru
+              internal: 01d1ac4e-cdeb-4617-83ca-dd98da58215e
+              external: '13113101'
+            street: B. Egermanna
             number:
               type: č.p.
-              part1: '126'
-              part1Number: '126'
+              part1: '471'
+              part1Number: '471'
               part1Letter: null
-              part2: '6'
-              part2Number: '6'
+              part2: null
+              part2Number: null
               part2Letter: null
-              full: 126/6
-            streetWithNumber: U transformátoru 126/6
-            city: Praha 10
-            zip: '10700'
-            full: U transformátoru 126/6, 10700 Praha 10
+              full: '471'
+            streetWithNumber: B. Egermanna 471
+            city: Nový Bor
+            zip: '47301'
+            full: B. Egermanna 471, 47301 Nový Bor
         addressOfficial:
           data:
             country: CZ
-            street: U transformátoru
+            street: B. Egermanna
             number:
               part1: null
               part1Number: null
@@ -431,45 +458,48 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: 126/6
-            streetWithNumber: U transformátoru 126/6
-            city: Praha
-            zip: '10700'
-            full: U transformátoru 126/6, Dubeč, 10700 Praha 10
+              full: '471'
+            streetWithNumber: B. Egermanna 471
+            city: Nový Bor
+            zip: '47301'
+            full: B. Egermanna 471, Arnultovice, 47301 Nový Bor
         legalForm:
           type: juridical
     - data:
-        uuid: 160bb137-cab5-4de6-8d41-7be2c70ae8a4
+        uuid: abe94e94-8bdb-4cee-a26e-c6bccb6053a1
         country: CZ
-        name: Avangor, s.r.o.
-        registrationNumber: '28438990'
+        name: KVANPRO s.r.o.
+        registrationNumber: '06814522'
         taxNumber: null
-        vatNumber: CZ28438990
+        vatNumber: CZ06814522
         vatNumberSpecial: null
         address:
           data:
             country: CZ
+            state: null
+            region: Pardubický kraj
+            district: Pardubice
             ids:
-              internal: c0525e64-bb0c-4cf9-94c7-a5c9f1d57e9b
-              external: '25120450'
-            street: Ohradní
+              internal: 8ab7971b-86ee-495b-ab4d-86364163b33e
+              external: '7623160'
+            street: Stéblová
             number:
               type: č.p.
-              part1: '1421'
-              part1Number: '1421'
+              part1: '25'
+              part1Number: '25'
               part1Letter: null
-              part2: 63a
-              part2Number: '63'
-              part2Letter: a
-              full: 1421/63a
-            streetWithNumber: Ohradní 1421/63a
-            city: Praha 4
-            zip: '14000'
-            full: Ohradní 1421/63a, 14000 Praha 4
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '25'
+            streetWithNumber: Stéblová 25
+            city: Stéblová
+            zip: '53345'
+            full: Stéblová 25, 53345 Stéblová
         addressOfficial:
           data:
             country: CZ
-            street: Ohradní
+            street: Stéblová
             number:
               part1: null
               part1Number: null
@@ -477,11 +507,11 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: 1421/63a
-            streetWithNumber: Ohradní 1421/63a
-            city: Praha
-            zip: '14000'
-            full: Ohradní 1421/63a, Michle, 14000 Praha 4
+              full: '25'
+            streetWithNumber: Stéblová 25
+            city: Stéblová
+            zip: '53345'
+            full: č.p. 25, 53345 Stéblová
         legalForm:
           type: juridical
 errors: []

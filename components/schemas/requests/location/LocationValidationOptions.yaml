@@ -53,9 +53,9 @@ properties:
 
   countryFormat:
     description: >-
-      This option determines the format in which the country is returned.
-      Choices include local and international variants with their shortened
-      counterparts as well as ISO 3166 alpha codes.
+      This option determines the format in which the country should be returned. If the country in query differs, 
+      it will be marked as invalid and fixed. Supported formats: <b>alpha2</b> = CZ, <b>alpha3</b> = CZE, <b>local</b> = Česká republika, 
+      <b>international</b> = Czech republic, <b>localShortened</b> = Česko, <b>internationalShortened</b> = Czechia.
     type: string
     enum:
       - alpha2

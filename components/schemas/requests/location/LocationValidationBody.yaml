@@ -86,9 +86,8 @@ properties:
           - string
           - "null"
         description: >-
-          Country code. Supported values are include local (<b>Česká republika</b>) and international (<b>Czech republic</b>) 
-          variants with their shortened counterparts (<b>Česko, Czechia</b>). You can use ISO 3166 alpha codes (CZ, CZE) as well. 
-          The value does not need to match format specified in options.countryFormat.
+          Country code. Supported formats: <b>alpha2</b> = CZ, <b>alpha3</b> = CZE, <b>local</b> = Česká republika, 
+          <b>international</b> = Czech republic, <b>localShortened</b> = Česko, <b>internationalShortened</b> = Czechia.
         example: CZ
   options:
     allOf:

@@ -20,12 +20,22 @@ properties:
       type: string
       example: CZ
     default:
+      - AL
       - AT
+      - BA
+      - BE
+      - BG
       - CH
       - CZ
       - DE
+      - DK
+      - GR
       - HR
       - HU
+      - IT
+      - ME
+      - MK
+      - NL
       - PL
       - RO
       - RS

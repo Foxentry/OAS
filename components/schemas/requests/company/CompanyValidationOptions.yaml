@@ -3,24 +3,56 @@ allOf:
   - type: object
     description: Query options.
     properties:
-        legalFormType:
-          description: 'This option filters results by the legal form type.'
-          type:
-            - string
-            - "null"
-          enum:
-            - juridical
-            - physical
-            - any
-          default: any
-          example: any
-        filterMode:
-          type: string
-          description: >-
-            <b>Prefer</b> = prefer results matching the filter parameters,
-            <b>limit</b> = limit to results matching the filter parameters.
-          enum:
-            - limit
-            - prefer
-          example: limit
-          default: limit
+      legalFormType:
+        description: 'This option filters results by the legal form type.'
+        type:
+          - string
+          - "null"
+        enum:
+          - juridical
+          - physical
+          - any
+        default: any
+        example: any
+      filterMode:
+        type: string
+        description: >-
+          <b>Prefer</b> = prefer results matching the filter parameters,
+          <b>limit</b> = limit to results matching the filter parameters.
+        enum:
+          - limit
+          - prefer
+        example: limit
+        default: limit
+
+      correctionMode:
+        description: >-
+          This option determines how automatic corrections are handled. You can choose between
+          <b>full</b> to allow all corrections, <b>format</b> to fix formatting only, 
+          <b>suggestion</b> to return corrected data in suggestions, or <b>none</b> 
+          for no corrections to be applied. Quality of data differs between countries, therefore
+          it might be desirable to limit the correction mode in some cases.
+        type: string
+        enum:
+          - full
+          - format
+          - suggestion
+          - none
+        default: full
+        example: full
+
+      correctionModeCrossCountry:
+        description: >-
+          This option determines how automatic corrections are handled when a result from another country
+          matches your query. You can choose between <b>full</b> to allow all corrections, <b>format</b> 
+          to fix formatting only, <b>suggestion</b> to return corrected data in suggestions, or <b>none</b> 
+          for no corrections to be applied. Quality of data differs between countries, therefore it might 
+          be desirable to limit the correction mode in some cases.
+        type: string
+        enum:
+          - full
+          - format
+          - suggestion
+          - none
+        default: format
+        example: format

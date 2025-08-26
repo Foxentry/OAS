@@ -8,6 +8,7 @@ properties:
     example: SYNTAX
   type:
     enum:
+      - INVALID
       - VALUE_PART
       - VALUE_PART_EXTRA
       - VALUE_PART_MISSING
@@ -19,6 +20,7 @@ properties:
       - DOMAIN
       - AT_SIGN
       - TLD
+      - null
     description: Subtype of error.
     example: DOMAIN
   severity:
@@ -26,6 +28,7 @@ properties:
       - info
       - warning
       - critical
+      - null
     description: >-
       Severity of error. <b>Info</b> = cosmetic changes that don't change the
       overall meaning. <b>Warning</b> = typos and other errors that could affect
@@ -45,5 +48,6 @@ properties:
       - Value does not contain '@' sign.
       - Value is missing the top level domain.
       - The TLD part of the value is placed in the wrong position.
+      - Value has invalid syntax.
     description: Description of error.
     example: The domain contains invalid syntax.

@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: phone/validate
-  code: 452c5371-302b-4e83-b6fe-d0ee714707ab
+  code: 4dada32d-c8a0-4d15-b805-36aebce1d90e
   query:
     numberWithPrefix: '+48728984101'
   options:
@@ -10,6 +10,7 @@ request:
     preferredPrefixes: []
     defaultPrefix: null
     formatNumber: false
+    correctionMode: full
 response:
   result:
     isValid: true

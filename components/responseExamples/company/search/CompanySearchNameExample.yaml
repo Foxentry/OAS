@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: 27484525-57cd-4075-b63f-f3890003b3ad
+  code: d0a13920-82a5-4163-b0bb-c8d1b5b26d86
   query:
     type: name
     value: Avantro
@@ -22,7 +22,7 @@ request:
     zipFormat: false
     legalFormType: any
 response:
-  resultsCount: 17
+  resultsCount: 19
   results:
     - data:
         uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
@@ -71,55 +71,6 @@ response:
             city: Praha
             zip: '18600'
             full: Thámova 137/16, Karlín, 18600 Praha 8
-        legalForm:
-          type: juridical
-    - data:
-        uuid: df80bd9e-4a48-494b-8203-6cee1dadff70
-        country: CZ
-        name: AVANERO s.r.o.
-        registrationNumber: '24260207'
-        taxNumber: null
-        vatNumber: CZ24260207
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Hlavní město Praha
-            district: území Hlavního města Prahy
-            ids:
-              internal: f73b8ee7-8965-42d4-86e7-e71dd8db9e7d
-              external: '21700966'
-            street: Jungmannova
-            number:
-              type: č.p.
-              part1: '30'
-              part1Number: '30'
-              part1Letter: null
-              part2: '21'
-              part2Number: '21'
-              part2Letter: null
-              full: 30/21
-            streetWithNumber: Jungmannova 30/21
-            city: Praha 1
-            zip: '11000'
-            full: Jungmannova 30/21, 11000 Praha 1
-        addressOfficial:
-          data:
-            country: CZ
-            street: Jungmannova
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 30/21
-            streetWithNumber: Jungmannova 30/21
-            city: Praha
-            zip: '11000'
-            full: Jungmannova 30/21, Nové Město, 11000 Praha 1
         legalForm:
           type: juridical
     - data:
@@ -172,6 +123,55 @@ response:
         legalForm:
           type: juridical
     - data:
+        uuid: df80bd9e-4a48-494b-8203-6cee1dadff70
+        country: CZ
+        name: AVANERO s.r.o.
+        registrationNumber: '24260207'
+        taxNumber: null
+        vatNumber: CZ24260207
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
+            ids:
+              internal: f73b8ee7-8965-42d4-86e7-e71dd8db9e7d
+              external: '21700966'
+            street: Jungmannova
+            number:
+              type: č.p.
+              part1: '30'
+              part1Number: '30'
+              part1Letter: null
+              part2: '21'
+              part2Number: '21'
+              part2Letter: null
+              full: 30/21
+            streetWithNumber: Jungmannova 30/21
+            city: Praha 1
+            zip: '11000'
+            full: Jungmannova 30/21, 11000 Praha 1
+        addressOfficial:
+          data:
+            country: CZ
+            street: Jungmannova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 30/21
+            streetWithNumber: Jungmannova 30/21
+            city: Praha
+            zip: '11000'
+            full: Jungmannova 30/21, Nové Město, 11000 Praha 1
+        legalForm:
+          type: juridical
+    - data:
         uuid: fecd2166-7534-4f53-8fdf-a18f6d25045a
         country: CZ
         name: AVANT Pro, s.r.o.
@@ -218,6 +218,55 @@ response:
             city: Praha
             zip: '14000'
             full: Hvězdova 1716/2b, Nusle, 14000 Praha 4
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 3c33e4a0-4a91-4694-a0b1-38a85e3aa823
+        country: SK
+        name: AVANTRA s. r. o.
+        registrationNumber: '56881843'
+        taxNumber: '2122489655'
+        vatNumber: SK2122489655
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            state: null
+            region: Žilinský
+            district: Žilina
+            ids:
+              internal: 2a3ae145-c9f6-4e3e-8d22-5908f6b07ee0
+              external: null
+            street: Vysokoškolákov
+            number:
+              type: null
+              part1: '8556'
+              part1Number: '8556'
+              part1Letter: null
+              part2: 33B
+              part2Number: '33'
+              part2Letter: B
+              full: 8556/33B
+            streetWithNumber: Vysokoškolákov 8556/33B
+            city: Žilina
+            zip: '01008'
+            full: Vysokoškolákov 8556/33B, 01008 Žilina
+        addressOfficial:
+          data:
+            country: SK
+            street: Vysokoškolákov
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 8556/33B
+            streetWithNumber: Vysokoškolákov 8556/33B
+            city: Žilina
+            zip: '01008'
+            full: null
         legalForm:
           type: juridical
     - data:
@@ -313,7 +362,7 @@ response:
               part2Letter: null
               full: 10/A
             streetWithNumber: Karpatské námestie 10/A
-            city: Bratislava - Rača
+            city: Bratislava-Rača
             zip: '83106'
             full: null
         legalForm:
@@ -368,6 +417,33 @@ response:
         legalForm:
           type: juridical
     - data:
+        uuid: 0814be74-7c23-47e1-b460-fc3d58e62d82
+        country: SK
+        name: AVAN, s. r. o.
+        registrationNumber: '57154821'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address: null
+        addressOfficial:
+          data:
+            country: SK
+            street: Dolná
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '2066'
+            streetWithNumber: Dolná 2066
+            city: Modra
+            zip: '90001'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
         uuid: db431099-b58c-4668-bdfa-88b2b0657808
         country: CZ
         name: AV GASTRO, s.r.o.
@@ -414,104 +490,6 @@ response:
             city: Praha
             zip: '10000'
             full: Starostrašnická 151/36, Strašnice, 10000 Praha 10
-        legalForm:
-          type: juridical
-    - data:
-        uuid: 0b4e3376-07e7-4bdc-bd71-2c4b69583fec
-        country: CZ
-        name: Aveniro s.r.o.
-        registrationNumber: '27289591'
-        taxNumber: null
-        vatNumber: CZ27289591
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Liberecký kraj
-            district: Česká Lípa
-            ids:
-              internal: 01d1ac4e-cdeb-4617-83ca-dd98da58215e
-              external: '13113101'
-            street: B. Egermanna
-            number:
-              type: č.p.
-              part1: '471'
-              part1Number: '471'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '471'
-            streetWithNumber: B. Egermanna 471
-            city: Nový Bor
-            zip: '47301'
-            full: B. Egermanna 471, 47301 Nový Bor
-        addressOfficial:
-          data:
-            country: CZ
-            street: B. Egermanna
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '471'
-            streetWithNumber: B. Egermanna 471
-            city: Nový Bor
-            zip: '47301'
-            full: B. Egermanna 471, Arnultovice, 47301 Nový Bor
-        legalForm:
-          type: juridical
-    - data:
-        uuid: abe94e94-8bdb-4cee-a26e-c6bccb6053a1
-        country: CZ
-        name: KVANPRO s.r.o.
-        registrationNumber: '06814522'
-        taxNumber: null
-        vatNumber: CZ06814522
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Pardubický kraj
-            district: Pardubice
-            ids:
-              internal: 8ab7971b-86ee-495b-ab4d-86364163b33e
-              external: '7623160'
-            street: Stéblová
-            number:
-              type: č.p.
-              part1: '25'
-              part1Number: '25'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '25'
-            streetWithNumber: Stéblová 25
-            city: Stéblová
-            zip: '53345'
-            full: Stéblová 25, 53345 Stéblová
-        addressOfficial:
-          data:
-            country: CZ
-            street: Stéblová
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '25'
-            streetWithNumber: Stéblová 25
-            city: Stéblová
-            zip: '53345'
-            full: č.p. 25, 53345 Stéblová
         legalForm:
           type: juridical
 errors: []

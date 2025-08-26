@@ -1,0 +1,24 @@
+{
+  "request": {
+    "query": {
+      "streetWithNumber": "thamova 137/16",
+      "city": "praha 8",
+      "zip": "186 00",
+      "country": "cz"
+    },
+    "options": {
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "resultsLimit": 10,
+      "acceptPostOfficeAsCity": false,
+      "correctionMode": "format"
+    },
+    "client": {
+      "country": "CZ"
+    }
+  }
+}

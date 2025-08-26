@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: phone/validate
-  code: 3c00d3c9-26cb-4216-a079-5d8bfb044e0d
+  code: aa52de13-3567-4657-af24-d5bc04a2846d
   query:
     numberWithPrefix: '+421607123456'
   options:
@@ -10,6 +10,7 @@ request:
     preferredPrefixes: []
     defaultPrefix: null
     formatNumber: false
+    correctionMode: full
 response:
   result:
     isValid: false

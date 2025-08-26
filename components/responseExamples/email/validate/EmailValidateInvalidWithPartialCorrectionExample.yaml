@@ -1,13 +1,14 @@
 status: 200
 request:
   endpoint: email/validate
-  code: 94aa3a92-eff6-490c-89ca-6e679c63b0fd
+  code: 5a2fa8fa-811b-49cf-abd4-fd747cf739c6
   query:
     email: infogmail.com
   options:
     validationType: extended
     acceptDisposableEmails: true
     acceptFreemails: true
+    correctionMode: full
 response:
   result:
     isValid: false
@@ -16,7 +17,10 @@ response:
       user: infogmail.com
       domain: null
       email: infogmail.com
-    flags: {}
+    flags:
+      isCatchAllServer: null
+      isDisposableEmailAddress: null
+      isFreemail: null
     errors:
       - group: SYNTAX
         type: VALUE_PART_MISSING
@@ -42,6 +46,7 @@ response:
         severity: critical
         relatedTo:
           - email
+        description: Value is not valid.
     fixes:
       - group: SYNTAX
         type: VALUE_PART_ADDED

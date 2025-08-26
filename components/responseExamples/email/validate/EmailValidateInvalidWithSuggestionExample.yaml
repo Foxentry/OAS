@@ -1,17 +1,18 @@
 status: 200
 request:
   endpoint: email/validate
-  code: aa9862c5-248d-42f9-9d30-bcde699ae068
+  code: 7e8ea091-2bb2-499f-9be2-4c7b8a7466b7
   query:
     email: info@gmali.com
   options:
     validationType: extended
     acceptDisposableEmails: true
     acceptFreemails: true
+    correctionMode: full
 response:
   result:
     isValid: false
-    proposal: invalidWithSuggestion
+    proposal: invalid
     data:
       user: info
       domain: gmali.com
@@ -29,31 +30,5 @@ response:
           - email
         description: Value is not valid.
   resultCorrected: null
-  suggestions:
-    - isValid: false
-      data:
-        user: info
-        domain: gmail.com
-        email: info@gmail.com
-      flags:
-        isCatchAllServer: false
-        isDisposableEmailAddress: false
-        isFreemail: true
-      fixes:
-        - group: VALUE
-          type: CHANGED
-          subtype: TYPO
-          data:
-            typeFrom: email
-            type: email
-            valueFrom: info@gmali.com
-            value: info@gmail.com
-      errors:
-        - group: VALUE
-          type: INVALID
-          subtype: null
-          severity: critical
-          relatedTo:
-            - email
-          description: Value is not valid.
+  suggestions: []
 errors: []

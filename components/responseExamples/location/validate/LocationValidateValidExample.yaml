@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/validate
-  code: c96b2cc4-d065-4e40-a810-11a20a61b495
+  code: 6b6494ee-21c3-40a2-8d4f-e221ea382dc3
   query:
     streetWithNumber: Thámova 137/16
     city: Praha 8
@@ -19,6 +19,8 @@ request:
     countryFormat: alpha2
     zipFormat: false
     acceptPostOfficeAsCity: false
+    correctionMode: full
+    correctionModeCrossCountry: format
 response:
   result:
     isValid: true
@@ -27,6 +29,8 @@ response:
       valid:
         - city
         - country
+        - number.full
+        - street
         - streetWithNumber
         - zip
       invalid: []

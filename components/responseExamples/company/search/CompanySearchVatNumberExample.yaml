@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: 8750dbe1-fcd1-4ece-b341-16fd34801ff5
+  code: 8b04bf97-912c-48ee-b958-3d53547b68f8
   query:
     type: vatNumber
     value: CZ04997
@@ -88,26 +88,26 @@ response:
             region: Středočeský kraj
             district: Praha-východ
             ids:
-              internal: f227d8d5-09ba-4689-97bb-a9f8fb7a2dd1
-              external: '27325296'
-            street: Zápy
+              internal: 403b808e-5047-409a-b842-5a2198eca151
+              external: '74746545'
+            street: Horácká
             number:
               type: č.p.
-              part1: '271'
-              part1Number: '271'
+              part1: '162'
+              part1Number: '162'
               part1Letter: null
               part2: null
               part2Number: null
               part2Letter: null
-              full: '271'
-            streetWithNumber: Zápy 271
-            city: Zápy
-            zip: '25061'
-            full: Zápy 271, 25061 Zápy
+              full: '162'
+            streetWithNumber: Horácká 162
+            city: Křenice
+            zip: '25084'
+            full: Horácká 162, 25084 Křenice
         addressOfficial:
           data:
             country: CZ
-            street: Zápy
+            street: Horácká
             number:
               part1: null
               part1Number: null
@@ -115,11 +115,11 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: '271'
-            streetWithNumber: Zápy 271
-            city: Zápy
-            zip: '25061'
-            full: č.p. 271, 25061 Zápy
+              full: '162'
+            streetWithNumber: Horácká 162
+            city: Křenice
+            zip: '25084'
+            full: Horácká 162, 25084 Křenice
         legalForm:
           type: juridical
     - data:

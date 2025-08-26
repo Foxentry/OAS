@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Run if GENERATE_EXAMPLES is set
 if [ -z "$GENERATE_EXAMPLES" ]; then

@@ -1,13 +1,14 @@
 status: 200
 request:
   endpoint: email/validate
-  code: 58250e5a-674a-4592-87ac-8ac2ae661166
+  code: 145ff408-148d-4ad2-9be7-a8407e7fbb23
   query:
     email: info@gmail.com
   options:
     validationType: extended
     acceptDisposableEmails: true
     acceptFreemails: false
+    correctionMode: full
 response:
   result:
     isValid: false

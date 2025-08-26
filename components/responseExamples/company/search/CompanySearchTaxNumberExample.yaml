@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: 2565afa1-cd74-4de3-afdb-03404bcd4473
+  code: 8b6ffad4-c49b-4cb2-a232-4d0b0bc13c23
   query:
     type: taxNumber
     value: '2120884'
@@ -81,29 +81,7 @@ response:
         taxNumber: '2120884084'
         vatNumber: SK2120884084
         vatNumberSpecial: null
-        address:
-          data:
-            country: SK
-            state: null
-            region: Žilinský
-            district: Dolný Kubín
-            ids:
-              internal: 0fb2edf4-1f8a-40b6-b4c6-1efb1a452815
-              external: null
-            street: M. R. Štefánika
-            number:
-              type: null
-              part1: '1840'
-              part1Number: '1840'
-              part1Letter: null
-              part2: '20'
-              part2Number: '20'
-              part2Letter: null
-              full: 1840/20
-            streetWithNumber: M. R. Štefánika 1840/20
-            city: Dolný Kubín
-            zip: '02601'
-            full: M. R. Štefánika 1840/20, 02601 Dolný Kubín
+        address: null
         addressOfficial:
           data:
             country: SK
@@ -215,8 +193,35 @@ response:
               part2Letter: null
               full: 152/21
             streetWithNumber: Lichardova 152/21
-            city: Košice - Juh
+            city: Košice-Juh
             zip: '04001'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 05e5128d-4399-4afd-aa24-8e1ba8fa2731
+        country: SK
+        name: MEDICARE CENTRUM s.r.o.
+        registrationNumber: '52078639'
+        taxNumber: '2120884942'
+        vatNumber: null
+        vatNumberSpecial: null
+        address: null
+        addressOfficial:
+          data:
+            country: SK
+            street: Strečnianska
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '13'
+            streetWithNumber: Strečnianska 13
+            city: Bratislava-Petržalka
+            zip: '85105'
             full: null
         legalForm:
           type: juridical
@@ -270,55 +275,6 @@ response:
         legalForm:
           type: juridical
     - data:
-        uuid: 05e5128d-4399-4afd-aa24-8e1ba8fa2731
-        country: SK
-        name: MEDICARE CENTRUM s.r.o.
-        registrationNumber: '52078639'
-        taxNumber: '2120884942'
-        vatNumber: null
-        vatNumberSpecial: null
-        address:
-          data:
-            country: SK
-            state: null
-            region: Bratislavský
-            district: Bratislava V
-            ids:
-              internal: f6962c5c-ab85-4ebc-b607-0ee022247be2
-              external: null
-            street: Strečnianska
-            number:
-              type: null
-              part1: '2975'
-              part1Number: '2975'
-              part1Letter: null
-              part2: '13'
-              part2Number: '13'
-              part2Letter: null
-              full: 2975/13
-            streetWithNumber: Strečnianska 2975/13
-            city: Bratislava
-            zip: '85105'
-            full: Strečnianska 2975/13, 85105 Bratislava
-        addressOfficial:
-          data:
-            country: SK
-            street: Strečnianska
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '13'
-            streetWithNumber: Strečnianska 13
-            city: Bratislava - Petržalka
-            zip: '85105'
-            full: null
-        legalForm:
-          type: juridical
-    - data:
         uuid: 9f4abeb0-456c-4dce-9901-09e08ff016d0
         country: SK
         name: by Ell s. r. o.
@@ -362,57 +318,8 @@ response:
               part2Letter: null
               full: 10/A
             streetWithNumber: Karpatské námestie 10/A
-            city: Bratislava - Rača
+            city: Bratislava-Rača
             zip: '83106'
-            full: null
-        legalForm:
-          type: juridical
-    - data:
-        uuid: 5598e02c-2f31-43f6-8d30-482f90129797
-        country: SK
-        name: KUKUZA s.r.o.
-        registrationNumber: '52089151'
-        taxNumber: '2120884964'
-        vatNumber: SK2120884964
-        vatNumberSpecial: null
-        address:
-          data:
-            country: SK
-            state: null
-            region: Bratislavský
-            district: Bratislava V
-            ids:
-              internal: 4562fd83-3f85-41f2-96a6-10456127d008
-              external: null
-            street: Zuzany Chalupovej
-            number:
-              type: null
-              part1: '3981'
-              part1Number: '3981'
-              part1Letter: null
-              part2: '8'
-              part2Number: '8'
-              part2Letter: null
-              full: 3981/8
-            streetWithNumber: Zuzany Chalupovej 3981/8
-            city: Bratislava
-            zip: '85107'
-            full: Zuzany Chalupovej 3981/8, 85107 Bratislava
-        addressOfficial:
-          data:
-            country: SK
-            street: Zuzany Chalupovej
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 3981/8
-            streetWithNumber: Zuzany Chalupovej 3981/8
-            city: Bratislava - Petržalka
-            zip: '85107'
             full: null
         legalForm:
           type: juridical
@@ -424,29 +331,7 @@ response:
         taxNumber: '2120884733'
         vatNumber: SK2120884733
         vatNumberSpecial: null
-        address:
-          data:
-            country: SK
-            state: null
-            region: Bratislavský
-            district: Bratislava III
-            ids:
-              internal: 46d9b3e7-0563-4a51-be68-b08682140987
-              external: null
-            street: Jurská
-            number:
-              type: null
-              part1: '13770'
-              part1Number: '13770'
-              part1Letter: null
-              part2: '25'
-              part2Number: '25'
-              part2Letter: null
-              full: 13770/25
-            streetWithNumber: Jurská 13770/25
-            city: Bratislava
-            zip: '83102'
-            full: Jurská 13770/25, 83102 Bratislava
+        address: null
         addressOfficial:
           data:
             country: SK
@@ -460,7 +345,7 @@ response:
               part2Letter: null
               full: 13770/25
             streetWithNumber: Jurská 13770/25
-            city: Bratislava - Nové Mesto
+            city: Bratislava-Nové Mesto
             zip: '83102'
             full: null
         legalForm:
@@ -509,8 +394,35 @@ response:
               part2Letter: null
               full: 34/8
             streetWithNumber: Nemcovej 34/8
-            city: Košice - Sever
+            city: Košice-Sever
             zip: '04001'
+            full: null
+        legalForm:
+          type: juridical
+    - data:
+        uuid: 417a5b27-7dd2-4934-babf-4c57824cfe3a
+        country: SK
+        name: KASTEX TECHNIKA s. r. o., v likvidácii
+        registrationNumber: '52083764'
+        taxNumber: '2120884799'
+        vatNumber: SK2120884799
+        vatNumberSpecial: null
+        address: null
+        addressOfficial:
+          data:
+            country: SK
+            street: Strojnícka
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '5'
+            streetWithNumber: Strojnícka 5
+            city: Prešov
+            zip: '08006'
             full: null
         legalForm:
           type: juridical

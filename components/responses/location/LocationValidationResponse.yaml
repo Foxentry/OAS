@@ -60,3 +60,36 @@ content:
       invalidWithSuggestion:
         value:
           $ref: ./../../responseExamples/location/validate/LocationValidateInvalidWithSuggestionExample.yaml
+
+      countryInternationalFormat:
+        value:
+          $ref: ./../../responseExamples/location/validate/LocationValidateValidCountryInternationalExample.yaml
+
+      countryInternationalShortenedFormat:
+        value:
+          $ref: ./../../responseExamples/location/validate/LocationValidateValidCountryInternationalShortenedExample.yaml
+
+      countryLocalFormat:
+        value:
+          $ref: ./../../responseExamples/location/validate/LocationValidateValidCountryLocalExample.yaml
+
+      countryLocalShortenedFormat:
+        value:
+          $ref: ./../../responseExamples/location/validate/LocationValidateValidCountryLocalShortenedExample.yaml
+
+      correctionModeFormat:
+        value:
+          $ref: ./../../responseExamples/location/validate/LocationValidateCorrectionModeFormatExample.yaml
+
+      correctionModeFormatCorrected:
+        value:
+          $ref: ./../../responseExamples/location/validate/LocationValidateCorrectionModeFormatCorrectedExample.yaml
+
+
+      correctionModeCrossCountryFormat:
+        value:
+          $ref: ./../../responseExamples/location/validate/LocationValidateCorrectionModeCrossCountryFormatExample.yaml
+
+      correctionModeCrossCountryFull:
+        value:
+          $ref: ./../../responseExamples/location/validate/LocationValidateCorrectionModeCrossCountryFullExample.yaml

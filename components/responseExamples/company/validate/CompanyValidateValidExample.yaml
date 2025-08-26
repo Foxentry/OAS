@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/validate
-  code: 0976272d-01f7-4d10-9218-e554fcfdfe26
+  code: af0ed078-1ad1-4de0-8c9e-cd9b44787214
   query:
     name: AVANTRO s.r.o.
     registrationNumber: '04997476'
@@ -19,6 +19,8 @@ request:
     cityFormat: basic
     zipFormat: false
     legalFormType: any
+    correctionMode: full
+    correctionModeCrossCountry: format
 response:
   result:
     isValid: true

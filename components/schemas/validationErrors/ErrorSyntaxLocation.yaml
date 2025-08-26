@@ -14,6 +14,7 @@ properties:
   subtype:
     enum:
       - CITY
+      - NUMBER
       - NUMBER_PART
       - STREET
       - ZIP
@@ -39,6 +40,7 @@ properties:
   description:
     enum:
       - Value is missing the city.
+      - Value is missing the number.
       - Value is missing the number part.
       - Value is missing the street.
       - Value is missing the zip.

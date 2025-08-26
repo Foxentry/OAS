@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/validate
-  code: 3e1cca70-56fa-4165-a125-481fec084d06
+  code: 6ab4856e-b4c7-4c64-a042-669fcab3e48d
   query:
     name: AVANTRO s.r.o.
     registrationNumber: '25547'
@@ -19,6 +19,8 @@ request:
     cityFormat: basic
     zipFormat: false
     legalFormType: any
+    correctionMode: full
+    correctionModeCrossCountry: format
 response:
   result:
     isValid: false

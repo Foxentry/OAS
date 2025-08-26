@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/validate
-  code: 82fcc1f1-86d2-450e-b7ac-860dd0ceac04
+  code: ade0f812-322b-427e-af47-3677acc61ff1
   query:
     streetWithNumber: Thámova 123456789
     city: Parharlin
@@ -26,12 +26,12 @@ response:
     proposal: invalid
     dataTypes:
       valid:
+        - number.full
         - street
       invalid:
         - city
         - streetWithNumber
         - zip
-        - number.full
     data:
       country: null
       state: null
@@ -55,18 +55,12 @@ response:
       zip: '457545754'
       full: Thámova 123456789, 457545754 Parharlin
     errors:
-      - group: SYNTAX
-        type: VALUE_PART_MISSING
-        subtype: NUMBER
-        severity: critical
-        relatedTo:
-          - streetWithNumber
-        description: Value is missing the number.
       - group: VALUE
         type: INVALID
         subtype: null
         severity: critical
         relatedTo:
+          - streetWithNumber
           - city
           - zip
         description: Value is not valid.

@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/validate
-  code: cf9090c2-1398-42a7-ac20-a0a1e39ec0b4
+  code: 09838869-863e-4ba7-91b9-90e4a3300294
   query:
     name: AVANTRO
     registrationNumber: '04997476'
@@ -37,6 +37,8 @@ response:
       addressOfficial: null
       legalForm:
         type: null
+    flags:
+      isActive: true
     errors:
       - group: SYNTAX
         type: VALUE_PART_MISSING
@@ -96,6 +98,8 @@ response:
           full: Thámova 137/16, Karlín, 18600 Praha 8
       legalForm:
         type: juridical
+    flags:
+      isActive: true
     errors: []
     fixes:
       - group: SYNTAX

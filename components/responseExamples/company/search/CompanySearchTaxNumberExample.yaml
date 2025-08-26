@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: 8b6ffad4-c49b-4cb2-a232-4d0b0bc13c23
+  code: 60f587c4-503a-4972-ab0d-9883e596f306
   query:
     type: taxNumber
     value: '2120884'
@@ -73,6 +73,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 451e40b7-6d07-43f0-87f2-d9b4ea9bd139
         country: SK
@@ -100,6 +102,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: d5f5494b-090e-4986-939e-eb2ddfd57d8b
         country: SK
@@ -149,6 +153,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 4f985edc-47da-49da-b41d-f14f4f89cf34
         country: SK
@@ -198,6 +204,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 05e5128d-4399-4afd-aa24-8e1ba8fa2731
         country: SK
@@ -225,6 +233,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 7b8db674-4b26-4622-9061-80874414758a
         country: SK
@@ -274,6 +284,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 9f4abeb0-456c-4dce-9901-09e08ff016d0
         country: SK
@@ -323,6 +335,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: ac143b30-e995-4b78-84d6-9b7b037cc403
         country: SK
@@ -350,6 +364,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 2fbf787e-e00b-4d8c-9db0-04a0ea2f1ca4
         country: SK
@@ -399,6 +415,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 417a5b27-7dd2-4934-babf-4c57824cfe3a
         country: SK
@@ -426,4 +444,6 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
 errors: []

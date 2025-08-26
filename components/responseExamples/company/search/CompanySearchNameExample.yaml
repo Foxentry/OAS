@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: d0a13920-82a5-4163-b0bb-c8d1b5b26d86
+  code: 8bd8aaf2-7deb-4bbd-a3b4-75f65e96da27
   query:
     type: name
     value: Avantro
@@ -22,7 +22,7 @@ request:
     zipFormat: false
     legalFormType: any
 response:
-  resultsCount: 19
+  resultsCount: 13
   results:
     - data:
         uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
@@ -73,300 +73,8 @@ response:
             full: Thámova 137/16, Karlín, 18600 Praha 8
         legalForm:
           type: juridical
-    - data:
-        uuid: 53890dc6-8d68-483c-b636-7c3cba1c5208
-        country: CZ
-        name: AVENTRO, a.s.
-        registrationNumber: '02265982'
-        taxNumber: null
-        vatNumber: CZ02265982
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Jihomoravský kraj
-            district: Znojmo
-            ids:
-              internal: dadb39a6-7e06-42fd-8b92-aca919e1b34a
-              external: '10876537'
-            street: Práče
-            number:
-              type: č.p.
-              part1: '168'
-              part1Number: '168'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '168'
-            streetWithNumber: Práče 168
-            city: Práče
-            zip: '67161'
-            full: Práče 168, 67161 Práče
-        addressOfficial:
-          data:
-            country: CZ
-            street: Práče
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '168'
-            streetWithNumber: Práče 168
-            city: Práče
-            zip: '67161'
-            full: č.p. 168, 67161 Práče
-        legalForm:
-          type: juridical
-    - data:
-        uuid: df80bd9e-4a48-494b-8203-6cee1dadff70
-        country: CZ
-        name: AVANERO s.r.o.
-        registrationNumber: '24260207'
-        taxNumber: null
-        vatNumber: CZ24260207
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Hlavní město Praha
-            district: území Hlavního města Prahy
-            ids:
-              internal: f73b8ee7-8965-42d4-86e7-e71dd8db9e7d
-              external: '21700966'
-            street: Jungmannova
-            number:
-              type: č.p.
-              part1: '30'
-              part1Number: '30'
-              part1Letter: null
-              part2: '21'
-              part2Number: '21'
-              part2Letter: null
-              full: 30/21
-            streetWithNumber: Jungmannova 30/21
-            city: Praha 1
-            zip: '11000'
-            full: Jungmannova 30/21, 11000 Praha 1
-        addressOfficial:
-          data:
-            country: CZ
-            street: Jungmannova
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 30/21
-            streetWithNumber: Jungmannova 30/21
-            city: Praha
-            zip: '11000'
-            full: Jungmannova 30/21, Nové Město, 11000 Praha 1
-        legalForm:
-          type: juridical
-    - data:
-        uuid: fecd2166-7534-4f53-8fdf-a18f6d25045a
-        country: CZ
-        name: AVANT Pro, s.r.o.
-        registrationNumber: '28953738'
-        taxNumber: null
-        vatNumber: null
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Hlavní město Praha
-            district: území Hlavního města Prahy
-            ids:
-              internal: 50bea978-08a9-44b7-9acd-2ca7547194fa
-              external: '27382800'
-            street: Hvězdova
-            number:
-              type: č.p.
-              part1: '1716'
-              part1Number: '1716'
-              part1Letter: null
-              part2: 2b
-              part2Number: '2'
-              part2Letter: b
-              full: 1716/2b
-            streetWithNumber: Hvězdova 1716/2b
-            city: Praha 4
-            zip: '14000'
-            full: Hvězdova 1716/2b, 14000 Praha 4
-        addressOfficial:
-          data:
-            country: CZ
-            street: Hvězdova
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 1716/2b
-            streetWithNumber: Hvězdova 1716/2b
-            city: Praha
-            zip: '14000'
-            full: Hvězdova 1716/2b, Nusle, 14000 Praha 4
-        legalForm:
-          type: juridical
-    - data:
-        uuid: 3c33e4a0-4a91-4694-a0b1-38a85e3aa823
-        country: SK
-        name: AVANTRA s. r. o.
-        registrationNumber: '56881843'
-        taxNumber: '2122489655'
-        vatNumber: SK2122489655
-        vatNumberSpecial: null
-        address:
-          data:
-            country: SK
-            state: null
-            region: Žilinský
-            district: Žilina
-            ids:
-              internal: 2a3ae145-c9f6-4e3e-8d22-5908f6b07ee0
-              external: null
-            street: Vysokoškolákov
-            number:
-              type: null
-              part1: '8556'
-              part1Number: '8556'
-              part1Letter: null
-              part2: 33B
-              part2Number: '33'
-              part2Letter: B
-              full: 8556/33B
-            streetWithNumber: Vysokoškolákov 8556/33B
-            city: Žilina
-            zip: '01008'
-            full: Vysokoškolákov 8556/33B, 01008 Žilina
-        addressOfficial:
-          data:
-            country: SK
-            street: Vysokoškolákov
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 8556/33B
-            streetWithNumber: Vysokoškolákov 8556/33B
-            city: Žilina
-            zip: '01008'
-            full: null
-        legalForm:
-          type: juridical
-    - data:
-        uuid: 392f1833-4e53-477f-af96-85f21418be7a
-        country: SK
-        name: Avanto, s. r. o.
-        registrationNumber: '56533136'
-        taxNumber: '2122343674'
-        vatNumber: null
-        vatNumberSpecial: null
-        address:
-          data:
-            country: SK
-            state: null
-            region: Prešovský
-            district: Poprad
-            ids:
-              internal: 726f0da3-35c2-4520-9aec-feb8565f2fc4
-              external: null
-            street: Kopečná
-            number:
-              type: null
-              part1: '252'
-              part1Number: '252'
-              part1Letter: null
-              part2: '2'
-              part2Number: '2'
-              part2Letter: null
-              full: 252/2
-            streetWithNumber: Kopečná 252/2
-            city: Poprad
-            zip: '05801'
-            full: Kopečná 252/2, 05801 Poprad
-        addressOfficial:
-          data:
-            country: SK
-            street: Kopečná
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '2'
-            streetWithNumber: Kopečná 2
-            city: Poprad
-            zip: '05801'
-            full: null
-        legalForm:
-          type: juridical
-    - data:
-        uuid: 6e2ab83d-84b9-430f-b785-7a4aa522c022
-        country: SK
-        name: Avant PRO s. r. o.
-        registrationNumber: '47510919'
-        taxNumber: '2023942140'
-        vatNumber: null
-        vatNumberSpecial: null
-        address:
-          data:
-            country: SK
-            state: null
-            region: Bratislavský
-            district: Bratislava III
-            ids:
-              internal: 446e33b3-5fe3-43f5-8a5c-21329c1c1ede
-              external: null
-            street: Karpatské námestie
-            number:
-              type: null
-              part1: '7770'
-              part1Number: '7770'
-              part1Letter: null
-              part2: 10A
-              part2Number: '10'
-              part2Letter: A
-              full: 7770/10A
-            streetWithNumber: Karpatské námestie 7770/10A
-            city: Bratislava
-            zip: '83106'
-            full: Karpatské námestie 7770/10A, 83106 Bratislava
-        addressOfficial:
-          data:
-            country: SK
-            street: Karpatské námestie
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 10/A
-            streetWithNumber: Karpatské námestie 10/A
-            city: Bratislava-Rača
-            zip: '83106'
-            full: null
-        legalForm:
-          type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 0144c5bc-3215-4596-b833-ea6e407e4b9d
         country: SK
@@ -416,6 +124,8 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 0814be74-7c23-47e1-b460-fc3d58e62d82
         country: SK
@@ -443,41 +153,43 @@ response:
             full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
-        uuid: db431099-b58c-4668-bdfa-88b2b0657808
+        uuid: 5b05599c-ee80-4587-94cd-16c95be050ba
         country: CZ
-        name: AV GASTRO, s.r.o.
-        registrationNumber: '24774073'
+        name: AVANT
+        registrationNumber: '10208615'
         taxNumber: null
-        vatNumber: CZ24774073
+        vatNumber: null
         vatNumberSpecial: null
         address:
           data:
             country: CZ
             state: null
-            region: Hlavní město Praha
-            district: území Hlavního města Prahy
+            region: Středočeský kraj
+            district: Příbram
             ids:
-              internal: c72b42db-874d-4394-9dbf-ca8cee3e204d
-              external: '22600698'
-            street: Starostrašnická
+              internal: 7bb5b83c-ba61-44a7-9a79-07449c5c31ed
+              external: '16417437'
+            street: Školní
             number:
               type: č.p.
-              part1: '151'
-              part1Number: '151'
+              part1: '245'
+              part1Number: '245'
               part1Letter: null
-              part2: '36'
-              part2Number: '36'
+              part2: null
+              part2Number: null
               part2Letter: null
-              full: 151/36
-            streetWithNumber: Starostrašnická 151/36
-            city: Praha 10
-            zip: '10000'
-            full: Starostrašnická 151/36, 10000 Praha 10
+              full: '245'
+            streetWithNumber: Školní 245
+            city: Milín
+            zip: '26231'
+            full: Školní 245, 26231 Milín
         addressOfficial:
           data:
             country: CZ
-            street: Starostrašnická
+            street: Školní
             number:
               part1: null
               part1Number: null
@@ -485,11 +197,275 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: 151/36
-            streetWithNumber: Starostrašnická 151/36
-            city: Praha
-            zip: '10000'
-            full: Starostrašnická 151/36, Strašnice, 10000 Praha 10
+              full: '245'
+            streetWithNumber: Školní 245
+            city: Milín
+            zip: '26231'
+            full: Školní 245, 26231 Milín
+        legalForm:
+          type: physical
+      flags:
+        isActive: true
+    - data:
+        uuid: 4caa3b13-ef0f-47ac-a654-138234c3da1d
+        country: PL
+        name: AVANT S.C.
+        registrationNumber: '140029601'
+        taxNumber: '1251334851'
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: PL
+            state: null
+            region: mazowieckie
+            district: wołomiński
+            ids:
+              internal: d37b6d0a-a673-45b4-8a54-04299d985892
+              external: d74de6eb-4b75-4bbc-a174-9e48374a54de
+            street: Różana
+            number:
+              type: null
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '1'
+            streetWithNumber: Różana 1
+            city: Marki
+            zip: '05270'
+            full: Różana 1, 05270 Marki
+        addressOfficial:
+          data:
+            country: PL
+            street: ul. Różana
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '1'
+            streetWithNumber: ul. Różana 1
+            city: Marki
+            zip: 05-270
+            full: null
         legalForm:
           type: juridical
+      flags:
+        isActive: true
+    - data:
+        uuid: cff5b98c-e865-409a-9941-691d2ba60cf3
+        country: SK
+        name: M A V A N, s.r.o.
+        registrationNumber: '43898637'
+        taxNumber: '2022517211'
+        vatNumber: SK2022517211
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            state: null
+            region: Žilinský
+            district: Žilina
+            ids:
+              internal: 8be4c41d-3802-41b9-8cc8-52bb5f3491b7
+              external: null
+            street: Rajecká
+            number:
+              type: null
+              part1: '2806'
+              part1Number: '2806'
+              part1Letter: null
+              part2: '17'
+              part2Number: '17'
+              part2Letter: null
+              full: 2806/17
+            streetWithNumber: Rajecká 2806/17
+            city: Žilina
+            zip: '01001'
+            full: Rajecká 2806/17, 01001 Žilina
+        addressOfficial:
+          data:
+            country: SK
+            street: Rajecká
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '17'
+            streetWithNumber: Rajecká 17
+            city: Žilina
+            zip: '01001'
+            full: null
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+    - data:
+        uuid: 3f61ac01-8b9e-47a9-80de-42ad5b002ecf
+        country: SK
+        name: YVAN s. r. o.
+        registrationNumber: '51419432'
+        taxNumber: '2120692618'
+        vatNumber: null
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            state: null
+            region: Nitriansky
+            district: Nové Zámky
+            ids:
+              internal: a12a69d7-891a-4a66-8959-08fef7ab263c
+              external: null
+            street: Novozámocká cesta
+            number:
+              type: null
+              part1: '347'
+              part1Number: '347'
+              part1Letter: null
+              part2: '1'
+              part2Number: '1'
+              part2Letter: null
+              full: 347/1
+            streetWithNumber: Novozámocká cesta 347/1
+            city: Tvrdošovce
+            zip: '94110'
+            full: Novozámocká cesta 347/1, 94110 Tvrdošovce
+        addressOfficial:
+          data:
+            country: SK
+            street: Novozámocká cesta
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 347/1
+            streetWithNumber: Novozámocká cesta 347/1
+            city: Tvrdošovce
+            zip: '94110'
+            full: null
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+    - data:
+        uuid: caab3064-f7bc-4251-a6c8-e5b946502379
+        country: SK
+        name: VAAN, s. r. o.
+        registrationNumber: '35920581'
+        taxNumber: '2021954649'
+        vatNumber: SK2021954649
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            state: null
+            region: Bratislavský
+            district: Bratislava III
+            ids:
+              internal: 87242780-786b-47d4-811e-1fe94e3c20e0
+              external: null
+            street: Turbínová
+            number:
+              type: null
+              part1: '3528'
+              part1Number: '3528'
+              part1Letter: null
+              part2: '1'
+              part2Number: '1'
+              part2Letter: null
+              full: 3528/1
+            streetWithNumber: Turbínová 3528/1
+            city: Bratislava
+            zip: '83104'
+            full: Turbínová 3528/1, 83104 Bratislava
+        addressOfficial:
+          data:
+            country: SK
+            street: Turbínova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '1'
+            streetWithNumber: Turbínova 1
+            city: Bratislava
+            zip: '83104'
+            full: null
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+    - data:
+        uuid: 2a05a881-ed36-4f6a-a9dd-cd92cb66e146
+        country: SK
+        name: ACAN, s.r.o.
+        registrationNumber: '35792264'
+        taxNumber: '2020279107'
+        vatNumber: SK2020279107
+        vatNumberSpecial: null
+        address: null
+        addressOfficial:
+          data:
+            country: SK
+            street: Bratislavská
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '775'
+            streetWithNumber: Bratislavská 775
+            city: Most pri Bratislave
+            zip: '90046'
+            full: null
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+    - data:
+        uuid: 67886b3a-746a-4c8d-83a4-83a767a8271d
+        country: SK
+        name: ABAN s. r. o.
+        registrationNumber: '44255268'
+        taxNumber: '2022649596'
+        vatNumber: null
+        vatNumberSpecial: null
+        address: null
+        addressOfficial:
+          data:
+            country: SK
+            street: Rybničná
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '40'
+            streetWithNumber: Rybničná 40
+            city: Bratislava
+            zip: '83107'
+            full: null
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
 errors: []

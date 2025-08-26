@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/validate
-  code: a4989482-f23c-42aa-956c-25253a948314
+  code: c47c0cb5-6080-419f-b459-7ee23a5ea0b7
   query:
     registrationNumber: '0499747'
     country: CZ
@@ -36,6 +36,8 @@ response:
       addressOfficial: null
       legalForm:
         type: null
+    flags:
+      isActive: true
     errors:
       - group: VALUE
         type: INVALID
@@ -96,6 +98,8 @@ response:
             full: Thámova 137/16, Karlín, 18600 Praha 8
         legalForm:
           type: juridical
+      flags:
+        isActive: true
       errors: []
       fixes:
         - group: VALUE
@@ -156,6 +160,8 @@ response:
             full: Rýmařovská 1491/31, 79201 Bruntál
         legalForm:
           type: physical
+      flags:
+        isActive: true
       errors: []
       fixes:
         - group: VALUE
@@ -216,6 +222,8 @@ response:
             full: Krymská 439/24, Vršovice, 10100 Praha 10
         legalForm:
           type: juridical
+      flags:
+        isActive: true
       errors: []
       fixes:
         - group: VALUE
@@ -276,6 +284,8 @@ response:
             full: Michelangelova 1995/16, Strašnice, 10000 Praha 10
         legalForm:
           type: juridical
+      flags:
+        isActive: true
       errors: []
       fixes:
         - group: VALUE
@@ -336,6 +346,8 @@ response:
             full: č.p. 253, 25061 Zápy
         legalForm:
           type: physical
+      flags:
+        isActive: true
       errors: []
       fixes:
         - group: VALUE
@@ -396,6 +408,8 @@ response:
             full: Husova 786/19, Jižní Předměstí, 30100 Plzeň
         legalForm:
           type: physical
+      flags:
+        isActive: true
       errors: []
       fixes:
         - group: VALUE
@@ -456,6 +470,8 @@ response:
             full: Křížkovského 1656/8, 78501 Šternberk
         legalForm:
           type: physical
+      flags:
+        isActive: true
       errors: []
       fixes:
         - group: VALUE

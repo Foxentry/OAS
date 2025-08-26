@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: 8b04bf97-912c-48ee-b958-3d53547b68f8
+  code: 1586054b-b8ac-41ab-90c2-a1f6aeb054de
   query:
     type: vatNumber
     value: CZ04997
@@ -73,6 +73,8 @@ response:
             full: Durychova 101/66, Lhotka, 14200 Praha 4
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 3ae19a19-d7f7-4481-a91c-dcc0685860d1
         country: CZ
@@ -122,6 +124,8 @@ response:
             full: Horácká 162, 25084 Křenice
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 66bb2337-1a0c-46b7-8923-cf21b73850e1
         country: CZ
@@ -171,6 +175,8 @@ response:
             full: Elišky Krásnohorské 11/4, Josefov, 11000 Praha 1
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: ed969ebb-db8d-427b-8c58-7ecaca7d7f92
         country: CZ
@@ -220,6 +226,8 @@ response:
             full: Pod Nemocnicí 2154, Rakovník II, 26901 Rakovník
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 2197de26-a98a-451d-b533-da457e73af5b
         country: CZ
@@ -269,6 +277,8 @@ response:
             full: Spojná 383, 74714 Markvartovice
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
         country: CZ
@@ -318,6 +328,8 @@ response:
             full: Thámova 137/16, Karlín, 18600 Praha 8
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 5673d264-e71e-484d-bb4c-ef7db24f94e6
         country: CZ
@@ -367,6 +379,8 @@ response:
             full: č.p. 105, 76321 Rudimov
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 92dd746c-1a66-4b2a-9706-82628a157463
         country: CZ
@@ -416,6 +430,8 @@ response:
             full: Pražákova 1008/69, Štýřice, 63900 Brno
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 013647f6-9142-46b8-aeed-4b82a9e914cb
         country: CZ
@@ -465,6 +481,8 @@ response:
             full: Donovalská 1756/45, Chodov, 14900 Praha 4
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 02d7bbde-868f-4f5b-ad64-fb0b8613ca0f
         country: CZ
@@ -514,4 +532,6 @@ response:
             full: Na zájezdu 2132/11, Vinohrady, 10100 Praha 10
         legalForm:
           type: juridical
+      flags:
+        isActive: true
 errors: []

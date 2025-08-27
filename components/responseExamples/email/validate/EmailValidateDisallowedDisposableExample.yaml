@@ -1,13 +1,14 @@
 status: 200
 request:
   endpoint: email/validate
-  code: 1cfe7a7e-f85c-45ce-89fb-b516c72a56d8
+  code: 087699b6-50fb-4e49-9d72-59e804867523
   query:
     email: rasini3451@naymedia.com
   options:
     validationType: extended
     acceptDisposableEmails: false
     acceptFreemails: true
+    correctionMode: full
 response:
   result:
     isValid: false

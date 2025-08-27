@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: email/search
-  code: 0357ef34-a16f-4171-b99d-2c50b28a7019
+  code: 83c966f5-d62f-494a-a0ac-74008ef48c1f
   query:
     value: info
   options:
@@ -22,6 +22,6 @@ response:
         email: info@centrum.cz
         domain: centrum.cz
     - data:
-        email: info@post.cz
-        domain: post.cz
+        email: info@volny.cz
+        domain: volny.cz
 errors: []

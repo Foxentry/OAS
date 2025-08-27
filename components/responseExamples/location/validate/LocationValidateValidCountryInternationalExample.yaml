@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/validate
-  code: 54a06f80-41dc-4fa6-9b39-11126cedd5d3
+  code: 67c6df89-b7a8-4e61-a211-91a21222c87a
   query:
     streetWithNumber: Thámova 137/16
     city: Praha 8
@@ -19,112 +19,12 @@ request:
     countryFormat: international
     zipFormat: false
     acceptPostOfficeAsCity: false
+    correctionMode: full
+    correctionModeCrossCountry: format
 response:
   result:
-    isValid: false
-    proposal: invalidWithCorrection
-    dataTypes:
-      valid:
-        - number.full
-        - street
-      invalid:
-        - city
-        - country
-        - streetWithNumber
-        - zip
-    data:
-      country: null
-      state: null
-      region: null
-      district: null
-      ids:
-        internal: null
-        external: null
-      street: null
-      number:
-        type: null
-        part1: null
-        part1Number: null
-        part1Letter: null
-        part2: null
-        part2Number: null
-        part2Letter: null
-        full: null
-      streetWithNumber: Thámova 137/16
-      city: Praha 8
-      zip: '18600'
-      full: Thámova 137/16, 18600 Praha 8
-    errors:
-      - group: VALUE
-        type: INVALID_COMBINATION
-        subtype: null
-        severity: critical
-        relatedTo:
-          - city
-          - country
-        description: The Combination of values listed in relatedTo section is not
-          valid.
-      - group: VALUE
-        type: INVALID_COMBINATION
-        subtype: null
-        severity: critical
-        relatedTo:
-          - country
-          - streetWithNumber
-        description: The Combination of values listed in relatedTo section is not
-          valid.
-      - group: VALUE
-        type: INVALID_COMBINATION
-        subtype: null
-        severity: critical
-        relatedTo:
-          - city
-          - country
-          - streetWithNumber
-        description: The Combination of values listed in relatedTo section is not
-          valid.
-      - group: VALUE
-        type: INVALID_COMBINATION
-        subtype: null
-        severity: critical
-        relatedTo:
-          - country
-          - zip
-        description: The Combination of values listed in relatedTo section is not
-          valid.
-      - group: VALUE
-        type: INVALID_COMBINATION
-        subtype: null
-        severity: critical
-        relatedTo:
-          - city
-          - country
-          - zip
-        description: The Combination of values listed in relatedTo section is not
-          valid.
-      - group: VALUE
-        type: INVALID_COMBINATION
-        subtype: null
-        severity: critical
-        relatedTo:
-          - country
-          - streetWithNumber
-          - zip
-        description: The Combination of values listed in relatedTo section is not
-          valid.
-      - group: VALUE
-        type: INVALID_COMBINATION
-        subtype: null
-        severity: critical
-        relatedTo:
-          - city
-          - country
-          - streetWithNumber
-          - zip
-        description: The Combination of values listed in relatedTo section is not
-          valid.
-  resultCorrected:
     isValid: true
+    proposal: valid
     dataTypes:
       valid:
         - city
@@ -135,7 +35,7 @@ response:
         - zip
       invalid: []
     data:
-      country: Czech republic
+      country: Czech Republic
       state: null
       region: Hlavní město Praha
       district: území Hlavního města Prahy
@@ -157,14 +57,6 @@ response:
       zip: '18600'
       full: Thámova 137/16, 18600 Praha 8
     errors: []
-    fixes:
-      - group: VALUE
-        type: CHANGED
-        subtype: null
-        data:
-          typeFrom: country
-          type: country
-          valueFrom: Czech Republic
-          value: Czech republic
+  resultCorrected: null
   suggestions: []
 errors: []

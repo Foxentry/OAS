@@ -1,13 +1,14 @@
 status: 200
 request:
   endpoint: email/validate
-  code: aa9862c5-248d-42f9-9d30-bcde699ae068
+  code: aabef602-890e-433e-ae8f-655fadf94847
   query:
     email: info@gmali.com
   options:
     validationType: extended
     acceptDisposableEmails: true
     acceptFreemails: true
+    correctionMode: suggestion
 response:
   result:
     isValid: false
@@ -42,7 +43,7 @@ response:
       fixes:
         - group: VALUE
           type: CHANGED
-          subtype: TYPO
+          subtype: null
           data:
             typeFrom: email
             type: email

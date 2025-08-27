@@ -83,5 +83,19 @@ properties:
           considered as valid and the national format invalid.
         example: false
         default: false
+      correctionMode:
+        description: >-
+          This option determines how automatic corrections are handled. You can choose between
+          <b>full</b> to allow all corrections, <b>format</b> to fix formatting only, 
+          <b>suggestion</b> to return corrected data in suggestions, or <b>none</b> 
+          for no corrections to be applied.
+        type: string
+        enum:
+          - full
+          - format
+          - suggestion
+          - none
+        default: full
+        example: full
   client:
     $ref: ./../ClientRequest.yaml

@@ -1,5 +1,28 @@
 type: object
 properties:
+  flags:
+    type: object
+    properties:
+      isActive:
+        type: boolean
+        description: Indicates whether the company is currently active.
+        example: true
+
+      isVatPayer:
+        type: boolean
+        description: Indicates whether the company is a VAT payer. Available in extended and full datascopes.
+        example: true
+
+      isVatSubject:
+        type: boolean
+        description: Indicates whether the company is a VAT subject. Available in extended and full datascopes.
+        example: true
+
+      isInInsolvency:
+        type: boolean
+        description:  >-
+          Indicates whether the company is currently in insolvency. Available in full datascope in select countries.
+        example: false
   data:
     type: object
     properties:

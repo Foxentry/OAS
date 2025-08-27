@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/get
-  code: 3708f9bf-75a9-4499-8717-807fc11a3e49
+  code: 6a2495b0-0094-40d4-9fca-5e1cc9989faa
   query:
     registrationNumber: '04997476'
     country: CZ
@@ -245,4 +245,8 @@ response:
             - number: CZ1420100000002801976854
             - number: CZ6620100000002902049945
           history: []
+      flags:
+        isActive: true
+        isVatPayer: true
+        isVatSubject: false
 errors: []

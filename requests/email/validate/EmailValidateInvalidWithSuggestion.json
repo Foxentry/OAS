@@ -6,7 +6,8 @@
     "options": {
       "validationType": "extended",
       "acceptDisposableEmails": true,
-      "acceptFreemails": true
+      "acceptFreemails": true,
+      "correctionMode": "suggestion"
     }
   }
 }

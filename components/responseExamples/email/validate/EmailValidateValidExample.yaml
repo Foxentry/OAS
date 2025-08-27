@@ -1,13 +1,14 @@
 status: 200
 request:
   endpoint: email/validate
-  code: e7d47c3a-3ce7-4e7d-9681-a9f9b4c8deee
+  code: d494836d-7dcb-4405-b4c4-2c22a2408423
   query:
     email: info@foxentry.com
   options:
     validationType: extended
     acceptDisposableEmails: true
     acceptFreemails: true
+    correctionMode: full
 response:
   result:
     isValid: true

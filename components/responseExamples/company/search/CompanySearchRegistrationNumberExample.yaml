@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: ffc0fc72-d0ee-456b-bedd-96aaed17e0b7
+  code: 7f88b200-de7d-490b-8871-7c4267bbca80
   query:
     type: registrationNumber
     value: '049974'
@@ -73,6 +73,8 @@ response:
             full: Thámova 137/16, Karlín, 18600 Praha 8
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 9542f9f1-2e1d-4c81-a87c-8762e31ff958
         country: CZ
@@ -122,6 +124,8 @@ response:
             full: Křižovnická 86/6, Staré Město, 11000 Praha 1
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 75809988-2e08-4ac4-ba73-25e8528a4aab
         country: CZ
@@ -171,6 +175,8 @@ response:
             full: Plovární 478/1, Jižní Předměstí, 30100 Plzeň
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 90121cd5-d0af-46b6-8060-fa8b97a115c8
         country: CZ
@@ -220,6 +226,8 @@ response:
             full: Dřevec 5, 33141 Kožlany
         legalForm:
           type: physical
+      flags:
+        isActive: true
     - data:
         uuid: bc6b7eca-6e0b-4d3c-9f57-ea34470a7f88
         country: CZ
@@ -269,6 +277,8 @@ response:
             full: Džbánka 558, Nechánice, 25168 Sulice
         legalForm:
           type: physical
+      flags:
+        isActive: true
     - data:
         uuid: c02871f0-de95-45a0-9279-cd1d9399a195
         country: CZ
@@ -318,6 +328,8 @@ response:
             full: Husova 786/19, Jižní Předměstí, 30100 Plzeň
         legalForm:
           type: physical
+      flags:
+        isActive: true
     - data:
         uuid: ccf750e3-8721-4524-9b27-510915e7b334
         country: CZ
@@ -367,6 +379,8 @@ response:
             full: Trojická 1910/7, Nové Město, 12800 Praha 2
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: 0c63af7c-49bc-4d03-9737-ffbc728b75e3
         country: CZ
@@ -416,6 +430,8 @@ response:
             full: Koterovská 2827/152, Východní Předměstí, 32600 Plzeň
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
         uuid: c2cdcdcd-14ee-4869-94a9-58618b2a25c2
         country: CZ
@@ -465,41 +481,43 @@ response:
             full: Ústecká 98, Děčín XII-Vilsnice, 40502 Děčín
         legalForm:
           type: juridical
+      flags:
+        isActive: true
     - data:
-        uuid: 14fee83a-59af-482c-917d-13b62acca917
+        uuid: a0e1b163-fc66-4bb5-9d14-27bd42d7376b
         country: CZ
-        name: ADUS technik s.r.o.
-        registrationNumber: '04099745'
+        name: Tomáš Reška
+        registrationNumber: '04990749'
         taxNumber: null
-        vatNumber: CZ04099745
+        vatNumber: CZ9406054592
         vatNumberSpecial: null
         address:
           data:
             country: CZ
             state: null
-            region: Plzeňský kraj
-            district: Plzeň-město
+            region: Jihomoravský kraj
+            district: Vyškov
             ids:
-              internal: 225b36ee-0963-44f6-9c2b-e00b4d88b7ba
-              external: '24601489'
-            street: V Kamení
+              internal: 8db8b803-6b4c-4052-8112-975b5b58da81
+              external: '430684'
+            street: Nesovice
             number:
               type: č.p.
-              part1: '681'
-              part1Number: '681'
+              part1: '131'
+              part1Number: '131'
               part1Letter: null
-              part2: '26'
-              part2Number: '26'
+              part2: null
+              part2Number: null
               part2Letter: null
-              full: 681/26
-            streetWithNumber: V Kamení 681/26
-            city: Plzeň
-            zip: '32600'
-            full: V Kamení 681/26, 32600 Plzeň
+              full: '131'
+            streetWithNumber: Nesovice 131
+            city: Nesovice
+            zip: '68333'
+            full: Nesovice 131, 68333 Nesovice
         addressOfficial:
           data:
             country: CZ
-            street: V Kamení
+            street: Nesovice
             number:
               part1: null
               part1Number: null
@@ -507,11 +525,13 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: 681/26
-            streetWithNumber: V Kamení 681/26
-            city: Plzeň
-            zip: '32600'
-            full: V Kamení 681/26, Černice, 32600 Plzeň
+              full: '131'
+            streetWithNumber: Nesovice 131
+            city: Nesovice
+            zip: '68333'
+            full: č.p. 131, 68333 Nesovice
         legalForm:
-          type: juridical
+          type: physical
+      flags:
+        isActive: true
 errors: []

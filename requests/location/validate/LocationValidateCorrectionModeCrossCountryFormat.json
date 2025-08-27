@@ -1,0 +1,24 @@
+{
+  "request": {
+    "query": {
+      "streetWithNumber": "thmova 137/16",
+      "city": "Praha 8",
+      "zip": "18600",
+      "country": "sk"
+    },
+    "options": {
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL"
+      ],
+      "resultsLimit": 10,
+      "acceptPostOfficeAsCity": false,
+      "correctionModeCrossCountry": "format"
+    },
+    "client": {
+      "country": "CZ"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/validate
-  code: 0976272d-01f7-4d10-9218-e554fcfdfe26
+  code: bd511a49-d721-43fb-9abe-5b90cee9c2fe
   query:
     name: AVANTRO s.r.o.
     registrationNumber: '04997476'
@@ -19,6 +19,8 @@ request:
     cityFormat: basic
     zipFormat: false
     legalFormType: any
+    correctionMode: full
+    correctionModeCrossCountry: format
 response:
   result:
     isValid: true
@@ -72,6 +74,8 @@ response:
           full: Thámova 137/16, Karlín, 18600 Praha 8
       legalForm:
         type: juridical
+    flags:
+      isActive: true
     errors: []
   resultCorrected: null
   suggestions: []

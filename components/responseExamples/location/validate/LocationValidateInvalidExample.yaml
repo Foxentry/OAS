@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/validate
-  code: 6fa24d22-5363-4174-a14a-c266ae42b451
+  code: ade0f812-322b-427e-af47-3677acc61ff1
   query:
     streetWithNumber: Thámova 123456789
     city: Parharlin
@@ -18,13 +18,14 @@ request:
     countryFormat: alpha2
     zipFormat: false
     acceptPostOfficeAsCity: false
+    correctionMode: full
+    correctionModeCrossCountry: format
 response:
   result:
     isValid: false
     proposal: invalid
     dataTypes:
       valid:
-        - number
         - number.full
         - street
       invalid:

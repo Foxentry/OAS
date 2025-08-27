@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/get
-  code: 88e1a725-f880-422b-9f28-15fd8a2b4eba
+  code: 437718b1-a0d2-4ee5-9d90-56672227a180
   query:
     registrationNumber: '04997476'
     country: CZ
@@ -66,4 +66,6 @@ response:
             full: Thámova 137/16, Karlín, 18600 Praha 8
         legalForm:
           type: juridical
+      flags:
+        isActive: true
 errors: []

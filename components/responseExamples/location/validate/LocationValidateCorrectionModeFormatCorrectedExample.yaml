@@ -1,11 +1,12 @@
 status: 200
 request:
   endpoint: location/validate
-  code: 3fe20c31-4489-46b1-87c3-9e74a63214f3
+  code: 37dd32f4-9115-4aae-a63a-8a7690e8b127
   query:
-    streetWithNumber: Thámova 137
-    city: Praha
-    zip: '18600'
+    streetWithNumber: thamova 137/16
+    city: praha 8
+    zip: 186 00
+    country: cz
   options:
     dataSource:
       - CZ
@@ -18,22 +19,25 @@ request:
     countryFormat: alpha2
     zipFormat: false
     acceptPostOfficeAsCity: false
-    correctionMode: full
+    correctionMode: format
     correctionModeCrossCountry: format
+  client:
+    country: CZ
 response:
   result:
     isValid: false
     proposal: invalidWithCorrection
     dataTypes:
       valid:
-        - street
-        - zip
+        - number.full
       invalid:
         - city
-        - number.full
+        - country
+        - street
         - streetWithNumber
+        - zip
     data:
-      country: null
+      country: CZ
       state: null
       region: null
       district: null
@@ -50,30 +54,43 @@ response:
         part2Number: null
         part2Letter: null
         full: null
-      streetWithNumber: Thámova 137
-      city: Praha
-      zip: '18600'
-      full: Thámova 137, 18600 Praha
+      streetWithNumber: thamova 137/16
+      city: praha 8
+      zip: 186 00
+      full: thamova 137/16, 186 00 praha 8
     errors:
-      - group: SYNTAX
-        type: VALUE_PART_MISSING
-        subtype: NUMBER_PART
-        severity: critical
-        relatedTo:
-          - streetWithNumber
-        description: Value is missing some part of the number.
       - group: FORMAT
-        type: INVALID
-        subtype: null
+        type: CHARACTERS
+        subtype: CASE_SENSITIVITY
         severity: warning
         relatedTo:
+          - country
+          - streetWithNumber
           - city
-        description: null
+        description: Invalid case sensitivity. Specific rules are applied to the use
+          of upper and lower case letters.
+      - group: FORMAT
+        type: CHARACTERS
+        subtype: DIACRITICS
+        severity: warning
+        relatedTo:
+          - streetWithNumber
+        description: Invalid diacritics. Specific rules are applied to the use of
+          diacritics.
+      - group: FORMAT
+        type: CHARACTERS
+        subtype: WHITESPACES
+        severity: warning
+        relatedTo:
+          - zip
+        description: Invalid use of spaces. Specific rules are applied to the use
+          of spaces.
   resultCorrected:
     isValid: true
     dataTypes:
       valid:
         - city
+        - country
         - number.full
         - street
         - streetWithNumber
@@ -103,21 +120,45 @@ response:
       full: Thámova 137/16, 18600 Praha 8
     errors: []
     fixes:
-      - group: SYNTAX
-        type: VALUE_PART_ADDED
-        subtype: NUMBER_PART
+      - group: FORMAT
+        type: CHANGED
+        subtype: CASE_SENSITIVITY
+        data:
+          typeFrom: country
+          type: country
+          valueFrom: cz
+          value: CZ
+      - group: FORMAT
+        type: CHANGED
+        subtype: CASE_SENSITIVITY
         data:
           typeFrom: streetWithNumber
           type: streetWithNumber
-          valueFrom: Thámova 137
+          valueFrom: thamova 137/16
+          value: Thamova 137/16
+      - group: FORMAT
+        type: CHANGED
+        subtype: DIACRITICS
+        data:
+          typeFrom: streetWithNumber
+          type: streetWithNumber
+          valueFrom: Thamova 137/16
           value: Thámova 137/16
       - group: FORMAT
         type: CHANGED
-        subtype: null
+        subtype: CASE_SENSITIVITY
         data:
           typeFrom: city
           type: city
-          valueFrom: Praha
+          valueFrom: praha 8
           value: Praha 8
+      - group: FORMAT
+        type: CHANGED
+        subtype: WHITESPACES
+        data:
+          typeFrom: zip
+          type: zip
+          valueFrom: 186 00
+          value: '18600'
   suggestions: []
 errors: []

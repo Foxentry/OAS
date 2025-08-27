@@ -1,82 +1,53 @@
-type: object
-description: Query options.
-properties:
-  dataSource:
-    description: >-
-      Allowed data sources. You can specify the exact data sources that should
-      be used by the validator. This option is not available for the endpoints
-      that do not use any internal databases (e-mails, phone numbers).
-    type: array
-    items:
-      type: string
-      example: CZ
-    default:
-      - CZ
-      - SK
-      - PL
-    example:
-      - CZ
-      - SK
-      - PL
+allOf:
+  - $ref: ./LocationOptions.yaml
+  - type: object
+    description: Query options.
+    properties:
+      resultsLimit:
+        description: Limits number of suggestions returned by the endpoint.
+        type: integer
+        minimum: 1
+        maximum: 20
+        default: 10
+        example: 10
 
-  resultsLimit:
-    description: Limits number of suggestions returned by the endpoint.
-    type: integer
-    minimum: 1
-    maximum: 20
-    default: 10
-    example: 10
+      acceptPostOfficeAsCity:
+        type: boolean
+        description: >-
+          If true, the postOffice name is accepted as city. For example
+          <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b>
+          would be both valid.
+        default: false
+        example: true
 
-  acceptPostOfficeAsCity:
-    type: boolean
-    description: >-
-      If true, the postOffice name is accepted as city. For example
-      <b>Thámova 137/16, Praha 8</b> and <b>Thámova 137/16, Praha 86</b>
-      would be both valid.
-    default: false
-    example: true
+      correctionMode:
+        description: >-
+          This option determines how automatic corrections are handled. You can choose between
+          <b>full</b> to allow all corrections, <b>format</b> to fix formatting only, 
+          <b>suggestion</b> to return corrected data in suggestions, or <b>none</b> 
+          for no corrections to be applied. Quality of data differs between countries, therefore
+          it might be desirable to limit the correction mode in some cases.
+        type: string
+        enum:
+          - full
+          - format
+          - suggestion
+          - none
+        default: full
+        example: full
 
-  dataScope:
-    description: Data scope of returned data.
-    type: string
-    enum:
-      - basic
-      - full
-    default: basic
-    example: full
-
-  zipFormat:
-    description: Whether to return locally formatted ZIP code or not. (130 00 vs 13000).
-    type: boolean
-    default: false
-    example: false
-
-  countryFormat:
-    description: >-
-      This option determines the format in which the country should be returned. If the country in query differs, 
-      it will be marked as invalid and fixed. Supported formats: <b>alpha2</b> = CZ, <b>alpha3</b> = CZE, <b>local</b> = Česká republika, 
-      <b>international</b> = Czech republic, <b>localShortened</b> = Česko, <b>internationalShortened</b> = Czechia.
-    type: string
-    enum:
-      - alpha2
-      - alpha3
-      - local
-      - localShortened
-      - international
-      - internationalShortened
-    default: alpha2
-    example: alpha2
-
-  cityFormat:
-    description: >-
-      This option determines the format in which the city is returned.
-      <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8
-      - Karlín.
-    type: string
-    enum:
-      - minimal
-      - basic
-      - extended
-    default: basic
-    example: basic
-
+      correctionModeCrossCountry:
+        description: >-
+          This option determines how automatic corrections are handled when a result from another country
+          matches your query. You can choose between <b>full</b> to allow all corrections, <b>format</b> 
+          to fix formatting only, <b>suggestion</b> to return corrected data in suggestions, or <b>none</b> 
+          for no corrections to be applied. Quality of data differs between countries, therefore it might 
+          be desirable to limit the correction mode in some cases.
+        type: string
+        enum:
+          - full
+          - format
+          - suggestion
+          - none
+        default: format
+        example: format

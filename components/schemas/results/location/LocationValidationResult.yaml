@@ -20,6 +20,7 @@ properties:
           - invalidWithPartialCorrection
           - invalidWithSuggestion
           - invalidWithCorrectionWithSuggestion
+          - invalidWithPartialCorrectionWithSuggestion
           - null
         description: >-
           Proposed solution by Foxentry how you should process the response in

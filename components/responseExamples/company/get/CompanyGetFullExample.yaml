@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/get
-  code: 703c9e0b-94c9-4be2-a1d0-f798996c6eed
+  code: 092b6aa5-27c0-49d1-9ae4-c31f0736b3b9
   query:
     registrationNumber: '04997476'
     country: CZ
@@ -141,6 +141,7 @@ response:
           terminated: null
         employees:
           category: 1-5
+          count: null
         insolvency: null
         businessPremises: []
         authority:
@@ -360,4 +361,9 @@ response:
               validFrom: '2017-09-01'
               validTo: null
               isGroupRegistration: false
+      flags:
+        isActive: true
+        isVatPayer: true
+        isVatSubject: false
+        isInInsolvency: false
 errors: []

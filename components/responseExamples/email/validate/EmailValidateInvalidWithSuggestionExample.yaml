@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: email/validate
-  code: aabef602-890e-433e-ae8f-655fadf94847
+  code: adab4fe4-3f0d-49bb-a964-2a438af65a6f
   query:
     email: info@gmali.com
   options:
@@ -20,7 +20,7 @@ response:
     flags:
       isCatchAllServer: false
       isDisposableEmailAddress: true
-      isFreemail: false
+      isFreemail: true
     errors:
       - group: VALUE
         type: INVALID

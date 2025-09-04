@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: location/validate
-  code: ade0f812-322b-427e-af47-3677acc61ff1
+  code: 79c721f8-a189-4fcc-a813-d1bb43799567
   query:
     streetWithNumber: Thámova 123456789
     city: Parharlin

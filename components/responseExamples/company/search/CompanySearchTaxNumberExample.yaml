@@ -1,7 +1,7 @@
 status: 200
 request:
   endpoint: company/search
-  code: 60f587c4-503a-4972-ab0d-9883e596f306
+  code: 4da25796-7a2e-47d0-8f63-25de4b71c5c1
   query:
     type: taxNumber
     value: '2120884'
@@ -21,8 +21,11 @@ request:
     cityFormat: basic
     zipFormat: false
     legalFormType: any
+    allowPartialResults: false
 response:
   resultsCount: 10
+  resultsOffset: 0
+  resultsTotal: null
   results:
     - data:
         uuid: 76aca24f-f823-45bb-a866-842acd17b26d
@@ -70,24 +73,46 @@ response:
             streetWithNumber: R. Dilonga 129/6B
             city: Hlohovec
             zip: '92001'
-            full: null
+            full: R. Dilonga 129/6B, 92001 Hlohovec
         legalForm:
           type: juridical
       flags:
         isActive: true
     - data:
-        uuid: 451e40b7-6d07-43f0-87f2-d9b4ea9bd139
+        uuid: 6b1ce627-d93f-48e8-bbae-b2651091a86c
         country: SK
-        name: KG bet, s. r. o.
-        registrationNumber: '52078892'
-        taxNumber: '2120884084'
-        vatNumber: SK2120884084
+        name: Domov v pohode, s.r.o.
+        registrationNumber: '52052711'
+        taxNumber: '2120884029'
+        vatNumber: null
         vatNumberSpecial: null
-        address: null
+        address:
+          data:
+            country: SK
+            state: null
+            region: Trenčiansky
+            district: Prievidza
+            ids:
+              internal: 5f0456d4-02eb-4658-ab72-75a8854384ad
+              external: null
+            street: Duklianska ulica
+            number:
+              type: null
+              part1: '54'
+              part1Number: '54'
+              part1Letter: null
+              part2: 7A
+              part2Number: '7'
+              part2Letter: A
+              full: 54/7A
+            streetWithNumber: Duklianska ulica 54/7A
+            city: Prievidza
+            zip: '97101'
+            full: Duklianska ulica 54/7A, 97101 Prievidza
         addressOfficial:
           data:
             country: SK
-            street: M. R. Štefánika
+            street: Duklianska
             number:
               part1: null
               part1Number: null
@@ -95,11 +120,69 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: 1840/20
-            streetWithNumber: M. R. Štefánika 1840/20
-            city: Dolný Kubín
-            zip: '02601'
-            full: null
+              full: 54/7A
+            streetWithNumber: Duklianska 54/7A
+            city: Prievidza
+            zip: '97101'
+            full: Duklianska 54/7A, 97101 Prievidza
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+    - data:
+        uuid: 56c8274c-8485-4732-961a-aef76e11f6d2
+        country: SK
+        name: Penarius, s.r.o.
+        registrationNumber: '52079007'
+        taxNumber: '2120884678'
+        vatNumber: SK2120884678
+        vatNumberSpecial: null
+        address: null
+        addressOfficial:
+          data:
+            country: SK
+            street: Eötvösova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 51/28
+            streetWithNumber: Eötvösova 51/28
+            city: Komárno
+            zip: '94501'
+            full: Eötvösova 51/28, 94501 Komárno
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+    - data:
+        uuid: 7312ffbe-d80c-4fb7-b19a-548e9468e061
+        country: SK
+        name: OSCAR PINKY s.r.o.
+        registrationNumber: '52057241'
+        taxNumber: '2120884205'
+        vatNumber: null
+        vatNumberSpecial: null
+        address: null
+        addressOfficial:
+          data:
+            country: SK
+            street: Rázusova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '49'
+            streetWithNumber: Rázusova 49
+            city: Košice-Juh
+            zip: '04001'
+            full: Rázusova 49, 04001 Košice-Juh
         legalForm:
           type: juridical
       flags:
@@ -150,75 +233,24 @@ response:
             streetWithNumber: '95'
             city: Hájske
             zip: '95133'
-            full: null
+            full: 95, 95133 Hájske
         legalForm:
           type: juridical
       flags:
         isActive: true
     - data:
-        uuid: 4f985edc-47da-49da-b41d-f14f4f89cf34
+        uuid: 417a5b27-7dd2-4934-babf-4c57824cfe3a
         country: SK
-        name: BISTRANS s.r.o.
-        registrationNumber: '52029956'
-        taxNumber: '2120884865'
-        vatNumber: SK2120884865
-        vatNumberSpecial: null
-        address:
-          data:
-            country: SK
-            state: null
-            region: Košický
-            district: Košice IV
-            ids:
-              internal: 79454954-7212-4263-9dfd-3f7fdf163677
-              external: null
-            street: Lichardova
-            number:
-              type: null
-              part1: '152'
-              part1Number: '152'
-              part1Letter: null
-              part2: '21'
-              part2Number: '21'
-              part2Letter: null
-              full: 152/21
-            streetWithNumber: Lichardova 152/21
-            city: Košice
-            zip: '04001'
-            full: Lichardova 152/21, 04001 Košice
-        addressOfficial:
-          data:
-            country: SK
-            street: Lichardova
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 152/21
-            streetWithNumber: Lichardova 152/21
-            city: Košice-Juh
-            zip: '04001'
-            full: null
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 05e5128d-4399-4afd-aa24-8e1ba8fa2731
-        country: SK
-        name: MEDICARE CENTRUM s.r.o.
-        registrationNumber: '52078639'
-        taxNumber: '2120884942'
-        vatNumber: null
+        name: KASTEX TECHNIKA s. r. o., v likvidácii
+        registrationNumber: '52083764'
+        taxNumber: '2120884799'
+        vatNumber: SK2120884799
         vatNumberSpecial: null
         address: null
         addressOfficial:
           data:
             country: SK
-            street: Strečnianska
+            street: Strojnícka
             number:
               part1: null
               part1Number: null
@@ -226,11 +258,113 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: '13'
-            streetWithNumber: Strečnianska 13
-            city: Bratislava-Petržalka
-            zip: '85105'
-            full: null
+              full: '5'
+            streetWithNumber: Strojnícka 5
+            city: Prešov
+            zip: '08006'
+            full: Strojnícka 5, 08006 Prešov
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+    - data:
+        uuid: 451e40b7-6d07-43f0-87f2-d9b4ea9bd139
+        country: SK
+        name: KG bet, s. r. o.
+        registrationNumber: '52078892'
+        taxNumber: '2120884084'
+        vatNumber: SK2120884084
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            state: null
+            region: Banskobystrický
+            district: Banská Bystrica
+            ids:
+              internal: 94fc7801-c47c-4bf6-ad72-7c95f6c2c7d2
+              external: null
+            street: 29.augusta
+            number:
+              type: null
+              part1: '1524'
+              part1Number: '1524'
+              part1Letter: null
+              part2: '24'
+              part2Number: '24'
+              part2Letter: null
+              full: 1524/24
+            streetWithNumber: 29.augusta 1524/24
+            city: Banská Bystrica
+            zip: '97401'
+            full: 29.augusta 1524/24, 97401 Banská Bystrica
+        addressOfficial:
+          data:
+            country: SK
+            street: ul. 29. augusta
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 1524/24
+            streetWithNumber: ul. 29. augusta 1524/24
+            city: Banská Bystrica
+            zip: '97401'
+            full: ul. 29. augusta 1524/24, 97401 Banská Bystrica
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+    - data:
+        uuid: 6761be1c-eb61-4fdd-b1de-bca2d3cdb51f
+        country: SK
+        name: Fibertel s.r.o.
+        registrationNumber: '52078965'
+        taxNumber: '2120884546'
+        vatNumber: SK2120884546
+        vatNumberSpecial: null
+        address:
+          data:
+            country: SK
+            state: null
+            region: Prešovský
+            district: Humenné
+            ids:
+              internal: 80514d05-f3c7-4e9b-87d6-c8e439656aad
+              external: null
+            street: Osloboditeľov
+            number:
+              type: null
+              part1: '1631'
+              part1Number: '1631'
+              part1Letter: null
+              part2: '114'
+              part2Number: '114'
+              part2Letter: null
+              full: 1631/114
+            streetWithNumber: Osloboditeľov 1631/114
+            city: Humenné
+            zip: '06601'
+            full: Osloboditeľov 1631/114, 06601 Humenné
+        addressOfficial:
+          data:
+            country: SK
+            street: Osloboditeľov
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 1631/114
+            streetWithNumber: Osloboditeľov 1631/114
+            city: Humenné
+            zip: '06601'
+            full: Osloboditeľov 1631/114, 06601 Humenné
         legalForm:
           type: juridical
       flags:
@@ -281,46 +415,46 @@ response:
             streetWithNumber: Ľubeľa 419
             city: Ľubeľa
             zip: '03214'
-            full: null
+            full: Ľubeľa 419, 03214 Ľubeľa
         legalForm:
           type: juridical
       flags:
         isActive: true
     - data:
-        uuid: 9f4abeb0-456c-4dce-9901-09e08ff016d0
+        uuid: 2bf750fd-a350-4a01-822d-2d7b52f014c4
         country: SK
-        name: by Ell s. r. o.
-        registrationNumber: '52063666'
-        taxNumber: '2120884425'
-        vatNumber: SK2120884425
+        name: MANGALIKA, s.r.o.
+        registrationNumber: '52073181'
+        taxNumber: '2120884667'
+        vatNumber: null
         vatNumberSpecial: null
         address:
           data:
             country: SK
             state: null
-            region: Bratislavský
-            district: Bratislava III
+            region: Trnavský
+            district: Piešťany
             ids:
-              internal: 446e33b3-5fe3-43f5-8a5c-21329c1c1ede
+              internal: 57aa3355-42b6-46af-b60c-6eaf85cf4d21
               external: null
-            street: Karpatské námestie
+            street: Vážska
             number:
               type: null
-              part1: '7770'
-              part1Number: '7770'
+              part1: '3568'
+              part1Number: '3568'
               part1Letter: null
-              part2: 10A
-              part2Number: '10'
-              part2Letter: A
-              full: 7770/10A
-            streetWithNumber: Karpatské námestie 7770/10A
-            city: Bratislava
-            zip: '83106'
-            full: Karpatské námestie 7770/10A, 83106 Bratislava
+              part2: '37'
+              part2Number: '37'
+              part2Letter: null
+              full: 3568/37
+            streetWithNumber: Vážska 3568/37
+            city: Piešťany
+            zip: '92101'
+            full: Vážska 3568/37, 92101 Piešťany
         addressOfficial:
           data:
             country: SK
-            street: Karpatské námestie
+            street: Vážska
             number:
               part1: null
               part1Number: null
@@ -328,120 +462,11 @@ response:
               part2: null
               part2Number: null
               part2Letter: null
-              full: 10/A
-            streetWithNumber: Karpatské námestie 10/A
-            city: Bratislava-Rača
-            zip: '83106'
-            full: null
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: ac143b30-e995-4b78-84d6-9b7b037cc403
-        country: SK
-        name: ConIS, s. r. o.
-        registrationNumber: '52004414'
-        taxNumber: '2120884733'
-        vatNumber: SK2120884733
-        vatNumberSpecial: null
-        address: null
-        addressOfficial:
-          data:
-            country: SK
-            street: Jurská
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 13770/25
-            streetWithNumber: Jurská 13770/25
-            city: Bratislava-Nové Mesto
-            zip: '83102'
-            full: null
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 2fbf787e-e00b-4d8c-9db0-04a0ea2f1ca4
-        country: SK
-        name: PATU s.r.o.
-        registrationNumber: '52055850'
-        taxNumber: '2120884348'
-        vatNumber: SK2120884348
-        vatNumberSpecial: null
-        address:
-          data:
-            country: SK
-            state: null
-            region: Košický
-            district: Košice I
-            ids:
-              internal: 1db9b6d7-4fb7-44b2-b7f3-6a744ec607ff
-              external: null
-            street: Němcovej
-            number:
-              type: null
-              part1: '34'
-              part1Number: '34'
-              part1Letter: null
-              part2: '8'
-              part2Number: '8'
-              part2Letter: null
-              full: 34/8
-            streetWithNumber: Němcovej 34/8
-            city: Košice
-            zip: '04001'
-            full: Němcovej 34/8, 04001 Košice
-        addressOfficial:
-          data:
-            country: SK
-            street: Nemcovej
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 34/8
-            streetWithNumber: Nemcovej 34/8
-            city: Košice-Sever
-            zip: '04001'
-            full: null
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 417a5b27-7dd2-4934-babf-4c57824cfe3a
-        country: SK
-        name: KASTEX TECHNIKA s. r. o., v likvidácii
-        registrationNumber: '52083764'
-        taxNumber: '2120884799'
-        vatNumber: SK2120884799
-        vatNumberSpecial: null
-        address: null
-        addressOfficial:
-          data:
-            country: SK
-            street: Strojnícka
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '5'
-            streetWithNumber: Strojnícka 5
-            city: Prešov
-            zip: '08006'
-            full: null
+              full: 3568/37
+            streetWithNumber: Vážska 3568/37
+            city: Piešťany
+            zip: '92101'
+            full: Vážska 3568/37, 92101 Piešťany
         legalForm:
           type: juridical
       flags:

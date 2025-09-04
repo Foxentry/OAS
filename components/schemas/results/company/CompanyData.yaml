@@ -10,7 +10,7 @@ properties:
 
       isVatPayer:
         type: boolean
-        description: Indicates whether the company is a VAT payer. Available in extended and full datascopes.
+        description: Indicates whether the company is a VAT payer. Available in extended and full datascopes.git sta
         example: true
 
       isVatSubject:

@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout this repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v5
         with:
           node-version: 'lts/*'
 
@@ -24,12 +24,12 @@ jobs:
         run: redocly bundle openapi.yaml -o openapi-bundled.yaml
 
       - name: Add bundled Openapi spec to release
-        uses: softprops/action-gh-release@v1
-        if: ${{startsWith(github.ref, 'refs/tags/') }}
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
         with:
             files: openapi-bundled.yaml
 
       - name: Sync Openapi spec
-        uses: readmeio/rdme@v9
+        uses: readmeio/rdme@v10
         with:
-          rdme: openapi ./openapi.yaml --key=${{ secrets.README_API_KEY }} --id=64d389d9f6e898001137e15b
+          rdme: openapi ./openapi.yaml --key=${{ secrets.README_API_KEY }} --slug=foxentry-api-reference

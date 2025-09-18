@@ -32,4 +32,4 @@ jobs:
       - name: Sync Openapi spec
         uses: readmeio/rdme@v10
         with:
-          rdme: openapi ./openapi.yaml --key=${{ secrets.README_API_KEY }} --slug=foxentry-api-reference
+          rdme: openapi upload ./openapi.yaml --key=${{ secrets.README_API_KEY }} --slug=foxentry-api-reference

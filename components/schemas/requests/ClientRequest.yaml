@@ -1,8 +1,8 @@
 type: object
 description: >-
-  Additional information about your user (from whom you've obtained the data
-  sent in query) in order to specify the results in response. Used mainly in web
-  forms when you need more relevant search/autocomplete results.
+  Additional information about your user (from whom you've obtained the data sent in query) 
+  to increase relevance of the results. If you do not wish to provide this information, you can limit 
+  results to relevant countries using the `dataSource` parameter present in some modules.
 properties:
   ip:
     type: string
@@ -15,7 +15,7 @@ properties:
     example: CZ
   location:
     type: object
-    description: Latitude & longitude of the client's aprox location.
+    description: Latitude & longitude of the client's approximate location.
     properties:
       lat:
         type: number

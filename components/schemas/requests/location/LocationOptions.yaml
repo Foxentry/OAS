@@ -12,9 +12,9 @@ properties:
 
   dataSource:
     description: >-
-      Allowed data sources. You can specify the exact data sources that should
-      be used by the validator. This option is not available for the endpoints
-      that do not use any internal databases (e-mails, phone numbers).
+      Array of allowed data sources, which restricts countries the module searches.
+      Although we use the `request.client` object to provide most relevant results, it is generally recommended to
+      to limit this option to only the necessary sources - especially if you don't utilize the `request.client` object.
     type: array
     items:
       type: string

@@ -29,7 +29,7 @@ while IFS= read -r json_file; do
   out_file="$out_dir/${file}Example.yaml"
   mkdir -p "$out_dir"
 
-  # Fetch new response and convert to YAML
+  # Fetch new response and convert to YAML, wrapped in 'value:' for OpenAPI examples
   tmp_yaml=$(mktemp)
   curl -s --request POST \
        --url "https://api.foxentry.com/$folder" \
@@ -38,7 +38,7 @@ while IFS= read -r json_file; do
        --header "authorization: Bearer $API_KEY" \
        --header "content-type: application/json" \
        --header "foxentry-include-request-details: true" \
-       --data @"$json_file" | yq -y . > "$tmp_yaml"
+       --data @"$json_file" | yq -y '{value: .}' > "$tmp_yaml"
 
   # If no previous example exists, save immediately
   if [ ! -f "$out_file" ]; then
@@ -49,8 +49,8 @@ while IFS= read -r json_file; do
 
   # Compare ignoring request.code
   if diff -q \
-      <(yq -y 'del(.request.code)' "$out_file") \
-      <(yq -y 'del(.request.code)' "$tmp_yaml") >/dev/null; then
+      <(yq -y 'del(.value.request.code)' "$out_file") \
+      <(yq -y 'del(.value.request.code)' "$tmp_yaml") >/dev/null; then
     printf "%bNo change%b\n\n" "$GREEN" "$RESET"
     rm -f "$tmp_yaml"
   else

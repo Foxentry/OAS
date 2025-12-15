@@ -1,48 +1,49 @@
-status: 200
-request:
-  endpoint: name/validate
-  code: 55f13603-cdd7-4905-894e-361bf4cd07b5
-  query:
-    name: Pawel
-  options:
-    dataSource:
-      - CZ
-      - SK
-    dataScope: basic
-    acceptDegrees: false
-    acceptContext: false
-    smartMode: true
-    validationDepth: strict
-response:
-  result:
-    isValid: true
-    proposal: validWithSuggestion
-    data:
+value:
+  status: 200
+  request:
+    endpoint: name/validate
+    code: 9827fbf0-3ab2-48ad-84e2-244fe8678a8b
+    query:
       name: Pawel
-      surname: null
-      nameSurname: null
-      context: []
-      degreesBefore: []
-      degreesAfter: []
-    errors: []
-  resultCorrected: null
-  suggestions:
-    - isValid: true
+    options:
+      dataSource:
+        - CZ
+        - SK
+      dataScope: basic
+      acceptDegrees: false
+      acceptContext: false
+      smartMode: true
+      validationDepth: strict
+  response:
+    result:
+      isValid: true
+      proposal: validWithSuggestion
       data:
-        name: Pavel
+        name: Pawel
         surname: null
         nameSurname: null
         context: []
         degreesBefore: []
         degreesAfter: []
       errors: []
-      fixes:
-        - group: VALUE
-          type: CHANGED
-          subtype: TYPO
-          data:
-            typeFrom: name
-            type: name
-            valueFrom: Pawel
-            value: Pavel
-errors: []
+    resultCorrected: null
+    suggestions:
+      - isValid: true
+        data:
+          name: Pavel
+          surname: null
+          nameSurname: null
+          context: []
+          degreesBefore: []
+          degreesAfter: []
+        errors: []
+        fixes:
+          - group: VALUE
+            type: CHANGED
+            subtype: TYPO
+            data:
+              typeFrom: name
+              type: name
+              valueFrom: Pawel
+              value: Pavel
+  errors: []

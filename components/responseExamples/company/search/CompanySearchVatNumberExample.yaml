@@ -1,540 +1,541 @@
-status: 200
-request:
-  endpoint: company/search
-  code: 84ec3bb9-0634-4d52-b2a0-62c149000d4a
-  query:
-    type: vatNumber
-    value: CZ04997
-  options:
-    dataSource:
-      - CZ
-      - SK
-      - PL
-    dataScope: basic
-    includeTerminatedSubjects: false
-    filterMode: limit
-    filterAcceptAlternatives: true
-    filterAcceptFormat: true
-    filterExactMatch: true
-    resultsLimit: 10
-    countryFormat: alpha2
-    cityFormat: basic
-    zipFormat: false
-    legalFormType: any
-    allowPartialResults: false
-response:
-  resultsCount: 11
-  resultsOffset: 0
-  resultsTotal: null
-  results:
-    - data:
-        uuid: ed969ebb-db8d-427b-8c58-7ecaca7d7f92
-        country: CZ
-        name: NIKOLUNA s.r.o.
-        registrationNumber: '04997832'
-        taxNumber: null
-        vatNumber: CZ04997832
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Středočeský kraj
-            district: Rakovník
-            ids:
-              internal: ae1e3cc3-9023-463c-95b7-f543b733016f
-              external: '8662991'
-            street: Pod Nemocnicí
-            number:
-              type: č.p.
-              part1: '2154'
-              part1Number: '2154'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '2154'
-            streetWithNumber: Pod Nemocnicí 2154
-            city: Rakovník
-            zip: '26901'
-            full: Pod Nemocnicí 2154, 26901 Rakovník
-        addressOfficial:
-          data:
-            country: CZ
-            street: Pod Nemocnicí
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '2154'
-            streetWithNumber: Pod Nemocnicí 2154
-            city: Rakovník
-            zip: '26901'
-            full: Pod Nemocnicí 2154, 26901 Rakovník
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 580a7925-2c40-43a7-a9a2-a5ab0ea397f2
-        country: CZ
-        name: AMADET facility s.r.o.
-        registrationNumber: '04997689'
-        taxNumber: null
-        vatNumber: CZ04997689
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Hlavní město Praha
-            district: území Hlavního města Prahy
-            ids:
-              internal: 8ffc809c-11f0-44ae-a949-ee6dd840c1dc
-              external: '21889945'
-            street: Durychova
-            number:
-              type: č.p.
-              part1: '101'
-              part1Number: '101'
-              part1Letter: null
-              part2: '66'
-              part2Number: '66'
-              part2Letter: null
-              full: 101/66
-            streetWithNumber: Durychova 101/66
-            city: Praha 4
-            zip: '14200'
-            full: Durychova 101/66, 14200 Praha 4
-        addressOfficial:
-          data:
-            country: CZ
-            street: Durychova
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 101/66
-            streetWithNumber: Durychova 101/66
-            city: Praha
-            zip: '14200'
-            full: Durychova 101/66, 14200 Praha
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 3ae19a19-d7f7-4481-a91c-dcc0685860d1
-        country: CZ
-        name: M&S GLOBWASH CZ, s.r.o.
-        registrationNumber: '04997361'
-        taxNumber: null
-        vatNumber: CZ04997361
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Středočeský kraj
-            district: Praha-východ
-            ids:
-              internal: 403b808e-5047-409a-b842-5a2198eca151
-              external: '74746545'
-            street: Horácká
-            number:
-              type: č.p.
-              part1: '162'
-              part1Number: '162'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '162'
-            streetWithNumber: Horácká 162
-            city: Křenice
-            zip: '25084'
-            full: Horácká 162, 25084 Křenice
-        addressOfficial:
-          data:
-            country: CZ
-            street: Horácká
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '162'
-            streetWithNumber: Horácká 162
-            city: Křenice
-            zip: '25084'
-            full: Horácká 162, 25084 Křenice
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 66bb2337-1a0c-46b7-8923-cf21b73850e1
-        country: CZ
-        name: HBS CROLE s.r.o.
-        registrationNumber: '04997891'
-        taxNumber: null
-        vatNumber: CZ04997891
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Hlavní město Praha
-            district: území Hlavního města Prahy
-            ids:
-              internal: 5cfda44d-273b-4068-b600-c0454dce8f37
-              external: '21692882'
-            street: Elišky Krásnohorské
-            number:
-              type: č.p.
-              part1: '11'
-              part1Number: '11'
-              part1Letter: null
-              part2: '4'
-              part2Number: '4'
-              part2Letter: null
-              full: 11/4
-            streetWithNumber: Elišky Krásnohorské 11/4
-            city: Praha 1
-            zip: '11000'
-            full: Elišky Krásnohorské 11/4, 11000 Praha 1
-        addressOfficial:
-          data:
-            country: CZ
-            street: Elišky Krásnohorské
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 11/4
-            streetWithNumber: Elišky Krásnohorské 11/4
-            city: Praha
-            zip: '11000'
-            full: Elišky Krásnohorské 11/4, 11000 Praha
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 2197de26-a98a-451d-b533-da457e73af5b
-        country: CZ
-        name: Niema pawn s.r.o.
-        registrationNumber: '04997557'
-        taxNumber: null
-        vatNumber: CZ04997557
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Moravskoslezský kraj
-            district: Opava
-            ids:
-              internal: f14f8dca-fa2b-427c-b7f2-7b1261dde4c6
-              external: '4406311'
-            street: Spojná
-            number:
-              type: č.p.
-              part1: '383'
-              part1Number: '383'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '383'
-            streetWithNumber: Spojná 383
-            city: Markvartovice
-            zip: '74714'
-            full: Spojná 383, 74714 Markvartovice
-        addressOfficial:
-          data:
-            country: CZ
-            street: Spojná
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '383'
-            streetWithNumber: Spojná 383
-            city: Markvartovice
-            zip: '74714'
-            full: Spojná 383, 74714 Markvartovice
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 92dd746c-1a66-4b2a-9706-82628a157463
-        country: CZ
-        name: Jevyx-car s.r.o.
-        registrationNumber: '04997174'
-        taxNumber: null
-        vatNumber: CZ04997174
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Jihomoravský kraj
-            district: Brno-město
-            ids:
-              internal: 3cbaf324-011b-48f3-95dd-f2c60b5905f5
-              external: '42289475'
-            street: Pražákova
-            number:
-              type: č.p.
-              part1: '1008'
-              part1Number: '1008'
-              part1Letter: null
-              part2: '69'
-              part2Number: '69'
-              part2Letter: null
-              full: 1008/69
-            streetWithNumber: Pražákova 1008/69
-            city: Brno
-            zip: '63900'
-            full: Pražákova 1008/69, 63900 Brno
-        addressOfficial:
-          data:
-            country: CZ
-            street: Pražákova
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 1008/69
-            streetWithNumber: Pražákova 1008/69
-            city: Brno
-            zip: '63900'
-            full: Pražákova 1008/69, 63900 Brno
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 337a16e0-79fd-425c-a439-3355e221ec0d
-        country: CZ
-        name: LEEPHAM s.r.o.
-        registrationNumber: '04997387'
-        taxNumber: null
-        vatNumber: CZ04997387
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Středočeský kraj
-            district: Mělník
-            ids:
-              internal: 5b381369-ed10-4115-926e-4dcd412a6882
-              external: '2112744'
-            street: Vojkovice
-            number:
-              type: č.p.
-              part1: '116'
-              part1Number: '116'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '116'
-            streetWithNumber: Vojkovice 116
-            city: Vojkovice
-            zip: '27744'
-            full: Vojkovice 116, 27744 Vojkovice
-        addressOfficial:
-          data:
-            country: CZ
-            street: Vojkovice
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '116'
-            streetWithNumber: Vojkovice 116
-            city: Vojkovice
-            zip: '27744'
-            full: Vojkovice 116, 27744 Vojkovice
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
-        country: CZ
-        name: AVANTRO s.r.o.
-        registrationNumber: '04997476'
-        taxNumber: null
-        vatNumber: CZ04997476
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Hlavní město Praha
-            district: území Hlavního města Prahy
-            ids:
-              internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
-              external: '22349995'
-            street: Thámova
-            number:
-              type: č.p.
-              part1: '137'
-              part1Number: '137'
-              part1Letter: null
-              part2: '16'
-              part2Number: '16'
-              part2Letter: null
-              full: 137/16
-            streetWithNumber: Thámova 137/16
-            city: Praha 8
-            zip: '18600'
-            full: Thámova 137/16, 18600 Praha 8
-        addressOfficial:
-          data:
-            country: CZ
-            street: Thámova
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 137/16
-            streetWithNumber: Thámova 137/16
-            city: Praha
-            zip: '18600'
-            full: Thámova 137/16, 18600 Praha
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 013647f6-9142-46b8-aeed-4b82a9e914cb
-        country: CZ
-        name: MAKESIM s.r.o.
-        registrationNumber: '04997735'
-        taxNumber: null
-        vatNumber: CZ04997735
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Hlavní město Praha
-            district: území Hlavního města Prahy
-            ids:
-              internal: 86ef6d6d-79f8-4c4b-9328-5179c0725b10
-              external: '21843139'
-            street: Donovalská
-            number:
-              type: č.p.
-              part1: '1756'
-              part1Number: '1756'
-              part1Letter: null
-              part2: '45'
-              part2Number: '45'
-              part2Letter: null
-              full: 1756/45
-            streetWithNumber: Donovalská 1756/45
-            city: Praha 4
-            zip: '14900'
-            full: Donovalská 1756/45, 14900 Praha 4
-        addressOfficial:
-          data:
-            country: CZ
-            street: Donovalská
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: 1756/45
-            streetWithNumber: Donovalská 1756/45
-            city: Praha
-            zip: '14900'
-            full: Donovalská 1756/45, 14900 Praha
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-    - data:
-        uuid: 5673d264-e71e-484d-bb4c-ef7db24f94e6
-        country: CZ
-        name: ZAKFARM s.r.o.
-        registrationNumber: '04997981'
-        taxNumber: null
-        vatNumber: CZ04997981
-        vatNumberSpecial: null
-        address:
-          data:
-            country: CZ
-            state: null
-            region: Zlínský kraj
-            district: Zlín
-            ids:
-              internal: 19582178-658f-40b6-97c1-53d960b4e1e3
-              external: '4125631'
-            street: Rudimov
-            number:
-              type: č.p.
-              part1: '105'
-              part1Number: '105'
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '105'
-            streetWithNumber: Rudimov 105
-            city: Rudimov
-            zip: '76321'
-            full: Rudimov 105, 76321 Rudimov
-        addressOfficial:
-          data:
-            country: CZ
-            street: Rudimov
-            number:
-              part1: null
-              part1Number: null
-              part1Letter: null
-              part2: null
-              part2Number: null
-              part2Letter: null
-              full: '105'
-            streetWithNumber: Rudimov 105
-            city: Rudimov
-            zip: '76321'
-            full: Rudimov 105, 76321 Rudimov
-        legalForm:
-          type: juridical
-      flags:
-        isActive: true
-errors: []
+value:
+  status: 200
+  request:
+    endpoint: company/search
+    code: 5e864336-5b4c-47c7-b455-314033d2d264
+    query:
+      type: vatNumber
+      value: CZ04997
+    options:
+      dataSource:
+        - CZ
+        - SK
+        - PL
+      dataScope: basic
+      includeTerminatedSubjects: false
+      filterMode: limit
+      filterAcceptAlternatives: true
+      filterAcceptFormat: true
+      filterExactMatch: true
+      resultsLimit: 10
+      countryFormat: alpha2
+      cityFormat: basic
+      zipFormat: false
+      legalFormType: any
+      allowPartialResults: false
+  response:
+    resultsCount: 10
+    resultsOffset: 0
+    resultsTotal: null
+    results:
+      - data:
+          uuid: ed969ebb-db8d-427b-8c58-7ecaca7d7f92
+          country: CZ
+          name: NIKOLUNA s.r.o.
+          registrationNumber: '04997832'
+          taxNumber: null
+          vatNumber: CZ04997832
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Středočeský kraj
+              district: Rakovník
+              ids:
+                internal: ae1e3cc3-9023-463c-95b7-f543b733016f
+                external: '8662991'
+              street: Pod Nemocnicí
+              number:
+                type: č.p.
+                part1: '2154'
+                part1Number: '2154'
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '2154'
+              streetWithNumber: Pod Nemocnicí 2154
+              city: Rakovník
+              zip: '26901'
+              full: Pod Nemocnicí 2154, 26901 Rakovník
+          addressOfficial:
+            data:
+              country: CZ
+              street: Pod Nemocnicí
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '2154'
+              streetWithNumber: Pod Nemocnicí 2154
+              city: Rakovník
+              zip: '26901'
+              full: Pod Nemocnicí 2154, 26901 Rakovník
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 3ae19a19-d7f7-4481-a91c-dcc0685860d1
+          country: CZ
+          name: M&S GLOBWASH CZ, s.r.o.
+          registrationNumber: '04997361'
+          taxNumber: null
+          vatNumber: CZ04997361
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Středočeský kraj
+              district: Praha-východ
+              ids:
+                internal: 403b808e-5047-409a-b842-5a2198eca151
+                external: '74746545'
+              street: Horácká
+              number:
+                type: č.p.
+                part1: '162'
+                part1Number: '162'
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '162'
+              streetWithNumber: Horácká 162
+              city: Křenice
+              zip: '25084'
+              full: Horácká 162, 25084 Křenice
+          addressOfficial:
+            data:
+              country: CZ
+              street: Horácká
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '162'
+              streetWithNumber: Horácká 162
+              city: Křenice
+              zip: '25084'
+              full: Horácká 162, 25084 Křenice
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 580a7925-2c40-43a7-a9a2-a5ab0ea397f2
+          country: CZ
+          name: AMADET facility s.r.o.
+          registrationNumber: '04997689'
+          taxNumber: null
+          vatNumber: CZ04997689
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Hlavní město Praha
+              district: území Hlavního města Prahy
+              ids:
+                internal: 8ffc809c-11f0-44ae-a949-ee6dd840c1dc
+                external: '21889945'
+              street: Durychova
+              number:
+                type: č.p.
+                part1: '101'
+                part1Number: '101'
+                part1Letter: null
+                part2: '66'
+                part2Number: '66'
+                part2Letter: null
+                full: 101/66
+              streetWithNumber: Durychova 101/66
+              city: Praha 4
+              zip: '14200'
+              full: Durychova 101/66, 14200 Praha 4
+          addressOfficial:
+            data:
+              country: CZ
+              street: Durychova
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 101/66
+              streetWithNumber: Durychova 101/66
+              city: Praha
+              zip: '14200'
+              full: Durychova 101/66, 14200 Praha
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 66bb2337-1a0c-46b7-8923-cf21b73850e1
+          country: CZ
+          name: HBS CROLE s.r.o.
+          registrationNumber: '04997891'
+          taxNumber: null
+          vatNumber: CZ04997891
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Hlavní město Praha
+              district: území Hlavního města Prahy
+              ids:
+                internal: 5cfda44d-273b-4068-b600-c0454dce8f37
+                external: '21692882'
+              street: Elišky Krásnohorské
+              number:
+                type: č.p.
+                part1: '11'
+                part1Number: '11'
+                part1Letter: null
+                part2: '4'
+                part2Number: '4'
+                part2Letter: null
+                full: 11/4
+              streetWithNumber: Elišky Krásnohorské 11/4
+              city: Praha 1
+              zip: '11000'
+              full: Elišky Krásnohorské 11/4, 11000 Praha 1
+          addressOfficial:
+            data:
+              country: CZ
+              street: Elišky Krásnohorské
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 11/4
+              streetWithNumber: Elišky Krásnohorské 11/4
+              city: Praha
+              zip: '11000'
+              full: Elišky Krásnohorské 11/4, 11000 Praha
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 2197de26-a98a-451d-b533-da457e73af5b
+          country: CZ
+          name: Niema pawn s.r.o.
+          registrationNumber: '04997557'
+          taxNumber: null
+          vatNumber: CZ04997557
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Moravskoslezský kraj
+              district: Opava
+              ids:
+                internal: f14f8dca-fa2b-427c-b7f2-7b1261dde4c6
+                external: '4406311'
+              street: Spojná
+              number:
+                type: č.p.
+                part1: '383'
+                part1Number: '383'
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '383'
+              streetWithNumber: Spojná 383
+              city: Markvartovice
+              zip: '74714'
+              full: Spojná 383, 74714 Markvartovice
+          addressOfficial:
+            data:
+              country: CZ
+              street: Spojná
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '383'
+              streetWithNumber: Spojná 383
+              city: Markvartovice
+              zip: '74714'
+              full: Spojná 383, 74714 Markvartovice
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 92dd746c-1a66-4b2a-9706-82628a157463
+          country: CZ
+          name: Jevyx-car s.r.o.
+          registrationNumber: '04997174'
+          taxNumber: null
+          vatNumber: CZ04997174
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Jihomoravský kraj
+              district: Brno-město
+              ids:
+                internal: 3cbaf324-011b-48f3-95dd-f2c60b5905f5
+                external: '42289475'
+              street: Pražákova
+              number:
+                type: č.p.
+                part1: '1008'
+                part1Number: '1008'
+                part1Letter: null
+                part2: '69'
+                part2Number: '69'
+                part2Letter: null
+                full: 1008/69
+              streetWithNumber: Pražákova 1008/69
+              city: Brno
+              zip: '63900'
+              full: Pražákova 1008/69, 63900 Brno
+          addressOfficial:
+            data:
+              country: CZ
+              street: Pražákova
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 1008/69
+              streetWithNumber: Pražákova 1008/69
+              city: Brno
+              zip: '63900'
+              full: Pražákova 1008/69, 63900 Brno
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 337a16e0-79fd-425c-a439-3355e221ec0d
+          country: CZ
+          name: LEEPHAM s.r.o.
+          registrationNumber: '04997387'
+          taxNumber: null
+          vatNumber: CZ04997387
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Středočeský kraj
+              district: Mělník
+              ids:
+                internal: 5b381369-ed10-4115-926e-4dcd412a6882
+                external: '2112744'
+              street: Vojkovice
+              number:
+                type: č.p.
+                part1: '116'
+                part1Number: '116'
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '116'
+              streetWithNumber: Vojkovice 116
+              city: Vojkovice
+              zip: '27744'
+              full: Vojkovice 116, 27744 Vojkovice
+          addressOfficial:
+            data:
+              country: CZ
+              street: Vojkovice
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '116'
+              streetWithNumber: Vojkovice 116
+              city: Vojkovice
+              zip: '27744'
+              full: Vojkovice 116, 27744 Vojkovice
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 013647f6-9142-46b8-aeed-4b82a9e914cb
+          country: CZ
+          name: MAKESIM s.r.o.
+          registrationNumber: '04997735'
+          taxNumber: null
+          vatNumber: CZ04997735
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Hlavní město Praha
+              district: území Hlavního města Prahy
+              ids:
+                internal: 86ef6d6d-79f8-4c4b-9328-5179c0725b10
+                external: '21843139'
+              street: Donovalská
+              number:
+                type: č.p.
+                part1: '1756'
+                part1Number: '1756'
+                part1Letter: null
+                part2: '45'
+                part2Number: '45'
+                part2Letter: null
+                full: 1756/45
+              streetWithNumber: Donovalská 1756/45
+              city: Praha 4
+              zip: '14900'
+              full: Donovalská 1756/45, 14900 Praha 4
+          addressOfficial:
+            data:
+              country: CZ
+              street: Donovalská
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 1756/45
+              streetWithNumber: Donovalská 1756/45
+              city: Praha
+              zip: '14900'
+              full: Donovalská 1756/45, 14900 Praha
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 02d7bbde-868f-4f5b-ad64-fb0b8613ca0f
+          country: CZ
+          name: Ascent Capital s.r.o.
+          registrationNumber: '04997859'
+          taxNumber: null
+          vatNumber: CZ04997859
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Hlavní město Praha
+              district: území Hlavního města Prahy
+              ids:
+                internal: c3c2369b-c2d0-4c5c-910c-20116e7395c2
+                external: '22653473'
+              street: Na zájezdu
+              number:
+                type: č.p.
+                part1: '2132'
+                part1Number: '2132'
+                part1Letter: null
+                part2: '11'
+                part2Number: '11'
+                part2Letter: null
+                full: 2132/11
+              streetWithNumber: Na zájezdu 2132/11
+              city: Praha 10
+              zip: '10100'
+              full: Na zájezdu 2132/11, 10100 Praha 10
+          addressOfficial:
+            data:
+              country: CZ
+              street: Na zájezdu
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 2132/11
+              streetWithNumber: Na zájezdu 2132/11
+              city: Praha
+              zip: '10100'
+              full: Na zájezdu 2132/11, 10100 Praha
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 5673d264-e71e-484d-bb4c-ef7db24f94e6
+          country: CZ
+          name: ZAKFARM s.r.o.
+          registrationNumber: '04997981'
+          taxNumber: null
+          vatNumber: CZ04997981
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Zlínský kraj
+              district: Zlín
+              ids:
+                internal: 19582178-658f-40b6-97c1-53d960b4e1e3
+                external: '4125631'
+              street: Rudimov
+              number:
+                type: č.p.
+                part1: '105'
+                part1Number: '105'
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '105'
+              streetWithNumber: Rudimov 105
+              city: Rudimov
+              zip: '76321'
+              full: Rudimov 105, 76321 Rudimov
+          addressOfficial:
+            data:
+              country: CZ
+              street: Rudimov
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: '105'
+              streetWithNumber: Rudimov 105
+              city: Rudimov
+              zip: '76321'
+              full: Rudimov 105, 76321 Rudimov
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+  errors: []

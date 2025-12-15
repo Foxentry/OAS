@@ -1,54 +1,27 @@
-status: 200
-request:
-  endpoint: email/validate
-  code: adab4fe4-3f0d-49bb-a964-2a438af65a6f
-  query:
-    email: info@gmali.com
-  options:
-    validationType: extended
-    acceptDisposableEmails: true
-    acceptFreemails: true
-    correctionMode: suggestion
-response:
-  result:
-    isValid: false
-    proposal: invalidWithSuggestion
-    data:
-      user: info
-      domain: gmali.com
+value:
+  status: 200
+  request:
+    endpoint: email/validate
+    code: f2e7ee59-a9d2-41e0-ada1-e15f8fb7648e
+    query:
       email: info@gmali.com
-    flags:
-      isCatchAllServer: false
-      isDisposableEmailAddress: true
-      isFreemail: true
-    errors:
-      - group: VALUE
-        type: INVALID
-        subtype: null
-        severity: critical
-        relatedTo:
-          - email
-        description: Value is not valid.
-  resultCorrected: null
-  suggestions:
-    - isValid: false
+    options:
+      validationType: extended
+      acceptDisposableEmails: true
+      acceptFreemails: true
+      correctionMode: suggestion
+  response:
+    result:
+      isValid: false
+      proposal: invalidWithSuggestion
       data:
         user: info
-        domain: gmail.com
-        email: info@gmail.com
+        domain: gmali.com
+        email: info@gmali.com
       flags:
         isCatchAllServer: false
-        isDisposableEmailAddress: false
+        isDisposableEmailAddress: true
         isFreemail: true
-      fixes:
-        - group: VALUE
-          type: CHANGED
-          subtype: null
-          data:
-            typeFrom: email
-            type: email
-            valueFrom: info@gmali.com
-            value: info@gmail.com
       errors:
         - group: VALUE
           type: INVALID
@@ -57,4 +30,32 @@ response:
           relatedTo:
             - email
           description: Value is not valid.
-errors: []
+    resultCorrected: null
+    suggestions:
+      - isValid: false
+        data:
+          user: info
+          domain: gmail.com
+          email: info@gmail.com
+        flags:
+          isCatchAllServer: false
+          isDisposableEmailAddress: false
+          isFreemail: true
+        fixes:
+          - group: VALUE
+            type: CHANGED
+            subtype: null
+            data:
+              typeFrom: email
+              type: email
+              valueFrom: info@gmali.com
+              value: info@gmail.com
+        errors:
+          - group: VALUE
+            type: INVALID
+            subtype: null
+            severity: critical
+            relatedTo:
+              - email
+            description: Value is not valid.
+  errors: []

@@ -46,9 +46,7 @@ content:
 
     examples:
       getFullDataScopeByInternalID:
-        value:
-          $ref: ./../../responseExamples/location/get/LocationGetFullDataScopeByInternalIDExample.yaml
+        $ref: ./../../responseExamples/location/get/LocationGetFullDataScopeByInternalIDExample.yaml
 
       getFullDataScopeByExternalID:
-        value:
-          $ref: ./../../responseExamples/location/get/LocationGetFullDataScopeByExternalIDExample.yaml
+        $ref: ./../../responseExamples/location/get/LocationGetFullDataScopeByExternalIDExample.yaml

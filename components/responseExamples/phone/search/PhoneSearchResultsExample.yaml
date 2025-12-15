@@ -1,25 +1,26 @@
-status: 200
-request:
-  endpoint: phone/search
-  code: 15784dc4-a7aa-4c44-bbed-d73b2df497c1
-  query:
-    value: '+42'
-  options:
-    resultsLimit: 100
-    allowedPrefixes: []
-response:
-  resultsCount: 3
-  results:
-    - data:
-        country: CZ
-        prefix: '+420'
-        icon: https://cdn.foxentry.com/svg/flags/cz.svg
-    - data:
-        country: SK
-        prefix: '+421'
-        icon: https://cdn.foxentry.com/svg/flags/sk.svg
-    - data:
-        country: LI
-        prefix: '+423'
-        icon: https://cdn.foxentry.com/svg/flags/li.svg
-errors: []
+value:
+  status: 200
+  request:
+    endpoint: phone/search
+    code: 26308e4d-0c47-4278-8185-687f0a110f61
+    query:
+      value: '+42'
+    options:
+      resultsLimit: 100
+      allowedPrefixes: []
+  response:
+    resultsCount: 3
+    results:
+      - data:
+          country: CZ
+          prefix: '+420'
+          icon: https://cdn.foxentry.com/svg/flags/cz.svg
+      - data:
+          country: SK
+          prefix: '+421'
+          icon: https://cdn.foxentry.com/svg/flags/sk.svg
+      - data:
+          country: LI
+          prefix: '+423'
+          icon: https://cdn.foxentry.com/svg/flags/li.svg
+  errors: []

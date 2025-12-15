@@ -49,8 +49,8 @@ while IFS= read -r json_file; do
 
   # Compare ignoring request.code
   if diff -q \
-      <(yq -y 'del(.value.request.code)' "$out_file") \
-      <(yq -y 'del(.value.request.code)' "$tmp_yaml") >/dev/null; then
+      <(yq -y 'del(.value.request.code)' "$out_file" 2>/dev/null) \
+      <(yq -y 'del(.value.request.code)' "$tmp_yaml" 2>/dev/null) >/dev/null 2>&1; then
     printf "%bNo change%b\n\n" "$GREEN" "$RESET"
     rm -f "$tmp_yaml"
   else

@@ -1,95 +1,96 @@
-status: 200
-request:
-  endpoint: location/search
-  code: 78e7001e-5b46-47de-85c3-ff4ea03c07f4
-  query:
-    type: city
-    value: Praha
-  options:
-    dataSource:
-      - CZ
-      - SK
-      - PL
-    dataScope: basic
-    filterMode: limit
-    filterAcceptAlternatives: true
-    filterAcceptFormat: true
-    filterExactMatch: true
-    resultsLimit: 3
+value:
+  status: 200
+  request:
+    endpoint: location/search
+    code: ceef5777-1615-44b5-be80-d5555cbcfe46
+    query:
+      type: city
+      value: Praha
+    options:
+      dataSource:
+        - CZ
+        - SK
+        - PL
+      dataScope: basic
+      filterMode: limit
+      filterAcceptAlternatives: true
+      filterAcceptFormat: true
+      filterExactMatch: true
+      resultsLimit: 3
+      resultsOffset: 0
+      cityFormat: basic
+      zipFormat: false
+      countryFormat: alpha2
+      allowPartialResults: true
+  response:
+    resultsCount: 3
     resultsOffset: 0
-    cityFormat: basic
-    zipFormat: false
-    countryFormat: alpha2
-    allowPartialResults: true
-response:
-  resultsCount: 3
-  resultsOffset: 0
-  resultsTotal: null
-  results:
-    - data:
-        country: CZ
-        state: null
-        region: Hlavní město Praha
-        district: území Hlavního města Prahy
-        ids:
-          internal: null
-          external: null
-        street: null
-        number:
-          type: null
-          part1: null
-          part1Number: null
-          part1Letter: null
-          part2: null
-          part2Number: null
-          part2Letter: null
-          full: null
-        streetWithNumber: null
-        city: Praha 4
-        zip: null
-        full: Praha 4
-    - data:
-        country: CZ
-        state: null
-        region: Hlavní město Praha
-        district: území Hlavního města Prahy
-        ids:
-          internal: null
-          external: null
-        street: null
-        number:
-          type: null
-          part1: null
-          part1Number: null
-          part1Letter: null
-          part2: null
-          part2Number: null
-          part2Letter: null
-          full: null
-        streetWithNumber: null
-        city: Praha 9
-        zip: null
-        full: Praha 9
-    - data:
-        country: CZ
-        state: null
-        region: Hlavní město Praha
-        district: území Hlavního města Prahy
-        ids:
-          internal: null
-          external: null
-        street: null
-        number:
-          type: null
-          part1: null
-          part1Number: null
-          part1Letter: null
-          part2: null
-          part2Number: null
-          part2Letter: null
-          full: null
-        streetWithNumber: null
-        city: Praha 5
-        zip: null
-        full: Praha 5
-errors: []
+    resultsTotal: null
+    results:
+      - data:
+          country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
+          ids:
+            internal: null
+            external: null
+          street: null
+          number:
+            type: null
+            part1: null
+            part1Number: null
+            part1Letter: null
+            part2: null
+            part2Number: null
+            part2Letter: null
+            full: null
+          streetWithNumber: null
+          city: Praha 4
+          zip: null
+          full: Praha 4
+      - data:
+          country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
+          ids:
+            internal: null
+            external: null
+          street: null
+          number:
+            type: null
+            part1: null
+            part1Number: null
+            part1Letter: null
+            part2: null
+            part2Number: null
+            part2Letter: null
+            full: null
+          streetWithNumber: null
+          city: Praha 9
+          zip: null
+          full: Praha 9
+      - data:
+          country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
+          ids:
+            internal: null
+            external: null
+          street: null
+          number:
+            type: null
+            part1: null
+            part1Number: null
+            part1Letter: null
+            part2: null
+            part2Number: null
+            part2Letter: null
+            full: null
+          streetWithNumber: null
+          city: Praha 5
+          zip: null
+          full: Praha 5
+  errors: []

@@ -1,37 +1,38 @@
-status: 200
-request:
-  endpoint: name/validate
-  code: d541bfc2-2e59-46a4-8d59-3a5f5f13bfdd
-  query:
-    name: Paeeewas
-  options:
-    dataSource:
-      - CZ
-      - SK
-    dataScope: basic
-    acceptDegrees: false
-    acceptContext: false
-    smartMode: true
-    validationDepth: strict
-response:
-  result:
-    isValid: false
-    proposal: invalid
-    data:
+value:
+  status: 200
+  request:
+    endpoint: name/validate
+    code: 959259eb-81ec-4d5d-8a73-1679bbb4afcf
+    query:
       name: Paeeewas
-      surname: null
-      nameSurname: null
-      context: []
-      degreesBefore: []
-      degreesAfter: []
-    errors:
-      - group: VALUE
-        type: INVALID
-        subtype: NAME
-        description: Name has not been found in our database.
-        severity: warning
-        relatedTo:
-          - name
-  resultCorrected: null
-  suggestions: []
-errors: []
+    options:
+      dataSource:
+        - CZ
+        - SK
+      dataScope: basic
+      acceptDegrees: false
+      acceptContext: false
+      smartMode: true
+      validationDepth: strict
+  response:
+    result:
+      isValid: false
+      proposal: invalid
+      data:
+        name: Paeeewas
+        surname: null
+        nameSurname: null
+        context: []
+        degreesBefore: []
+        degreesAfter: []
+      errors:
+        - group: VALUE
+          type: INVALID
+          subtype: NAME
+          description: Name has not been found in our database.
+          severity: warning
+          relatedTo:
+            - name
+    resultCorrected: null
+    suggestions: []
+  errors: []

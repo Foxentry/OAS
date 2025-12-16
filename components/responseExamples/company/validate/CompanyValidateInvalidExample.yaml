@@ -1,52 +1,53 @@
-status: 200
-request:
-  endpoint: company/validate
-  code: 6dae2271-69dd-4b16-962c-7dd1543c1e68
-  query:
-    name: AVANTRO s.r.o.
-    registrationNumber: '25547'
-    country: CZ
-  options:
-    dataSource:
-      - CZ
-      - SK
-      - PL
-    dataScope: basic
-    includeTerminatedSubjects: false
-    filterMode: limit
-    resultsLimit: 10
-    countryFormat: alpha2
-    cityFormat: basic
-    zipFormat: false
-    legalFormType: any
-    correctionMode: full
-    correctionModeCrossCountry: format
-response:
-  result:
-    isValid: false
-    proposal: invalid
-    data:
-      uuid: null
-      country: CZ
+value:
+  status: 200
+  request:
+    endpoint: company/validate
+    code: 231f8258-31be-4071-9722-6fe8a63fca6a
+    query:
       name: AVANTRO s.r.o.
       registrationNumber: '25547'
-      taxNumber: null
-      vatNumber: null
-      vatNumberSpecial: null
-      address: null
-      addressOfficial: null
-      legalForm:
-        type: null
-    flags:
-      isActive: true
-    errors:
-      - group: VALUE
-        type: INVALID
-        subtype: null
-        severity: critical
-        relatedTo:
-          - registrationNumber
-        description: Value is not valid.
-  resultCorrected: null
-  suggestions: []
-errors: []
+      country: CZ
+    options:
+      dataSource:
+        - CZ
+        - SK
+        - PL
+      dataScope: basic
+      includeTerminatedSubjects: false
+      filterMode: limit
+      resultsLimit: 10
+      countryFormat: alpha2
+      cityFormat: basic
+      zipFormat: false
+      legalFormType: any
+      correctionMode: full
+      correctionModeCrossCountry: format
+  response:
+    result:
+      isValid: false
+      proposal: invalid
+      data:
+        uuid: null
+        country: CZ
+        name: AVANTRO s.r.o.
+        registrationNumber: '25547'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address: null
+        addressOfficial: null
+        legalForm:
+          type: null
+      flags:
+        isActive: true
+      errors:
+        - group: VALUE
+          type: INVALID
+          subtype: null
+          severity: critical
+          relatedTo:
+            - registrationNumber
+          description: Value is not valid.
+    resultCorrected: null
+    suggestions: []
+  errors: []

@@ -1,76 +1,77 @@
-status: 200
-request:
-  endpoint: location/search
-  code: 3361c398-a943-4ed9-bfbf-790e0cdb93b1
-  query:
-    type: street
-    filter:
-      city: Praha
-      country: CZ
-    value: tha
-  options:
-    dataSource:
-      - CZ
-      - SK
-      - PL
-    dataScope: basic
-    filterMode: limit
-    filterAcceptAlternatives: true
-    filterAcceptFormat: true
-    filterExactMatch: true
-    resultsLimit: 3
+value:
+  status: 200
+  request:
+    endpoint: location/search
+    code: ee87ba43-7cd5-4857-83c9-5cc5c91fbf19
+    query:
+      type: street
+      filter:
+        city: Praha
+        country: CZ
+      value: tha
+    options:
+      dataSource:
+        - CZ
+        - SK
+        - PL
+      dataScope: basic
+      filterMode: limit
+      filterAcceptAlternatives: true
+      filterAcceptFormat: true
+      filterExactMatch: true
+      resultsLimit: 3
+      resultsOffset: 0
+      cityFormat: basic
+      zipFormat: false
+      countryFormat: alpha2
+      allowPartialResults: true
+  response:
+    resultsCount: 2
     resultsOffset: 0
-    cityFormat: basic
-    zipFormat: false
-    countryFormat: alpha2
-    allowPartialResults: true
-response:
-  resultsCount: 2
-  resultsOffset: 0
-  resultsTotal: null
-  results:
-    - data:
-        country: CZ
-        state: null
-        region: Hlavní město Praha
-        district: území Hlavního města Prahy
-        ids:
-          internal: null
-          external: null
-        street: Thámova
-        number:
-          type: null
-          part1: null
-          part1Number: null
-          part1Letter: null
-          part2: null
-          part2Number: null
-          part2Letter: null
-          full: null
-        streetWithNumber: Thámova
-        city: Praha 8
-        zip: '18600'
-        full: Thámova, 18600 Praha 8
-    - data:
-        country: CZ
-        state: null
-        region: Hlavní město Praha
-        district: území Hlavního města Prahy
-        ids:
-          internal: null
-          external: null
-        street: Thákurova
-        number:
-          type: null
-          part1: null
-          part1Number: null
-          part1Letter: null
-          part2: null
-          part2Number: null
-          part2Letter: null
-          full: null
-        streetWithNumber: Thákurova
-        city: Praha 6
-        zip: '16000'
-        full: Thákurova, 16000 Praha 6
-errors: []
+    resultsTotal: null
+    results:
+      - data:
+          country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
+          ids:
+            internal: null
+            external: null
+          street: Thákurova
+          number:
+            type: null
+            part1: null
+            part1Number: null
+            part1Letter: null
+            part2: null
+            part2Number: null
+            part2Letter: null
+            full: null
+          streetWithNumber: Thákurova
+          city: Praha 6
+          zip: '16000'
+          full: Thákurova, 16000 Praha 6
+      - data:
+          country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
+          ids:
+            internal: null
+            external: null
+          street: Thámova
+          number:
+            type: null
+            part1: null
+            part1Number: null
+            part1Letter: null
+            part2: null
+            part2Number: null
+            part2Letter: null
+            full: null
+          streetWithNumber: Thámova
+          city: Praha 8
+          zip: '18600'
+          full: Thámova, 18600 Praha 8
+  errors: []

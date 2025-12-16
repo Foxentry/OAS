@@ -1,34 +1,35 @@
-status: 200
-request:
-  endpoint: email/validate
-  code: 3d61e816-7914-471e-9d07-8912a05b81d0
-  query:
-    email: invalid@example.com
-  options:
-    validationType: extended
-    acceptDisposableEmails: true
-    acceptFreemails: true
-    correctionMode: full
-response:
-  result:
-    isValid: false
-    proposal: invalid
-    data:
-      user: invalid
-      domain: example.com
+value:
+  status: 200
+  request:
+    endpoint: email/validate
+    code: 245957bf-c66e-436d-bc31-30a8f3ee257b
+    query:
       email: invalid@example.com
-    flags:
-      isCatchAllServer: false
-      isDisposableEmailAddress: false
-      isFreemail: false
-    errors:
-      - group: VALUE
-        type: INVALID
-        subtype: null
-        severity: critical
-        relatedTo:
-          - email
-        description: Value is not valid.
-  resultCorrected: null
-  suggestions: []
-errors: []
+    options:
+      validationType: extended
+      acceptDisposableEmails: true
+      acceptFreemails: true
+      correctionMode: full
+  response:
+    result:
+      isValid: false
+      proposal: invalid
+      data:
+        user: invalid
+        domain: example.com
+        email: invalid@example.com
+      flags:
+        isCatchAllServer: false
+        isDisposableEmailAddress: false
+        isFreemail: false
+      errors:
+        - group: VALUE
+          type: INVALID
+          subtype: null
+          severity: critical
+          relatedTo:
+            - email
+          description: Value is not valid.
+    resultCorrected: null
+    suggestions: []
+  errors: []

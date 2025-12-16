@@ -46,25 +46,19 @@ content:
 
     examples:
       valid:
-        value:
-          $ref: ./../../responseExamples/name/validate/NameValidateValidExample.yaml
+        $ref: ./../../responseExamples/name/validate/NameValidateValidExample.yaml
 
       invalid:
-        value:
-          $ref: ./../../responseExamples/name/validate/NameValidateInvalidExample.yaml
+        $ref: ./../../responseExamples/name/validate/NameValidateInvalidExample.yaml
 
       invalidWithCorrection:
-        value:
-          $ref: ./../../responseExamples/name/validate/NameValidateInvalidWithCorrectionExample.yaml
+        $ref: ./../../responseExamples/name/validate/NameValidateInvalidWithCorrectionExample.yaml
 
       validWithSuggestion:
-        value:
-          $ref: ./../../responseExamples/name/validate/NameValidateValidWithSuggestionExample.yaml
+        $ref: ./../../responseExamples/name/validate/NameValidateValidWithSuggestionExample.yaml
 
       validNameSurnameFullDataScope:
-        value:
-          $ref: ./../../responseExamples/name/validate/NameValidateValidNameSurnameFullDataScopeExample.yaml
+        $ref: ./../../responseExamples/name/validate/NameValidateValidNameSurnameFullDataScopeExample.yaml
 
       fullDataScope:
-        value:
-          $ref: ./../../responseExamples/name/validate/NameValidateValidFullDataScopeExample.yaml
+        $ref: ./../../responseExamples/name/validate/NameValidateValidFullDataScopeExample.yaml

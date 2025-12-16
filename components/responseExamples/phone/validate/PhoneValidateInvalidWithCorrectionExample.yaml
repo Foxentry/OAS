@@ -1,66 +1,67 @@
-status: 200
-request:
-  endpoint: phone/validate
-  code: aa52de13-3567-4657-af24-d5bc04a2846d
-  query:
-    numberWithPrefix: '+421607123456'
-  options:
-    validationType: basic
-    allowedPrefixes: []
-    preferredPrefixes: []
-    defaultPrefix: null
-    formatNumber: false
-    correctionMode: full
-response:
-  result:
-    isValid: false
-    proposal: invalidWithCorrection
-    data:
-      country:
-        code: SK
-        prefix: '+421'
-      prefix: null
-      number: null
+value:
+  status: 200
+  request:
+    endpoint: phone/validate
+    code: b4b72363-8b74-4e02-98cb-427a38855c17
+    query:
       numberWithPrefix: '+421607123456'
-      carrier: {}
-      format:
-        national: null
-        nationalFormatted: null
-        international: null
-        internationalFormatted: null
-    errors:
-      - group: VALUE
-        type: INVALID
-        subtype: null
-        severity: critical
-        relatedTo:
-          - numberWithPrefix
-        description: Value is not valid.
-  resultCorrected:
-    isValid: true
-    data:
-      country:
-        code: CZ
+    options:
+      validationType: basic
+      allowedPrefixes: []
+      preferredPrefixes: []
+      defaultPrefix: null
+      formatNumber: false
+      correctionMode: full
+  response:
+    result:
+      isValid: false
+      proposal: invalidWithCorrection
+      data:
+        country:
+          code: SK
+          prefix: '+421'
+        prefix: null
+        number: null
+        numberWithPrefix: '+421607123456'
+        carrier: {}
+        format:
+          national: null
+          nationalFormatted: null
+          international: null
+          internationalFormatted: null
+      errors:
+        - group: VALUE
+          type: INVALID
+          subtype: null
+          severity: critical
+          relatedTo:
+            - numberWithPrefix
+          description: Value is not valid.
+    resultCorrected:
+      isValid: true
+      data:
+        country:
+          code: CZ
+          prefix: '+420'
         prefix: '+420'
-      prefix: '+420'
-      number: '607123456'
-      numberWithPrefix: '+420607123456'
-      carrier:
-        type: mobile
-      format:
-        national: '607123456'
-        nationalFormatted: 607 123 456
-        international: '+420607123456'
-        internationalFormatted: +420 607 123 456
-    errors: []
-    fixes:
-      - group: VALUE
-        type: CHANGED
-        subtype: null
-        data:
-          typeFrom: number
-          type: number
-          valueFrom: '+421607123456'
-          value: '+420607123456'
-  suggestions: []
-errors: []
+        number: '607123456'
+        numberWithPrefix: '+420607123456'
+        carrier:
+          type: mobile
+        format:
+          national: '607123456'
+          nationalFormatted: 607 123 456
+          international: '+420607123456'
+          internationalFormatted: +420 607 123 456
+      errors: []
+      fixes:
+        - group: VALUE
+          type: CHANGED
+          subtype: null
+          data:
+            typeFrom: number
+            type: number
+            valueFrom: '+421607123456'
+            value: '+420607123456'
+    suggestions: []
+  errors: []

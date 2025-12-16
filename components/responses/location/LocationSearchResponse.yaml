@@ -44,25 +44,19 @@ content:
 
     examples:
       searchStreet:
-        value:
-          $ref: ./../../responseExamples/location/search/LocationSearchStreetExample.yaml
+        $ref: ./../../responseExamples/location/search/LocationSearchStreetExample.yaml
 
       searchCity:
-        value:
-          $ref: ./../../responseExamples/location/search/LocationSearchCityExample.yaml
+        $ref: ./../../responseExamples/location/search/LocationSearchCityExample.yaml
 
       searchStreetWithNumber:
-        value:
-          $ref: ./../../responseExamples/location/search/LocationSearchStreetWithNumberExample.yaml
+        $ref: ./../../responseExamples/location/search/LocationSearchStreetWithNumberExample.yaml
 
       searchStreetWithNumberFederal:
-        value:
-          $ref: ./../../responseExamples/location/search/LocationSearchStreetWithNumberFederalExample.yaml
+        $ref: ./../../responseExamples/location/search/LocationSearchStreetWithNumberFederalExample.yaml
 
       searchZip:
-        value:
-          $ref: ./../../responseExamples/location/search/LocationSearchZipExample.yaml
+        $ref: ./../../responseExamples/location/search/LocationSearchZipExample.yaml
 
       searchFull:
-        value:
-          $ref: ./../../responseExamples/location/search/LocationSearchFullExample.yaml
+        $ref: ./../../responseExamples/location/search/LocationSearchFullExample.yaml

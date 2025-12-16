@@ -44,5 +44,4 @@ content:
         - response
     examples:
       localizationResults:
-        value:
-          $ref: ./../../responseExamples/location/localize/LocationLocalizeLocalizationResultsExample.yaml
+        $ref: ./../../responseExamples/location/localize/LocationLocalizeLocalizationResultsExample.yaml

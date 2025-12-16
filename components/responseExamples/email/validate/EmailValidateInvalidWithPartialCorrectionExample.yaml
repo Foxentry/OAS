@@ -1,60 +1,61 @@
-status: 200
-request:
-  endpoint: email/validate
-  code: 5a2fa8fa-811b-49cf-abd4-fd747cf739c6
-  query:
-    email: infogmail.com
-  options:
-    validationType: extended
-    acceptDisposableEmails: true
-    acceptFreemails: true
-    correctionMode: full
-response:
-  result:
-    isValid: false
-    proposal: invalidWithPartialCorrection
-    data:
-      user: infogmail.com
-      domain: null
+value:
+  status: 200
+  request:
+    endpoint: email/validate
+    code: 9b63c279-eca5-43d9-a476-b973e589e6eb
+    query:
       email: infogmail.com
-    flags:
-      isCatchAllServer: null
-      isDisposableEmailAddress: null
-      isFreemail: null
-    errors:
-      - group: SYNTAX
-        type: VALUE_PART_MISSING
-        subtype: AT_SIGN
-        severity: critical
-        relatedTo:
-          - email
-        description: Value does not contain '@' sign.
-  resultCorrected:
-    isValid: false
-    data:
-      user: info
-      domain: gmail.com
-      email: info@gmail.com
-    flags:
-      isCatchAllServer: false
-      isDisposableEmailAddress: false
-      isFreemail: true
-    errors:
-      - group: VALUE
-        type: INVALID
-        subtype: null
-        severity: critical
-        relatedTo:
-          - email
-        description: Value is not valid.
-    fixes:
-      - group: SYNTAX
-        type: VALUE_PART_ADDED
-        subtype: AT_SIGN
-        data:
-          typeFrom: email
-          type: email
-          valueFrom: infogmail.com
-          value: info@gmail.com
-  suggestions: []
-errors: []
+    options:
+      validationType: extended
+      acceptDisposableEmails: true
+      acceptFreemails: true
+      correctionMode: full
+  response:
+    result:
+      isValid: false
+      proposal: invalidWithPartialCorrection
+      data:
+        user: infogmail.com
+        domain: null
+        email: infogmail.com
+      flags:
+        isCatchAllServer: null
+        isDisposableEmailAddress: null
+        isFreemail: null
+      errors:
+        - group: SYNTAX
+          type: VALUE_PART_MISSING
+          subtype: AT_SIGN
+          severity: critical
+          relatedTo:
+            - email
+          description: Value does not contain '@' sign.
+    resultCorrected:
+      isValid: false
+      data:
+        user: info
+        domain: gmail.com
+        email: info@gmail.com
+      flags:
+        isCatchAllServer: false
+        isDisposableEmailAddress: false
+        isFreemail: true
+      errors:
+        - group: VALUE
+          type: INVALID
+          subtype: null
+          severity: critical
+          relatedTo:
+            - email
+          description: Value is not valid.
+      fixes:
+        - group: SYNTAX
+          type: VALUE_PART_ADDED
+          subtype: AT_SIGN
+          data:
+            typeFrom: email
+            type: email
+            valueFrom: infogmail.com
+            value: info@gmail.com
+    suggestions: []
+  errors: []

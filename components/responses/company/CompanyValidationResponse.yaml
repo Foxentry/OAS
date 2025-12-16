@@ -45,17 +45,13 @@ content:
 
     examples:
       valid:
-        value:
-          $ref: ./../../responseExamples/company/validate/CompanyValidateValidExample.yaml
+        $ref: ./../../responseExamples/company/validate/CompanyValidateValidExample.yaml
 
       invalid:
-        value:
-          $ref: ./../../responseExamples/company/validate/CompanyValidateInvalidExample.yaml
+        $ref: ./../../responseExamples/company/validate/CompanyValidateInvalidExample.yaml
 
       invalidWithSuggestion:
-        value:
-          $ref: ./../../responseExamples/company/validate/CompanyValidateInvalidWithSuggestionExample.yaml
+        $ref: ./../../responseExamples/company/validate/CompanyValidateInvalidWithSuggestionExample.yaml
 
       invalidWithCorrection:
-        value:
-          $ref: ./../../responseExamples/company/validate/CompanyValidateInvalidWithCorrectionExample.yaml
+        $ref: ./../../responseExamples/company/validate/CompanyValidateInvalidWithCorrectionExample.yaml

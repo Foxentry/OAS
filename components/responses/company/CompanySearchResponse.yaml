@@ -44,17 +44,13 @@ content:
         - response
     examples:
       searchName:
-        value:
-          $ref: ../../responseExamples/company/search/CompanySearchNameExample.yaml
+        $ref: ./../../responseExamples/company/search/CompanySearchNameExample.yaml
 
       searchRegistrationNumber:
-        value:
-          $ref: ../../responseExamples/company/search/CompanySearchRegistrationNumberExample.yaml
+        $ref: ./../../responseExamples/company/search/CompanySearchRegistrationNumberExample.yaml
 
       searchTaxNumber:
-        value:
-          $ref: ../../responseExamples/company/search/CompanySearchTaxNumberExample.yaml
+        $ref: ./../../responseExamples/company/search/CompanySearchTaxNumberExample.yaml
 
       searchVatNumber:
-        value:
-          $ref: ../../responseExamples/company/search/CompanySearchVatNumberExample.yaml
+        $ref: ./../../responseExamples/company/search/CompanySearchVatNumberExample.yaml

@@ -1,55 +1,56 @@
-status: 200
-request:
-  endpoint: name/validate
-  code: 8bde2eb3-4d02-49c6-97f6-3fec29276c07
-  query:
-    name: Palve
-  options:
-    dataSource:
-      - CZ
-      - SK
-    dataScope: basic
-    acceptDegrees: false
-    acceptContext: false
-    smartMode: true
-    validationDepth: strict
-response:
-  result:
-    isValid: false
-    proposal: invalidWithCorrection
-    data:
+value:
+  status: 200
+  request:
+    endpoint: name/validate
+    code: 8b1f11aa-4272-49a0-b838-fd8af6879f19
+    query:
       name: Palve
-      surname: null
-      nameSurname: null
-      context: []
-      degreesBefore: []
-      degreesAfter: []
-    errors:
-      - group: VALUE
-        type: INVALID
-        subtype: NAME
-        description: Name has not been found in our database.
-        severity: warning
-        relatedTo:
-          - name
-  resultCorrected:
-    isValid: true
-    data:
-      name: Jalée
-      surname: null
-      nameSurname: null
-      context: []
-      degreesBefore: []
-      degreesAfter: []
-    errors: []
-    fixes:
-      - group: VALUE
-        type: CHANGED
-        subtype: TYPO
+    options:
+      dataSource:
+        - CZ
+        - SK
+      dataScope: basic
+      acceptDegrees: false
+      acceptContext: false
+      smartMode: true
+      validationDepth: strict
+  response:
+    result:
+      isValid: false
+      proposal: invalidWithSuggestion
+      data:
+        name: Palve
+        surname: null
+        nameSurname: null
+        context: []
+        degreesBefore: []
+        degreesAfter: []
+      errors:
+        - group: VALUE
+          type: INVALID
+          subtype: NAME
+          description: Name has not been found in our database.
+          severity: warning
+          relatedTo:
+            - name
+    resultCorrected: null
+    suggestions:
+      - isValid: true
         data:
-          typeFrom: name
-          type: name
-          valueFrom: Palve
-          value: Jalée
-  suggestions: []
-errors: []
+          name: Pal
+          surname: null
+          nameSurname: null
+          context: []
+          degreesBefore: null
+          degreesAfter: null
+        errors: []
+        fixes:
+          - group: VALUE
+            type: CHANGED
+            subtype: TYPO
+            data:
+              typeFrom: name
+              type: name
+              valueFrom: Palve
+              value: Pal
+  errors: []

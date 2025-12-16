@@ -1,114 +1,115 @@
-status: 200
-request:
-  endpoint: company/validate
-  code: 09838869-863e-4ba7-91b9-90e4a3300294
-  query:
-    name: AVANTRO
-    registrationNumber: '04997476'
-    country: CZ
-  options:
-    dataSource:
-      - CZ
-      - SK
-      - PL
-    dataScope: basic
-    includeTerminatedSubjects: false
-    filterMode: limit
-    resultsLimit: 10
-    countryFormat: alpha2
-    cityFormat: basic
-    zipFormat: false
-    legalFormType: any
-    correctionMode: full
-    correctionModeCrossCountry: format
-response:
-  result:
-    isValid: false
-    proposal: invalidWithCorrection
-    data:
-      uuid: null
-      country: CZ
+value:
+  status: 200
+  request:
+    endpoint: company/validate
+    code: d43d0b89-22bf-463d-8153-203745616e25
+    query:
       name: AVANTRO
       registrationNumber: '04997476'
-      taxNumber: null
-      vatNumber: null
-      vatNumberSpecial: null
-      address: null
-      addressOfficial: null
-      legalForm:
-        type: null
-    flags:
-      isActive: true
-    errors:
-      - group: SYNTAX
-        type: VALUE_PART_MISSING
-        subtype: LEGAL_FORM
-        severity: critical
-        relatedTo:
-          - name
-        description: Company name is missing the legal form.
-  resultCorrected:
-    isValid: true
-    data:
-      uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
       country: CZ
-      name: AVANTRO s.r.o.
-      registrationNumber: '04997476'
-      taxNumber: null
-      vatNumber: CZ04997476
-      vatNumberSpecial: null
-      address:
-        data:
-          country: CZ
-          state: null
-          region: Hlavní město Praha
-          district: území Hlavního města Prahy
-          ids:
-            internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
-            external: '22349995'
-          street: Thámova
-          number:
-            type: č.p.
-            part1: '137'
-            part1Number: '137'
-            part1Letter: null
-            part2: '16'
-            part2Number: '16'
-            part2Letter: null
-            full: 137/16
-          streetWithNumber: Thámova 137/16
-          city: Praha 8
-          zip: '18600'
-          full: Thámova 137/16, 18600 Praha 8
-      addressOfficial:
-        data:
-          country: CZ
-          street: Thámova
-          number:
-            part1: null
-            part1Number: null
-            part1Letter: null
-            part2: null
-            part2Number: null
-            part2Letter: null
-            full: 137/16
-          streetWithNumber: Thámova 137/16
-          city: Praha
-          zip: '18600'
-          full: Thámova 137/16, Karlín, 18600 Praha 8
-      legalForm:
-        type: juridical
-    flags:
-      isActive: true
-    errors: []
-    fixes:
-      - group: SYNTAX
-        type: VALUE_PART_ADDED
-        subtype: LEGAL_FORM
-        data:
-          typeFrom: name
-          type: name
-          valueFrom: AVANTRO
-          value: AVANTRO s.r.o.
-  suggestions: []
-errors: []
+    options:
+      dataSource:
+        - CZ
+        - SK
+        - PL
+      dataScope: basic
+      includeTerminatedSubjects: false
+      filterMode: limit
+      resultsLimit: 10
+      countryFormat: alpha2
+      cityFormat: basic
+      zipFormat: false
+      legalFormType: any
+      correctionMode: full
+      correctionModeCrossCountry: format
+  response:
+    result:
+      isValid: false
+      proposal: invalidWithCorrection
+      data:
+        uuid: null
+        country: CZ
+        name: AVANTRO
+        registrationNumber: '04997476'
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address: null
+        addressOfficial: null
+        legalForm:
+          type: null
+      flags:
+        isActive: true
+      errors:
+        - group: SYNTAX
+          type: VALUE_PART_MISSING
+          subtype: LEGAL_FORM
+          severity: critical
+          relatedTo:
+            - name
+          description: Company name is missing the legal form.
+    resultCorrected:
+      isValid: true
+      data:
+        uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
+        country: CZ
+        name: AVANTRO s.r.o.
+        registrationNumber: '04997476'
+        taxNumber: null
+        vatNumber: CZ04997476
+        vatNumberSpecial: null
+        address:
+          data:
+            country: CZ
+            state: null
+            region: Hlavní město Praha
+            district: území Hlavního města Prahy
+            ids:
+              internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+              external: '22349995'
+            street: Thámova
+            number:
+              type: č.p.
+              part1: '137'
+              part1Number: '137'
+              part1Letter: null
+              part2: '16'
+              part2Number: '16'
+              part2Letter: null
+              full: 137/16
+            streetWithNumber: Thámova 137/16
+            city: Praha 8
+            zip: '18600'
+            full: Thámova 137/16, 18600 Praha 8
+        addressOfficial:
+          data:
+            country: CZ
+            street: Thámova
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: 137/16
+            streetWithNumber: Thámova 137/16
+            city: Praha
+            zip: '18600'
+            full: Thámova 137/16, Karlín, 18600 Praha 8
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+      errors: []
+      fixes:
+        - group: SYNTAX
+          type: VALUE_PART_ADDED
+          subtype: LEGAL_FORM
+          data:
+            typeFrom: name
+            type: name
+            valueFrom: AVANTRO
+            value: AVANTRO s.r.o.
+    suggestions: []
+  errors: []

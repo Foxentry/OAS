@@ -46,29 +46,22 @@ content:
 
     examples:
       valid:
-        value:
-          $ref: ./../../responseExamples/email/validate/EmailValidateValidExample.yaml
+        $ref: ./../../responseExamples/email/validate/EmailValidateValidExample.yaml
 
       invalidWithSuggestion:
-        value:
-          $ref: ./../../responseExamples/email/validate/EmailValidateInvalidWithSuggestionExample.yaml
+        $ref: ./../../responseExamples/email/validate/EmailValidateInvalidWithSuggestionExample.yaml
 
       invalid:
-        value:
-          $ref: ./../../responseExamples/email/validate/EmailValidateInvalidExample.yaml
+        $ref: ./../../responseExamples/email/validate/EmailValidateInvalidExample.yaml
 
       invalidWithCorrection:
-        value:
-          $ref: ./../../responseExamples/email/validate/EmailValidateInvalidWithCorrectionExample.yaml
+        $ref: ./../../responseExamples/email/validate/EmailValidateInvalidWithCorrectionExample.yaml
 
       invalidWithPartialCorrection:
-        value:
-          $ref: ./../../responseExamples/email/validate/EmailValidateInvalidWithPartialCorrectionExample.yaml
+        $ref: ./../../responseExamples/email/validate/EmailValidateInvalidWithPartialCorrectionExample.yaml
 
       disallowedDisposable:
-        value:
-          $ref: ./../../responseExamples/email/validate/EmailValidateDisallowedDisposableExample.yaml
+        $ref: ./../../responseExamples/email/validate/EmailValidateDisallowedDisposableExample.yaml
 
       disallowedFreemails:
-        value:
-          $ref: ./../../responseExamples/email/validate/EmailValidateDisallowedFreemailsExample.yaml
+        $ref: ./../../responseExamples/email/validate/EmailValidateDisallowedFreemailsExample.yaml

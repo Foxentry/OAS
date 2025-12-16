@@ -1,123 +1,124 @@
-status: 200
-request:
-  endpoint: location/validate
-  code: 3fe20c31-4489-46b1-87c3-9e74a63214f3
-  query:
-    streetWithNumber: Thámova 137
-    city: Praha
-    zip: '18600'
-  options:
-    dataSource:
-      - CZ
-      - SK
-      - PL
-    dataScope: basic
-    filterMode: limit
-    resultsLimit: 10
-    cityFormat: basic
-    countryFormat: alpha2
-    zipFormat: false
-    acceptPostOfficeAsCity: false
-    correctionMode: full
-    correctionModeCrossCountry: format
-response:
-  result:
-    isValid: false
-    proposal: invalidWithCorrection
-    dataTypes:
-      valid:
-        - street
-        - zip
-      invalid:
-        - city
-        - number.full
-        - streetWithNumber
-    data:
-      country: null
-      state: null
-      region: null
-      district: null
-      ids:
-        internal: null
-        external: null
-      street: null
-      number:
-        type: null
-        part1: null
-        part1Number: null
-        part1Letter: null
-        part2: null
-        part2Number: null
-        part2Letter: null
-        full: null
+value:
+  status: 200
+  request:
+    endpoint: location/validate
+    code: 5d9e8338-170a-4802-9e05-e5c362c3023f
+    query:
       streetWithNumber: Thámova 137
       city: Praha
       zip: '18600'
-      full: Thámova 137, 18600 Praha
-    errors:
-      - group: SYNTAX
-        type: VALUE_PART_MISSING
-        subtype: NUMBER_PART
-        severity: critical
-        relatedTo:
-          - streetWithNumber
-        description: Value is missing some part of the number.
-      - group: FORMAT
-        type: INVALID
-        subtype: null
-        severity: warning
-        relatedTo:
+    options:
+      dataSource:
+        - CZ
+        - SK
+        - PL
+      dataScope: basic
+      filterMode: limit
+      resultsLimit: 10
+      cityFormat: basic
+      countryFormat: alpha2
+      zipFormat: false
+      acceptPostOfficeAsCity: false
+      correctionMode: full
+      correctionModeCrossCountry: format
+  response:
+    result:
+      isValid: false
+      proposal: invalidWithCorrection
+      dataTypes:
+        valid:
+          - street
+          - zip
+        invalid:
           - city
-        description: null
-  resultCorrected:
-    isValid: true
-    dataTypes:
-      valid:
-        - city
-        - number.full
-        - street
-        - streetWithNumber
-        - zip
-      invalid: []
-    data:
-      country: CZ
-      state: null
-      region: Hlavní město Praha
-      district: území Hlavního města Prahy
-      ids:
-        internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
-        external: '22349995'
-      street: Thámova
-      number:
-        type: č.p.
-        part1: '137'
-        part1Number: '137'
-        part1Letter: null
-        part2: '16'
-        part2Number: '16'
-        part2Letter: null
-        full: 137/16
-      streetWithNumber: Thámova 137/16
-      city: Praha 8
-      zip: '18600'
-      full: Thámova 137/16, 18600 Praha 8
-    errors: []
-    fixes:
-      - group: SYNTAX
-        type: VALUE_PART_ADDED
-        subtype: NUMBER_PART
-        data:
-          typeFrom: streetWithNumber
-          type: streetWithNumber
-          valueFrom: Thámova 137
-          value: Thámova 137/16
-      - group: FORMAT
-        type: CHANGED
-        subtype: null
-        data:
-          typeFrom: city
-          type: city
-          valueFrom: Praha
-          value: Praha 8
-  suggestions: []
-errors: []
+          - number.full
+          - streetWithNumber
+      data:
+        country: null
+        state: null
+        region: null
+        district: null
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: Thámova 137
+        city: Praha
+        zip: '18600'
+        full: Thámova 137, 18600 Praha
+      errors:
+        - group: SYNTAX
+          type: VALUE_PART_MISSING
+          subtype: NUMBER_PART
+          severity: critical
+          relatedTo:
+            - streetWithNumber
+          description: Value is missing some part of the number.
+        - group: FORMAT
+          type: INVALID
+          subtype: null
+          severity: warning
+          relatedTo:
+            - city
+          description: null
+    resultCorrected:
+      isValid: true
+      dataTypes:
+        valid:
+          - city
+          - number.full
+          - street
+          - streetWithNumber
+          - zip
+        invalid: []
+      data:
+        country: CZ
+        state: null
+        region: Hlavní město Praha
+        district: území Hlavního města Prahy
+        ids:
+          internal: d2ade877-1e95-4a83-baa6-5431ce5b3ca8
+          external: '22349995'
+        street: Thámova
+        number:
+          type: č.p.
+          part1: '137'
+          part1Number: '137'
+          part1Letter: null
+          part2: '16'
+          part2Number: '16'
+          part2Letter: null
+          full: 137/16
+        streetWithNumber: Thámova 137/16
+        city: Praha 8
+        zip: '18600'
+        full: Thámova 137/16, 18600 Praha 8
+      errors: []
+      fixes:
+        - group: SYNTAX
+          type: VALUE_PART_ADDED
+          subtype: NUMBER_PART
+          data:
+            typeFrom: streetWithNumber
+            type: streetWithNumber
+            valueFrom: Thámova 137
+            value: Thámova 137/16
+        - group: FORMAT
+          type: CHANGED
+          subtype: null
+          data:
+            typeFrom: city
+            type: city
+            valueFrom: Praha
+            value: Praha 8
+    suggestions: []
+  errors: []

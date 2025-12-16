@@ -44,13 +44,10 @@ content:
         - response
     examples:
       basicDataScope:
-        value:
-          $ref: ../../responseExamples/company/get/CompanyGetBasicExample.yaml
+        $ref: ./../../responseExamples/company/get/CompanyGetBasicExample.yaml
 
       extendedDataScope:
-        value:
-          $ref: ../../responseExamples/company/get/CompanyGetExtendedExample.yaml
+        $ref: ./../../responseExamples/company/get/CompanyGetExtendedExample.yaml
 
       fullDataScope:
-        value:
-          $ref: ../../responseExamples/company/get/CompanyGetFullExample.yaml
+        $ref: ./../../responseExamples/company/get/CompanyGetFullExample.yaml

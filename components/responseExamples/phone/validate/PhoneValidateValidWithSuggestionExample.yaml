@@ -1,60 +1,61 @@
-status: 200
-request:
-  endpoint: phone/validate
-  code: 4dada32d-c8a0-4d15-b805-36aebce1d90e
-  query:
-    numberWithPrefix: '+48728984101'
-  options:
-    validationType: basic
-    allowedPrefixes: []
-    preferredPrefixes: []
-    defaultPrefix: null
-    formatNumber: false
-    correctionMode: full
-response:
-  result:
-    isValid: true
-    proposal: validWithSuggestion
-    data:
-      country:
-        code: PL
-        prefix: '+48'
-      prefix: '+48'
-      number: '728984101'
+value:
+  status: 200
+  request:
+    endpoint: phone/validate
+    code: f6cd114a-1ca4-43b4-988c-ec911a44f74b
+    query:
       numberWithPrefix: '+48728984101'
-      carrier:
-        type: mobile
-      format:
-        national: '728984101'
-        nationalFormatted: 728 984 101
-        international: '+48728984101'
-        internationalFormatted: +48 728 984 101
-    errors: []
-  resultCorrected: null
-  suggestions:
-    - isValid: true
+    options:
+      validationType: basic
+      allowedPrefixes: []
+      preferredPrefixes: []
+      defaultPrefix: null
+      formatNumber: false
+      correctionMode: full
+  response:
+    result:
+      isValid: true
+      proposal: validWithSuggestion
       data:
         country:
-          code: CZ
-          prefix: '+420'
-        prefix: '+420'
+          code: PL
+          prefix: '+48'
+        prefix: '+48'
         number: '728984101'
-        numberWithPrefix: '+420728984101'
+        numberWithPrefix: '+48728984101'
         carrier:
           type: mobile
         format:
           national: '728984101'
           nationalFormatted: 728 984 101
-          international: '+420728984101'
-          internationalFormatted: +420 728 984 101
+          international: '+48728984101'
+          internationalFormatted: +48 728 984 101
       errors: []
-      fixes:
-        - group: VALUE
-          type: CHANGED
-          subtype: null
-          data:
-            typeFrom: number
-            type: number
-            valueFrom: '+48728984101'
-            value: '+420728984101'
-errors: []
+    resultCorrected: null
+    suggestions:
+      - isValid: true
+        data:
+          country:
+            code: CZ
+            prefix: '+420'
+          prefix: '+420'
+          number: '728984101'
+          numberWithPrefix: '+420728984101'
+          carrier:
+            type: mobile
+          format:
+            national: '728984101'
+            nationalFormatted: 728 984 101
+            international: '+420728984101'
+            internationalFormatted: +420 728 984 101
+        errors: []
+        fixes:
+          - group: VALUE
+            type: CHANGED
+            subtype: null
+            data:
+              typeFrom: number
+              type: number
+              valueFrom: '+48728984101'
+              value: '+420728984101'
+  errors: []

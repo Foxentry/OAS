@@ -1,69 +1,70 @@
-status: 200
-request:
-  endpoint: location/validate
-  code: 79c721f8-a189-4fcc-a813-d1bb43799567
-  query:
-    streetWithNumber: Thámova 123456789
-    city: Parharlin
-    zip: '457545754'
-  options:
-    dataSource:
-      - CZ
-      - SK
-      - PL
-    dataScope: basic
-    filterMode: limit
-    resultsLimit: 10
-    cityFormat: basic
-    countryFormat: alpha2
-    zipFormat: false
-    acceptPostOfficeAsCity: false
-    correctionMode: full
-    correctionModeCrossCountry: format
-response:
-  result:
-    isValid: false
-    proposal: invalid
-    dataTypes:
-      valid:
-        - number.full
-        - street
-      invalid:
-        - city
-        - streetWithNumber
-        - zip
-    data:
-      country: null
-      state: null
-      region: null
-      district: null
-      ids:
-        internal: null
-        external: null
-      street: null
-      number:
-        type: null
-        part1: null
-        part1Number: null
-        part1Letter: null
-        part2: null
-        part2Number: null
-        part2Letter: null
-        full: null
+value:
+  status: 200
+  request:
+    endpoint: location/validate
+    code: fec3be40-bdc0-4de0-8ee6-a403c48197e3
+    query:
       streetWithNumber: Thámova 123456789
       city: Parharlin
       zip: '457545754'
-      full: Thámova 123456789, 457545754 Parharlin
-    errors:
-      - group: VALUE
-        type: INVALID
-        subtype: null
-        severity: critical
-        relatedTo:
-          - streetWithNumber
+    options:
+      dataSource:
+        - CZ
+        - SK
+        - PL
+      dataScope: basic
+      filterMode: limit
+      resultsLimit: 10
+      cityFormat: basic
+      countryFormat: alpha2
+      zipFormat: false
+      acceptPostOfficeAsCity: false
+      correctionMode: full
+      correctionModeCrossCountry: format
+  response:
+    result:
+      isValid: false
+      proposal: invalid
+      dataTypes:
+        valid:
+          - number.full
+          - street
+        invalid:
           - city
+          - streetWithNumber
           - zip
-        description: Value is not valid.
-  resultCorrected: null
-  suggestions: []
-errors: []
+      data:
+        country: null
+        state: null
+        region: null
+        district: null
+        ids:
+          internal: null
+          external: null
+        street: null
+        number:
+          type: null
+          part1: null
+          part1Number: null
+          part1Letter: null
+          part2: null
+          part2Number: null
+          part2Letter: null
+          full: null
+        streetWithNumber: Thámova 123456789
+        city: Parharlin
+        zip: '457545754'
+        full: Thámova 123456789, 457545754 Parharlin
+      errors:
+        - group: VALUE
+          type: INVALID
+          subtype: null
+          severity: critical
+          relatedTo:
+            - streetWithNumber
+            - city
+            - zip
+          description: Value is not valid.
+    resultCorrected: null
+    suggestions: []
+  errors: []

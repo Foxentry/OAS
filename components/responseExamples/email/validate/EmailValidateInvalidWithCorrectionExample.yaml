@@ -1,53 +1,54 @@
-status: 200
-request:
-  endpoint: email/validate
-  code: 1600c2a3-0ecc-48c6-bdd0-2bde8d4bb515
-  query:
-    email: info@foxentry,com
-  options:
-    validationType: extended
-    acceptDisposableEmails: true
-    acceptFreemails: true
-    correctionMode: full
-response:
-  result:
-    isValid: false
-    proposal: invalidWithCorrection
-    data:
-      user: info
-      domain: foxentry,com
+value:
+  status: 200
+  request:
+    endpoint: email/validate
+    code: d412337d-931e-44aa-a39b-a95d0a2a5bbf
+    query:
       email: info@foxentry,com
-    flags:
-      isCatchAllServer: null
-      isDisposableEmailAddress: null
-      isFreemail: null
-    errors:
-      - group: SYNTAX
-        type: INVALID
-        subtype: null
-        severity: critical
-        relatedTo:
-          - email
-        description: Value has invalid syntax.
-  resultCorrected:
-    isValid: true
-    data:
-      user: info
-      domain: foxentry.com
-      email: info@foxentry.com
-    flags:
-      isCatchAllServer: false
-      isDisposableEmailAddress: false
-      isFreemail: false
-    errors: []
-    fixes:
-      - group: SYNTAX
-        type: VALUE_PART_CHANGED
-        subtype: CHARACTERS
-        data:
-          typeFrom: email
-          type: email
-          valueFrom: info@foxentry,com
-          value: info@foxentry.com
-  suggestions: []
-errors: []
+    options:
+      validationType: extended
+      acceptDisposableEmails: true
+      acceptFreemails: true
+      correctionMode: full
+  response:
+    result:
+      isValid: false
+      proposal: invalidWithCorrection
+      data:
+        user: info
+        domain: foxentry,com
+        email: info@foxentry,com
+      flags:
+        isCatchAllServer: null
+        isDisposableEmailAddress: null
+        isFreemail: null
+      errors:
+        - group: SYNTAX
+          type: INVALID
+          subtype: null
+          severity: critical
+          relatedTo:
+            - email
+          description: Value has invalid syntax.
+    resultCorrected:
+      isValid: true
+      data:
+        user: info
+        domain: foxentry.com
+        email: info@foxentry.com
+      flags:
+        isCatchAllServer: false
+        isDisposableEmailAddress: false
+        isFreemail: false
+      errors: []
+      fixes:
+        - group: SYNTAX
+          type: VALUE_PART_CHANGED
+          subtype: CHARACTERS
+          data:
+            typeFrom: email
+            type: email
+            valueFrom: info@foxentry,com
+            value: info@foxentry.com
+    suggestions: []
+  errors: []

@@ -44,17 +44,13 @@ content:
         - response
     examples:
       valid:
-        value:
-          $ref: ./../../responseExamples/phone/validate/PhoneValidateValidExample.yaml
+        $ref: ./../../responseExamples/phone/validate/PhoneValidateValidExample.yaml
 
       invalid:
-        value:
-          $ref: ./../../responseExamples/phone/validate/PhoneValidateInvalidExample.yaml
+        $ref: ./../../responseExamples/phone/validate/PhoneValidateInvalidExample.yaml
 
       invalidWithCorrection:
-        value:
-          $ref: ./../../responseExamples/phone/validate/PhoneValidateInvalidWithCorrectionExample.yaml
+        $ref: ./../../responseExamples/phone/validate/PhoneValidateInvalidWithCorrectionExample.yaml
 
       validWithSuggestion:
-        value:
-          $ref: ./../../responseExamples/phone/validate/PhoneValidateValidWithSuggestionExample.yaml
+        $ref: ./../../responseExamples/phone/validate/PhoneValidateValidWithSuggestionExample.yaml

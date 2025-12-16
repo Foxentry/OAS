@@ -43,5 +43,4 @@ content:
         - request
     examples:
       searchResults:
-        value:
-          $ref: ./../../responseExamples/phone/search/PhoneSearchResultsExample.yaml
+        $ref: ./../../responseExamples/phone/search/PhoneSearchResultsExample.yaml

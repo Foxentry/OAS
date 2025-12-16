@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/validate
-    code: 9ca02305-5ee7-4ebb-93e0-6930c3e02a3b
+    code: b6805e7f-a13c-4759-8fa9-b625ece86418
     query:
       streetWithNumber: thmova 137/16
       city: Praha 8
@@ -30,9 +30,9 @@ value:
       proposal: invalid
       dataTypes:
         valid:
+          - city
           - number.full
         invalid:
-          - city
           - country
           - street
           - streetWithNumber
@@ -68,7 +68,6 @@ value:
             - country
             - streetWithNumber
             - zip
-            - city
           description: Value is not valid.
     resultCorrected: null
     suggestions: []

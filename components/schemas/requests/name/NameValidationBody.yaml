@@ -11,6 +11,8 @@ properties:
     oneOf:
       - type: object
         title: Separate field for name and surname
+        # If not present, linter would use incorrect variant.
+        additionalProperties: false
         properties:
           name:
             type:
@@ -26,6 +28,7 @@ properties:
             example: Novák
       - type: object
         title: One field for name and surname
+        additionalProperties: false
         required:
           - nameSurname
         properties:

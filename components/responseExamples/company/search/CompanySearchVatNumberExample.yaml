@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/search
-    code: 5e864336-5b4c-47c7-b455-314033d2d264
+    code: 670c3b10-c20a-444d-8dc7-5cb1c6b2cb35
     query:
       type: vatNumber
       value: CZ04997
@@ -131,57 +131,6 @@ value:
         flags:
           isActive: true
       - data:
-          uuid: 580a7925-2c40-43a7-a9a2-a5ab0ea397f2
-          country: CZ
-          name: AMADET facility s.r.o.
-          registrationNumber: '04997689'
-          taxNumber: null
-          vatNumber: CZ04997689
-          vatNumberSpecial: null
-          address:
-            data:
-              country: CZ
-              state: null
-              region: Hlavní město Praha
-              district: území Hlavního města Prahy
-              ids:
-                internal: 8ffc809c-11f0-44ae-a949-ee6dd840c1dc
-                external: '21889945'
-              street: Durychova
-              number:
-                type: č.p.
-                part1: '101'
-                part1Number: '101'
-                part1Letter: null
-                part2: '66'
-                part2Number: '66'
-                part2Letter: null
-                full: 101/66
-              streetWithNumber: Durychova 101/66
-              city: Praha 4
-              zip: '14200'
-              full: Durychova 101/66, 14200 Praha 4
-          addressOfficial:
-            data:
-              country: CZ
-              street: Durychova
-              number:
-                part1: null
-                part1Number: null
-                part1Letter: null
-                part2: null
-                part2Number: null
-                part2Letter: null
-                full: 101/66
-              streetWithNumber: Durychova 101/66
-              city: Praha
-              zip: '14200'
-              full: Durychova 101/66, 14200 Praha
-          legalForm:
-            type: juridical
-        flags:
-          isActive: true
-      - data:
           uuid: 66bb2337-1a0c-46b7-8923-cf21b73850e1
           country: CZ
           name: HBS CROLE s.r.o.
@@ -228,6 +177,57 @@ value:
               city: Praha
               zip: '11000'
               full: Elišky Krásnohorské 11/4, 11000 Praha
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 580a7925-2c40-43a7-a9a2-a5ab0ea397f2
+          country: CZ
+          name: AMADET facility s.r.o.
+          registrationNumber: '04997689'
+          taxNumber: null
+          vatNumber: CZ04997689
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Hlavní město Praha
+              district: území Hlavního města Prahy
+              ids:
+                internal: 8ffc809c-11f0-44ae-a949-ee6dd840c1dc
+                external: '21889945'
+              street: Durychova
+              number:
+                type: č.p.
+                part1: '101'
+                part1Number: '101'
+                part1Letter: null
+                part2: '66'
+                part2Number: '66'
+                part2Letter: null
+                full: 101/66
+              streetWithNumber: Durychova 101/66
+              city: Praha 4
+              zip: '14200'
+              full: Durychova 101/66, 14200 Praha 4
+          addressOfficial:
+            data:
+              country: CZ
+              street: Durychova
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 101/66
+              streetWithNumber: Durychova 101/66
+              city: Praha
+              zip: '14200'
+              full: Durychova 101/66, 14200 Praha
           legalForm:
             type: juridical
         flags:
@@ -386,57 +386,6 @@ value:
         flags:
           isActive: true
       - data:
-          uuid: 013647f6-9142-46b8-aeed-4b82a9e914cb
-          country: CZ
-          name: MAKESIM s.r.o.
-          registrationNumber: '04997735'
-          taxNumber: null
-          vatNumber: CZ04997735
-          vatNumberSpecial: null
-          address:
-            data:
-              country: CZ
-              state: null
-              region: Hlavní město Praha
-              district: území Hlavního města Prahy
-              ids:
-                internal: 86ef6d6d-79f8-4c4b-9328-5179c0725b10
-                external: '21843139'
-              street: Donovalská
-              number:
-                type: č.p.
-                part1: '1756'
-                part1Number: '1756'
-                part1Letter: null
-                part2: '45'
-                part2Number: '45'
-                part2Letter: null
-                full: 1756/45
-              streetWithNumber: Donovalská 1756/45
-              city: Praha 4
-              zip: '14900'
-              full: Donovalská 1756/45, 14900 Praha 4
-          addressOfficial:
-            data:
-              country: CZ
-              street: Donovalská
-              number:
-                part1: null
-                part1Number: null
-                part1Letter: null
-                part2: null
-                part2Number: null
-                part2Letter: null
-                full: 1756/45
-              streetWithNumber: Donovalská 1756/45
-              city: Praha
-              zip: '14900'
-              full: Donovalská 1756/45, 14900 Praha
-          legalForm:
-            type: juridical
-        flags:
-          isActive: true
-      - data:
           uuid: 02d7bbde-868f-4f5b-ad64-fb0b8613ca0f
           country: CZ
           name: Ascent Capital s.r.o.
@@ -483,6 +432,57 @@ value:
               city: Praha
               zip: '10100'
               full: Na zájezdu 2132/11, 10100 Praha
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 013647f6-9142-46b8-aeed-4b82a9e914cb
+          country: CZ
+          name: MAKESIM s.r.o.
+          registrationNumber: '04997735'
+          taxNumber: null
+          vatNumber: CZ04997735
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Hlavní město Praha
+              district: území Hlavního města Prahy
+              ids:
+                internal: 86ef6d6d-79f8-4c4b-9328-5179c0725b10
+                external: '21843139'
+              street: Donovalská
+              number:
+                type: č.p.
+                part1: '1756'
+                part1Number: '1756'
+                part1Letter: null
+                part2: '45'
+                part2Number: '45'
+                part2Letter: null
+                full: 1756/45
+              streetWithNumber: Donovalská 1756/45
+              city: Praha 4
+              zip: '14900'
+              full: Donovalská 1756/45, 14900 Praha 4
+          addressOfficial:
+            data:
+              country: CZ
+              street: Donovalská
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 1756/45
+              streetWithNumber: Donovalská 1756/45
+              city: Praha
+              zip: '14900'
+              full: Donovalská 1756/45, 14900 Praha
           legalForm:
             type: juridical
         flags:

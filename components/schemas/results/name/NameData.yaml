@@ -25,13 +25,17 @@ properties:
       description: Context for name and Surname.
       example: ml.
   degreesBefore:
-    type: array
+    type:
+      - array
+      - "null"
     items:
       type: string
       description: Degrees before name.
       example: Ing.
   degreesAfter:
-    type: array
+    type:
+      - array
+      - "null"
     items:
       type: string
       description: Degrees after name.

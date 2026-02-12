@@ -32,6 +32,8 @@ properties:
       - DE
       - DK
       - ES
+      - FR
+      - GB
       - GR
       - HR
       - HU
@@ -39,6 +41,7 @@ properties:
       - IT
       - LI
       - LU
+      - MC
       - ME
       - MK
       - MT
@@ -48,6 +51,8 @@ properties:
       - RS
       - SI
       - SK
+      - SM
+      - VA
       - XK
     example:
       - CZ

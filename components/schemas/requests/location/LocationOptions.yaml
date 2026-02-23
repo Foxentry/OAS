@@ -9,12 +9,12 @@ properties:
       - full
     default: basic
     example: full
-
   dataSource:
     description: >-
       Array of allowed data sources, which restricts countries the module searches.
-      Although we use the `request.client` object to provide most relevant results, it is generally recommended to
-      to limit this option to only the necessary sources - especially if you don't utilize the `request.client` object.
+      Although we use the `request.client` object to provide most relevant results,
+      it is generally recommended to to limit this option to only the necessary sources
+      - especially if you don't utilize the `request.client` object.
     type: array
     items:
       type: string
@@ -63,12 +63,12 @@ properties:
     type: boolean
     default: false
     example: false
-
   countryFormat:
     description: >-
-      This option determines the format in which the country is returned.
-      Choices include local (<b>Česká republika</b>) and international (<b>Czech republic</b>) variants with their 
-      shortened counterparts (<b>Česko, Czechia</b>). You can use ISO 3166 alpha codes (<b>CZ, CZE</b>) as well.
+      This option determines the format in which the country is returned. Choices
+      include local (<b>Česká republika</b>) and international (<b>Czech republic</b>)
+      variants with their  shortened counterparts (<b>Česko, Czechia</b>). You can
+      use ISO 3166 alpha codes (<b>CZ, CZE</b>) as well.
     type: string
     enum:
       - alpha2
@@ -79,12 +79,10 @@ properties:
       - internationalShortened
     default: alpha2
     example: alpha2
-
   cityFormat:
     description: >-
-      This option determines the format in which the city is returned.
-      <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8
-      - Karlín.
+      This option determines the format in which the city is returned. <b>Minimal</b>
+      = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.
     type: string
     enum:
       - minimal
@@ -92,4 +90,3 @@ properties:
       - extended
     default: basic
     example: basic
-

@@ -84,29 +84,31 @@ properties:
           as valid/invalid nameSurname
         default: false
         example: false
-      validationDepth:
+      correctionMode:
+        type: string
+        description: >-
+          This option determines how automatic corrections are handled. You can choose between
+          <b>full</b> to allow all corrections, <b>format</b> to fix formatting only,
+          <b>suggestion</b> to return corrected data in suggestions, or <b>none</b>
+          for no corrections to be applied.
         enum:
-          - minimal
-          - moderate
-          - strict
+          - full
+          - format
+          - suggestion
+          - none
+        default: full
+        example: full
+      dataLanguage:
+        type: string
         description: >-
-          Specifies the depth of name validation. In other words how strict the
-          validator should behave. <b>Minimal</b> = all the names are considered
-          valid as long as there are no forbidden characters used or we are 100%
-          sure the name is invalid. Usually the only thing corrected is format.
-          <b>Moderate</b> = something in between the minimal and strict
-          validation. There are more instances of corrections like typos etc.
-          <b>Strict</b> = the most strict validation depth. Missing names in our
-          database are marked as invalid, the scoring for corrections and
-          suggestions is tweaked.
-        default: strict
-        example: strict
-      smartMode:
-        type: boolean
-        description: >-
-          Allows to correct the name (resultCorrected). If this is disabled, the
-          corrections are given as a suggestion.
-        default: true
-        example: true
+          Language in which various salutations and name-related outputs are returned
+          (e.g. vocative forms such as "pane inženýre").
+        enum:
+          - en
+          - cs
+          - sk
+          - pl
+        default: cs
+        example: cs
   client:
     $ref: ./../ClientRequest.yaml

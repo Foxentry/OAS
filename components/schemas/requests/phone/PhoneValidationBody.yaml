@@ -24,10 +24,10 @@ properties:
             example: '607123456'
       - type: object
         required:
-          - numberWithPrefix
+          - numberFull
         title: One field for number with prefix.
         properties:
-          numberWithPrefix:
+          numberFull:
             type: string
             description: Phone number with prefix.
             example: '+420775111222'
@@ -72,17 +72,20 @@ properties:
           make more accurate results.
         example: '+420'
         deprecated: true
-      formatNumber:
-        type: boolean
+      numberFormat:
+        type: string
         description: >-
-          Determines whether the formatted phone number (with spaces) should be
-          considered as valid or not. If this option is set to <b>false</b>, a
-          phone number with spaces would be considered as invalid with format
-          error and a correction would be proposed in resultCorrected. If set to
-          <b>true</b>, a phone number with correct use of spaces would be
-          considered as valid and the national format invalid.
-        example: false
-        default: false
+          Determines the format of the phone number output.
+          <b>raw</b> = number as entered, <b>national</b> = national format without prefix (607 123 456),
+          <b>e123</b> = international format with spaces (+420 607 123 456),
+          <b>e164</b> = international format without spaces (+420607123456).
+        enum:
+          - raw
+          - national
+          - e123
+          - e164
+        default: e164
+        example: e164
       correctionMode:
         description: >-
           This option determines how automatic corrections are handled. You can choose between

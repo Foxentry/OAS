@@ -29,7 +29,11 @@ jobs:
         with:
             files: openapi-bundled.yaml
 
+      - name: Extract version branch
+        id: version
+        run: echo "branch=v$(echo '${{ github.ref_name }}' | grep -oP '^v?\K\d+\.\d+')" >> $GITHUB_OUTPUT
+
       - name: Sync Openapi spec
         uses: readmeio/rdme@v10
         with:
-          rdme: openapi upload ./openapi.yaml --key=${{ secrets.README_API_KEY }} --slug=foxentry-api-reference
+          rdme: openapi upload ./openapi.yaml --key=${{ secrets.README_API_KEY }} --slug=foxentry-api-reference --branch=${{ steps.version.outputs.branch }}

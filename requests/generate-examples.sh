@@ -34,7 +34,7 @@ while IFS= read -r json_file; do
   curl -s --request POST \
        --url "https://api.foxentry.com/$folder" \
        --header "accept: application/json" \
-       --header "api-version: 2.0" \
+       --header "api-version: 2.1" \
        --header "authorization: Bearer $API_KEY" \
        --header "content-type: application/json" \
        --header "foxentry-include-request-details: true" \

@@ -46,4 +46,4 @@ post:
     - BearerAuth: []
   servers:
     - url: https://api.foxentry.com
-    - url: https://api.foxentry.com/v2.0
+    - url: https://api.foxentry.com/v2.1

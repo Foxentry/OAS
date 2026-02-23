@@ -1,12 +1,12 @@
 openapi: 3.1.0
 info:
-  version: '2.0'
+  version: '2.1'
   title: Foxentry API reference
   termsOfService: https://foxentry.com/terms-and-conditions
   description: >-
-    # Welcome to the Foxentry API version 2.0
+    # Welcome to the Foxentry API version 2.1
 
-    Welcome to the new version of Foxentry API 2.0 Our API is designed to
+    Welcome to the new version of Foxentry API 2.1 Our API is designed to
     enhance your data management experience and provide you with even more
     powerful tools to harness the potential of getting and working with data.
 
@@ -21,13 +21,13 @@ info:
     suggestions and corrections for your inputs so that you always get the right
     data.
 
-    ## Features in version 2.0
+    ## Features in version 2.1
 
     Foxentry now provides you with a wide variety of information by providing a
     comprehensive set of endpoints for numerous data categories. Whether you
     need information on a <b>Company</b>, an <b>Email</b> address, a
     <b>Location</b>, a <b>Name</b>, or a <b>Phone number</b>, Foxentry can help.
-    We are pleased to offer our valued clients a total of 11 endpoints in this
+    We are pleased to offer our valued clients a total of 12 endpoints in this
     new version. <br><br>
 
     With the latest version of the Foxentry API, we have implemented advanced
@@ -129,7 +129,7 @@ info:
     url: https://www.foxentry.com
 servers:
   - url: https://api.foxentry.com
-  - url: https://api.foxentry.com/v2.0
+  - url: https://api.foxentry.com/v2.1
 paths:
   /company/validate:
     $ref: paths/company/CompanyValidate.yaml

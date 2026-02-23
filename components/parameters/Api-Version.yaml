@@ -4,5 +4,5 @@ description: API version.
 required: false
 schema:
   type: string
-  default: '2.0'
-  example: '2.0'
+  default: '2.1'
+  example: '2.1'

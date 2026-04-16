@@ -67,9 +67,7 @@ properties:
           - string
           - "null"
         description: >-
-          Deprecated - use preferredPrefixes instead. Default international
-          prefix if not part of the query. This is used for the validator to
-          make more accurate results.
+          Slated for removal
         example: '+420'
         deprecated: true
       numberFormat:

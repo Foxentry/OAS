@@ -20,3 +20,9 @@ properties:
       - "null"
     description: Determines if the email address is hosted on freemail.
     example: false
+  isPhishingDomain:
+    type:
+      - boolean
+      - "null"
+    description: Determines if the email address is a domain used for phishing.
+    example: false

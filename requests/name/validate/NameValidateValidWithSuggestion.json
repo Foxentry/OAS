@@ -10,9 +10,7 @@
         "SK"
       ],
       "acceptDegrees": false,
-      "acceptContext": false,
-      "validationDepth": "strict",
-      "smartMode": true
+      "acceptContext": false
     }
   }
 }

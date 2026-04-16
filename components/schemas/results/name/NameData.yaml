@@ -40,6 +40,27 @@ properties:
       type: string
       description: Degrees after name.
       example: Ph.D.
+  vocativeName:
+    type:
+      - string
+      - "null"
+    description: Vocative form of first name.
+    example: Petře
+  vocativeSurname:
+    type:
+      - string
+      - "null"
+    description: Vocative form of surname.
+    example: Nováku
+  vocativeNameSurname:
+    type:
+      - string
+      - "null"
+    description: Vocative form of name and surname together.
+    example: Petře Nováku
+  details:
+    $ref: ./NameDetails.yaml
+
 required:
   - nameSurname
   - name

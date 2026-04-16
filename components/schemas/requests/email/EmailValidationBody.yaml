@@ -58,5 +58,12 @@ properties:
           - none
         default: full
         example: full
+      acceptPhishingDomains:
+        type: boolean
+        description: >-
+          If true, the e-mails from domains used for phishing will be marked as valid. Works only in
+          <b>Extended validation</b>.
+        default: false
+        example: false
   client:
     $ref: ./../ClientRequest.yaml

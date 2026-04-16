@@ -22,8 +22,6 @@ content:
               dataScope: full
               acceptDegrees: true
               acceptContext: false
-              validationDepth: strict
-              smartMode: true
             client:
               country: CZ
               location:

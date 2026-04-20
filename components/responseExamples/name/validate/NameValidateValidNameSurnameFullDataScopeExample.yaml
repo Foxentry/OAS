@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: name/validate
-    code: 2a2b24c9-b1bd-4642-9f9a-e1ecd10b5c9a
+    code: 5a0c8d02-0acd-4b06-a461-7c4dba0cd85b
     query:
       nameSurname: Pavel Novák
     options:
@@ -12,41 +12,45 @@ value:
       dataScope: full
       acceptDegrees: false
       acceptContext: false
-      smartMode: true
-      validationDepth: strict
+      dataLanguage: cs
+      correctionMode: full
   response:
     result:
       isValid: true
       proposal: valid
+      dataTypes:
+        valid:
+          - name
+          - surname
+          - nameSurname
+        invalid: []
       data:
-        nameSurname: Pavel Novák
         name: Pavel
         surname: Novák
+        nameSurname: Pavel Novák
         context: []
         degreesBefore: []
         degreesAfter: []
-      details:
-        - type: name
-          value: Pavel
-          gender: 1
-          vocative: Pavle
-          nameDays:
-            - country: CZ
-              month: 6
-              day: 29
-        - type: surname
-          value: Novák
-          gender: 1
-          vocative: Nováku
-          nameDays: null
-        - type: nameSurname
-          value: Pavel Novák
-          gender: 1
-          vocative: Pavle Nováku
-          nameDays:
-            - country: CZ
-              month: 6
-              day: 29
+        vocativeName: Pavle
+        vocativeSurname: Nováku
+        vocativeNameSurname: Pavle Nováku
+        details:
+          - type: name
+            value: Pavel
+            gender: 1
+            vocative: Pavle
+            nameDays:
+              - country: CZ
+                day: 29
+                month: 6
+          - type: surname
+            value: Novák
+            gender: 1
+            vocative: Nováku
+          - type: nameSurname
+            value: Pavel Novák
+            gender: 1
+            vocative: Pavle Nováku
       errors: []
     resultCorrected: null
     suggestions: []

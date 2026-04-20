@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: name/validate
-    code: 8b1f11aa-4272-49a0-b838-fd8af6879f19
+    code: def3350c-6ba9-4c3d-98c3-87cfb9ee3aaa
     query:
       name: Palve
     options:
@@ -12,12 +12,16 @@ value:
       dataScope: basic
       acceptDegrees: false
       acceptContext: false
-      smartMode: true
-      validationDepth: strict
+      dataLanguage: cs
+      correctionMode: full
   response:
     result:
       isValid: false
-      proposal: invalidWithSuggestion
+      proposal: invalid
+      dataTypes:
+        valid: []
+        invalid:
+          - name
       data:
         name: Palve
         surname: null
@@ -28,29 +32,11 @@ value:
       errors:
         - group: VALUE
           type: INVALID
-          subtype: NAME
-          description: Name has not been found in our database.
-          severity: warning
+          subtype: null
+          severity: critical
           relatedTo:
             - name
+          description: Value is not valid.
     resultCorrected: null
-    suggestions:
-      - isValid: true
-        data:
-          name: Pal
-          surname: null
-          nameSurname: null
-          context: []
-          degreesBefore: null
-          degreesAfter: null
-        errors: []
-        fixes:
-          - group: VALUE
-            type: CHANGED
-            subtype: TYPO
-            data:
-              typeFrom: name
-              type: name
-              valueFrom: Palve
-              value: Pal
+    suggestions: []
   errors: []

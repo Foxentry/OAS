@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/validate
-    code: ecf6db64-666e-43ba-97e6-7ebde7f86fd4
+    code: 62adb6c2-5d11-424e-900a-d50fec612218
     query:
       streetWithNumber: Olšanská 2898/4
       city: Praha 3
@@ -13,7 +13,6 @@ value:
         - SK
         - PL
       dataScope: basic
-      filterMode: limit
       resultsLimit: 10
       cityFormat: basic
       countryFormat: alpha2
@@ -81,22 +80,22 @@ value:
           region: Hlavní město Praha
           district: území Hlavního města Prahy
           ids:
-            internal: 9266190a-76da-45e5-86b4-d168d631ddf8
-            external: '75429462'
+            internal: 8a978ce4-d769-456e-abdd-7b6174848237
+            external: '75429195'
           street: Olšanská
           number:
             type: č.p.
             part1: '2898'
             part1Number: '2898'
             part1Letter: null
-            part2: 4g
+            part2: 4d
             part2Number: '4'
-            part2Letter: g
-            full: 2898/4g
-          streetWithNumber: Olšanská 2898/4g
+            part2Letter: d
+            full: 2898/4d
+          streetWithNumber: Olšanská 2898/4d
           city: Praha 3
           zip: '13000'
-          full: Olšanská 2898/4g, 13000 Praha 3
+          full: Olšanská 2898/4d, 13000 Praha 3
         errors: []
         fixes:
           - group: VALUE
@@ -106,171 +105,7 @@ value:
               typeFrom: streetWithNumber
               type: streetWithNumber
               valueFrom: Olšanská 2898/4
-              value: Olšanská 2898/4g
-      - isValid: true
-        dataTypes:
-          valid:
-            - city
-            - number.full
-            - street
-            - streetWithNumber
-            - zip
-          invalid: []
-        data:
-          country: CZ
-          state: null
-          region: Hlavní město Praha
-          district: území Hlavního města Prahy
-          ids:
-            internal: a3c8146d-ff67-4e97-80bc-40cacdd06a4d
-            external: '75429551'
-          street: Olšanská
-          number:
-            type: č.p.
-            part1: '2898'
-            part1Number: '2898'
-            part1Letter: null
-            part2: 4i
-            part2Number: '4'
-            part2Letter: i
-            full: 2898/4i
-          streetWithNumber: Olšanská 2898/4i
-          city: Praha 3
-          zip: '13000'
-          full: Olšanská 2898/4i, 13000 Praha 3
-        errors: []
-        fixes:
-          - group: VALUE
-            type: CHANGED
-            subtype: TYPO
-            data:
-              typeFrom: streetWithNumber
-              type: streetWithNumber
-              valueFrom: Olšanská 2898/4
-              value: Olšanská 2898/4i
-      - isValid: true
-        dataTypes:
-          valid:
-            - city
-            - number.full
-            - street
-            - streetWithNumber
-            - zip
-          invalid: []
-        data:
-          country: CZ
-          state: null
-          region: Hlavní město Praha
-          district: území Hlavního města Prahy
-          ids:
-            internal: 33bb5444-73c5-474e-8ce7-2f157b947230
-            external: '75429411'
-          street: Olšanská
-          number:
-            type: č.p.
-            part1: '2898'
-            part1Number: '2898'
-            part1Letter: null
-            part2: 4e
-            part2Number: '4'
-            part2Letter: e
-            full: 2898/4e
-          streetWithNumber: Olšanská 2898/4e
-          city: Praha 3
-          zip: '13000'
-          full: Olšanská 2898/4e, 13000 Praha 3
-        errors: []
-        fixes:
-          - group: VALUE
-            type: CHANGED
-            subtype: TYPO
-            data:
-              typeFrom: streetWithNumber
-              type: streetWithNumber
-              valueFrom: Olšanská 2898/4
-              value: Olšanská 2898/4e
-      - isValid: true
-        dataTypes:
-          valid:
-            - city
-            - number.full
-            - street
-            - streetWithNumber
-            - zip
-          invalid: []
-        data:
-          country: CZ
-          state: null
-          region: Hlavní město Praha
-          district: území Hlavního města Prahy
-          ids:
-            internal: 0794e4b1-2ac8-498a-b02f-23b1e59b7178
-            external: '75429527'
-          street: Olšanská
-          number:
-            type: č.p.
-            part1: '2898'
-            part1Number: '2898'
-            part1Letter: null
-            part2: 4h
-            part2Number: '4'
-            part2Letter: h
-            full: 2898/4h
-          streetWithNumber: Olšanská 2898/4h
-          city: Praha 3
-          zip: '13000'
-          full: Olšanská 2898/4h, 13000 Praha 3
-        errors: []
-        fixes:
-          - group: VALUE
-            type: CHANGED
-            subtype: TYPO
-            data:
-              typeFrom: streetWithNumber
-              type: streetWithNumber
-              valueFrom: Olšanská 2898/4
-              value: Olšanská 2898/4h
-      - isValid: true
-        dataTypes:
-          valid:
-            - city
-            - number.full
-            - street
-            - streetWithNumber
-            - zip
-          invalid: []
-        data:
-          country: CZ
-          state: null
-          region: Hlavní město Praha
-          district: území Hlavního města Prahy
-          ids:
-            internal: 37b9bfcc-733b-49e0-ae68-c32d2634732e
-            external: '75429152'
-          street: Olšanská
-          number:
-            type: č.p.
-            part1: '2898'
-            part1Number: '2898'
-            part1Letter: null
-            part2: 4c
-            part2Number: '4'
-            part2Letter: c
-            full: 2898/4c
-          streetWithNumber: Olšanská 2898/4c
-          city: Praha 3
-          zip: '13000'
-          full: Olšanská 2898/4c, 13000 Praha 3
-        errors: []
-        fixes:
-          - group: VALUE
-            type: CHANGED
-            subtype: TYPO
-            data:
-              typeFrom: streetWithNumber
-              type: streetWithNumber
-              valueFrom: Olšanská 2898/4
-              value: Olšanská 2898/4c
+              value: Olšanská 2898/4d
       - isValid: true
         dataTypes:
           valid:
@@ -327,22 +162,22 @@ value:
           region: Hlavní město Praha
           district: území Hlavního města Prahy
           ids:
-            internal: 8a978ce4-d769-456e-abdd-7b6174848237
-            external: '75429195'
+            internal: 33bb5444-73c5-474e-8ce7-2f157b947230
+            external: '75429411'
           street: Olšanská
           number:
             type: č.p.
             part1: '2898'
             part1Number: '2898'
             part1Letter: null
-            part2: 4d
+            part2: 4e
             part2Number: '4'
-            part2Letter: d
-            full: 2898/4d
-          streetWithNumber: Olšanská 2898/4d
+            part2Letter: e
+            full: 2898/4e
+          streetWithNumber: Olšanská 2898/4e
           city: Praha 3
           zip: '13000'
-          full: Olšanská 2898/4d, 13000 Praha 3
+          full: Olšanská 2898/4e, 13000 Praha 3
         errors: []
         fixes:
           - group: VALUE
@@ -352,7 +187,130 @@ value:
               typeFrom: streetWithNumber
               type: streetWithNumber
               valueFrom: Olšanská 2898/4
-              value: Olšanská 2898/4d
+              value: Olšanská 2898/4e
+      - isValid: true
+        dataTypes:
+          valid:
+            - city
+            - number.full
+            - street
+            - streetWithNumber
+            - zip
+          invalid: []
+        data:
+          country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
+          ids:
+            internal: 37b9bfcc-733b-49e0-ae68-c32d2634732e
+            external: '75429152'
+          street: Olšanská
+          number:
+            type: č.p.
+            part1: '2898'
+            part1Number: '2898'
+            part1Letter: null
+            part2: 4c
+            part2Number: '4'
+            part2Letter: c
+            full: 2898/4c
+          streetWithNumber: Olšanská 2898/4c
+          city: Praha 3
+          zip: '13000'
+          full: Olšanská 2898/4c, 13000 Praha 3
+        errors: []
+        fixes:
+          - group: VALUE
+            type: CHANGED
+            subtype: TYPO
+            data:
+              typeFrom: streetWithNumber
+              type: streetWithNumber
+              valueFrom: Olšanská 2898/4
+              value: Olšanská 2898/4c
+      - isValid: true
+        dataTypes:
+          valid:
+            - city
+            - number.full
+            - street
+            - streetWithNumber
+            - zip
+          invalid: []
+        data:
+          country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
+          ids:
+            internal: 0794e4b1-2ac8-498a-b02f-23b1e59b7178
+            external: '75429527'
+          street: Olšanská
+          number:
+            type: č.p.
+            part1: '2898'
+            part1Number: '2898'
+            part1Letter: null
+            part2: 4h
+            part2Number: '4'
+            part2Letter: h
+            full: 2898/4h
+          streetWithNumber: Olšanská 2898/4h
+          city: Praha 3
+          zip: '13000'
+          full: Olšanská 2898/4h, 13000 Praha 3
+        errors: []
+        fixes:
+          - group: VALUE
+            type: CHANGED
+            subtype: TYPO
+            data:
+              typeFrom: streetWithNumber
+              type: streetWithNumber
+              valueFrom: Olšanská 2898/4
+              value: Olšanská 2898/4h
+      - isValid: true
+        dataTypes:
+          valid:
+            - city
+            - number.full
+            - street
+            - streetWithNumber
+            - zip
+          invalid: []
+        data:
+          country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
+          ids:
+            internal: 9266190a-76da-45e5-86b4-d168d631ddf8
+            external: '75429462'
+          street: Olšanská
+          number:
+            type: č.p.
+            part1: '2898'
+            part1Number: '2898'
+            part1Letter: null
+            part2: 4g
+            part2Number: '4'
+            part2Letter: g
+            full: 2898/4g
+          streetWithNumber: Olšanská 2898/4g
+          city: Praha 3
+          zip: '13000'
+          full: Olšanská 2898/4g, 13000 Praha 3
+        errors: []
+        fixes:
+          - group: VALUE
+            type: CHANGED
+            subtype: TYPO
+            data:
+              typeFrom: streetWithNumber
+              type: streetWithNumber
+              valueFrom: Olšanská 2898/4
+              value: Olšanská 2898/4g
       - isValid: true
         dataTypes:
           valid:
@@ -394,6 +352,47 @@ value:
               type: streetWithNumber
               valueFrom: Olšanská 2898/4
               value: Olšanská 2898/4a
+      - isValid: true
+        dataTypes:
+          valid:
+            - city
+            - number.full
+            - street
+            - streetWithNumber
+            - zip
+          invalid: []
+        data:
+          country: CZ
+          state: null
+          region: Hlavní město Praha
+          district: území Hlavního města Prahy
+          ids:
+            internal: a3c8146d-ff67-4e97-80bc-40cacdd06a4d
+            external: '75429551'
+          street: Olšanská
+          number:
+            type: č.p.
+            part1: '2898'
+            part1Number: '2898'
+            part1Letter: null
+            part2: 4i
+            part2Number: '4'
+            part2Letter: i
+            full: 2898/4i
+          streetWithNumber: Olšanská 2898/4i
+          city: Praha 3
+          zip: '13000'
+          full: Olšanská 2898/4i, 13000 Praha 3
+        errors: []
+        fixes:
+          - group: VALUE
+            type: CHANGED
+            subtype: TYPO
+            data:
+              typeFrom: streetWithNumber
+              type: streetWithNumber
+              valueFrom: Olšanská 2898/4
+              value: Olšanská 2898/4i
       - isValid: true
         dataTypes:
           valid:

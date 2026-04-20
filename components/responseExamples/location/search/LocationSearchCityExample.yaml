@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/search
-    code: ceef5777-1615-44b5-be80-d5555cbcfe46
+    code: f485229f-241d-4392-a7d1-1fb3938902f9
     query:
       type: city
       value: Praha
@@ -46,9 +46,31 @@ value:
             part2Letter: null
             full: null
           streetWithNumber: null
-          city: Praha 4
+          city: Praha
           zip: null
-          full: Praha 4
+          full: Praha
+      - data:
+          country: SK
+          state: null
+          region: Banskobystrický
+          district: Lučenec
+          ids:
+            internal: null
+            external: null
+          street: Praha
+          number:
+            type: null
+            part1: null
+            part1Number: null
+            part1Letter: null
+            part2: null
+            part2Number: null
+            part2Letter: null
+            full: null
+          streetWithNumber: Praha
+          city: Praha
+          zip: '98511'
+          full: Praha, 98511 Praha
       - data:
           country: CZ
           state: null
@@ -68,29 +90,7 @@ value:
             part2Letter: null
             full: null
           streetWithNumber: null
-          city: Praha 9
+          city: Praha
           zip: null
-          full: Praha 9
-      - data:
-          country: CZ
-          state: null
-          region: Hlavní město Praha
-          district: území Hlavního města Prahy
-          ids:
-            internal: null
-            external: null
-          street: null
-          number:
-            type: null
-            part1: null
-            part1Number: null
-            part1Letter: null
-            part2: null
-            part2Number: null
-            part2Letter: null
-            full: null
-          streetWithNumber: null
-          city: Praha 5
-          zip: null
-          full: Praha 5
+          full: Praha
   errors: []

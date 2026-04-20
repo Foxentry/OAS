@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: name/validate
-    code: 959259eb-81ec-4d5d-8a73-1679bbb4afcf
+    code: 77afb165-f2f0-42cb-9b40-28427decf742
     query:
       name: Paeeewas
     options:
@@ -12,12 +12,16 @@ value:
       dataScope: basic
       acceptDegrees: false
       acceptContext: false
-      smartMode: true
-      validationDepth: strict
+      dataLanguage: cs
+      correctionMode: full
   response:
     result:
       isValid: false
       proposal: invalid
+      dataTypes:
+        valid: []
+        invalid:
+          - name
       data:
         name: Paeeewas
         surname: null
@@ -28,11 +32,11 @@ value:
       errors:
         - group: VALUE
           type: INVALID
-          subtype: NAME
-          description: Name has not been found in our database.
-          severity: warning
+          subtype: null
+          severity: critical
           relatedTo:
             - name
+          description: Value is not valid.
     resultCorrected: null
     suggestions: []
   errors: []

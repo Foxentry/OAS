@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/validate
-    code: 9c3ea6f7-4a95-45a9-b8e6-2c1008ed16b3
+    code: 69252511-3371-479a-b909-92fc4adc8362
     query:
       streetWithNumber: thmova 137/16
       city: Praha
@@ -14,7 +14,6 @@ value:
         - SK
         - PL
       dataScope: basic
-      filterMode: limit
       resultsLimit: 10
       cityFormat: basic
       countryFormat: alpha2

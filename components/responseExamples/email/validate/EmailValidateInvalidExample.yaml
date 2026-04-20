@@ -2,13 +2,14 @@ value:
   status: 200
   request:
     endpoint: email/validate
-    code: 245957bf-c66e-436d-bc31-30a8f3ee257b
+    code: a8021c47-d510-48a0-a30a-fb895b845235
     query:
       email: invalid@example.com
     options:
       validationType: extended
       acceptDisposableEmails: true
       acceptFreemails: true
+      acceptPhishingDomains: true
       correctionMode: full
   response:
     result:
@@ -22,6 +23,7 @@ value:
         isCatchAllServer: false
         isDisposableEmailAddress: false
         isFreemail: false
+        isPhishingDomain: false
       errors:
         - group: VALUE
           type: INVALID

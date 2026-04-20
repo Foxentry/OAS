@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/validate
-    code: 231f8258-31be-4071-9722-6fe8a63fca6a
+    code: d5791df8-e4d4-49d8-bf45-ea0bf3be0046
     query:
       name: AVANTRO s.r.o.
       registrationNumber: '25547'
@@ -14,7 +14,6 @@ value:
         - PL
       dataScope: basic
       includeTerminatedSubjects: false
-      filterMode: limit
       resultsLimit: 10
       countryFormat: alpha2
       cityFormat: basic

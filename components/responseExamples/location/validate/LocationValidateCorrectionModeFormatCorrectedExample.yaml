@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/validate
-    code: bd490f04-a3f5-40b6-aff7-a5ebde27cd7d
+    code: 3c65cd18-97d2-4f45-8ab7-f25e7ceeef1c
     query:
       streetWithNumber: thamova 137/16
       city: praha 8
@@ -14,7 +14,6 @@ value:
         - SK
         - PL
       dataScope: basic
-      filterMode: limit
       resultsLimit: 10
       cityFormat: basic
       countryFormat: alpha2

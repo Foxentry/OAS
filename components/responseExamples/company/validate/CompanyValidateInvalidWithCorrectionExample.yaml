@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/validate
-    code: d43d0b89-22bf-463d-8153-203745616e25
+    code: 646a053c-0b50-43a0-a2ff-375ebbc711b5
     query:
       name: AVANTRO
       registrationNumber: '04997476'
@@ -14,7 +14,6 @@ value:
         - PL
       dataScope: basic
       includeTerminatedSubjects: false
-      filterMode: limit
       resultsLimit: 10
       countryFormat: alpha2
       cityFormat: basic
@@ -40,14 +39,7 @@ value:
           type: null
       flags:
         isActive: true
-      errors:
-        - group: SYNTAX
-          type: VALUE_PART_MISSING
-          subtype: LEGAL_FORM
-          severity: critical
-          relatedTo:
-            - name
-          description: Company name is missing the legal form.
+      errors: []
     resultCorrected:
       isValid: true
       data:
@@ -96,20 +88,12 @@ value:
             streetWithNumber: Thámova 137/16
             city: Praha
             zip: '18600'
-            full: Thámova 137/16, Karlín, 18600 Praha 8
+            full: Thámova 137/16, 18600 Praha
         legalForm:
           type: juridical
       flags:
         isActive: true
       errors: []
-      fixes:
-        - group: SYNTAX
-          type: VALUE_PART_ADDED
-          subtype: LEGAL_FORM
-          data:
-            typeFrom: name
-            type: name
-            valueFrom: AVANTRO
-            value: AVANTRO s.r.o.
+      fixes: []
     suggestions: []
   errors: []

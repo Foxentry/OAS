@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/validate
-    code: f51075e9-b8d8-462d-8f41-3c095e41c8de
+    code: c254a9bc-4bc8-463c-8bed-b34f427209e9
     query:
       streetWithNumber: thmova 137/16
       city: Praha 8
@@ -14,7 +14,6 @@ value:
         - SK
         - PL
       dataScope: basic
-      filterMode: limit
       resultsLimit: 10
       cityFormat: basic
       countryFormat: alpha2

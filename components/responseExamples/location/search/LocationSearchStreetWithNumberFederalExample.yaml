@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/search
-    code: 7015efc8-b802-4058-9c76-bb61d0deb35c
+    code: d05b6745-f2f9-4b9c-9b4d-54ba68bf76c7
     query:
       type: streetWithNumber
       filter:
@@ -54,7 +54,7 @@ value:
   response:
     resultsCount: 1
     resultsOffset: 0
-    resultsTotal: null
+    resultsTotal: 1
     results:
       - data:
           country: DE

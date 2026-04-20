@@ -62,14 +62,6 @@ properties:
         example:
           - '+420'
           - '+421'
-      defaultPrefix:
-        type:
-          - string
-          - "null"
-        description: >-
-          Slated for removal
-        example: '+420'
-        deprecated: true
       numberFormat:
         type: string
         description: >-

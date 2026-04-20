@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/get
-    code: 87b28caa-f799-4671-8012-41ec67eb0fe5
+    code: 2aa14da3-6891-4630-acf5-7561f39af028
     query:
       registrationNumber: '04997476'
       country: CZ
@@ -88,7 +88,7 @@ value:
               streetWithNumber: Thámova 137/16
               city: Praha
               zip: '18600'
-              full: Thámova 137/16, Karlín, 18600 Praha 8
+              full: Thámova 137/16, 18600 Praha
           legalForm:
             type: juridical
             code: '112'

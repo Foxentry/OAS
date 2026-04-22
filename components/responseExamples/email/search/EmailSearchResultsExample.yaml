@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: email/search
-    code: e9cabf28-f540-49d1-a6bb-c55e5cddf2f9
+    code: 2eba022c-bb46-4c87-b39c-de831d50ce72
     query:
       value: info
     options:
@@ -17,12 +17,12 @@ value:
           email: info@gmail.com
           domain: gmail.com
       - data:
-          email: info@icloud.com
-          domain: icloud.com
+          email: info@email.cz
+          domain: email.cz
       - data:
-          email: info@outlook.com
-          domain: outlook.com
+          email: info@centrum.cz
+          domain: centrum.cz
       - data:
-          email: info@yahoo.com
-          domain: yahoo.com
+          email: info@volny.cz
+          domain: volny.cz
   errors: []

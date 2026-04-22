@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/validate
-    code: d43d0b89-22bf-463d-8153-203745616e25
+    code: 0de9ba91-ab51-49d7-9302-6a140d97893b
     query:
       name: AVANTRO
       registrationNumber: '04997476'
@@ -14,7 +14,6 @@ value:
         - PL
       dataScope: basic
       includeTerminatedSubjects: false
-      filterMode: limit
       resultsLimit: 10
       countryFormat: alpha2
       cityFormat: basic

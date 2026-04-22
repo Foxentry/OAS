@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/search
-    code: 670c3b10-c20a-444d-8dc7-5cb1c6b2cb35
+    code: 207011af-a4e0-4de5-a255-6c0e62781042
     query:
       type: vatNumber
       value: CZ04997
@@ -131,57 +131,6 @@ value:
         flags:
           isActive: true
       - data:
-          uuid: 66bb2337-1a0c-46b7-8923-cf21b73850e1
-          country: CZ
-          name: HBS CROLE s.r.o.
-          registrationNumber: '04997891'
-          taxNumber: null
-          vatNumber: CZ04997891
-          vatNumberSpecial: null
-          address:
-            data:
-              country: CZ
-              state: null
-              region: Hlavní město Praha
-              district: území Hlavního města Prahy
-              ids:
-                internal: 5cfda44d-273b-4068-b600-c0454dce8f37
-                external: '21692882'
-              street: Elišky Krásnohorské
-              number:
-                type: č.p.
-                part1: '11'
-                part1Number: '11'
-                part1Letter: null
-                part2: '4'
-                part2Number: '4'
-                part2Letter: null
-                full: 11/4
-              streetWithNumber: Elišky Krásnohorské 11/4
-              city: Praha 1
-              zip: '11000'
-              full: Elišky Krásnohorské 11/4, 11000 Praha 1
-          addressOfficial:
-            data:
-              country: CZ
-              street: Elišky Krásnohorské
-              number:
-                part1: null
-                part1Number: null
-                part1Letter: null
-                part2: null
-                part2Number: null
-                part2Letter: null
-                full: 11/4
-              streetWithNumber: Elišky Krásnohorské 11/4
-              city: Praha
-              zip: '11000'
-              full: Elišky Krásnohorské 11/4, 11000 Praha
-          legalForm:
-            type: juridical
-        flags:
-          isActive: true
-      - data:
           uuid: 580a7925-2c40-43a7-a9a2-a5ab0ea397f2
           country: CZ
           name: AMADET facility s.r.o.
@@ -228,6 +177,57 @@ value:
               city: Praha
               zip: '14200'
               full: Durychova 101/66, 14200 Praha
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 66bb2337-1a0c-46b7-8923-cf21b73850e1
+          country: CZ
+          name: HBS CROLE s.r.o.
+          registrationNumber: '04997891'
+          taxNumber: null
+          vatNumber: CZ04997891
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Hlavní město Praha
+              district: území Hlavního města Prahy
+              ids:
+                internal: 5cfda44d-273b-4068-b600-c0454dce8f37
+                external: '21692882'
+              street: Elišky Krásnohorské
+              number:
+                type: č.p.
+                part1: '11'
+                part1Number: '11'
+                part1Letter: null
+                part2: '4'
+                part2Number: '4'
+                part2Letter: null
+                full: 11/4
+              streetWithNumber: Elišky Krásnohorské 11/4
+              city: Praha 1
+              zip: '11000'
+              full: Elišky Krásnohorské 11/4, 11000 Praha 1
+          addressOfficial:
+            data:
+              country: CZ
+              street: Elišky Krásnohorské
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 11/4
+              streetWithNumber: Elišky Krásnohorské 11/4
+              city: Praha
+              zip: '11000'
+              full: Elišky Krásnohorské 11/4, 11000 Praha
           legalForm:
             type: juridical
         flags:

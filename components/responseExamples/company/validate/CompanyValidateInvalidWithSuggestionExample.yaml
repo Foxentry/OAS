@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/validate
-    code: 0985f5a8-8a52-4c42-bce0-83f3bd56d803
+    code: f0bbc621-cd57-4f6e-884b-5a7671a9b135
     query:
       registrationNumber: '0499747'
       country: CZ
@@ -13,7 +13,6 @@ value:
         - PL
       dataScope: basic
       includeTerminatedSubjects: false
-      filterMode: limit
       resultsLimit: 10
       countryFormat: alpha2
       cityFormat: basic

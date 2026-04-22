@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/search
-    code: b02e956c-6a38-4c44-a0d2-d1beb4a81760
+    code: bdbbcf17-0bb3-4c81-bf66-ed4a34cf449f
     query:
       type: taxNumber
       value: '2120884'
@@ -36,29 +36,7 @@ value:
           taxNumber: '2120884315'
           vatNumber: SK2120884315
           vatNumberSpecial: null
-          address:
-            data:
-              country: SK
-              state: null
-              region: Trnavský
-              district: Hlohovec
-              ids:
-                internal: ae6a2bd8-9154-4d5f-8c70-0fcd33eb321e
-                external: null
-              street: R.Dilonga
-              number:
-                type: null
-                part1: '129'
-                part1Number: '129'
-                part1Letter: null
-                part2: 6B
-                part2Number: '6'
-                part2Letter: B
-                full: 129/6B
-              streetWithNumber: R.Dilonga 129/6B
-              city: Hlohovec
-              zip: '92001'
-              full: R.Dilonga 129/6B, 92001 Hlohovec
+          address: null
           addressOfficial:
             data:
               country: SK
@@ -116,29 +94,7 @@ value:
           taxNumber: '2120884029'
           vatNumber: null
           vatNumberSpecial: null
-          address:
-            data:
-              country: SK
-              state: null
-              region: Trenčiansky
-              district: Prievidza
-              ids:
-                internal: 5f0456d4-02eb-4658-ab72-75a8854384ad
-                external: null
-              street: Duklianska ulica
-              number:
-                type: null
-                part1: '54'
-                part1Number: '54'
-                part1Letter: null
-                part2: 7A
-                part2Number: '7'
-                part2Letter: A
-                full: 54/7A
-              streetWithNumber: Duklianska ulica 54/7A
-              city: Prievidza
-              zip: '97101'
-              full: Duklianska ulica 54/7A, 97101 Prievidza
+          address: null
           addressOfficial:
             data:
               country: SK
@@ -196,29 +152,7 @@ value:
           taxNumber: '2120884183'
           vatNumber: SK2120884183
           vatNumberSpecial: null
-          address:
-            data:
-              country: SK
-              state: null
-              region: Nitriansky
-              district: Šaľa
-              ids:
-                internal: b1af2a3c-4ab4-42bd-89ab-0af72bde3ae8
-                external: null
-              street: Hájske
-              number:
-                type: null
-                part1: '95'
-                part1Number: '95'
-                part1Letter: null
-                part2: null
-                part2Number: null
-                part2Letter: null
-                full: '95'
-              streetWithNumber: Hájske 95
-              city: Hájske
-              zip: '95133'
-              full: Hájske 95, 95133 Hájske
+          address: null
           addressOfficial:
             data:
               country: SK
@@ -240,65 +174,14 @@ value:
         flags:
           isActive: true
       - data:
-          uuid: 417a5b27-7dd2-4934-babf-4c57824cfe3a
-          country: SK
-          name: KASTEX TECHNIKA s. r. o., v likvidácii
-          registrationNumber: '52083764'
-          taxNumber: '2120884799'
-          vatNumber: SK2120884799
-          vatNumberSpecial: null
-          address: null
-          addressOfficial:
-            data:
-              country: SK
-              street: Strojnícka
-              number:
-                part1: null
-                part1Number: null
-                part1Letter: null
-                part2: null
-                part2Number: null
-                part2Letter: null
-                full: '5'
-              streetWithNumber: Strojnícka 5
-              city: Prešov
-              zip: '08006'
-              full: Strojnícka 5, 08006 Prešov
-          legalForm:
-            type: juridical
-        flags:
-          isActive: true
-      - data:
           uuid: 451e40b7-6d07-43f0-87f2-d9b4ea9bd139
           country: SK
           name: KG bet, s. r. o.
           registrationNumber: '52078892'
           taxNumber: '2120884084'
-          vatNumber: SK2120884084
+          vatNumber: null
           vatNumberSpecial: null
-          address:
-            data:
-              country: SK
-              state: null
-              region: Banskobystrický
-              district: Banská Bystrica
-              ids:
-                internal: 94fc7801-c47c-4bf6-ad72-7c95f6c2c7d2
-                external: null
-              street: 29.augusta
-              number:
-                type: null
-                part1: '1524'
-                part1Number: '1524'
-                part1Letter: null
-                part2: '24'
-                part2Number: '24'
-                part2Letter: null
-                full: 1524/24
-              streetWithNumber: 29.augusta 1524/24
-              city: Banská Bystrica
-              zip: '97401'
-              full: 29.augusta 1524/24, 97401 Banská Bystrica
+          address: null
           addressOfficial:
             data:
               country: SK
@@ -327,29 +210,7 @@ value:
           taxNumber: '2120884546'
           vatNumber: SK2120884546
           vatNumberSpecial: null
-          address:
-            data:
-              country: SK
-              state: null
-              region: Prešovský
-              district: Humenné
-              ids:
-                internal: 80514d05-f3c7-4e9b-87d6-c8e439656aad
-                external: null
-              street: Osloboditeľov
-              number:
-                type: null
-                part1: '1631'
-                part1Number: '1631'
-                part1Letter: null
-                part2: '114'
-                part2Number: '114'
-                part2Letter: null
-                full: 1631/114
-              streetWithNumber: Osloboditeľov 1631/114
-              city: Humenné
-              zip: '06601'
-              full: Osloboditeľov 1631/114, 06601 Humenné
+          address: null
           addressOfficial:
             data:
               country: SK
@@ -366,6 +227,35 @@ value:
               city: Humenné
               zip: '06601'
               full: Osloboditeľov 1631/114, 06601 Humenné
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
+          uuid: 4f985edc-47da-49da-b41d-f14f4f89cf34
+          country: SK
+          name: BISTRANS s.r.o.
+          registrationNumber: '52029956'
+          taxNumber: '2120884865'
+          vatNumber: SK2120884865
+          vatNumberSpecial: null
+          address: null
+          addressOfficial:
+            data:
+              country: SK
+              street: Lichardova
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 152/21
+              streetWithNumber: Lichardova 152/21
+              city: Košice-Juh
+              zip: '04001'
+              full: Lichardova 152/21, 04001 Košice-Juh
           legalForm:
             type: juridical
         flags:
@@ -378,29 +268,7 @@ value:
           taxNumber: '2120884161'
           vatNumber: SK2120884161
           vatNumberSpecial: null
-          address:
-            data:
-              country: SK
-              state: null
-              region: Žilinský
-              district: Liptovský Mikuláš
-              ids:
-                internal: 3a8b143b-a3e7-4d26-af80-e55a0701a7bf
-                external: null
-              street: Ľubeľa
-              number:
-                type: null
-                part1: '419'
-                part1Number: '419'
-                part1Letter: null
-                part2: null
-                part2Number: null
-                part2Letter: null
-                full: '419'
-              streetWithNumber: Ľubeľa 419
-              city: Ľubeľa
-              zip: '03214'
-              full: Ľubeľa 419, 03214 Ľubeľa
+          address: null
           addressOfficial:
             data:
               country: SK
@@ -422,40 +290,18 @@ value:
         flags:
           isActive: true
       - data:
-          uuid: 2bf750fd-a350-4a01-822d-2d7b52f014c4
+          uuid: 05e5128d-4399-4afd-aa24-8e1ba8fa2731
           country: SK
-          name: MANGALIKA, s.r.o.
-          registrationNumber: '52073181'
-          taxNumber: '2120884667'
+          name: MEDICARE CENTRUM s.r.o.
+          registrationNumber: '52078639'
+          taxNumber: '2120884942'
           vatNumber: null
           vatNumberSpecial: null
-          address:
-            data:
-              country: SK
-              state: null
-              region: Trnavský
-              district: Piešťany
-              ids:
-                internal: 57aa3355-42b6-46af-b60c-6eaf85cf4d21
-                external: null
-              street: Vážska
-              number:
-                type: null
-                part1: '3568'
-                part1Number: '3568'
-                part1Letter: null
-                part2: '37'
-                part2Number: '37'
-                part2Letter: null
-                full: 3568/37
-              streetWithNumber: Vážska 3568/37
-              city: Piešťany
-              zip: '92101'
-              full: Vážska 3568/37, 92101 Piešťany
+          address: null
           addressOfficial:
             data:
               country: SK
-              street: Vážska
+              street: Strečnianska
               number:
                 part1: null
                 part1Number: null
@@ -463,11 +309,11 @@ value:
                 part2: null
                 part2Number: null
                 part2Letter: null
-                full: 3568/37
-              streetWithNumber: Vážska 3568/37
-              city: Piešťany
-              zip: '92101'
-              full: Vážska 3568/37, 92101 Piešťany
+                full: '13'
+              streetWithNumber: Strečnianska 13
+              city: Bratislava-Petržalka
+              zip: '85105'
+              full: Strečnianska 13, 85105 Bratislava-Petržalka
           legalForm:
             type: juridical
         flags:

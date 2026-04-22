@@ -44,6 +44,13 @@ properties:
           <b>Extended validation</b>.
         default: true
         example: true
+      acceptPhishingDomains:
+        type: boolean
+        description: >-
+          If true, the e-mails from domains used for phishing will be marked as valid. Works only in
+          <b>Extended validation</b>.
+        default: true
+        example: true
       correctionMode:
         description: >-
           This option determines how automatic corrections are handled. You can choose between

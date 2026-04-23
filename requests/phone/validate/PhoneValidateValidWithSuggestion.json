@@ -1,11 +1,11 @@
 {
   "request": {
     "query": {
-      "numberWithPrefix": "+48728984101"
+      "numberFull": "+48728984101"
     },
     "options": {
       "validationType": "basic",
-      "formatNumber": false
+      "numberFormat": "e164"
     }
   }
 }

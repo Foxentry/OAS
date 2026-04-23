@@ -2,13 +2,14 @@ value:
   status: 200
   request:
     endpoint: email/validate
-    code: 435d917f-8237-4d98-ba11-2f061b8dcc0c
+    code: 70591652-210c-49af-88ea-aaae5a9ad5db
     query:
       email: info@gmail.com
     options:
       validationType: extended
       acceptDisposableEmails: true
       acceptFreemails: false
+      acceptPhishingDomains: true
       correctionMode: full
   response:
     result:
@@ -22,6 +23,7 @@ value:
         isCatchAllServer: false
         isDisposableEmailAddress: false
         isFreemail: true
+        isPhishingDomain: false
       errors:
         - group: VALUE
           type: NOT_ALLOWED

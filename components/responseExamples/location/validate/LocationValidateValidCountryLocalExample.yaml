@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/validate
-    code: 659880a4-9fc3-4140-9554-9300e6e0c28a
+    code: 387e224f-6589-4b6b-a775-b1713d8a90a4
     query:
       streetWithNumber: Thámova 137/16
       city: Praha 8
@@ -14,7 +14,6 @@ value:
         - SK
         - PL
       dataScope: basic
-      filterMode: limit
       resultsLimit: 10
       cityFormat: basic
       countryFormat: local

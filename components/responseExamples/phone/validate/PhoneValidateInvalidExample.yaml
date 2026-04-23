@@ -2,15 +2,14 @@ value:
   status: 200
   request:
     endpoint: phone/validate
-    code: 586a5358-9df2-4784-9330-2e788145ff8d
+    code: 096375c2-fdbe-4500-84db-ddb492c98e84
     query:
-      numberWithPrefix: '+42060712345'
+      numberFull: '+42060712345'
     options:
       validationType: basic
       allowedPrefixes: []
       preferredPrefixes: []
-      defaultPrefix: null
-      formatNumber: false
+      numberFormat: e164
       correctionMode: full
   response:
     result:
@@ -18,24 +17,24 @@ value:
       proposal: invalid
       data:
         country:
-          code: CZ
-          prefix: '+420'
+          code: null
+          prefix: null
         prefix: null
         number: null
-        numberWithPrefix: '+42060712345'
+        numberFull: '+42060712345'
         carrier: {}
         format:
+          raw: null
           national: null
-          nationalFormatted: null
-          international: null
-          internationalFormatted: null
+          e164: null
+          e123: null
       errors:
         - group: VALUE
           type: INVALID
           subtype: null
           severity: critical
           relatedTo:
-            - numberWithPrefix
+            - numberFull
           description: Value is not valid.
     resultCorrected: null
     suggestions: []

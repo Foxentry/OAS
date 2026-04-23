@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: name/validate
-    code: 5d4161bb-b896-4d78-b42c-3d15adf8ce04
+    code: b644895c-4563-4262-8c4a-3734e6310d02
     query:
       name: Pavel
     options:
@@ -12,16 +12,20 @@ value:
       dataScope: basic
       acceptDegrees: false
       acceptContext: false
-      smartMode: true
-      validationDepth: strict
+      dataLanguage: cs
+      correctionMode: full
   response:
     result:
       isValid: true
       proposal: valid
+      dataTypes:
+        valid:
+          - name
+        invalid: []
       data:
         name: Pavel
-        surname: null
-        nameSurname: null
+        surname: ''
+        nameSurname: Pavel
         context: []
         degreesBefore: []
         degreesAfter: []

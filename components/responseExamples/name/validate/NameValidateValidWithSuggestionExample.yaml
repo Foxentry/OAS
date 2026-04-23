@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: name/validate
-    code: 9827fbf0-3ab2-48ad-84e2-244fe8678a8b
+    code: 6f11ee18-9b8c-4a2b-ac7d-2d4b5883bae4
     query:
       name: Pawel
     options:
@@ -12,16 +12,20 @@ value:
       dataScope: basic
       acceptDegrees: false
       acceptContext: false
-      smartMode: true
-      validationDepth: strict
+      dataLanguage: cs
+      correctionMode: full
   response:
     result:
       isValid: true
       proposal: validWithSuggestion
+      dataTypes:
+        valid:
+          - name
+        invalid: []
       data:
         name: Pawel
-        surname: null
-        nameSurname: null
+        surname: ''
+        nameSurname: Pawel
         context: []
         degreesBefore: []
         degreesAfter: []
@@ -29,10 +33,14 @@ value:
     resultCorrected: null
     suggestions:
       - isValid: true
+        dataTypes:
+          valid:
+            - name
+          invalid: []
         data:
           name: Pavel
           surname: null
-          nameSurname: null
+          nameSurname: Pavel
           context: []
           degreesBefore: []
           degreesAfter: []
@@ -40,7 +48,7 @@ value:
         fixes:
           - group: VALUE
             type: CHANGED
-            subtype: TYPO
+            subtype: null
             data:
               typeFrom: name
               type: name

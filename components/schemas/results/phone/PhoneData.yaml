@@ -4,13 +4,17 @@ properties:
     type: object
     properties:
       code:
-        type: string
+        type:
+          - string
+          - "null"
         description: >-
           Country code in format [ISO-3166-1
           alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
         example: CZ
       prefix:
-        type: string
+        type:
+          - string
+          - "null"
         description: Country phone prefix.
         example: '+420'
   prefix:
@@ -25,7 +29,7 @@ properties:
       - "null"
     description: Validated phone number.
     example: '775111222'
-  numberWithPrefix:
+  numberFull:
     type:
       - string
       - "null"
@@ -56,25 +60,25 @@ properties:
     type: object
     description: Standardized international and local format.
     properties:
-      national:
+      raw:
         type:
           - string
           - "null"
         description: National phone number format.
         example: '775111222'
-      nationalFormatted:
+      national:
         type:
           - string
           - "null"
         description: Formated national phone number.
         example: '775 111 222'
-      international:
+      e164:
         type:
           - string
           - "null"
         description: International phone number format.
         example: '+420775111222'
-      internationalFormatted:
+      e123:
         type:
           - string
           - "null"
@@ -83,6 +87,6 @@ properties:
 required:
   - country
   - number
-  - numberWithPrefix
+  - numberFull
   - carrier
   - format

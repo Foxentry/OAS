@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/validate
-    code: 5d9e8338-170a-4802-9e05-e5c362c3023f
+    code: 4c7693c8-1ff7-48bc-a339-99758f95f3c5
     query:
       streetWithNumber: Thámova 137
       city: Praha
@@ -13,7 +13,6 @@ value:
         - SK
         - PL
       dataScope: basic
-      filterMode: limit
       resultsLimit: 10
       cityFormat: basic
       countryFormat: alpha2

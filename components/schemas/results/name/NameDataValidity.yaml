@@ -8,10 +8,47 @@ properties:
       / <b>False</b> = invalid response. Can be also <b>null</b>, which
       indicates a non-specific error.
     example: true
+  proposal:
+    enum:
+      - valid
+      - validWithSuggestion
+      - invalid
+      - invalidWithCorrection
+      - invalidWithPartialCorrection
+      - invalidWithSuggestion
+      - invalidWithCorrectionWithSuggestion
+    description: >-
+      Proposed solution by Foxentry how you should process the response in your
+      form or application.
+    example: validWithSuggestion
+  dataTypes:
+    description: >-
+      List of data types that were evaluated as valid and invalid. Provides
+      information about which query fields were deemed valid and invalid.
+    type: object
+    properties:
+      valid:
+        type: array
+        items:
+          enum:
+            - name
+            - surname
+            - nameSurname
+            - context
+            - degreesBefore
+            - degreesAfter
+      invalid:
+        type: array
+        items:
+          enum:
+            - name
+            - surname
+            - nameSurname
+            - context
+            - degreesBefore
+            - degreesAfter
   data:
     $ref: ./NameData.yaml
-  details:
-    $ref: ./NameDetails.yaml
   errors:
     description: >-
       List of errors related to the query. Provides information about which

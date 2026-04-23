@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: location/validate
-    code: fec3be40-bdc0-4de0-8ee6-a403c48197e3
+    code: 6c31c353-56aa-4f7e-b097-8a9368febe18
     query:
       streetWithNumber: Thámova 123456789
       city: Parharlin
@@ -13,7 +13,6 @@ value:
         - SK
         - PL
       dataScope: basic
-      filterMode: limit
       resultsLimit: 10
       cityFormat: basic
       countryFormat: alpha2

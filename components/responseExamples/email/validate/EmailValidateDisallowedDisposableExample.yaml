@@ -2,13 +2,14 @@ value:
   status: 200
   request:
     endpoint: email/validate
-    code: 5d3894c6-96c3-4c5c-8420-f0d5af3f8b47
+    code: 62a7c777-1f84-4959-8c1e-2b70105b4837
     query:
       email: rasini3451@naymedia.com
     options:
       validationType: extended
       acceptDisposableEmails: false
       acceptFreemails: true
+      acceptPhishingDomains: true
       correctionMode: full
   response:
     result:
@@ -22,6 +23,7 @@ value:
         isCatchAllServer: false
         isDisposableEmailAddress: true
         isFreemail: false
+        isPhishingDomain: false
       errors:
         - group: VALUE
           type: NOT_ALLOWED

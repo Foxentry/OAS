@@ -16,14 +16,13 @@ content:
         value:
           request:
             query:
-              numberWithPrefix: '+420775111222'
+              numberFull: '+420775111222'
             options:
               validationType: extended
               allowedPrefixes:
                 - '+420'
                 - '+421'
-              defaultPrefix: '+420'
-              formatNumber: false
+              numberFormat: 'e164'
             client:
               country: CZ
               location:

@@ -62,16 +62,6 @@ properties:
         example:
           - '+420'
           - '+421'
-      defaultPrefix:
-        type:
-          - string
-          - "null"
-        description: >-
-          Deprecated - use preferredPrefixes instead. Default international
-          prefix if not part of the query. This is used for the validator to
-          make more accurate results.
-        example: '+420'
-        deprecated: true
       numberFormat:
         type: string
         description: >-

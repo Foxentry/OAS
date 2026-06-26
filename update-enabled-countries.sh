@@ -33,8 +33,8 @@ fetch_countries() {
     exit 1
   }
 
-  # Extract country codes from the JSON array (no jq dependency needed here)
-  echo "$response" | grep -oP '"countries":\[.*?\]' | grep -oP '"[A-Z]{2}"' | tr -d '"' | sort
+  # Extract country codes from the JSON array
+  echo "$response" | jq -r '.data.countries[]' | sort
 }
 
 update_datasource() {

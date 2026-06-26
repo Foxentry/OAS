@@ -13,25 +13,28 @@ properties:
   dataSource:
     description: >-
       Array of allowed data sources, which restricts countries the module searches.
-      Although we use the `request.client` object to provide most relevant results, it is generally recommended to
-      to limit this option to only the necessary sources - especially if you don't utilize the `request.client` object.
+      Although we use the `request.client` object to provide most relevant results,
+      it is generally recommended to to limit this option to only the necessary sources
+      - especially if you don't utilize the `request.client` object.
     type: array
     items:
       type: string
       example: CZ
     default:
       - CZ
-      - SK
+      - HU
       - PL
+      - SK
     example:
       - CZ
       - SK
       - PL
+      - HU
   includeTerminatedSubjects:
     type: boolean
     description: >-
-      Whether or not to include entities that have already ended their existence
-      in the output.
+      Whether or not to include entities that have already ended their existence in
+      the output.
     default: false
     example: false
   zipFormat:
@@ -41,9 +44,8 @@ properties:
     example: false
   cityFormat:
     description: >-
-      This option determines the format in which the city is returned.
-      <b>Minimal</b> = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8
-      - Karlín.
+      This option determines the format in which the city is returned. <b>Minimal</b>
+      = Praha, <b>basic</b> = Praha 8, <b>extended</b> = Praha 8 - Karlín.
     type: string
     enum:
       - minimal
@@ -53,9 +55,10 @@ properties:
     example: basic
   countryFormat:
     description: >-
-      This option determines the format in which the country is returned.
-      Supported formats: <b>alpha2</b> = CZ, <b>alpha3</b> = CZE, <b>local</b> = Česká republika, 
-      <b>international</b> = Czech republic, <b>localShortened</b> = Česko, <b>internationalShortened</b> = Czechia.
+      This option determines the format in which the country is returned. Supported
+      formats: <b>alpha2</b> = CZ, <b>alpha3</b> = CZE, <b>local</b> = Česká republika,  <b>international</b>
+      = Czech republic, <b>localShortened</b> = Česko, <b>internationalShortened</b>
+      = Czechia.
     type: string
     enum:
       - alpha2

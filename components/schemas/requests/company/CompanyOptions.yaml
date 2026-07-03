@@ -57,7 +57,7 @@ properties:
     description: >-
       This option determines the format in which the country is returned. Supported
       formats: <b>alpha2</b> = CZ, <b>alpha3</b> = CZE, <b>local</b> = Česká republika,  <b>international</b>
-      = Czech republic, <b>localShortened</b> = Česko, <b>internationalShortened</b>
+      = Czech Republic, <b>localShortened</b> = Česko, <b>internationalShortened</b>
       = Czechia.
     type: string
     enum:

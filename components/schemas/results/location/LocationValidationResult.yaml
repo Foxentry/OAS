@@ -12,7 +12,8 @@ properties:
           which indicates a non-specific error.
         example: false
       proposal:
-        enum:
+        type: string
+        examples:
           - valid
           - validWithSuggestion
           - invalid
@@ -21,7 +22,6 @@ properties:
           - invalidWithSuggestion
           - invalidWithCorrectionWithSuggestion
           - invalidWithPartialCorrectionWithSuggestion
-          - null
         description: >-
           Proposed solution by Foxentry how you should process the response in
           your form or application.

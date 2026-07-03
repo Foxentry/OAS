@@ -27,7 +27,7 @@ properties:
         description: >-
           Additional filter in order to specify the search results. You can for
           example set as a filter country CZ, so the the search engine would
-          look for the companies only in the Czech republic. Pay attention to
+          look for the companies only in the Czech Republic. Pay attention to
           the options, which determines how the filter should behave.
         properties:
           name:

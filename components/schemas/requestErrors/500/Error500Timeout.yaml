@@ -31,7 +31,8 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - API timeout in effect. Your request took too much time to process.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: API timeout in effect. Your request took too much time to process.

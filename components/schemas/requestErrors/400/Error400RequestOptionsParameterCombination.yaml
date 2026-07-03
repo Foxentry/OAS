@@ -31,7 +31,8 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - Combination of options or their values is not valid.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Combination of options or their values is not valid.

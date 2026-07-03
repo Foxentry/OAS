@@ -42,12 +42,8 @@ properties:
       description: Error related to.
       example: email
   description:
-    enum:
-      - The domain contains invalid syntax.
-      - Value contains duplicated '@' sign.
-      - Value does not contain '@' sign.
-      - Value is missing the top level domain.
-      - The TLD part of the value is placed in the wrong position.
-      - Value has invalid syntax.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: The domain contains invalid syntax.

@@ -8,7 +8,7 @@ post:
     based on the <b>validationType</b> option.<br><br>Please pay attention to
     the <b>formatNumber</b> option. This option defines the format of number
     that should be considered as valid. <br><br>Foxentry validator is able not
-    only to evaluate the validity of the inputed information but it also can fix
+    only to evaluate the validity of the entered information but it also can fix
     various typos, errors and missing data. Foxentry can also suggest more
     suitable alternatives to the data sent in query. Please pay attention to the
     <b>result</b>, <b>resultCorrected</b> and <b>suggestions</b> in the
@@ -44,6 +44,3 @@ post:
       $ref: ./../../components/responses/error/Error503Response.yaml
   security:
     - BearerAuth: []
-  servers:
-    - url: https://api.foxentry.com
-    - url: https://api.foxentry.com/v2.1

@@ -39,11 +39,8 @@ properties:
       description: Error related to.
       example: name
   description:
-    enum:
-      - Degree value is invalid.
-      - Name has not been found in our database.
-      - NameSurname has not been found in our database.
-      - Surname has not been found in our database.
-      - Degrees are not allowed.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Degree value is invalid.

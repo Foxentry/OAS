@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Requested API version is not available. Please check Foxentry.dev for
-        the supported versions.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Requested API version is not available. Please check Foxentry.dev for the

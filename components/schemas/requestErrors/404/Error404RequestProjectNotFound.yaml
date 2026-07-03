@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        The project does not exist. Please check the available projects at
-        app.foxentry.com or contact the support.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       The project does not exist. Please check the available projects at

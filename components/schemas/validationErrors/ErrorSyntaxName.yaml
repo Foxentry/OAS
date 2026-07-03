@@ -37,9 +37,8 @@ properties:
       description: Error related to.
       example: name
   description:
-    enum:
-      - Value is missing the name part.
-      - Value is missing the surname part.
-      - The DEGREE part of the value is placed in the wrong position.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Value is missing the name part.

@@ -6,7 +6,7 @@ post:
     This endpoint requires at least 1 query parameter and will check if the
     parameters and their combinations are valid. Returns information about the
     company based on the datascope set in the options.<br><br> Foxentry
-    validator is able not only to evaluate the validity of the inputed
+    validator is able not only to evaluate the validity of the entered
     information but it also can fix various typos, errors and missing data.
     Foxentry can also suggest more suitable alternatives to the data sent in
     query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and
@@ -42,6 +42,3 @@ post:
       $ref: ./../../components/responses/error/Error503Response.yaml
   security:
     - BearerAuth: []
-  servers:
-    - url: https://api.foxentry.com
-    - url: https://api.foxentry.com/v2.1

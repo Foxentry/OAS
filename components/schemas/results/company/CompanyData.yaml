@@ -450,7 +450,7 @@ properties:
                       zvláštní práva a povinnosti
           stocks:
             type: array
-            description: Textual description of the stock ammount and value.
+            description: Textual description of the stock amount and value.
             items:
               type: string
               description: List of stocks.

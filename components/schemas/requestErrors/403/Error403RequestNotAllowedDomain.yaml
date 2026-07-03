@@ -31,7 +31,8 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - Website domain is not allowed in the project settings.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Website domain is not allowed in the project settings.

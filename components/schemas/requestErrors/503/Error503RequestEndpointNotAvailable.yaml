@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        API endpoint is temporary unavailable. Please contact us at
-        info@foxentry.com if the error persists.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       API endpoint is temporary unavailable. Please contact us at

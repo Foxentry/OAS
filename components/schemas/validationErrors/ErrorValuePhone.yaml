@@ -35,10 +35,8 @@ properties:
       description: Error related to.
       example: numberWithPrefix
   description:
-    enum:
-      - Prefix is invalid.
-      - >-
-        This prefix is not allowed. Check the 'allowedPrefixes' option in the
-        request.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Prefix is invalid.

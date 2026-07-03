@@ -66,7 +66,7 @@ properties:
   countryFormat:
     description: >-
       This option determines the format in which the country is returned. Choices
-      include local (<b>Česká republika</b>) and international (<b>Czech republic</b>)
+      include local (<b>Česká republika</b>) and international (<b>Czech Republic</b>)
       variants with their  shortened counterparts (<b>Česko, Czechia</b>). You can
       use ISO 3166 alpha codes (<b>CZ, CZE</b>) as well.
     type: string

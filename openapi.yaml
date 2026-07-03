@@ -64,48 +64,48 @@ info:
       </tr>
       <tr>
         <td>company/validate</td>
-        <td>Czech Republic, Slovakia, and Poland</td>
+        <td>Czech Republic, Hungary, Poland, and Slovakia</td>
       </tr>
       <tr>
         <td>company/search</td>
-        <td>Czech Republic, Slovakia, and Poland</td>
+        <td>Czech Republic, Hungary, Poland, and Slovakia</td>
       </tr>
       <tr>
         <td>company/get</td>
-        <td>Czech Republic, Slovakia, and Poland</td>
-      </tr> 
+        <td>Czech Republic, Hungary, Poland, and Slovakia</td>
+      </tr>
       <tr>
         <td>email/validate</td>
         <td>Worldwide</td>
-      </tr> 
+      </tr>
       <tr>
         <td>email/search</td>
         <td>Worldwide</td>
-      </tr> 
+      </tr>
       <tr>
         <td>location/validate</td>
-        <td>Czech Republic, Slovakia, and Poland</td>
-      </tr> 
+        <td>Albania, Andorra, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, France, Germany, Greece, Hungary, Iceland, Italy, Kosovo, Liechtenstein, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Poland, Romania, San Marino, Serbia, Slovakia, Slovenia, Spain, Switzerland, United Kingdom, and Vatican City</td>
+      </tr>
       <tr>
         <td>location/search</td>
-        <td>Czech Republic, Slovakia, and Poland</td>
-      </tr> 
+        <td>Albania, Andorra, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, France, Germany, Greece, Hungary, Iceland, Italy, Kosovo, Liechtenstein, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Poland, Romania, San Marino, Serbia, Slovakia, Slovenia, Spain, Switzerland, United Kingdom, and Vatican City</td>
+      </tr>
       <tr>
         <td>location/get</td>
-        <td>Czech Republic, Slovakia, and Poland</td>
-      </tr> 
+        <td>Albania, Andorra, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, France, Germany, Greece, Hungary, Iceland, Italy, Kosovo, Liechtenstein, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Poland, Romania, San Marino, Serbia, Slovakia, Slovenia, Spain, Switzerland, United Kingdom, and Vatican City</td>
+      </tr>
       <tr>
         <td>location/localize</td>
-        <td>Czech Republic, Slovakia, and Poland</td>
-      </tr> 
+        <td>Albania, Andorra, Austria, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, France, Germany, Greece, Hungary, Iceland, Italy, Kosovo, Liechtenstein, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Poland, Romania, San Marino, Serbia, Slovakia, Slovenia, Spain, Switzerland, United Kingdom, and Vatican City</td>
+      </tr>
       <tr>
         <td>name/validate</td>
-        <td>Czech Republic, Slovakia</td>
-      </tr> 
+        <td>Czech Republic and Slovakia</td>
+      </tr>
       <tr>
         <td>phone/validate</td>
         <td>Worldwide</td>
-      </tr>                                                                
+      </tr>
     </table>
 
 
@@ -114,7 +114,7 @@ info:
     As part of our commitment to data security, you are required to obtain a
     <b>Bearer token</b> from Foxentry. If you are a new user and do not have an
     API key, please fill out our registration form at
-    https://foxentry.com/help-center/rest-api. 
+    https://app.foxentry.com/registration. 
 
 
     ## Need help? 
@@ -129,7 +129,6 @@ info:
     url: https://www.foxentry.com
 servers:
   - url: https://api.foxentry.com
-  - url: https://api.foxentry.com/v2.1
 paths:
   /company/validate:
     $ref: paths/company/CompanyValidate.yaml

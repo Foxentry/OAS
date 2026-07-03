@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Value in paramater is not valid. Please check Foxentry.dev for more
-        information.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Value in paramater is not valid. Please check Foxentry.dev for more

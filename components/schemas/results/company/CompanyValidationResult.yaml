@@ -12,7 +12,8 @@ properties:
           which indicates a non-specific error.
         example: false
       proposal:
-        enum:
+        type: string
+        examples:
           - valid
           - validWithSuggestion
           - invalid

@@ -33,7 +33,8 @@ properties:
     example:
       - unsupportedParameter
   description:
-    enum:
-      - Query parameter is not supported for this endpoint.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Query parameter is not supported for this endpoint.

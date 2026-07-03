@@ -9,7 +9,7 @@ post:
     (default) is the more advanced type that checks the real existence of the
     e-mail address and its deliverability. It also informs you about various
     flags such as <b>freemail and disposable mail</b> detection. <br><br>
-    Foxentry validator is able not only to evaluate the validity of the inputed
+    Foxentry validator is able not only to evaluate the validity of the entered
     information but it also can fix various typos, errors and missing data.
     Foxentry can also suggest more suitable alternatives to the data sent in
     query. Please pay attention to the <b>result</b>, <b>resultCorrected</b> and
@@ -45,6 +45,3 @@ post:
       $ref: ./../../components/responses/error/Error503Response.yaml
   security:
     - BearerAuth: []
-  servers:
-    - url: https://api.foxentry.com
-    - url: https://api.foxentry.com/v2.1

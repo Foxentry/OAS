@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        The maximum allowed request rate limit has been reached. Check
-        Foxentry.dev for more information or contact the support.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       The maximum allowed request rate limit has been reached. Check

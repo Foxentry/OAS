@@ -37,7 +37,9 @@ properties:
       description: Error related to.
       example: numberWithPrefix
   description:
-    type: string
+    type:
+      - string
+      - "null"
     enum:
       - Value is empty.
       - Value contains parts in incorrect order.

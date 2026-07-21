@@ -7,6 +7,11 @@ if [ -z "$GENERATE_EXAMPLES" ]; then
 else
   echo "Generating examples"
   (cd ./requests && ./generate-examples.sh)
+  # Fail if previous command failed
+  if [ $? -ne 0 ]; then
+    echo "Failed to generate examples"
+    exit 1
+  fi
 fi
 
 redocly bundle openapi.yaml -o openapi-bundled.yaml

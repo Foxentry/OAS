@@ -113,8 +113,8 @@ info:
 
     As part of our commitment to data security, you are required to obtain a
     <b>Bearer token</b> from Foxentry. If you are a new user and do not have an
-    API key, please fill out our registration form at
-    https://app.foxentry.com/registration. 
+    API key, create your account at https://app.foxentry.com/registration and
+    generate the key in your project settings. 
 
 
     ## Need help? 

@@ -40,11 +40,5 @@ properties:
     type:
       - string
       - "null"
-    enum:
-      - Value is empty.
-      - Value contains parts in incorrect order.
-      - Value is not valid.
-      - The Combination of values listed in relatedTo section is not valid.
-      - Context words are not allowed.
     description: Description of error.
     example: Value is empty.

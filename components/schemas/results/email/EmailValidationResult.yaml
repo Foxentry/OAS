@@ -17,15 +17,45 @@ properties:
           - valid
           - validWithSuggestion
           - invalid
-          - invalidWithCorrection
-          - invalidWithPartialCorrection
           - invalidWithSuggestion
+          - invalidWithCorrection
           - invalidWithCorrectionWithSuggestion
+          - invalidWithPartialCorrection
+          - invalidWithPartialCorrectionWithSuggestion
+          - unknown
+          - unknownWithSuggestion
           - unknownWithCorrection
+          - unknownWithCorrectionWithSuggestion
           - unknownWithPartialCorrection
-        description: >-
+          - unknownWithPartialCorrectionWithSuggestion
+        description: |-
           Proposed solution by Foxentry how you should process the response in
           your form or application.
+
+          The value is composed of three parts: the validity of `result`, the
+          validity of `resultCorrected` (appending `WithCorrection` or
+          `WithPartialCorrection`), and the presence of `suggestions`
+          (appending `WithSuggestion`). It is always a string and is never null.
+
+          Complete list of possible values:
+
+          - `valid`
+          - `validWithSuggestion`
+          - `invalid`
+          - `invalidWithSuggestion`
+          - `invalidWithCorrection`
+          - `invalidWithCorrectionWithSuggestion`
+          - `invalidWithPartialCorrection`
+          - `invalidWithPartialCorrectionWithSuggestion`
+          - `unknown`
+          - `unknownWithSuggestion`
+          - `unknownWithCorrection`
+          - `unknownWithCorrectionWithSuggestion`
+          - `unknownWithPartialCorrection`
+          - `unknownWithPartialCorrectionWithSuggestion`
+
+          In practice the `unknown*` variants occur mainly as `unknown`,
+          `unknownWithCorrection` and `unknownWithSuggestion`.
     allOf:
       - $ref: ./EmailDataValidity.yaml
   resultCorrected:

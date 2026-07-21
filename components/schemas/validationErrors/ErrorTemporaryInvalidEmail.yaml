@@ -35,7 +35,8 @@ properties:
       description: Error related to.
       example: email
   description:
-    enum:
-      - Mailbox is full and cannot receive any e-mails at the moment.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Mailbox is full and cannot receive any e-mails at the moment.

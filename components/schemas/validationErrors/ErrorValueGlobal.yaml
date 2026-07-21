@@ -37,12 +37,8 @@ properties:
       description: Error related to.
       example: numberWithPrefix
   description:
-    type: string
-    enum:
-      - Value is empty.
-      - Value contains parts in incorrect order.
-      - Value is not valid.
-      - The Combination of values listed in relatedTo section is not valid.
-      - Context words are not allowed.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Value is empty.

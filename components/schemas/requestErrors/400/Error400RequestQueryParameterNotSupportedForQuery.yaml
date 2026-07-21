@@ -34,7 +34,8 @@ properties:
     example:
       - allowPartialResults
   description:
-    enum:
-      - Parameter can not be used in combination with this query parameters.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Parameter can not be used in combination with this query parameters.

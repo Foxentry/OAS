@@ -31,11 +31,10 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        No credit available. You need to purchase a sufficient ammount of
-        credits in the project administration at app.foxentry.com.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
-      No credit available. You need to purchase a sufficient ammount of credits
+      No credit available. You need to purchase a sufficient amount of credits
       in the project administration at app.foxentry.com.

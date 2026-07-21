@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        The maximum service limit has been reached. Move to the higher paying plan or allow requests 
-        over the subscription.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       The maximum service limit has been reached. Move to the higher paying plan or allow requests 

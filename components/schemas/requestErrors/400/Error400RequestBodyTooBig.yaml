@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Your request length is bigger than allowed. Please contact us if you
-        think this is a mistake.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Your request length is bigger than allowed. Please contact us if you think

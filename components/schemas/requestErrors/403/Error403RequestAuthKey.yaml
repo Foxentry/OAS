@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Provided API key is not valid. Please check the project settings at
-        app.foxentry.com.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Provided API key is not valid. Please check the project settings at

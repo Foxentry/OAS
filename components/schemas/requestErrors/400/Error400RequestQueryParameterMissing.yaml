@@ -32,10 +32,9 @@ properties:
       description: Error related to.
       example: prefix
   description:
-    enum:
-      - >-
-        Query parameter is missing. Please check Foxentry.dev for more
-        information about how to set up the query properly.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Query parameter is missing. Please check Foxentry.dev for more information

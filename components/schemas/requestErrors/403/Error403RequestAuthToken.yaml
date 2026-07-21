@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Provided access token is not valid. Please check the project settings at
-        app.foxentry.com.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Provided access token is not valid. Please check the project settings at

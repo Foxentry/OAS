@@ -6,8 +6,14 @@ description: >-
 properties:
   ip:
     type: string
-    example: 127.0.1.1
-    format: ipv4
+    description: >-
+      IP address of your end user (IPv4 or IPv6). Used for geolocation to make
+      results — for example for the search endpoints — more relevant to the
+      user's location. If you have the user's GPS coordinates, prefer sending
+      those via `location`, as an IP address may be less precise.
+    examples:
+      - 127.0.1.1
+      - 2001:db8::8a2e:370:7334
   country:
     type: string
     description: >-

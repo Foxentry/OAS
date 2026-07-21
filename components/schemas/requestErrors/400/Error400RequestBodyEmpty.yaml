@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Cannot process the request because of the empty body. Please check
-        Foxentry.dev for more information.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Cannot process the request because of the empty body. Please check

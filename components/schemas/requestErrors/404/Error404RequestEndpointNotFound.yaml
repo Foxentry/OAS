@@ -31,9 +31,8 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Endpoint not found. Please check Foxentry.dev for the supported
-        endpoints.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Endpoint not found. Please check Foxentry.dev for the supported endpoints.

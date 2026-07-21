@@ -35,10 +35,9 @@ properties:
       - streetWithNumber
       - street
   description:
-    enum:
-      - >-
-        It is not possible to use these parameters at the same time in one
-        request.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       It is not possible to use these parameters at the same time in one

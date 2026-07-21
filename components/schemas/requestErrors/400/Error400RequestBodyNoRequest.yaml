@@ -31,7 +31,8 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - Your API call body does not contain any requests.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Your API call body does not contain any requests.

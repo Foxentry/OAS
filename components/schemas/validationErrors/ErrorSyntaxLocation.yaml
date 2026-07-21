@@ -38,12 +38,8 @@ properties:
       description: Error related to.
       example: streetWithNumber
   description:
-    enum:
-      - Value is missing the city.
-      - Value is missing the number.
-      - Value is missing the number part.
-      - Value is missing the street.
-      - Value is missing the zip.
-      - Value is missing some part of the number.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Value is missing the city.

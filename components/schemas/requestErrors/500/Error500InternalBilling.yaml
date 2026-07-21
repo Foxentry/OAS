@@ -30,10 +30,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Failed to process your request due to a billing internal error. Please
-        contact us if the error persists.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Failed to process your request due to a billing internal error. Please

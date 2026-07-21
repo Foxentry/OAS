@@ -30,10 +30,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Internal datastore is not available at the moment. No operation on this
-        datastore is possible.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Internal datastore is not available at the moment. No operation on this

@@ -87,7 +87,7 @@ properties:
           - "null"
         description: >-
           Country code. Supported formats: <b>alpha2</b> = CZ, <b>alpha3</b> = CZE, <b>local</b> = Česká republika, 
-          <b>international</b> = Czech republic, <b>localShortened</b> = Česko, <b>internationalShortened</b> = Czechia.
+          <b>international</b> = Czech Republic, <b>localShortened</b> = Česko, <b>internationalShortened</b> = Czechia.
         example: CZ
   options:
     allOf:

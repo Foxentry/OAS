@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        The API key has IP limits set and your IP address is not allowed. Change
-        the project settings at app.foxentry.com.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       The API key has IP limits set and your IP address is not allowed. Change

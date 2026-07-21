@@ -39,13 +39,9 @@ properties:
       description: Error related to.
       example: numberWithPrefix
   description:
-    enum:
-      - >-
-        Invalid case sensitivity. Specific rules are applied to the use of upper
-        and lower case letters.
-      - Invalid diacritics. Specific rules are applied to the use of diacritics.
-      - Invalid use of spaces. Specific rules are applied to the use of spaces.
-      - null
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Invalid case sensitivity. Specific rules are applied to the use of upper

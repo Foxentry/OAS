@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Invalid authorization credentials sent. Check Foxentry.dev for more
-        information how to set up the AUTH properly.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Invalid authorization credentials sent. Check Foxentry.dev for more

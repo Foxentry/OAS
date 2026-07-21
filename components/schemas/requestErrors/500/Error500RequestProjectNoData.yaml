@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Failed to fetch project data needed for processing your request. Please
-        contact us if the error persists.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Failed to fetch project data needed for processing your request. Please

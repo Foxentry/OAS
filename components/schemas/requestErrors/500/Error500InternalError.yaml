@@ -31,7 +31,8 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - Failed to process your request. Please try again later or contact us.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: Failed to process your request. Please try again later or contact us.

@@ -31,10 +31,9 @@ properties:
       type: string
       description: Error related to.
   description:
-    enum:
-      - >-
-        Your request query is empty. Please check Foxentry.dev for more
-        information about how to set up the query properly.
+    type:
+      - string
+      - "null"
     description: Description of error.
     example: >-
       Your request query is empty. Please check Foxentry.dev for more

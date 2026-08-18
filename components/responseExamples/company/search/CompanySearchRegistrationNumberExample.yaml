@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/search
-    code: 19476932-322b-4070-8a4e-db40f73d8399
+    code: 569ced07-fbd5-4144-a31a-945929a84e48
     query:
       type: registrationNumber
       value: '049974'
@@ -18,6 +18,7 @@ value:
       filterAcceptFormat: true
       filterExactMatch: true
       resultsLimit: 10
+      nameFormat: normalized
       countryFormat: alpha2
       cityFormat: basic
       zipFormat: false
@@ -32,6 +33,9 @@ value:
           uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
           country: CZ
           name: AVANTRO s.r.o.
+          nameOfficial: AVANTRO s.r.o.
+          nameAlternative: null
+          nameNormalized: AVANTRO s.r.o.
           registrationNumber: '04997476'
           taxNumber: null
           vatNumber: CZ04997476
@@ -80,60 +84,12 @@ value:
         flags:
           isActive: true
       - data:
-          uuid: 75809988-2e08-4ac4-ba73-25e8528a4aab
-          country: CZ
-          name: VEMIO s.r.o.
-          registrationNumber: '04997468'
-          taxNumber: null
-          vatNumber: CZ04997468
-          vatNumberSpecial: null
-          address:
-            data:
-              country: CZ
-              state: null
-              region: Plzeňský kraj
-              district: Plzeň-město
-              ids:
-                internal: bac4bac1-8d64-4c8e-b937-fa417f7512ab
-                external: '24534161'
-              street: Plovární
-              number:
-                type: č.p.
-                part1: '478'
-                part1Number: '478'
-                part1Letter: null
-                part2: '1'
-                part2Number: '1'
-                part2Letter: null
-                full: 478/1
-              streetWithNumber: Plovární 478/1
-              city: Plzeň
-              zip: '30100'
-              full: Plovární 478/1, 30100 Plzeň
-          addressOfficial:
-            data:
-              country: CZ
-              street: Plovární
-              number:
-                part1: null
-                part1Number: null
-                part1Letter: null
-                part2: null
-                part2Number: null
-                part2Letter: null
-                full: 478/1
-              streetWithNumber: Plovární 478/1
-              city: Plzeň
-              zip: '30100'
-              full: Plovární 478/1, 30100 Plzeň
-          legalForm:
-            type: juridical
-        flags:
-          isActive: true
-      - data:
           uuid: 9542f9f1-2e1d-4c81-a87c-8762e31ff958
           country: CZ
           name: Manotick s.r.o.
+          nameOfficial: Manotick s.r.o.
+          nameAlternative: null
+          nameNormalized: Manotick s.r.o.
           registrationNumber: '04997441'
           taxNumber: null
           vatNumber: null
@@ -182,9 +138,66 @@ value:
         flags:
           isActive: true
       - data:
+          uuid: 75809988-2e08-4ac4-ba73-25e8528a4aab
+          country: CZ
+          name: VEMIO s.r.o.
+          nameOfficial: VEMIO s.r.o.
+          nameAlternative: null
+          nameNormalized: VEMIO s.r.o.
+          registrationNumber: '04997468'
+          taxNumber: null
+          vatNumber: null
+          vatNumberSpecial: null
+          address:
+            data:
+              country: CZ
+              state: null
+              region: Plzeňský kraj
+              district: Plzeň-město
+              ids:
+                internal: bac4bac1-8d64-4c8e-b937-fa417f7512ab
+                external: '24534161'
+              street: Plovární
+              number:
+                type: č.p.
+                part1: '478'
+                part1Number: '478'
+                part1Letter: null
+                part2: '1'
+                part2Number: '1'
+                part2Letter: null
+                full: 478/1
+              streetWithNumber: Plovární 478/1
+              city: Plzeň
+              zip: '30100'
+              full: Plovární 478/1, 30100 Plzeň
+          addressOfficial:
+            data:
+              country: CZ
+              street: Plovární
+              number:
+                part1: null
+                part1Number: null
+                part1Letter: null
+                part2: null
+                part2Number: null
+                part2Letter: null
+                full: 478/1
+              streetWithNumber: Plovární 478/1
+              city: Plzeň
+              zip: '30100'
+              full: Plovární 478/1, 30100 Plzeň
+          legalForm:
+            type: juridical
+        flags:
+          isActive: true
+      - data:
           uuid: bc6b7eca-6e0b-4d3c-9f57-ea34470a7f88
           country: CZ
           name: Mgr. Iva Sladkovská
+          nameOfficial: Mgr. Iva Sladkovská
+          nameAlternative: null
+          nameNormalized: Mgr. Iva Sladkovská
           registrationNumber: '04997433'
           taxNumber: null
           vatNumber: null
@@ -236,6 +249,9 @@ value:
           uuid: c02871f0-de95-45a0-9279-cd1d9399a195
           country: CZ
           name: Quang Anh Kieu
+          nameOfficial: Quang Anh Kieu
+          nameAlternative: null
+          nameNormalized: Quang Anh Kieu
           registrationNumber: '04997417'
           taxNumber: null
           vatNumber: null
@@ -287,6 +303,9 @@ value:
           uuid: 90121cd5-d0af-46b6-8060-fa8b97a115c8
           country: CZ
           name: Miloš Kulhánek
+          nameOfficial: Miloš Kulhánek
+          nameAlternative: null
+          nameNormalized: Miloš Kulhánek
           registrationNumber: '04997492'
           taxNumber: null
           vatNumber: null

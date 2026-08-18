@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/validate
-    code: 83426187-0a44-4644-a0d5-9e03d68bd156
+    code: 7fb7cd3c-d5b0-405e-ae04-3e14ecdc1904
     query:
       name: AVANTRO s.r.o.
       registrationNumber: '04997476'
@@ -15,6 +15,7 @@ value:
       dataScope: basic
       includeTerminatedSubjects: false
       resultsLimit: 10
+      nameFormat: normalized
       countryFormat: alpha2
       cityFormat: basic
       zipFormat: false
@@ -29,6 +30,9 @@ value:
         uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
         country: CZ
         name: AVANTRO s.r.o.
+        nameOfficial: AVANTRO s.r.o.
+        nameAlternative: null
+        nameNormalized: AVANTRO s.r.o.
         registrationNumber: '04997476'
         taxNumber: null
         vatNumber: CZ04997476

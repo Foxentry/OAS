@@ -42,7 +42,25 @@ properties:
         type:
           - string
           - "null"
-        description: Name of company.
+        description: Name of company (in format requested by option nameFormat)
+        example: Avantro s.r.o.
+      nameOfficial:
+        type:
+          - string
+          - "null"
+        description: Name of company (as in official register).
+        example: Avantro s.r.o.
+      nameAlternative:
+        type:
+          - string
+          - "null"
+        description: Alternative name of company.
+        example: AVANTRO s. r. o.
+      nameNormalized:
+        type:
+          - string
+          - "null"
+        description: Normalized name of company.
         example: Avantro s.r.o.
       registrationNumber:
         type:

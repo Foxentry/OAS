@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/get
-    code: 2aa14da3-6891-4630-acf5-7561f39af028
+    code: aabe7368-020d-4d39-bd73-186da0ddfcd0
     query:
       registrationNumber: '04997476'
       country: CZ
@@ -13,6 +13,7 @@ value:
         - PL
       dataScope: full
       includeTerminatedSubjects: false
+      nameFormat: normalized
       countryFormat: alpha2
       cityFormat: basic
       zipFormat: false
@@ -22,6 +23,9 @@ value:
           uuid: ca3665de-ded1-47f7-9bcd-b8c3eb8c52e1
           country: CZ
           name: AVANTRO s.r.o.
+          nameOfficial: AVANTRO s.r.o.
+          nameAlternative: null
+          nameNormalized: AVANTRO s.r.o.
           registrationNumber: '04997476'
           taxNumber: null
           vatNumber: CZ04997476
@@ -101,11 +105,11 @@ value:
               name: Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského
                 zákona
               isPrimary: null
-            - code: '6820'
-              name: Pronájem a správa vlastních nebo pronajatých nemovitostí
-              isPrimary: null
             - code: '74'
-              name: Ostatní profesní, vědecké a technické činnosti
+              name: Ostatní odborné, vědecké a technické činnosti
+              isPrimary: null
+            - code: '68200'
+              name: Pronájem a správa vlastních nebo pronajatých nemovitostí
               isPrimary: null
           databoxes:
             - code: txutpba

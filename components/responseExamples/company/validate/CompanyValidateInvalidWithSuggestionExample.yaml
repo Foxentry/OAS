@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/validate
-    code: 43190497-8203-46cc-9ced-9b09b67f764d
+    code: 3c0221e2-ba0d-4ae8-8691-264db0789d4c
     query:
       registrationNumber: '0499747'
       country: CZ
@@ -14,6 +14,7 @@ value:
       dataScope: basic
       includeTerminatedSubjects: false
       resultsLimit: 10
+      nameFormat: normalized
       countryFormat: alpha2
       cityFormat: basic
       zipFormat: false
@@ -28,6 +29,9 @@ value:
         uuid: null
         country: CZ
         name: null
+        nameOfficial: null
+        nameAlternative: null
+        nameNormalized: null
         registrationNumber: '0499747'
         taxNumber: null
         vatNumber: null
@@ -37,7 +41,7 @@ value:
         legalForm:
           type: null
       flags:
-        isActive: true
+        isActive: null
       errors:
         - group: VALUE
           type: INVALID

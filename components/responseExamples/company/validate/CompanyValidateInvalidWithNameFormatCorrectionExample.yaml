@@ -2,7 +2,7 @@ value:
   status: 200
   request:
     endpoint: company/validate
-    code: 5a66ac2c-765e-4758-82ad-b44d74a22575
+    code: 42d73fa0-1d6e-4999-b640-3c9665eabfb9
     query:
       name: Lidl Magyarország Bt.
       country: HU
@@ -101,7 +101,7 @@ value:
               full: '6'
             streetWithNumber: Rádl árok 6
             city: Budapest
-            zip: 1037
+            zip: '1037'
             full: Rádl árok 6, 1037 Budapest
         legalForm:
           type: juridical

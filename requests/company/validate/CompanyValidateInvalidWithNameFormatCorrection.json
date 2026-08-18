@@ -8,14 +8,14 @@
       "resultsLimit": 10,
       "dataScope": "basic",
       "dataSource": [
-        "CZ",
+		"CZ",
         "SK",
         "PL",
-		"HU"
+        "HU"
       ],
       "includeTerminatedSubjects": false,
       "zipFormat": false,
-	  "nameFormat": "official",
+      "nameFormat": "official",
       "cityFormat": "basic",
       "countryFormat": "alpha2",
       "legalFormType": "any"

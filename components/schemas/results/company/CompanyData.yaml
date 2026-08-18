@@ -4,22 +4,30 @@ properties:
     type: object
     properties:
       isActive:
-        type: boolean
+        type:
+          - boolean
+          - "null"
         description: Indicates whether the company is currently active.
         example: true
 
       isVatPayer:
-        type: boolean
-        description: Indicates whether the company is a VAT payer. Available in extended and full datascopes.git sta
+        type:
+          - boolean
+          - "null"
+        description: Indicates whether the company is a VAT payer. Available in extended and full datascopes.
         example: true
 
       isVatSubject:
-        type: boolean
+        type:
+          - boolean
+          - "null"
         description: Indicates whether the company is a VAT subject. Available in extended and full datascopes.
         example: true
 
       isInInsolvency:
-        type: boolean
+        type:
+          - boolean
+          - "null"
         description:  >-
           Indicates whether the company is currently in insolvency. Available in full datascope in select countries.
         example: false
@@ -42,7 +50,7 @@ properties:
         type:
           - string
           - "null"
-        description: Name of company (in format requested by option nameFormat)
+        description: Name of company (in format requested by option nameFormat).
         example: Avantro s.r.o.
       nameOfficial:
         type:

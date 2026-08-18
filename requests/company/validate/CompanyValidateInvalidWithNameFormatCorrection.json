@@ -1,0 +1,24 @@
+{
+  "request": {
+    "query": {
+      "name": "Lidl Magyarország Bt.",
+      "country": "HU"
+    },
+    "options": {
+      "resultsLimit": 10,
+      "dataScope": "basic",
+      "dataSource": [
+        "CZ",
+        "SK",
+        "PL",
+		"HU"
+      ],
+      "includeTerminatedSubjects": false,
+      "zipFormat": false,
+	  "nameFormat": "official",
+      "cityFormat": "basic",
+      "countryFormat": "alpha2",
+      "legalFormType": "any"
+    }
+  }
+}

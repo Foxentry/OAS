@@ -1,0 +1,121 @@
+value:
+  status: 200
+  request:
+    endpoint: company/validate
+    code: 5a66ac2c-765e-4758-82ad-b44d74a22575
+    query:
+      name: Lidl Magyarország Bt.
+      country: HU
+    options:
+      dataSource:
+        - CZ
+        - SK
+        - PL
+        - HU
+      dataScope: basic
+      includeTerminatedSubjects: false
+      resultsLimit: 10
+      nameFormat: official
+      countryFormat: alpha2
+      cityFormat: basic
+      zipFormat: false
+      legalFormType: any
+      correctionMode: full
+      correctionModeCrossCountry: format
+  response:
+    result:
+      isValid: false
+      proposal: invalidWithCorrection
+      data:
+        uuid: null
+        country: HU
+        name: Lidl Magyarország Bt.
+        nameOfficial: null
+        nameAlternative: null
+        nameNormalized: null
+        registrationNumber: null
+        taxNumber: null
+        vatNumber: null
+        vatNumberSpecial: null
+        address: null
+        addressOfficial: null
+        legalForm:
+          type: null
+      flags:
+        isActive: null
+      errors:
+        - group: FORMAT
+          type: INVALID
+          subtype: null
+          severity: info
+          relatedTo:
+            - name
+          description: Value has invalid format.
+    resultCorrected:
+      isValid: true
+      data:
+        uuid: 771e162a-a0a6-4881-94ff-69089f880426
+        country: HU
+        name: Lidl Magyarország Kereskedelmi Betéti Társaság
+        nameOfficial: Lidl Magyarország Kereskedelmi Betéti Társaság
+        nameAlternative: Lidl Magyarország Bt.
+        nameNormalized: Lidl Magyarország Bt.
+        registrationNumber: 01-06-757718
+        taxNumber: 21588017-2-44
+        vatNumber: HU21588017
+        vatNumberSpecial: null
+        address:
+          data:
+            country: HU
+            state: null
+            region: Budapest
+            district: Budapest
+            ids:
+              internal: 58ee8897-ac38-4479-8518-8b0772224c19
+              external: null
+            street: Rádl árok
+            number:
+              type: null
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '6'
+            streetWithNumber: Rádl árok 6
+            city: Budapest
+            zip: '1037'
+            full: Rádl árok 6, 1037 Budapest
+        addressOfficial:
+          data:
+            country: HU
+            street: Rádl árok
+            number:
+              part1: null
+              part1Number: null
+              part1Letter: null
+              part2: null
+              part2Number: null
+              part2Letter: null
+              full: '6'
+            streetWithNumber: Rádl árok 6
+            city: Budapest
+            zip: 1037
+            full: Rádl árok 6, 1037 Budapest
+        legalForm:
+          type: juridical
+      flags:
+        isActive: true
+      errors: []
+      fixes:
+        - group: FORMAT
+          type: CHANGED
+          subtype: null
+          data:
+            typeFrom: name
+            type: name
+            valueFrom: Lidl Magyarország Bt.
+            value: Lidl Magyarország Kereskedelmi Betéti Társaság
+    suggestions: []
+  errors: []
